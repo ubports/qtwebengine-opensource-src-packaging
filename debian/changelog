@@ -1,0 +1,5 @@
+qtwebengine-opensource-src (5.6.1-1+dfsg-1) UNRELEASED; urgency=medium
+
+  * First attempt qt5webengine. 
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 22 Jun 2016 18:27:50 -0700

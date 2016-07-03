@@ -1,0 +1,5 @@
+usr/lib/*/qt5/qml/QtWebKit/experimental/libqmlwebengineexperimentalplugin.so
+usr/lib/*/qt5/qml/QtWebKit/experimental/qmldir
+usr/lib/*/qt5/qml/QtWebKit/libqmlwebengineplugin.so
+usr/lib/*/qt5/qml/QtWebKit/plugins.qmltypes
+usr/lib/*/qt5/qml/QtWebKit/qmldir

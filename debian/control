@@ -1,0 +1,125 @@
+Source: qtwebengine-opensource-src
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Timo Jyrinki <timo@debian.org>,
+           Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
+           Dmitry Shachnev <mitya57@debian.org>
+Build-Depends: bison,
+               chrpath,
+               debhelper (>= 9.0.0),
+               flex,
+               gperf,
+               libfontconfig1-dev,
+               libgl1-mesa-dev [!armel !armhf] | libgl-dev [!armel !armhf],
+               libgles2-mesa-dev [armel armhf] | libgles2-dev [armel armhf],
+               libglib2.0-dev,
+               libglu1-mesa-dev [!armel !armhf] | libglu-dev [!armel !armhf],
+               libgstreamer-plugins-base1.0-dev,
+               libgstreamer1.0-dev,
+               libicu-dev,
+               libjpeg-dev,
+#              libleveldb-dev,
+               libpng-dev,
+               libqt5opengl5-dev (>= 5.6.0+dfsg~),
+               libqt5xmlpatterns5-dev (>= 5.6.0~),
+               libsqlite3-dev,
+               libwebp-dev,
+               libxcomposite-dev,
+               libxml2-dev,
+               libxrender-dev,
+               libxslt1-dev,
+               mesa-common-dev,
+               pkg-config,
+               pkg-kde-tools (>= 0.6.4),
+               python-minimal,
+               python2.7,
+               qtbase5-private-dev (>= 5.6.0+dfsg~),
+               qtdeclarative5-private-dev (>= 5.6.0~),
+               qtlocation5-dev (>= 5.6.0~),
+               qtwebchannel5-dev (>= 5.6.0~),
+               qtscript5-private-dev (>= 5.6.0+dfsg~),
+               ruby
+Build-Depends-Indep: libqt5sql5-sqlite (>= 5.6.0+dfsg~),
+                     qtbase5-doc-html (>= 5.6.0+dfsg~),
+                     qttools5-dev-tools (>= 5.6.0~)
+Standards-Version: 3.9.7
+Section: libs
+Homepage: http://trac.webengine.org/wiki/QtWebEngine
+Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qt5webengine.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qt5webengine.git
+
+Package: libqt5webengine5-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6~)
+Depends: libqt5webengine5 (= ${binary:Version}),
+         qtbase5-dev,
+         qtdeclarative5-dev,
+         ${misc:Depends}
+Description: Web content engine library for Qt - development files
+ QtWebEngine provides a Web browser engine that makes it easy to embed content
+ from the World Wide Web into your Qt application.
+ .
+ This package contains the development files needed to build Qt 5 applications
+ using QtWebEngine library.
+
+Package: libqt5webengine5
+Architecture: any
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6~), ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Web content engine library for Qt
+ QtWebEngine provides a Web browser engine that makes it easy to embed content
+ from the World Wide Web into your Qt application.
+ .
+ This package contains the QtWebEngine libraries.
+
+Package: qml-module-qtwebengine
+Architecture: any
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6~), ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: libqt5webengine5-qmlwebkitplugin (<< 5.2.1+dfsg-6~)
+Replaces: libqt5webengine5-qmlwebkitplugin (<< 5.2.1+dfsg-6~)
+Description: Qt WebEngine QML module
+ QtWebEngine provides a Web browser engine that makes it easy to embed content
+ from the World Wide Web into your Qt application.
+ .
+ This package contains the WebEngine QML module for QtDeclarative.
+
+Package: libqt5webengine5-dbg
+Priority: extra
+Architecture: amd64 i386 powerpc s390x
+Multi-Arch: same
+Section: debug
+Depends: libqt5webengine5 (= ${binary:Version}), ${misc:Depends}
+Description: Web content engine library for Qt - debugging symbols
+ QtWebEngine provides a Web browser engine that makes it easy to embed content
+ from the World Wide Web into your Qt application.
+ .
+ This package contains the debugging symbols for the Qt WebEngine library.
+
+Package: qtwebengine5-doc
+Priority: extra
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: Qt 5 webengine documentation
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ This package contains the documentation for the Qt 5 webengine libraries.
+
+Package: qtwebengine5-doc-html
+Priority: extra
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: Qt 5 webengine HTML documentation
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ This package contains the HTML documentation for the Qt 5 webengine
+ libraries.
