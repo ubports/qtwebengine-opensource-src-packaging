@@ -3431,7 +3431,7 @@ License: BSD-BY-LC-NE
  On Debian systems, the complete text of the
  BSD-like License version BY-LC-NE can be found in
  /usr/share/common-licenses/BSD-BY-LC-NE
- 
+
 Files: src/3rdparty/chromium/base/third_party/*
     src/3rdparty/chromium/base/third_party/dynamic_annotations/*
     src/3rdparty/chromium/base/third_party/valgrind/*
@@ -3505,7 +3505,7 @@ License: BSD-BY-LC
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- .  
+ .
   On Debian systems, the complete text of the
   BSD-like License version BY-LC can be found in
   /usr/share/common-licenses/BSD-BY-LC
@@ -3725,7 +3725,7 @@ License: GPL-3
  On Debian systems, the complete text of the
  GNU General Public License version 2 can be found in
  /usr/share/common-licenses/GPL-3
- 
+
 Files: + src/3rdparty/chromium/third_party/angle/src/compiler/preprocessor/ExpressionParser.cpp
     + src/3rdparty/chromium/third_party/angle/src/compiler/translator/glslang_tab.cpp
     + src/3rdparty/chromium/third_party/angle/src/compiler/translator/glslang_tab.h
@@ -3788,7 +3788,7 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayout
     + src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/Base64.cpp
 Copyright: 2014 The Chromium Authors. All rights reserved.
  2013 Google Inc. All rights reserved.
-License: LGPL-2 
+License: LGPL-2
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Library General Public
  License as published by the Free Software Foundation; either

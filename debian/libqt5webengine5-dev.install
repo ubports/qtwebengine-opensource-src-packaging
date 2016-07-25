@@ -22,10 +22,10 @@ usr/include/*/qt5/QtWebKit/QtWebKitVersion
 usr/include/*/qt5/QtWebKit/qtwebengineversion.h
 usr/include/*/qt5/QtWebKit/qwebdatabase.h
 usr/include/*/qt5/QtWebKit/qwebelement.h
-usr/include/*/qt5/QtWebKit/qwebhistory.h
-usr/include/*/qt5/QtWebKit/qwebhistoryinterface.h
 usr/include/*/qt5/QtWebKit/qwebengineglobal.h
 usr/include/*/qt5/QtWebKit/qwebengineplatformplugin.h
+usr/include/*/qt5/QtWebKit/qwebhistory.h
+usr/include/*/qt5/QtWebKit/qwebhistoryinterface.h
 usr/include/*/qt5/QtWebKit/qwebpluginfactory.h
 usr/include/*/qt5/QtWebKit/qwebsecurityorigin.h
 usr/include/*/qt5/QtWebKit/qwebsettings.h
