@@ -2,6 +2,7 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
+include /usr/share/dpkg/default.mk
 
 export CFLAGS := $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
 export CXXFLAGS := $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
@@ -15,10 +16,6 @@ gstab_architectures := amd64 i386 powerpc s390x
 fulldebug_architectures := none
 disabled_jit_architectures := armel mips mipsel
 disabled_pch_architectures := amd64 powerpc s390x
-
-debian_version = $(shell dpkg-parsechangelog -SVersion)
-upstream_dfsg_version = $(firstword $(subst -, ,$(debian_version)))
-upstream_version = $(firstword $(subst +, ,$(debian_version)))
 
 %:
 	dh $@ --parallel --dbg-package=libqt5webengine5-dbg --with pkgkde_symbolshelper
@@ -55,7 +52,7 @@ endif
 	qmake  WEBENGINE_CONFIG+="use_system_icu use_system_ffmpeg use_system_zlib"
 
 	# Upstream 5.6.0 RC tarball was generated improperly and has no synced headers
-	/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin/syncqt.pl Source -version $(upstream_version)
+	/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin/syncqt.pl Source -version $(DEB_VERSION_UPSTREAM)
 
 override_dh_auto_build-indep:
 	dh_auto_build -- sub-Source-QtWebEngine-pro-clean
