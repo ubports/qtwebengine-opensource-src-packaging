@@ -66,7 +66,7 @@ Build-Depends-Indep: libqt5sql5-sqlite (>= 5.6.0+dfsg~),
                      qttools5-dev-tools (>= 5.6.0~)
 Standards-Version: 3.9.8
 Section: libs
-Homepage: http://trac.webengine.org/wiki/QtWebEngine
+Homepage: https://doc.qt.io/qt-5/qtwebengine-index.html
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qt5webengine.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qt5webengine.git
 
