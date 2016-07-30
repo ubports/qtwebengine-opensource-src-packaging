@@ -1,10 +1,9 @@
 Source: qtwebengine-opensource-src
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Timo Jyrinki <timo@debian.org>,
-           Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
-           Dmitry Shachnev <mitya57@debian.org>
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Scarlett Clark <sgclark@kubuntu.org>,
+           Sandro Knauß <bugs@sandroknauss.de>,
+           Simon Quigley <tsimonq2@ubuntu.com>
 Build-Depends: bison,
                chrpath,
                debhelper (>= 9.0.0),
