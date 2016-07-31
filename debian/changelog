@@ -1,5 +1,7 @@
-qtwebengine-opensource-src (5.6.1-1) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.6.1-2) UNRELEASED; urgency=medium
 
-  * First attempt qt5webengine. 
+  * Initial package (Closes: #832420)
+  * Team upload.
 
- -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 22 Jun 2016 18:27:50 -0700
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 31 Jul 2016 20:52:38 +0200
