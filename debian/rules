@@ -22,7 +22,7 @@ disabled_pch_architectures := amd64 powerpc s390x
 
 override_dh_auto_configure:
 	# Run qmake once to create .qmake.conf and be sure to append the following values.
-	qmake # WEBENGINE_CONFIG+="use_system_icu use_system_ffmpeg use_system_zlib"
+	qmake WEBENGINE_CONFIG+="use_system_icu use_system_zlib"
 
 # Enable gstabs debugging symbols only on gstab_architectures.
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(gstab_architectures)))
@@ -49,7 +49,7 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_pch_architectur
 endif
 
 	# Run qmake again now with the proper values.
-	qmake  # WEBENGINE_CONFIG+="use_system_icu use_system_ffmpeg use_system_zlib"
+	qmake  WEBENGINE_CONFIG+="use_system_icu use_system_zlib"
 
 	# Upstream 5.6.0 RC tarball was generated improperly and has no synced headers
 	/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin/syncqt.pl Source -version $(DEB_VERSION_UPSTREAM)

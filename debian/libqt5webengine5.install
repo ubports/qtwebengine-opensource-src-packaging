@@ -2,7 +2,6 @@ usr/lib/*/libQt5WebEngine.so.5*
 usr/lib/*/libQt5WebEngineCore.so.5*
 usr/lib/*/libQt5WebEngineWidgets.so.5*
 usr/lib/*/qt5/libexec/QtWebEngineProcess
-usr/share/qt5/resources/icudtl.dat
 usr/share/qt5/resources/qtwebengine_resources.pak
 usr/share/qt5/resources/qtwebengine_resources_100p.pak
 usr/share/qt5/resources/qtwebengine_resources_200p.pak
