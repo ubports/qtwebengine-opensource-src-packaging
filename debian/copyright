@@ -6,7 +6,6 @@ Copyright: 2016 Scarlett Clark <sgclark@kubuntu.org>
 License: LGPL-2+
 
 Files: *
-
     examples/webengine/quicknanobrowser/*
     examples/webenginewidgets/contentmanipulation/* excluding:
     -? examples/webenginewidgets/contentmanipulation/jquery.min.js
@@ -3616,7 +3615,7 @@ License: GPL-2
  GNU General Public License version 2 can be found in
  /usr/share/common-licenses/GPL-2
 
-Files:     src/3rdparty/chromium/third_party/devscripts/*
+Files: src/3rdparty/chromium/third_party/devscripts/*
     src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/*
     src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avs/*
     + src/3rdparty/chromium/third_party/ffmpeg/doc/texi2pod.pl
@@ -3695,18 +3694,18 @@ License: GPL-2+
  GNU General Public License version 2 can be found in
  /usr/share/common-licenses/GPL-2
 
- Files: examples/webenginewidgets/cookiebrowser/*
-    tests/auto/core/qwebenginecookiestore/*
-    tests/auto/core/qwebengineurlrequestinterceptor/*
-    tests/auto/quick/inspectorserver/*
-    tests/auto/quick/publicapi/*
-    tests/auto/quick/qmltests/*
-    + tests/auto/quick/qmltests/data/titleupdate.js
-    tests/auto/quick/qquickwebengineviewgraphics/*
-    + tests/auto/quick/shared/qt_webengine_quicktest.h
-    tests/quicktestbrowser/*
-    tools/buildscripts/*
-    tools/scripts/*
+Files: examples/webenginewidgets/cookiebrowser/*
+       tests/auto/core/qwebenginecookiestore/*
+       tests/auto/core/qwebengineurlrequestinterceptor/*
+       tests/auto/quick/inspectorserver/*
+       tests/auto/quick/publicapi/*
+       tests/auto/quick/qmltests/*
+       + tests/auto/quick/qmltests/data/titleupdate.js
+       tests/auto/quick/qquickwebengineviewgraphics/*
+       + tests/auto/quick/shared/qt_webengine_quicktest.h
+       tests/quicktestbrowser/*
+       tools/buildscripts/*
+       tools/scripts/*
 Copyright: 2014 The Chromium Authors. All rights reserved.
  2013 Google Inc. All rights reserved.
 License: GPL-3
@@ -3807,7 +3806,7 @@ License: LGPL-2
  GNU Library General Public License version 2 can be found in
  /usr/share/common-licenses/LGPL-2
 
-Files:    src/3rdparty/chromium/base/third_party/xdg_mime/*
+Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
     src/3rdparty/chromium/third_party/WebKit/Source/*
     src/3rdparty/chromium/third_party/WebKit/Source/build/mac/*
     + src/3rdparty/chromium/third_party/WebKit/Source/build/scripts/hasher.py
@@ -4899,23 +4898,6 @@ Files:    src/3rdparty/chromium/base/third_party/xdg_mime/*
 Copyright: 2014 The Chromium Authors. All rights reserved.
  2013 Google Inc. All rights reserved.
 License: LGPL-2+
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Library General Public
- License as published by the Free Software Foundation; either
- version 2 of the License, or (at your option) any later version.
- .
- This library is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Library General Public License for more details.
- .
- You should have received a copy of the GNU Library General Public
- License along with this library; if not, write to the Free Software
- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- .
- On Debian systems, the complete text of the
- GNU Library General Public License version 2 can be found in
- /usr/share/common-licenses/LGPL-2
 
 Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUtils_unittest/parseDiffWithMockFiles.pl
     + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUtils_unittest/parseFirstEOL.pl
@@ -5090,16 +5072,16 @@ License: LGPL-2.1+
   modify it under the terms of the GNU Lesser General Public
   License as published by the Free Software Foundation; either
   version 2.1 of the License, or (at your option) any later version.
-  .
+ .
   This library is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   Lesser General Public License for more details.
-  .
+ .
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
-  .
+ .
   On Debian systems, the complete text of the
   GNU Lesser General Public License version 2.1 can be found in
   /usr/share/common-licenses/LGPL-2.1
@@ -5127,16 +5109,16 @@ License: LGPL-3+
   modify it under the terms of the GNU Lesser General Public
   License as published by the Free Software Foundation; either
   version 3 of the License, or (at your option) any later version.
-  .
+ .
   This library is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   Lesser General Public License for more details.
-  .
+ .
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
-  .
+ .
   On Debian systems, the complete text of the
   GNU Lesser General Public License version 3 can be found in
   /usr/share/common-licenses/LGPL-3
@@ -5499,7 +5481,7 @@ Files: src/3rdparty/chromium/base/third_party/*
     + src/3rdparty/chromium/v8/benchmarks/navier-stokes.js
 Copyright: 2014 The Chromium Authors. All rights reserved.
  2013 Google Inc. All rights reserved.
-License: MIT
+License: Expat
   | Permission is hereby granted, free of charge, to any person
   | obtaining a copy of this software and associated documentation
   | files (the "Software"), to deal in the Software without
@@ -5520,3 +5502,22 @@ License: MIT
   | WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
   | FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
   | OTHER DEALINGS IN THE SOFTWARE.
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the
+ GNU Library General Public License version 2 can be found in
+ /usr/share/common-licenses/LGPL-2
