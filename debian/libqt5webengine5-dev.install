@@ -1,6 +1,6 @@
 usr/include/*/qt5/QtWebEngine/*
-usr/include/*/qt5/QtWebEngineWidgets/*
 usr/include/*/qt5/QtWebEngineCore/*
+usr/include/*/qt5/QtWebEngineWidgets/*
 usr/lib/*/cmake/Qt5WebEngine/Qt5WebEngineConfig.cmake
 usr/lib/*/cmake/Qt5WebEngine/Qt5WebEngineConfigVersion.cmake
 usr/lib/*/cmake/Qt5WebEngineCore/Qt5WebEngineCoreConfig.cmake
