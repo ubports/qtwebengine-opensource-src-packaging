@@ -58,7 +58,8 @@ override_dh_auto_build-indep:
 	dh_auto_build -- docs
 
 override_dh_auto_install-arch:
-	make install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	#make install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	dh_auto_install
 	
 	# Remove rpath from the offending binaries
 	chrpath -d $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/libexec/QtWebEngineProcess
@@ -78,7 +79,7 @@ override_dh_auto_install-arch:
 	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/mkspecs/modules/qt_lib_webenginewidgets_private.pri
 	
 	# Remove libtool-like fileEngines
-	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la
+	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la
 
 override_dh_auto_install-indep:
 	dh_auto_build -- INSTALL_ROOT=$(CURDIR)/debian/tmp install_docs
