@@ -91,8 +91,7 @@ Description: Web content engine library for Qt - development files
 Package: libqt5webengine5
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Description: Web content engine library for Qt
  QtWebEngine provides a Web browser engine that makes it easy to embed content
@@ -103,8 +102,7 @@ Description: Web content engine library for Qt
 Package: qml-module-qtwebengine
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Description: Qt WebEngine QML module
  QtWebEngine provides a Web browser engine that makes it easy to embed content
@@ -115,8 +113,7 @@ Description: Qt WebEngine QML module
 Package: qt5webengine-examples
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
+Depends: libjs-jquery, libjs-marked, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Description: Qt WebEngine - Examples
  QtWebEngine provides a Web browser engine that makes it easy to embed content
@@ -129,8 +126,7 @@ Architecture: amd64 i386 powerpc s390x
 Multi-Arch: same
 Section: debug
 Priority: extra
-Depends: libqt5webengine5 (= ${binary:Version}),
-         ${misc:Depends}
+Depends: libqt5webengine5 (= ${binary:Version}), ${misc:Depends}
 Description: Web content engine library for Qt - debugging symbols
  QtWebEngine provides a Web browser engine that makes it easy to embed content
  from the World Wide Web into your Qt application.
