@@ -17,32 +17,39 @@ fulldebug_architectures := none
 disabled_jit_architectures := armel mips mipsel
 disabled_pch_architectures := amd64 powerpc s390x
 
-defines+=use_system_re2=1 \
-         use_system_yasm=1 \
-         use_system_opus=1 \
-         use_system_zlib=1 \
-         use_system_speex=1 \
-         use_system_expat=1 \
-         use_system_libpng=1 \
-         use_system_libxml=1 \
-         use_system_libusb=1 \
-         use_system_libjpeg=1 \
-         use_system_libwebp=1 \
-         use_system_libxslt=1 \
+defines+=use_system_expat=1 \
+         use_system_ffmpeg=1 \
+	 use_system_flac=1 \
+         use_system_harfbuzz=1 \
+         use_system_icu=1 \
          use_system_jsoncpp=1 \
          use_system_libevent=1 \
-         use_system_harfbuzz=1 \
-         use_system_xdg_utils=1 \
-         use_system_icu \
-         use_system_protobuf \
-         use_system_sqlite=1 \
+         use_system_libjpeg=1 \
+         use_system_libpng=1 \
+         use_system_libusb=1 \
+         use_system_libvpx=1 \
+         use_system_libwebp=1 \
+         use_system_libxml=1 \
+         use_system_libxslt=1 \
+         use_system_opus=1 \
+         use_system_re2=1 \
+         use_system_snappy=1 \
+         use_system_speex=1 \
          use_system_v8 \
-         use_system_ffmpeg \
+         use_system_xdg_utils=1 \
+         use_system_yasm=1 \
+         use_system_zlib=1
+         # The embedded sqlite version is chromium specificly patched
+         # use_system_sqlite=1 \
+         # use_system_protobuf=1 \
+
+replace_gyp_args = $(foreach define,$(defines),-D$(define))
 
 %:
 	dh $@ --parallel --dbg-package=libqt5webengine5-dbg --with pkgkde_symbolshelper
 
 override_dh_auto_configure:
+	src/3rdparty/chromium/build/linux/unbundle/replace_gyp_files.py $(replace_gyp_args)
 	# Run qmake once to create .qmake.conf and be sure to append the following values.
 	qmake WEBENGINE_CONFIG+="$(defines)"
 
