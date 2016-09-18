@@ -106,8 +106,6 @@ Multi-Arch: same
 Depends: ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
-Breaks: libqt5webengine5-qmlwebkitplugin (<< 5.2.1+dfsg-6~)
-Replaces: libqt5webengine5-qmlwebkitplugin (<< 5.2.1+dfsg-6~)
 Description: Qt WebEngine QML module
  QtWebEngine provides a Web browser engine that makes it easy to embed content
  from the World Wide Web into your Qt application.
@@ -120,8 +118,6 @@ Multi-Arch: same
 Depends: ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
-Breaks: libqt5webengine5-qmlwebkitplugin (<< 5.2.1+dfsg-6~)
-Replaces: libqt5webengine5-qmlwebkitplugin (<< 5.2.1+dfsg-6~)
 Description: Qt WebEngine - Examples
  QtWebEngine provides a Web browser engine that makes it easy to embed content
  from the World Wide Web into your Qt application.
