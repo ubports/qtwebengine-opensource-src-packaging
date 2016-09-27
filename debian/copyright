@@ -1,9 +1,2182 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: https://download.qt.io/official_releases/qt/*/submodules/
+Files-Excluded: src/3rdparty/chromium/third_party/apple_apsl/*
+                src/3rdparty/chromium/third_party/bidichecker/*
+                src/3rdparty/chromium/third_party/checkstyle/*
+                src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cctools/*
+                src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cf/*
+                src/3rdparty/chromium/third_party/flot/*
+                src/3rdparty/chromium/third_party/libjingle/source/talk/examples/android/third_party/autobanh/*
+                src/3rdparty/chromium/third_party/libsrtp/srtp/doc/rfc3711.txt
 
-Files: debian/*
-Copyright: 2016 Scarlett Clark <sgclark@kubuntu.org>
+Files: src/3rdparty/chromium/base/third_party/dmg_fp/*
+Copyright: 1991-2001, Lucent Technologies
+           2008-2012, The Chromium Authors
+License: ISC-like-dmgfp
+ The author of this software is David M. Gay.
+ .
+ Copyright (c) 1991, 2000, 2001 by Lucent Technologies.
+ .
+ Permission to use, copy, modify, and distribute this software for any
+ purpose without fee is hereby granted, provided that this entire notice
+ is included in all copies of any software which is or includes a copy
+ or modification of this software and in all copies of the supporting
+ documentation for such software.
+ .
+ THIS SOFTWARE IS BEING PROVIDED "AS IS", WITHOUT ANY EXPRESS OR IMPLIED
+ WARRANTY.  IN PARTICULAR, NEITHER THE AUTHOR NOR LUCENT MAKES ANY
+ REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY
+ OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
+
+Files: src/3rdparty/chromium/base/third_party/dynamic_annotations/*
+Copyright: 2008-2011, Google Inc
+           2011-2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/base/third_party/icu/*
+Copyright: 1995-2009, International Business Machines Corporation and others
+License: MIT-like-icu
+ ICU License - ICU 1.8.1 and later
+ .
+ COPYRIGHT AND PERMISSION NOTICE
+ .
+ Copyright (c) 1995-2009 International Business Machines Corporation and others
+ .
+ All rights reserved.
+ .
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, and/or sell copies of the Software, and to permit persons
+ to whom the Software is furnished to do so, provided that the above
+ copyright notice(s) and this permission notice appear in all copies of
+ the Software and that both the above copyright notice(s) and this
+ permission notice appear in supporting documentation.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+ OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+ HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY
+ SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER
+ RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+ CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ .
+ Except as contained in this notice, the name of a copyright holder
+ shall not be used in advertising or otherwise to promote the sale, use
+ or other dealings in this Software without prior written authorization
+ of the copyright holder.
+
+Files: src/3rdparty/chromium/base/third_party/nspr/*
+Copyright: 2011, Google Inc
+License: GPL-2+ or LGPL-2.1+ or MPL-1.1
+
+Files: src/3rdparty/chromium/base/third_party/superfasthash/*
+Copyright: 2010, Paul Hsieh
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/base/third_party/symbolize/*
+Copyright: 2006, Google Inc
+           2010-2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/base/third_party/valgrind/*
+Copyright: 2000-2010, Julian Seward
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
+Copyright: 2003-2004, Jonathan Blandford <jrb@alum.mit.edu>
+           2003, Lawrence E. Rosen
+           200-2005, Matthias Clasen <mclasen@redhat.com>
+           2003-2008, Red Hat, Inc
+           2013, The Chromium Authors
+License: Academic-2.0 or LGPL-2+
+
+Files: src/3rdparty/chromium/base/third_party/xdg_user_dirs/xdg_user_dirs/*
+Copyright: 2007, Red Hat, inc
+           2013, The Chromium Authors
+License: Expat
+
+Files: src/3rdparty/chromium/breakpad/src/third_party/libdisasm/libdisasm.gyp
+Copyright: 2014, Google Inc
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/build/secondary/third_party/android_tools/BUILD.gn
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/build/secondary/third_party/libjpeg_turbo/BUILD.gn
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/build/secondary/third_party/libsrtp/BUILD.gn
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/build/secondary/third_party/nss/BUILD.gn
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/buildtools/third_party/libc++/*
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/buildtools/third_party/libc++abi/*
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/chrome/installer/mac/third_party/bsdiff/*
+Copyright: 2011, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/chrome/installer/mac/third_party/xz/*
+Copyright: 2011, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/chrome/third_party/chromevox/*
+Copyright: 2013, Google Inc
+           2012-2014, The Chromium Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/chrome/third_party/chromevox/third_party/closure-library/*
+Copyright: 2006-2012, The Closure Library Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/crypto/third_party/nss/*
+Copyright: 1994-2000, Netscape Communications Corporation.
+License: GPL-2+ or LGPL-2.1+ or MPL-1.1
+
+Files: src/3rdparty/chromium/crypto/third_party/nss/rsawrapr.c
+Copyright: 1994-2000, Netscape Communications Corporation.
+License: MPL-2.0
+
+Files: src/3rdparty/chromium/ios/third_party/blink/blink_html_tokenizer.gyp
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/ios/third_party/gcdwebserver/gcdwebserver.gyp
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/native_client/src/third_party/gtest/gtest.gyp
+Copyright: 2012, Google Inc
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/net/third_party/mozilla_security_manager/*
+Copyright: 1994-2000, Netscape Communications Corporation.
+License: GPL-2+ or LGPL-2.1+ or MPL-1.1
+
+Files: src/3rdparty/chromium/net/third_party/nss/*
+Copyright: 1994-2000, Netscape Communications Corporation.
+           2012-2013, The Chromium Authors
+License: MPL-2.0
+
+Files: src/3rdparty/chromium/net/third_party/nss/ssl/bodge/nssrenam.h
+       src/3rdparty/chromium/net/third_party/nss/ssl/sslplatf.c
+Copyright: 1994-2000, Netscape Communications Corporation.
+License: GPL-2+ or LGPL-2.1+ or MPL-1.1
+
+Files: src/3rdparty/chromium/third_party/adobe/*
+Copyright: 2012-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/analytics/*
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/android_crazy_linker/*
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/android_data_chart/*
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/android_media/*
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/android_opengl/*
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/android_platform/*
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/android_protobuf/*
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/android_swipe_refresh/*
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/angle/*
+Copyright: 2002-2013, The ANGLE Project Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/angle/include/EGL/egl.h
+       src/3rdparty/chromium/third_party/angle/include/EGL/eglext.h
+       src/3rdparty/chromium/third_party/angle/include/EGL/eglplatform.h
+       src/3rdparty/chromium/third_party/angle/include/GLES3/gl3.h
+       src/3rdparty/chromium/third_party/angle/include/KHR/khrplatform.h
+Copyright: 2007-2014, The Khronos Group Inc
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/angle/src/compiler/preprocessor/ExpressionParser.cpp
+       src/3rdparty/chromium/third_party/angle/src/compiler/translator/glslang_tab.cpp
+Copyright: 1984-2015, Free Software Foundation, Inc
+           2002-2014, The ANGLE Project Authors
+License: BSD-3-clause_GPL-3+_BisonException
+
+Files: src/3rdparty/chromium/third_party/angle/src/compiler/translator/glslang_tab.h
+Copyright: 1984-2015, Free Software Foundation, Inc
+License: GPL-3+_BisonException
+
+Files: src/3rdparty/chromium/third_party/angle/src/third_party/compiler/*
+Copyright: 2012, Apple Inc
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/angle/src/third_party/khronos/GL/wglext.h
+Copyright: 2013-2014, The Khronos Group Inc
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/angle/src/third_party/murmurhash/*
+Copyright: Copyright is being disclaimed
+License: public-domain
+Comment: the LICENSE file states:
+ MurmurHash3 was written by Austin Appleby, and is placed in the public
+ domain. The author hereby disclaims copyright to this source code.
+
+Files: src/3rdparty/chromium/third_party/angle/src/third_party/systeminfo/*
+Copyright: 2009, Apple Inc
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/angle/src/third_party/systeminfo/trace_event.h
+Copyright: 2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/apple_apsl/*
+Copyright: 1999-2004, Apple Computer, Inc
+           1998-2011, Apple Inc
+License: APSL-2.0
+Comment: Excluded in dfsg version
+
+Files: src/3rdparty/chromium/third_party/apple_sample_code/apple_sample_code.gyp
+Copyright: 2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/appurify-python/*
+Copyright: 2014, Appurify
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/ashmem.gyp
+Copyright: 2011, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/bidichecker/*
+Copyright: Copyright 2009 Google Inc
+License: Apache-2.0
+Comment: Only the minified version present, removed in the dfsg version
+ The complete version can be found in:
+ https://github.com/aminembarki/bidichecker
+
+Files: src/3rdparty/chromium/third_party/bintrees/*
+Copyright: 2010-2013, Manfred Moitzi
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/blanketjs/*
+Copyright: 2013, Alex Seville
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/blanketjs/src/blanket.js
+Copyright: 2011-2012, Ariya Hidayat <ariya.hidayat@gmail.com>
+           2012, Arpad Borsos <arpad.borsos@googlemail.com>
+           2012, Joost-Wim Boekesteijn <joost-wim@boekesteijn.nl>
+           2012, Kris Kowal <kris.kowal@cixar.com>
+           2012, Mathias Bynens <mathias@qiwi.be>
+           2012, Yusuke Suzuki <utatane.tea@gmail.com>
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/boringssl/*
+Copyright: 1995-1998, Eric Young <eay@cryptsoft.com>
+           2006, Network Resonance, Inc
+           2005, Nokia
+           2011, RTFM, Inc
+           2002, Sun Microsystems, Inc
+           1998-2011, The OpenSSL Project
+License: OpenSSL or SSLeay
+
+Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bitstr.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bool.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bytes.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_d2i_fp.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_dup.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_enum.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_gentm.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_i2d_fp.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_int.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_mbstr.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_object.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_octet.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_print.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_strnid.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_time.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_type.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_utctm.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_utf8.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/asn1_lib.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/asn1_par.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/asn_pack.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/bio_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/bio_ndef.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/f_enum.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/f_int.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/f_string.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/t_bitst.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/t_pkey.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_dec.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_enc.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_fre.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_new.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_prn.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_typ.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_utl.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/x_bignum.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/x_long.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/base64/base64.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/bio.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/bio_mem.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/buffer.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/connect.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/fd.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/file.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/hexdump.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/printf.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/socket.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/add.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/bn.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/bn_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/cmp.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/convert.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/div.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/generic.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/mul.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/shift.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/buf/buf.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/cipher.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/derive_key.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_des.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_null.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_rc2.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_rc4.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/conf/conf.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/conf/conf_def.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/constant_time_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu-intel.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/des/des.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/des/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/check.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/dh.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/dh_impl.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/dh_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/digest/digest.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/digest/digests.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/digest/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dsa/dsa.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dsa/dsa_impl.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dsa/dsa_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dsa/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/algorithm.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp_ctx.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/sign.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/hmac/hmac.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/hmac/hmac_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/lhash/lhash.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/md4/md4.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/md5/md5.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/mem.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/obj/obj.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/obj/obj_dat.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/obj/obj_dat.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/obj/obj_xref.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/obj/objects.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pem/pem_info.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pem/pem_lib.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pem/pem_oth.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pem/pem_pk8.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pem/pem_pkey.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rc4/rc4.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rsa/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rsa/rsa.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rsa/rsa_impl.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rsa/rsa_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/sha1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/sha256.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/sha512.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/stack/stack.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/thread.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/a_digest.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/a_sign.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/a_strex.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/a_verify.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/asn1_gen.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/by_dir.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/by_file.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/i2d_pr.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/t_crl.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/t_req.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/t_x509.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/t_x509a.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_att.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_cmp.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_d2.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_def.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_ext.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_lu.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_obj.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_r2x.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_req.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_set.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_txt.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_v3.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_vfy.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509name.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509rset.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509type.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_all.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_attrib.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_crl.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_exten.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_info.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_name.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_pkey.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_pubkey.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_req.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_sig.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_spki.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_val.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_x509.c
+       src/3rdparty/chromium/third_party/boringssl/src/decrepit/bio/base64_bio.c
+       src/3rdparty/chromium/third_party/boringssl/src/decrepit/blowfish/blowfish.c
+       src/3rdparty/chromium/third_party/boringssl/src/decrepit/cast/cast.c
+       src/3rdparty/chromium/third_party/boringssl/src/decrepit/cast/cast_tables.c
+       src/3rdparty/chromium/third_party/boringssl/src/decrepit/des/cfb64ede.c
+       src/3rdparty/chromium/third_party/boringssl/src/decrepit/macros.h
+       src/3rdparty/chromium/third_party/boringssl/src/decrepit/rsa/rsa_decrepit.c
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/asn1.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/asn1_mac.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/base64.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/bio.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/blowfish.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/buf.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/cast.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/cipher.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/conf.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/cpu.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/des.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/dh.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/digest.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/dsa.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/evp.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/hmac.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/lhash.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/md4.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/md5.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/mem.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/obj.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/obj_mac.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/pem.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/rc4.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/rsa.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/sha.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ssl2.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ssl23.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/stack.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/thread.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/type_check.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/x509.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/x509_vfy.h
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/s3_enc.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/s3_meth.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_algs.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_rsa.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_stat.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_txt.c
+Copyright: 1995-1998, Eric Young <eay@cryptsoft.com>
+           2005, Nokia
+           2002, Sun Microsystems, Inc
+           2014, The OpenSSL Project
+License: SSLeay
+
+Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/aes.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/mode_wrappers.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/arm_arch.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/asn1_locl.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/charmap.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/pair.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/x86_64-gcc.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/ctx.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/kronecker.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/rsaz_exp.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/sqrt.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/cipher_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_aes.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/tls_cbc.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cmac/cmac.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/dh_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/params.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/digest/md32_common.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/dsa/dsa_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/ec.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/ec_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/ec_key.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/ec_montgomery.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/example_mul.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/oct.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/simple.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/wnaf.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ecdh/ecdh.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ecdsa/ecdsa.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ecdsa/ecdsa_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ecdsa/ecdsa_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/digestsign.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/p_dsa_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/p_ec.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/p_ec_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/p_rsa.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/p_rsa_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/pbkdf.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/cbc.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/cfb.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/ctr.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/gcm.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/gcm_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/ofb.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pem/pem_x509.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pem/pem_xaux.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pkcs8/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pkcs8/p5_pbe.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pkcs8/p5_pbev2.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pkcs8/p8_pkey.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pkcs8/pkcs8.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rsa/padding.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rsa/rsa_asn1.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha512-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/time_support.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/vpm_int.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_trs.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509_vpm.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509cset.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x509spki.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_algor.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/x_x509a.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/ext_dat.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/pcy_cache.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/pcy_data.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/pcy_int.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/pcy_lib.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/pcy_map.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/pcy_node.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/pcy_tree.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/tab_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_akey.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_akeya.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_alt.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_bcons.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_bitst.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_conf.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_cpols.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_crld.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_enum.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_extku.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_genn.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_ia5.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_info.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_int.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_lib.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_ncons.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_pcons.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_pku.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_pmaps.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_prn.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_purp.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_skey.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_sxnet.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_utl.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3name_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/aes.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/asn1t.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/base.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ec.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ec_key.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ecdh.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ecdsa.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/modes.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/pkcs8.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/pqueue.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/time_support.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/x509v3.h
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/d1_lib.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/d1_meth.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/pqueue/pqueue.c
+Copyright: 2012, Intel Corp
+           2002, Sun Microsystems, Inc
+           1998-2015, The OpenSSL Project
+License: OpenSSL
+
+Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/base64/base64_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/bio_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/socket_helper.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/ber.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/bytestring_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/cbb.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/cbs.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/chacha/chacha_generic.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/chacha/chacha_vec.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/chacha/chacha_vec_arm.S
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/chacha/chacha_vec_arm_generate.go
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/aead.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/aead_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_chacha20poly1305.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_ssl3.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_tls.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cmac/cmac_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu-arm-asm.S
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu-arm.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/crypto.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/digest/digest_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/ec_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/p256-64.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/util-64.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/engine/engine.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/err/err_data_generate.go
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/err/err_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp_extra_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/pbkdf_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/header_removed.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/hkdf/hkdf.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/hkdf/hkdf_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/lhash/lhash_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/lhash/make_macros.sh
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pkcs8/pkcs12_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/poly1305/poly1305.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/poly1305/poly1305_arm.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/poly1305/poly1305_vec.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rand/asm/rdrand-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rand/hwrand.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rand/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rand/rand.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rand/urandom.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rand/windows.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/refcount_c11.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/refcount_lock.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/refcount_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/stack/make_macros.sh
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/thread_none.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/thread_pthread.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/thread_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/thread_win.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/pkcs7.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509/pkcs7_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/aead.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/buffer.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/bytestring.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/chacha.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/cmac.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/crypto.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/dtls1.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/engine.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/hkdf.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/lhash_macros.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/objects.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/opensslfeatures.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/opensslv.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ossl_typ.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/pkcs12.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/pkcs7.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/poly1305.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/rand.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/safestack.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/stack_macros.h
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/pqueue/pqueue_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_aead_ctx.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/args.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/client.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/const.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/digest.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/genrsa.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/internal.h
+       src/3rdparty/chromium/third_party/boringssl/src/tool/pkcs12.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/rand.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/server.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/speed.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/tool.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/transport_common.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/transport_common.h
+       src/3rdparty/chromium/third_party/boringssl/src/util/all_tests.go
+       src/3rdparty/chromium/third_party/boringssl/src/util/bot/DEPS
+       src/3rdparty/chromium/third_party/boringssl/src/util/bot/extract.py
+       src/3rdparty/chromium/third_party/boringssl/src/util/bot/update_clang.py
+       src/3rdparty/chromium/third_party/boringssl/src/util/bot/vs_env.py
+       src/3rdparty/chromium/third_party/boringssl/src/util/make_errors.go
+       src/3rdparty/chromium/third_party/boringssl/src/util/generate_build_files.py
+Copyright: 2014-2015, Google Inc
+License: ISC
+
+Files: src/3rdparty/chromium/third_party/boringssl/linux-arm/crypto/aes/aes-armv4.S
+       src/3rdparty/chromium/third_party/boringssl/linux-arm/crypto/aes/bsaes-armv7.S
+       src/3rdparty/chromium/third_party/boringssl/linux-arm/crypto/sha/sha256-armv4.S
+       src/3rdparty/chromium/third_party/boringssl/linux-arm/crypto/sha/sha512-armv4.S
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/aes-586.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/aes-armv4.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/aes-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/aesni-x86.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/aesni-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/aesv8-armx.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/bsaes-armv7.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/armv4-mont.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/x86-mont.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/x86_64-mont.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/x86_64-mont5.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/asm/aesni-gcm-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/asm/ghash-armv4.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/asm/ghash-x86.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/asm/ghash-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/asm/ghashv8-armx.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rc4/asm/rc4-586.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rc4/asm/rc4-md5-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/rc4/asm/rc4-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha1-586.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha1-armv4-large.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha1-armv8.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha1-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha256-586.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha256-armv4.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha512-586.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha512-armv4.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha512-armv8.pl
+Copyright: Andy Polyakov <appro@openssl.org>
+License: CRYPTOGAMS or OpenSSL
+
+Files: src/3rdparty/chromium/third_party/boringssl/BUILD.gn
+       src/3rdparty/chromium/third_party/boringssl/boringssl.gyp
+       src/3rdparty/chromium/third_party/boringssl/boringssl.gypi
+       src/3rdparty/chromium/third_party/boringssl/boringssl_nacl.gyp
+       src/3rdparty/chromium/third_party/boringssl/boringssl_tests.gyp
+       src/3rdparty/chromium/third_party/boringssl/boringssl_tests.gypi
+       src/3rdparty/chromium/third_party/boringssl/boringssl_unittest.cc
+       src/3rdparty/chromium/third_party/boringssl/src/util/bot/go/bootstrap.py
+       src/3rdparty/chromium/third_party/boringssl/src/util/bot/go/env.py
+       src/3rdparty/chromium/third_party/boringssl/src/util/bot/vs_toolchain.py
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/rsaz-avx2.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/rsaz-x86_64.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/rsaz_exp.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_pci.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_pcia.c
+Copyright: 2012, Intel Corporation
+           2004, Kungliga Tekniska Högskolan
+           2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/directory.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/directory_posix.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/directory_win.c
+Copyright: 2004, Richard Levitte <richard@levitte.org>
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/boringssl/src/LICENSE
+Copyright: 1995-1998, Eric Young <eay@cryptsoft.com>
+           2015, Google Inc
+           1998-2011, The OpenSSL Project
+License: ISC or OpenSSL or SSLeay
+Comment: The openssl parts are under OpenSSL or SSLeay, the new code is under
+ ISC
+
+Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/md5/asm/md5-x86_64.pl
+Copyright: copyright disclaimed
+License: public-domain
+Comment: The file states:
+ Licence: I hereby disclaim the copyright on this code and place it
+ in the public domain.
+
+Files: src/3rdparty/chromium/third_party/brotli/*
+Copyright: 2013-2015, Google Inc
+           2013-2014, The Chromium Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/bsdtrees/*
+Copyright: 2002, Niels Provos <provos@citi.umich.edu>
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/bspatch/*
+Copyright: 2003-2004, Colin Percival
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/bspatch/BUILD.gn
+       src/3rdparty/chromium/third_party/bspatch/bspatch.gyp
+       src/3rdparty/chromium/third_party/bspatch/README.chromium
+Copyright: 2009-2015, The Chromium Authors
+License: BSD-3-clause
+Comment: these files are part of chromium and the LICENSE file the mention is
+ the one in the chromium root source tree.
+ .
+ Hopefully, upstream will make this clearer.
+
+Files: src/3rdparty/chromium/third_party/bspatch/LICENSE
+Copyright: no copyright, just the license text
+License: BSD_Protection_License(non-dfsg)
+
+Files: src/3rdparty/chromium/third_party/cacheinvalidation/cacheinvalidation.gyp
+       src/3rdparty/chromium/third_party/cacheinvalidation/cacheinvalidation_unittests.isolate
+Copyright: 2012, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/cardboard-java/*
+Copyright: 2014, Google Inc
+           2015, The Chromium Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/checkstyle/*
+Copyright: 1991-1999, Free Software Foundation, Inc
+           2001-2014, Oliver Burn
+           2002-2011, Lars Kühne
+           2003-2011, Oleg Sukhodolsky
+           2013-2015, Roman Ivanov
+           2014-2015, Michal Kordas
+License: LGPL-2.1+ or Apache-2.0
+Comment: FIXME: Only the jar file is in the source tree, make sure it's using
+ the one in the system, and drop this tree.
+
+Files: src/3rdparty/chromium/third_party/class-dump/*
+Copyright: 1997-2013, Steve Nygard
+License: GPL-2+
+
+Files: src/3rdparty/chromium/third_party/class-dump/class-dump.gyp
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/cld/*
+Copyright: 2006-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/cld_2/*
+Copyright: 2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/closure_compiler/*
+Copyright: 2009, The Closure Compiler Authors
+           2014-2015, The Chromium Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/closure_linter/*
+Copyright: 2011, Google Inc
+           2007-2013, The Closure Linter Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/codesighs/*
+Copyright: 2009, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/crashpad/*
+Copyright: 2014-2015, The Crashpad Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cctools/*
+Copyright: 1999-2004, Apple Computer, Inc
+License: APSL-2.0
+Comment: Excluded in dfsg version
+
+Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cctools/apple_cctools.gyp
+Copyright: 2014, The Crashpad Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cf/*
+Copyright: 1999-2010, Apple Inc
+License: APSL-2.0
+Comment: Excluded in dfsg version
+
+Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/getopt/*
+Copyright: 1997, Gregory Pietsch
+License: public-domain
+Comment: The LICENSE file states:
+ Copyright (C) 1997 Gregory Pietsch
+ .
+ [These files] are hereby placed in the public domain without restrictions. Just
+ give the author credit, don't claim you wrote it or prevent anyone else from
+ using it.
+
+Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/getopt/getopt.gyp
+Copyright: 2015, The Crashpad Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/gmock/*
+Copyright: 2014, The Crashpad Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/gtest/*
+Copyright: 2014, The Crashpad Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/mini_chromium/*
+Copyright: 2015, The Crashpad Authors
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/cython/*
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/d3/*
+Copyright: 2010-2014, Michael Bostock
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/decklink/*
+Copyright: 2009-2015, Blackmagic Design
+License: BSL
+
+Files: src/3rdparty/chromium/third_party/devscripts/*
+Copyright: 2007-2008, Adam D. Barratt
+           2012, Francesco Poli
+           1989-1991, Free Software Foundation, Inc
+License: GPL-2+
+
+Files: src/3rdparty/chromium/third_party/dom_distiller_js/*
+Copyright: 2009-2011, Christian Kohlschütter
+           2008, Google
+           2014-2015, The Chromium Authors
+           2007, Timepedia.org
+License: Apache-2.0 or BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/drmemory/*
+Copyright: 2010-2015, Google, Inc.
+           2008-2010, VMware, Inc.
+License: LGPL-2.1
+Comment: Actually drmemory is not included in the source tree, the
+ README.chromium file explains how to obtain it, though.
+ .
+ Refer to http://drmemory.org/ for more information.
+
+Files: src/3rdparty/chromium/third_party/elfutils/*
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/errorprone/*
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause or Apache-2.0
+Comment: errorprone is not included in source tree.
+ .
+ Refer to http://errorprone.info/ for more information.
+
+Files: src/3rdparty/chromium/third_party/expat/*
+Copyright: 2000, Clark Cooper
+           2001-2006, Expat maintainers
+           1998-2000, Thai Open Source Software Center Ltd
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/expat/BUILD.gn
+       src/3rdparty/chromium/third_party/expat/expat.gyp
+       src/3rdparty/chromium/third_party/expat/expat_nacl.gyp
+Copyright: 2012-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/*
+Copyright: 2004, AGAWA Koji <i@atty.jp>
+           2000, AV_STRINGIFY(CONFIG_THIS_YEAR) " FFmpeg Project
+           2004, Adam Thayer <krevnik@comcast.net>
+           2010, Adrian Daerr and Nicolas George
+           2008, Affine Systems, Inc (Michael Sullivan, Bobby Impollonia)
+           2005, Alban Bedel <albeu@free.fr>
+           2012, Aleksi Nurmi
+           2008, Alessandro Sappia
+           2002-2006, Alex Beregszaszi
+           2003, Alex Beregszaszi & Mike Melanson
+           2009, Alex Converse
+           2008-2013, Alex Converse <alex.converse@gmail.com>
+           2008-2012, Alexander E. Patrakov
+           2008-2010, Alexander Strange <astrange@ithinksw.com>
+           2007, Alexis Ballier
+           2014, Aman Gupta <ffmpeg@tmm1.net>
+           2010, Amanda, Y.N. Wu <amanda11192003@gmail.com>
+           2013, Anand Meher Kotra
+           2011, Anatoliy Wasserman
+           2010-2011, Anatoly Nenashev
+           2002, Anders Johansson <ajh@atri.curtin.edu.au>
+           2015, Andreas Cadhalpun <Andreas.Cadhalpun@googlemail.com>
+           2011, Andreas Öman
+           2008-2009, Andrej Stepanchuk
+           2012, Andrew D'Addesio
+           2013-2014, Andrew Kelley
+           2012, Andrey Utkin
+           2013, Andrey Utkin <andrey.krieger.utkin gmail com>
+           2012, Aneesh Dogra (lionaneesh) <lionaneesh@gmail.com>
+           2013, Aneesh Dogra <aneesh@sugarlabs.org>
+           2005, Anonymous, Alex Beregszaszi, Michael Niedermayer
+           2015, Anshul Maheshwari
+           2010-2013, Anssi Hannula
+           2007, Anssi Hannula <anssi.hannula@gmail.com>
+           2010, Anssi Hannula <anssi.hannula@iki.fi>
+           2010-2015, Anton Khirnov
+           2012, Anton Khirnov <anton khirnov net>
+           2011-2015, Anton Khirnov <anton@khirnov.net>
+           2012, Antti Seppälä
+           2014-2015, Arwa Arif <arwaarif1994@gmail.com>
+           2013, Ash Hughes
+           2006-2010, Aurelien Jacobs <aurel@gnuage.org>
+           2012, AvxSynth Team
+           2008, BBC, Anuradha Suraparaju <asuraparaju@gmail.com >
+           2008, BBC, Anuradha Suraparaju <asuraparaju@gmail.com>
+           2001-2003, BERO
+           2001-2003, BERO <bero@geocities.co.jp>
+           2005, Balatoni Denes
+           2006-2011, Baptiste Coudurier
+           2006-2008, Baptiste Coudurier <baptiste.coudurier@free.fr>
+           2006-2009, Baptiste Coudurier <baptiste.coudurier@gmail.com>
+           2007, Baptiste Coudurier, Benjamin Larsson, Ulion
+           2007-2009, Bartlomiej Wolowiec
+           2007-2008, Bartlomiej Wolowiec <bartek.wolowiec@gmail.com>
+           2005-2009, Benjamin Larsson
+           2004, Benjamin Zores
+           2007, Benjamin Zores <ben@geexbox.org>
+           2007-2014, Benoit Fouet
+           2007, Benoit Fouet ( benoit fouet free fr )
+           2007, Benoit Fouet <benoit.fouet@free.fr>
+           2009, Bjorn Axelsson
+           2007, Björn Axelsson
+           2007-2010, Bobby Bingham
+           2010, Brandon Mintern
+           2002, Brian Foley
+           2012, British Broadcasting Corporation
+           1993, CMUComputer Science, Speech Group
+           2013, Calvin Walton <calvin.walton@kepstin.ca>
+           2010-2012, Carl Eugen Hoyos
+           2000, Chris Ausbrooks <weed@bucket.pp.ualr.edu>
+           1999-2001, Chris Bagwell
+           2000, Chris Bagwell <cbagwell@sprynet.com>
+           2007, Christian Ohm, 2008 Eli Friedman
+           2009-2013, Christian Schmidt
+           2014, Christophe Gisquet
+           2012-2014, Christophe Gisquet <christophe.gisquet@gmail.com>
+           2007-2010, Christophe Gisquet <word1.word2@gmail.com>
+           2003-2005, Christopher R. Hertel <crh@ubiqx.mn.org>
+           2007, Clemens Fruhwirth
+           2012-2014, Clément Bœsch
+           2011-2014, Clément Bœsch <u pkh me>
+           2009, Colin McQuillan
+           2009, Colin McQuillian
+           2007, Collabora Ltd, Philippe Kalaf
+           1998-2009, Conifer Software
+           2006, Corey Hickey
+           2006, Cyril Zorin
+           2010, Daniel G. Taylor <dan@programmer-art.org>
+           2011-2013, Daniel Kang
+           2013, Daniel Kang <daniel.d.kang@gmail.com>
+           2001, Daniel Maas <dmaas@dcine.com>
+           2006, Daniel Maas <dmaas@maasdigital.com>
+           2014, Daniel Oberhoff
+           2009-2010, Daniel Verkamp
+           2009-2013, Daniel Verkamp <daniel@drv.nu>
+           2013, Darryl Wallace <wallacdj@gmail.com>
+           2014, Dave Rice @dericed
+           2007-2010, David Conrad
+           2009, David Conrad <lessen42@gmail.com>
+           2005, David Hammerton
+           2012, David Kment
+           2004, Denes Balatoni
+           2005, Denes Balatoni ( dbalatoni programozo hu )
+           2011-2014, Derek Buitenhuis
+           2014, Deti Fliegl
+           2013, Diego Biurrun <diego@biurrun.de>
+           2002, Dieter Shirley
+           2013, Dirk Farin <dirk.farin@gmail.com>
+           2005, DivX, Inc
+           2003, Donnie Smith
+           2015, Donny Yang
+           2003, Dr. Tim Ferguson
+           2009, Dylan Yudaken
+           2000, Edward Beingessner And Sundry Contributors
+           2007, Edward Hervey
+           2014, Eejya Singh
+           2010, Eli Friedman
+           2008, Eli Friedman (eli.friedman <at> gmail.com)
+           2008-2010, Eli Friedman <eli.friedman@gmail.com>
+           2010-2011, Elvis Presley
+           2004-2007, Eric Lasota
+           2003, Ewald Snel
+           2000, Fabien COELHO <fabien@coelho.net>
+           2000-2010, Fabrice Bellard
+           2001, Fabrice Bellard (original AU code)
+           2000-2001, Fabrice Bellard <fabrice@bellard.org>
+           2002, Falk Hueffner <falk@debian.org>
+           2009-2010, Fiona Glaser
+           2010, Fiona Glaser <fiona@x264.com>
+           2010, Francesco Lavra <francescolavra@interfree.it>
+           2002-2005, Francois Revol
+           2002, Francois Revol <revol@free.fr>
+           2002, Frederic 'dilb' Boulay
+           2012, Fredrik Mellbin
+           1991-1999, Free Software Foundation, Inc
+           2012-2014, Georg Lippitsch <georg.lippitsch@gmx.at>
+           2010-2013, Georg Martius <georg.martius@web.de>
+           2004, Gildas Bazin
+           2002, Gildas Bazin <gbazin@netcourrier.com>
+           2004, Gildas Bazin <gbazin@videolan.org>
+           2012-2013, Gildas Cocherel
+           2009, Giliard B. de Freitas <giliarde@gmail.com>
+           2015, Gilles Chanteperdrix <gch@xenomai.org>
+           2010-2012, Google, Inc
+           2006-2008, Gregory Montoir <cyx@users.sourceforge.net>
+           2012-2103, Guillaume Martres
+           2013, Guillaume Martres <smarter@ubuntu.com>
+           2006, Guillaume Poirier <gpoirier@mplayerhq.hu>
+           2002, Gunnar Monell <gmo@linux.nu>
+           2003, Gustavo Sverzut Barbieri <gsbarbieri@yahoo.com.br>
+           1997-1999, H. Dietz and R. Fisher
+           2010, Hans de Goede <hdegoede@redhat.com>
+           2001, Heikki Leinonen
+           2014-2015, Hendrik Leppkes
+           2015, Himangi Saraogi <himangi774@gmail.com>
+           2010, Holger Lubitz
+           2009-2010, Howard Chu
+           2011-2012, Hyllian/Jararaca <sergiogdb@gmail.com>
+           2005-2008, Ian Caulfield
+           2015, Imagination Technologies Ltd
+           1999, Intel Corporation
+           2003, International Business Machines, Corp
+           2003, Ivan Kalvachev
+           2007-2008, Ivo van Poorten
+           2010, Jacob Meuser
+           2008, Jaikrishnan Menon
+           2008-2009, Jaikrishnan Menon <realityman@gmx.net>
+           2012-2015, James Almer
+           2014, James Almer <jamrial <at> gmail.com>
+           2013-2014, James Almer <jamrial@gmail.com>
+           1990, James Ashton - Sydney University
+           2009, James Darnley
+           2011-2013, James Darnley <james.darnley@gmail.com>
+           2003, James Klicman <james@klicman.org>
+           2014, James Yu <james.yu@linaro.org>
+           2012, Jan Ekström
+           2011, Janne Grunau
+           2010-2014, Janne Grunau <janne-libav@jannau.net>
+           2013, Jeff Moguillansky
+           2005, Jeff Muizelaar
+           2012, Jeremy Tran
+           2009, Jimmy Christensen
+           2011, Jordi Ortiz
+           2010, Josh Allmann
+           2009, Joshua Warner
+           2011, Juan Carlos Rodriguez <ing.juancarlosrodriguez@hotmail.com>
+           2001, Juan J. Sierralta P
+           1998, Juergen Mueller And Sundry Contributors
+           2006-2012, Justin Ruggles
+           2006-2013, Justin Ruggles <justin.ruggles@gmail.com>
+           2011, KO Myung-Hun <komh@chollian.net>
+           2007, Kamil Nowosad
+           2006, Kartikey Mahendra BHATT <bhattkm@gmail.com>
+           2009, Kenan Gillet
+           2015, Kevin Wheatley <kevin.j.wheatley@gmail.com>
+           2011, Kieran Kunhya <kieran@kunhya.com>
+           2014, Kieran Kunhya <kierank@obe.tv>
+           2004-2014, Konstantin Shishkov
+           2013, Konstantin Shishkov <kostya.shishkov@gmail.com>
+           2009, Kostya Shishkov
+           2002, Laszlo Torok <torokl@alpha.dfmk.hu>
+           2009-2010, Laurent Aimar
+           2008, Laurent Aimar <fenrir@videolan.org>
+           2004-2006, Lennart Poettering
+           2002, Lennert Buytenhek <buytenh@gnu.org>
+           2013, Lenny Wang
+           2013, Lenny Wang <lwanghpc@gmail.com>
+           2012, Li Cao <li@multicorewareinc.com>
+           2001, Lionel Ulmer
+           2015, Loongson Technology Corporation Limited
+           2006-2011, Loren Merritt <lorenm@u.washington.edu>
+           2006-2014, Loren Merritt
+           2006-2009, Luca Abeni
+           2007, Luca Abeni ( lucabe72 email it )
+           2011-2015, Luca Barbato
+           2005-2015, Luca Barbato <lu_zero@gentoo.org>
+           2013-2014, Luca Barbato, Deti Fliegl
+           2013-2014, Lukasz Marek
+           2013-2014, Lukasz Marek <lukasz.m.luki@gmail.com>
+           2004, Maarten Daniels
+           2015, Manojkumar Bhosale <Manojkumar.Bhosale@imgtec.com>
+           2005-2012, Mans Rullgard
+           2005-2012, Mans Rullgard <mans@mansr.com>
+           2007, Marc Hoffman
+           2004, Marc Hoffman <marc.hoffman@analog.com>
+           2010, Marcelo Galvao Povoa
+           2007, Marco Gerards
+           2007-2008, Marco Gerards <marco@gnu.org>
+           2010, Mark Heath <mjpeg0@silicontrip.org>
+           2002, Mark Hills <mark@pogo.org.uk>
+           2011, Mark Himsley
+           2010, Mark Nauwelaerts
+           2009-2014, Martin Storsjo
+           2011, Martin Storsjö
+           2014, Marvin Scholz
+           2011-2012, Mashiat Sarker Shakkhar
+           2013, Matthew Heaney
+           2011, Matthew Hoops <clone2727@gmail.com>
+           2005, Matthieu CASTET
+           2011, Max Horn
+           2003, Max Krasnyansky <maxk@qualcomm.com>
+           2006-2007, Maxim Gavrilov ( maxim.gavrilov gmail com )
+           2002-2013, Maxim Poliakovski
+           2011-2012, Michael Bradshaw <mjbshaw gmail com>
+           2010, Michael Chinen
+           2011, Michael Karcher
+           2001-2014, Michael Niedermayer
+           Michael Niedermayer <michaelni gmx at>
+           2001-2015, Michael Niedermayer <michaelni@gmx.at>
+           2004-2005, Michael Niedermayer, Loren Merritt
+           2009, Michael Tison
+           2003-2007, Michel Bardiaux
+           2006-2007, Michel Bardiaux <mbardiaux@mediaxim.be>
+           2001, Michel Lespinasse
+           2000, Michel Lespinasse <walken@zoy.org>
+           2010, Michele Orrù
+           2012-2103, Mickael Raulet
+           2003, Mike Melanson
+           2004, Mike Melanson <melanson@pcisys.net>
+           2007, Mike Melanson, Konstantin Shishkov
+           2011, Mina Nagy Zaki
+           2011, Miroslav Slugeň <Thunder.m@seznam.cz>
+           2011, MirriAd Ltd
+           2011, Mohamed Naufal
+           2010, Mohamed Naufal Basheer
+           2010, Mohamed Naufal Basheer <naufal11@gmail.com>
+           2013-2014, Mozilla Corporation
+           2014, Muhammad Faiz <mfcc64@gmail.com>
+           2008, NVIDIA
+           2009, Naotoshi Nojiri
+           2012, Nathan Caldwell
+           2009, Nathan Caldwell <saintdev@gmail.com>
+           2014, Neil Birkbeck <birkbeck@google.com>
+           2014, Nicholas Robbins
+           2007, Nicholas Tung
+           1999, Nick Bailey
+           2003, Nick Kurshev
+           Nick Kurshev <nickols_k@mail.ru>
+           2014, Nicolas Bertrand
+           2013, Nicolas Bertrand <nicoinattendu@gmail.com>
+           2011-2014, Nicolas George
+           2012, Nicolas George <nicolas.george normalesup org>
+           2007-2012, Nicolas George <nicolas.george@normalesup.org>
+           2009, Nicolas Martin <martinic@iro.umontreal.ca>
+           2014, Niels Möller
+           2007, Nokia Corporation
+           2010, Nolan Lum <nol888@gmail.com>
+           2005-2006, Oded Shimon ( ods15 ods15 dyndns org )
+           2006, Oded Shimon <ods15@ods15.dyndns.org>
+           2005, Ole André Vadla Ravnås <oleavr@gmail.com>
+           2014, Oleksij Rempel <linux@rempel-privat.de>
+           2011, Oskar Arvidsson
+           2015, Parag Salasakar <Parag.Salasakar@imgtec.com>
+           2014, Pascal Massimino <pascal.massimino@gmail.com>
+           2003, Pascal Massimino <skal@planet-d.net>
+           2006, Patrick Guimond
+           2011-2015, Paul B Mahol
+           2008-2010, Paul Kendall <paul@kcbbs.gen.nz>
+           2006, Paul Richards <paul.richards@gmail.com>
+           2012, Pavel Koshevoy <pkoshevoy@gmail.com>
+           2012, Peng Gao <peng@multicorewareinc.com>
+           2000-2001, Peter Gubanov <peter@elecard.net.ru>
+           2009, Peter Holik
+           2014-2015, Peter Meerwald <pmeerw@pmeerw.net>
+           2006-2014, Peter Ross
+           2001-2014, Peter Ross <pross@xvid.org>
+           2012, Petri Hintukainen <phintuka <at> users.sourceforge.net>
+           2010-2011, Philip Langdale <ffmpeg.philipl@overt.org>
+           2012, Philip Langdale <philipl@overt.org>
+           2013-2014, Pierre-Edouard LEPERE
+           2013-2014, Pierre-Edouard Lepere
+           2006-2010, Prakash Punnoor <prakash@punnoor.de>
+           2013-2014, RISC OS Open Ltd
+           2013, RISC OS Open Ltd <bavison@riscosopen.org>
+           2010, Rafael Carre
+           2006-2014, Ramiro Polla
+           2008, Ramiro Polla <ramiro.polla@gmail.com>
+           2013-2014, Ramiro Polla, Luca Barbato, Deti Fliegl
+           2006-2007, Reimar Doeffinger
+           2005-2011, Reimar Döffinger
+           2009-2014, Reimar Döffinger <Reimar.Doeffinger@gmx.de>
+           2002, Remi Guyomarch <rguyom@pobox.com>
+           2006-2007, Reynaldo H. Verdejo Pinochet
+           2007, Reynaldo H. Verdejo Pinochet (QCELP decoder)
+           2003, Rich Felker
+           2007, Richard Spindler (author of frei0r plugin from which this was derived)
+           2013, Rl, Aetey Global Technologies AB
+           2010, Rob Clark <rob@ti.com>
+           2006-2012, Rob Sykes <robs@users.sourceforge.net>
+           2005-2006, Robert Edele <yartrebo@earthlink.net>
+           2008, Robert Marston
+           2012, Robert Nagy <ronag89 gmail com>
+           2006-2008, Robert Swain
+           2008-2009, Robert Swain ( rob opendot cl )
+           2002-2005, Roberto Togni
+           2015, Rodger Combs
+           1999, Roger Hardiman
+           2015, Roger Pack
+           2011, Roger Pau Monné <roger.pau@entel.upc.edu>
+           2005, Roine Gustafsson
+           2003-2004, Romain Dolbeau
+           2003-2004, Romain Dolbeau <romain@dolbeau.org>
+           2003-2006, Roman Shaposhnik
+           2007-2012, Ronald S. Bultje
+           2007, Ronald S. Bultje <rbultje@ronald.bitfreak.net>
+           2013, Ronald S. Bultje <rsbultje gmail com>
+           2010-2014, Ronald S. Bultje <rsbultje@gmail.com>
+           2014, Rong Yan
+           2012, Rudolf Polzer
+           2013, Rudolf Polzer <divverent@xonotic.org>
+           2006-2007, Ryan Martell
+           2006, Ryan Martell <rdm4@martellventures.com>
+           2013, Rémi Denis-Courmont
+           2010, S.N. Hemanth Meenakshisundaram
+           2010, S.N. Hemanth Meenakshisundaram <smeenaks ucsd edu>
+           2010, S.N. Hemanth Meenakshisundaram <smeenaks@ucsd.edu>
+           2009, Samalyse
+           2014, Samsung Electronics
+           2012, Samuel Pitoiset
+           2003-2009, Sascha Sommer
+           2008, Sascha Sommer <saschasommer@freenet.de>
+           2008-2011, Sascha Sommer, Benjamin Larsson
+           2009-2011, Sebastian Gesemann
+           2010, Sebastian Vater <cdgs.basty@googlemail.com>
+           2009, Sebastien Lucas <sebastien.lucas@gmail.com>
+           1999-2000, Sebastien Rougeaux <sebastien.rougeaux@anu.edu.au>
+           2011, Sebastien Zwickert
+           2013, Seppo Tomperi
+           2014-2015, Seppo Tomperi <seppo.tomperi@vtt.fi>
+           2015, Shivraj Patil <Shivraj.Patil@imgtec.com>
+           2007-2008, Siarhei Siamashka <ssvb@users.sourceforge.net>
+           2008, Sisir Koppaka
+           2006-2007, SmartJog S.A., Baptiste Coudurier <baptiste.coudurier@smartjog.com>
+           2011-2012, Smartjog S.A.S, Clément Bœsch <clement.boesch@smartjog.com>
+           2008-2009, Splitted-Desktop Systems
+           2014, StarBrilliant <m13253@hotmail.com>
+           2006-2009, Stefan Gehrer <stefan.gehrer@gmx.de>
+           2007-2013, Stefano Sabatini
+           2010-2011, Stefano Sabatini <stefano.sabatini-lala poste it>
+           2012, Stefano Sabatini <stefasab gmail com>
+           2011, Stefano Sabatini | <stefasab@gmail.com>
+           2009, Stephen Backway
+           2006-2015, Steve Lhomme
+           2002, Steve O'Hara-Smith
+           2005, Steve Underwood <steveu@coppice.org>
+           2012, Steven Robertson
+           2015, Stupeflix
+           2014-2015, Supraja Meedinti
+           2011, Sven Hesse <drmccoy@drmccoy.de>
+           2001-2013, The FFmpeg Project
+           2002, The Xine Project
+           2006, Thijs Vermeir <thijs.vermeir@barco.com>
+           2009-2013, Thilo Borgmann <thilo.borgmann _at_ mail.de>
+           2014, Thilo Borgmann <thilo.borgmann@mail.de>
+           2011, Thomas Kuehnel
+           2009, Thomas P. Higdon <thomas.p.higdon@gmail.com>
+           2003, Thomas Raivio
+           2014-2015, Thomas Volkert <thomas@homer-conferencing.com>
+           2013, Tiancheng "Timothy" Gu
+           2014, Tiancheng "Timothy" Gu <timothygu99@gmail.com>
+           2001, Tim Ferguson
+           2014, Tim Walker <tdskywalker@gmail.com>
+           2014-2015, Timo Rothenpieler <timo@rothenpieler.org>
+           2003, Tinic Uro
+           2009, Tobias Bindhammer
+           2010, Tomas Härdin
+           2009, Toshimitsu Kimura
+           2015, Urvang Joshi
+           2013, VTT
+           2013, Vadim Kalinsky <vadim@kalinsky.ru>
+           2008, Victor Paesa
+           2005, Vidar Madsen
+           2014-2015, Vignesh Venkatasubramanian
+           2012, Vitaliy E Sugrobov
+           2007-2011, Vitor Sessak
+           2007, Vitor Sessak <vitor1001@gmail.com>
+           1001, Vitor Sessak <vitorgmail com>
+           2013-2015, Vittorio Giovara
+           2013-2015, Vittorio Giovara <vittorio.giovara@gmail.com>
+           2007-2011, Vladimir Voroshilov
+           2012-2013, Wassim Hamidouche
+           2012-2013, Wei Gao <weigao@multicorewareinc.com>
+           2005, Wim Taymans
+           2005-2007, Wolfram Gloger
+           2013, Xiaolei Yu <dreifachstein@gmail.com>
+           2012, Xidorn Quan
+           2009, Xuggle Incorporated
+           2006-2011, Xvid Solutions GmbH
+           2013, Yukinori Yamazoe
+           2002, Zdenek Kabelac <kabi@informatics.muni.cz>
+           2008-2011, Zhentan Feng <spyfeng@gmail.com>
+           2015, Zhou Xiaoyong <zhouxiaoyong@loongson.cn>
+           2005, Zoltan Hidvegi <hzoli -a- hzoli -d- com>
+           2009, Zuxy Meng <zuxy.meng@gmail.com>
+           2005, anonymous, Alex Beregszaszi, Michael Niedermayer
+           2001, ffmpeg project
+           2008-2009, robs@users.sourceforge.net
+           1994-2012, the Xiph.Org Foundation
+           2010, tipok <piratfm@gmail.com>
+           2008, vmrsss
+           2003-2011, x264 project
+           2005-2008, Diego Biurrun
+           2000-2002, Fabrice Bellard
+           2005-2008, Mans Rullgard
+License: LGPL-2.1+
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv2
+       src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avisynth_c.h
+       src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avs/capi.h
+       src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avs/config.h
+       src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avs/types.h
+       src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avxsynth_c.h
+       src/3rdparty/chromium/third_party/ffmpeg/doc/general.texi
+       src/3rdparty/chromium/third_party/ffmpeg/doc/texi2pod.pl
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/flac_dsp_gpl.asm
+       src/3rdparty/chromium/third_party/ffmpeg/libavdevice/x11grab.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/f_ebur128.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/interlace.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/tinterlace.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_blackframe.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_boxblur.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_colormatrix.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_cover_rect.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_cropdetect.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_delogo.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_eq.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_eq.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_find_rect.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_fspp.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_fspp.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_geq.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_histeq.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_hqdn3d.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_hqdn3d.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_interlace.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_kerndeint.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_mcdeint.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_mpdecimate.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_owdenoise.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_perspective.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_phase.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_pp.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_pp7.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_pp7.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_pullup.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_pullup.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_repeatfields.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_sab.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_smartblur.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_spp.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_spp.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_stereo3d.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_super2xsai.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_tinterlace.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_uspp.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vsrc_mptestsrc.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_eq.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_fspp.asm
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_fspp_init.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_hqdn3d_init.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_interlace.asm
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_interlace_init.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_pp7.asm
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_pp7_init.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_pullup.asm
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_pullup_init.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_spp.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_tinterlace_init.c
+       src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess.c
+       src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess.h
+       src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_altivec_template.c
+       src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_internal.h
+       src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_template.c
+       src/3rdparty/chromium/third_party/ffmpeg/libswresample/swresample-test.c
+Copyright: 2002, A'rpi
+           2014-2015, Arwa Arif <arwaarif1994@gmail.com>
+           2010, Baptiste Coudurier
+           2002-2003, Brian J. Murrell
+           2006, Clemens Fruhwirth <clemens@endorphin.org>
+           2012-2013, Clément Bœsch
+           2012-2013, Clément Bœsch <u pkh me>
+           2003, Daniel Moreno <comac@comac.darktech.org>
+           2001-2003, Donald A. Graft
+           2000-2002, Fabrice Bellard
+           1989-2001, Free Software Foundation, Inc
+           2010, Gordon Schmidt <gordon.schmidt <at> s2000.tu-chemnitz.de>
+           2006, Ivo van Poorten
+           2014, James Darnley <james.darnley@gmail.com>
+           2013, Jean Delvare <khali@linux-fr.org>
+           2012, Jeremy Tran
+           2002, Jindrich Makovicka <makovick@gmail.com>
+           2006, Julian Hall
+           2003, Kevin Atkinson
+           2006-2007, Kevin Stone
+           2014, Kieran Kunhya <kierank@obe.tv>
+           2012, Loren Merritt
+           2001-2015, Michael Niedermayer <michaelni@gmx.at>
+           2003, Michael Zucchi <notzed@ximian.com>
+           2010, Niel van der Westhuizen <nielkie@gmail.com>
+           2005, Nikolaj Poroshin <porosh3@psu.ru>
+           2013, Paul B Mahol
+           1997-1998, Rasca, Berlin
+           2003, Rich Felker
+           2004, Romain Dolbeau <romain@dolbeau.org>
+           2010-2012, Stefano Sabatini
+           2003-2004, Tobias Diedrich
+           2004, Ville Saari
+           2013, Vittorio Giovara <vittorio.giovara@gmail.com>
+           Wilbert Dijkhof
+           1997-2001, ZSNES Team ( zsknight@zsnes.com / _demo_@zsnes.com )
+License: GPL-2+
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/ac3dec_fixed.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/arm/vp8dsp_armv6.S
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/fft_fixed_32.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/fft_init_table.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/fft_table.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mdct_fixed_32.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/aaccoder_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/aacdec_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/aacdec_mips.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/aacpsdsp_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/aacpsy_mips.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/aacsbr_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/aacsbr_mips.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/ac3dsp_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/acelp_filters_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/acelp_vectors_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/amrwbdec_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/amrwbdec_mips.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/celp_filters_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/celp_math_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/compute_antialias_fixed.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/compute_antialias_float.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/fft_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/iirfilter_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/lsp_mips.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/mpegaudiodsp_mips_fixed.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/mpegaudiodsp_mips_float.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/sbrdsp_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavutil/fixed_dsp.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavutil/fixed_dsp.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavutil/mips/float_dsp_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavutil/mips/libm_mips.h
+Copyright: 2010, Google Inc
+           2011, Mans Rullgard <mans@mansr.com>
+           2010, Rob Clark <rob@ti.com>
+License: BSD-3-clause or LGPL-2.1+
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/doc/examples/avio_list_dir.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/avio_reading.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/decoding_encoding.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/demuxing_decoding.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/extract_mvs.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/filtering_audio.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/filtering_video.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/metadata.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/muxing.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/qsvdec.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/remuxing.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/resampling_audio.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/scaling_video.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/transcoding.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/style.min.css
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/api-flac-test.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/arm/jrevdct_arm.S
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/cinepakenc.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/nellymoser.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/nellymoser.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/nellymoserdec.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/vc1dsp_init.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/vc1dsp_mmx.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggdec.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggdec.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparseogm.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparsespeex.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparsetheora.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparsevorbis.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/bootstrap.min.css
+Copyright: 2014, Andrey Utkin
+           2015, Anton Khirnov
+           2014, Barbara Lepage <db0company@gmail.com>
+           2007, Christophe GISQUET <christophe.gisquet@free.fr>
+           2012-2014, Clément Bœsch
+           2001-2003, Fabrice Bellard
+           2001, Lionel Ulmer (lionel.ulmer@free.fr / <bbrox@bbrox.org>
+           2007, Loic Minier <lool@dooz.org>
+           2015, Ludmila Glinskih
+           2014, Lukasz Marek
+           2005, Matthieu CASTET, Alex Beregszaszi
+           2005, Michael Ahlberg, Måns Rullgård
+           2010, Nicolas George
+           2008, Reimar Döffinger
+           2011, Reinhard Tartler
+           2013-2014, Rl, Aetey Global Technologies AB
+           2011-2014, Stefano Sabatini
+           2011, Tomas Härdin
+           2007, a840bda5870ba11f19698ff6eb9581dfb0f95fa5
+           2011-2014, Twitter, Inc
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/BUILD.gn
+       src/3rdparty/chromium/third_party/ffmpeg/PRESUBMIT.py
+       src/3rdparty/chromium/third_party/ffmpeg/chromium/dllmain.cc
+       src/3rdparty/chromium/third_party/ffmpeg/chromium/ffmpeg.sigs
+       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/build_ffmpeg.py
+       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/copy_config.sh
+       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/generate_gyp.py
+       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/generate_gyp_unittest.py
+       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/munge_config_optimizations.sh
+       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/win_env.sh
+       src/3rdparty/chromium/third_party/ffmpeg/ffmpeg.gyp
+       src/3rdparty/chromium/third_party/ffmpeg/ffmpeg_generated.gni
+       src/3rdparty/chromium/third_party/ffmpeg/ffmpeg_generated.gypi
+       src/3rdparty/chromium/third_party/ffmpeg/ffmpeg_options.gni
+Copyright: 2009-2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/compat/windows/makedef
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/faandct.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libfdk-aacdec.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libfdk-aacenc.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/zerocodec.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavdevice/openal-dec.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_hqx.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavutil/x86/x86inc.asm
+Copyright: 2014, Clément Bœsch
+           2012-2013, Derek Buitenhuis
+           2011, Jonathan Baldwin
+           2012, Martin Storsjo
+           2003, Michael Niedermayer <michaelni@gmx.at>
+           2003, Roman Shaposhnik
+           2005-2013, x264 project
+License: ISC
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideo.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideodec.cpp
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideoenc.cpp
+Copyright: 2011-2012, Derek Buitenhuis
+License: GPL-2
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv3
+       src/3rdparty/chromium/third_party/ffmpeg/doc/t2h.pm
+Copyright: 2014, Andreas Cadhalpun
+           2011-2012, Free Software Foundation, Inc
+           2007, Free Software Foundation, Inc. <http://fsf.org/>
+           2014, Tiancheng "Timothy" Gu
+License: GPL-3+
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/tools/coverity.c
+Copyright: 2014, Red Hat, Inc
+License: GPL-2+
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/tools/patcheck
+Copyright: Michael Niedermayer
+License: GPL
+Comment: The file states:
+ License: GPL, Author: Michael Niedermayer
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/fmtconvert_mips.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavutil/softfloat_tables.h
+Copyright: 2012, MIPS Technologies, Inc., California.
+License: BSD-2-clause or LGPL-2.1+
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/LICENSE.md
+Copyright: 1991-1999, Free Software Foundation, Inc
+           2010, Google Inc
+           2001, Lionel Ulmer (lionel.ulmer@free.fr / <bbrox@bbrox.org>
+           2011, Mans Rullgard <mans@mansr.com>
+           2005, Matthieu CASTET, Alex Beregszaszi
+           2005, Michael Ahlberg, Måns Rullgård
+           2003, Michael Niedermayer <michaelni@gmx.at>
+           2008, Reimar Döffinger
+           2010, Rob Clark <rob@ti.com>
+           2003, Roman Shaposhnik
+           1991-1996, Thomas G. Lane
+License: BSD-3-clause or Expat or GPL-2+ or ISC or LGPL-2.1+
+Comment: meta licensing information
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libzvbi-teletextdec.c
+Copyright: 2013, Marton Balint
+           2005-2012, Wolfram Gloger
 License: LGPL-2+
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavutil/adler32.c
+Copyright: 1995, Mark Adler
+License: Zlib
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/cygwin-wrapper
+Copyright: No copyright information
+License: MPL-2.0
+
+Files: src/3rdparty/chromium/third_party/fips181/*
+Copyright: 2014, The Chromium Authors
+           1999-2003, Adel I. Mirzazhanov. All rights reserved
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/flac/*
+Copyright: 2000-2007, Josh Coalson
+           2011-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/flac/src/libFLAC/include/private/md5.h
+       src/3rdparty/chromium/third_party/flac/src/libFLAC/md5.c
+Copyright: No copyright claimed
+License: public-domain
+Comment:
+ The code states:
+ This code implements the MD5 message-digest algorithm.
+ The algorithm is due to Ron Rivest.  This code was
+ written by Colin Plumb in 1993, no copyright is claimed.
+ This code is in the public domain; do with it what you wish.
+ .
+ [...]
+ .
+ Changed so as no longer to depend on Colin Plumb's `usual.h' header
+ definitions; now uses stuff from dpkg's config.h.
+  - Ian Jackson <ijackson@nyx.cs.du.edu>.
+ Still in the public domain.
+ .
+ Josh Coalson: made some changes to integrate with libFLAC.
+ Still in the public domain.
+
+Files: src/3rdparty/chromium/third_party/flot/*
+Copyright: 2007-2013, IOLA and Ole Laursen
+           2008, Three Dub Media (http://threedubmedia.com)
+License: Expat
+Comment:
+ FIXME: only minified versions are present
+
+Files: src/3rdparty/chromium/third_party/flot/jquery.flot.resize.min.js
+Copyright: 2010, "Cowboy" Ben Alman
+           2007-2013, IOLA and Ole Laursen
+License: Expat or GPL
+ FIXME: only minified versions are present
+
+Files: src/3rdparty/chromium/third_party/fontconfig/*
+Copyright: 2011, Akira TAGOH
+           2008-2010, Behdad Esfahbod
+           2007, Chris Wilson
+           2008, Danilo Šegan
+           2006, Danis Jacquerye
+           2007, Dwayne Bailey and Translate.org.za
+           2011-2013, Google, Inc
+           2000-2007, Keith Packard
+           2008, Neskie Manuel
+           2012, Parag Nemade
+           2012, Parag Nemade, Pravin Satpute <psatpute@redhat.com>
+           2005, Patrick Lam
+           2004-2013, Red Hat, Inc
+           2009, Reşat SABIQ
+           2009, Roozbeh Pournader
+           2005, Sharif FarsiWeb, Inc <license@farsiweb.info>
+           2000, Tuomas J. Lukka
+           2010, 息Behdad Esfahbod
+           2006, 息Keith Packard
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/fontconfig/src/m4/ax_cc_for_build.m4
+       src/3rdparty/chromium/third_party/fontconfig/src/m4/ax_pthread.m4
+Copyright: 2011, Daniel Richard G <skunk@iSKUNK.ORG>
+           2010, Reuben Thomas <rrt@sc3d.org>
+           1999, Richard Henderson <rth@redhat.com>
+           2008, Steven G. Johnson <stevenj@alum.mit.edu>
+License: GPL-3+_AutoConfException
+
+Files: src/3rdparty/chromium/third_party/fontconfig/BUILD.gn
+       src/3rdparty/chromium/third_party/fontconfig/fontconfig.gyp
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/fontconfig/src/config/config.guess
+       src/3rdparty/chromium/third_party/fontconfig/src/config/config.sub
+License: GPL-2+_AutoConfException
+
+Files: src/3rdparty/chromium/third_party/fontconfig/src/src/fcfreetype.c
+Copyright: 2002-2003, Juliusz Chroboczek
+           2001, Keith Packard
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/fontconfig/src/src/fccache.c
+Copyright: 2000, Keith Packard
+           2005, Patrick Lam
+License: MIT/X11 or public-domain
+
+Files: src/3rdparty/chromium/third_party/fontconfig/src/git.mk
+Copyright: 2010-2011, Behdad Esfahbod
+           2009, Red Hat, Inc
+License: Permissive
+ Copying and distribution of this file, with or without modification,
+ is permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved.
+
+Files: src/3rdparty/chromium/third_party/fontconfig/src/m4/ax_create_stdint_h.m4
+Copyright: Guido U. Draheim <guidod@gmx.de>
+License: GPL_AutoConfException
+
+Files: src/3rdparty/chromium/third_party/fontconfig/src/fc-case/CaseFolding.txt
+Copyright: 1991-2013, Unicode, Inc
+License: Unicode
+
+Files: src/3rdparty/chromium/third_party/freetype-android/*
+Copyright: 1996-2015, David Turner, Robert Wilhelm, and Werner Lemberg
+License: FTL
+
+Files: src/3rdparty/chromium/third_party/freetype-android/BUILD.gn
+       src/3rdparty/chromium/third_party/freetype-android/freetype.gyp
+Copyright: 2011-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/freetype2/*
+Copyright: 1996-2015, David Turner, Robert Wilhelm, and Werner Lemberg
+           1996-2011, David Turner
+           2007-2009, Dereg Clegg, Michael Toftdal
+           2007-2009, Derek Clegg, Michael Toftdal
+           2007, Dmitry Timoshkov for Codeweavers
+           2003, Huw D M Davies for Codeweavers
+           2004-2006, Masatake YAMATO and Redhat K.K
+           2002-2011, Roberto Alameda
+           2006-2008, suzuki toshiya
+           2004-2007, suzuki toshiya, Masatake YAMATO, Red Hat K.K
+License: FTL
+
+Files: src/3rdparty/chromium/third_party/freetype2/src/src/bdf/README
+       src/3rdparty/chromium/third_party/freetype2/src/src/bdf/bdf.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/bdf/bdf.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/bdf/bdfdrivr.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/bdf/bdfdrivr.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/bdf/bdferror.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/bdf/bdflib.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/bdf/module.mk
+       src/3rdparty/chromium/third_party/freetype2/src/src/bdf/rules.mk
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/README
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/module.mk
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcf.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcf.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcfdrivr.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcfdrivr.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcfread.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcfread.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcfutil.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/rules.mk
+Copyright: 2000, Computing Research Labs, New Mexico State University
+           2000-2011, Francesco Zappa Nardelli
+           2000-2014, by
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/freetype2/src/src/gzip/adler32.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/infblock.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/infblock.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/infcodes.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/infcodes.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/inflate.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/inftrees.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/inftrees.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/infutil.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/infutil.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/zconf.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/zlib.h
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/zutil.c
+       src/3rdparty/chromium/third_party/freetype2/src/src/gzip/zutil.h
+Copyright: 1995-2002, Jean-loup Gailly
+           1995-2002, Jean-loup Gailly and Mark Adler
+           1995-2002, Mark Adler
+License: Zlib
+
+Files: src/3rdparty/chromium/third_party/freetype2/BUILD.gn
+       src/3rdparty/chromium/third_party/freetype2/freetype2.gyp
+       src/3rdparty/chromium/third_party/freetype2/src/src/tools/ftrandom/ftrandom.c
+Copyright: 2005-2008, George Williams
+           2013-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/freetype2/src/vms_make.com
+Copyright: 2001-2002, Catharon Productions Inc
+           1996-2007, by
+License: Expat or FTL
+
+Files: src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcfutil.c
+Copyright: 1990-1998, The Open Group
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/freetype2/src/docs/GPLv2.TXT
+Copyright: 1989-1991, Free Software Foundation, Inc
+License: GPL-2+
+
+Files: src/3rdparty/chromium/third_party/fuzzymatch/*
+Copyright: 2008, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/gardiner_mod/*
+Copyright: 2007-2015, George Douros
+License: fonts-ancient-scripts_license
+ Fonts are free for any use; they may be opened, edited, modified,
+ regenerated, packaged and redistributed.
+
+Files: src/3rdparty/chromium/third_party/google_input_tools/*
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/google_toolbox_for_mac/*
+Copyright: 2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/harfbuzz-ng/*
+Copyright: 2006, Behdad Esfahbod
+           2007, Chris Wilson
+           2011, Codethink Limited
+           2005, David Turner
+           1998-2004, David Turner and Werner Lemberg
+           2010-2015, Google, Inc
+           2009, Keith Stribley
+           2011, Martin Hosken
+           2009, Martin Hosken and SIL International
+           2012-2015, Mozilla Foundation
+           2008-2010, Nokia Corporation and/or its subsidiary(-ies)
+           2004-2013, Red Hat, Inc
+           2011, SIL International
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/harfbuzz-ng/BUILD.gn
+       src/3rdparty/chromium/third_party/harfbuzz-ng/harfbuzz.gyp
+Copyright: 2012-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/harfbuzz-ng/src/hb-ucdn.cc
+Copyright: 2012, Grigori Goronzy <greg@kinoho.net>
+License: ISC
+
+Files: src/3rdparty/chromium/third_party/hunspell/*
+Copyright: 2009, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/hwcplus/*
+Copyright: 2012, Google, Inc
+           2005-2011, The Android Open Source Project
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/hwcplus/include/cutils/log.h
+       src/3rdparty/chromium/third_party/hwcplus/include/vendor/gralloc_drm_defs.h
+       src/3rdparty/chromium/third_party/hwcplus/src/hwcplus_util.c
+       src/3rdparty/chromium/third_party/hwcplus/LICENSE
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/iaccessible2/*
+Copyright: 2006, IBM Corporation
+           2007-2013, Linux Foundation
+           2000-2006, Sun Microsystems, Inc
+           2000-2006, Sun Microsystems, Inc.
+           2012-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/iccjpeg/*
+Copyright: 2011-2014, The Chromium Authors
+           1991-1998, Thomas G. Lane
+License: IJG
+
+Files: src/3rdparty/chromium/third_party/icu/*
+Copyright: 2007, Google Inc
+           2008-2014, Google, International Business Machines Corporation
+           2008-2014, Google, International Business Machines Corporation and
+           1998-2013, IBM Corp
+           2000-2014, IBM Corporation
+           2009-2010, IBM Corporation and Others
+           1997-2014, IBM Corporation and others.
+           2001-2014, IBM and others
+           2002-2006, IBM, Inc
+           2000-2004, IBM, Inc. and Others
+           2000-2014, IBM, Inc. and others
+           2003-2009, IBM, Ken Foskey, and others
+           1995-2015, International Business Machines
+           2000-2003, International Business Machines Corp
+           1996-2015, International Business Machines Corporation
+           2002-2007, International Business Machines Corporation
+           1997-2014, International Business Machines Corporation and
+           1996-2014, International Business Machines Corporation and others
+           1998-2005, International Business Machines Corporation and others.
+           2002, International Business Machines Corporation and others.
+           2014, International Business Machines Corporation
+           2009-2011, International Business Machines Corporation, Google and Others
+           2002-2003, International Business Machines
+           2002, The Internet Society
+           1991-2014, Unicode, Inc
+           1991-2004, Unicode, Inc.
+           2010, Yahoo! Inc
+           2001-2004, and onwards Google Inc
+           1995-2015, International Business Machines
+           2012-2015, The Chromium Authors
+           2013, Brian Eugene Wilson, Robert Martin Campbell
+           1996, Chih-Hao Tsai@Beckman Institute, University of Illinois
+           1999, Computer Systems and Communication Lab
+           2006-2008, Google Inc
+           1995-2014, International Business Machines Corporation
+           1995-2014, International Business Machines Corporation and others
+           2013, LeRoy Benjamin Sharon
+           2000-2003, Nara Institute of Science
+           1999, Pai-Hsiang Hsiao
+           1999, TaBE Project
+           1991-2014, Unicode, Inc
+           1996, Chih-Hao Tsai@Beckman Institute, University of Illinois
+           1999, Computer Systems and Communication Lab
+           2006-2008, Google Inc
+           2012-2013, Google Inc, International Business Machines Corporation
+           2014, International Business Machines Corporation
+           2013, LeRoy Benjamin Sharon
+           2000-2003, Nara Institute of Science
+           1999, Pai-Hsiang Hsiao
+           1999, TaBE Project
+License: BSD-3-clause or MIT-like-icu
+
+
+Files: src/3rdparty/chromium/third_party/icu/source/tools/tzcode/asctime.c
+       src/3rdparty/chromium/third_party/icu/source/tools/tzcode/ialloc.c
+       src/3rdparty/chromium/third_party/icu/source/tools/tzcode/localtime.c
+       src/3rdparty/chromium/third_party/icu/source/tools/tzcode/private.h
+       src/3rdparty/chromium/third_party/icu/source/tools/tzcode/scheck.c
+       src/3rdparty/chromium/third_party/icu/source/tools/tzcode/tzfile.h
+       src/3rdparty/chromium/third_party/icu/source/tools/tzcode/zdump.c
+       src/3rdparty/chromium/third_party/icu/source/tools/tzcode/zic.c
+Copyright: No copyright claimed
+License: public-domain
+
+Files: src/3rdparty/chromium/third_party/icu/source/data/mappings/iso-8859_10-1998.ucm
+       src/3rdparty/chromium/third_party/icu/source/data/mappings/iso-8859_11-2001.ucm
+       src/3rdparty/chromium/third_party/icu/source/data/mappings/iso-8859_14-1998.ucm
+Copyright: 2002-2005, International Business Machines
+           1998-2002, Unicode, Inc
+License: Unicode
+
+Files: src/3rdparty/chromium/third_party/icu/source/config.guess
+       src/3rdparty/chromium/third_party/icu/source/config.sub
+Copyright: 1992-2013, Free Software Foundation, Inc
+License: GPL-3+_AutoConfException
+
+Files: src/3rdparty/chromium/third_party/icu/source/configure
+Copyright: 1992-2012, Free Software Foundation, Inc
+           1999-2014, International Business Machines Corporation and others
+License: FSF_unlimited
+
+Files: src/3rdparty/chromium/third_party/icu/source/data/brkitr/laodict.txt
+Copyright: 2013, Brian Eugene Wilson, Robert Martin Campbell
+           2013, International Business Machines Corporation
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/icu/source/aclocal.m4
+Copyright: 2004, Scott James Remnant <scott@netsplit.com>
+License: GPL-2+_AutoConfException or FSF_unlimited
+
+Files: src/3rdparty/chromium/third_party/icu/source/install-sh
+Copyright: 1991, the Massachusetts Institute of Technology
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/instrumented_libraries/*
+Copyright: 2013-2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/isimpledom/*
+       LICENSE
+Copyright: 1998-2002, Netscape Communications Corporation
+License: GPL-2+ or LGPL-2.1+ or MPL-1.1
+
+Files: src/3rdparty/chromium/third_party/isimpledom/BUILD.gn
+       src/3rdparty/chromium/third_party/isimpledom/isimpledom.gyp
+Copyright: 2011-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/jinja2/*
+Copyright: 2010, the Jinja Team
+           2010, the Jinja Team, see AUTHORS for more details
+           2006-2013, the Jinja team, see AUTHORS
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/jsoncpp/*
+Copyright: 2007-2011, Baptiste Lepilleur
+License: Expat or public-domain
+
+Files: src/3rdparty/chromium/third_party/jsoncpp/BUILD.gn
+       src/3rdparty/chromium/third_party/jsoncpp/jsoncpp.gyp
+       src/3rdparty/chromium/third_party/jsoncpp/jsoncpp.gypi
+       src/3rdparty/chromium/third_party/jsoncpp/jsoncpp_nacl.gyp
+Copyright: 2012-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/jsr-305/*
+Copyright: 2012, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/jstemplate/*
+Copyright: 2006, Google Inc
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/jstemplate/compile.py
+       src/3rdparty/chromium/third_party/jstemplate/compiled_resources.gyp
+       src/3rdparty/chromium/third_party/jstemplate/compiled_resources2.gyp
+Copyright: 2011-2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/junit/*
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/khronos/*
+Copyright: 1992, Silicon Graphics, Inc
+           2007-2014, The Khronos Group Inc
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/khronos/BUILD.gn
+       src/3rdparty/chromium/third_party/khronos/khronos.gyp
+Copyright: 2012-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/launchpad_translations/*
+Copyright: 2006-2011, Chromium يازغۇچىلىرىغا تەۋە. بارلىق ھوقۇقنى ساقلاپ قالىدۇ.</translation>
+           2006-2011, Chromium-en egileak. Eskubide guztiak erreserbatuta.</translation>
+           2006-2011, Chromium-ის ავტორები. ყველა უფლება დაცულია.</translation>
+           2006-2011, Chromium֊ի հեղինակներ։ Բոլոր իրավունքները պաշտպանված են։</translation>
+           2006-2011, Els autors de Chromium. Tots els drets reservats.</translation>
+           2006-2011, Kromiumaj Aŭtoroj. Ĉiuj Rajtoj Rezervitaj.</translation>
+           2006-2011, Le Autores de Chromium. Tote derectos de copia reservate.</translation>
+           2006-2011, Nivîserên Chromiumê. Hemû maf parastî ne.</translation>
+           2006-2011, Os autores de Chromium. Reservados todos os dereitos.</translation>
+           2006-2011, The Chromium Authors. </translation>
+           2006-2011, יוצרי Chromium. כל הזכויות שמורות.</translation>
+License: BSD-3-clause
+
+
+
+Files: src/3rdparty/chromium/third_party/libjingle/source/talk/examples/android/third_party/autobanh/*
+Copyright: 2014, Cameron Lowell Palmer
+           2011-2012, Tavendo GmbH.
+License: Apache-2.0 or Expat
+Comment: Only the jar file is in the source tree. Removed in the dfsg version.
+ .
+ A full version can be found in http://autobahn.ws/android/ .
+
+Files: src/3rdparty/chromium/third_party/libjingle/source/talk/examples/objc/AppRTCDemo/third_party/SocketRocket/*
+Copyright: 2012, Square Inc
+License: Apache-2.0
 
 Files: *
     examples/webengine/quicknanobrowser/*
@@ -5068,23 +7241,6 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUt
 Copyright: 2014 The Chromium Authors. All rights reserved.
  2013 Google Inc. All rights reserved.
 License: LGPL-2.1+
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2.1 of the License, or (at your option) any later version.
- .
-  This library is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  Lesser General Public License for more details.
- .
-  You should have received a copy of the GNU Lesser General Public
-  License along with this library; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- .
-  On Debian systems, the complete text of the
-  GNU Lesser General Public License version 2.1 can be found in
-  /usr/share/common-licenses/LGPL-2.1
 
 Files: src/3rdparty/chromium/third_party/talloc/* excluding:
     -? src/3rdparty/chromium/third_party/talloc/config.h.in
@@ -5482,26 +7638,955 @@ Files: src/3rdparty/chromium/base/third_party/*
 Copyright: 2014 The Chromium Authors. All rights reserved.
  2013 Google Inc. All rights reserved.
 License: Expat
-  | Permission is hereby granted, free of charge, to any person
-  | obtaining a copy of this software and associated documentation
-  | files (the "Software"), to deal in the Software without
-  | restriction, including without limitation the rights to use,
-  | copy, modify, merge, publish, distribute, sublicense, and/or sell
-  | copies of the Software, and to permit persons to whom the
-  | Software is furnished to do so, subject to the following
-  | conditions:
-  |
-  | The above copyright notice and this permission notice shall be
-  | included in all copies or substantial portions of the Software.
-  |
-  | THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-  | EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-  | OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-  | NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-  | HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-  | WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  | FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-  | OTHER DEALINGS IN THE SOFTWARE.
+
+Files: debian/*
+Copyright: 2016 Scarlett Clark <sgclark@kubuntu.org>
+License: LGPL-2+
+
+License: Academic-2.0
+ --------------------------------------------------------------------------------
+ Academic Free License v. 2.0
+ --------------------------------------------------------------------------------
+ .
+ This Academic Free License (the "License") applies to any original work of
+ authorship (the "Original Work") whose owner (the "Licensor") has placed the
+ following notice immediately following the copyright notice for the Original
+ Work:
+ .
+ Licensed under the Academic Free License version 2.0
+ 1) Grant of Copyright License. Licensor hereby grants You a world-wide,
+ royalty-free, non-exclusive, perpetual, sublicenseable license to do the
+ following:
+ .
+ a) to reproduce the Original Work in copies;
+ b) to prepare derivative works ("Derivative Works") based upon the Original
+    Work;
+ c) to distribute copies of the Original Work and Derivative Works to the
+    public;
+ d) to perform the Original Work publicly; and
+ e) to display the Original Work publicly.
+ .
+ 2) Grant of Patent License. Licensor hereby grants You a world-wide,
+ royalty-free, non-exclusive, perpetual, sublicenseable license, under patent
+ claims owned or controlled by the Licensor that are embodied in the Original
+ Work as furnished by the Licensor, to make, use, sell and offer for sale the
+ Original Work and Derivative Works.
+ .
+ 3) Grant of Source Code License. The term "Source Code" means the preferred
+ form of the Original Work for making modifications to it and all available
+ documentation describing how to modify the Original Work. Licensor hereby
+ agrees to provide a machine-readable copy of the Source Code of the Original
+ Work along with each copy of the Original Work that Licensor distributes.
+ Licensor reserves the right to satisfy this obligation by placing a
+ machine-readable copy of the Source Code in an information repository
+ reasonably calculated to permit inexpensive and convenient access by You for as
+ long as Licensor continues to distribute the Original Work, and by publishing
+ the address of that information repository in a notice immediately following
+ the copyright notice that applies to the Original Work.
+ .
+ 4) Exclusions From License Grant. Neither the names of Licensor, nor the names
+ of any contributors to the Original Work, nor any of their trademarks or
+ service marks, may be used to endorse or promote products derived from this
+ Original Work without express prior written permission of the Licensor. Nothing
+ in this License shall be deemed to grant any rights to trademarks, copyrights,
+ patents, trade secrets or any other intellectual property of Licensor except as
+ expressly stated herein. No patent license is granted to make, use, sell or
+ offer to sell embodiments of any patent claims other than the licensed claims
+ defined in Section 2. No right is granted to the trademarks of Licensor even if
+ such marks are included in the Original Work. Nothing in this License shall be
+ interpreted to prohibit Licensor from licensing under different terms from this
+ License any Original Work that Licensor otherwise would have a right to
+ license.
+ .
+ 5) This section intentionally omitted.
+ .
+ 6) Attribution Rights. You must retain, in the Source Code of any Derivative
+ Works that You create, all copyright, patent or trademark notices from the
+ Source Code of the Original Work, as well as any notices of licensing and any
+ descriptive text identified therein as an "Attribution Notice." You must cause
+ the Source Code for any Derivative Works that You create to carry a prominent
+ Attribution Notice reasonably calculated to inform recipients that You have
+ modified the Original Work.
+ .
+ 7) Warranty of Provenance and Disclaimer of Warranty. Licensor warrants that
+ the copyright in and to the Original Work and the patent rights granted herein
+ by Licensor are owned by the Licensor or are sublicensed to You under the terms
+ of this License with the permission of the contributor(s) of those copyrights
+ and patent rights. Except as expressly stated in the immediately proceeding
+ sentence, the Original Work is provided under this License on an "AS IS" BASIS
+ and WITHOUT WARRANTY, either express or implied, including, without limitation,
+ the warranties of NON-INFRINGEMENT, MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE. THE ENTIRE RISK AS TO THE QUALITY OF THE ORIGINAL WORK IS WITH YOU.
+ This DISCLAIMER OF WARRANTY constitutes an essential part of this License. No
+ license to Original Work is granted hereunder except under this disclaimer.
+ .
+ 8) Limitation of Liability. Under no circumstances and under no legal theory,
+ whether in tort (including negligence), contract, or otherwise, shall the
+ Licensor be liable to any person for any direct, indirect, special, incidental,
+ or consequential damages of any character arising as a result of this License
+ or the use of the Original Work including, without limitation, damages for loss
+ of goodwill, work stoppage, computer failure or malfunction, or any and all
+ other commercial damages or losses. This limitation of liability shall not
+ apply to liability for death or personal injury resulting from Licensor's
+ negligence to the extent applicable law prohibits such limitation. Some
+ jurisdictions do not allow the exclusion or limitation of incidental or
+ consequential damages, so this exclusion and limitation may not apply to You.
+ .
+ 9) Acceptance and Termination. If You distribute copies of the Original Work or
+ a Derivative Work, You must make a reasonable effort under the circumstances to
+ obtain the express assent of recipients to the terms of this License. Nothing
+ else but this License (or another written agreement between Licensor and You)
+ grants You permission to create Derivative Works based upon the Original Work
+ or to exercise any of the rights granted in Section 1 herein, and any attempt
+ to do so except under the terms of this License (or another written agreement
+ between Licensor and You) is expressly prohibited by U.S. copyright law, the
+ equivalent laws of other countries, and by international treaty. Therefore, by
+ exercising any of the rights granted to You in Section 1 herein, You indicate
+ Your acceptance of this License and all of its terms and conditions.
+ .
+ 10) Termination for Patent Action. This License shall terminate automatically
+ and You may no longer exercise any of the rights granted to You by this License
+ as of the date You commence an action, including a cross-claim or counterclaim,
+ for patent infringement (i) against Licensor with respect to a patent
+ applicable to software or (ii) against any entity with respect to a patent
+ applicable to the Original Work (but excluding combinations of the Original
+ Work with other software or hardware).
+ .
+ 11) Jurisdiction, Venue and Governing Law. Any action or suit relating to this
+ License may be brought only in the courts of a jurisdiction wherein the
+ Licensor resides or in which Licensor conducts its primary business, and under
+ the laws of that jurisdiction excluding its conflict-of-law provisions. The
+ application of the United Nations Convention on Contracts for the International
+ Sale of Goods is expressly excluded. Any use of the Original Work outside the
+ scope of this License or after its termination shall be subject to the
+ requirements and penalties of the U.S. Copyright Act, 17 U.S.C. 101 et seq.,
+ the equivalent laws of other countries, and international treaty. This section
+ shall survive the termination of this License.
+ .
+ 12) Attorneys Fees. In any action to enforce the terms of this License or
+ seeking damages relating thereto, the prevailing party shall be entitled to
+ recover its costs and expenses, including, without limitation, reasonable
+ attorneys' fees and costs incurred in connection with such action, including
+ any appeal of such action. This section shall survive the termination of this
+ License.
+ .
+ 13) Miscellaneous. This License represents the complete agreement concerning
+ the subject matter hereof. If any provision of this License is held to be
+ unenforceable, such provision shall be reformed only to the extent necessary to
+ make it enforceable.
+ .
+ 14) Definition of "You" in This License. "You" throughout this License, whether
+ in upper or lower case, means an individual or a legal entity exercising rights
+ under, and complying with all of the terms of, this License. For legal
+ entities, "You" includes any entity that controls, is controlled by, or is
+ under common control with you. For purposes of this definition, "control" means
+ (i) the power, direct or indirect, to cause the direction or management of such
+ entity, whether by contract or otherwise, or (ii) ownership of fifty percent
+ (50%) or more of the outstanding shares, or (iii) beneficial ownership of such
+ entity.
+ .
+ 15) Right to Use. You may use the Original Work in all ways not otherwise
+ restricted or conditioned by this License or by law, and Licensor promises not
+ to interfere with or be responsible for such uses by You.
+ .
+ This license is Copyright (C) 2003 Lawrence E. Rosen. All rights reserved.
+ Permission is hereby granted to copy and distribute this license without
+ modification. This license may not be modified without the express written
+ permission of its copyright owner.
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+      http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+License: APSL-2.0
+ APPLE PUBLIC SOURCE LICENSE
+ Version 2.0 - August 6, 2003
+ .
+ Please read this License carefully before downloading this software.
+ By downloading or using this software, you are agreeing to be bound by
+ the terms of this License. If you do not or cannot agree to the terms
+ of this License, please do not download or use the software.
+ .
+ 1. General; Definitions. This License applies to any program or other
+ work which Apple Computer, Inc. ("Apple") makes publicly available and
+ which contains a notice placed by Apple identifying such program or
+ work as "Original Code" and stating that it is subject to the terms of
+ this Apple Public Source License version 2.0 ("License"). As used in
+ this License:
+ .
+ 1.1 "Applicable Patent Rights" mean: (a) in the case where Apple is
+ the grantor of rights, (i) claims of patents that are now or hereafter
+ acquired, owned by or assigned to Apple and (ii) that cover subject
+ matter contained in the Original Code, but only to the extent
+ necessary to use, reproduce and/or distribute the Original Code
+ without infringement; and (b) in the case where You are the grantor of
+ rights, (i) claims of patents that are now or hereafter acquired,
+ owned by or assigned to You and (ii) that cover subject matter in Your
+ Modifications, taken alone or in combination with Original Code.
+ .
+ 1.2 "Contributor" means any person or entity that creates or
+ contributes to the creation of Modifications.
+ .
+ 1.3 "Covered Code" means the Original Code, Modifications, the
+ combination of Original Code and any Modifications, and/or any
+ respective portions thereof.
+ .
+ 1.4 "Externally Deploy" means: (a) to sublicense, distribute or
+ otherwise make Covered Code available, directly or indirectly, to
+ anyone other than You; and/or (b) to use Covered Code, alone or as
+ part of a Larger Work, in any way to provide a service, including but
+ not limited to delivery of content, through electronic communication
+ with a client other than You.
+ .
+ 1.5 "Larger Work" means a work which combines Covered Code or portions
+ thereof with code not governed by the terms of this License.
+ .
+ 1.6 "Modifications" mean any addition to, deletion from, and/or change
+ to, the substance and/or structure of the Original Code, any previous
+ Modifications, the combination of Original Code and any previous
+ Modifications, and/or any respective portions thereof. When code is
+ released as a series of files, a Modification is: (a) any addition to
+ or deletion from the contents of a file containing Covered Code;
+ and/or (b) any new file or other representation of computer program
+ statements that contains any part of Covered Code.
+ .
+ 1.7 "Original Code" means (a) the Source Code of a program or other
+ work as originally made available by Apple under this License,
+ including the Source Code of any updates or upgrades to such programs
+ or works made available by Apple under this License, and that has been
+ expressly identified by Apple as such in the header file(s) of such
+ work; and (b) the object code compiled from such Source Code and
+ originally made available by Apple under this License.
+ .
+ 1.8 "Source Code" means the human readable form of a program or other
+ work that is suitable for making modifications to it, including all
+ modules it contains, plus any associated interface definition files,
+ scripts used to control compilation and installation of an executable
+ (object code).
+ .
+ 1.9 "You" or "Your" means an individual or a legal entity exercising
+ rights under this License. For legal entities, "You" or "Your"
+ includes any entity which controls, is controlled by, or is under
+ common control with, You, where "control" means (a) the power, direct
+ or indirect, to cause the direction or management of such entity,
+ whether by contract or otherwise, or (b) ownership of fifty percent
+ (50%) or more of the outstanding shares or beneficial ownership of
+ such entity.
+ .
+ 2. Permitted Uses; Conditions & Restrictions. Subject to the terms
+ and conditions of this License, Apple hereby grants You, effective on
+ the date You accept this License and download the Original Code, a
+ world-wide, royalty-free, non-exclusive license, to the extent of
+ Apple's Applicable Patent Rights and copyrights covering the Original
+ Code, to do the following:
+ .
+ 2.1 Unmodified Code. You may use, reproduce, display, perform,
+ internally distribute within Your organization, and Externally Deploy
+ verbatim, unmodified copies of the Original Code, for commercial or
+ non-commercial purposes, provided that in each instance:
+ .
+ (a) You must retain and reproduce in all copies of Original Code the
+ copyright and other proprietary notices and disclaimers of Apple as
+ they appear in the Original Code, and keep intact all notices in the
+ Original Code that refer to this License; and
+ .
+ (b) You must include a copy of this License with every copy of Source
+ Code of Covered Code and documentation You distribute or Externally
+ Deploy, and You may not offer or impose any terms on such Source Code
+ that alter or restrict this License or the recipients' rights
+ hereunder, except as permitted under Section 6.
+ .
+ 2.2 Modified Code. You may modify Covered Code and use, reproduce,
+ display, perform, internally distribute within Your organization, and
+ Externally Deploy Your Modifications and Covered Code, for commercial
+ or non-commercial purposes, provided that in each instance You also
+ meet all of these conditions:
+ .
+ (a) You must satisfy all the conditions of Section 2.1 with respect to
+ the Source Code of the Covered Code;
+ .
+ (b) You must duplicate, to the extent it does not already exist, the
+ notice in Exhibit A in each file of the Source Code of all Your
+ Modifications, and cause the modified files to carry prominent notices
+ stating that You changed the files and the date of any change; and
+ .
+ (c) If You Externally Deploy Your Modifications, You must make
+ Source Code of all Your Externally Deployed Modifications either
+ available to those to whom You have Externally Deployed Your
+ Modifications, or publicly available. Source Code of Your Externally
+ Deployed Modifications must be released under the terms set forth in
+ this License, including the license grants set forth in Section 3
+ below, for as long as you Externally Deploy the Covered Code or twelve
+ (12) months from the date of initial External Deployment, whichever is
+ longer. You should preferably distribute the Source Code of Your
+ Externally Deployed Modifications electronically (e.g. download from a
+ web site).
+ .
+ 2.3 Distribution of Executable Versions. In addition, if You
+ Externally Deploy Covered Code (Original Code and/or Modifications) in
+ object code, executable form only, You must include a prominent
+ notice, in the code itself as well as in related documentation,
+ stating that Source Code of the Covered Code is available under the
+ terms of this License with information on how and where to obtain such
+ Source Code.
+ .
+ 2.4 Third Party Rights. You expressly acknowledge and agree that
+ although Apple and each Contributor grants the licenses to their
+ respective portions of the Covered Code set forth herein, no
+ assurances are provided by Apple or any Contributor that the Covered
+ Code does not infringe the patent or other intellectual property
+ rights of any other entity. Apple and each Contributor disclaim any
+ liability to You for claims brought by any other entity based on
+ infringement of intellectual property rights or otherwise. As a
+ condition to exercising the rights and licenses granted hereunder, You
+ hereby assume sole responsibility to secure any other intellectual
+ property rights needed, if any. For example, if a third party patent
+ license is required to allow You to distribute the Covered Code, it is
+ Your responsibility to acquire that license before distributing the
+ Covered Code.
+ .
+ 3. Your Grants. In consideration of, and as a condition to, the
+ licenses granted to You under this License, You hereby grant to any
+ person or entity receiving or distributing Covered Code under this
+ License a non-exclusive, royalty-free, perpetual, irrevocable license,
+ under Your Applicable Patent Rights and other intellectual property
+ rights (other than patent) owned or controlled by You, to use,
+ reproduce, display, perform, modify, sublicense, distribute and
+ Externally Deploy Your Modifications of the same scope and extent as
+ Apple's licenses under Sections 2.1 and 2.2 above.
+ .
+ 4. Larger Works. You may create a Larger Work by combining Covered
+ Code with other code not governed by the terms of this License and
+ distribute the Larger Work as a single product. In each such instance,
+ You must make sure the requirements of this License are fulfilled for
+ the Covered Code or any portion thereof.
+ .
+ 5. Limitations on Patent License. Except as expressly stated in
+ Section 2, no other patent rights, express or implied, are granted by
+ Apple herein. Modifications and/or Larger Works may require additional
+ patent licenses from Apple which Apple may grant in its sole
+ discretion.
+ .
+ 6. Additional Terms. You may choose to offer, and to charge a fee for,
+ warranty, support, indemnity or liability obligations and/or other
+ rights consistent with the scope of the license granted herein
+ ("Additional Terms") to one or more recipients of Covered Code.
+ However, You may do so only on Your own behalf and as Your sole
+ responsibility, and not on behalf of Apple or any Contributor. You
+ must obtain the recipient's agreement that any such Additional Terms
+ are offered by You alone, and You hereby agree to indemnify, defend
+ and hold Apple and every Contributor harmless for any liability
+ incurred by or claims asserted against Apple or such Contributor by
+ reason of any such Additional Terms.
+ .
+ 7. Versions of the License. Apple may publish revised and/or new
+ versions of this License from time to time. Each version will be given
+ a distinguishing version number. Once Original Code has been published
+ under a particular version of this License, You may continue to use it
+ under the terms of that version. You may also choose to use such
+ Original Code under the terms of any subsequent version of this
+ License published by Apple. No one other than Apple has the right to
+ modify the terms applicable to Covered Code created under this
+ License.
+ .
+ 8. NO WARRANTY OR SUPPORT. The Covered Code may contain in whole or in
+ part pre-release, untested, or not fully tested works. The Covered
+ Code may contain errors that could cause failures or loss of data, and
+ may be incomplete or contain inaccuracies. You expressly acknowledge
+ and agree that use of the Covered Code, or any portion thereof, is at
+ Your sole and entire risk. THE COVERED CODE IS PROVIDED "AS IS" AND
+ WITHOUT WARRANTY, UPGRADES OR SUPPORT OF ANY KIND AND APPLE AND
+ APPLE'S LICENSOR(S) (COLLECTIVELY REFERRED TO AS "APPLE" FOR THE
+ PURPOSES OF SECTIONS 8 AND 9) AND ALL CONTRIBUTORS EXPRESSLY DISCLAIM
+ ALL WARRANTIES AND/OR CONDITIONS, EXPRESS OR IMPLIED, INCLUDING, BUT
+ NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR CONDITIONS OF
+ MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR
+ PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NONINFRINGEMENT OF THIRD
+ PARTY RIGHTS. APPLE AND EACH CONTRIBUTOR DOES NOT WARRANT AGAINST
+ INTERFERENCE WITH YOUR ENJOYMENT OF THE COVERED CODE, THAT THE
+ FUNCTIONS CONTAINED IN THE COVERED CODE WILL MEET YOUR REQUIREMENTS,
+ THAT THE OPERATION OF THE COVERED CODE WILL BE UNINTERRUPTED OR
+ ERROR-FREE, OR THAT DEFECTS IN THE COVERED CODE WILL BE CORRECTED. NO
+ ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY APPLE, AN APPLE
+ AUTHORIZED REPRESENTATIVE OR ANY CONTRIBUTOR SHALL CREATE A WARRANTY.
+ You acknowledge that the Covered Code is not intended for use in the
+ operation of nuclear facilities, aircraft navigation, communication
+ systems, or air traffic control machines in which case the failure of
+ the Covered Code could lead to death, personal injury, or severe
+ physical or environmental damage.
+ .
+ 9. LIMITATION OF LIABILITY. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO
+ EVENT SHALL APPLE OR ANY CONTRIBUTOR BE LIABLE FOR ANY INCIDENTAL,
+ SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR RELATING
+ TO THIS LICENSE OR YOUR USE OR INABILITY TO USE THE COVERED CODE, OR
+ ANY PORTION THEREOF, WHETHER UNDER A THEORY OF CONTRACT, WARRANTY,
+ TORT (INCLUDING NEGLIGENCE), PRODUCTS LIABILITY OR OTHERWISE, EVEN IF
+ APPLE OR SUCH CONTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+ DAMAGES AND NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY
+ REMEDY. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY OF
+ INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY
+ TO YOU. In no event shall Apple's total liability to You for all
+ damages (other than as may be required by applicable law) under this
+ License exceed the amount of fifty dollars ($50.00).
+ .
+ 10. Trademarks. This License does not grant any rights to use the
+ trademarks or trade names "Apple", "Apple Computer", "Mac", "Mac OS",
+ "QuickTime", "QuickTime Streaming Server" or any other trademarks,
+ service marks, logos or trade names belonging to Apple (collectively
+ "Apple Marks") or to any trademark, service mark, logo or trade name
+ belonging to any Contributor. You agree not to use any Apple Marks in
+ or as part of the name of products derived from the Original Code or
+ to endorse or promote products derived from the Original Code other
+ than as expressly permitted by and in strict compliance at all times
+ with Apple's third party trademark usage guidelines which are posted
+ at http://www.apple.com/legal/guidelinesfor3rdparties.html.
+ .
+ 11. Ownership. Subject to the licenses granted under this License,
+ each Contributor retains all rights, title and interest in and to any
+ Modifications made by such Contributor. Apple retains all rights,
+ title and interest in and to the Original Code and any Modifications
+ made by or on behalf of Apple ("Apple Modifications"), and such Apple
+ Modifications will not be automatically subject to this License. Apple
+ may, at its sole discretion, choose to license such Apple
+ Modifications under this License, or on different terms from those
+ contained in this License or may choose not to license them at all.
+ .
+ 12. Termination.
+ .
+ 12.1 Termination. This License and the rights granted hereunder will
+ terminate:
+ .
+ (a) automatically without notice from Apple if You fail to comply with
+ any term(s) of this License and fail to cure such breach within 30
+ days of becoming aware of such breach;
+ .
+ (b) immediately in the event of the circumstances described in Section
+ 13.5(b); or
+ .
+ (c) automatically without notice from Apple if You, at any time during
+ the term of this License, commence an action for patent infringement
+ against Apple; provided that Apple did not first commence
+ an action for patent infringement against You in that instance.
+ .
+ 12.2 Effect of Termination. Upon termination, You agree to immediately
+ stop any further use, reproduction, modification, sublicensing and
+ distribution of the Covered Code. All sublicenses to the Covered Code
+ which have been properly granted prior to termination shall survive
+ any termination of this License. Provisions which, by their nature,
+ should remain in effect beyond the termination of this License shall
+ survive, including but not limited to Sections 3, 5, 8, 9, 10, 11,
+ 12.2 and 13. No party will be liable to any other for compensation,
+ indemnity or damages of any sort solely as a result of terminating
+ this License in accordance with its terms, and termination of this
+ License will be without prejudice to any other right or remedy of
+ any party.
+ .
+ 13. Miscellaneous.
+ .
+ 13.1 Government End Users. The Covered Code is a "commercial item" as
+ defined in FAR 2.101. Government software and technical data rights in
+ the Covered Code include only those rights customarily provided to the
+ public as defined in this License. This customary commercial license
+ in technical data and software is provided in accordance with FAR
+ 12.211 (Technical Data) and 12.212 (Computer Software) and, for
+ Department of Defense purchases, DFAR 252.227-7015 (Technical Data --
+ Commercial Items) and 227.7202-3 (Rights in Commercial Computer
+ Software or Computer Software Documentation). Accordingly, all U.S.
+ Government End Users acquire Covered Code with only those rights set
+ forth herein.
+ .
+ 13.2 Relationship of Parties. This License will not be construed as
+ creating an agency, partnership, joint venture or any other form of
+ legal association between or among You, Apple or any Contributor, and
+ You will not represent to the contrary, whether expressly, by
+ implication, appearance or otherwise.
+ .
+ 13.3 Independent Development. Nothing in this License will impair
+ Apple's right to acquire, license, develop, have others develop for
+ it, market and/or distribute technology or products that perform the
+ same or similar functions as, or otherwise compete with,
+ Modifications, Larger Works, technology or products that You may
+ develop, produce, market or distribute.
+ .
+ 13.4 Waiver; Construction. Failure by Apple or any Contributor to
+ enforce any provision of this License will not be deemed a waiver of
+ future enforcement of that or any other provision. Any law or
+ regulation which provides that the language of a contract shall be
+ construed against the drafter will not apply to this License.
+ .
+ 13.5 Severability. (a) If for any reason a court of competent
+ jurisdiction finds any provision of this License, or portion thereof,
+ to be unenforceable, that provision of the License will be enforced to
+ the maximum extent permissible so as to effect the economic benefits
+ and intent of the parties, and the remainder of this License will
+ continue in full force and effect. (b) Notwithstanding the foregoing,
+ if applicable law prohibits or restricts You from fully and/or
+ specifically complying with Sections 2 and/or 3 or prevents the
+ enforceability of either of those Sections, this License will
+ immediately terminate and You must immediately discontinue any use of
+ the Covered Code and destroy all copies of it that are in your
+ possession or control.
+ .
+ 13.6 Dispute Resolution. Any litigation or other dispute resolution
+ between You and Apple relating to this License shall take place in the
+ Northern District of California, and You and Apple hereby consent to
+ the personal jurisdiction of, and venue in, the state and federal
+ courts within that District with respect to this License. The
+ application of the United Nations Convention on Contracts for the
+ International Sale of Goods is expressly excluded.
+ .
+ 13.7 Entire Agreement; Governing Law. This License constitutes the
+ entire agreement between the parties with respect to the subject
+ matter hereof. This License shall be governed by the laws of the
+ United States and the State of California, except that body of
+ California law concerning conflicts of law.
+ .
+ Where You are located in the province of Quebec, Canada, the following
+ clause applies: The parties hereby confirm that they have requested
+ that this License and all related documents be drafted in English. Les
+ parties ont exige que le present contrat et tous les documents
+ connexes soient rediges en anglais.
+ .
+ EXHIBIT A.
+ .
+ "Portions Copyright (c) 1999-2003 Apple Computer, Inc. All Rights
+ Reserved.
+ .
+ This file contains Original Code and/or Modifications of Original Code
+ as defined in and that are subject to the Apple Public Source License
+ Version 2.0 (the 'License'). You may not use this file except in
+ compliance with the License. Please obtain a copy of the License at
+ http://www.opensource.apple.com/apsl/ and read it before using this
+ file.
+ .
+ The Original Code and all software distributed under the License are
+ distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+ EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+ INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+ Please see the License for the specific language governing rights and
+ limitations under the License."
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY APPLE, INC. ``AS IS'' AND ANY
+ EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL APPLE, INC. OR
+ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+     * Redistributions of source code must retain the above copyright notice,
+       this list of conditions and the following disclaimer.
+     * Neither the name of the authors nor the names of its contributors may
+       be used to endorse or promote products derived from this software
+       without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSL
+ Permission is hereby granted, free of charge, to any person or organization
+ obtaining a copy of the software and accompanying documentation covered by
+ this license (the "Software") to use, reproduce, display, distribute,
+ execute, and transmit the Software, and to prepare derivative works of the
+ Software, and to permit third-parties to whom the Software is furnished to
+ do so, all subject to the following:
+ .
+ The copyright notices in the Software and this entire statement, including
+ the above license grant, this restriction and the following disclaimer,
+ must be included in all copies of the Software, in whole or in part, and
+ all derivative works of the Software, unless such copies or derivative
+ works are solely in the form of machine-executable object code generated by
+ a source language processor.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+ SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+ FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ DEALINGS IN THE SOFTWARE.
+
+License: CRYPTOGAMS
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+       *	Redistributions of source code must retain copyright notices,
+ 	this list of conditions and the following disclaimer.
+ .
+       *	Redistributions in binary form must reproduce the above
+ 	copyright notice, this list of conditions and the following
+ 	disclaimer in the documentation and/or other materials
+ 	provided with the distribution.
+ .
+       *	Neither the name of the CRYPTOGAMS nor the names of its
+ 	copyright holder and contributors may be used to endorse or
+ 	promote products derived from this software without specific
+ 	prior written permission.
+ .
+ ALTERNATIVELY, provided that this notice is retained in full, this
+ product may be distributed under the terms of the GNU General Public
+ License (GPL), in which case the provisions of the GPL apply INSTEAD OF
+ those given above.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge,
+ publish, distribute, sublicense, and/or sell copies of the Software,
+ and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+License: FSF_unlimited
+ This configure script is free software; the Free Software Foundation
+ gives unlimited permission to copy, distribute and modify it.
+
+License: FTL
+                    The FreeType Project LICENSE
+                    ----------------------------
+ .
+                            2000-Feb-08
+ .
+                       Copyright 1996-2000 by
+          David Turner, Robert Wilhelm, and Werner Lemberg
+ .
+ .
+ .
+ Introduction
+ ============
+ .
+  The FreeType  Project is distributed in  several archive packages;
+  some of them may contain, in addition to the FreeType font engine,
+  various tools and  contributions which rely on, or  relate to, the
+  FreeType Project.
+ .
+  This  license applies  to all  files found  in such  packages, and
+  which do not  fall under their own explicit  license.  The license
+  affects  thus  the  FreeType   font  engine,  the  test  programs,
+  documentation and makefiles, at the very least.
+ .
+  This  license   was  inspired  by  the  BSD,   Artistic,  and  IJG
+  (Independent JPEG  Group) licenses, which  all encourage inclusion
+  and  use of  free  software in  commercial  and freeware  products
+  alike.  As a consequence, its main points are that:
+ .
+    o We don't promise that this software works. However, we will be
+      interested in any kind of bug reports. (`as is' distribution)
+ .
+    o You can  use this software for whatever you  want, in parts or
+      full form, without having to pay us. (`royalty-free' usage)
+ .
+    o You may not pretend that  you wrote this software.  If you use
+      it, or  only parts of it,  in a program,  you must acknowledge
+      somewhere  in  your  documentation  that  you  have  used  the
+      FreeType code. (`credits')
+ .
+  We  specifically  permit  and  encourage  the  inclusion  of  this
+  software, with  or without modifications,  in commercial products.
+  We  disclaim  all warranties  covering  The  FreeType Project  and
+  assume no liability related to The FreeType Project.
+ .
+ .
+ Legal Terms
+ ===========
+ .
+ 0. Definitions
+ --------------
+ .
+  Throughout this license,  the terms `package', `FreeType Project',
+  and  `FreeType  archive' refer  to  the  set  of files  originally
+  distributed  by the  authors  (David Turner,  Robert Wilhelm,  and
+  Werner Lemberg) as the `FreeType Project', be they named as alpha,
+  beta or final release.
+ .
+  `You' refers to  the licensee, or person using  the project, where
+  `using' is a generic term including compiling the project's source
+  code as  well as linking it  to form a  `program' or `executable'.
+  This  program is  referred to  as  `a program  using the  FreeType
+  engine'.
+ .
+  This  license applies  to all  files distributed  in  the original
+  FreeType  Project,   including  all  source   code,  binaries  and
+  documentation,  unless  otherwise  stated   in  the  file  in  its
+  original, unmodified form as  distributed in the original archive.
+  If you are  unsure whether or not a particular  file is covered by
+  this license, you must contact us to verify this.
+ .
+  The FreeType  Project is copyright (C) 1996-2000  by David Turner,
+  Robert Wilhelm, and Werner Lemberg.  All rights reserved except as
+  specified below.
+ .
+ 1. No Warranty
+ --------------
+ .
+  THE FREETYPE PROJECT  IS PROVIDED `AS IS' WITHOUT  WARRANTY OF ANY
+  KIND, EITHER  EXPRESS OR IMPLIED,  INCLUDING, BUT NOT  LIMITED TO,
+  WARRANTIES  OF  MERCHANTABILITY   AND  FITNESS  FOR  A  PARTICULAR
+  PURPOSE.  IN NO EVENT WILL ANY OF THE AUTHORS OR COPYRIGHT HOLDERS
+  BE LIABLE  FOR ANY DAMAGES CAUSED  BY THE USE OR  THE INABILITY TO
+  USE, OF THE FREETYPE PROJECT.
+ .
+ 2. Redistribution
+ -----------------
+ .
+  This  license  grants  a  worldwide, royalty-free,  perpetual  and
+  irrevocable right  and license to use,  execute, perform, compile,
+  display,  copy,   create  derivative  works   of,  distribute  and
+  sublicense the  FreeType Project (in  both source and  object code
+  forms)  and  derivative works  thereof  for  any  purpose; and  to
+  authorize others  to exercise  some or all  of the  rights granted
+  herein, subject to the following conditions:
+ .
+    o Redistribution  of source code  must retain this  license file
+      (`LICENSE.TXT') unaltered; any additions, deletions or changes
+      to   the  original   files  must   be  clearly   indicated  in
+      accompanying  documentation.   The  copyright notices  of  the
+      unaltered, original  files must be preserved in  all copies of
+      source files.
+ .
+    o Redistribution in binary form must provide a  disclaimer  that
+      states  that  the software is based in part of the work of the
+      FreeType Team,  in  the  distribution  documentation.  We also
+      encourage you to put an URL to the FreeType web page  in  your
+      documentation, though this isn't mandatory.
+ .
+  These conditions  apply to any  software derived from or  based on
+  the FreeType Project,  not just the unmodified files.   If you use
+  our work, you  must acknowledge us.  However, no  fee need be paid
+  to us.
+ .
+ 3. Advertising
+ --------------
+ .
+  Neither the  FreeType authors and  contributors nor you  shall use
+  the name of the  other for commercial, advertising, or promotional
+  purposes without specific prior written permission.
+ .
+  We suggest,  but do not require, that  you use one or  more of the
+  following phrases to refer  to this software in your documentation
+  or advertising  materials: `FreeType Project',  `FreeType Engine',
+  `FreeType library', or `FreeType Distribution'.
+ .
+  As  you have  not signed  this license,  you are  not  required to
+  accept  it.   However,  as  the FreeType  Project  is  copyrighted
+  material, only  this license, or  another one contracted  with the
+  authors, grants you  the right to use, distribute,  and modify it.
+  Therefore,  by  using,  distributing,  or modifying  the  FreeType
+  Project, you indicate that you understand and accept all the terms
+  of this license.
+ .
+ 4. Contacts
+ -----------
+ .
+  There are two mailing lists related to FreeType:
+ .
+    o freetype@freetype.org
+ .
+      Discusses general use and applications of FreeType, as well as
+      future and  wanted additions to the  library and distribution.
+      If  you are looking  for support,  start in  this list  if you
+      haven't found anything to help you in the documentation.
+ .
+    o devel@freetype.org
+ .
+      Discusses bugs,  as well  as engine internals,  design issues,
+      specific licenses, porting, etc.
+ .
+    o http://www.freetype.org
+ .
+      Holds the current  FreeType web page, which will  allow you to
+      download  our  latest  development  version  and  read  online
+      documentation.
+ .
+  You can also contact us individually at:
+ .
+    David Turner      <david.turner@freetype.org>
+    Robert Wilhelm    <robert.wilhelm@freetype.org>
+    Werner Lemberg    <werner.lemberg@freetype.org>
+
+License: GPL
+ License: GPL
+ .
+ The complete text of the GNU General Public License can be found in
+ `/usr/share/common-licenses/GPL'
+
+License: GPL_AutoConfException
+ @license GPLWithACException
+ .
+ The complete text of the GNU General Public License can be found in
+ `/usr/share/common-licenses/GPL'
+
+License: GPL-2
+ FFmpeg is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation;
+ version 2 of the License.
+ .
+ FFmpeg is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ The complete text of the GNU General Public License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2'
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ The complete text of the GNU General Public License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2'
+
+License: GPL-2+_AutoConfException
+ This file is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA
+ 02110-1301, USA.
+ .
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program that contains a
+ configuration script generated by Autoconf, you may include it under
+ the same distribution terms that you use for the rest of that program.
+ .
+ The complete text of the GNU General Public License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2'
+
+License: GPL-3+
+ FFmpeg is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+ .
+ FFmpeg is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ The complete text of the GNU General Public License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3'
+
+License: GPL-3+_AutoConfException
+ This program is free software: you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the
+ Free Software Foundation, either version 3 of the License, or (at your
+ option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ As a special exception, the respective Autoconf Macro's copyright owner
+ gives unlimited permission to copy, distribute and modify the configure
+ scripts that are the output of Autoconf when processing the Macro. You
+ need not follow the terms of the GNU General Public License when using
+ or distributing such scripts, even though portions of the text of the
+ Macro appear in them. The GNU General Public License (GPL) does govern
+ all other use of the material that constitutes the Autoconf Macro.
+ .
+ This special exception to the GPL applies to versions of the Autoconf
+ Macro released by the Autoconf Archive. When you make and distribute a
+ modified version of the Autoconf Macro, you may extend this special
+ exception to the GPL to apply to your modified version as well.
+ .
+ The complete text of the GNU General Public License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3'
+
+License: ISC
+ Permission to use, copy, modify, and/or distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+ OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 License: LGPL-2+
  This library is free software; you can redistribute it and/or
@@ -5521,3 +8606,224 @@ License: LGPL-2+
  On Debian systems, the complete text of the
  GNU Library General Public License version 2 can be found in
  /usr/share/common-licenses/LGPL-2
+
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ The complete text of the GNU Lesser General Public License version 2.1 can be
+ found in `/usr/share/common-licenses/LGPL-2.1'
+
+License: MIT-like-icu
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, and/or sell copies of the Software, and to permit persons to
+ whom the Software is furnished to do so, provided that the above
+ copyright notice(s) and this permission notice appear in all copies of
+ the Software and that both the above copyright notice(s) and this
+ permission notice appear in supporting documentation.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+ THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS
+ INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT
+ OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+ OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ PERFORMANCE OF THIS SOFTWARE.
+ .
+ Except as contained in this notice, the name of a copyright holder shall
+ not be used in advertising or otherwise to promote the sale, use or
+ other dealings in this Software without prior written authorization of
+ the copyright holder.
+
+License: MIT/X11
+ Permission to use, copy, modify, distribute, and sell this software and its
+ documentation for any purpose is hereby granted without fee, provided that
+ the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation, and that the name of the author(s) not be used in
+ advertising or publicity pertaining to distribution of the software without
+ specific, written prior permission.  The authors make no
+ representations about the suitability of this software for any purpose.  It
+ is provided "as is" without express or implied warranty.
+ .
+ THE AUTHOR(S) DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+ INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+ EVENT SHALL THE AUTHOR(S) BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+ CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+ DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+ TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ PERFORMANCE OF THIS SOFTWARE.
+
+License: MPL-1.1
+ The contents of this file are subject to the Mozilla Public License Version
+ 1.1 (the "License"); you may not use this file except in compliance with
+ the License. You may obtain a copy of the License at
+ http://www.mozilla.org/MPL/
+ .
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ for the specific language governing rights and limitations under the
+ License.
+
+License: MPL-2.0
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this
+ file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+License: OpenSSL
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ 3. All advertising materials mentioning features or use of this
+    software must display the following acknowledgment:
+    "This product includes software developed by the OpenSSL Project
+    for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
+ .
+ 4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to
+    endorse or promote products derived from this software without
+    prior written permission. For written permission, please contact
+    openssl-core@openssl.org.
+ .
+ 5. Products derived from this software may not be called "OpenSSL"
+    nor may "OpenSSL" appear in their names without prior written
+    permission of the OpenSSL Project.
+ .
+ 6. Redistributions of any form whatsoever must retain the following
+    acknowledgment:
+    "This product includes software developed by the OpenSSL Project
+    for use in the OpenSSL Toolkit (http://www.openssl.org/)"
+ .
+ THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY
+ EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE OpenSSL PROJECT OR
+ ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: SSLeay
+ This package is an SSL implementation written
+ by Eric Young (eay@cryptsoft.com).
+ The implementation was written so as to conform with Netscapes SSL.
+ .
+ This library is free for commercial and non-commercial use as long as
+ the following conditions are aheared to.  The following conditions
+ apply to all code found in this distribution, be it the RC4, RSA,
+ lhash, DES, etc., code; not just the SSL code.  The SSL documentation
+ included with this distribution is covered by the same copyright terms
+ except that the holder is Tim Hudson (tjh@cryptsoft.com).
+ .
+ Copyright remains Eric Young's, and as such any Copyright notices in
+ the code are not to be removed.
+ If this package is used in a product, Eric Young should be given attribution
+ as the author of the parts of the library used.
+ This can be in the form of a textual message at program startup or
+ in documentation (online or textual) provided with the package.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. All advertising materials mentioning features or use of this software
+    must display the following acknowledgement:
+    "This product includes cryptographic software written by
+     Eric Young (eay@cryptsoft.com)"
+    The word 'cryptographic' can be left out if the rouines from the library
+    being used are not cryptographic related :-).
+ 4. If you include any Windows specific code (or a derivative thereof) from 
+    the apps directory (application code) you must include an acknowledgement:
+    "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"
+ .
+ THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+ .
+ The licence and distribution terms for any publically available version or
+ derivative of this code cannot be changed.  i.e. this code cannot simply be
+ copied and put under another distribution licence
+ [including the GNU Public Licence.]
+
+License: Unicode
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of the Unicode data files and any associated documentation
+ (the "Data Files") or Unicode software and any associated documentation
+ (the "Software") to deal in the Data Files or Software
+ without restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, and/or sell copies of
+ the Data Files or Software, and to permit persons to whom the Data Files
+ or Software are furnished to do so, provided that either
+ (a) this copyright and permission notice appear with all copies
+ of the Data Files or Software, or
+ (b) this copyright and permission notice appear in associated
+ Documentation.
+ .
+ THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+ ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+ IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+ NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+ DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+ DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+ TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+ .
+ Except as contained in this notice, the name of a copyright holder
+ shall not be used in advertising or otherwise to promote the sale,
+ use or other dealings in these Data Files or Software without prior
+ written authorization of the copyright holder.
+
+License: Zlib
+ This software is provided 'as-is', without any express or implied
+ warranty.  In no event will the authors be held liable for any damages
+ arising from the use of this software.
+ .
+ Permission is granted to anyone to use this software for any purpose,
+ including commercial applications, and to alter it and redistribute it
+ freely, subject to the following restrictions:
+ .
+ 1. The origin of this software must not be misrepresented; you must not
+    claim that you wrote the original software. If you use this software
+    in a product, an acknowledgment in the product documentation would be
+    appreciated but is not required.
+ 2. Altered source versions must be plainly marked as such, and must not be
+    misrepresented as being the original software.
+ 3. This notice may not be removed or altered from any source distribution.
