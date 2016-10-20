@@ -9,9 +9,28 @@ Files-Excluded: src/3rdparty/chromium/third_party/apple_apsl/*
                 src/3rdparty/chromium/third_party/libjingle/source/talk/examples/android/third_party/autobanh/*
                 src/3rdparty/chromium/third_party/libsrtp/srtp/doc/rfc3711.txt
 
+Files: *
+Copyright: 2015 The Qt Company Ltd.
+           2012 The Chromium Authors. All rights reserved.
+License: LGPL-2.1-or-3 with Qt-1.1 exception
+
 Files: debian/*
 Copyright: 2016 Scarlett Clark <sgclark@kubuntu.org>
 License: LGPL-2+
+
+Files: src/core/common/qt_messages.*
+       src/3rdparty/chromium/*
+Copyright: 2012 The Chromium Authors. All rights reserved.
+License: BSD-3-clause
+ src/3rdparty/chromium/LICENSE
+
+Files: src/3rdparty/ninja/*
+Copyright: 2011 Google Inc. All Rights Reserved.
+License: Apache-2.0
+
+Files: src/3rdparty/ninja/src/getopt.*
+Copyright: 1997 Gregory Pietsch
+License: public-domain
 
 Files: src/3rdparty/chromium/base/third_party/dmg_fp/*
 Copyright: 1991-2001, Lucent Technologies
@@ -2190,8 +2209,7 @@ Files: src/3rdparty/chromium/third_party/libjingle/source/talk/examples/objc/App
 Copyright: 2012, Square Inc
 License: Apache-2.0
 
-Files: *
-       examples/webengine/quicknanobrowser/*
+Files: examples/webengine/quicknanobrowser/*
        examples/webenginewidgets/contentmanipulation/*
        -? examples/webenginewidgets/contentmanipulation/jquery.min.js
        examples/webenginewidgets/demobrowser/*
@@ -2309,8 +2327,6 @@ Files: *
        src/3rdparty/chromium/testing/gtest/src/*
        src/3rdparty/chromium/testing/gtest/xcode/Samples/FrameworkSample/*
        src/3rdparty/chromium/testing/gtest/xcode/Scripts/*
-       src/3rdparty/chromium/third_party/*
-       -? src/3rdparty/chromium/third_party/PRESUBMIT.py
        src/3rdparty/chromium/third_party/WebKit/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/*
@@ -3190,7 +3206,6 @@ Files: *
        src/3rdparty/chromium/third_party/d3/src/*
        src/3rdparty/chromium/third_party/dom_distiller_js/dist/js/*
        src/3rdparty/chromium/third_party/dom_distiller_js/dist/proto_gen/third_party/dom_distiller_js/*
-       ? src/3rdparty/chromium/third_party/ffmpeg/PRESUBMIT.py
        ? src/3rdparty/chromium/third_party/ffmpeg/cmdutils_common_opts.h
        ? src/3rdparty/chromium/third_party/ffmpeg/xcode_hack.c
        src/3rdparty/chromium/third_party/ffmpeg/chromium/*
@@ -5106,7 +5121,6 @@ Files: src/3rdparty/chromium/base/third_party/nspr/*
        + src/3rdparty/chromium/net/third_party/nss/ssl/sslplatf.c
        + src/3rdparty/chromium/net/third_party/nss/ssl/bodge/nssrenam.h
        src/3rdparty/chromium/third_party/*
-       -? src/3rdparty/chromium/third_party/PRESUBMIT.py
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDocument.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignment.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignment.h
@@ -6431,7 +6445,6 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/WTFString.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/WTFString.h
        + src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/icu/UnicodeIcu.h
-       + src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libzvbi-teletextdec.c
        src/3rdparty/chromium/third_party/libexif/sources/libexif/*
        -? src/3rdparty/chromium/third_party/libexif/sources/libexif/_stdint.h
        src/3rdparty/chromium/third_party/libexif/sources/libexif/canon/*
@@ -6462,76 +6475,32 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUt
        + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUtils_unittest/parseFirstEOL.pl
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/irc/*
        -? src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/irc/__init__.py
-       src/3rdparty/chromium/third_party/ffmpeg/*
-       -? src/3rdparty/chromium/third_party/ffmpeg/PRESUBMIT.py
        -? src/3rdparty/chromium/third_party/ffmpeg/cmdutils_common_opts.h
        -? src/3rdparty/chromium/third_party/ffmpeg/xcode_hack.c
-       src/3rdparty/chromium/third_party/ffmpeg/compat/*
-       src/3rdparty/chromium/third_party/ffmpeg/compat/aix/*
-       src/3rdparty/chromium/third_party/ffmpeg/compat/float/*
-       src/3rdparty/chromium/third_party/ffmpeg/compat/msvcrt/*
-       src/3rdparty/chromium/third_party/ffmpeg/compat/plan9/*
-       src/3rdparty/chromium/third_party/ffmpeg/compat/tms470/*
        + src/3rdparty/chromium/third_party/ffmpeg/doc/print_options.c
        + src/3rdparty/chromium/third_party/ffmpeg/doc/examples/filter_audio.c
        + src/3rdparty/chromium/third_party/ffmpeg/doc/examples/transcode_aac.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/*
-       -? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/file_open.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/jfdctfst.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/jfdctint_template.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/jrevdct.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/log2_tab.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mathops.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/aarch64/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/alpha/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/arm/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/avr32/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/neon/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/ppc/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavdevice/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libavdevice/file_open.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libavfilter/log2_tab.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/af_volume_init.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_gradfun_init.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_idet_init.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_noise.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_yadif_init.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavformat/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libavformat/file_open.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavformat/golomb_tab.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavformat/log2_tab.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavresample/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavresample/aarch64/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavresample/arm/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavresample/x86/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libavutil/audioconvert.h
        -? src/3rdparty/chromium/third_party/ffmpeg/libavutil/x86_cpu.h
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/aarch64/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/arm/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/avr32/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/bfin/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/mips/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/ppc/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/sh4/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/tomi/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/x86/*
        + src/3rdparty/chromium/third_party/ffmpeg/libpostproc/version.h
-       src/3rdparty/chromium/third_party/ffmpeg/libswresample/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libswresample/dither_template.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libswresample/log2_tab.c
-       src/3rdparty/chromium/third_party/ffmpeg/libswresample/aarch64/*
-       src/3rdparty/chromium/third_party/ffmpeg/libswresample/arm/*
-       src/3rdparty/chromium/third_party/ffmpeg/libswresample/x86/*
-       src/3rdparty/chromium/third_party/ffmpeg/libswscale/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libswscale/log2_tab.c
-       src/3rdparty/chromium/third_party/ffmpeg/libswscale/arm/*
-       src/3rdparty/chromium/third_party/ffmpeg/libswscale/ppc/*
-       src/3rdparty/chromium/third_party/ffmpeg/libswscale/x86/*
-       src/3rdparty/chromium/third_party/ffmpeg/tools/*
        -? src/3rdparty/chromium/third_party/ffmpeg/tools/coverity.c
        -? src/3rdparty/chromium/third_party/ffmpeg/tools/cws2fws.c
        -? src/3rdparty/chromium/third_party/ffmpeg/tools/normalize.py
@@ -6600,7 +6569,6 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/ppapi/lib/gl/include/EGL/*
        src/3rdparty/chromium/ppapi/lib/gl/include/KHR/*
        src/3rdparty/chromium/third_party/*
-       -? src/3rdparty/chromium/third_party/PRESUBMIT.py
        + src/3rdparty/chromium/third_party/WebKit/Source/core/xml/XSLTExtensions.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn
        + src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm
@@ -6619,7 +6587,6 @@ Files: src/3rdparty/chromium/base/third_party/*
        ? src/3rdparty/chromium/third_party/blanketjs/src/qunit_adapter.js
        src/3rdparty/chromium/third_party/expat/*
        src/3rdparty/chromium/third_party/expat/files/lib/*
-       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/*
        + src/3rdparty/chromium/third_party/ffmpeg/libavcodec/api-flac-test.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavcodec/cinepakenc.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavcodec/nellymoser.c
