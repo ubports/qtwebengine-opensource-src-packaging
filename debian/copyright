@@ -1725,6 +1725,14 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/tools/coverity.c
 Copyright: 2014, Red Hat, Inc
 License: GPL-2+
 
+Files: src/3rdparty/chromium/third_party/ffmpeg/tools/cws2fws.c
+Copyright: Alex Beregszaszi
+License: public-domain
+
+Files: src/3rdparty/chromium/third_party/ffmpeg/tools/qt-faststart.c
+Copyright: Mike Melanson (melanson@pcisys.net)
+License: public-domain
+
 Files: src/3rdparty/chromium/third_party/ffmpeg/tools/patcheck
 Copyright: Michael Niedermayer
 License: GPL
@@ -2348,43 +2356,15 @@ Files: examples/webengine/quicknanobrowser/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/invalidation/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/*
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/AnimatedStyleBuilder.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/AnimatedStyleBuilder.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/CSSPropertyPriority.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/FontBuilderTest.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ScopedStyleResolver.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ScopedStyleResolver.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleBuilder.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleBuilderConverter.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleBuilderConverter.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleBuilderCustom.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleResolverParentScope.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleResolverParentScope.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleResolverStats.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleResolverStats.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/TransformBuilder.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ViewportStyleResolver.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ViewportStyleResolver.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/*
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/AddConsoleMessageTask.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/AddConsoleMessageTask.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ContextFeatures.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ContextFeatures.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DocumentStyleSheetCollector.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ExecutionContextTask.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/LayoutTreeBuilderTraversal.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/LayoutTreeBuilderTraversal.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/MainThreadTaskRunner.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/NodeChildRemovalTracker.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/NodeChildRemovalTracker.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/PseudoElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/PseudoElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/RenderedDocumentMarker.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/StyleSheetCandidate.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/StyleSheetCandidate.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TemplateContentDocumentFragment.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/UserActionElementSet.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/UserActionElementSet.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/custom/*
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/ComposedTreeTraversalTest.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/DistributedNodes.h
@@ -2398,24 +2378,16 @@ Files: examples/webengine/quicknanobrowser/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/js/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/*
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/events/EventPath.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/events/EventPath.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/events/ResourceProgressEvent.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/fileapi/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/csp/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/ClassList.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/ClassList.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/CollectionIndexCache.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/CollectionItemsCache.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/CrossOriginAttribute.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/CrossOriginAttribute.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/DOMFormData.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/DOMFormData.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/DocumentNameCollection.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/DocumentNameCollection.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/FormData.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLAllCollection.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLAllCollection.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLAllCollection.idl
@@ -2425,39 +2397,23 @@ Files: examples/webengine/quicknanobrowser/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLCanvasElement.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLCanvasElement.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLCanvasElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLContentElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDataListElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDataListElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDataListElement.idl
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDataListOptionsCollection.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDialogElement.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDialogElement.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDialogElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDimension.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDimension.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDimensionTest.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLFormControlElementTest.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLImageElementTest.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLImageFallbackHelper.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLImageFallbackHelper.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLInputElementTest.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLKeygenElement.idl
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLLinkElementSizesAttributeTest.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMarqueeElement.js
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaElement.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaElement.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaSource.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaSource.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMenuItemElement.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMenuItemElement.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMenuItemElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLNoEmbedElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLNoEmbedElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLNoScriptElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLNoScriptElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLOutputElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLOutputElement.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLOutputElement.idl
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLPictureElement.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLPictureElement.h
@@ -2467,48 +2423,27 @@ Files: examples/webengine/quicknanobrowser/*
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLRubyElement.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLRubyElement.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSelectElementTest.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLShadowElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLShadowElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLShadowElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSourceElement.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSourceElement.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSourceElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSpanElement.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSpanElement.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSpanElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTableRowsCollection.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTableRowsCollection.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTemplateElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTemplateElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTemplateElement.idl
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTextFormControlElementTest.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTrackElement.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTrackElement.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTrackElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLUnknownElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLUnknownElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLVideoElement.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLVideoElement.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLVideoElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLViewSourceDocument.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLViewSourceDocument.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLWBRElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLWBRElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageData.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageData.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageData.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageDocument.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageDocument.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/LabelableElement.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkDefaultPresentation.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkDefaultPresentation.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkManifest.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkManifest.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkRelAttribute.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkRelAttribute.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkRelAttributeTest.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkResource.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkResource.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaController.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaController.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaController.idl
@@ -2538,8 +2473,6 @@ Files: examples/webengine/quicknanobrowser/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/TimeRanges.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/TimeRanges.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/TimeRanges.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/TimeRangesTest.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/URLRegistry.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/VoidCallback.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/VoidCallback.idl
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/WindowNameCollection.cpp
@@ -2564,18 +2497,12 @@ Files: examples/webengine/quicknanobrowser/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAlgorithmFixed.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/api/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/*
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/AbstractInlineTextBox.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/AbstractInlineTextBox.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineBoxList.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineBoxList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineWidth.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineWidth.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/TrailingFloatsRootInlineBox.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/shapes/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGEllipse.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGEllipse.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGModelObject.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGModelObject.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGRect.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGRect.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGResourceFilterPrimitive.cpp
@@ -2610,23 +2537,15 @@ Files: examples/webengine/quicknanobrowser/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/style/BasicShapes.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/BorderEdge.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/BorderEdge.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/BorderImageLength.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/BorderImageLengthBox.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/ComputedStyleTest.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/DataEquivalency.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridCoordinate.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridLength.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridPosition.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridResolvedPosition.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridResolvedPosition.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridTrackSize.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/style/LineClampValue.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/OutlineValueTest.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/PathStyleMotionPath.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/PathStyleMotionPath.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/SVGComputedStyleTest.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/ShadowList.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/ShadowList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/style/ShapeValue.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleContentAlignmentData.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleDifference.h
@@ -2638,8 +2557,6 @@ Files: examples/webengine/quicknanobrowser/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleFlexibleBoxData.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleGridData.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleGridData.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleGridItemData.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleGridItemData.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleMotionData.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleMotionData.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleMotionPath.h
@@ -2651,65 +2568,31 @@ Files: examples/webengine/quicknanobrowser/*
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleWillChangeData.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/style/TransformOrigin.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAngleTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAngleTearOff.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimateElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimateMotionElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimateTransformElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedAngle.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedAngle.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedAngle.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedBoolean.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedBoolean.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedColor.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedEnumeration.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedEnumeration.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedEnumerationBase.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedEnumerationBase.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedInteger.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedInteger.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedInteger.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedIntegerOptionalInteger.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedIntegerOptionalInteger.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLength.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLength.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLength.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLengthList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLengthList.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumber.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumber.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumber.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumberList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumberList.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumberOptionalNumber.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPath.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPath.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPointList.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPreserveAspectRatio.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPreserveAspectRatio.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedRect.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedRect.idl
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedString.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedString.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedString.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedTransformList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedTransformList.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimationElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGBoolean.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGBoolean.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGCircleElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGClipPathElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGComponentTransferFunctionElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGCursorElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDefsElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDescElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDiscardElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDiscardElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDiscardElement.idl
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGElementRareData.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGEllipseElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGEnumeration.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGEnumeration.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGFEBlendElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGFEColorMatrixElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGFEComponentTransferElement.idl
@@ -2739,40 +2622,17 @@ Files: examples/webengine/quicknanobrowser/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGFitToViewBox.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGForeignObjectElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGeometryElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGeometryElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGeometryElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGradientElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGraphicsElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGImageElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGInteger.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGInteger.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGIntegerOptionalInteger.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGIntegerOptionalInteger.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthList.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthListTearOff.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthTearOff.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLineElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLinearGradientElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMPathElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMarkerElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMaskElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMatrixTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMatrixTearOff.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumber.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumber.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberList.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberListTearOff.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberOptionalNumber.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberOptionalNumber.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberTearOff.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGParsingError.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSeg.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSeg.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegArcAbs.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegArcRel.idl
@@ -2791,38 +2651,20 @@ Files: examples/webengine/quicknanobrowser/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegLinetoRel.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegLinetoVerticalAbs.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegLinetoVerticalRel.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegList.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegListTearOff.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegMovetoAbs.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegMovetoRel.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPatternElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPoint.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPoint.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointList.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointListTearOff.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointTearOff.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPolygonElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPolylineElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPreserveAspectRatio.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPreserveAspectRatioTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPreserveAspectRatioTearOff.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGRadialGradientElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGRectElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGRectTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGRectTearOff.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGScriptElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGSetElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStaticStringList.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStaticStringList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStopElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGString.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStringList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStringList.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStringListTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStringListTearOff.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStyleElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGSwitchElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGSymbolElement.idl
@@ -2833,17 +2675,9 @@ Files: examples/webengine/quicknanobrowser/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTextPathElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTextPositioningElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTitleElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformList.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformList.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformListTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformListTearOff.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformTearOff.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformTearOff.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGURIReference.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUnitTypes.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUnitTypes.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUnknownElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUnknownElement.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUseElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGViewElement.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGViewSpec.idl
@@ -2866,7 +2700,6 @@ Files: examples/webengine/quicknanobrowser/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/animation/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/audits/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/bindings/*
-       + src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/PRESUBMIT.py
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/common/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/components/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/components_lazy/*
@@ -2939,7 +2772,6 @@ Files: examples/webengine/quicknanobrowser/*
        ? src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/NavigatorPlugins.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/NavigatorPlugins.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/NavigatorPlugins.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/PluginOcclusionSupport.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/presentation/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/push_messaging/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/quota/*
@@ -2992,7 +2824,6 @@ Files: examples/webengine/quicknanobrowser/*
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperations.h
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperationsTest.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/ImageFilterBuilderTest.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/LightSource.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/PointLightSource.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/ReferenceFilter.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/ReferenceFilter.h
@@ -3031,8 +2862,6 @@ Files: examples/webengine/quicknanobrowser/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/text/UnicodeRange.h
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/AffineTransform.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/AffineTransform.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/InterpolatedTransformOperation.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/InterpolatedTransformOperation.h
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/Matrix3DTransformOperation.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/Matrix3DTransformOperation.h
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/PerspectiveTransformOperation.cpp
@@ -3053,8 +2882,6 @@ Files: examples/webengine/quicknanobrowser/*
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/DateMath.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/DateMath.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/DynamicAnnotations.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/DynamicAnnotations.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/ThreadingWin.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/asm/*
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/dtoa/*
@@ -3283,8 +3110,6 @@ Files: examples/webengine/quicknanobrowser/*
        ? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/jfdctfst.c
        ? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/jfdctint_template.c
        ? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/jrevdct.c
-       ? src/3rdparty/chromium/third_party/ffmpeg/tools/cws2fws.c
-       ? src/3rdparty/chromium/third_party/ffmpeg/tools/qt-faststart.c
        src/3rdparty/chromium/third_party/fips181/*
        src/3rdparty/chromium/third_party/flac/include/FLAC/*
        src/3rdparty/chromium/third_party/flac/src/libFLAC/*
@@ -3538,7 +3363,6 @@ Files: examples/webengine/quicknanobrowser/*
        src/3rdparty/chromium/third_party/pywebsocket/src/mod_pywebsocket/handshake/*
        src/3rdparty/chromium/third_party/sinonjs/src/*
        src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/cpufeatures/*
-       + src/3rdparty/chromium/third_party/smhasher/src/pstdint.h
        src/3rdparty/chromium/third_party/snappy/*
        + src/3rdparty/chromium/third_party/snappy/linux/snappy-stubs-public.h
        + src/3rdparty/chromium/third_party/snappy/mac/snappy-stubs-public.h
@@ -3547,11 +3371,8 @@ Files: examples/webengine/quicknanobrowser/*
        src/3rdparty/chromium/third_party/speex/include/speex/*
        src/3rdparty/chromium/third_party/speex/libspeex/*
        src/3rdparty/chromium/third_party/stp/*
-       + src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/MersenneTwister.h
-       + src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/MersenneTwister.h
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/msvc/*
        src/3rdparty/chromium/third_party/stp/src/windows/winports/msc99hdr/*
-       + src/3rdparty/chromium/third_party/talloc/libreplace/timegm.c
        src/3rdparty/chromium/third_party/tcmalloc/*
        src/3rdparty/chromium/third_party/tcmalloc/chromium/src/*
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/config.h
@@ -5002,25 +4823,6 @@ License: BSD-BY-LC-NE
 
 Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/base/third_party/dynamic_annotations/*
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/AddConsoleMessageTask.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/AddConsoleMessageTask.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ContextFeatures.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ContextFeatures.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DocumentStyleSheetCollector.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ExecutionContextTask.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/LayoutTreeBuilderTraversal.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/LayoutTreeBuilderTraversal.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/MainThreadTaskRunner.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/NodeChildRemovalTracker.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/NodeChildRemovalTracker.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/PseudoElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/PseudoElement.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/RenderedDocumentMarker.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/StyleSheetCandidate.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/StyleSheetCandidate.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TemplateContentDocumentFragment.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/UserActionElementSet.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/UserActionElementSet.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/ComposedTreeTraversal.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/ComposedTreeTraversal.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/DistributedNodes.cpp
@@ -5029,13 +4831,6 @@ Files: src/3rdparty/chromium/base/third_party/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/ShadowRoot.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/ShadowRoot.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/ShadowRoot.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/events/EventPath.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/events/EventPath.h
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/events/ResourceProgressEvent.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLContentElement.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLContentElement.idl
-       + src/3rdparty/chromium/third_party/WebKit/Source/wtf/DynamicAnnotations.cpp
-       + src/3rdparty/chromium/third_party/WebKit/Source/wtf/DynamicAnnotations.h
        + src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.c
        + src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.h
        + src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa_areamap.h
@@ -5426,21 +5221,12 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSPropertyParser.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSPropertyParser.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/*
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/AnimatedStyleBuilder.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/AnimatedStyleBuilder.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/CSSPropertyPriority.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/FontBuilderTest.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ScopedStyleResolver.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ScopedStyleResolver.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleBuilder.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleBuilderConverter.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleBuilderConverter.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleBuilderCustom.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleResolverParentScope.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleResolverParentScope.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleResolverStats.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/StyleResolverStats.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/TransformBuilder.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ViewportStyleResolver.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ViewportStyleResolver.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/Attr.cpp
@@ -5637,15 +5423,10 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/ClassList.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/ClassList.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/CollectionIndexCache.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/CollectionItemsCache.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/CrossOriginAttribute.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/CrossOriginAttribute.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/DOMFormData.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/DOMFormData.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/DocumentNameCollection.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/DocumentNameCollection.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/FormData.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLAllCollection.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLAllCollection.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLAllCollection.idl
@@ -5655,42 +5436,24 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLCanvasElement.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLCanvasElement.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLCanvasElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLContentElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLContentElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLContentElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDataListElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDataListElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDataListElement.idl
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDataListOptionsCollection.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDialogElement.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDialogElement.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDialogElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDimension.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDimension.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDimensionTest.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDocument.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLFormControlElementTest.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLImageElementTest.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLImageFallbackHelper.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLImageFallbackHelper.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLInputElementTest.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLKeygenElement.idl
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLLinkElementSizesAttributeTest.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMarqueeElement.js
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaElement.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaElement.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaSource.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMediaSource.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMenuItemElement.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMenuItemElement.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMenuItemElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLNoEmbedElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLNoEmbedElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLNoScriptElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLNoScriptElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLOutputElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLOutputElement.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLOutputElement.idl
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLPictureElement.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLPictureElement.h
@@ -5700,48 +5463,27 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLRubyElement.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLRubyElement.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSelectElementTest.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLShadowElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLShadowElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLShadowElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSourceElement.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSourceElement.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSourceElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSpanElement.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSpanElement.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLSpanElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTableRowsCollection.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTableRowsCollection.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTemplateElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTemplateElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTemplateElement.idl
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTextFormControlElementTest.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTrackElement.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTrackElement.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTrackElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLUnknownElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLUnknownElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLVideoElement.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLVideoElement.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLVideoElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLViewSourceDocument.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLViewSourceDocument.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLWBRElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLWBRElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageData.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageData.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageData.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageDocument.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/ImageDocument.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/LabelableElement.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkDefaultPresentation.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkDefaultPresentation.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkManifest.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkManifest.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkRelAttribute.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkRelAttribute.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkRelAttributeTest.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkResource.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/LinkResource.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaController.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaController.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaController.idl
@@ -5771,8 +5513,6 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/TimeRanges.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/TimeRanges.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/TimeRanges.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/TimeRangesTest.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/URLRegistry.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/VoidCallback.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/VoidCallback.idl
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/html/WindowNameCollection.cpp
@@ -5904,18 +5644,12 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/PointerEventsHitRules.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/CompositingTriggers.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/*
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/AbstractInlineTextBox.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/AbstractInlineTextBox.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineBoxList.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineBoxList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineWidth.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineWidth.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/TrailingFloatsRootInlineBox.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGEllipse.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGEllipse.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGModelObject.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGModelObject.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGRect.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGRect.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGResourceFilterPrimitive.cpp
@@ -5959,23 +5693,15 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/BasicShapes.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/BorderEdge.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/BorderEdge.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/BorderImageLength.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/BorderImageLengthBox.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/ComputedStyleTest.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/DataEquivalency.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridCoordinate.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridLength.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridPosition.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridResolvedPosition.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridResolvedPosition.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/GridTrackSize.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/LineClampValue.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/OutlineValueTest.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/PathStyleMotionPath.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/PathStyleMotionPath.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/SVGComputedStyleTest.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/ShadowList.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/ShadowList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/ShapeValue.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleContentAlignmentData.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleDifference.h
@@ -5987,8 +5713,6 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleFlexibleBoxData.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleGridData.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleGridData.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleGridItemData.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleGridItemData.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleMotionData.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleMotionData.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleMotionPath.h
@@ -6001,65 +5725,31 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/TransformOrigin.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAngleTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAngleTearOff.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimateElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimateMotionElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimateTransformElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedAngle.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedAngle.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedAngle.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedBoolean.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedBoolean.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedColor.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedEnumeration.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedEnumeration.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedEnumerationBase.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedEnumerationBase.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedInteger.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedInteger.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedInteger.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedIntegerOptionalInteger.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedIntegerOptionalInteger.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLength.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLength.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLength.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLengthList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedLengthList.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumber.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumber.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumber.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumberList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumberList.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedNumberOptionalNumber.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPath.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPath.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPointList.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPreserveAspectRatio.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedPreserveAspectRatio.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedRect.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedRect.idl
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedString.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedString.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedString.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedTransformList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimatedTransformList.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAnimationElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGBoolean.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGBoolean.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGCircleElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGClipPathElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGComponentTransferFunctionElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGCursorElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDefsElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDescElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDiscardElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDiscardElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGDiscardElement.idl
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGElementRareData.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGEllipseElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGEnumeration.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGEnumeration.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGFEBlendElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGFEColorMatrixElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGFEComponentTransferElement.idl
@@ -6089,40 +5779,17 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGFitToViewBox.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGForeignObjectElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGeometryElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGeometryElement.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGeometryElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGradientElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGGraphicsElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGImageElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGInteger.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGInteger.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGIntegerOptionalInteger.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGIntegerOptionalInteger.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthList.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthListTearOff.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLengthTearOff.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLineElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGLinearGradientElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMPathElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMarkerElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMaskElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMatrixTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGMatrixTearOff.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumber.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumber.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberList.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberListTearOff.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberOptionalNumber.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberOptionalNumber.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberTearOff.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGParsingError.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSeg.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSeg.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegArcAbs.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegArcRel.idl
@@ -6141,38 +5808,20 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegLinetoRel.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegLinetoVerticalAbs.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegLinetoVerticalRel.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegList.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegListTearOff.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegMovetoAbs.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSegMovetoRel.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPatternElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPoint.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPoint.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointList.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointListTearOff.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPointTearOff.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPolygonElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPolylineElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPreserveAspectRatio.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPreserveAspectRatioTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPreserveAspectRatioTearOff.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGRadialGradientElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGRectElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGRectTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGRectTearOff.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGScriptElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGSetElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStaticStringList.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStaticStringList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStopElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGString.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStringList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStringList.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStringListTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStringListTearOff.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGStyleElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGSwitchElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGSymbolElement.idl
@@ -6183,17 +5832,9 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTextPathElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTextPositioningElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTitleElement.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformList.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformListTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformListTearOff.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformTearOff.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTransformTearOff.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGURIReference.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUnitTypes.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUnitTypes.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUnknownElement.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUnknownElement.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUseElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGViewElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGViewSpec.idl
@@ -6240,7 +5881,6 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -? src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/NavigatorPlugins.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/NavigatorPlugins.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/NavigatorPlugins.idl
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/PluginOcclusionSupport.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/modules/quota/NavigatorStorageQuota.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/modules/quota/WorkerNavigatorStorageQuota.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/vibration/*
@@ -6283,7 +5923,6 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperations.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperationsTest.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/ImageFilterBuilderTest.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/LightSource.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/PointLightSource.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/ReferenceFilter.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/ReferenceFilter.h
@@ -6316,8 +5955,6 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/AffineTransform.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/AffineTransform.h
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/InterpolatedTransformOperation.cpp
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/InterpolatedTransformOperation.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/Matrix3DTransformOperation.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/Matrix3DTransformOperation.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/PerspectiveTransformOperation.cpp
@@ -6413,8 +6050,6 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUt
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_noise.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_yadif_init.c
        + src/3rdparty/chromium/third_party/ffmpeg/libpostproc/version.h
-       -? src/3rdparty/chromium/third_party/ffmpeg/tools/cws2fws.c
-       -? src/3rdparty/chromium/third_party/ffmpeg/tools/qt-faststart.c
        + src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.c
        + src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.h
        + src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-mnote-data.c
@@ -6447,7 +6082,6 @@ Files: src/3rdparty/chromium/third_party/talloc/*
        -? src/3rdparty/chromium/third_party/talloc/libreplace/inet_ntop.c
        -? src/3rdparty/chromium/third_party/talloc/libreplace/inet_pton.c
        -? src/3rdparty/chromium/third_party/talloc/libreplace/snprintf.c
-       -+ src/3rdparty/chromium/third_party/talloc/libreplace/timegm.c
        -? src/3rdparty/chromium/third_party/talloc/libreplace/win32_replace.h
        src/3rdparty/chromium/third_party/talloc/libreplace/system/*
 Copyright: 2014 The Chromium Authors. All rights reserved.
@@ -6482,7 +6116,6 @@ Files: src/3rdparty/chromium/base/third_party/*
        + src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/*
-       -+ src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/PRESUBMIT.py
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/*
        + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/autopep8.py
        + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/pep8.py
@@ -6722,7 +6355,6 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/simplejson/*
        + src/3rdparty/chromium/third_party/skia/third_party/lua/src/lua.h
        src/3rdparty/chromium/third_party/smhasher/src/*
-       -+ src/3rdparty/chromium/third_party/smhasher/src/pstdint.h
        + src/3rdparty/chromium/third_party/stp/src
        src/3rdparty/chromium/third_party/stp/config/stp/*
        src/3rdparty/chromium/third_party/stp/src/*
@@ -6743,7 +6375,6 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/stp/src/include/stp/Sat/*
        src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/*
        src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/*
-       -+ src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/MersenneTwister.h
        src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/multiplication/*
        src/3rdparty/chromium/third_party/stp/src/include/stp/ToSat/*
        src/3rdparty/chromium/third_party/stp/src/include/stp/ToSat/AIG/*
@@ -6762,7 +6393,6 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/stp/src/lib/STPManager/*
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/*
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/*
-       -+ src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/MersenneTwister.h
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/MemoryPool/*
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/mtl/*
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/minisat/*
