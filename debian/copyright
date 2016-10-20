@@ -2180,7 +2180,7 @@ License: Apache-2.0
 
 Files: *
        examples/webengine/quicknanobrowser/*
-       examples/webenginewidgets/contentmanipulation/* excluding:
+       examples/webenginewidgets/contentmanipulation/*
        -? examples/webenginewidgets/contentmanipulation/jquery.min.js
        examples/webenginewidgets/demobrowser/*
        examples/webenginewidgets/markdowneditor/*
@@ -2189,7 +2189,7 @@ Files: *
        + src/3rdparty/chromium/v8
        src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/base/third_party/superfasthash/*
-       src/3rdparty/chromium/base/third_party/symbolize/* excluding:
+       src/3rdparty/chromium/base/third_party/symbolize/*
        -? src/3rdparty/chromium/base/third_party/symbolize/config.h
        -? src/3rdparty/chromium/base/third_party/symbolize/utilities.h
        + src/3rdparty/chromium/cc/input/scroll_elasticity_helper.h
@@ -2297,7 +2297,7 @@ Files: *
        src/3rdparty/chromium/testing/gtest/src/*
        src/3rdparty/chromium/testing/gtest/xcode/Samples/FrameworkSample/*
        src/3rdparty/chromium/testing/gtest/xcode/Scripts/*
-       src/3rdparty/chromium/third_party/* excluding:
+       src/3rdparty/chromium/third_party/*
        -? src/3rdparty/chromium/third_party/PRESUBMIT.py
        src/3rdparty/chromium/third_party/WebKit/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core
@@ -2310,16 +2310,16 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/scripts/*
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/templates/*
        src/3rdparty/chromium/third_party/WebKit/Source/build/*
-       src/3rdparty/chromium/third_party/WebKit/Source/build/scripts/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/build/scripts/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/build/scripts/hasher.py
        src/3rdparty/chromium/third_party/WebKit/Source/build/win/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/animation/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/animation/animatable/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/animation/css/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/clipboard/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/clipboard/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/clipboard/DataTransfer.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSBorderImage.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSBorderImage.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSComputedStyleDeclaration.cpp
@@ -2425,7 +2425,7 @@ Files: *
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/TreeBoundaryCrossingRules.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/TreeBoundaryCrossingRules.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/invalidation/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserMode.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserObserver.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserString.h
@@ -2450,7 +2450,7 @@ Files: *
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/TransformBuilder.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ViewportStyleResolver.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ViewportStyleResolver.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/AddConsoleMessageTask.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/AddConsoleMessageTask.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/dom/Attr.cpp
@@ -2603,13 +2603,13 @@ Files: *
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/SelectRuleFeatureSet.h
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/ShadowRootInit.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/core/dom/shadow/ShadowRootRareData.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditingBehavior.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditingBehaviorTypes.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/editing/TextCheckingHelper.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/js/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/events/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/events/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/events/BeforeUnloadEvent.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/events/BeforeUnloadEvent.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/events/ClipboardEvent.cpp
@@ -2647,7 +2647,7 @@ Files: *
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/events/WheelEvent.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/events/WheelEvent.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/events/WheelEvent.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/CSSStyleSheetResource.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/CSSStyleSheetResource.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/DocumentResource.cpp
@@ -2670,7 +2670,7 @@ Files: *
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/XSLStyleSheetResource.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/XSLStyleSheetResource.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fileapi/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/frame/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/frame/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Frame.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Frame.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/frame/FrameView.cpp
@@ -2821,7 +2821,7 @@ Files: *
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/WindowNameCollection.cpp
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/html/WindowNameCollection.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/canvas/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/BaseTextInputType.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/EmailInputType.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/FileInputType.cpp
@@ -2838,7 +2838,7 @@ Files: *
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/StepRange.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/TypeAhead.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/imports/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/parser/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/html/parser/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/parser/TextResourceDecoder.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/parser/TextResourceDecoder.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/shadow/*
@@ -2847,7 +2847,7 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/core/imagebitmap/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/input/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/BidiRun.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/BidiRunForLine.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/BidiRunForLine.h
@@ -2964,7 +2964,7 @@ Files: *
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAlgorithmFixed.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAlgorithmFixed.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/api/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/CompositingTriggers.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/AbstractInlineTextBox.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/AbstractInlineTextBox.h
@@ -2986,11 +2986,11 @@ Files: *
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/ReferenceFilterBuilder.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGLayoutTreeAsText.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGLayoutTreeAsText.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/loader/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/loader/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/loader/ImageLoader.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/loader/ImageLoader.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/loader/appcache/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/page/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/page/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/page/ChromeClient.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/page/ChromeClient.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/page/EventWithHitTestResults.h
@@ -3007,7 +3007,7 @@ Files: *
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/page/TouchAdjustment.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/page/WindowFeatures.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/scrolling/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/paint/DeprecatedPaintLayer.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/paint/DeprecatedPaintLayer.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/paint/DeprecatedPaintLayerClipper.cpp
@@ -3279,15 +3279,15 @@ Files: *
        + src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGZoomEvent.idl
        ? src/3rdparty/chromium/third_party/WebKit/Source/core/svg/UnsafeSVGAttributeSanitizationTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/animation/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/graphics/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/graphics/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/graphics/SVGImageForContainer.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/properties/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/properties/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/properties/SVGPropertyInfo.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/testing/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/testing/v8/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/timing/*
        src/3rdparty/chromium/third_party/WebKit/Source/core/workers/*
-       src/3rdparty/chromium/third_party/WebKit/Source/core/xml/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/xml/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xml/DOMParser.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xml/DOMParser.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xml/DOMParser.idl
@@ -3307,10 +3307,10 @@ Files: *
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xml/XSLTProcessor.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xml/XSLTProcessor.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xml/XSLTProcessorLibxslt.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/xml/parser/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/xml/parser/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xml/parser/XMLDocumentParser.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xml/parser/XMLDocumentParser.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequest.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequest.h
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/*
@@ -3331,7 +3331,7 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/host/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/layers/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/main/*
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/network/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/network/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/network/ResourceWebSocketFrameView.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/platform/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/profiler/*
@@ -3355,7 +3355,7 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/compiler-runner/*
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/jsdoc-validator/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/*
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXProgressIndicator.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXProgressIndicator.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/testing/*
@@ -3377,10 +3377,10 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/modules/encryptedmedia/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/fetch/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/filesystem/*
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/gamepad/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/gamepad/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/gamepad/NavigatorGamepad.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geofencing/*
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/NavigatorGeolocation.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/NavigatorGeolocation.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/NavigatorGeolocation.idl
@@ -3389,12 +3389,12 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediasession/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediasource/*
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorMediaStream.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorMediaStream.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorMediaStream.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/navigatorconnect/*
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/navigatorcontentutils/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/navigatorcontentutils/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/navigatorcontentutils/NavigatorContentUtils.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/navigatorcontentutils/testing/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/netinfo/*
@@ -3406,7 +3406,7 @@ Files: *
        + src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/PluginOcclusionSupport.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/presentation/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/push_messaging/*
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/quota/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/quota/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/quota/NavigatorStorageQuota.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/quota/WorkerNavigatorStorageQuota.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/screen_orientation/*
@@ -3423,9 +3423,9 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webdatabase/sqlite/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webgl/*
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webmidi/*
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/websockets/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/websockets/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/modules/websockets/WebSocketFrame.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/Length.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/Length.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/LengthBox.h
@@ -3435,7 +3435,7 @@ Files: *
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/PlatformTouchEvent.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/PlatformTouchPoint.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/PopupMenu.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/animation/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/animation/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/animation/TimingFunction.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/audio/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/audio/android/*
@@ -3447,7 +3447,7 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/platform/credentialmanager/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/linux/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/CustomFontData.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/Font.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/Font.h
@@ -3463,17 +3463,17 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/linux/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/mac/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/opentype/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/shaping/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/shaping/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/shaping/SimpleShaper.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/shaping/SimpleShaper.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/skia/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/win/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/FloatPoint3D.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/FloatPoint3D.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/IntSizeHash.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/cg/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/GraphicsLayerDebugInfo.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/PathTraversalState.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/cpu/arm/*
@@ -3500,23 +3500,23 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/skia/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/heap/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/heap/glue/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/ImageDecoder.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/bmp/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/gif/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/gif/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/gif/GIFImageReader.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/gif/GIFImageReader.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/ico/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/jpeg/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/jpeg/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/jpeg/JPEGImageDecoder.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/png/PNGImageDecoder.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/webp/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-encoders/skia/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/mac/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/mac/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/mac/LocalCurrentGraphicsContext.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/mediastream/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/mhtml/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/network/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/network/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/network/FormData.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/network/FormData.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/network/FormDataBuilder.cpp
@@ -3527,7 +3527,7 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/speech/*
        src/3rdparty/chromium/third_party/WebKit/Source/platform/testing/*
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/text/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/text/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/text/BidiCharacterRun.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/text/BidiCharacterRun.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/text/BidiContext.cpp
@@ -3566,7 +3566,7 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/web/painting/*
        src/3rdparty/chromium/third_party/WebKit/Source/web/resources/*
        src/3rdparty/chromium/third_party/WebKit/Source/web/win/*
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/wtf/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/Alignment.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/DateMath.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/DateMath.h
@@ -3605,7 +3605,7 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/asm/*
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/dtoa/*
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/testing/*
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/ASCIIFastPath.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/AtomicString.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/AtomicString.h
@@ -3625,7 +3625,7 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Tools/RebaselineLogServer/*
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/*
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/*
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUtils_unittest/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUtils_unittest/*
        -+ src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUtils_unittest/parseDiffWithMockFiles.pl
        -+ src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUtils_unittest/parseFirstEOL.pl
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/*
@@ -3650,7 +3650,7 @@ Files: *
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/performance_tests/*
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/style/*
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/style/checkers/*
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/*
        -+ src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/autopep8.py
        -+ src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/pep8.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/*
@@ -3882,10 +3882,10 @@ Files: *
        ? src/3rdparty/chromium/third_party/ffmpeg/tools/zmqshell.py
        src/3rdparty/chromium/third_party/fips181/*
        src/3rdparty/chromium/third_party/flac/include/FLAC/*
-       src/3rdparty/chromium/third_party/flac/src/libFLAC/* excluding:
+       src/3rdparty/chromium/third_party/flac/src/libFLAC/*
        -? src/3rdparty/chromium/third_party/flac/src/libFLAC/alloc.c
        -? src/3rdparty/chromium/third_party/flac/src/libFLAC/md5.c
-       src/3rdparty/chromium/third_party/flac/src/libFLAC/include/private/* excluding:
+       src/3rdparty/chromium/third_party/flac/src/libFLAC/include/private/*
        -? src/3rdparty/chromium/third_party/flac/src/libFLAC/include/private/md5.h
        src/3rdparty/chromium/third_party/flac/src/libFLAC/include/protected/*
        src/3rdparty/chromium/third_party/freetype2/src/src/tools/ftrandom/*
@@ -4073,7 +4073,7 @@ Files: *
        src/3rdparty/chromium/third_party/mach_override/*
        src/3rdparty/chromium/third_party/mach_override/libudis86/*
        src/3rdparty/chromium/third_party/markupsafe/*
-       src/3rdparty/chromium/third_party/mesa/src/include/c99/* excluding:
+       src/3rdparty/chromium/third_party/mesa/src/include/c99/*
        -+ src/3rdparty/chromium/third_party/mesa/src/include/c99/stdbool.h
        src/3rdparty/chromium/third_party/mesa/src/src/getopt/*
        src/3rdparty/chromium/third_party/mesa/src/src/gtest/include/gtest/*
@@ -4107,22 +4107,22 @@ Files: *
        src/3rdparty/chromium/third_party/opus/src/win32/*
        src/3rdparty/chromium/third_party/ply/*
        src/3rdparty/chromium/third_party/power_gadget/*
-       src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/* excluding:
+       src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/*
        -? src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/__init__.py
-       src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/internal/* excluding:
+       src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/internal/*
        -? src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/internal/__init__.py
        src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/pyext/*
-       src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/* excluding:
+       src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/*
        -? src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/descriptor.pb.cc
        -? src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/descriptor.pb.h
-       src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/compiler/* excluding:
+       src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/compiler/*
        -? src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/compiler/plugin.pb.cc
        -? src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/compiler/plugin.pb.h
        src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/compiler/cpp/*
        src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/compiler/java/*
        src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/compiler/python/*
        src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/io/*
-       src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/stubs/* excluding:
+       src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/stubs/*
        -? src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/stubs/pbconfig.h
        -? src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/stubs/structurally_valid.cc
        -? src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/stubs/structurally_valid_unittest.cc
@@ -4149,11 +4149,11 @@ Files: *
        + src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/MersenneTwister.h
        + src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/MersenneTwister.h
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/msvc/*
-       src/3rdparty/chromium/third_party/stp/src/windows/winports/msc99hdr/* excluding:
+       src/3rdparty/chromium/third_party/stp/src/windows/winports/msc99hdr/*
        -+ src/3rdparty/chromium/third_party/stp/src/windows/winports/msc99hdr/unistd.h
        + src/3rdparty/chromium/third_party/talloc/libreplace/timegm.c
        src/3rdparty/chromium/third_party/tcmalloc/*
-       src/3rdparty/chromium/third_party/tcmalloc/chromium/src/* excluding:
+       src/3rdparty/chromium/third_party/tcmalloc/chromium/src/*
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/config.h
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/config.h.in
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/config_android.h
@@ -4165,13 +4165,13 @@ Files: *
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/heap-profile-stats.h
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/linux_shadow_stacks.h
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/type_profiler_map.cc
-       src/3rdparty/chromium/third_party/tcmalloc/chromium/src/base/* excluding:
+       src/3rdparty/chromium/third_party/tcmalloc/chromium/src/base/*
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/base/abort.cc
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/base/abort.h
        src/3rdparty/chromium/third_party/tcmalloc/chromium/src/google/*
-       src/3rdparty/chromium/third_party/tcmalloc/chromium/src/gperftools/* excluding:
+       src/3rdparty/chromium/third_party/tcmalloc/chromium/src/gperftools/*
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/gperftools/type_profiler_map.h
-       src/3rdparty/chromium/third_party/tcmalloc/chromium/src/windows/* excluding:
+       src/3rdparty/chromium/third_party/tcmalloc/chromium/src/windows/*
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/windows/config.h
        src/3rdparty/chromium/third_party/tcmalloc/chromium/src/windows/google/*
        src/3rdparty/chromium/third_party/tcmalloc/chromium/src/windows/gperftools/*
@@ -4396,12 +4396,12 @@ Files: *
        src/3rdparty/chromium/third_party/webrtc/voice_engine/test/auto_test/fixtures/*
        src/3rdparty/chromium/third_party/webrtc/voice_engine/test/auto_test/standard/*
        src/3rdparty/chromium/third_party/webrtc/voice_engine/test/cmd_test/*
-       src/3rdparty/chromium/third_party/yasm/source/patched-yasm/* excluding:
+       src/3rdparty/chromium/third_party/yasm/source/patched-yasm/*
        -? src/3rdparty/chromium/third_party/yasm/source/patched-yasm/config.h.in
        -? src/3rdparty/chromium/third_party/yasm/source/patched-yasm/x86insns.c
        src/3rdparty/chromium/third_party/yasm/source/patched-yasm/frontends/tasm/*
        src/3rdparty/chromium/third_party/yasm/source/patched-yasm/frontends/yasm/*
-       src/3rdparty/chromium/third_party/yasm/source/patched-yasm/libyasm/* excluding:
+       src/3rdparty/chromium/third_party/yasm/source/patched-yasm/libyasm/*
        -? src/3rdparty/chromium/third_party/yasm/source/patched-yasm/libyasm/bitvect.c
        -? src/3rdparty/chromium/third_party/yasm/source/patched-yasm/libyasm/bitvect.h
        -? src/3rdparty/chromium/third_party/yasm/source/patched-yasm/libyasm/inttree.c
@@ -4448,7 +4448,7 @@ Files: *
        src/3rdparty/chromium/tools/gyp/*
        src/3rdparty/chromium/tools/gyp/buildbot/*
        src/3rdparty/chromium/tools/gyp/data/win/*
-       src/3rdparty/chromium/tools/gyp/pylib/gyp/* excluding:
+       src/3rdparty/chromium/tools/gyp/pylib/gyp/*
        -+ src/3rdparty/chromium/tools/gyp/pylib/gyp/ordered_dict.py
        src/3rdparty/chromium/tools/gyp/pylib/gyp/generator/*
        src/3rdparty/chromium/tools/gyp/tools/*
@@ -4458,7 +4458,7 @@ Files: *
        src/3rdparty/chromium/url/third_party/*
        ? src/3rdparty/chromium/url/third_party/mozilla/url_parse.h
        src/3rdparty/chromium/v8/*
-       src/3rdparty/chromium/v8/benchmarks/* excluding:
+       src/3rdparty/chromium/v8/benchmarks/*
        -+ src/3rdparty/chromium/v8/benchmarks/crypto.js
        -+ src/3rdparty/chromium/v8/benchmarks/deltablue.js
        -+ src/3rdparty/chromium/v8/benchmarks/navier-stokes.js
@@ -5684,9 +5684,9 @@ License: BSD-BY-LC
 
 Files: src/3rdparty/chromium/base/third_party/nspr/*
        + src/3rdparty/chromium/content/child/multipart_response_delegate.h
-       src/3rdparty/chromium/crypto/third_party/nss/* excluding:
+       src/3rdparty/chromium/crypto/third_party/nss/*
        -? src/3rdparty/chromium/crypto/third_party/nss/rsawrapr.c
-       src/3rdparty/chromium/net/base/registry_controlled_domains/* excluding:
+       src/3rdparty/chromium/net/base/registry_controlled_domains/*
        -? src/3rdparty/chromium/net/base/registry_controlled_domains/registry_controlled_domain_unittest.cc
        + src/3rdparty/chromium/net/cookies/canonical_cookie.cc
        + src/3rdparty/chromium/net/cookies/cookie_monster.cc
@@ -5702,7 +5702,7 @@ Files: src/3rdparty/chromium/base/third_party/nspr/*
        src/3rdparty/chromium/net/third_party/mozilla_security_manager/*
        + src/3rdparty/chromium/net/third_party/nss/ssl/sslplatf.c
        + src/3rdparty/chromium/net/third_party/nss/ssl/bodge/nssrenam.h
-       src/3rdparty/chromium/third_party/* excluding:
+       src/3rdparty/chromium/third_party/*
        -? src/3rdparty/chromium/third_party/PRESUBMIT.py
        + src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDocument.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignment.cpp
@@ -5736,7 +5736,7 @@ Files: src/3rdparty/chromium/base/third_party/nspr/*
        src/3rdparty/chromium/third_party/lcov/example/methods/*
        + src/3rdparty/chromium/third_party/libjpeg/jconfig.h
        + src/3rdparty/chromium/third_party/libpng/pngusr.h
-       src/3rdparty/chromium/third_party/mozilla/* excluding:
+       src/3rdparty/chromium/third_party/mozilla/*
        -+ src/3rdparty/chromium/third_party/mozilla/ComplexTextInputPanel.h
        -? src/3rdparty/chromium/third_party/mozilla/MozillaExport.h
        + src/3rdparty/chromium/third_party/npapi/bindings/npapi.h
@@ -5758,7 +5758,7 @@ Files: src/3rdparty/chromium/base/third_party/nspr/*
        src/webengine/plugin/experimental/*
        src/webengine/plugin/testsupport/*
        src/webenginewidgets/*
-       src/webenginewidgets/api/* excluding:
+       src/webenginewidgets/api/*
        -+ src/webenginewidgets/api/qwebenginesettings.h
        src/webenginewidgets/ui/*
        tests/auto/quick/qquickwebenginedefaultsurfaceformat/*
@@ -5833,16 +5833,16 @@ Files: src/3rdparty/chromium/third_party/devscripts/*
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_tinterlace.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_uspp.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vsrc_mptestsrc.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/*
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/af_volume_init.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_gradfun_init.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_idet_init.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_noise.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_yadif_init.c
-       src/3rdparty/chromium/third_party/ffmpeg/libpostproc/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libpostproc/*
        -+ src/3rdparty/chromium/third_party/ffmpeg/libpostproc/version.h
        + src/3rdparty/chromium/third_party/ffmpeg/libswresample/swresample-test.c
-       src/3rdparty/chromium/third_party/lcov/contrib/galaxy/* excluding:
+       src/3rdparty/chromium/third_party/lcov/contrib/galaxy/*
        -? src/3rdparty/chromium/third_party/lcov/contrib/galaxy/conglomerate_functions.pl
        src/3rdparty/chromium/third_party/speech-dispatcher/*
        + src/3rdparty/chromium/v8/benchmarks/deltablue.js
@@ -6095,7 +6095,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserValues.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSPropertyParser.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSPropertyParser.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/AnimatedStyleBuilder.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/AnimatedStyleBuilder.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/CSSPropertyPriority.h
@@ -6304,7 +6304,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Navigator.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Navigator.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Navigator.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/html/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/ClassList.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/ClassList.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/html/CollectionIndexCache.h
@@ -6573,7 +6573,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/PointerEventsHitRules.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/PointerEventsHitRules.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/CompositingTriggers.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/AbstractInlineTextBox.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/AbstractInlineTextBox.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineBoxList.cpp
@@ -6581,7 +6581,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineWidth.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineWidth.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/TrailingFloatsRootInlineBox.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGEllipse.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGEllipse.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGModelObject.cpp
@@ -6621,7 +6621,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/core/paint/ThemePainterDefault.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/core/paint/ThemePainterDefault.h
        + src/3rdparty/chromium/third_party/WebKit/Source/core/paint/ThemePainterMac.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/style/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/style/*
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/AppliedTextDecoration.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/AppliedTextDecoration.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/AuthorStyleInfo.h
@@ -6669,7 +6669,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleWillChangeData.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/StyleWillChangeData.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/core/style/TransformOrigin.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAElement.idl
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAngleTearOff.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAngleTearOff.h
@@ -6906,7 +6906,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorMediaStream.h
        + src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorMediaStream.idl
        + src/3rdparty/chromium/third_party/WebKit/Source/modules/navigatorcontentutils/NavigatorContentUtils.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/*
        -? src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/NavigatorPlugins.cpp
        -? src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/NavigatorPlugins.h
        -? src/3rdparty/chromium/third_party/WebKit/Source/modules/plugins/NavigatorPlugins.idl
@@ -6943,7 +6943,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/IntSizeHash.h
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/GraphicsLayerDebugInfo.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/PathTraversalState.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/DistantLightSource.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FELighting.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FELighting.h
@@ -6983,7 +6983,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/text/TextBreakIteratorInternalICU.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/text/TextBreakIteratorInternalICU.h
        + src/3rdparty/chromium/third_party/WebKit/Source/platform/text/TextRun.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/AffineTransform.cpp
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/AffineTransform.h
        -+ src/3rdparty/chromium/third_party/WebKit/Source/platform/transforms/InterpolatedTransformOperation.cpp
@@ -7043,7 +7043,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/WTFString.h
        + src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/icu/UnicodeIcu.h
        + src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libzvbi-teletextdec.c
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/* excluding:
+       src/3rdparty/chromium/third_party/libexif/sources/libexif/*
        -? src/3rdparty/chromium/third_party/libexif/sources/libexif/_stdint.h
        -+ src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.c
        -+ src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.h
@@ -7057,7 +7057,7 @@ Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
        + src/webenginewidgets/api/qwebenginesettings.h
        src/webenginewidgets/doc/snippets/simple/*
        tests/auto/quick/qquickwebengineview/*
-       tests/auto/quick/shared/* excluding:
+       tests/auto/quick/shared/*
        -+ tests/auto/quick/shared/qt_webengine_quicktest.h
        tests/auto/widgets/*
        tests/auto/widgets/qwebengineaccessibility/*
@@ -7074,9 +7074,9 @@ License: LGPL-2+
 
 Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUtils_unittest/parseDiffWithMockFiles.pl
        + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUtils_unittest/parseFirstEOL.pl
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/irc/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/irc/*
        -? src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/irc/__init__.py
-       src/3rdparty/chromium/third_party/ffmpeg/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/*
        -? src/3rdparty/chromium/third_party/ffmpeg/PRESUBMIT.py
        -? src/3rdparty/chromium/third_party/ffmpeg/cmdutils_common_opts.h
        -? src/3rdparty/chromium/third_party/ffmpeg/xcode_hack.c
@@ -7089,7 +7089,7 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUt
        + src/3rdparty/chromium/third_party/ffmpeg/doc/print_options.c
        + src/3rdparty/chromium/third_party/ffmpeg/doc/examples/filter_audio.c
        + src/3rdparty/chromium/third_party/ffmpeg/doc/examples/transcode_aac.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/*
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavcodec/api-flac-test.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavcodec/cinepakenc.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavcodec/faandct.c
@@ -7116,14 +7116,14 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUt
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/*
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/neon/*
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/ppc/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/*
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/vc1dsp_init.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/vc1dsp_mmx.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavdevice/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libavdevice/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libavdevice/file_open.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavdevice/openal-dec.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavdevice/x11grab.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/*
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavfilter/f_ebur128.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/libavfilter/interlace.h
        -? src/3rdparty/chromium/third_party/ffmpeg/libavfilter/log2_tab.c
@@ -7171,7 +7171,7 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUt
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_idet_init.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_noise.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_yadif_init.c
-       src/3rdparty/chromium/third_party/ffmpeg/libavformat/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libavformat/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libavformat/file_open.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavformat/golomb_tab.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavformat/log2_tab.c
@@ -7185,7 +7185,7 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUt
        src/3rdparty/chromium/third_party/ffmpeg/libavresample/aarch64/*
        src/3rdparty/chromium/third_party/ffmpeg/libavresample/arm/*
        src/3rdparty/chromium/third_party/ffmpeg/libavresample/x86/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavutil/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libavutil/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libavutil/adler32.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libavutil/audioconvert.h
        -? src/3rdparty/chromium/third_party/ffmpeg/libavutil/x86_cpu.h
@@ -7199,19 +7199,19 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUt
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/tomi/*
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/x86/*
        + src/3rdparty/chromium/third_party/ffmpeg/libpostproc/version.h
-       src/3rdparty/chromium/third_party/ffmpeg/libswresample/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libswresample/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libswresample/dither_template.c
        -? src/3rdparty/chromium/third_party/ffmpeg/libswresample/log2_tab.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/libswresample/swresample-test.c
        src/3rdparty/chromium/third_party/ffmpeg/libswresample/aarch64/*
        src/3rdparty/chromium/third_party/ffmpeg/libswresample/arm/*
        src/3rdparty/chromium/third_party/ffmpeg/libswresample/x86/*
-       src/3rdparty/chromium/third_party/ffmpeg/libswscale/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/libswscale/*
        -? src/3rdparty/chromium/third_party/ffmpeg/libswscale/log2_tab.c
        src/3rdparty/chromium/third_party/ffmpeg/libswscale/arm/*
        src/3rdparty/chromium/third_party/ffmpeg/libswscale/ppc/*
        src/3rdparty/chromium/third_party/ffmpeg/libswscale/x86/*
-       src/3rdparty/chromium/third_party/ffmpeg/tools/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/tools/*
        -? src/3rdparty/chromium/third_party/ffmpeg/tools/coverity.c
        -? src/3rdparty/chromium/third_party/ffmpeg/tools/cws2fws.c
        -? src/3rdparty/chromium/third_party/ffmpeg/tools/normalize.py
@@ -7225,10 +7225,10 @@ Files: + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitperl/VCSUt
        src/3rdparty/chromium/third_party/libsecret/*
        src/3rdparty/chromium/third_party/libudev/*
        src/3rdparty/chromium/third_party/libusb/src/*
-       src/3rdparty/chromium/third_party/libusb/src/libusb/* excluding:
+       src/3rdparty/chromium/third_party/libusb/src/libusb/*
        -? src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.c
        -? src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.h
-       src/3rdparty/chromium/third_party/libusb/src/libusb/os/* excluding:
+       src/3rdparty/chromium/third_party/libusb/src/libusb/os/*
        -? src/3rdparty/chromium/third_party/libusb/src/libusb/os/poll_posix.h
        + src/3rdparty/chromium/third_party/libusb/src/msvc/config.h
        + src/3rdparty/chromium/third_party/libusb/src/msvc/missing.c
@@ -7242,12 +7242,12 @@ Copyright: 2014 The Chromium Authors. All rights reserved.
  2013 Google Inc. All rights reserved.
 License: LGPL-2.1+
 
-Files: src/3rdparty/chromium/third_party/talloc/* excluding:
+Files: src/3rdparty/chromium/third_party/talloc/*
        -? src/3rdparty/chromium/third_party/talloc/config.h.in
        -+ src/3rdparty/chromium/third_party/talloc/pytalloc.c
        -+ src/3rdparty/chromium/third_party/talloc/pytalloc.h
        src/3rdparty/chromium/third_party/talloc/compat/*
-       src/3rdparty/chromium/third_party/talloc/libreplace/* excluding:
+       src/3rdparty/chromium/third_party/talloc/libreplace/*
        -? src/3rdparty/chromium/third_party/talloc/libreplace/getaddrinfo.c
        -? src/3rdparty/chromium/third_party/talloc/libreplace/getaddrinfo.h
        -+ src/3rdparty/chromium/third_party/talloc/libreplace/getifaddrs.c
@@ -7283,14 +7283,14 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/base/third_party/xdg_user_dirs/*
        src/3rdparty/chromium/ppapi/lib/gl/include/EGL/*
        src/3rdparty/chromium/ppapi/lib/gl/include/KHR/*
-       src/3rdparty/chromium/third_party/* excluding:
+       src/3rdparty/chromium/third_party/*
        -? src/3rdparty/chromium/third_party/PRESUBMIT.py
        + src/3rdparty/chromium/third_party/WebKit/Source/core/xml/XSLTExtensions.cpp
        + src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn
        + src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm
        + src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn/*
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/* excluding:
+       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/*
        -+ src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/PRESUBMIT.py
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/*
        + src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/autopep8.py
@@ -7303,7 +7303,7 @@ Files: src/3rdparty/chromium/base/third_party/*
        ? src/3rdparty/chromium/third_party/blanketjs/src/qunit_adapter.js
        src/3rdparty/chromium/third_party/expat/*
        src/3rdparty/chromium/third_party/expat/files/lib/*
-       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/* excluding:
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/*
        -+ src/3rdparty/chromium/third_party/ffmpeg/doc/examples/filter_audio.c
        -+ src/3rdparty/chromium/third_party/ffmpeg/doc/examples/transcode_aac.c
        + src/3rdparty/chromium/third_party/ffmpeg/libavcodec/api-flac-test.c
@@ -7322,7 +7322,7 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/flot/*
        + src/3rdparty/chromium/third_party/fontconfig/src/src/fcfreetype.c
        src/3rdparty/chromium/third_party/freetype2/src/src/bdf/*
-       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/* excluding:
+       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/*
        -? src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcferror.h
        -? src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcfutil.c
        src/3rdparty/chromium/third_party/jsoncpp/overrides/include/json/*
@@ -7343,14 +7343,14 @@ Files: src/3rdparty/chromium/base/third_party/*
        + src/3rdparty/chromium/third_party/libxml/src/timsort.h
        src/3rdparty/chromium/third_party/mesa/*
        src/3rdparty/chromium/third_party/mesa/src/*
-       src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/* excluding:
+       src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/*
        -+ src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glcpp-parse.c
        -+ src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glcpp-parse.h
        -+ src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glsl_parser.cc
        -+ src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glsl_parser.h
        src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glapi/*
        src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/main/*
-       src/3rdparty/chromium/third_party/mesa/src/include/GL/* excluding:
+       src/3rdparty/chromium/third_party/mesa/src/include/GL/*
        -+ src/3rdparty/chromium/third_party/mesa/src/include/GL/wmesa.h
        src/3rdparty/chromium/third_party/mesa/src/include/GL/internal/*
        src/3rdparty/chromium/third_party/mesa/src/include/GLES/*
@@ -7369,7 +7369,7 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/os/*
        src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/pipe-loader/*
        src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/pipebuffer/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/* excluding:
+       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/*
        -+ src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.c
        -+ src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.h
        -+ src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa_areamap.h
@@ -7419,7 +7419,7 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3d1xshader/tools/*
        src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3d1xstutil/include/*
        src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3d1xstutil/src/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/* excluding:
+       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/*
        -+ src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/d3d10.idl
        -+ src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/d3d10misc.h
        -+ src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/dxgi.idl
@@ -7529,10 +7529,10 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/radeon/server/*
        src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/swrast/*
        src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/osmesa/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/windows/gdi/* excluding:
+       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/windows/gdi/*
        -+ src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/windows/gdi/wgl.c
        src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/x11/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/main/* excluding:
+       src/3rdparty/chromium/third_party/mesa/src/src/mesa/main/*
        -+ src/3rdparty/chromium/third_party/mesa/src/src/mesa/main/vsnprintf.c
        src/3rdparty/chromium/third_party/mesa/src/src/mesa/math/*
        src/3rdparty/chromium/third_party/mesa/src/src/mesa/program/*
@@ -7553,14 +7553,14 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/pyftpdlib/src/*
        src/3rdparty/chromium/third_party/pyftpdlib/src/demo/*
        + src/3rdparty/chromium/third_party/pyftpdlib/src/pyftpdlib/ftpserver.py
-       src/3rdparty/chromium/third_party/pyftpdlib/src/pyftpdlib/contrib/* excluding:
+       src/3rdparty/chromium/third_party/pyftpdlib/src/pyftpdlib/contrib/*
        -? src/3rdparty/chromium/third_party/pyftpdlib/src/pyftpdlib/contrib/__init__.py
        src/3rdparty/chromium/third_party/qcms/*
        src/3rdparty/chromium/third_party/qcms/src/*
        src/3rdparty/chromium/third_party/qunit/src/*
        src/3rdparty/chromium/third_party/simplejson/*
        + src/3rdparty/chromium/third_party/skia/third_party/lua/src/lua.h
-       src/3rdparty/chromium/third_party/smhasher/src/* excluding:
+       src/3rdparty/chromium/third_party/smhasher/src/*
        -+ src/3rdparty/chromium/third_party/smhasher/src/pstdint.h
        + src/3rdparty/chromium/third_party/stp/src
        src/3rdparty/chromium/third_party/stp/config/stp/*
@@ -7581,7 +7581,7 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/stp/src/include/stp/STPManager/*
        src/3rdparty/chromium/third_party/stp/src/include/stp/Sat/*
        src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/* excluding:
+       src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/*
        -+ src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/MersenneTwister.h
        src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/multiplication/*
        src/3rdparty/chromium/third_party/stp/src/include/stp/ToSat/*
@@ -7600,7 +7600,7 @@ Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/third_party/stp/src/lib/Printer/*
        src/3rdparty/chromium/third_party/stp/src/lib/STPManager/*
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/* excluding:
+       src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/*
        -+ src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/MersenneTwister.h
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/MemoryPool/*
        src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/mtl/*
