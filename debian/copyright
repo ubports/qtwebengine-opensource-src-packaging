@@ -2557,12 +2557,9 @@ Copyright: 2009-2010, Iowa State University
 License: BSL-1.0
 
 Files: src/3rdparty/chromium/third_party/stp/src/lib/extlib-constbv/constantbv.h
+       src/3rdparty/chromium/third_party/stp/src/lib/extlib-constbv/constantbv.cpp
 Copyright: 1995-2004, Steffen Beyer
 License: LGPL-2+
-
-Files: src/3rdparty/chromium/third_party/stp/src/lib/extlib-constbv/constantbv.cpp
-Copyright: 1995-2004, Steffen Beyer
-License: LGPL-2
 
 Files: src/3rdparty/chromium/third_party/talloc/*
 Copyright: 1995, Patrick Powell
@@ -6416,13 +6413,13 @@ Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdpart
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/jquery.hotkeys.js
 Copyright: 2010, John Resig
            2010, The Dojo Foundation
-License: GPL-2
+License: Expat or GPL-2
 
 Files: src/3rdparty/chromium/third_party/WebKit/Tools/qunit/qunit/qunit.css
        src/3rdparty/chromium/third_party/WebKit/Tools/qunit/qunit/qunit.js
 Copyright: 2008, Ariel Flesler - aflesler@gmail(dot)com | http://flesler.blogspot.com
            2011, John Resig, Jörn Zaefferer
-License: GPL
+License: Expat or GPL-2
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/wtf/DateMath.cpp
 Copyright: 2010, &yet, LLC <nate@andyet.net>
