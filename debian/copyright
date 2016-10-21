@@ -105,6 +105,7 @@ License: BSD-3-clause
 
 Files: src/webenginewidgets/doc/snippets/qtwebengine_qwebenginepage_snippet.cpp
 Copyright: 2015, The Qt Company Ltd
+License: FDL-1.3 with Qt1.1 exception
 
 Files: src/3rdparty/ninja/*
 Copyright: 2011 Google Inc. All Rights Reserved.
@@ -258,6 +259,10 @@ Files: src/3rdparty/chromium/chrome/third_party/chromevox/third_party/closure-li
 Copyright: 2006-2012, The Closure Library Authors
 License: Apache-2.0
 
+Files: src/3rdparty/chromium/content/child/multipart_response_delegate.h
+Copyright: 2014, The Chromium Authors
+License: BSD or LGPL-2.1+ or MPL-1.1
+
 Files: src/3rdparty/chromium/crypto/third_party/nss/*
 Copyright: 1994-2000, Netscape Communications Corporation.
 License: GPL-2+ or LGPL-2.1+ or MPL-1.1
@@ -278,14 +283,31 @@ Files: src/3rdparty/chromium/native_client/src/third_party/gtest/gtest.gyp
 Copyright: 2012, Google Inc
 License: BSD-3-clause
 
+Files: src/3rdparty/chromium/net/base/registry_controlled_domains/registry_controlled_domain.h
+       src/3rdparty/chromium/net/cookies/canonical_cookie.cc
+       src/3rdparty/chromium/net/cookies/cookie_monster.cc
+       src/3rdparty/chromium/net/cookies/parsed_cookie.cc
+       src/3rdparty/chromium/net/http/des.cc
+       src/3rdparty/chromium/net/http/http_auth_handler_ntlm_portable.cc
+       src/3rdparty/chromium/net/http/http_chunked_decoder.*
+       src/3rdparty/chromium/net/http/md4.*
+       src/3rdparty/chromium/net/proxy/proxy_resolver_script.h
+       src/3rdparty/chromium/net/socket/ssl_client_socket_nss.cc
+Copyright: 1994-2000, Netscape Communications Corporation.
+License: GPL-2+ or LGPL-2.1+ or MPL-1.1
+
 Files: src/3rdparty/chromium/net/third_party/mozilla_security_manager/*
 Copyright: 1994-2000, Netscape Communications Corporation.
 License: GPL-2+ or LGPL-2.1+ or MPL-1.1
 
-Files: src/3rdparty/chromium/net/third_party/nss/*
+Files: src/3rdparty/chromium/net/third_party/nss/ssl/*
 Copyright: 1994-2000, Netscape Communications Corporation.
            2012-2013, The Chromium Authors
 License: MPL-2.0
+
+Files: src/3rdparty/chromium/net/third_party/nss/ssl/exports_win.def
+Copyright: The Chromium Authors
+License: BSD-3-clause
 
 Files: src/3rdparty/chromium/net/third_party/nss/ssl/bodge/nssrenam.h
        src/3rdparty/chromium/net/third_party/nss/ssl/sslplatf.c
@@ -2320,6 +2342,66 @@ Files: src/3rdparty/chromium/third_party/libjingle/source/talk/examples/objc/App
 Copyright: 2012, Square Inc
 License: Apache-2.0
 
+Files: src/3rdparty/chromium/third_party/libjpeg/*
+Copyright: 1998, Netscape Communications Corporation
+           1991-1998, Thomas G. Lane
+License: IJG
+
+Files: src/3rdparty/chromium/third_party/libjpeg/jpeglibmangler.h
+       src/3rdparty/chromium/third_party/libjpeg/libjpeg.gyp
+Copyright: 2009-2012, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimd_arm64_neon.S
+       src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimd_arm_neon.S
+       src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimdext.inc
+Copyright: 2010, D. R. Commander
+           2013-2014, Linaro Limited
+           1999-2006, MIYASAKA Masaru
+           2009-2011, Nokia Corporation and/or its subsidiary(-ies)
+           2009, Pierre Ossman <ossman@cendio.se> for Cendio AB
+License: Zlib
+
+Files: src/3rdparty/chromium/third_party/libjpeg_turbo/rdcolmap.c
+       src/3rdparty/chromium/third_party/libjpeg_turbo/rdppm.c
+       src/3rdparty/chromium/third_party/libjpeg_turbo/wrgif.c
+Copyright: 1988-1989, Jef Poskanzer
+           1991-1997, Thomas G. Lane
+           property of
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/libjpeg/jconfig.h
+License: LGPL-2.1+ or MPL-1.1
+
+Files: src/3rdparty/chromium/third_party/libpng/*
+Copyright: 1996-1997, Andreas Dilger
+           1996-1997, Andreas Dilger" PNG_STRING_NEWLINE
+           1996-1997, Andreas Dilger, are derived from libpng-0.88
+           209-2015, Glenn Randers-Pehrson
+           2000-2015, Glenn Randers-Pehrson, are
+           1998-2000, Glenn Randers-Pehrson, are derived from
+           1995-1996, Guy Eric Schalnat, Group 42, Inc
+License: Zlib
+
+Files: src/3rdparty/chromium/third_party/libpng/libpng.gyp
+Copyright: 2012, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/libpng/pngusr.h
+License: LGPL-2.1+ or MPL-1.1
+
+Files: src/3rdparty/chromium/third_party/libsecret/*
+Copyright: 2011, Collabora Ltd
+           1991-1999, Free Software Foundation, Inc
+           2011-2012, Red Hat Inc
+           2012, Stef Walter
+License: LGPL-2.1+
+
+Files: src/3rdparty/chromium/third_party/libudev/*
+Copyright: 1991-1999, Free Software Foundation, Inc
+           2008-2011, Kay Sievers <kay.sievers@vrfy.org>
+License: LGPL-2.1+
+
 Files: src/3rdparty/chromium/third_party/libusb/*
 Copyright: 2007-2009, Daniel Drake <dsd@gentoo.org>
            1991-1999, Free Software Foundation, Inc
@@ -2341,6 +2423,46 @@ Files: src/3rdparty/chromium/third_party/libusb/libusb.gyp
        src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.c
        src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.h
 Copyright: 2012-2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/libva/*
+Copyright: 2007-2012, Intel Corporation
+           2008, NVIDIA, Corporation
+           2009-2010, Splitted-Desktop Systems
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/libvpx/source/libvpx/third_party/libyuv/source/x86inc.asm
+       src/3rdparty/chromium/third_party/libvpx/source/libvpx/third_party/x86inc/LICENSE
+       src/3rdparty/chromium/third_party/libvpx/source/libvpx/third_party/x86inc/x86inc.asm
+Copyright: 2005-2012, x264 project
+License: ISC
+
+Files: src/3rdparty/chromium/third_party/libvpx/source/libvpx/md5_utils.c
+       src/3rdparty/chromium/third_party/libvpx/source/libvpx/md5_utils.h
+License: public-domain
+
+Files: src/3rdparty/chromium/third_party/libxml/*
+Copyright: 2001, Bjorn Reese <breese@users.sourceforge.net>
+           1998-2001, Bjorn Reese and Daniel Stenberg
+           2003-2012, Daniel Veillard
+           2000, Gary Pennington and Daniel Veillard
+License: ISC
+
+Files: src/3rdparty/chromium/third_party/libxml/chromium/libxml_utils.*
+       src/3rdparty/chromium/third_party/libxml/libxml.gyp
+Copyright: 2012, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/libxml/src/timsort.h
+Copyright: 2010, Christopher Swenson
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/libXNVCtrl/*
+Copyright: 2008-2010, NVIDIA, Corporation
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/libXNVCtrl/libXNVCtrl.gyp
+Copyright: 2012, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/mesa/src/*
@@ -2479,6 +2601,26 @@ Files: src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/trace/trac
 Copyright: 2008, Tungsten Graphics, Inc
 License: LGPL-3+
 
+Files: src/3rdparty/chromium/third_party/mocha/*
+Copyright: 2011, TJ Holowaychuk <tj@vision-media.ca>
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/mozilla/*
+License: LGPL-2.1+ or MPL-1.1
+
+Files: src/3rdparty/chromium/third_party/mozilla/MozillaExport.h
+       src/3rdparty/chromium/third_party/mozilla/mozilla.gyp
+Copyright: 2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/mozilla/ComplexTextInputPanel.h
+       src/3rdparty/chromium/third_party/mozilla/ComplexTextInputPanel.mm
+Copyright: 2009, Apple Inc
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/npapi/bindings/*
+License: LGPL-2.1+ or MPL-1.1
+
 Files: src/3rdparty/chromium/third_party/opus/src/*
 Copyright: 2007-2008, CSIRO
            2001, Erik de Castro Lopo <erikd@mega-nerd.com>
@@ -2518,6 +2660,71 @@ License: FSF_unlimited or GPL-2+_LibToolException
 
 Files: src/3rdparty/chromium/third_party/opus/src/ltmain.sh
 License: GPL-2+_LibToolException
+
+Files: src/3rdparty/chromium/third_party/protobuf/python/mox.py
+       src/3rdparty/chromium/third_party/protobuf/python/stubout.py
+Copyright: 2008, Google Inc
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/pyelftools/elftools/common/*
+       src/3rdparty/chromium/third_party/pyelftools/elftools/dwarf/*
+       src/3rdparty/chromium/third_party/pyelftools/elftools/elf/*
+       src/3rdparty/chromium/third_party/pyelftools/examples/*
+       src/3rdparty/chromium/third_party/pyelftools/scripts/readelf.py
+       src/3rdparty/chromium/third_party/pyelftools/setup.py
+License: public-domain
+
+Files: src/3rdparty/chromium/third_party/pyelftools/elftools/construct/*
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/qcms/src/*
+Copyright: 1998-2007, Marti Maria
+           2009, Mozilla Corporation
+           2009, Mozilla Foundation
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/qcms/qcms.gyp
+Copyright: 2012, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/qunit/*
+Copyright: 2014, jQuery Foundation and other contributors
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/qunit/src/browser_test_harness.js
+Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/re2/util/rune.cc
+       src/3rdparty/chromium/third_party/re2/util/utf.h
+Copyright: 2002, Lucent Technologies
+License: ISC-like-dmgfp
+
+Files: src/3rdparty/chromium/third_party/re2/util/valgrind.h
+Copyright: 2000-2009, Julian Seward
+License: BSD-3-clause or GPL-2
+
+Files: src/3rdparty/chromium/third_party/re2/lib/codereview/codereview.py
+Copyright: 2007-2009, Google Inc
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/simplejson/*
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/smhasher/*
+Copyright: 2004-2005, Covered under the Paul Hsieh derivative
+           2011, Google, Inc
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/smhasher/src/MurmurHash1.*
+       src/3rdparty/chromium/third_party/smhasher/src/MurmurHash2.*
+       src/3rdparty/chromium/third_party/smhasher/src/MurmurHash3.*
+       src/3rdparty/chromium/third_party/smhasher/src/sha1.h
+License: public-domain
+
+Files: src/3rdparty/chromium/third_party/smhasher/src/crc.cpp
+Copyright: 1995-1998, Mark Adler
+License: Zlib
 
 Files: src/3rdparty/chromium/third_party/speech-dispatcher/*
 Copyright: 2001-2004, Brailcom, o.p.s
@@ -2593,6 +2800,30 @@ License: ISC
 Files: src/3rdparty/chromium/third_party/talloc/libreplace/timegm.c
 Copyright: 1997, Kungliga Tekniska Högskolan
 License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/tcmalloc/vendor/Makefile.in
+       src/3rdparty/chromium/third_party/tcmalloc/vendor/aclocal.m4
+       src/3rdparty/chromium/third_party/tcmalloc/vendor/m4/ltoptions.m4
+       src/3rdparty/chromium/third_party/tcmalloc/vendor/m4/ltsugar.m4
+       src/3rdparty/chromium/third_party/tcmalloc/vendor/m4/ltversion.m4
+       src/3rdparty/chromium/third_party/tcmalloc/vendor/m4/lt~obsolete.m4
+Copyright: 2001-2008, Free Software Foundation, Inc
+License: FSF_unlimited
+
+Files: src/3rdparty/chromium/third_party/tcmalloc/vendor/src/third_party/valgrind.h
+Copyright: 2000-2008, Julian Seward
+License: BSD-3-clause or GPL-2
+
+Files: src/3rdparty/chromium/third_party/tcmalloc/vendor/m4/libtool.m4
+Copyright: 2008, Free Software Foundation, Inc
+License: FSF_unlimited or GPL-2+_LibToolException
+
+Files: src/3rdparty/chromium/third_party/tcmalloc/vendor/ltmain.sh
+Copyright: 1996-2008, Free Software Foundation, Inc
+License: GPL-2+_LibToolException
+
+Files: src/3rdparty/chromium/third_party/tcmalloc/vendor/m4/acx_pthread.m4
+License: GPL_AutoConfException
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayValue.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayValue.h
@@ -6505,6 +6736,43 @@ Copyright: 2006, Bryce Harrington <bryce@osdl.org>
            2009-2010, Rex Dieter <rdieter@fedoraproject.org>
 License: Expat
 
+Files: src/3rdparty/chromium/third_party/yasm/source/patched-yasm/Makefile.in
+       src/3rdparty/chromium/third_party/yasm/source/patched-yasm/aclocal.m4
+       src/3rdparty/chromium/third_party/yasm/source/patched-yasm/m4/*
+Copyright: 1995-2010, Free Software Foundation, Inc
+License: FSF_unlimited
+
+Files: src/3rdparty/chromium/third_party/yasm/source/patched-yasm/libyasm/bitvect.c
+       src/3rdparty/chromium/third_party/yasm/source/patched-yasm/libyasm/bitvect.h
+Copyright: 1995-2004, Steffen Beyer
+License: GPL-2+ or LGPL-2+
+
+Files: src/3rdparty/chromium/third_party/yasm/source/patched-yasm/config/ltmain.sh
+Copyright: 2005, Free Software Foundation, Inc
+License: GPL-2+_AutoConfException
+
+Files: src/3rdparty/chromium/third_party/yasm/source/patched-yasm/libyasm/md5.c
+Copyright: issue. I hereby disclaim
+License: public-domain
+
+Files: src/3rdparty/chromium/third_party/zlib/*
+Copyright: 2007-2008, Even Rouault
+           1998-2005, Gilles Vollant
+           1998-2010, Gilles Vollant (minizip) ( http://www.winimage.com/zLibDll/minizip.html )
+           1998-2004, Gilles Vollant - http://www.winimage.com/zLibDll
+           1998-2010, Gilles Vollant, Even Rouault, Mathias Svensson
+           1990-2000, Info-ZIP
+           2009-2010, Mathias Svensson ( http://result42.com )
+License: Zlib
+
+Files: src/3rdparty/chromium/third_party/zlib/google/*
+       src/3rdparty/chromium/third_party/zlib/zlib.gyp
+Copyright: 2011-2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/zlib/mozzconf.h
+License: LGPL-2.1+ or MPL-1.1
+
 Files: src/3rdparty/chromium/ppapi/*
 Copyright: 2012, The Chromium Authors
            2007-2010, The Khronos Group Inc
@@ -6743,28 +7011,6 @@ Files: + src/3rdparty/chromium/content/browser/appcache/appcache_manifest_parser
        src/3rdparty/chromium/third_party/libevent/nacl_nonsfi/*
        src/3rdparty/chromium/third_party/libevent/sample/*
        src/3rdparty/chromium/third_party/libevent/solaris/*
-       src/3rdparty/chromium/third_party/libjingle/source/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/app/webrtc/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/app/webrtc/java/jni/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/app/webrtc/objc/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/app/webrtc/objc/public/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/app/webrtc/objctests/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/app/webrtc/test/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/examples/objc/AppRTCDemo/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/examples/objc/AppRTCDemo/ios/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/examples/objc/AppRTCDemo/mac/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/examples/peerconnection/client/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/examples/peerconnection/client/linux/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/examples/peerconnection/server/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/examples/relayserver/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/examples/stunserver/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/examples/turnserver/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/media/base/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/media/devices/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/media/sctp/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/media/webrtc/*
-       src/3rdparty/chromium/third_party/libjingle/source/talk/session/media/*
        src/3rdparty/chromium/third_party/libjpeg_turbo/*
        src/3rdparty/chromium/third_party/libjpeg_turbo/simd/*
        src/3rdparty/chromium/third_party/libsrtp/srtp/crypto/cipher/*
@@ -6971,7 +7217,6 @@ Files: + src/3rdparty/chromium/content/browser/appcache/appcache_manifest_parser
        + src/3rdparty/chromium/ui/base/clipboard/clipboard_util_win.cc
        + src/3rdparty/chromium/ui/base/dragdrop/os_exchange_data_provider_win.cc
        + src/3rdparty/chromium/ui/events/keycodes/keyboard_codes_posix.h
-       src/webenginewidgets/doc/snippets/qtwebengine_qwebengineview_snippet.cpp
 Copyright: 2006-2015 The Chromium Authors. All Rights Reserved.
            1998-2004, 2004--2005, 2004--2010, 2004--2011, 2004--2014, 2005-2015 Google Inc. All Rights Reserved. <mostawesomedude@gmail.com>
            1982, 1986, 1988, 1993-2010, 2010-11, 2011-2015 All Rights Reserved.
@@ -8055,62 +8300,8 @@ License: BSD-BY-LC-NE
  BSD-like License version BY-LC-NE can be found in
  /usr/share/common-licenses/BSD-BY-LC-NE
 
-Files: src/3rdparty/chromium/base/third_party/*
-       src/3rdparty/chromium/base/third_party/dynamic_annotations/*
-       + src/3rdparty/chromium/third_party/re2/util/valgrind.h
-       src/3rdparty/chromium/third_party/tcmalloc/vendor/src/third_party/*
-Copyright: 2014 The Chromium Authors. All rights reserved.
-           2013 Google Inc. All rights reserved.
-License: BSD-BY-LC
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are
- * met:
- *
- *     * Redistributions of source code must retain the above copyright
- * notice, this list of conditions and the following disclaimer.
- *     * Redistributions in binary form must reproduce the above
- * copyright notice, this list of conditions and the following disclaimer
- * in the documentation and/or other materials provided with the
- * distribution.
- *     * Neither the name of Google Inc. nor the names of its
- * contributors may be used to endorse or promote products derived from
- * this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
- * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
- * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
- .
-  On Debian systems, the complete text of the
-  BSD-like License version BY-LC can be found in
-  /usr/share/common-licenses/BSD-BY-LC
-
 Files: src/3rdparty/chromium/base/third_party/nspr/*
        + src/3rdparty/chromium/content/child/multipart_response_delegate.h
-       src/3rdparty/chromium/net/base/registry_controlled_domains/*
-       -? src/3rdparty/chromium/net/base/registry_controlled_domains/registry_controlled_domain_unittest.cc
-       + src/3rdparty/chromium/net/cookies/canonical_cookie.cc
-       + src/3rdparty/chromium/net/cookies/cookie_monster.cc
-       + src/3rdparty/chromium/net/cookies/parsed_cookie.cc
-       + src/3rdparty/chromium/net/http/des.cc
-       + src/3rdparty/chromium/net/http/http_auth_handler_ntlm_portable.cc
-       + src/3rdparty/chromium/net/http/http_chunked_decoder.cc
-       + src/3rdparty/chromium/net/http/http_chunked_decoder.h
-       + src/3rdparty/chromium/net/http/md4.cc
-       + src/3rdparty/chromium/net/http/md4.h
-       + src/3rdparty/chromium/net/proxy/proxy_resolver_script.h
-       + src/3rdparty/chromium/net/socket/ssl_client_socket_nss.cc
-       src/3rdparty/chromium/net/third_party/mozilla_security_manager/*
-       + src/3rdparty/chromium/net/third_party/nss/ssl/sslplatf.c
-       + src/3rdparty/chromium/net/third_party/nss/ssl/bodge/nssrenam.h
        src/3rdparty/chromium/third_party/isimpledom/*
        + src/3rdparty/chromium/third_party/libjpeg/jconfig.h
        + src/3rdparty/chromium/third_party/libpng/pngusr.h
@@ -8142,8 +8333,7 @@ License: GPL-2
  GNU General Public License version 2 can be found in
  /usr/share/common-licenses/GPL-2
 
-Files:
-       src/3rdparty/chromium/third_party/libsecret/*
+Files: src/3rdparty/chromium/third_party/libsecret/*
        src/3rdparty/chromium/third_party/libudev/*
 Copyright: 2014 The Chromium Authors. All rights reserved.
  2013 Google Inc. All rights reserved.
