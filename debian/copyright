@@ -2285,6 +2285,29 @@ Copyright: 2006-2011, Chromium يازغۇچىلىرىغا تەۋە. بارلىق
            2006-2011, יוצרי Chromium. כל הזכויות שמורות.</translation>
 License: BSD-3-clause
 
+Files: src/3rdparty/chromium/third_party/lcov/*
+Copyright: 1989-1991, Free Software Foundation, Inc
+           2002, International Business Machines Corp
+License: GPL-2+
+
+Files: src/3rdparty/chromium/third_party/libexif/sources/libexif/*
+Copyright: 2007, Hans Ulrich Niedermann <gp@n-dimensional.de>
+           2001-2005, Lutz Mueller <lutz@users.sourceforge.net>
+           2002-2009, Lutz Mueller <lutz@users.sourceforge.net> et. al
+           2003, Matthieu Castet <mat-c@users.sourceforge.net>
+           part consists of one space followed
+License: LGPL-2+
+
+Files: src/3rdparty/chromium/third_party/libexif/sources/COPYING
+       src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.c
+       src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.h
+       src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-mnote-data.c
+       src/3rdparty/chromium/third_party/libexif/sources/config.h
+       src/3rdparty/chromium/third_party/libexif/sources/libexif/_stdint.h
+Copyright: 1991-1999, Free Software Foundation, Inc
+           2002-2003, Lutz Mueller <lutz@users.sourceforge.net>
+License: LGPL-2.1+
+
 Files: src/3rdparty/chromium/third_party/libjingle/source/talk/examples/android/third_party/autobanh/*
 Copyright: 2014, Cameron Lowell Palmer
            2011-2012, Tavendo GmbH.
@@ -2297,16 +2320,282 @@ Files: src/3rdparty/chromium/third_party/libjingle/source/talk/examples/objc/App
 Copyright: 2012, Square Inc
 License: Apache-2.0
 
-Files: src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glcpp-parse.cpp
+Files: src/3rdparty/chromium/third_party/libusb/*
+Copyright: 2007-2009, Daniel Drake <dsd@gentoo.org>
+           1991-1999, Free Software Foundation, Inc
+           2012-2013, Hans de Goede <hdegoede@redhat.com>
+           2001, Johannes Erdfelt <johannes@erdfelt.com>
+           2011-2013, Martin Pieuchot <mpi@openbsd.org>
+           2010, Michael Plante <michael.plante@gmail.com>
+           2012-2013, Nathan Hjelm <hjelmn@cs.unm.edu>
+           2012-2013, Nathan Hjelm <hjelmn@mac.com>
+           2008-2013, Nathan Hjelm <hjelmn@users.sourceforge.net>
+           2009-2010, Pete Batard <pbatard@gmail.com>
+           2009-2012, Pete Batard <pete@akeo.ie>
+           2010-2013, Peter Stuge <peter@stuge.se>
+           2011-2013, RealVNC Ltd
+           2011, Vitali Lovich <vlovich@aliph.com>
+License: LGPL-2.1+
+
+Files: src/3rdparty/chromium/third_party/libusb/libusb.gyp
+       src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.c
+       src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.h
+Copyright: 2012-2013, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/mesa/src/*
+Copyright: 2000-2002, ATI Technologies Inc., Ontario, Canada
+           2005, Aapo Tahkola
+           2011, Adam Rak <adam.rak@streamnovation.com>
+           2010-2012, Advanced Micro Devices, Inc
+           2002-2009, Apple Computer, Inc
+           2008-2011, Apple Inc
+           2005, Ben Skeggs
+           2011, Benjamin Franzke
+           1999-2008, Brian Paul
+           2011, Bryan Cain
+           2009, Chia-I Wu <olv@0xlab.org>
+           2009-2010, Chia-I Wu <olvaffe@gmail.com>
+           2010-2012, Christian König
+           2008-2010, Corbin Simpson <MostAwesomeDude@gmail.com>
+           2004, David Airlie
+           2008, Dennis Smit
+           2009-2012, Francisco Jerez
+           2008-2010, George Sapountzis <gsapountzis@gmail.com>
+           2002-2012, Intel Corporation
+           2009-2010, Jakob Bornecrantz
+           2010, Jerome Glisse <glisse@freedesktop.org>
+           2009, Joakim Sindholt <opensource@zhasha.com>
+           2012, Jon TURNEY
+           2008, Jérôme Glisse
+           2008, Keith Packard
+           2011, Kristian Høgsberg
+           2012, Laurent Carlier <lordheavym@gmail.com>
+           2011, Lauri Kasanen
+           2010, Luca Barbieri
+           2010-2011, LunarG, Inc
+           2011, Maarten Lankhorst
+           2009, Maciej Cencora
+           2008-2010, Maciej Cencora <m.cencora@gmail.com>
+           2009-2012, Marek Olšák <maraeo@gmail.com>
+           2012, Matt Turner <mattst88@gmail.com>
+           2004-2009, Nicolai Haehnle
+           2009, Nicolai Haehnle <nhaehnle@gmail.com>
+           2009, Pauli Nieminen
+           1998-1999, Precision Insight, Inc., Cedar Park, Texas
+           2007-2012, Red Hat, Inc
+           2004, Roland Scheidegger
+           1991-2000, Silicon Graphics, Inc
+           2011, The Chromium OS authors
+           2007-2010, The Nouveau Project
+           2002, The Weather Channel, Inc
+           2010, Thomas Balling Sørensen & Orasanu Lucian
+           2010-2011, Tom Stellard <tstellar@gmail.com>
+           2002-2008, Tungsten Graphics Inc., Cedar Park, Texas
+           2000-2001, VA Linux Systems Inc., Fremont, California
+           2007-2012, VMware, Inc
+           2012, Vincent Lejeune
+           1992, Vrije Universiteit, The Netherlands
+           2009-2010, Younes Manton
+           2005, Zack Rusin
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/mesa/src/docs/*
+Copyright: 2002-2003, Tungsten Graphics, Inc
+           on core Mesa code
+License: LGPL-2+
+
+Files: src/3rdparty/chromium/third_party/mesa/src/src/gtest/*
+Copyright: 2003-2009, Google Inc
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/mesa/src/include/c99/inttypes.h
+       src/3rdparty/chromium/third_party/mesa/src/include/c99/stdint.h
+       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.c
+       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.h
+       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa_areamap.h
+       src/3rdparty/chromium/third_party/mesa/src/src/getopt/getopt.h
+       src/3rdparty/chromium/third_party/mesa/src/src/mesa/main/vsnprintf.c
+Copyright: 2006-2008, Alexander Chemeris
+           2010, Belen Masia <bmasia@unizar.es>
+           2010, Diego Gutierrez <diegog@unizar.es>
+           2010, Fernando Navarro <fernandn@microsoft.com>
+           2010, Jorge Jimenez <jorge@iryoku.com>
+           2010, Jorge Jimenez, Belen Masia
+           2010, Jose I. Echevarria <joseignacioechevarria@gmail.com>
+           2011, Lauri Kasanen <cand@gmx.com>
+           2000, The NetBSD Foundation, Inc
+           1997, Theo de Raadt
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/d3d10.idl
+       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/d3d10misc.h
+       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/dxgi.idl
+       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/dxgitype.idl
+Copyright: 2007, Andras Kovacs
+           2008, Henri Verbeet for CodeWeavers
+License: LGPL-2.1+
+
+Files: src/3rdparty/chromium/third_party/mesa/src/include/GL/wmesa.h
+       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/windows/gdi/wgl.c
+Copyright: 1995-1998, Brian Paul
+           1991, Free Software Foundation, Inc
+           file
+License: LGPL-2+
+
+Files: src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glcpp-parse.c
        src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glsl_parser.cc
-Copyright: 1984, 1989-1990, 2000-2011 Free Software Foundation, Inc.
-           2008, 2009 Intel Corporation
-License: GPL-3+_BSL_BisonException
+       src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/program/program_parse.tab.c
+Copyright: 1984-2011, Free Software Foundation, Inc
+           2008-2010, Intel Corporation
+License: GPL-3+_BisonException or MIT/X11
 
 Files: src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glcpp-parse.h
        src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glsl_parser.h
-Copyright: 1984, 1989-1990, 2000-2011 Free Software Foundation, Inc.
+       src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/program/program_parse.tab.h
+Copyright: 1984-2011, Free Software Foundation, Inc
 License: GPL-3+_BisonException
+
+Files: src/3rdparty/chromium/third_party/mesa/src/m4/ax_pthread.m4
+Copyright: 2011, Daniel Richard G <skunk@iSKUNK.ORG>
+           2008, Steven G. Johnson <stevenj@alum.mit.edu>
+License: GPL-3+_AutoConfException
+
+Files: src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/gallivm/f.cpp
+Copyright: 2006, John Maddock
+           2010, VMware, Inc
+License: BSL-1.0
+
+Files: src/3rdparty/chromium/third_party/mesa/src/src/getopt/getopt_long.c
+Copyright: 2000, The NetBSD Foundation, Inc
+           2002, Todd C. Miller <Todd.Miller@courtesan.com>
+License: BSD-2-clause or ISC
+
+Files: src/3rdparty/chromium/third_party/mesa/src/m4/ax_python_module.m4
+Copyright: 2008, Andrew Collier
+License: Permissive
+
+Files: src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/trace/trace.xsl
+Copyright: 2008, Tungsten Graphics, Inc
+License: LGPL-3+
+
+Files: src/3rdparty/chromium/third_party/opus/src/*
+Copyright: 2007-2008, CSIRO
+           2001, Erik de Castro Lopo <erikd@mega-nerd.com>
+           2008-2012, Gregory Maxwell
+           2002-2013, Jean-Marc Valin
+           2013, Jean-Marc Valin and John Ridges
+           2003-2004, Mark Borgerding
+           2013, Mozilla Corporation
+           2008-2011, Octasic Inc
+           2013, Parrot
+           2006-2011, Skype Limited
+           2001-2011, Timothy B. Terriberry
+           1994-2013, Xiph.Org Foundation
+           2011-2012, Xiph.Org Foundation and Mozilla Corporation
+           2008, Xiph.Org Foundation, CSIRO
+           2011-2012, Xiph.Org Foundation, Mozilla Corporation
+           2010-2011, Xiph.Org Foundation, Skype Limited
+           2001-2011, Xiph.Org, Skype Limited, Octasic
+           2002-2013, Xiph.org Foundation
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/opus/src/Makefile.in
+       src/3rdparty/chromium/third_party/opus/src/aclocal.m4
+       src/3rdparty/chromium/third_party/opus/src/doc/Makefile.in
+       src/3rdparty/chromium/third_party/opus/src/m4/ltoptions.m4
+       src/3rdparty/chromium/third_party/opus/src/m4/ltsugar.m4
+       src/3rdparty/chromium/third_party/opus/src/m4/ltversion.m4
+       src/3rdparty/chromium/third_party/opus/src/m4/lt~obsolete.m4
+Copyright: 2001-2011, Free Software
+           2001-2011, Free Software Foundation
+           2001-2012, Free Software Foundation, Inc
+License: FSF_unlimited
+
+Files: src/3rdparty/chromium/third_party/opus/src/m4/libtool.m4
+Copyright: 2011, Free Software Foundation, Inc
+License: FSF_unlimited or GPL-2+_LibToolException
+
+Files: src/3rdparty/chromium/third_party/opus/src/ltmain.sh
+License: GPL-2+_LibToolException
+
+Files: src/3rdparty/chromium/third_party/speech-dispatcher/*
+Copyright: 2001-2004, Brailcom, o.p.s
+           1989-1999, Free Software Foundation, Inc
+License: GPL-2+
+
+Files: src/3rdparty/chromium/third_party/stp/*
+Copyright: 2013, Cosku Acay, http://www.coskuacay.com
+           2009-2013, Mate Soos
+           2001, Nicolai M. Josuttis
+           2003-2007, Niklas Een, Niklas Sorensson
+           2006-2010, Niklas Sorensson
+           2008, Vijay Ganesh
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/stp/src/lib/extlib-abc/*
+Copyright: The Regents of the University of California
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/msvc/stdint.h
+       src/3rdparty/chromium/third_party/stp/src/windows/winports/msc99hdr/inttypes.h
+       src/3rdparty/chromium/third_party/stp/src/windows/winports/msc99hdr/stdbool.h
+       src/3rdparty/chromium/third_party/stp/src/windows/winports/msc99hdr/stdint.h
+Copyright: 2006-2008, Alexander Chemeris
+           2000, Jeroen Ruigrok van der Werven <asmodai@FreeBSD.org>
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/MersenneTwister.h
+       src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/MersenneTwister.h
+Copyright: 1997-2002, Makoto Matsumoto and Takuji Nishimura
+           2000-2003, Richard J. Wagner
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/stp/src/cmake/modules/GetGitRevisionDescription.cmake
+       src/3rdparty/chromium/third_party/stp/src/cmake/modules/GetGitRevisionDescription.cmake.in
+Copyright: 2009-2010, Iowa State University
+License: BSL-1.0
+
+Files: src/3rdparty/chromium/third_party/stp/src/lib/extlib-constbv/constantbv.h
+Copyright: 1995-2004, Steffen Beyer
+License: LGPL-2+
+
+Files: src/3rdparty/chromium/third_party/stp/src/lib/extlib-constbv/constantbv.cpp
+Copyright: 1995-2004, Steffen Beyer
+License: LGPL-2
+
+Files: src/3rdparty/chromium/third_party/talloc/*
+Copyright: 1995, Patrick Powell
+           2003-2007, PostgreSQL Global Development Group
+           1996-2005, The PostgreSQL Global Development Group
+           1994, The Regents of the University of California
+           1992-2006, Andrew Tridgell
+           2005-2008, Jelmer Vernooij
+           2008, Michael Adam <obnox@samba.org>
+           2006-2009, Stefan Metzmacher
+License: LGPL-3+
+
+Files: src/3rdparty/chromium/third_party/talloc/libreplace/getifaddrs.c
+       src/3rdparty/chromium/third_party/talloc/libreplace/socket.c
+       src/3rdparty/chromium/third_party/talloc/pytalloc.c
+       src/3rdparty/chromium/third_party/talloc/pytalloc.h
+       src/3rdparty/chromium/third_party/talloc/script/abi_checks.sh
+       src/3rdparty/chromium/third_party/talloc/script/mksigs.pl
+Copyright: 1998, Andrew Tridgell
+           2007-2008, Jelmer Vernooij <jelmer@samba.org>
+           2007, Jeremy Allison
+           2009, Michael Adam
+           2008-2009, Michael Adam <obnox@samba.org>
+License: GPL-3+
+
+Files: src/3rdparty/chromium/third_party/talloc/libreplace/inet_ntop.c
+       src/3rdparty/chromium/third_party/talloc/libreplace/inet_pton.c
+Copyright: 1996-2001, Internet Software Consortium
+License: ISC
+
+Files: src/3rdparty/chromium/third_party/talloc/libreplace/timegm.c
+Copyright: 1997, Kungliga Tekniska Högskolan
+License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayValue.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayValue.h
@@ -6180,6 +6469,45 @@ License: MPL-2.0
 Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/jquery.isonscreen.js
 License: Expat or GPL
 
+Files: src/3rdparty/chromium/third_party/webrtc/modules/audio_device/mac/portaudio/pa_memorybarrier.h
+       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/mac/portaudio/pa_ringbuffer.c
+       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/mac/portaudio/pa_ringbuffer.h
+Copyright: 1999-2000, Ross Bencina and Phil Burk
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/webrtc/system_wrappers/source/spreadsortlib/constants.hpp
+       src/3rdparty/chromium/third_party/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
+Copyright: 2001-2009, Steven J. Ross
+License: BSL-1.0
+
+Files: src/3rdparty/chromium/third_party/webrtc/base/md5.cc
+       src/3rdparty/chromium/third_party/webrtc/base/md5.h
+License: public-domain
+
+Files: src/3rdparty/chromium/third_party/webrtc/LICENSE_THIRD_PARTY
+Copyright: 1993, CMU
+           1999-2000, Ross Bencina and Phil Burk
+           1993-2009, Since DOC
+           2001-2005, Steve Underwood
+           1996-2001, Takuya OOURA
+License: BSL-1.0 or Expat
+
+Files: src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/test/android/apmtest/jni/main.c
+Copyright: 2010, The Android Open Source Project
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/main/source/fft.c
+License: ISC-like-dmgfp
+
+Files: src/3rdparty/chromium/third_party/xdg-utils/*
+Copyright: 2006, Bryce Harrington <bryce@osdl.org>
+           2009-2010, Fathi Boudra <fabo@freedesktop.org>
+           2009, Google Inc
+           2006, Jeremy White <jwhite@codeweavers.com>
+           2006, Kevin Krammer <kevin.krammer@gmx.at>
+           2009-2010, Rex Dieter <rdieter@fedoraproject.org>
+License: Expat
+
 Files: src/3rdparty/chromium/ppapi/*
 Copyright: 2012, The Chromium Authors
            2007-2010, The Khronos Group Inc
@@ -6391,7 +6719,6 @@ Files: + src/3rdparty/chromium/content/browser/appcache/appcache_manifest_parser
        + src/3rdparty/chromium/content/renderer/input/input_scroll_elasticity_controller.h
        + src/3rdparty/chromium/media/filters/vp8_bool_decoder.cc
        + src/3rdparty/chromium/media/filters/vp8_bool_decoder.h
-       src/3rdparty/chromium/third_party/angle/src/third_party/*
        src/3rdparty/chromium/third_party/bsdtrees/*
        src/3rdparty/chromium/third_party/bspatch/*
        src/3rdparty/chromium/third_party/d3/*
@@ -6399,12 +6726,6 @@ Files: + src/3rdparty/chromium/content/browser/appcache/appcache_manifest_parser
        src/3rdparty/chromium/third_party/dom_distiller_js/dist/js/*
        src/3rdparty/chromium/third_party/dom_distiller_js/dist/proto_gen/third_party/dom_distiller_js/*
        src/3rdparty/chromium/third_party/fips181/*
-       src/3rdparty/chromium/third_party/flac/include/FLAC/*
-       src/3rdparty/chromium/third_party/flac/src/libFLAC/*
-       -? src/3rdparty/chromium/third_party/flac/src/libFLAC/alloc.c
-       src/3rdparty/chromium/third_party/flac/src/libFLAC/include/private/*
-       src/3rdparty/chromium/third_party/flac/src/libFLAC/include/protected/*
-       src/3rdparty/chromium/third_party/freetype2/src/src/tools/ftrandom/*
        src/3rdparty/chromium/third_party/jinja2/*
        + src/3rdparty/chromium/third_party/leveldatabase/src
        src/3rdparty/chromium/third_party/leveldatabase/src/db/*
@@ -6526,12 +6847,6 @@ Files: + src/3rdparty/chromium/content/browser/appcache/appcache_manifest_parser
        src/3rdparty/chromium/third_party/mach_override/*
        src/3rdparty/chromium/third_party/mach_override/libudis86/*
        src/3rdparty/chromium/third_party/markupsafe/*
-       src/3rdparty/chromium/third_party/mesa/src/include/c99/*
-       src/3rdparty/chromium/third_party/mesa/src/src/getopt/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gtest/include/gtest/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gtest/include/gtest/internal/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gtest/src/*
-       + src/3rdparty/chromium/third_party/mesa/src/src/mesa/main/vsnprintf.c
        + src/3rdparty/chromium/third_party/modp_b64/modp_b64.cc
        src/3rdparty/chromium/third_party/mojo/src/mojo/public/third_party/*
        src/3rdparty/chromium/third_party/mojo/src/mojo/public/third_party/jinja2/*
@@ -6543,20 +6858,6 @@ Files: + src/3rdparty/chromium/content/browser/appcache/appcache_manifest_parser
        + src/3rdparty/chromium/third_party/npapi/bindings/npruntime.h
        + src/3rdparty/chromium/third_party/nss/nspr/pr/src/md/windows/w95thred.c
        + src/3rdparty/chromium/third_party/nss/nspr/pr/src/misc/praton.c
-       + src/3rdparty/chromium/third_party/opus/src
-       src/3rdparty/chromium/third_party/opus/src/*
-       src/3rdparty/chromium/third_party/opus/src/celt/*
-       src/3rdparty/chromium/third_party/opus/src/celt/arm/*
-       src/3rdparty/chromium/third_party/opus/src/celt/dump_modes/*
-       src/3rdparty/chromium/third_party/opus/src/celt/x86/*
-       src/3rdparty/chromium/third_party/opus/src/doc/*
-       src/3rdparty/chromium/third_party/opus/src/include/*
-       src/3rdparty/chromium/third_party/opus/src/silk/*
-       src/3rdparty/chromium/third_party/opus/src/silk/arm/*
-       src/3rdparty/chromium/third_party/opus/src/silk/fixed/*
-       src/3rdparty/chromium/third_party/opus/src/silk/float/*
-       src/3rdparty/chromium/third_party/opus/src/src/*
-       src/3rdparty/chromium/third_party/opus/src/win32/*
        src/3rdparty/chromium/third_party/ply/*
        src/3rdparty/chromium/third_party/power_gadget/*
        src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/*
@@ -6595,9 +6896,6 @@ Files: + src/3rdparty/chromium/content/browser/appcache/appcache_manifest_parser
        src/3rdparty/chromium/third_party/snappy/win32/*
        src/3rdparty/chromium/third_party/speex/include/speex/*
        src/3rdparty/chromium/third_party/speex/libspeex/*
-       src/3rdparty/chromium/third_party/stp/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/msvc/*
-       src/3rdparty/chromium/third_party/stp/src/windows/winports/msc99hdr/*
        src/3rdparty/chromium/third_party/tcmalloc/*
        src/3rdparty/chromium/third_party/tcmalloc/chromium/src/*
        -? src/3rdparty/chromium/third_party/tcmalloc/chromium/src/config.h
@@ -6636,212 +6934,6 @@ Files: + src/3rdparty/chromium/content/browser/appcache/appcache_manifest_parser
        src/3rdparty/chromium/third_party/usrsctp/usrsctplib/*
        src/3rdparty/chromium/third_party/usrsctp/usrsctplib/netinet/*
        src/3rdparty/chromium/third_party/usrsctp/usrsctplib/netinet6/*
-       src/3rdparty/chromium/third_party/webrtc/*
-       src/3rdparty/chromium/third_party/webrtc/base/*
-       src/3rdparty/chromium/third_party/webrtc/build/*
-       src/3rdparty/chromium/third_party/webrtc/build/android/*
-       src/3rdparty/chromium/third_party/webrtc/build/sanitizers/*
-       src/3rdparty/chromium/third_party/webrtc/common_audio/*
-       src/3rdparty/chromium/third_party/webrtc/common_audio/include/*
-       src/3rdparty/chromium/third_party/webrtc/common_audio/resampler/*
-       src/3rdparty/chromium/third_party/webrtc/common_audio/resampler/include/*
-       src/3rdparty/chromium/third_party/webrtc/common_audio/signal_processing/*
-       src/3rdparty/chromium/third_party/webrtc/common_audio/signal_processing/include/*
-       src/3rdparty/chromium/third_party/webrtc/common_audio/vad/*
-       src/3rdparty/chromium/third_party/webrtc/common_audio/vad/include/*
-       src/3rdparty/chromium/third_party/webrtc/common_audio/vad/mock/*
-       src/3rdparty/chromium/third_party/webrtc/common_video/*
-       src/3rdparty/chromium/third_party/webrtc/common_video/interface/*
-       src/3rdparty/chromium/third_party/webrtc/common_video/libyuv/*
-       src/3rdparty/chromium/third_party/webrtc/common_video/libyuv/include/*
-       src/3rdparty/chromium/third_party/webrtc/examples/android/media_demo/jni/*
-       src/3rdparty/chromium/third_party/webrtc/libjingle/xmllite/*
-       src/3rdparty/chromium/third_party/webrtc/libjingle/xmpp/*
-       src/3rdparty/chromium/third_party/webrtc/modules/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/cng/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/cng/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/g711/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/g711/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/g711/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/g722/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/g722/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/g722/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/ilbc/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/ilbc/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/ilbc/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/fix/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/fix/source/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/fix/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/main/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/main/source/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/main/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/main/test/ReleaseTest-API/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/main/test/SwitchingSampRate/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/main/util/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/opus/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/opus/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/pcm16b/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/pcm16b/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/red/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/tools/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/main/acm2/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/main/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/main/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/neteq/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/neteq/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/neteq/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/neteq/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/neteq/tools/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_conference_mixer/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_conference_mixer/source/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/android/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/dummy/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/ios/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/linux/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/mac/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/main/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/win/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/aec/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/aec/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/aecm/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/aecm/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/agc/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/agc/legacy/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/beamformer/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/intelligibility/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/ns/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/ns/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/test/android/apmtest/jni/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/transient/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/utility/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/vad/*
-       src/3rdparty/chromium/third_party/webrtc/modules/bitrate_controller/*
-       src/3rdparty/chromium/third_party/webrtc/modules/bitrate_controller/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/desktop_capture/*
-       src/3rdparty/chromium/third_party/webrtc/modules/desktop_capture/mac/*
-       src/3rdparty/chromium/third_party/webrtc/modules/desktop_capture/win/*
-       src/3rdparty/chromium/third_party/webrtc/modules/desktop_capture/x11/*
-       src/3rdparty/chromium/third_party/webrtc/modules/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/media_file/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/media_file/source/*
-       src/3rdparty/chromium/third_party/webrtc/modules/pacing/*
-       src/3rdparty/chromium/third_party/webrtc/modules/pacing/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/pacing/include/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/remote_bitrate_estimator/*
-       src/3rdparty/chromium/third_party/webrtc/modules/remote_bitrate_estimator/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/remote_bitrate_estimator/include/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/remote_bitrate_estimator/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/remote_bitrate_estimator/test/estimators/*
-       src/3rdparty/chromium/third_party/webrtc/modules/remote_bitrate_estimator/tools/*
-       src/3rdparty/chromium/third_party/webrtc/modules/rtp_rtcp/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/rtp_rtcp/mocks/*
-       src/3rdparty/chromium/third_party/webrtc/modules/rtp_rtcp/source/*
-       src/3rdparty/chromium/third_party/webrtc/modules/rtp_rtcp/source/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/rtp_rtcp/test/BWEStandAlone/*
-       src/3rdparty/chromium/third_party/webrtc/modules/rtp_rtcp/test/testAPI/*
-       src/3rdparty/chromium/third_party/webrtc/modules/rtp_rtcp/test/testFec/*
-       src/3rdparty/chromium/third_party/webrtc/modules/utility/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/utility/interface/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/utility/source/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/android/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/external/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/include/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/ios/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/linux/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/mac/qtkit/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_capture/windows/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/h264/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/h264/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/i420/main/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/i420/main/source/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/interface/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/test/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/tools/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/vp8/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/vp8/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/vp8/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/vp9/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/codecs/vp9/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/main/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/main/interface/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/main/source/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/main/source/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/main/test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/utility/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/utility/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_coding/utility/include/mock/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_processing/main/interface/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_processing/main/source/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_processing/main/test/unit_test/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_render/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_render/android/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_render/external/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_render/include/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_render/ios/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_render/linux/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_render/mac/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_render/test/testAPI/*
-       src/3rdparty/chromium/third_party/webrtc/modules/video_render/windows/*
-       src/3rdparty/chromium/third_party/webrtc/overrides/webrtc/base/*
-       src/3rdparty/chromium/third_party/webrtc/p2p/base/*
-       src/3rdparty/chromium/third_party/webrtc/p2p/client/*
-       src/3rdparty/chromium/third_party/webrtc/p2p/stunprober/*
-       src/3rdparty/chromium/third_party/webrtc/sound/*
-       src/3rdparty/chromium/third_party/webrtc/system_wrappers/interface/*
-       src/3rdparty/chromium/third_party/webrtc/system_wrappers/source/*
-       src/3rdparty/chromium/third_party/webrtc/system_wrappers/test/TestSort/*
-       src/3rdparty/chromium/third_party/webrtc/test/*
-       src/3rdparty/chromium/third_party/webrtc/test/channel_transport/*
-       src/3rdparty/chromium/third_party/webrtc/test/channel_transport/include/*
-       src/3rdparty/chromium/third_party/webrtc/test/gl/*
-       src/3rdparty/chromium/third_party/webrtc/test/linux/*
-       src/3rdparty/chromium/third_party/webrtc/test/mac/*
-       src/3rdparty/chromium/third_party/webrtc/test/testsupport/*
-       src/3rdparty/chromium/third_party/webrtc/test/testsupport/mac/*
-       src/3rdparty/chromium/third_party/webrtc/test/testsupport/metrics/*
-       src/3rdparty/chromium/third_party/webrtc/test/testsupport/mock/*
-       src/3rdparty/chromium/third_party/webrtc/test/win/*
-       src/3rdparty/chromium/third_party/webrtc/tools/*
-       src/3rdparty/chromium/third_party/webrtc/tools/agc/*
-       src/3rdparty/chromium/third_party/webrtc/tools/barcode_tools/*
-       src/3rdparty/chromium/third_party/webrtc/tools/converter/*
-       src/3rdparty/chromium/third_party/webrtc/tools/e2e_quality/audio/*
-       src/3rdparty/chromium/third_party/webrtc/tools/force_mic_volume_max/*
-       src/3rdparty/chromium/third_party/webrtc/tools/frame_analyzer/*
-       src/3rdparty/chromium/third_party/webrtc/tools/frame_editing/*
-       src/3rdparty/chromium/third_party/webrtc/tools/loopback_test/*
-       src/3rdparty/chromium/third_party/webrtc/tools/psnr_ssim_analyzer/*
-       src/3rdparty/chromium/third_party/webrtc/tools/rtcbot/*
-       src/3rdparty/chromium/third_party/webrtc/tools/rtcbot/bot/*
-       src/3rdparty/chromium/third_party/webrtc/tools/rtcbot/bot/browser/*
-       src/3rdparty/chromium/third_party/webrtc/tools/rtcbot/rtcBotReportVisualizer/*
-       src/3rdparty/chromium/third_party/webrtc/tools/rtcbot/test/*
-       src/3rdparty/chromium/third_party/webrtc/video/*
-       src/3rdparty/chromium/third_party/webrtc/video_engine/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/include/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/mock/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/test/android/android_test/jni/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/test/auto_test/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/test/auto_test/extended/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/test/auto_test/fakes/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/test/auto_test/fixtures/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/test/auto_test/standard/*
-       src/3rdparty/chromium/third_party/webrtc/voice_engine/test/cmd_test/*
        src/3rdparty/chromium/third_party/yasm/source/patched-yasm/*
        -? src/3rdparty/chromium/third_party/yasm/source/patched-yasm/config.h.in
        -? src/3rdparty/chromium/third_party/yasm/source/patched-yasm/x86insns.c
@@ -7968,9 +8060,6 @@ License: BSD-BY-LC-NE
 
 Files: src/3rdparty/chromium/base/third_party/*
        src/3rdparty/chromium/base/third_party/dynamic_annotations/*
-       + src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.c
-       + src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.h
-       + src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa_areamap.h
        + src/3rdparty/chromium/third_party/re2/util/valgrind.h
        src/3rdparty/chromium/third_party/tcmalloc/vendor/src/third_party/*
 Copyright: 2014 The Chromium Authors. All rights reserved.
@@ -8026,9 +8115,6 @@ Files: src/3rdparty/chromium/base/third_party/nspr/*
        + src/3rdparty/chromium/net/third_party/nss/ssl/sslplatf.c
        + src/3rdparty/chromium/net/third_party/nss/ssl/bodge/nssrenam.h
        src/3rdparty/chromium/third_party/isimpledom/*
-       src/3rdparty/chromium/third_party/lcov/bin/*
-       src/3rdparty/chromium/third_party/lcov/example/*
-       src/3rdparty/chromium/third_party/lcov/example/methods/*
        + src/3rdparty/chromium/third_party/libjpeg/jconfig.h
        + src/3rdparty/chromium/third_party/libpng/pngusr.h
        src/3rdparty/chromium/third_party/mozilla/*
@@ -8059,144 +8145,19 @@ License: GPL-2
  GNU General Public License version 2 can be found in
  /usr/share/common-licenses/GPL-2
 
-Files: src/3rdparty/chromium/third_party/devscripts/*
-       src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/*
-       src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avs/*
-       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/*
-       src/3rdparty/chromium/third_party/ffmpeg/libpostproc/*
-       src/3rdparty/chromium/third_party/lcov/contrib/galaxy/*
-       src/3rdparty/chromium/third_party/speech-dispatcher/*
-Copyright: 2014 The Chromium Authors. All rights reserved.
-           2013 Google Inc. All rights reserved.
-License: GPL-2+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License along
- with this program; if not, write to the Free Software Foundation, Inc.,
- 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- .
- On Debian systems, the complete text of the
- GNU General Public License version 2 can be found in
- /usr/share/common-licenses/GPL-2
-
-Files: src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/program/*
-       + src/3rdparty/chromium/third_party/talloc/pytalloc.c
-       + src/3rdparty/chromium/third_party/talloc/pytalloc.h
-       + src/3rdparty/chromium/third_party/talloc/libreplace/getifaddrs.c
-       + src/3rdparty/chromium/third_party/talloc/libreplace/socket.c
-       src/3rdparty/chromium/third_party/talloc/script/*
-Copyright: 2014 The Chromium Authors. All rights reserved.
-           2013 Google Inc. All rights reserved.
-License: GPL-3+
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the
- GNU General Public License version 2 can be found in
- /usr/share/common-licenses/GPL-3
-
-Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/*
-       -? src/3rdparty/chromium/third_party/libexif/sources/libexif/_stdint.h
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/canon/*
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/fuji/*
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/olympus/*
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/pentax/*
-       + src/3rdparty/chromium/third_party/mesa/src/include/GL/wmesa.h
-       + src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/windows/gdi/wgl.c
-       + src/webenginewidgets/api/qwebenginesettings.h
-       src/webenginewidgets/doc/snippets/simple/*
-Copyright: 2014 The Chromium Authors. All rights reserved.
- 2013 Google Inc. All rights reserved.
-License: LGPL-2+
-
-Files: + src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.c
-       + src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.h
-       + src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-mnote-data.c
+Files:
        src/3rdparty/chromium/third_party/libsecret/*
        src/3rdparty/chromium/third_party/libudev/*
-       src/3rdparty/chromium/third_party/libusb/src/*
-       src/3rdparty/chromium/third_party/libusb/src/libusb/*
-       -? src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.c
-       -? src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.h
-       src/3rdparty/chromium/third_party/libusb/src/libusb/os/*
-       -? src/3rdparty/chromium/third_party/libusb/src/libusb/os/poll_posix.h
-       + src/3rdparty/chromium/third_party/libusb/src/msvc/config.h
-       + src/3rdparty/chromium/third_party/libusb/src/msvc/missing.c
-       + src/3rdparty/chromium/third_party/libusb/src/msvc/missing.h
-       + src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/d3d10.idl
-       + src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/d3d10misc.h
-       + src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/dxgi.idl
-       + src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/dxgitype.idl
-       src/3rdparty/chromium/third_party/v4l-utils/lib/include/*
 Copyright: 2014 The Chromium Authors. All rights reserved.
  2013 Google Inc. All rights reserved.
 License: LGPL-2.1+
-
-Files: src/3rdparty/chromium/third_party/talloc/*
-       -? src/3rdparty/chromium/third_party/talloc/config.h.in
-       src/3rdparty/chromium/third_party/talloc/compat/*
-       src/3rdparty/chromium/third_party/talloc/libreplace/*
-       -? src/3rdparty/chromium/third_party/talloc/libreplace/getaddrinfo.c
-       -? src/3rdparty/chromium/third_party/talloc/libreplace/getaddrinfo.h
-       -? src/3rdparty/chromium/third_party/talloc/libreplace/inet_ntop.c
-       -? src/3rdparty/chromium/third_party/talloc/libreplace/inet_pton.c
-       -? src/3rdparty/chromium/third_party/talloc/libreplace/snprintf.c
-       -? src/3rdparty/chromium/third_party/talloc/libreplace/win32_replace.h
-       src/3rdparty/chromium/third_party/talloc/libreplace/system/*
-Copyright: 2014 The Chromium Authors. All rights reserved.
- 2013 Google Inc. All rights reserved.
-License: LGPL-3+
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 3 of the License, or (at your option) any later version.
- .
-  This library is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  Lesser General Public License for more details.
- .
-  You should have received a copy of the GNU Lesser General Public
-  License along with this library; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- .
-  On Debian systems, the complete text of the
-  GNU Lesser General Public License version 3 can be found in
-  /usr/share/common-licenses/LGPL-3
 
 Files: src/3rdparty/chromium/third_party/bintrees/bintrees/*
        ? src/3rdparty/chromium/third_party/blanketjs/src/qunit_adapter.js
        src/3rdparty/chromium/third_party/expat/*
        src/3rdparty/chromium/third_party/expat/files/lib/*
-       src/3rdparty/chromium/third_party/freetype2/src/src/bdf/*
-       src/3rdparty/chromium/third_party/freetype2/src/src/pcf/*
-       -? src/3rdparty/chromium/third_party/freetype2/src/src/pcf/pcferror.h
        src/3rdparty/chromium/third_party/jsoncpp/overrides/include/json/*
        src/3rdparty/chromium/third_party/jsoncpp/overrides/src/lib_json/*
-       src/3rdparty/chromium/third_party/khronos/EGL/*
-       src/3rdparty/chromium/third_party/khronos/GLES2/*
-       src/3rdparty/chromium/third_party/khronos/GLES3/*
-       src/3rdparty/chromium/third_party/khronos/KHR/*
-       src/3rdparty/chromium/third_party/khronos/noninclude/GL/*
        src/3rdparty/chromium/third_party/libXNVCtrl/*
        src/3rdparty/chromium/third_party/libjingle/source/talk/examples/android/third_party/*
        src/3rdparty/chromium/third_party/libva/va/*
@@ -8206,201 +8167,6 @@ Files: src/3rdparty/chromium/third_party/bintrees/bintrees/*
        src/3rdparty/chromium/third_party/libva/va/wayland/*
        src/3rdparty/chromium/third_party/libva/va/x11/*
        + src/3rdparty/chromium/third_party/libxml/src/timsort.h
-       src/3rdparty/chromium/third_party/mesa/*
-       src/3rdparty/chromium/third_party/mesa/src/*
-       src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/*
-       src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glapi/*
-       src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/main/*
-       src/3rdparty/chromium/third_party/mesa/src/include/GL/*
-       src/3rdparty/chromium/third_party/mesa/src/include/GL/internal/*
-       src/3rdparty/chromium/third_party/mesa/src/include/GLES/*
-       + src/3rdparty/chromium/third_party/mesa/src/include/c99/stdbool.h
-       src/3rdparty/chromium/third_party/mesa/src/include/pci_ids/*
-       src/3rdparty/chromium/third_party/mesa/src/scons/*
-       src/3rdparty/chromium/third_party/mesa/src/src/egl/drivers/dri2/*
-       src/3rdparty/chromium/third_party/mesa/src/src/egl/drivers/glx/*
-       src/3rdparty/chromium/third_party/mesa/src/src/egl/main/*
-       src/3rdparty/chromium/third_party/mesa/src/src/egl/wayland/wayland-drm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/egl/wayland/wayland-egl/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/cso_cache/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/draw/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/gallivm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/indices/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/os/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/pipe-loader/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/pipebuffer/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/*
-       -+ src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.c
-       -+ src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa.h
-       -+ src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa_areamap.h
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/rbug/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/rtasm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/target-helpers/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/tgsi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/translate/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/util/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/vl/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/docs/source/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/docs/source/exts/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/galahad/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/i915/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/identity/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/llvmpipe/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/noop/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/nouveau/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/nv30/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/nv50/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/nv50/codegen/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/nvc0/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/nvc0/codegen/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/r300/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/r300/compiler/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/r600/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/radeon/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/radeon/InstPrinter/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/radeon/MCTargetDesc/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/radeon/TargetInfo/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/radeonsi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/rbug/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/softpipe/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/svga/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/svga/include/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/svga/svgadump/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/drivers/trace/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/include/pipe/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/include/state_tracker/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/clover/api/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/clover/core/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/clover/llvm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/clover/tgsi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3d1xshader/include/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3d1xshader/src/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3d1xshader/tools/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3d1xstutil/include/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3d1xstutil/src/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/d3dapi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/dxgi/src/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/dxgid3d10/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/dxgid3d11/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/gd3d10/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/gd3d11/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/gd3d1x/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/gd3d1x/tools/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/gd3dapi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/progs/d3d10app/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/progs/d3d10tri/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/progs/d3d11app/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/progs/d3d11gears/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/progs/d3d11spikysphere/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/progs/d3d11tex/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/progs/d3d11tri/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/progs/data/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/winedlls/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/d3d1x/winedlls/dxgi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/dri/common/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/dri/drm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/dri/sw/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/egl/android/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/egl/common/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/egl/drm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/egl/fbdev/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/egl/gdi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/egl/null/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/egl/wayland/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/egl/x11/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/gbm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/glx/xlib/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/va/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/vdpau/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/vega/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/wgl/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/xa/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/xorg/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/state_trackers/xvmc/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/dri-i915/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/dri-nouveau/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/dri-r300/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/dri-r600/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/dri-radeonsi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/dri-swrast/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/dri-vmwgfx/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/egl-static/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/gbm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/graw-gdi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/graw-null/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/graw-xlib/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/libgl-gdi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/libgl-xlib/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/pipe-loader/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/va-r300/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/va-r600/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/vdpau-nouveau/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/vdpau-r300/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/vdpau-r600/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/vdpau-radeonsi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/xa-vmwgfx/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/xorg-i915/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/xorg-nouveau/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/xorg-r300/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/xorg-r600/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/xorg-radeonsi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/xvmc-nouveau/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/xvmc-r300/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/targets/xvmc-r600/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/tools/trace/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/i915/drm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/i915/sw/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/nouveau/drm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/radeon/drm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/svga/drm/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/sw/android/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/sw/dri/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/sw/fbdev/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/sw/gdi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/sw/null/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/sw/wayland/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/sw/wrapper/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gallium/winsys/sw/xlib/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gbm/backends/dri/*
-       src/3rdparty/chromium/third_party/mesa/src/src/gbm/main/*
-       src/3rdparty/chromium/third_party/mesa/src/src/glsl/*
-       src/3rdparty/chromium/third_party/mesa/src/src/glsl/builtins/tools/*
-       src/3rdparty/chromium/third_party/mesa/src/src/glsl/glcpp/*
-       src/3rdparty/chromium/third_party/mesa/src/src/glx/*
-       src/3rdparty/chromium/third_party/mesa/src/src/glx/apple/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mapi/glapi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mapi/glapi/gen/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mapi/mapi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/common/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/common/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/common/xmlpool/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/i915/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/i965/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/intel/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/nouveau/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/r200/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/r200/server/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/radeon/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/radeon/server/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/dri/swrast/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/osmesa/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/windows/gdi/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/x11/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/main/*
-       -+ src/3rdparty/chromium/third_party/mesa/src/src/mesa/main/vsnprintf.c
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/math/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/program/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/sparc/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/state_tracker/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/swrast/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/swrast_setup/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/tnl/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/tnl_dd/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/vbo/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/x86/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/x86-64/*
-       src/3rdparty/chromium/third_party/mesa/src/src/mesa/x86/rtasm/*
        src/3rdparty/chromium/third_party/mocha/*
        + src/3rdparty/chromium/third_party/pyelftools/elftools/construct
        src/3rdparty/chromium/third_party/pyelftools/elftools/construct/*
@@ -8416,74 +8182,7 @@ Files: src/3rdparty/chromium/third_party/bintrees/bintrees/*
        src/3rdparty/chromium/third_party/simplejson/*
        + src/3rdparty/chromium/third_party/skia/third_party/lua/src/lua.h
        src/3rdparty/chromium/third_party/smhasher/src/*
-       + src/3rdparty/chromium/third_party/stp/src
-       src/3rdparty/chromium/third_party/stp/config/stp/*
-       src/3rdparty/chromium/third_party/stp/src/*
-       src/3rdparty/chromium/third_party/stp/src/bindings/*
-       src/3rdparty/chromium/third_party/stp/src/bindings/python/*
-       src/3rdparty/chromium/third_party/stp/src/bindings/python/stp/*
-       src/3rdparty/chromium/third_party/stp/src/cmake/modules/*
-       src/3rdparty/chromium/third_party/stp/src/examples/simple/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/AST/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/AST/NodeFactory/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/AbsRefineCounterExample/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Globals/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Interface/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Parser/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Printer/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/STPManager/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Sat/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Simplifier/constantBitP/multiplication/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/ToSat/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/ToSat/AIG/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/ToSat/ASTNode/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Util/*
-       src/3rdparty/chromium/third_party/stp/src/include/stp/Util/find_rewrites/*
-       src/3rdparty/chromium/third_party/stp/src/lib/*
-       src/3rdparty/chromium/third_party/stp/src/lib/AST/*
-       src/3rdparty/chromium/third_party/stp/src/lib/AST/NodeFactory/*
-       src/3rdparty/chromium/third_party/stp/src/lib/AST/TestAST/*
-       src/3rdparty/chromium/third_party/stp/src/lib/AbsRefineCounterExample/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Globals/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Interface/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Parser/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Printer/*
-       src/3rdparty/chromium/third_party/stp/src/lib/STPManager/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/MemoryPool/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/cryptominisat2/mtl/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/minisat/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/minisat/core/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/minisat/core_prop/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/minisat/mtl/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/minisat/simp/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Sat/minisat/utils/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Simplifier/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Simplifier/constantBitP/*
-       src/3rdparty/chromium/third_party/stp/src/lib/ToSat/*
-       src/3rdparty/chromium/third_party/stp/src/lib/ToSat/AIG/*
-       src/3rdparty/chromium/third_party/stp/src/lib/ToSat/ASTNode/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Util/*
-       src/3rdparty/chromium/third_party/stp/src/lib/Util/find_rewrites/*
-       src/3rdparty/chromium/third_party/stp/src/lib/extlib-abc/*
-       src/3rdparty/chromium/third_party/stp/src/lib/extlib-abc/aig/aig/*
-       src/3rdparty/chromium/third_party/stp/src/lib/extlib-abc/aig/cnf/*
-       src/3rdparty/chromium/third_party/stp/src/lib/extlib-abc/aig/dar/*
-       src/3rdparty/chromium/third_party/stp/src/lib/extlib-abc/aig/kit/*
-       src/3rdparty/chromium/third_party/stp/src/lib/extlib-constbv/*
-       src/3rdparty/chromium/third_party/stp/src/scripts/*
-       src/3rdparty/chromium/third_party/stp/src/tools/*
-       src/3rdparty/chromium/third_party/stp/src/tools/stp/*
-       src/3rdparty/chromium/third_party/stp/src/tools/stp_simple/*
-       src/3rdparty/chromium/third_party/stp/src/windows/winports/*
-       + src/3rdparty/chromium/third_party/stp/src/windows/winports/msc99hdr/unistd.h
-       src/3rdparty/chromium/third_party/stp/src/windows/winports/sys/*
        src/3rdparty/chromium/third_party/sudden_motion_sensor/*
-       src/3rdparty/chromium/third_party/webrtc/modules/audio_device/mac/portaudio/*
 Copyright: 2014 The Chromium Authors. All rights reserved.
            2013 Google Inc. All rights reserved.
 License: Expat
