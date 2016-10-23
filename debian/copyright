@@ -209,7 +209,7 @@ Copyright: 2003-2004, Jonathan Blandford <jrb@alum.mit.edu>
            2013, The Chromium Authors
 License: Academic-2.0 or LGPL-2+
 
-Files: src/3rdparty/chromium/base/third_party/xdg_user_dirs/xdg_user_dirs/*
+Files: src/3rdparty/chromium/base/third_party/xdg_user_dirs/*
 Copyright: 2007, Red Hat, inc
            2013, The Chromium Authors
 License: Expat
@@ -391,10 +391,6 @@ Files: src/3rdparty/chromium/third_party/angle/src/third_party/systeminfo/*
 Copyright: 2009, Apple Inc
 License: BSD-2-clause
 
-Files: src/3rdparty/chromium/third_party/angle/src/third_party/systeminfo/trace_event.h
-Copyright: 2013, The Chromium Authors
-License: BSD-3-clause
-
 Files: src/3rdparty/chromium/third_party/apple_apsl/*
 Copyright: 1999-2004, Apple Computer, Inc
            1998-2011, Apple Inc
@@ -408,10 +404,6 @@ License: BSD-3-clause
 Files: src/3rdparty/chromium/third_party/appurify-python/*
 Copyright: 2014, Appurify
 License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/ashmem.gyp
-Copyright: 2011, The Chromium Authors
-License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/bidichecker/*
 Copyright: Copyright 2009 Google Inc
@@ -2239,7 +2231,6 @@ Copyright: 2013-2015, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/isimpledom/*
-       LICENSE
 Copyright: 1998-2002, Netscape Communications Corporation
 License: GPL-2+ or LGPL-2.1+ or MPL-1.1
 
@@ -7859,6 +7850,19 @@ License: GPL-2+_AutoConfException
  .
  The complete text of the GNU General Public License version 2 can be found in
  `/usr/share/common-licenses/GPL-2'
+
+License: GPL-3+
+ FFmpeg is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License.
+ .
+ FFmpeg is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ The complete text of the GNU General Public License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3'
 
 License: GPL-3+
  FFmpeg is free software; you can redistribute it and/or modify
