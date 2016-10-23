@@ -149,6 +149,7 @@ Description: Web content engine library for Qt - debugging symbols
 
 Package: qtwebengine5-doc
 Architecture: all
+Multi-Arch: foreign
 Section: doc
 Priority: extra
 Depends: ${misc:Depends}
@@ -160,6 +161,7 @@ Description: Qt 5 webengine documentation
 
 Package: qtwebengine5-doc-html
 Architecture: all
+Multi-Arch: foreign
 Section: doc
 Priority: extra
 Depends: ${misc:Depends}
