@@ -95,8 +95,8 @@ override_dh_auto_install-arch:
 	-exec sed -i -e 's/$(DEB_HOST_MULTIARCH)\/$(DEB_HOST_MULTIARCH)/$(DEB_HOST_MULTIARCH)/g' {} \;
 	
 	# Remove private headers
-	rm -rfv debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/qt5/QtWebEngine/*/QtQtWebEngine
-	rm -rfv debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/qt5/QtWebEngineCore/*/QtQtWebEngineCore
+	rm -rfv debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/qt5/QtWebEngine/*/QtWebEngine
+	rm -rfv debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/qt5/QtWebEngineCore/*/QtWebEngineCore
 	rm -rfv debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/qt5/QtWebEngineWidgets/*/QtWebEngineWidgets
 	# And associated files
 	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/mkspecs/modules/qt_lib_webengine_private.pri
