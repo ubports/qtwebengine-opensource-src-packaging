@@ -161,18 +161,6 @@ Description: Qt WebEngine - Examples
  .
  This package contains the WebEngine examples.
 
-Package: libqt5webengine5-dbg
-Architecture: amd64 i386 powerpc s390x
-Multi-Arch: same
-Section: debug
-Priority: extra
-Depends: libqt5webengine5 (= ${binary:Version}), ${misc:Depends}
-Description: Web content engine library for Qt - debugging symbols
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the debugging symbols for the Qt WebEngine library.
-
 Package: qtwebengine5-doc
 Architecture: all
 Multi-Arch: foreign
