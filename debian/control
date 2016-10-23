@@ -161,7 +161,7 @@ Description: Qt WebEngine - Examples
  .
  This package contains the WebEngine examples.
 
-Package: qtwebengine5-doc
+Package: qt5webengine-doc
 Architecture: all
 Multi-Arch: foreign
 Section: doc
@@ -173,7 +173,7 @@ Description: Qt 5 webengine documentation
  .
  This package contains the documentation for the Qt 5 webengine libraries.
 
-Package: qtwebengine5-doc-html
+Package: qt5webengine-doc-html
 Architecture: all
 Multi-Arch: foreign
 Section: doc
