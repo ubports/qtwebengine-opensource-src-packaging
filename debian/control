@@ -100,7 +100,33 @@ Description: Web content engine library for Qt
  QtWebEngine provides a Web browser engine that makes it easy to embed content
  from the World Wide Web into your Qt application.
  .
- This package contains the QtWebEngine libraries.
+ This package contains the QtWebEngine library.
+
+Package: libqt5webenginecore5
+Architecture: any
+Multi-Arch: same
+Depends: libqt5webengine-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Web content engine library for Qt
+ QtWebEngine provides a Web browser engine that makes it easy to embed content
+ from the World Wide Web into your Qt application.
+ .
+ This package contains the core QtWebEngine library.
+
+Package: libqt5webenginewidgets5
+Architecture: any
+Multi-Arch: same
+Depends: libqt5webengine-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Web content engine library for Qt
+ QtWebEngine provides a Web browser engine that makes it easy to embed content
+ from the World Wide Web into your Qt application.
+ .
+ This package contains the widget QtWebEngine library.
 
 Package: libqt5webengine-data
 Architecture: all

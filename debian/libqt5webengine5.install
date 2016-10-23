@@ -1,4 +1,2 @@
 usr/lib/*/libQt5WebEngine.so.5*
-usr/lib/*/libQt5WebEngineCore.so.5*
-usr/lib/*/libQt5WebEngineWidgets.so.5*
 usr/lib/*/qt5/libexec/QtWebEngineProcess
