@@ -46,7 +46,7 @@ defines+=use_system_expat=1 \
 replace_gyp_args = $(foreach define,$(defines),-D$(define))
 
 %:
-	dh $@ --parallel --dbg-package=libqt5webengine5-dbg --with pkgkde_symbolshelper
+	dh $@ --parallel --with pkgkde_symbolshelper
 
 override_dh_auto_clean:
 	dh_auto_clean
