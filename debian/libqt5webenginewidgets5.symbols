@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.6.1 amd64
+# SymbolsHelper-Confirmed: 5.7.1 amd64
 libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  Qt_5.0@Qt_5.0 5.6.1
  Qt_5.1@Qt_5.1 5.6.1
@@ -9,9 +9,12 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  Qt_5.6@Qt_5.6 5.6.1
  Qt_5@Qt_5 5.6.1
  Qt_5_PRIVATE_API@Qt_5_PRIVATE_API 5.6.1
+ _ZN14QWebEnginePage10printToPdfERK18QWebEngineCallbackIRK10QByteArrayERK11QPageLayout@Qt_5 5.7.1
+ _ZN14QWebEnginePage10printToPdfERK7QStringRK11QPageLayout@Qt_5 5.7.1
  _ZN14QWebEnginePage10setContentERK10QByteArrayRK7QStringRK4QUrl@Qt_5 5.6.1
  _ZN14QWebEnginePage10urlChangedERK4QUrl@Qt_5 5.6.1
  _ZN14QWebEnginePage11chooseFilesENS_17FileSelectionModeERK11QStringListS3_@Qt_5 5.6.1
+ _ZN14QWebEnginePage11iconChangedERK5QIcon@Qt_5 5.7.1
  _ZN14QWebEnginePage11linkHoveredERK7QString@Qt_5 5.6.1
  _ZN14QWebEnginePage11loadStartedEv@Qt_5 5.6.1
  _ZN14QWebEnginePage11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.6.1
@@ -22,7 +25,11 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEnginePage12titleChangedERK7QString@Qt_5 5.6.1
  _ZN14QWebEnginePage13runJavaScriptERK7QString@Qt_5 5.6.1
  _ZN14QWebEnginePage13runJavaScriptERK7QStringRK18QWebEngineCallbackIRK8QVariantE@Qt_5 5.6.1
+ _ZN14QWebEnginePage13runJavaScriptERK7QStringj@Qt_5 5.7.1
+ _ZN14QWebEnginePage13runJavaScriptERK7QStringjRK18QWebEngineCallbackIRK8QVariantE@Qt_5 5.7.1
+ _ZN14QWebEnginePage13setAudioMutedEb@Qt_5 5.7.1
  _ZN14QWebEnginePage13setWebChannelEP11QWebChannel@Qt_5 5.6.1
+ _ZN14QWebEnginePage13setWebChannelEP11QWebChannelj@Qt_5 5.7.1
  _ZN14QWebEnginePage13setZoomFactorEd@Qt_5 5.6.1
  _ZN14QWebEnginePage13triggerActionENS_9WebActionEb@Qt_5 5.6.1
  _ZN14QWebEnginePage14iconUrlChangedERK4QUrl@Qt_5 5.6.1
@@ -31,12 +38,16 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEnginePage16javaScriptPromptERK4QUrlRK7QStringS5_PS3_@Qt_5 5.6.1
  _ZN14QWebEnginePage16selectionChangedEv@Qt_5 5.6.1
  _ZN14QWebEnginePage16staticMetaObjectE@Qt_5 5.6.1
+ _ZN14QWebEnginePage17audioMutedChangedEb@Qt_5 5.7.1
  _ZN14QWebEnginePage17javaScriptConfirmERK4QUrlRK7QString@Qt_5 5.6.1
  _ZN14QWebEnginePage18setBackgroundColorERK6QColor@Qt_5 5.6.1
+ _ZN14QWebEnginePage19contentsSizeChangedERK6QSizeF@Qt_5 5.7.1
  _ZN14QWebEnginePage19fullScreenRequestedE27QWebEngineFullScreenRequest@Qt_5 5.6.1
  _ZN14QWebEnginePage20setFeaturePermissionERK4QUrlNS_7FeatureENS_16PermissionPolicyE@Qt_5 5.6.1
  _ZN14QWebEnginePage20windowCloseRequestedEv@Qt_5 5.6.1
+ _ZN14QWebEnginePage21scrollPositionChangedERK7QPointF@Qt_5 5.7.1
  _ZN14QWebEnginePage22authenticationRequiredERK4QUrlP14QAuthenticator@Qt_5 5.6.1
+ _ZN14QWebEnginePage22recentlyAudibleChangedEb@Qt_5 5.7.1
  _ZN14QWebEnginePage23acceptNavigationRequestERK4QUrlNS_14NavigationTypeEb@Qt_5 5.6.1
  _ZN14QWebEnginePage23geometryChangeRequestedERK5QRect@Qt_5 5.6.1
  _ZN14QWebEnginePage23renderProcessTerminatedENS_30RenderProcessTerminationStatusEi@Qt_5 5.6.1
@@ -61,6 +72,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEnginePageD2Ev@Qt_5 5.6.1
  _ZN14QWebEngineView10setContentERK10QByteArrayRK7QStringRK4QUrl@Qt_5 5.6.1
  _ZN14QWebEngineView10urlChangedERK4QUrl@Qt_5 5.6.1
+ _ZN14QWebEngineView11iconChangedERK5QIcon@Qt_5 5.7.1
  _ZN14QWebEngineView11loadStartedEv@Qt_5 5.6.1
  _ZN14QWebEngineView11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.6.1
  _ZN14QWebEngineView11qt_metacastEPKc@Qt_5 5.6.1
@@ -68,7 +80,10 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEngineView12loadFinishedEb@Qt_5 5.6.1
  _ZN14QWebEngineView12loadProgressEi@Qt_5 5.6.1
  _ZN14QWebEngineView12titleChangedERK7QString@Qt_5 5.6.1
+ _ZN14QWebEngineView13dragMoveEventEP14QDragMoveEvent@Qt_5 5.7.1
  _ZN14QWebEngineView13setZoomFactorEd@Qt_5 5.6.1
+ _ZN14QWebEngineView14dragEnterEventEP15QDragEnterEvent@Qt_5 5.7.1
+ _ZN14QWebEngineView14dragLeaveEventEP15QDragLeaveEvent@Qt_5 5.7.1
  _ZN14QWebEngineView14iconUrlChangedERK4QUrl@Qt_5 5.6.1
  _ZN14QWebEngineView16contextMenuEventEP17QContextMenuEvent@Qt_5 5.6.1
  _ZN14QWebEngineView16selectionChangedEv@Qt_5 5.6.1
@@ -85,6 +100,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEngineView7setHtmlERK7QStringRK4QUrl@Qt_5 5.6.1
  _ZN14QWebEngineView7setPageEP14QWebEnginePage@Qt_5 5.6.1
  _ZN14QWebEngineView8findTextERK7QString6QFlagsIN14QWebEnginePage8FindFlagEERK18QWebEngineCallbackIbE@Qt_5 5.6.1
+ _ZN14QWebEngineView9dropEventEP10QDropEvent@Qt_5 5.7.1
  _ZN14QWebEngineView9hideEventEP10QHideEvent@Qt_5 5.6.1
  _ZN14QWebEngineView9showEventEP10QShowEvent@Qt_5 5.6.1
  _ZN14QWebEngineViewC1EP7QWidget@Qt_5 5.6.1
@@ -118,6 +134,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN17QWebEngineProfile11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.6.1
  _ZN17QWebEngineProfile11qt_metacastEPKc@Qt_5 5.6.1
  _ZN17QWebEngineProfile12setCachePathERK7QString@Qt_5 5.6.1
+ _ZN17QWebEngineProfile14clearHttpCacheEv@Qt_5 5.7.1
  _ZN17QWebEngineProfile14defaultProfileEv@Qt_5 5.6.1
  _ZN17QWebEngineProfile15removeUrlSchemeERK10QByteArray@Qt_5 5.6.1
  _ZN17QWebEngineProfile16setHttpCacheTypeENS_13HttpCacheTypeE@Qt_5 5.6.1
@@ -169,6 +186,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN22QWebEngineDownloadItem12stateChangedENS_13DownloadStateE@Qt_5 5.6.1
  _ZN22QWebEngineDownloadItem16downloadProgressExx@Qt_5 5.6.1
  _ZN22QWebEngineDownloadItem16staticMetaObjectE@Qt_5 5.6.1
+ _ZN22QWebEngineDownloadItem17setSavePageFormatENS_14SavePageFormatE@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItem6acceptEv@Qt_5 5.6.1
  _ZN22QWebEngineDownloadItem6cancelEv@Qt_5 5.6.1
  _ZN22QWebEngineDownloadItem7setPathE7QString@Qt_5 5.6.1
@@ -178,6 +196,15 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN22QWebEngineDownloadItemD0Ev@Qt_5 5.6.1
  _ZN22QWebEngineDownloadItemD1Ev@Qt_5 5.6.1
  _ZN22QWebEngineDownloadItemD2Ev@Qt_5 5.6.1
+ _ZN25QWebEngineContextMenuData5resetEv@Qt_5 5.7.1
+ _ZN25QWebEngineContextMenuDataC1ERKS_@Qt_5 5.7.1
+ _ZN25QWebEngineContextMenuDataC1Ev@Qt_5 5.7.1
+ _ZN25QWebEngineContextMenuDataC2ERKS_@Qt_5 5.7.1
+ _ZN25QWebEngineContextMenuDataC2Ev@Qt_5 5.7.1
+ _ZN25QWebEngineContextMenuDataD1Ev@Qt_5 5.7.1
+ _ZN25QWebEngineContextMenuDataD2Ev@Qt_5 5.7.1
+ _ZN25QWebEngineContextMenuDataaSERKN15QtWebEngineCore24WebEngineContextMenuDataE@Qt_5 5.7.1
+ _ZN25QWebEngineContextMenuDataaSERKS_@Qt_5 5.7.1
  _ZN26QWebEngineCertificateErrorC1Ei4QUrlb7QString@Qt_5 5.6.1
  _ZN26QWebEngineCertificateErrorC2Ei4QUrlb7QString@Qt_5 5.6.1
  _ZN26QWebEngineCertificateErrorD1Ev@Qt_5 5.6.1
@@ -199,11 +226,17 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK14QWebEnginePage10webChannelEv@Qt_5 5.6.1
  _ZNK14QWebEnginePage10zoomFactorEv@Qt_5 5.6.1
  _ZNK14QWebEnginePage11toPlainTextERK18QWebEngineCallbackIRK7QStringE@Qt_5 5.6.1
+ _ZNK14QWebEnginePage12contentsSizeEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage12hasSelectionEv@Qt_5 5.6.1
+ _ZNK14QWebEnginePage12isAudioMutedEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage12requestedUrlEv@Qt_5 5.6.1
  _ZNK14QWebEnginePage12selectedTextEv@Qt_5 5.6.1
+ _ZNK14QWebEnginePage14scrollPositionEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage15backgroundColorEv@Qt_5 5.6.1
+ _ZNK14QWebEnginePage15contextMenuDataEv@Qt_5 5.7.1
+ _ZNK14QWebEnginePage15recentlyAudibleEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage3urlEv@Qt_5 5.6.1
+ _ZNK14QWebEnginePage4iconEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage4viewEv@Qt_5 5.6.1
  _ZNK14QWebEnginePage5titleEv@Qt_5 5.6.1
  _ZNK14QWebEnginePage6actionENS_9WebActionE@Qt_5 5.6.1
@@ -218,6 +251,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK14QWebEngineView12hasSelectionEv@Qt_5 5.6.1
  _ZNK14QWebEngineView12selectedTextEv@Qt_5 5.6.1
  _ZNK14QWebEngineView3urlEv@Qt_5 5.6.1
+ _ZNK14QWebEngineView4iconEv@Qt_5 5.7.1
  _ZNK14QWebEngineView4pageEv@Qt_5 5.6.1
  _ZNK14QWebEngineView5titleEv@Qt_5 5.6.1
  _ZNK14QWebEngineView7historyEv@Qt_5 5.6.1
@@ -270,11 +304,20 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK22QWebEngineDownloadItem10metaObjectEv@Qt_5 5.6.1
  _ZNK22QWebEngineDownloadItem10totalBytesEv@Qt_5 5.6.1
  _ZNK22QWebEngineDownloadItem13receivedBytesEv@Qt_5 5.6.1
+ _ZNK22QWebEngineDownloadItem14savePageFormatEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem2idEv@Qt_5 5.6.1
  _ZNK22QWebEngineDownloadItem3urlEv@Qt_5 5.6.1
  _ZNK22QWebEngineDownloadItem4pathEv@Qt_5 5.6.1
  _ZNK22QWebEngineDownloadItem5stateEv@Qt_5 5.6.1
  _ZNK22QWebEngineDownloadItem8mimeTypeEv@Qt_5 5.6.1
+ _ZNK25QWebEngineContextMenuData12selectedTextEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData17isContentEditableEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData7isValidEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData7linkUrlEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData8linkTextEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData8mediaUrlEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData8positionEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData9mediaTypeEv@Qt_5 5.7.1
  _ZNK26QWebEngineCertificateError13isOverridableEv@Qt_5 5.6.1
  _ZNK26QWebEngineCertificateError16errorDescriptionEv@Qt_5 5.6.1
  _ZNK26QWebEngineCertificateError3urlEv@Qt_5 5.6.1
