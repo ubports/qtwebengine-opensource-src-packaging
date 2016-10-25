@@ -27,7 +27,6 @@ defines+=use_system_expat=1 \
          use_system_libjpeg=1 \
          use_system_libpng=1 \
          use_system_libusb=1 \
-         use_system_libvpx=1 \
          use_system_libwebp=1 \
          use_system_libxml=1 \
          use_system_libxslt=1 \
@@ -38,10 +37,11 @@ defines+=use_system_expat=1 \
          use_system_v8 \
          use_system_xdg_utils=1 \
          use_system_yasm=1 \
-         use_system_zlib=1
-         # The embedded sqlite version is chromium specificly patched
+         use_system_zlib=1 \
+         use_system_protobuf
+         # use_system_libxnvctrl=1 \
          # use_system_sqlite=1 \
-         # use_system_protobuf=1 \
+         # use_system_libvpx=1 \
 
 replace_gyp_args = $(foreach define,$(defines),-D$(define))
 
