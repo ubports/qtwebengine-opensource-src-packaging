@@ -45,7 +45,7 @@ Files: examples/webenginewidgets/markdowneditor/resources/markdown.css
        examples/webenginewidgets/markdowneditor/resources/marked.min.js
 Copyright: 2011-2014, Christopher Jeffrey.
            Twitter Inc
-License: MIT
+License: MIT/X11
 
 Files: examples/webenginewidgets/contentmanipulation/jquery.min.js
 Copyright: 2009, John Resig
@@ -73,7 +73,7 @@ Files: src/core/access_token_store_qt.cpp
        src/core/web_contents_delegate_qt.cpp
 Copyright: 2011-2013, The Chromium Authors
            2015, The Qt Company Ltd
-License: BSD or GPL-2 or LGPL-2.0+
+License: BSD or GPL-2 or LGPL-2+
 
 Files: src/core/common/qt_messages.*
        src/core/resources/grit_action.gypi
@@ -85,7 +85,7 @@ License: BSD-3-clause
 Files: src/core/web_event_factory.cpp
 Copyright: 2006, Nikolas Zimmermann <zimmermann@kde.org>
            2015, The Qt Company Ltd
-License: BSD-2-clause or GPL-2 or LGPL-2.0+
+License: BSD-2-clause or GPL-2 or LGPL-2+
 
 Files: src/webenginewidgets/api/qwebenginesettings.h
        src/webenginewidgets/doc/snippets/simple/main.cpp
@@ -1883,12 +1883,14 @@ Copyright: 2007-2013, IOLA and Ole Laursen
 License: Expat
 Comment:
  FIXME: only minified versions are present
+ Excluded in dfsg version
 
 Files: src/3rdparty/chromium/third_party/flot/jquery.flot.resize.min.js
 Copyright: 2010, "Cowboy" Ben Alman
            2007-2013, IOLA and Ole Laursen
 License: Expat or GPL
  FIXME: only minified versions are present
+ Excluded in dfsg version
 
 Files: src/3rdparty/chromium/third_party/fontconfig/*
 Copyright: 2011, Akira TAGOH
@@ -1927,6 +1929,7 @@ License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/fontconfig/src/config/config.guess
        src/3rdparty/chromium/third_party/fontconfig/src/config/config.sub
+Copyright: 1992-2005, Free Software Foundation, Inc.
 License: GPL-2+_AutoConfException
 
 Files: src/3rdparty/chromium/third_party/fontconfig/src/src/fcfreetype.c
@@ -2295,10 +2298,6 @@ Comment: Only the jar file is in the source tree. Removed in the dfsg version.
  .
  A full version can be found in http://autobahn.ws/android/ .
 
-Files: src/3rdparty/chromium/third_party/libjingle/source/talk/examples/objc/AppRTCDemo/third_party/SocketRocket/*
-Copyright: 2012, Square Inc
-License: Apache-2.0
-
 Files: src/3rdparty/chromium/third_party/libjpeg/*
 Copyright: 1998, Netscape Communications Corporation
            1991-1998, Thomas G. Lane
@@ -2328,6 +2327,8 @@ Copyright: 1988-1989, Jef Poskanzer
 License: MIT/X11
 
 Files: src/3rdparty/chromium/third_party/libjpeg/jconfig.h
+Copyright: Netscape Communications Corporation.
+           Mozilla Foundation
 License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/libpng/*
@@ -2345,6 +2346,9 @@ Copyright: 2012, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/libpng/pngusr.h
+Copyright: Mozilla Foundation
+           Tim Rowley <tor@cs.brown.edu>
+           Apple Computer
 License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/libsecret/*
@@ -2396,6 +2400,7 @@ License: ISC
 
 Files: src/3rdparty/chromium/third_party/libvpx_new/source/libvpx/md5_utils.c
        src/3rdparty/chromium/third_party/libvpx_new/source/libvpx/md5_utils.h
+Copyright: no copyright claimed
 License: public-domain
 
 Files: src/3rdparty/chromium/third_party/libxml/*
@@ -2563,6 +2568,9 @@ Copyright: 2011, TJ Holowaychuk <tj@vision-media.ca>
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/mozilla/*
+Copyright: Mozilla Foundation
+           Simon Fraser <smfr@smfr.org>
+           Josh Aas <josh@mozilla.com>
 License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/mozilla/MozillaExport.h
@@ -2576,6 +2584,7 @@ Copyright: 2009, Apple Inc
 License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/npapi/bindings/*
+Copyright: 2006-2009 The Chromium Authors.
 License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/opus/src/*
@@ -2616,6 +2625,7 @@ Copyright: 2011, Free Software Foundation, Inc
 License: FSF_unlimited or GPL-2+_LibToolException
 
 Files: src/3rdparty/chromium/third_party/opus/src/ltmain.sh
+iCopyright: 1996, Gordon Matzigkeit
 License: GPL-2+_LibToolException
 
 Files: src/3rdparty/chromium/third_party/protobuf/python/mox.py
@@ -2629,9 +2639,12 @@ Files: src/3rdparty/chromium/third_party/pyelftools/elftools/common/*
        src/3rdparty/chromium/third_party/pyelftools/examples/*
        src/3rdparty/chromium/third_party/pyelftools/scripts/readelf.py
        src/3rdparty/chromium/third_party/pyelftools/setup.py
+Copyright: no copyright claimed
 License: public-domain
 
 Files: src/3rdparty/chromium/third_party/pyelftools/elftools/construct/*
+Copyright: 2009 Tomer Filiba
+           2010-2011 Corbin Simpson
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/qcms/src/*
@@ -2664,6 +2677,7 @@ Files: src/3rdparty/chromium/third_party/smhasher/src/MurmurHash1.*
        src/3rdparty/chromium/third_party/smhasher/src/MurmurHash2.*
        src/3rdparty/chromium/third_party/smhasher/src/MurmurHash3.*
        src/3rdparty/chromium/third_party/smhasher/src/sha1.h
+Copyright: no copyright claimed
 License: public-domain
 
 Files: src/3rdparty/chromium/third_party/smhasher/src/crc.cpp
@@ -2730,6 +2744,7 @@ Copyright: 1996-2008, Free Software Foundation, Inc
 License: GPL-2+_LibToolException
 
 Files: src/3rdparty/chromium/third_party/tcmalloc/vendor/m4/acx_pthread.m4
+Copyright: 2006, Steven G. Johnson
 License: GPL_AutoConfException
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayValue.cpp
@@ -6351,9 +6366,11 @@ Copyright: 2007, Alexey Proskuryakov <ap@webkit.org>
 License: MIT/X11
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/platform/CheckedInt.h
+Copyright: Mozilla Foundation
 License: MPL-2.0
 
 Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/jquery.isonscreen.js
+Copyright: 2010, Laurence Wheway
 License: Expat or GPL
 
 Files: src/3rdparty/chromium/third_party/webrtc/modules/audio_device/mac/portaudio/pa_memorybarrier.h
@@ -6369,6 +6386,7 @@ License: BSL-1.0
 
 Files: src/3rdparty/chromium/third_party/webrtc/base/md5.cc
        src/3rdparty/chromium/third_party/webrtc/base/md5.h
+Copyright: Copyright is being disclaimed
 License: public-domain
 
 Files: src/3rdparty/chromium/third_party/webrtc/LICENSE_THIRD_PARTY
@@ -6384,6 +6402,7 @@ Copyright: 2010, The Android Open Source Project
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/main/source/fft.c
+Copyright: 1968, Stanford Research Institute
 License: ISC-like-dmgfp
 
 Files: src/3rdparty/chromium/third_party/xdg-utils/*
@@ -6430,6 +6449,7 @@ Copyright: 2011-2013, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/zlib/mozzconf.h
+Copyright: 2004, IBM Corporation
 License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/ppapi/*
@@ -6599,7 +6619,7 @@ Files: tests/auto/quick/qmltests/mock-delegates/QtWebEngine/UIDelegates/AlertDia
        tests/auto/widgets/qwebenginedefaultsurfaceformat/tst_qwebenginedefaultsurfaceformat.cpp
        tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp
 Copyright: 2015-2016, The Qt Company Ltd
-License: GPL-2 or LGPL-2.0+ with Qt-1.1 exception
+License: GPL-2 or LGPL-2+ with Qt-1.1 exception
 
 Files: tests/auto/quick/qmltests/data/tst_javaScriptDialogs.qml
 Copyright: 2015, Digia Plc and/or its subsidiary(-ies)
@@ -6624,7 +6644,7 @@ Files: tools/qmake/config.tests/khr/khr.cpp
        tools/qmake/config.tests/snappy/snappy.cpp
        tools/qmake/config.tests/srtp/srtp.cpp
 Copyright: 2015, The Qt Company Ltd
-License: GPL-2 or LGPL-2.0+ with Qt-1.1 exception
+License: GPL-2 or LGPL-2+ with Qt-1.1 exception
 
 License: Academic-2.0
  --------------------------------------------------------------------------------
@@ -7232,18 +7252,18 @@ License: CRYPTOGAMS
  modification, are permitted provided that the following conditions
  are met:
  .
-       *	Redistributions of source code must retain copyright notices,
- 	this list of conditions and the following disclaimer.
+      * Redistributions of source code must retain copyright notices,
+        this list of conditions and the following disclaimer.
  .
-       *	Redistributions in binary form must reproduce the above
- 	copyright notice, this list of conditions and the following
- 	disclaimer in the documentation and/or other materials
- 	provided with the distribution.
+      * Redistributions in binary form must reproduce the above
+        copyright notice, this list of conditions and the following
+        disclaimer in the documentation and/or other materials
+        provided with the distribution.
  .
-       *	Neither the name of the CRYPTOGAMS nor the names of its
- 	copyright holder and contributors may be used to endorse or
- 	promote products derived from this software without specific
- 	prior written permission.
+      * Neither the name of the CRYPTOGAMS nor the names of its
+        copyright holder and contributors may be used to endorse or
+        promote products derived from this software without specific
+        prior written permission.
  .
  ALTERNATIVELY, provided that this notice is retained in full, this
  product may be distributed under the terms of the GNU General Public
@@ -7451,8 +7471,6 @@ License: FTL
     Werner Lemberg    <werner.lemberg@freetype.org>
 
 License: GPL
- License: GPL
- .
  The complete text of the GNU General Public License can be found in
  `/usr/share/common-licenses/GPL'
 
@@ -7514,7 +7532,7 @@ License: GPL-2+_AutoConfException
  The complete text of the GNU General Public License version 2 can be found in
  `/usr/share/common-licenses/GPL-2'
 
-License: GPL-3+
+License: GPL-3
  FFmpeg is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 3 of the License.
@@ -7584,6 +7602,25 @@ License: ISC
  OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+License: LGPL-2
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the
+ GNU Library General Public License version 2 can be found in
+ /usr/share/common-licenses/LGPL-2
+
 License: LGPL-2+
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Library General Public
@@ -7602,6 +7639,20 @@ License: LGPL-2+
  On Debian systems, the complete text of the
  GNU Library General Public License version 2 can be found in
  /usr/share/common-licenses/LGPL-2
+
+License: LGPL-2.1
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ The complete text of the GNU Lesser General Public License version 2.1 can be
+ found in `/usr/share/common-licenses/LGPL-2.1'
 
 License: LGPL-2.1+
  This library is free software; you can redistribute it and/or
@@ -7722,6 +7773,10 @@ License: OpenSSL
  STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: public-domain
+ The file are hereby placed in the public domain.
+ The author hereby disclaims copyright to this source code.
 
 License: SSLeay
  This package is an SSL implementation written
