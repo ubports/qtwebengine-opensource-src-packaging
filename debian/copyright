@@ -6,13 +6,14 @@ Files-Excluded: src/3rdparty/chromium/third_party/apple_apsl/*
                 src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cctools/*
                 src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cf/*
                 src/3rdparty/chromium/third_party/flot/*
+                src/3rdparty/chromium/third_party/bspatch/LICENSE
 
 Files: *
 Copyright: 2015-2016, The Qt Company Ltd.
            2012, The Chromium Authors. All rights reserved.
            2013, BlackBerry Limited
            2015, Digia Plc and/or its subsidiary(-ies)
-License: LGPL-2+ or GPL-2 with Qt-1.1 exception
+License: LGPL-2+_Qt-1.1Exception or GPL-2_Qt-1.1Exception
 
 Files: debian/*
 Copyright: 2016 Scarlett Clark <sgclark@kubuntu.org>
@@ -39,7 +40,7 @@ License: BSD-3-clause
 
 Files: examples/webenginewidgets/cookiebrowser/*
 Copyright: 2016, The Qt Company Ltd
-License: GPL-3 or LGPL-2.1 with Qt-1.1 exception
+License: GPL-3_Qt-1.1Exception or LGPL-2.1_Qt-1.1Exception
 
 Files: examples/webenginewidgets/markdowneditor/resources/markdown.css
        examples/webenginewidgets/markdowneditor/resources/marked.min.js
@@ -73,7 +74,7 @@ Files: src/core/access_token_store_qt.cpp
        src/core/web_contents_delegate_qt.cpp
 Copyright: 2011-2013, The Chromium Authors
            2015, The Qt Company Ltd
-License: BSD or GPL-2 or LGPL-2+
+License: BSD-3-clause or GPL-2 or LGPL-2+
 
 Files: src/core/common/qt_messages.*
        src/core/resources/grit_action.gypi
@@ -103,7 +104,7 @@ License: BSD-3-clause
 
 Files: src/webenginewidgets/doc/snippets/qtwebengine_qwebenginepage_snippet.cpp
 Copyright: 2015, The Qt Company Ltd
-License: FDL-1.3 with Qt1.1 exception
+License: GFDL-1.3_Qt1.1Exception
 
 Files: src/3rdparty/ninja/*
 Copyright: 2011 Google Inc. All Rights Reserved.
@@ -126,20 +127,6 @@ Files: src/3rdparty/chromium/base/third_party/dmg_fp/*
 Copyright: 1991-2001, Lucent Technologies
            2008-2012, The Chromium Authors
 License: ISC-like-dmgfp
- The author of this software is David M. Gay.
- .
- Copyright (c) 1991, 2000, 2001 by Lucent Technologies.
- .
- Permission to use, copy, modify, and distribute this software for any
- purpose without fee is hereby granted, provided that this entire notice
- is included in all copies of any software which is or includes a copy
- or modification of this software and in all copies of the supporting
- documentation for such software.
- .
- THIS SOFTWARE IS BEING PROVIDED "AS IS", WITHOUT ANY EXPRESS OR IMPLIED
- WARRANTY.  IN PARTICULAR, NEITHER THE AUTHOR NOR LUCENT MAKES ANY
- REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY
- OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
 
 Files: src/3rdparty/chromium/base/third_party/dynamic_annotations/*
 Copyright: 2008-2011, Google Inc
@@ -149,38 +136,6 @@ License: BSD-3-clause
 Files: src/3rdparty/chromium/base/third_party/icu/*
 Copyright: 1995-2009, International Business Machines Corporation and others
 License: MIT-like-icu
- ICU License - ICU 1.8.1 and later
- .
- COPYRIGHT AND PERMISSION NOTICE
- .
- Copyright (c) 1995-2009 International Business Machines Corporation and others
- .
- All rights reserved.
- .
- Permission is hereby granted, free of charge, to any person obtaining
- a copy of this software and associated documentation files (the
- "Software"), to deal in the Software without restriction, including
- without limitation the rights to use, copy, modify, merge, publish,
- distribute, and/or sell copies of the Software, and to permit persons
- to whom the Software is furnished to do so, provided that the above
- copyright notice(s) and this permission notice appear in all copies of
- the Software and that both the above copyright notice(s) and this
- permission notice appear in supporting documentation.
- .
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
- OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
- HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY
- SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER
- RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
- CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
- CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
- .
- Except as contained in this notice, the name of a copyright holder
- shall not be used in advertising or otherwise to promote the sale, use
- or other dealings in this Software without prior written authorization
- of the copyright holder.
 
 Files: src/3rdparty/chromium/base/third_party/nspr/*
 Copyright: 2011, Google Inc
@@ -255,7 +210,7 @@ License: Apache-2.0
 
 Files: src/3rdparty/chromium/content/child/multipart_response_delegate.h
 Copyright: 2014, The Chromium Authors
-License: BSD or LGPL-2.1+ or MPL-1.1
+License: BSD-3-clause or LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/crypto/third_party/nss/*
 Copyright: 1994-2000, Netscape Communications Corporation.
@@ -360,7 +315,7 @@ Files: src/3rdparty/chromium/third_party/angle/src/compiler/preprocessor/Express
        src/3rdparty/chromium/third_party/angle/src/compiler/translator/glslang_tab.cpp
 Copyright: 1984-2015, Free Software Foundation, Inc
            2002-2014, The ANGLE Project Authors
-License: BSD-3-clause_GPL-3+_BisonException
+License: BSD-3-clause and GPL-3+_BisonException
 
 Files: src/3rdparty/chromium/third_party/angle/src/compiler/translator/glslang_tab.h
 Copyright: 1984-2015, Free Software Foundation, Inc
@@ -385,12 +340,6 @@ Files: src/3rdparty/chromium/third_party/angle/src/third_party/systeminfo/*
 Copyright: 2009, Apple Inc
 License: BSD-2-clause
 
-Files: src/3rdparty/chromium/third_party/apple_apsl/*
-Copyright: 1999-2004, Apple Computer, Inc
-           1998-2011, Apple Inc
-License: APSL-2.0
-Comment: Excluded in dfsg version
-
 Files: src/3rdparty/chromium/third_party/apple_sample_code/apple_sample_code.gyp
 Copyright: 2013, The Chromium Authors
 License: BSD-3-clause
@@ -398,13 +347,6 @@ License: BSD-3-clause
 Files: src/3rdparty/chromium/third_party/appurify-python/*
 Copyright: 2014, Appurify
 License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/bidichecker/*
-Copyright: Copyright 2009 Google Inc
-License: Apache-2.0
-Comment: Only the minified version present, removed in the dfsg version
- The complete version can be found in:
- https://github.com/aminembarki/bidichecker
 
 Files: src/3rdparty/chromium/third_party/bintrees/*
 Copyright: 2010-2013, Manfred Moitzi
@@ -948,12 +890,6 @@ Copyright: 2009-2015, The Chromium Authors
 License: BSD-3-clause
 Comment: these files are part of chromium and the LICENSE file the mention is
  the one in the chromium root source tree.
- .
- Hopefully, upstream will make this clearer.
-
-Files: src/3rdparty/chromium/third_party/bspatch/LICENSE
-Copyright: no copyright, just the license text
-License: BSD_Protection_License(non-dfsg)
 
 Files: src/3rdparty/chromium/third_party/cacheinvalidation/cacheinvalidation.gyp
        src/3rdparty/chromium/third_party/cacheinvalidation/cacheinvalidation_unittests.isolate
@@ -964,17 +900,6 @@ Files: src/3rdparty/chromium/third_party/cardboard-java/*
 Copyright: 2014, Google Inc
            2015, The Chromium Authors
 License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/checkstyle/*
-Copyright: 1991-1999, Free Software Foundation, Inc
-           2001-2014, Oliver Burn
-           2002-2011, Lars Kühne
-           2003-2011, Oleg Sukhodolsky
-           2013-2015, Roman Ivanov
-           2014-2015, Michal Kordas
-License: LGPL-2.1+ or Apache-2.0
-Comment: FIXME: Only the jar file is in the source tree, make sure it's using
- the one in the system, and drop this tree.
 
 Files: src/3rdparty/chromium/third_party/class-dump/*
 Copyright: 1997-2013, Steve Nygard
@@ -1010,20 +935,6 @@ Files: src/3rdparty/chromium/third_party/crashpad/*
 Copyright: 2014-2015, The Crashpad Authors
 License: Apache-2.0
 
-Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cctools/*
-Copyright: 1999-2004, Apple Computer, Inc
-License: APSL-2.0
-Comment: Excluded in dfsg version
-
-Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cctools/apple_cctools.gyp
-Copyright: 2014, The Crashpad Authors
-License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cf/*
-Copyright: 1999-2010, Apple Inc
-License: APSL-2.0
-Comment: Excluded in dfsg version
-
 Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/getopt/*
 Copyright: 1997, Gregory Pietsch
 License: public-domain
@@ -1036,10 +947,6 @@ Comment: The LICENSE file states:
 
 Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/getopt/getopt.gyp
 Copyright: 2015, The Crashpad Authors
-License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/gmock/*
-Copyright: 2014, The Crashpad Authors
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/gtest/*
@@ -1060,7 +967,7 @@ License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/decklink/*
 Copyright: 2009-2015, Blackmagic Design
-License: BSL
+License: BSL-1.0
 
 Files: src/3rdparty/chromium/third_party/devscripts/*
 Copyright: 2007-2008, Adam D. Barratt
@@ -1877,21 +1784,6 @@ Comment:
  Josh Coalson: made some changes to integrate with libFLAC.
  Still in the public domain.
 
-Files: src/3rdparty/chromium/third_party/flot/*
-Copyright: 2007-2013, IOLA and Ole Laursen
-           2008, Three Dub Media (http://threedubmedia.com)
-License: Expat
-Comment:
- FIXME: only minified versions are present
- Excluded in dfsg version
-
-Files: src/3rdparty/chromium/third_party/flot/jquery.flot.resize.min.js
-Copyright: 2010, "Cowboy" Ben Alman
-           2007-2013, IOLA and Ole Laursen
-License: Expat or GPL
- FIXME: only minified versions are present
- Excluded in dfsg version
-
 Files: src/3rdparty/chromium/third_party/fontconfig/*
 Copyright: 2011, Akira TAGOH
            2008-2010, Behdad Esfahbod
@@ -1946,9 +1838,6 @@ Files: src/3rdparty/chromium/third_party/fontconfig/src/git.mk
 Copyright: 2010-2011, Behdad Esfahbod
            2009, Red Hat, Inc
 License: Permissive
- Copying and distribution of this file, with or without modification,
- is permitted in any medium without royalty provided the copyright
- notice and this notice are preserved.
 
 Files: src/3rdparty/chromium/third_party/fontconfig/src/m4/ax_create_stdint_h.m4
 Copyright: Guido U. Draheim <guidod@gmx.de>
@@ -2290,14 +2179,6 @@ Copyright: 1991-1999, Free Software Foundation, Inc
            2002-2003, Lutz Mueller <lutz@users.sourceforge.net>
 License: LGPL-2.1+
 
-Files: src/3rdparty/chromium/third_party/libjingle/source/talk/examples/android/third_party/autobanh/*
-Copyright: 2014, Cameron Lowell Palmer
-           2011-2012, Tavendo GmbH.
-License: Apache-2.0 or Expat
-Comment: Only the jar file is in the source tree. Removed in the dfsg version.
- .
- A full version can be found in http://autobahn.ws/android/ .
-
 Files: src/3rdparty/chromium/third_party/libjpeg/*
 Copyright: 1998, Netscape Communications Corporation
            1991-1998, Thomas G. Lane
@@ -2625,7 +2506,7 @@ Copyright: 2011, Free Software Foundation, Inc
 License: FSF_unlimited or GPL-2+_LibToolException
 
 Files: src/3rdparty/chromium/third_party/opus/src/ltmain.sh
-iCopyright: 1996, Gordon Matzigkeit
+Copyright: 1996, Gordon Matzigkeit
 License: GPL-2+_LibToolException
 
 Files: src/3rdparty/chromium/third_party/protobuf/python/mox.py
@@ -2666,6 +2547,7 @@ Copyright: 2014, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/simplejson/*
+Copyright: Bob Ippolito
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/smhasher/*
@@ -6578,7 +6460,7 @@ License: GPL-2+
 Files: tests/*
 Copyright: 2014, Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.com, author Milian Wolff <milian.wolff@kdab.com>
            2015-2016, The Qt Company Ltd
-License: GPL-3 or LGPL-2 with Qt-1.1 exception
+License: GPL-3_Qt-1.1Exception or LGPL-2_Qt-1.1Exception
 
 Files: tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
        tests/auto/quick/shared/testwindow.h
@@ -6619,11 +6501,11 @@ Files: tests/auto/quick/qmltests/mock-delegates/QtWebEngine/UIDelegates/AlertDia
        tests/auto/widgets/qwebenginedefaultsurfaceformat/tst_qwebenginedefaultsurfaceformat.cpp
        tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp
 Copyright: 2015-2016, The Qt Company Ltd
-License: GPL-2 or LGPL-2+ with Qt-1.1 exception
+License: GPL-2_Qt-1.1Exception or LGPL-2+_Qt-1.1Exception
 
 Files: tests/auto/quick/qmltests/data/tst_javaScriptDialogs.qml
 Copyright: 2015, Digia Plc and/or its subsidiary(-ies)
-License: GPL-3 or LGPL-2.1 with Qt-1.1 exception
+License: GPL-3_Qt-1.1Exception or LGPL-2.1_Qt-1.1Exception
 
 Files: tools/buildscripts/qtwebengine_utils.py
        tools/buildscripts/repack_locales.py
@@ -6638,13 +6520,13 @@ Files: tools/buildscripts/qtwebengine_utils.py
        tools/scripts/version_resolver.py
 Copyright: 2012, The Chromium Authors
            2015, The Qt Company Ltd
-License: GPL-3 or LGPL-2.1 with Qt-1.1 exception
+License: GPL-3_Qt-1.1Exception or LGPL-2.1_Qt-1.1Exception
 
 Files: tools/qmake/config.tests/khr/khr.cpp
        tools/qmake/config.tests/snappy/snappy.cpp
        tools/qmake/config.tests/srtp/srtp.cpp
 Copyright: 2015, The Qt Company Ltd
-License: GPL-2 or LGPL-2+ with Qt-1.1 exception
+License: GPL-2_Qt-1.1Exception or LGPL-2+_Qt-1.1Exception
 
 License: Academic-2.0
  --------------------------------------------------------------------------------
@@ -6810,375 +6692,6 @@ License: Apache-2.0
  See the License for the specific language governing permissions and
  limitations under the License.
 
-License: APSL-2.0
- APPLE PUBLIC SOURCE LICENSE
- Version 2.0 - August 6, 2003
- .
- Please read this License carefully before downloading this software.
- By downloading or using this software, you are agreeing to be bound by
- the terms of this License. If you do not or cannot agree to the terms
- of this License, please do not download or use the software.
- .
- 1. General; Definitions. This License applies to any program or other
- work which Apple Computer, Inc. ("Apple") makes publicly available and
- which contains a notice placed by Apple identifying such program or
- work as "Original Code" and stating that it is subject to the terms of
- this Apple Public Source License version 2.0 ("License"). As used in
- this License:
- .
- 1.1 "Applicable Patent Rights" mean: (a) in the case where Apple is
- the grantor of rights, (i) claims of patents that are now or hereafter
- acquired, owned by or assigned to Apple and (ii) that cover subject
- matter contained in the Original Code, but only to the extent
- necessary to use, reproduce and/or distribute the Original Code
- without infringement; and (b) in the case where You are the grantor of
- rights, (i) claims of patents that are now or hereafter acquired,
- owned by or assigned to You and (ii) that cover subject matter in Your
- Modifications, taken alone or in combination with Original Code.
- .
- 1.2 "Contributor" means any person or entity that creates or
- contributes to the creation of Modifications.
- .
- 1.3 "Covered Code" means the Original Code, Modifications, the
- combination of Original Code and any Modifications, and/or any
- respective portions thereof.
- .
- 1.4 "Externally Deploy" means: (a) to sublicense, distribute or
- otherwise make Covered Code available, directly or indirectly, to
- anyone other than You; and/or (b) to use Covered Code, alone or as
- part of a Larger Work, in any way to provide a service, including but
- not limited to delivery of content, through electronic communication
- with a client other than You.
- .
- 1.5 "Larger Work" means a work which combines Covered Code or portions
- thereof with code not governed by the terms of this License.
- .
- 1.6 "Modifications" mean any addition to, deletion from, and/or change
- to, the substance and/or structure of the Original Code, any previous
- Modifications, the combination of Original Code and any previous
- Modifications, and/or any respective portions thereof. When code is
- released as a series of files, a Modification is: (a) any addition to
- or deletion from the contents of a file containing Covered Code;
- and/or (b) any new file or other representation of computer program
- statements that contains any part of Covered Code.
- .
- 1.7 "Original Code" means (a) the Source Code of a program or other
- work as originally made available by Apple under this License,
- including the Source Code of any updates or upgrades to such programs
- or works made available by Apple under this License, and that has been
- expressly identified by Apple as such in the header file(s) of such
- work; and (b) the object code compiled from such Source Code and
- originally made available by Apple under this License.
- .
- 1.8 "Source Code" means the human readable form of a program or other
- work that is suitable for making modifications to it, including all
- modules it contains, plus any associated interface definition files,
- scripts used to control compilation and installation of an executable
- (object code).
- .
- 1.9 "You" or "Your" means an individual or a legal entity exercising
- rights under this License. For legal entities, "You" or "Your"
- includes any entity which controls, is controlled by, or is under
- common control with, You, where "control" means (a) the power, direct
- or indirect, to cause the direction or management of such entity,
- whether by contract or otherwise, or (b) ownership of fifty percent
- (50%) or more of the outstanding shares or beneficial ownership of
- such entity.
- .
- 2. Permitted Uses; Conditions & Restrictions. Subject to the terms
- and conditions of this License, Apple hereby grants You, effective on
- the date You accept this License and download the Original Code, a
- world-wide, royalty-free, non-exclusive license, to the extent of
- Apple's Applicable Patent Rights and copyrights covering the Original
- Code, to do the following:
- .
- 2.1 Unmodified Code. You may use, reproduce, display, perform,
- internally distribute within Your organization, and Externally Deploy
- verbatim, unmodified copies of the Original Code, for commercial or
- non-commercial purposes, provided that in each instance:
- .
- (a) You must retain and reproduce in all copies of Original Code the
- copyright and other proprietary notices and disclaimers of Apple as
- they appear in the Original Code, and keep intact all notices in the
- Original Code that refer to this License; and
- .
- (b) You must include a copy of this License with every copy of Source
- Code of Covered Code and documentation You distribute or Externally
- Deploy, and You may not offer or impose any terms on such Source Code
- that alter or restrict this License or the recipients' rights
- hereunder, except as permitted under Section 6.
- .
- 2.2 Modified Code. You may modify Covered Code and use, reproduce,
- display, perform, internally distribute within Your organization, and
- Externally Deploy Your Modifications and Covered Code, for commercial
- or non-commercial purposes, provided that in each instance You also
- meet all of these conditions:
- .
- (a) You must satisfy all the conditions of Section 2.1 with respect to
- the Source Code of the Covered Code;
- .
- (b) You must duplicate, to the extent it does not already exist, the
- notice in Exhibit A in each file of the Source Code of all Your
- Modifications, and cause the modified files to carry prominent notices
- stating that You changed the files and the date of any change; and
- .
- (c) If You Externally Deploy Your Modifications, You must make
- Source Code of all Your Externally Deployed Modifications either
- available to those to whom You have Externally Deployed Your
- Modifications, or publicly available. Source Code of Your Externally
- Deployed Modifications must be released under the terms set forth in
- this License, including the license grants set forth in Section 3
- below, for as long as you Externally Deploy the Covered Code or twelve
- (12) months from the date of initial External Deployment, whichever is
- longer. You should preferably distribute the Source Code of Your
- Externally Deployed Modifications electronically (e.g. download from a
- web site).
- .
- 2.3 Distribution of Executable Versions. In addition, if You
- Externally Deploy Covered Code (Original Code and/or Modifications) in
- object code, executable form only, You must include a prominent
- notice, in the code itself as well as in related documentation,
- stating that Source Code of the Covered Code is available under the
- terms of this License with information on how and where to obtain such
- Source Code.
- .
- 2.4 Third Party Rights. You expressly acknowledge and agree that
- although Apple and each Contributor grants the licenses to their
- respective portions of the Covered Code set forth herein, no
- assurances are provided by Apple or any Contributor that the Covered
- Code does not infringe the patent or other intellectual property
- rights of any other entity. Apple and each Contributor disclaim any
- liability to You for claims brought by any other entity based on
- infringement of intellectual property rights or otherwise. As a
- condition to exercising the rights and licenses granted hereunder, You
- hereby assume sole responsibility to secure any other intellectual
- property rights needed, if any. For example, if a third party patent
- license is required to allow You to distribute the Covered Code, it is
- Your responsibility to acquire that license before distributing the
- Covered Code.
- .
- 3. Your Grants. In consideration of, and as a condition to, the
- licenses granted to You under this License, You hereby grant to any
- person or entity receiving or distributing Covered Code under this
- License a non-exclusive, royalty-free, perpetual, irrevocable license,
- under Your Applicable Patent Rights and other intellectual property
- rights (other than patent) owned or controlled by You, to use,
- reproduce, display, perform, modify, sublicense, distribute and
- Externally Deploy Your Modifications of the same scope and extent as
- Apple's licenses under Sections 2.1 and 2.2 above.
- .
- 4. Larger Works. You may create a Larger Work by combining Covered
- Code with other code not governed by the terms of this License and
- distribute the Larger Work as a single product. In each such instance,
- You must make sure the requirements of this License are fulfilled for
- the Covered Code or any portion thereof.
- .
- 5. Limitations on Patent License. Except as expressly stated in
- Section 2, no other patent rights, express or implied, are granted by
- Apple herein. Modifications and/or Larger Works may require additional
- patent licenses from Apple which Apple may grant in its sole
- discretion.
- .
- 6. Additional Terms. You may choose to offer, and to charge a fee for,
- warranty, support, indemnity or liability obligations and/or other
- rights consistent with the scope of the license granted herein
- ("Additional Terms") to one or more recipients of Covered Code.
- However, You may do so only on Your own behalf and as Your sole
- responsibility, and not on behalf of Apple or any Contributor. You
- must obtain the recipient's agreement that any such Additional Terms
- are offered by You alone, and You hereby agree to indemnify, defend
- and hold Apple and every Contributor harmless for any liability
- incurred by or claims asserted against Apple or such Contributor by
- reason of any such Additional Terms.
- .
- 7. Versions of the License. Apple may publish revised and/or new
- versions of this License from time to time. Each version will be given
- a distinguishing version number. Once Original Code has been published
- under a particular version of this License, You may continue to use it
- under the terms of that version. You may also choose to use such
- Original Code under the terms of any subsequent version of this
- License published by Apple. No one other than Apple has the right to
- modify the terms applicable to Covered Code created under this
- License.
- .
- 8. NO WARRANTY OR SUPPORT. The Covered Code may contain in whole or in
- part pre-release, untested, or not fully tested works. The Covered
- Code may contain errors that could cause failures or loss of data, and
- may be incomplete or contain inaccuracies. You expressly acknowledge
- and agree that use of the Covered Code, or any portion thereof, is at
- Your sole and entire risk. THE COVERED CODE IS PROVIDED "AS IS" AND
- WITHOUT WARRANTY, UPGRADES OR SUPPORT OF ANY KIND AND APPLE AND
- APPLE'S LICENSOR(S) (COLLECTIVELY REFERRED TO AS "APPLE" FOR THE
- PURPOSES OF SECTIONS 8 AND 9) AND ALL CONTRIBUTORS EXPRESSLY DISCLAIM
- ALL WARRANTIES AND/OR CONDITIONS, EXPRESS OR IMPLIED, INCLUDING, BUT
- NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR CONDITIONS OF
- MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR
- PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NONINFRINGEMENT OF THIRD
- PARTY RIGHTS. APPLE AND EACH CONTRIBUTOR DOES NOT WARRANT AGAINST
- INTERFERENCE WITH YOUR ENJOYMENT OF THE COVERED CODE, THAT THE
- FUNCTIONS CONTAINED IN THE COVERED CODE WILL MEET YOUR REQUIREMENTS,
- THAT THE OPERATION OF THE COVERED CODE WILL BE UNINTERRUPTED OR
- ERROR-FREE, OR THAT DEFECTS IN THE COVERED CODE WILL BE CORRECTED. NO
- ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY APPLE, AN APPLE
- AUTHORIZED REPRESENTATIVE OR ANY CONTRIBUTOR SHALL CREATE A WARRANTY.
- You acknowledge that the Covered Code is not intended for use in the
- operation of nuclear facilities, aircraft navigation, communication
- systems, or air traffic control machines in which case the failure of
- the Covered Code could lead to death, personal injury, or severe
- physical or environmental damage.
- .
- 9. LIMITATION OF LIABILITY. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO
- EVENT SHALL APPLE OR ANY CONTRIBUTOR BE LIABLE FOR ANY INCIDENTAL,
- SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR RELATING
- TO THIS LICENSE OR YOUR USE OR INABILITY TO USE THE COVERED CODE, OR
- ANY PORTION THEREOF, WHETHER UNDER A THEORY OF CONTRACT, WARRANTY,
- TORT (INCLUDING NEGLIGENCE), PRODUCTS LIABILITY OR OTHERWISE, EVEN IF
- APPLE OR SUCH CONTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
- DAMAGES AND NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY
- REMEDY. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY OF
- INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY
- TO YOU. In no event shall Apple's total liability to You for all
- damages (other than as may be required by applicable law) under this
- License exceed the amount of fifty dollars ($50.00).
- .
- 10. Trademarks. This License does not grant any rights to use the
- trademarks or trade names "Apple", "Apple Computer", "Mac", "Mac OS",
- "QuickTime", "QuickTime Streaming Server" or any other trademarks,
- service marks, logos or trade names belonging to Apple (collectively
- "Apple Marks") or to any trademark, service mark, logo or trade name
- belonging to any Contributor. You agree not to use any Apple Marks in
- or as part of the name of products derived from the Original Code or
- to endorse or promote products derived from the Original Code other
- than as expressly permitted by and in strict compliance at all times
- with Apple's third party trademark usage guidelines which are posted
- at http://www.apple.com/legal/guidelinesfor3rdparties.html.
- .
- 11. Ownership. Subject to the licenses granted under this License,
- each Contributor retains all rights, title and interest in and to any
- Modifications made by such Contributor. Apple retains all rights,
- title and interest in and to the Original Code and any Modifications
- made by or on behalf of Apple ("Apple Modifications"), and such Apple
- Modifications will not be automatically subject to this License. Apple
- may, at its sole discretion, choose to license such Apple
- Modifications under this License, or on different terms from those
- contained in this License or may choose not to license them at all.
- .
- 12. Termination.
- .
- 12.1 Termination. This License and the rights granted hereunder will
- terminate:
- .
- (a) automatically without notice from Apple if You fail to comply with
- any term(s) of this License and fail to cure such breach within 30
- days of becoming aware of such breach;
- .
- (b) immediately in the event of the circumstances described in Section
- 13.5(b); or
- .
- (c) automatically without notice from Apple if You, at any time during
- the term of this License, commence an action for patent infringement
- against Apple; provided that Apple did not first commence
- an action for patent infringement against You in that instance.
- .
- 12.2 Effect of Termination. Upon termination, You agree to immediately
- stop any further use, reproduction, modification, sublicensing and
- distribution of the Covered Code. All sublicenses to the Covered Code
- which have been properly granted prior to termination shall survive
- any termination of this License. Provisions which, by their nature,
- should remain in effect beyond the termination of this License shall
- survive, including but not limited to Sections 3, 5, 8, 9, 10, 11,
- 12.2 and 13. No party will be liable to any other for compensation,
- indemnity or damages of any sort solely as a result of terminating
- this License in accordance with its terms, and termination of this
- License will be without prejudice to any other right or remedy of
- any party.
- .
- 13. Miscellaneous.
- .
- 13.1 Government End Users. The Covered Code is a "commercial item" as
- defined in FAR 2.101. Government software and technical data rights in
- the Covered Code include only those rights customarily provided to the
- public as defined in this License. This customary commercial license
- in technical data and software is provided in accordance with FAR
- 12.211 (Technical Data) and 12.212 (Computer Software) and, for
- Department of Defense purchases, DFAR 252.227-7015 (Technical Data --
- Commercial Items) and 227.7202-3 (Rights in Commercial Computer
- Software or Computer Software Documentation). Accordingly, all U.S.
- Government End Users acquire Covered Code with only those rights set
- forth herein.
- .
- 13.2 Relationship of Parties. This License will not be construed as
- creating an agency, partnership, joint venture or any other form of
- legal association between or among You, Apple or any Contributor, and
- You will not represent to the contrary, whether expressly, by
- implication, appearance or otherwise.
- .
- 13.3 Independent Development. Nothing in this License will impair
- Apple's right to acquire, license, develop, have others develop for
- it, market and/or distribute technology or products that perform the
- same or similar functions as, or otherwise compete with,
- Modifications, Larger Works, technology or products that You may
- develop, produce, market or distribute.
- .
- 13.4 Waiver; Construction. Failure by Apple or any Contributor to
- enforce any provision of this License will not be deemed a waiver of
- future enforcement of that or any other provision. Any law or
- regulation which provides that the language of a contract shall be
- construed against the drafter will not apply to this License.
- .
- 13.5 Severability. (a) If for any reason a court of competent
- jurisdiction finds any provision of this License, or portion thereof,
- to be unenforceable, that provision of the License will be enforced to
- the maximum extent permissible so as to effect the economic benefits
- and intent of the parties, and the remainder of this License will
- continue in full force and effect. (b) Notwithstanding the foregoing,
- if applicable law prohibits or restricts You from fully and/or
- specifically complying with Sections 2 and/or 3 or prevents the
- enforceability of either of those Sections, this License will
- immediately terminate and You must immediately discontinue any use of
- the Covered Code and destroy all copies of it that are in your
- possession or control.
- .
- 13.6 Dispute Resolution. Any litigation or other dispute resolution
- between You and Apple relating to this License shall take place in the
- Northern District of California, and You and Apple hereby consent to
- the personal jurisdiction of, and venue in, the state and federal
- courts within that District with respect to this License. The
- application of the United Nations Convention on Contracts for the
- International Sale of Goods is expressly excluded.
- .
- 13.7 Entire Agreement; Governing Law. This License constitutes the
- entire agreement between the parties with respect to the subject
- matter hereof. This License shall be governed by the laws of the
- United States and the State of California, except that body of
- California law concerning conflicts of law.
- .
- Where You are located in the province of Quebec, Canada, the following
- clause applies: The parties hereby confirm that they have requested
- that this License and all related documents be drafted in English. Les
- parties ont exige que le present contrat et tous les documents
- connexes soient rediges en anglais.
- .
- EXHIBIT A.
- .
- "Portions Copyright (c) 1999-2003 Apple Computer, Inc. All Rights
- Reserved.
- .
- This file contains Original Code and/or Modifications of Original Code
- as defined in and that are subject to the Apple Public Source License
- Version 2.0 (the 'License'). You may not use this file except in
- compliance with the License. Please obtain a copy of the License at
- http://www.opensource.apple.com/apsl/ and read it before using this
- file.
- .
- The Original Code and all software distributed under the License are
- distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
- EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
- INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
- Please see the License for the specific language governing rights and
- limitations under the License."
-
 License: BSD-2-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
@@ -7224,7 +6737,7 @@ License: BSD-3-clause
  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-License: BSL
+License: BSL-1.0
  Permission is hereby granted, free of charge, to any person or organization
  obtaining a copy of the software and accompanying documentation covered by
  this license (the "Software") to use, reproduce, display, distribute,
@@ -7470,26 +6983,86 @@ License: FTL
     Robert Wilhelm    <robert.wilhelm@freetype.org>
     Werner Lemberg    <werner.lemberg@freetype.org>
 
+License: GFDL-1.3_Qt1.1Exception
+ Commercial License Usage
+ Licensees holding valid commercial Qt licenses may use this file in
+ accordance with the commercial license agreement provided with the
+ Software or, alternatively, in accordance with the terms contained in
+ a written agreement between you and The Qt Company. For licensing terms
+ and conditions see https://www.qt.io/terms-conditions. For further
+ information use the contact form at https://www.qt.io/contact-us.
+ .
+ GNU Free Documentation License Usage
+ Alternatively, this file may be used under the terms of the GNU Free
+ Documentation License version 1.3 as published by the Free Software
+ Foundation and appearing in the file included in the packaging of
+ this file. Please review the following information to ensure
+ the GNU Free Documentation License version 1.3 requirements
+ will be met: https://www.gnu.org/licenses/fdl-1.3.html.
+ .
+ The complete text of the GNU Free Documentation License can be found in
+ `/usr/share/common-licenses/GFDL-1.3'
+
 License: GPL
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 1 of the License.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
  The complete text of the GNU General Public License can be found in
  `/usr/share/common-licenses/GPL'
 
 License: GPL_AutoConfException
- @license GPLWithACException
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 1 of the License.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program that contains a
+ configuration script generated by Autoconf, you may include it under
+ the same distribution terms that you use for the rest of that program.
  .
  The complete text of the GNU General Public License can be found in
  `/usr/share/common-licenses/GPL'
 
 License: GPL-2
- FFmpeg is free software; you can redistribute it and/or
- modify it under the terms of the GNU General Public
- License as published by the Free Software Foundation;
- version 2 of the License.
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 of the License.
  .
- FFmpeg is distributed in the hope that it will be useful,
+ This program is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- General Public License for more details.
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ The complete text of the GNU General Public License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2'
+
+License: GPL-2_Qt-1.1Exception
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 of the License.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ Public License for more details.
+ .
+ Licensees holding valid commercial Qt licenses may use this file in
+ accordance with the commercial license agreement provided with the
+ Software or, alternatively, in accordance with the terms contained in
+ a written agreement between you and The Qt Company. For licensing terms
+ and conditions see https://www.qt.io/terms-conditions. For further
+ information use the contact form at https://www.qt.io/contact-us.
  .
  The complete text of the GNU General Public License version 2 can be found in
  `/usr/share/common-licenses/GPL-2'
@@ -7532,29 +7105,65 @@ License: GPL-2+_AutoConfException
  The complete text of the GNU General Public License version 2 can be found in
  `/usr/share/common-licenses/GPL-2'
 
-License: GPL-3
- FFmpeg is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 3 of the License.
+License: GPL-2+_LibToolException
+ This file is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
  .
- FFmpeg is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA
+ 02110-1301, USA.
+ .
+ As a special exception to the GNU General Public License,
+ if you distribute this file as part of a program or library that
+ is built using GNU Libtool, you may include this file under the
+ same distribution terms that you use for the rest of that program.
+ .
+ GNU Libtool is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ The complete text of the GNU General Public License version 2 can be found in
+ `/usr/share/common-licenses/GPL-2'
+
+License: GPL-3_Qt-1.1Exception
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 3 of the License.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ Public License for more details.
+ .
+ Licensees holding valid commercial Qt licenses may use this file in
+ accordance with the commercial license agreement provided with the
+ Software or, alternatively, in accordance with the terms contained in
+ a written agreement between you and The Qt Company. For licensing terms
+ and conditions see https://www.qt.io/terms-conditions. For further
+ information use the contact form at https://www.qt.io/contact-us.
  .
  The complete text of the GNU General Public License version 3 can be found in
  `/usr/share/common-licenses/GPL-3'
 
 License: GPL-3+
- FFmpeg is free software; you can redistribute it and/or modify
+ This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 3 of the License, or
  (at your option) any later version.
  .
- FFmpeg is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- General Public License for more details.
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ Public License for more details.
  .
  The complete text of the GNU General Public License version 3 can be found in
  `/usr/share/common-licenses/GPL-3'
@@ -7589,6 +7198,86 @@ License: GPL-3+_AutoConfException
  The complete text of the GNU General Public License version 3 can be found in
  `/usr/share/common-licenses/GPL-3'
 
+License: GPL-3+_BisonException
+ This program is free software: you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the
+ Free Software Foundation, either version 3 of the License, or (at your
+ option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ As a special exception, you may create a larger work that contains
+ part or all of the Bison parser skeleton and distribute that work
+ under terms of your choice, so long as that work isn't itself a
+ parser generator using the skeleton or a modified version thereof
+ as a parser skeleton.  Alternatively, if you modify or redistribute
+ the parser skeleton itself, you may (at your option) remove this
+ special exception, which will cause the skeleton and the resulting
+ Bison output files to be licensed under the GNU General Public
+ License without this special exception.
+ .
+ This special exception was added by the Free Software Foundation in
+ version 2.2 of Bison.
+ .
+ The complete text of the GNU General Public License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3'
+
+License: IJG
+ LICENSE extracted from IJG's jpeg distribution:
+ -----------------------------------------------
+ .
+ In plain English:
+ .
+ 1. We don't promise that this software works.  (But if you find any bugs,
+    please let us know!)
+ 2. You can use this software for whatever you want.  You don't have to pay us.
+ 3. You may not pretend that you wrote this software.  If you use it in a
+    program, you must acknowledge somewhere in your documentation that
+    you've used the IJG code.
+ .
+ In legalese:
+ .
+ The authors make NO WARRANTY or representation, either express or implied,
+ with respect to this software, its quality, accuracy, merchantability, or
+ fitness for a particular purpose.  This software is provided "AS IS", and you,
+ its user, assume the entire risk as to its quality and accuracy.
+ .
+ This software is copyright (C) 1991-1998, Thomas G. Lane.
+ All Rights Reserved except as specified below.
+ .
+ Permission is hereby granted to use, copy, modify, and distribute this
+ software (or portions thereof) for any purpose, without fee, subject to these
+ conditions:
+ (1) If any part of the source code for this software is distributed, then this
+ README file must be included, with this copyright and no-warranty notice
+ unaltered; and any additions, deletions, or changes to the original files
+ must be clearly indicated in accompanying documentation.
+ (2) If only executable code is distributed, then the accompanying
+ documentation must state that "this software is based in part on the work of
+ the Independent JPEG Group".
+ (3) Permission for use of this software is granted only if the user accepts
+ full responsibility for any undesirable consequences; the authors accept
+ NO LIABILITY for damages of any kind.
+ .
+ These conditions apply to any software derived from or based on the IJG code,
+ not just to the unmodified library.  If you use our work, you ought to
+ acknowledge us.
+ .
+ Permission is NOT granted for the use of any IJG author's name or company name
+ in advertising or publicity relating to this software or products derived from
+ it.  This software may be referred to only as "the Independent JPEG Group's
+ software".
+ .
+ We specifically permit and encourage the use of this software as the basis of
+ commercial products, provided that all warranty or liability claims are
+ assumed by the product vendor.
+
 License: ISC
  Permission to use, copy, modify, and/or distribute this software for any
  purpose with or without fee is hereby granted, provided that the above
@@ -7602,10 +7291,26 @@ License: ISC
  OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+License: ISC-like-dmgfp
+ The author of this software is David M. Gay.
+ .
+ Copyright (c) 1991, 2000, 2001 by Lucent Technologies.
+ .
+ Permission to use, copy, modify, and distribute this software for any
+ purpose without fee is hereby granted, provided that this entire notice
+ is included in all copies of any software which is or includes a copy
+ or modification of this software and in all copies of the supporting
+ documentation for such software.
+ .
+ THIS SOFTWARE IS BEING PROVIDED "AS IS", WITHOUT ANY EXPRESS OR IMPLIED
+ WARRANTY.  IN PARTICULAR, NEITHER THE AUTHOR NOR LUCENT MAKES ANY
+ REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY
+ OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
+
 License: LGPL-2
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Library General Public
- License as published by the Free Software Foundation; either
+ License as published by the Free Software Foundation;
  version 2 of the License.
  .
  This library is distributed in the hope that it will be useful,
@@ -7616,6 +7321,32 @@ License: LGPL-2
  You should have received a copy of the GNU Library General Public
  License along with this library; if not, write to the Free Software
  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the
+ GNU Library General Public License version 2 can be found in
+ /usr/share/common-licenses/LGPL-2
+
+License: LGPL-2_Qt-1.1Exception
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation;
+ version 2 of the License.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ Licensees holding valid commercial Qt licenses may use this file in
+ accordance with the commercial license agreement provided with the
+ Software or, alternatively, in accordance with the terms contained in
+ a written agreement between you and The Qt Company. For licensing terms
+ and conditions see https://www.qt.io/terms-conditions. For further
+ information use the contact form at https://www.qt.io/contact-us.
  .
  On Debian systems, the complete text of the
  GNU Library General Public License version 2 can be found in
@@ -7640,6 +7371,32 @@ License: LGPL-2+
  GNU Library General Public License version 2 can be found in
  /usr/share/common-licenses/LGPL-2
 
+License: LGPL-2+_Qt-1.1Exception
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ Licensees holding valid commercial Qt licenses may use this file in
+ accordance with the commercial license agreement provided with the
+ Software or, alternatively, in accordance with the terms contained in
+ a written agreement between you and The Qt Company. For licensing terms
+ and conditions see https://www.qt.io/terms-conditions. For further
+ information use the contact form at https://www.qt.io/contact-us.
+ .
+ On Debian systems, the complete text of the
+ GNU Library General Public License version 2 can be found in
+ /usr/share/common-licenses/LGPL-2
+
 License: LGPL-2.1
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -7650,6 +7407,27 @@ License: LGPL-2.1
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  Lesser General Public License for more details.
+ .
+ The complete text of the GNU Lesser General Public License version 2.1 can be
+ found in `/usr/share/common-licenses/LGPL-2.1'
+
+License: LGPL-2.1_Qt-1.1Exception
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ Licensees holding valid commercial Qt licenses may use this file in
+ accordance with the commercial license agreement provided with the
+ Software or, alternatively, in accordance with the terms contained in
+ a written agreement between you and The Qt Company. For licensing terms
+ and conditions see https://www.qt.io/terms-conditions. For further
+ information use the contact form at https://www.qt.io/contact-us.
  .
  The complete text of the GNU Lesser General Public License version 2.1 can be
  found in `/usr/share/common-licenses/LGPL-2.1'
@@ -7667,6 +7445,20 @@ License: LGPL-2.1+
  .
  The complete text of the GNU Lesser General Public License version 2.1 can be
  found in `/usr/share/common-licenses/LGPL-2.1'
+
+License: LGPL-3+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ The complete text of the GNU Lesser General Public License version 3 can be
+ found in `/usr/share/common-licenses/LGPL-3'
 
 License: MIT-like-icu
  Permission is hereby granted, free of charge, to any person obtaining a
@@ -7774,6 +7566,11 @@ License: OpenSSL
  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  OF THE POSSIBILITY OF SUCH DAMAGE.
 
+License: Permissive
+ Copying and distribution of this file, with or without modification,
+ is permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved.
+
 License: public-domain
  The file are hereby placed in the public domain.
  The author hereby disclaims copyright to this source code.
@@ -7811,7 +7608,7 @@ License: SSLeay
      Eric Young (eay@cryptsoft.com)"
     The word 'cryptographic' can be left out if the routines from the library
     being used are not cryptographic related :-).
- 4. If you include any Windows specific code (or a derivative thereof) from 
+ 4. If you include any Windows specific code (or a derivative thereof) from
     the apps directory (application code) you must include an acknowledgement:
     "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"
  .

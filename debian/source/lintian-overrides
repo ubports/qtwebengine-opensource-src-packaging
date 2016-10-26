@@ -2,20 +2,21 @@
 qtwebengine-opensource-src source: source-is-missing examples/webenginewidgets/contentmanipulation/jquery.min.js
 qtwebengine-opensource-src source: source-is-missing examples/webenginewidgets/markdowneditor/resources/marked.min.js
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/bidichecker/bidichecker_packaged.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/flot/*.min.js
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/blanketjs/src/blanket.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/pyelftools/examples/sample_exe64.elf
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/readability/js/readability.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/web-animations-js/sources/*.min.js
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/chaijs/chai.js *
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/dom_distiller_js/dist/js/*.js *
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/pycoverage/coverage/htmlfiles/*.min.js
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/ui/accessibility/extensions/highcontrast/highcontrast.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/ui/webui/resources/js/jstemplate_compiled.js
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/pyelftools/examples/sample_exe64.elf
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/skia/platform_tools/android/bin/linux/perfhost
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/web-animations-js/sources/*.min.js
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn/acorn.js *
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/clojure.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/clojure.js *
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/php.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/network/RequestJSONView.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/skia/platform_tools/android/bin/linux/perfhost
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/skia/third_party/yasm/config/android/yasm
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/stylus.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js *
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/*.min.js
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/ui/accessibility/extensions/highcontrast/highcontrast.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/ui/webui/resources/js/jstemplate_compiled.js
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/v8/benchmarks/regexp.js *
