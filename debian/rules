@@ -15,7 +15,7 @@ DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 gstab_architectures := amd64 i386 powerpc s390x
-fulldebug_architectures := none
+fulldebug_architectures := amd64 i386 powerpc s390x
 disabled_jit_architectures := armel mips mipsel
 disabled_pch_architectures := amd64 powerpc s390x
 
