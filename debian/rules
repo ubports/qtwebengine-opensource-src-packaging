@@ -50,10 +50,6 @@ replace_gyp_args = $(foreach define,$(defines),-D$(define))
 %:
 	dh $@ --parallel --with pkgkde_symbolshelper
 
-override_dh_auto_clean:
-	dh_auto_clean
-	rm -f  src/3rdparty/chromium/third_party/libxslt/linux/config.log
-
 override_dh_auto_configure:
 	src/3rdparty/chromium/build/linux/unbundle/replace_gyp_files.py $(replace_gyp_args)
 	# Run qmake once to create .qmake.conf and be sure to append the following values.
