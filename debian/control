@@ -79,7 +79,7 @@ Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qt5webengine.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qt5webengine.git
 Homepage: https://doc.qt.io/qt-5/qtwebengine-index.html
 
-Package: libqt5webengine-dev
+Package: qtwebengine5-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
@@ -156,7 +156,7 @@ Description: Qt WebEngine QML module
  .
  This package contains the WebEngine QML module for QtDeclarative.
 
-Package: qt5webengine-examples
+Package: qtwebengine5-examples
 Architecture: any
 Multi-Arch: same
 Depends: libjs-jquery, libjs-marked, ${misc:Depends}, ${shlibs:Depends}
@@ -167,7 +167,7 @@ Description: Qt WebEngine - Examples
  .
  This package contains the WebEngine examples.
 
-Package: qt5webengine-doc
+Package: qtwebengine5-doc
 Architecture: all
 Multi-Arch: foreign
 Section: doc
@@ -179,7 +179,7 @@ Description: Qt 5 webengine documentation
  .
  This package contains the documentation for the Qt 5 webengine libraries.
 
-Package: qt5webengine-doc-html
+Package: qtwebengine5-doc-html
 Architecture: all
 Multi-Arch: foreign
 Section: doc
