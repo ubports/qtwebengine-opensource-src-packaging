@@ -14,8 +14,8 @@ VERSION_CLEAN_UPSTREAM = $(call dpkg_late_eval,VERSION_CLEAN_UPSTREAM,echo '$(DE
 DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
-gstab_architectures := amd64 i386 powerpc s390x
-fulldebug_architectures := amd64 i386 powerpc s390x
+gstab_architectures := i386 powerpc s390x
+fulldebug_architectures := amd64
 disabled_jit_architectures := armel mips mipsel
 disabled_pch_architectures := amd64 powerpc s390x
 
@@ -61,7 +61,11 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(gstab_architectures)))
 	echo "QMAKE_CXXFLAGS += -gstabs" >> .qmake.conf
 # Enable normal debugging symbols only on fulldebug_architectures.
 else ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(fulldebug_architectures)))
-	echo "QMAKE_CXXFLAGS += -g" >> .qmake.conf
+	echo "QMAKE_CXXFLAGS_DEBUG += -fdebug-types-section" >> .qmake.conf
+	echo "QMAKE_CXXFLAGS += -fdebug-types-section" >> .qmake.conf
+	echo "QMAKE_CXXFLAGS_RELEASE_WITH_DEBUGINFO += -fdebug-types-section" >> .qmake.conf
+	echo "QMAKE_CXXFLAGS_RELEASE += -fdebug-types-section" >> .qmake.conf
+	echo "QMAKE_LFLAGS += -fdebug-types-section" >> .qmake.conf
 else
 # Disable debugging symbols in all the other archs.
 	echo "QMAKE_CXXFLAGS -= -g" >> .qmake.conf
