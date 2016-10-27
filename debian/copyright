@@ -13,7 +13,7 @@ Copyright: 2015-2016, The Qt Company Ltd.
            2012, The Chromium Authors. All rights reserved.
            2013, BlackBerry Limited
            2015, Digia Plc and/or its subsidiary(-ies)
-License: LGPL-2+_Qt-1.1Exception or GPL-2_Qt-1.1Exception
+License: LGPL-3_Qt-1.1Exception or GPL-2_Qt-1.1Exception
 
 Files: debian/*
 Copyright: 2016 Scarlett Clark <sgclark@kubuntu.org>
@@ -123,6 +123,11 @@ Copyright: 2011, Apple Inc
            2014, The Chromium Authors
 License: BSD-2-clause
 
+Files: src/3rdparty/chromium/base/i18n/icu_string_conversions.cc
+Copyright: The Chromium Authors
+           1995-2006 International Business Machines Corporation and others
+License: BSD-3-clause or MIT-like-icu
+
 Files: src/3rdparty/chromium/base/third_party/dmg_fp/*
 Copyright: 1991-2001, Lucent Technologies
            2008-2012, The Chromium Authors
@@ -170,6 +175,11 @@ License: Expat
 Files: src/3rdparty/chromium/breakpad/src/third_party/libdisasm/libdisasm.gyp
 Copyright: 2014, Google Inc
 License: BSD-3-clause
+
+Files: src/3rdparty/chromium/content/browser/appcache/appcache_manifest_parser.cc
+       src/3rdparty/chromium/content/browser/renderer_host/input/web_input_event_builders_mac.mm
+Copyright: The Chromium Authors
+License: BSD-2-clause
 
 Files: src/3rdparty/chromium/build/secondary/third_party/android_tools/BUILD.gn
 Copyright: 2014, The Chromium Authors
@@ -243,11 +253,11 @@ Files: src/3rdparty/chromium/net/base/registry_controlled_domains/registry_contr
        src/3rdparty/chromium/net/proxy/proxy_resolver_script.h
        src/3rdparty/chromium/net/socket/ssl_client_socket_nss.cc
 Copyright: 1994-2000, Netscape Communications Corporation.
-License: GPL-2+ or LGPL-2.1+ or MPL-1.1
+License: BSD-3-clause or GPL-2+ or LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/net/third_party/mozilla_security_manager/*
 Copyright: 1994-2000, Netscape Communications Corporation.
-License: GPL-2+ or LGPL-2.1+ or MPL-1.1
+License: BSD-3-clause or GPL-2+ or LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/net/third_party/nss/ssl/*
 Copyright: 1994-2000, Netscape Communications Corporation.
@@ -261,7 +271,7 @@ License: BSD-3-clause
 Files: src/3rdparty/chromium/net/third_party/nss/ssl/bodge/nssrenam.h
        src/3rdparty/chromium/net/third_party/nss/ssl/sslplatf.c
 Copyright: 1994-2000, Netscape Communications Corporation.
-License: GPL-2+ or LGPL-2.1+ or MPL-1.1
+License: BSD-3-clause or GPL-2+ or LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/adobe/*
 Copyright: 2012-2014, The Chromium Authors
@@ -306,7 +316,10 @@ License: BSD-3-clause
 Files: src/3rdparty/chromium/third_party/angle/include/EGL/egl.h
        src/3rdparty/chromium/third_party/angle/include/EGL/eglext.h
        src/3rdparty/chromium/third_party/angle/include/EGL/eglplatform.h
+       src/3rdparty/chromium/third_party/angle/include/GLES2/gl2ext.h
+       src/3rdparty/chromium/third_party/angle/include/GLES2/gl2.h
        src/3rdparty/chromium/third_party/angle/include/GLES3/gl3.h
+       src/3rdparty/chromium/third_party/angle/include/GLES3/gl32.h
        src/3rdparty/chromium/third_party/angle/include/KHR/khrplatform.h
 Copyright: 2007-2014, The Khronos Group Inc
 License: Expat
@@ -457,6 +470,7 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bitstr.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/dsa/internal.h
        src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/algorithm.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp_asn1.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp_ctx.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/internal.h
        src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/sign.c
@@ -532,6 +546,7 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bitstr.c
        src/3rdparty/chromium/third_party/boringssl/src/decrepit/blowfish/blowfish.c
        src/3rdparty/chromium/third_party/boringssl/src/decrepit/cast/cast.c
        src/3rdparty/chromium/third_party/boringssl/src/decrepit/cast/cast_tables.c
+       src/3rdparty/chromium/third_party/boringssl/src/decrepit/cast/internal.h
        src/3rdparty/chromium/third_party/boringssl/src/decrepit/des/cfb64ede.c
        src/3rdparty/chromium/third_party/boringssl/src/decrepit/macros.h
        src/3rdparty/chromium/third_party/boringssl/src/decrepit/rsa/rsa_decrepit.c
@@ -566,7 +581,6 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bitstr.c
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/type_check.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/x509.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/x509_vfy.h
-       src/3rdparty/chromium/third_party/boringssl/src/ssl/s3_enc.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/s3_meth.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_asn1.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_rsa.c
@@ -586,7 +600,6 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/aes.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/x86_64-gcc.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/ctx.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/kronecker.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/rsaz_exp.h
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/sqrt.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/cipher_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_aes.c
@@ -676,7 +689,9 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/aes.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_sxnet.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_utl.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3name_test.c
+       src/3rdparty/chromium/third_party/boringssl/src/decrepit/xts/xts.c
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/aes.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/arm_arch.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/asn1t.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/base.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ec.h
@@ -690,15 +705,17 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/aes.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/d1_lib.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/d1_meth.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/pqueue/pqueue.c
-Copyright: 2012, Intel Corp
-           2002, Sun Microsystems, Inc
+Copyright: 2002, Sun Microsystems, Inc
            1998-2015, The OpenSSL Project
 License: OpenSSL
 
 Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/aes_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/asn1_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/base64/base64_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/bio_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bio/socket_helper.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/bn_asn1.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/ber.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/bytestring_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/cbb.c
@@ -714,12 +731,21 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_ssl3.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_tls.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cmac/cmac_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/conf/internal.h
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu-arm-asm.S
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu-arm.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/crypto.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/curve25519/asm/x25519-arm.S
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/curve25519/curve25519.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/curve25519/ed25519_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/curve25519/x25519_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/digest/digest_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/asm/p256-x86_64-asm.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/ec_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/p224-64.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/p256-64.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/p256-x86_64-table.h
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/p256-x86_64.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/ec/util-64.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/engine/engine.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/err/err_data_generate.go
@@ -731,8 +757,10 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/lhash/lhash_test.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/lhash/make_macros.sh
        src/3rdparty/chromium/third_party/boringssl/src/crypto/pkcs8/pkcs12_test.cc
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/pkcs8/pkcs8_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/poly1305/poly1305.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/poly1305/poly1305_arm.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/poly1305/poly1305_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/poly1305/poly1305_vec.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/rand/asm/rdrand-x86_64.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/rand/internal.h
@@ -755,6 +783,7 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/chacha.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/cmac.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/crypto.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/curve25519.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/dtls1.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/engine.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/hkdf.h
@@ -768,14 +797,19 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/poly1305.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/rand.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/safestack.h
+       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/srtp.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/stack_macros.h
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/custom_extensions.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/pqueue/pqueue_test.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_aead_ctx.c
+       src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_buffer.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/tool/args.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/ciphers.cc
        src/3rdparty/chromium/third_party/boringssl/src/tool/client.cc
        src/3rdparty/chromium/third_party/boringssl/src/tool/const.cc
        src/3rdparty/chromium/third_party/boringssl/src/tool/digest.cc
+       src/3rdparty/chromium/third_party/boringssl/src/tool/generate_ed25519.cc
        src/3rdparty/chromium/third_party/boringssl/src/tool/genrsa.cc
        src/3rdparty/chromium/third_party/boringssl/src/tool/internal.h
        src/3rdparty/chromium/third_party/boringssl/src/tool/pkcs12.cc
@@ -786,13 +820,13 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/tool/transport_common.cc
        src/3rdparty/chromium/third_party/boringssl/src/tool/transport_common.h
        src/3rdparty/chromium/third_party/boringssl/src/util/all_tests.go
-       src/3rdparty/chromium/third_party/boringssl/src/util/bot/DEPS
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/extract.py
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/update_clang.py
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/vs_env.py
        src/3rdparty/chromium/third_party/boringssl/src/util/make_errors.go
-       src/3rdparty/chromium/third_party/boringssl/src/util/generate_build_files.py
-Copyright: 2014-2015, Google Inc
+Copyright: 2014-2016, Google Inc
+           2014, Intel Corporation
+           2015, Intel Inc
 License: ISC
 
 Files: src/3rdparty/chromium/third_party/boringssl/linux-arm/crypto/aes/aes-armv4.S
@@ -807,6 +841,7 @@ Files: src/3rdparty/chromium/third_party/boringssl/linux-arm/crypto/aes/aes-armv
        src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/aesv8-armx.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/bsaes-armv7.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/armv4-mont.pl
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/armv8-mont.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/x86-mont.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/x86_64-mont.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/x86_64-mont5.pl
@@ -829,24 +864,27 @@ Files: src/3rdparty/chromium/third_party/boringssl/linux-arm/crypto/aes/aes-armv
 Copyright: Andy Polyakov <appro@openssl.org>
 License: CRYPTOGAMS or OpenSSL
 
-Files: src/3rdparty/chromium/third_party/boringssl/BUILD.gn
-       src/3rdparty/chromium/third_party/boringssl/boringssl.gyp
+Files: src/3rdparty/chromium/third_party/boringssl/boringssl.gyp
        src/3rdparty/chromium/third_party/boringssl/boringssl.gypi
        src/3rdparty/chromium/third_party/boringssl/boringssl_nacl.gyp
        src/3rdparty/chromium/third_party/boringssl/boringssl_tests.gyp
        src/3rdparty/chromium/third_party/boringssl/boringssl_tests.gypi
        src/3rdparty/chromium/third_party/boringssl/boringssl_unittest.cc
+       src/3rdparty/chromium/third_party/boringssl/roll_boringssl.py
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/go/bootstrap.py
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/go/env.py
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/vs_toolchain.py
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/rsaz-avx2.pl
+Copyright: 2014-2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/rsaz-avx2.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/rsaz-x86_64.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/rsaz_exp.c
+       src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/rsaz_exp.h
        src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_pci.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_pcia.c
 Copyright: 2012, Intel Corporation
            2004, Kungliga Tekniska Högskolan
-           2014, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/directory.h
@@ -858,10 +896,15 @@ License: BSD-2-clause
 Files: src/3rdparty/chromium/third_party/boringssl/src/LICENSE
 Copyright: 1995-1998, Eric Young <eay@cryptsoft.com>
            2015, Google Inc
+           2012, Intel Corporation
            1998-2011, The OpenSSL Project
 License: ISC or OpenSSL or SSLeay
-Comment: The openssl parts are under OpenSSL or SSLeay, the new code is under
- ISC
+
+Files: src/3rdparty/chromium/third_party/boringssl/src/util/generate_build_files.py
+Copyright: 2015, Google Inc
+           2015, The Android Open Source Project
+           2014, The Chromium Authors
+License: Apache-2.0 or BSD-3-clause or ISC
 
 Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/md5/asm/md5-x86_64.pl
 Copyright: copyright disclaimed
@@ -1016,7 +1059,6 @@ License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/*
 Copyright: 2004, AGAWA Koji <i@atty.jp>
-           2000, AV_STRINGIFY(CONFIG_THIS_YEAR) " FFmpeg Project
            2004, Adam Thayer <krevnik@comcast.net>
            2010, Adrian Daerr and Nicolas George
            2008, Affine Systems, Inc (Michael Sullivan, Bobby Impollonia)
@@ -1029,6 +1071,7 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2008-2013, Alex Converse <alex.converse@gmail.com>
            2008-2012, Alexander E. Patrakov
            2008-2010, Alexander Strange <astrange@ithinksw.com>
+           2014, Alexandra Hájková
            2007, Alexis Ballier
            2014, Aman Gupta <ffmpeg@tmm1.net>
            2010, Amanda, Y.N. Wu <amanda11192003@gmail.com>
@@ -1037,6 +1080,7 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2010-2011, Anatoly Nenashev
            2002, Anders Johansson <ajh@atri.curtin.edu.au>
            2015, Andreas Cadhalpun <Andreas.Cadhalpun@googlemail.com>
+           2013-2015, Andreas Fuchs, Wolfgang Hrauda
            2011, Andreas Öman
            2008-2009, Andrej Stepanchuk
            2012, Andrew D'Addesio
@@ -1058,22 +1102,16 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2013, Ash Hughes
            2006-2010, Aurelien Jacobs <aurel@gnuage.org>
            2012, AvxSynth Team
-           2008, BBC, Anuradha Suraparaju <asuraparaju@gmail.com >
            2008, BBC, Anuradha Suraparaju <asuraparaju@gmail.com>
-           2001-2003, BERO
            2001-2003, BERO <bero@geocities.co.jp>
            2005, Balatoni Denes
-           2006-2011, Baptiste Coudurier
-           2006-2008, Baptiste Coudurier <baptiste.coudurier@free.fr>
            2006-2009, Baptiste Coudurier <baptiste.coudurier@gmail.com>
            2007, Baptiste Coudurier, Benjamin Larsson, Ulion
-           2007-2009, Bartlomiej Wolowiec
            2007-2008, Bartlomiej Wolowiec <bartek.wolowiec@gmail.com>
            2005-2009, Benjamin Larsson
            2004, Benjamin Zores
            2007, Benjamin Zores <ben@geexbox.org>
            2007-2014, Benoit Fouet
-           2007, Benoit Fouet ( benoit fouet free fr )
            2007, Benoit Fouet <benoit.fouet@free.fr>
            2009, Bjorn Axelsson
            2007, Björn Axelsson
@@ -1083,19 +1121,20 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2012, British Broadcasting Corporation
            1993, CMUComputer Science, Speech Group
            2013, Calvin Walton <calvin.walton@kepstin.ca>
-           2010-2012, Carl Eugen Hoyos
+           2010-2015, Carl Eugen Hoyos
            2000, Chris Ausbrooks <weed@bucket.pp.ualr.edu>
            1999-2001, Chris Bagwell
            2000, Chris Bagwell <cbagwell@sprynet.com>
            2007, Christian Ohm, 2008 Eli Friedman
            2009-2013, Christian Schmidt
-           2014, Christophe Gisquet
+           2007, Christophe GISQUET <christophe.gisquet@free.fr>
            2012-2014, Christophe Gisquet <christophe.gisquet@gmail.com>
-           2007-2010, Christophe Gisquet <word1.word2@gmail.com>
            2003-2005, Christopher R. Hertel <crh@ubiqx.mn.org>
+           2015, Claudio Freire
            2007, Clemens Fruhwirth
            2012-2014, Clément Bœsch
-           2011-2014, Clément Bœsch <u pkh me>
+           2015, Clément Bœsch <clement stupeflix.com>
+           2011-2015, Clément Bœsch <u pkh me>
            2009, Colin McQuillan
            2009, Colin McQuillian
            2007, Collabora Ltd, Philippe Kalaf
@@ -1108,17 +1147,14 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2001, Daniel Maas <dmaas@dcine.com>
            2006, Daniel Maas <dmaas@maasdigital.com>
            2014, Daniel Oberhoff
-           2009-2010, Daniel Verkamp
            2009-2013, Daniel Verkamp <daniel@drv.nu>
            2013, Darryl Wallace <wallacdj@gmail.com>
            2014, Dave Rice @dericed
-           2007-2010, David Conrad
-           2009, David Conrad <lessen42@gmail.com>
+           2007-2010, David Conrad <lessen42@gmail.com>
            2005, David Hammerton
            2012, David Kment
-           2004, Denes Balatoni
            2005, Denes Balatoni ( dbalatoni programozo hu )
-           2011-2014, Derek Buitenhuis
+           2011-2015, Derek Buitenhuis
            2014, Deti Fliegl
            2013, Diego Biurrun <diego@biurrun.de>
            2002, Dieter Shirley
@@ -1131,29 +1167,23 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2000, Edward Beingessner And Sundry Contributors
            2007, Edward Hervey
            2014, Eejya Singh
-           2010, Eli Friedman
-           2008, Eli Friedman (eli.friedman <at> gmail.com)
            2008-2010, Eli Friedman <eli.friedman@gmail.com>
            2010-2011, Elvis Presley
+           2015, Eran Kornblau <erankor@gmail.com>
            2004-2007, Eric Lasota
            2003, Ewald Snel
            2000, Fabien COELHO <fabien@coelho.net>
-           2000-2010, Fabrice Bellard
-           2001, Fabrice Bellard (original AU code)
-           2000-2001, Fabrice Bellard <fabrice@bellard.org>
+           2000-2010, Fabrice Bellard <fabrice@bellard.org>
            2002, Falk Hueffner <falk@debian.org>
-           2009-2010, Fiona Glaser
            2010, Fiona Glaser <fiona@x264.com>
            2010, Francesco Lavra <francescolavra@interfree.it>
-           2002-2005, Francois Revol
-           2002, Francois Revol <revol@free.fr>
+           2002-205, Francois Revol <revol@free.fr>
            2002, Frederic 'dilb' Boulay
-           2012, Fredrik Mellbin
+           2012-2013, Fredrik Mellbin
            1991-1999, Free Software Foundation, Inc
+           2015, Ganesh Ajjanagadde
            2012-2014, Georg Lippitsch <georg.lippitsch@gmx.at>
            2010-2013, Georg Martius <georg.martius@web.de>
-           2004, Gildas Bazin
-           2002, Gildas Bazin <gbazin@netcourrier.com>
            2004, Gildas Bazin <gbazin@videolan.org>
            2012-2013, Gildas Cocherel
            2009, Giliard B. de Freitas <giliarde@gmail.com>
@@ -1169,6 +1199,7 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2010, Hans de Goede <hdegoede@redhat.com>
            2001, Heikki Leinonen
            2014-2015, Hendrik Leppkes
+           2015, Henrik Gramner <henrik gramner com>
            2015, Himangi Saraogi <himangi774@gmail.com>
            2010, Holger Lubitz
            2009-2010, Howard Chu
@@ -1180,19 +1211,14 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2003, Ivan Kalvachev
            2007-2008, Ivo van Poorten
            2010, Jacob Meuser
-           2008, Jaikrishnan Menon
            2008-2009, Jaikrishnan Menon <realityman@gmx.net>
-           2012-2015, James Almer
-           2014, James Almer <jamrial <at> gmail.com>
-           2013-2014, James Almer <jamrial@gmail.com>
+           2012-2015, James Almer <jamrial@gmail.com>
            1990, James Ashton - Sydney University
-           2009, James Darnley
-           2011-2013, James Darnley <james.darnley@gmail.com>
+           2009-2015, James Darnley <james.darnley@gmail.com>
            2003, James Klicman <james@klicman.org>
            2014, James Yu <james.yu@linaro.org>
            2012, Jan Ekström
-           2011, Janne Grunau
-           2010-2014, Janne Grunau <janne-libav@jannau.net>
+           2010-2015, Janne Grunau <janne-libav@jannau.net>
            2013, Jeff Moguillansky
            2005, Jeff Muizelaar
            2012, Jeremy Tran
@@ -1203,56 +1229,56 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2011, Juan Carlos Rodriguez <ing.juancarlosrodriguez@hotmail.com>
            2001, Juan J. Sierralta P
            1998, Juergen Mueller And Sundry Contributors
-           2006-2012, Justin Ruggles
            2006-2013, Justin Ruggles <justin.ruggles@gmail.com>
            2011, KO Myung-Hun <komh@chollian.net>
            2007, Kamil Nowosad
            2006, Kartikey Mahendra BHATT <bhattkm@gmail.com>
            2009, Kenan Gillet
            2015, Kevin Wheatley <kevin.j.wheatley@gmail.com>
-           2011, Kieran Kunhya <kieran@kunhya.com>
-           2014, Kieran Kunhya <kierank@obe.tv>
-           2004-2014, Konstantin Shishkov
-           2013, Konstantin Shishkov <kostya.shishkov@gmail.com>
+           2011-2014, Kieran Kunhya <kierank@obe.tv>
+           2004-2014, Konstantin Shishkov <kostya.shishkov@gmail.com>
            2009, Kostya Shishkov
+           2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen
+           2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen and others
+           2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen, Damien Zammit
+           2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen, Damien Zammit and others
+           2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen, Vladimir Sadovnikov and others
+           2015, Kyle Swanson <k@ylo.ph>
            2002, Laszlo Torok <torokl@alpha.dfmk.hu>
            2009-2010, Laurent Aimar
            2008, Laurent Aimar <fenrir@videolan.org>
+           2012, Laurent de Soras
            2004-2006, Lennart Poettering
            2002, Lennert Buytenhek <buytenh@gnu.org>
-           2013, Lenny Wang
            2013, Lenny Wang <lwanghpc@gmail.com>
            2012, Li Cao <li@multicorewareinc.com>
            2001, Lionel Ulmer
+           2015, LoRd_MuldeR <mulder2@gmx.de>
            2015, Loongson Technology Corporation Limited
-           2006-2011, Loren Merritt <lorenm@u.washington.edu>
-           2006-2014, Loren Merritt
+           2003-2014, Loren Merritt <lorenm@u.washington.edu>
            2006-2009, Luca Abeni
-           2007, Luca Abeni ( lucabe72 email it )
-           2011-2015, Luca Barbato
            2005-2015, Luca Barbato <lu_zero@gentoo.org>
            2013-2014, Luca Barbato, Deti Fliegl
-           2013-2014, Lukasz Marek
            2013-2014, Lukasz Marek <lukasz.m.luki@gmail.com>
            2004, Maarten Daniels
            2015, Manojkumar Bhosale <Manojkumar.Bhosale@imgtec.com>
-           2005-2012, Mans Rullgard
            2005-2012, Mans Rullgard <mans@mansr.com>
-           2007, Marc Hoffman
            2004, Marc Hoffman <marc.hoffman@analog.com>
            2010, Marcelo Galvao Povoa
            2007, Marco Gerards
            2007-2008, Marco Gerards <marco@gnu.org>
            2010, Mark Heath <mjpeg0@silicontrip.org>
            2002, Mark Hills <mark@pogo.org.uk>
-           2011, Mark Himsley
+           2011-2012, Mark Himsley
            2010, Mark Nauwelaerts
-           2009-2014, Martin Storsjo
-           2011, Martin Storsjö
+           2009-2015, Martin Storsjo
+           2013, Marton Balint
            2014, Marvin Scholz
            2011-2012, Mashiat Sarker Shakkhar
+           2015, Mats Peterson
            2013, Matthew Heaney
            2011, Matthew Hoops <clone2727@gmail.com>
+           2015, Matthieu Bouron <matthieu.bouron stupeflix.com>
            2005, Matthieu CASTET
            2011, Max Horn
            2003, Max Krasnyansky <maxk@qualcomm.com>
@@ -1261,28 +1287,22 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2011-2012, Michael Bradshaw <mjbshaw gmail com>
            2010, Michael Chinen
            2011, Michael Karcher
-           2001-2014, Michael Niedermayer
-           Michael Niedermayer <michaelni gmx at>
            2001-2015, Michael Niedermayer <michaelni@gmx.at>
            2004-2005, Michael Niedermayer, Loren Merritt
            2009, Michael Tison
-           2003-2007, Michel Bardiaux
            2006-2007, Michel Bardiaux <mbardiaux@mediaxim.be>
-           2001, Michel Lespinasse
            2000, Michel Lespinasse <walken@zoy.org>
            2010, Michele Orrù
            2012-2103, Mickael Raulet
-           2003, Mike Melanson
            2004, Mike Melanson <melanson@pcisys.net>
            2007, Mike Melanson, Konstantin Shishkov
            2011, Mina Nagy Zaki
            2011, Miroslav Slugeň <Thunder.m@seznam.cz>
            2011, MirriAd Ltd
-           2011, Mohamed Naufal
-           2010, Mohamed Naufal Basheer
+           2022, Mohamed Naufal <naufal@gmail.com>
            2010, Mohamed Naufal Basheer <naufal11@gmail.com>
            2013-2014, Mozilla Corporation
-           2014, Muhammad Faiz <mfcc64@gmail.com>
+           2014-2015, Muhammad Faiz <mfcc64@gmail.com>
            2008, NVIDIA
            2009, Naotoshi Nojiri
            2012, Nathan Caldwell
@@ -1291,50 +1311,41 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2014, Nicholas Robbins
            2007, Nicholas Tung
            1999, Nick Bailey
-           2003, Nick Kurshev
-           Nick Kurshev <nickols_k@mail.ru>
-           2014, Nicolas Bertrand
+           2003, Nick Kurshev <nickols_k@mail.ru>
            2013, Nicolas Bertrand <nicoinattendu@gmail.com>
-           2011-2014, Nicolas George
-           2012, Nicolas George <nicolas.george normalesup org>
+           2011-2015, Nicolas George
            2007-2012, Nicolas George <nicolas.george@normalesup.org>
            2009, Nicolas Martin <martinic@iro.umontreal.ca>
            2014, Niels Möller
            2007, Nokia Corporation
            2010, Nolan Lum <nol888@gmail.com>
-           2005-2006, Oded Shimon ( ods15 ods15 dyndns org )
-           2006, Oded Shimon <ods15@ods15.dyndns.org>
+           2005-2006, Oded Shimon <ods15@ods15.dyndns.org>
+           2012-2013, Oka Motofumi <chikuzen.mo@gmail.com>
            2005, Ole André Vadla Ravnås <oleavr@gmail.com>
            2014, Oleksij Rempel <linux@rempel-privat.de>
+           2015, Open Broadcast Systems Ltd
            2011, Oskar Arvidsson
-           2015, Parag Salasakar <Parag.Salasakar@imgtec.com>
-           2014, Pascal Massimino <pascal.massimino@gmail.com>
-           2003, Pascal Massimino <skal@planet-d.net>
+           2015, Parag Salasakar <parag.salasakar@imgtec.com>
+           2003-2014, Pascal Massimino <skal@planet-d.net>
            2006, Patrick Guimond
            2011-2015, Paul B Mahol
            2008-2010, Paul Kendall <paul@kcbbs.gen.nz>
            2006, Paul Richards <paul.richards@gmail.com>
            2012, Pavel Koshevoy <pkoshevoy@gmail.com>
+           2015, Pedro Arthur <bygrandao@gmail.com>
            2012, Peng Gao <peng@multicorewareinc.com>
            2000-2001, Peter Gubanov <peter@elecard.net.ru>
            2009, Peter Holik
            2014-2015, Peter Meerwald <pmeerw@pmeerw.net>
-           2006-2014, Peter Ross
            2001-2014, Peter Ross <pross@xvid.org>
            2012, Petri Hintukainen <phintuka <at> users.sourceforge.net>
-           2010-2011, Philip Langdale <ffmpeg.philipl@overt.org>
-           2012, Philip Langdale <philipl@overt.org>
-           2013-2014, Pierre-Edouard LEPERE
+           2010-2013, Philip Langdale <ffmpeg.philipl@overt.org>
            2013-2014, Pierre-Edouard Lepere
            2006-2010, Prakash Punnoor <prakash@punnoor.de>
-           2013-2014, RISC OS Open Ltd
            2013, RISC OS Open Ltd <bavison@riscosopen.org>
            2010, Rafael Carre
            2006-2014, Ramiro Polla
-           2008, Ramiro Polla <ramiro.polla@gmail.com>
            2013-2014, Ramiro Polla, Luca Barbato, Deti Fliegl
-           2006-2007, Reimar Doeffinger
-           2005-2011, Reimar Döffinger
            2009-2014, Reimar Döffinger <Reimar.Doeffinger@gmx.de>
            2002, Remi Guyomarch <rguyom@pobox.com>
            2006-2007, Reynaldo H. Verdejo Pinochet
@@ -1347,55 +1358,42 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2005-2006, Robert Edele <yartrebo@earthlink.net>
            2008, Robert Marston
            2012, Robert Nagy <ronag89 gmail com>
-           2006-2008, Robert Swain
            2008-2009, Robert Swain ( rob opendot cl )
            2002-2005, Roberto Togni
-           2015, Rodger Combs
+           2015, Rodger Combs <rodger.combs@gmail.com>
            1999, Roger Hardiman
            2015, Roger Pack
            2011, Roger Pau Monné <roger.pau@entel.upc.edu>
            2005, Roine Gustafsson
-           2003-2004, Romain Dolbeau
            2003-2004, Romain Dolbeau <romain@dolbeau.org>
            2003-2006, Roman Shaposhnik
-           2007-2012, Ronald S. Bultje
-           2007, Ronald S. Bultje <rbultje@ronald.bitfreak.net>
-           2013, Ronald S. Bultje <rsbultje gmail com>
-           2010-2014, Ronald S. Bultje <rsbultje@gmail.com>
+           2010-2015, Ronald S. Bultje <rsbultje@gmail.com>
            2014, Rong Yan
-           2012, Rudolf Polzer
+           2015, Rostislav Pehlivanov <atomnuker@gmail.com>
            2013, Rudolf Polzer <divverent@xonotic.org>
-           2006-2007, Ryan Martell
-           2006, Ryan Martell <rdm4@martellventures.com>
+           2006-2007, Ryan Martell <rdm4@martellventures.com>
            2013, Rémi Denis-Courmont
-           2010, S.N. Hemanth Meenakshisundaram
-           2010, S.N. Hemanth Meenakshisundaram <smeenaks ucsd edu>
            2010, S.N. Hemanth Meenakshisundaram <smeenaks@ucsd.edu>
            2009, Samalyse
            2014, Samsung Electronics
            2012, Samuel Pitoiset
-           2003-2009, Sascha Sommer
-           2008, Sascha Sommer <saschasommer@freenet.de>
+           2003-2009, Sascha Sommer <saschasommer@freenet.de>
            2008-2011, Sascha Sommer, Benjamin Larsson
            2009-2011, Sebastian Gesemann
            2010, Sebastian Vater <cdgs.basty@googlemail.com>
            2009, Sebastien Lucas <sebastien.lucas@gmail.com>
            1999-2000, Sebastien Rougeaux <sebastien.rougeaux@anu.edu.au>
-           2011, Sebastien Zwickert
+           2011-2012, Sebastien Zwickert
            2013, Seppo Tomperi
            2014-2015, Seppo Tomperi <seppo.tomperi@vtt.fi>
            2015, Shivraj Patil <Shivraj.Patil@imgtec.com>
            2007-2008, Siarhei Siamashka <ssvb@users.sourceforge.net>
            2008, Sisir Koppaka
-           2006-2007, SmartJog S.A., Baptiste Coudurier <baptiste.coudurier@smartjog.com>
            2011-2012, Smartjog S.A.S, Clément Bœsch <clement.boesch@smartjog.com>
            2008-2009, Splitted-Desktop Systems
            2014, StarBrilliant <m13253@hotmail.com>
            2006-2009, Stefan Gehrer <stefan.gehrer@gmx.de>
-           2007-2013, Stefano Sabatini
-           2010-2011, Stefano Sabatini <stefano.sabatini-lala poste it>
-           2012, Stefano Sabatini <stefasab gmail com>
-           2011, Stefano Sabatini | <stefasab@gmail.com>
+           2010-2011, Stefano Sabatini <stefasab gmail com>
            2009, Stephen Backway
            2006-2015, Steve Lhomme
            2002, Steve O'Hara-Smith
@@ -1404,34 +1402,34 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2015, Stupeflix
            2014-2015, Supraja Meedinti
            2011, Sven Hesse <drmccoy@drmccoy.de>
-           2001-2013, The FFmpeg Project
+           2015, Tampere University of Technology
+           2001-2015, The FFmpeg Project
            2002, The Xine Project
            2006, Thijs Vermeir <thijs.vermeir@barco.com>
-           2009-2013, Thilo Borgmann <thilo.borgmann _at_ mail.de>
-           2014, Thilo Borgmann <thilo.borgmann@mail.de>
+           2009-2014, Thilo Borgmann <thilo.borgmann@mail.de>
            2011, Thomas Kuehnel
            2009, Thomas P. Higdon <thomas.p.higdon@gmail.com>
            2003, Thomas Raivio
            2014-2015, Thomas Volkert <thomas@homer-conferencing.com>
-           2013, Tiancheng "Timothy" Gu
            2014, Tiancheng "Timothy" Gu <timothygu99@gmail.com>
            2001, Tim Ferguson
            2014, Tim Walker <tdskywalker@gmail.com>
            2014-2015, Timo Rothenpieler <timo@rothenpieler.org>
            2003, Tinic Uro
            2009, Tobias Bindhammer
+           2015, Tom Butterworth <bangnoise@gmail.com>
            2010, Tomas Härdin
            2009, Toshimitsu Kimura
            2015, Urvang Joshi
+           2012, VLC authors and VideoLAN
            2013, VTT
            2013, Vadim Kalinsky <vadim@kalinsky.ru>
+           2015, Vesselin Bontchev
            2008, Victor Paesa
            2005, Vidar Madsen
            2014-2015, Vignesh Venkatasubramanian
            2012, Vitaliy E Sugrobov
-           2007-2011, Vitor Sessak
-           2007, Vitor Sessak <vitor1001@gmail.com>
-           1001, Vitor Sessak <vitorgmail com>
+           2007-2011, Vitor Sessak <vitor1001@gmail.com>
            2013-2015, Vittorio Giovara
            2013-2015, Vittorio Giovara <vittorio.giovara@gmail.com>
            2007-2011, Vladimir Voroshilov
@@ -1445,6 +1443,7 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2006-2011, Xvid Solutions GmbH
            2013, Yukinori Yamazoe
            2002, Zdenek Kabelac <kabi@informatics.muni.cz>
+           2015, Zhang Rui <bbcallen@gmail.com>
            2008-2011, Zhentan Feng <spyfeng@gmail.com>
            2015, Zhou Xiaoyong <zhouxiaoyong@loongson.cn>
            2005, Zoltan Hidvegi <hzoli -a- hzoli -d- com>
@@ -1456,9 +1455,6 @@ Copyright: 2004, AGAWA Koji <i@atty.jp>
            2010, tipok <piratfm@gmail.com>
            2008, vmrsss
            2003-2011, x264 project
-           2005-2008, Diego Biurrun
-           2000-2002, Fabrice Bellard
-           2005-2008, Mans Rullgard
 License: LGPL-2.1+
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv2
@@ -1467,7 +1463,6 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv2
        src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avs/config.h
        src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avs/types.h
        src/3rdparty/chromium/third_party/ffmpeg/compat/avisynth/avxsynth_c.h
-       src/3rdparty/chromium/third_party/ffmpeg/doc/general.texi
        src/3rdparty/chromium/third_party/ffmpeg/doc/texi2pod.pl
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/flac_dsp_gpl.asm
        src/3rdparty/chromium/third_party/ffmpeg/libavdevice/x11grab.c
@@ -1521,6 +1516,7 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv2
        src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_pp7_init.c
        src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_pullup.asm
        src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_pullup_init.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_removegrain.asm
        src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_spp.c
        src/3rdparty/chromium/third_party/ffmpeg/libavfilter/x86/vf_tinterlace_init.c
        src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess.c
@@ -1529,13 +1525,13 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv2
        src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_internal.h
        src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_template.c
        src/3rdparty/chromium/third_party/ffmpeg/libswresample/swresample-test.c
+       src/3rdparty/chromium/third_party/ffmpeg/tools/coverity.c
 Copyright: 2002, A'rpi
            2014-2015, Arwa Arif <arwaarif1994@gmail.com>
            2010, Baptiste Coudurier
            2002-2003, Brian J. Murrell
            2006, Clemens Fruhwirth <clemens@endorphin.org>
            2012-2013, Clément Bœsch
-           2012-2013, Clément Bœsch <u pkh me>
            2003, Daniel Moreno <comac@comac.darktech.org>
            2001-2003, Donald A. Graft
            2000-2002, Fabrice Bellard
@@ -1543,7 +1539,7 @@ Copyright: 2002, A'rpi
            2010, Gordon Schmidt <gordon.schmidt <at> s2000.tu-chemnitz.de>
            2006, Ivo van Poorten
            2014, James Darnley <james.darnley@gmail.com>
-           2013, Jean Delvare <khali@linux-fr.org>
+           2013-2015, Jean Delvare <jdelvare@suse.com>
            2012, Jeremy Tran
            2002, Jindrich Makovicka <makovick@gmail.com>
            2006, Julian Hall
@@ -1555,8 +1551,9 @@ Copyright: 2002, A'rpi
            2003, Michael Zucchi <notzed@ximian.com>
            2010, Niel van der Westhuizen <nielkie@gmail.com>
            2005, Nikolaj Poroshin <porosh3@psu.ru>
-           2013, Paul B Mahol
+           2013-2015, Paul B Mahol
            1997-1998, Rasca, Berlin
+           2014, Red Hat, Inc
            2003, Rich Felker
            2004, Romain Dolbeau <romain@dolbeau.org>
            2010-2012, Stefano Sabatini
@@ -1567,7 +1564,9 @@ Copyright: 2002, A'rpi
            1997-2001, ZSNES Team ( zsknight@zsnes.com / _demo_@zsnes.com )
 License: GPL-2+
 
-Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/ac3dec_fixed.c
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/aacdec_fixed.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/aacsbr_fixed.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/ac3dec_fixed.c
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/arm/vp8dsp_armv6.S
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/fft_fixed_32.c
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/fft_init_table.c
@@ -1599,17 +1598,24 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/ac3dec_fixed.c
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/fixed_dsp.h
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/mips/float_dsp_mips.c
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/mips/libm_mips.h
-Copyright: 2010, Google Inc
+Copyright: 2009-2010, Alex Converse <alex.converse@gmail.com>
+           2010, Google Inc
            2011, Mans Rullgard <mans@mansr.com>
+           2006-2007, Maxim Gavrilov ( maxim.gavrilov gmail com )
+           2005-2006, Oded Shimon ( ods15 ods15 dyndns org )
            2010, Rob Clark <rob@ti.com>
+           2008-2009, Robert Swain ( rob opendot cl )
 License: BSD-3-clause or LGPL-2.1+
 
-Files: src/3rdparty/chromium/third_party/ffmpeg/doc/examples/avio_reading.c
+Files: src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/license_texts/oggparse_ahlberg_rullgayrd_2005.txt
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/avio_dir_cmd.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/avio_reading.c
        src/3rdparty/chromium/third_party/ffmpeg/doc/examples/decoding_encoding.c
        src/3rdparty/chromium/third_party/ffmpeg/doc/examples/demuxing_decoding.c
        src/3rdparty/chromium/third_party/ffmpeg/doc/examples/extract_mvs.c
        src/3rdparty/chromium/third_party/ffmpeg/doc/examples/filtering_audio.c
        src/3rdparty/chromium/third_party/ffmpeg/doc/examples/filtering_video.c
+       src/3rdparty/chromium/third_party/ffmpeg/doc/examples/http_multiclient.c
        src/3rdparty/chromium/third_party/ffmpeg/doc/examples/metadata.c
        src/3rdparty/chromium/third_party/ffmpeg/doc/examples/muxing.c
        src/3rdparty/chromium/third_party/ffmpeg/doc/examples/qsvdec.c
@@ -1623,78 +1629,86 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/doc/examples/avio_reading.c
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/nellymoser.c
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/nellymoser.h
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/nellymoserdec.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/texturedsp.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/texturedspenc.c
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/vc1dsp_init.c
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/vc1dsp_mmx.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_deband.c
        src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggdec.c
        src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggdec.h
        src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparseogm.c
        src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparsespeex.c
        src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparsetheora.c
        src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparsevorbis.c
-       src/3rdparty/chromium/third_party/ffmpeg/doc/bootstrap.min.css
 Copyright: 2014, Andrey Utkin
            2015, Anton Khirnov
            2014, Barbara Lepage <db0company@gmail.com>
+           2009, Benjamin Dobell, Glass Echidna
            2007, Christophe GISQUET <christophe.gisquet@free.fr>
            2012-2014, Clément Bœsch
            2001-2003, Fabrice Bellard
            2001, Lionel Ulmer (lionel.ulmer@free.fr / <bbrox@bbrox.org>
            2007, Loic Minier <lool@dooz.org>
-           2015, Ludmila Glinskih
            2014, Lukasz Marek
            2005, Matthieu CASTET, Alex Beregszaszi
+           2012, Matthäus G. "Anteru" Chajdas (http://anteru.net)
+           2005, Michael Ahlberg, MÃ¥ns RullgÃ¥rd
            2005, Michael Ahlberg, Måns Rullgård
            2010, Nicolas George
+           2015, Niklas Haas
+           2015, Paul B Mahol
            2008, Reimar Döffinger
            2011, Reinhard Tartler
            2013-2014, Rl, Aetey Global Technologies AB
            2011-2014, Stefano Sabatini
+           2015, Stephan Holljes
            2011, Tomas Härdin
-           2007, a840bda5870ba11f19698ff6eb9581dfb0f95fa5
-           2011-2014, Twitter, Inc
+           2015, Vittorio Giovara <vittorio.giovara@gmail.com>
 License: Expat
 
-Files: src/3rdparty/chromium/third_party/ffmpeg/BUILD.gn
-       src/3rdparty/chromium/third_party/ffmpeg/PRESUBMIT.py
+Files: src/3rdparty/chromium/third_party/ffmpeg/PRESUBMIT.py
        src/3rdparty/chromium/third_party/ffmpeg/chromium/dllmain.cc
-       src/3rdparty/chromium/third_party/ffmpeg/chromium/ffmpeg.sigs
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/build_ffmpeg.py
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/copy_config.sh
+       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/credits_updater_unittest.py
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/generate_gyp.py
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/generate_gyp_unittest.py
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/munge_config_optimizations.sh
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/win_env.sh
        src/3rdparty/chromium/third_party/ffmpeg/ffmpeg.gyp
-       src/3rdparty/chromium/third_party/ffmpeg/ffmpeg_generated.gni
        src/3rdparty/chromium/third_party/ffmpeg/ffmpeg_generated.gypi
-       src/3rdparty/chromium/third_party/ffmpeg/ffmpeg_options.gni
-Copyright: 2009-2015, The Chromium Authors
+Copyright: 2009-2016, The Chromium Authors
 License: BSD-3-clause
 
-Files: src/3rdparty/chromium/third_party/ffmpeg/compat/windows/makedef
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/faandct.c
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/faandct.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/interplayacm.c
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libfdk-aacdec.c
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libfdk-aacenc.c
        src/3rdparty/chromium/third_party/ffmpeg/libavcodec/zerocodec.c
        src/3rdparty/chromium/third_party/ffmpeg/libavdevice/openal-dec.c
        src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_hqx.c
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/x86/x86inc.asm
-Copyright: 2014, Clément Bœsch
-           2012-2013, Derek Buitenhuis
+Copyright: 2008, Adam Gashlin
+           2014, Clément Bœsch
+           2012, Derek Buitenhuis
            2011, Jonathan Baldwin
+           2004-2008, Marko Kreen
            2012, Martin Storsjo
            2003, Michael Niedermayer <michaelni@gmx.at>
+           2015, Paul B Mahol
            2003, Roman Shaposhnik
-           2005-2013, x264 project
+           2005-2015, x264 project
 License: ISC
 
-Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideo.h
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideodec.cpp
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideoenc.cpp
-Copyright: 2011-2012, Derek Buitenhuis
-License: GPL-2
+Files: src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/license_texts/jpeg.txt
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/jfdctfst.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/jfdctint_template.c
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/jrevdct.c
+Copyright: 1991-1996, Thomas G. Lane
+License: IJG
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv3
+       src/3rdparty/chromium/third_party/ffmpeg/compat/solaris/make_sunver.pl
        src/3rdparty/chromium/third_party/ffmpeg/doc/t2h.pm
 Copyright: 2014, Andreas Cadhalpun
            2011-2012, Free Software Foundation, Inc
@@ -1702,43 +1716,28 @@ Copyright: 2014, Andreas Cadhalpun
            2014, Tiancheng "Timothy" Gu
 License: GPL-3+
 
-Files: src/3rdparty/chromium/third_party/ffmpeg/tools/coverity.c
-Copyright: 2014, Red Hat, Inc
-License: GPL-2+
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideo.h
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideodec.cpp
+       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideoenc.cpp
+Copyright: 2011-2012, Derek Buitenhuis
+License: GPL-2
 
-Files: src/3rdparty/chromium/third_party/ffmpeg/tools/cws2fws.c
-Copyright: Alex Beregszaszi
-License: public-domain
-
-Files: src/3rdparty/chromium/third_party/ffmpeg/tools/qt-faststart.c
-Copyright: Mike Melanson (melanson@pcisys.net)
-License: public-domain
-
-Files: src/3rdparty/chromium/third_party/ffmpeg/tools/patcheck
-Copyright: Michael Niedermayer
-License: GPL
-Comment: The file states:
- License: GPL, Author: Michael Niedermayer
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavutil/libm.h
+       src/3rdparty/chromium/third_party/ffmpeg/libswresample/resample.c
+Copyright: 2006, John Maddock
+           2004-2012, Michael Niedermayer <michaelni@gmx.at>
+           2006, Xiaogang Zhang
+License: BSL-1.0 or LGPL-2.1+
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/fmtconvert_mips.c
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/softfloat_tables.h
 Copyright: 2012, MIPS Technologies, Inc., California.
 License: BSD-2-clause or LGPL-2.1+
 
-Files: src/3rdparty/chromium/third_party/ffmpeg/LICENSE.md
-Copyright: 1991-1999, Free Software Foundation, Inc
-           2010, Google Inc
-           2001, Lionel Ulmer (lionel.ulmer@free.fr / <bbrox@bbrox.org>
-           2011, Mans Rullgard <mans@mansr.com>
-           2005, Matthieu CASTET, Alex Beregszaszi
-           2005, Michael Ahlberg, Måns Rullgård
-           2003, Michael Niedermayer <michaelni@gmx.at>
-           2008, Reimar Döffinger
-           2010, Rob Clark <rob@ti.com>
-           2003, Roman Shaposhnik
-           1991-1996, Thomas G. Lane
-License: BSD-3-clause or Expat or GPL-2+ or ISC or LGPL-2.1+
-Comment: meta licensing information
+Files: src/3rdparty/chromium/third_party/ffmpeg/libavformat/aadec.c
+Copyright: 2001-2014, Jim Teeuwen
+           2015, Vesselin Bontchev
+License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libzvbi-teletextdec.c
 Copyright: 2013, Marton Balint
@@ -1749,9 +1748,72 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/libavutil/adler32.c
 Copyright: 1995, Mark Adler
 License: Zlib
 
-Files: src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/cygwin-wrapper
-Copyright: No copyright information
-License: MPL-2.0
+Files: src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/credits_updater.py
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause or LGPL-2.1+
+
+Files: src/3rdparty/chromium/third_party/skia/*
+Copyright: 2008-2016, Google Inc
+           2015, Google Inc.
+           2015, Google Inc." "
+           2013-2015, Google, Inc
+           2012, Intel Inc
+           2009, Motorola
+           2012, Mozilla Foundation
+           2011-2015, Skia
+           2005-2015, The Android Open Source Project
+           2011-2015, The Chromium Authors
+           2012, The Native Client Authors
+           block
+           block suitable for this language, with the
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/ashmem/cutils/ashmem-dev.c
+       src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/native_app_glue/android_native_app_glue.c
+       src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/native_app_glue/android_native_app_glue.h
+       src/3rdparty/chromium/third_party/skia/src/images/SkImageDecoder_libwebp.cpp
+       src/3rdparty/chromium/third_party/skia/third_party/etc1/LICENSE
+       src/3rdparty/chromium/third_party/skia/third_party/etc1/etc1.cpp
+       src/3rdparty/chromium/third_party/skia/third_party/etc1/etc1.h
+Copyright: 2009, Google Inc
+           2008-2010, The Android Open Source Project
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/skia/third_party/libpng/pnglibconf.h
+       src/3rdparty/chromium/third_party/skia/third_party/libsdl/android/SDL_config.h
+       src/3rdparty/chromium/third_party/skia/third_party/libsdl/linux/SDL_config.h
+       src/3rdparty/chromium/third_party/skia/third_party/libsdl/mac/SDL_config.h
+Copyright: 1996-1997, Andreas Dilger
+           1998-2014, Glenn Randers-Pehrson
+           1998-2014, Glenn Randers-Pehrson, and are
+           1995-1996, Guy Eric Schalnat, Group 42, Inc
+           1997-2015, Sam Lantinga <slouken@libsdl.org>
+License: Zlib
+
+Files: src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/cpufeatures/cpu-features.c
+       src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/cpufeatures/cpu-features.h
+Copyright: 2010, The Android Open Source Project
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/skia/third_party/lua/doc/readme.html
+Copyright: 1994-2013, Lua.org, PUC-Rio
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/skia/third_party/freetype/include/freetype-android/ftoption.h
+Copyright: 1996-2015, /
+License: FTL
+
+Files: src/3rdparty/chromium/third_party/skia/third_party/lua/src/lua.h
+Copyright: 1994-2013, Lua.org, PUC-Rio
+License: Expat
+
+Files: src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/ashmem/cutils/ashmem.h
+Copyright: 2008, The Android Open Source Project
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/skia/src/views/unix/keysym2ucs.c
+Copyright: No copyright claimed.
+License: public-domain
 
 Files: src/3rdparty/chromium/third_party/fips181/*
 Copyright: 2014, The Chromium Authors
@@ -1979,6 +2041,26 @@ Files: src/3rdparty/chromium/third_party/hunspell/*
 Copyright: 2009, The Chromium Authors
 License: BSD-3-clause
 
+Files: src/3rdparty/chromium/third_party/hunspell/src/hunspell/*
+Copyright: 2002-2003, Laszlo Nemeth
+License: LGPL-2+ or LGPL-2.1+ or MPL-1.1
+
+Files: src/3rdparty/chromium/third_party/hunspell/google/*
+       src/3rdparty/chromium/third_party/hunspell/hunspell.gyp
+       src/3rdparty/chromium/third_party/hunspell/update_google_patch.sh
+Copyright: 2009-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/hunspell/src/hunspell/phonet.cxx
+       src/3rdparty/chromium/third_party/hunspell/src/hunspell/phonet.hxx
+Copyright: 2000, Bjoern Jacke
+License: LGPL-2.1
+
+Files: src/3rdparty/chromium/third_party/hunspell/src/hunspell/Makefile.in
+       src/3rdparty/chromium/third_party/hunspell/src/parsers/Makefile.in
+Copyright: Free Software Foundation, Inc
+License: FSF_unlimited
+
 Files: src/3rdparty/chromium/third_party/hwcplus/*
 Copyright: 2012, Google, Inc
            2005-2011, The Android Open Source Project
@@ -2097,6 +2179,11 @@ License: GPL-2+_AutoConfException or FSF_unlimited
 Files: src/3rdparty/chromium/third_party/icu/source/install-sh
 Copyright: 1991, the Massachusetts Institute of Technology
 License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/ijar/*
+Copyright: 2001-2007, Alan Donovan
+           2015, Google Inc
+License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/instrumented_libraries/*
 Copyright: 2013-2015, The Chromium Authors
@@ -2468,6 +2555,61 @@ Files: src/3rdparty/chromium/third_party/npapi/bindings/*
 Copyright: 2006-2009 The Chromium Authors.
 License: LGPL-2.1+ or MPL-1.1
 
+Files: src/3rdparty/chromium/third_party/nss/*
+Copyright: 2013-2014, Intel Corp
+License: MPL-2.0
+
+Files: src/3rdparty/chromium/third_party/nss/nss.gyp
+       src/3rdparty/chromium/third_party/nss/nss/exports_win.def
+       src/3rdparty/chromium/third_party/nss/scripts/nspr-checkout.sh
+       src/3rdparty/chromium/third_party/nss/scripts/nss-checkout.sh
+Copyright: 2010-2012, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/nss/nspr/pr/include/prerror.h
+       src/3rdparty/chromium/third_party/nss/nspr/pr/src/misc/prerrortable.c
+Copyright: 1987, 1988 Student Information Processing Board of MIT
+License: MIT/X11 or MPL-2.0
+
+Files: src/3rdparty/chromium/third_party/nss/nspr/pr/src/misc/praton.c
+Copyright: 1993, Digital Equipment Corporation
+           1996-1999, Internet Software Consortium
+           2004, Internet Systems Consortium, Inc. ("ISC")
+License: BSD-3-clause or ISC
+
+Files: src/3rdparty/chromium/third_party/nss/nspr/pr/src/misc/prdtoa.c
+Copyright: 1991-2001, Lucent Technologies
+License: ISC-like-dmgfp or MPL-2.0
+
+Files: src/3rdparty/chromium/third_party/nss/nspr/pr/src/md/windows/w95thred.c
+Copyright: 2006-2008, The Chromium Authors
+License: BSD-3-clause or MPL-2.0
+
+Files: src/3rdparty/chromium/third_party/nss/nspr/pr/src/malloc/prmalloc.c
+Copyright: Poul-Henning Kamp
+           The Chromium Authors
+License: Beerware or MPL-2.0
+
+Files: src/3rdparty/chromium/third_party/openh264/src/*
+Copyright: The OpenH264 Authors
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/openh264/openh264.gyp
+       src/3rdparty/chromium/third_party/openh264/openh264.gypi
+       src/3rdparty/chromium/third_party/openh264/openh264_args.gypi
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/openh264/src/module/task_utils.h
+       src/3rdparty/chromium/third_party/openh264/src/module/task_utils.py
+       src/3rdparty/chromium/third_party/openh264/src/module/task_utils_generated.h
+Copyright: Mozilla Foundation
+License: MPL-2.0
+
+Files: src/3rdparty/chromium/third_party/openh264/src/module/RefCounted.h
+Copyright: 2015, Mozilla Foundation
+License: Apache-2.0
+
 Files: src/3rdparty/chromium/third_party/opus/src/*
 Copyright: 2007-2008, CSIRO
            2001, Erik de Castro Lopo <erikd@mega-nerd.com>
@@ -2544,6 +2686,15 @@ License: Expat
 
 Files: src/3rdparty/chromium/third_party/qunit/src/browser_test_harness.js
 Copyright: 2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/sfntly/*
+Copyright: 2011-2015, Google Inc
+           2011, The sfntly Open Source Project
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/sfntly/sfntly.gyp
+Copyright: 2011, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/simplejson/*
@@ -2629,6 +2780,136 @@ Files: src/3rdparty/chromium/third_party/tcmalloc/vendor/m4/acx_pthread.m4
 Copyright: 2006, Steven G. Johnson
 License: GPL_AutoConfException
 
+Files: src/3rdparty/chromium/third_party/typ/*
+Copyright: 2014, Dirk Pranke
+           2014, Google Inc
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/usrsctp/*
+Copyright: 2008-2012, Brad Penoff
+           2001-2008, Cisco Systems, Inc
+           2015, Felix Weinrank
+           2004-2006, Intel Corporation
+           2011-2015, Irene Ruengeler
+           2013, Lally Singh
+           2005-2015, Michael Tuexen
+           2015, Oleg Alexeenkov
+           2008-2012, Randall Stewart
+           2015, Randall Stewart and Michael Tuexen
+           2005, Robert N. M. Watson
+           1995-1997, and 1998 WIDE Project
+           locked by SOCKBUF_LOCK(&so->so_rcv)
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_ss_functions.c
+       src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_userspace.c
+       src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/user_atomic.h
+       src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/user_environment.c
+       src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/user_environment.h
+       src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/user_recv_thread.c
+       src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/user_recv_thread.h
+       src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/user_socket.c
+       src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/user_uma.h
+       src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/usrsctp.h
+Copyright: 2009-2010, Brad Penoff
+           2001-2002, Cisco Systems, Inc
+           2009-2010, Humaira Kamal
+           2011-2012, Irene Ruengeler
+           2002-2012, Michael Tuexen
+           2002-2012, Randall R. Stewart
+           2010-2012, Randall Stewart
+           2004-2008, Robert N. M. Watson
+           2010-2012, Robin Seggelmann
+           1993-2012, Since DOC
+           2004, The FreeBSD Foundation
+           file of
+License: BSD-2-clause
+
+Files: src/3rdparty/chromium/third_party/usrsctp/usrsctp.gyp
+       src/3rdparty/chromium/third_party/usrsctp/usrsctp_nacl.gyp
+Copyright: 2012-2014, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/web-animations-js/*
+Copyright: 2014, Google Inc
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/webdriver/*
+Copyright: 2007-2012, Google Inc
+           2011-2014, Software Freedom Conservancy
+           2012, Software freedom conservancy
+           2007-2012, WebDriver committers
+           2008-2012, Webdriver_name committers
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/WebKit/*
+Copyright: 2010, 2012 Google Inc
+           2009-2010, Adam Barth
+           2006, Alexey Proskuryakov
+           2006-2007, Alexey Proskuryakov <ap@webkit.org>
+           2004-2005, Allan Sandfeld Jensen <kde@carewolf.com>
+           2008, Alp Toker <alp@atoker.com>
+           2008-2009, Anthony Ricaud <rik@webkit.org>
+           1999, Antti Koivisto <koivisto@kde.org>
+           2006-2008, Apple Computer, Inc
+           2003-2014, Apple Inc
+           2013, BlackBerry Limited
+           2011, Brian Grinstead
+           2010, Chris Jerdonek <chris.jerdonek@gmail.com>
+           2010, Chris Jerdonek <cjerdonek@webkit.org>
+           2011, Code Aurora Forum
+           2010, Company 100, Inc
+           2009-2011, Daniel Bates <dbates@intudata.com>
+           2007, David Smith <catfish.man@gmail.com>
+           2009, Dirk Schulze <krit@webkit.org>
+           2007-2008, Eric Seidel <eric@webkit.org>
+           2009-2012, Ericsson AB
+           1991-1999, Free Software Foundation, Inc
+           2010, Gabor Rapcsanyi (rgabor@inf.u-szeged.hu), University of Szeged
+           2006-2015, Google Inc
+           2013, Google, Inc
+           2012, Google, inc
+           2007, Graham Dennis <graham.dennis@gmail.com>
+           2009, IBM Corp
+           2013, Igalia S.L
+           2013, Igalia, S.L
+           2012-2013, Intel Corporation
+           2012-2015, Intel Inc
+           2009, Jian Li <jianli@chromium.org>
+           2009-2010, Joel Stanley
+           2009-2010, Joseph Pecoraro
+           2007, Justin Haygood <jhaygood@reaktix.com>
+           2011, Kris Jordan <krisjordan@gmail.com>
+           1999, Lars Knoll <knoll@kde.org>
+           2004-2010, Leonard Richardson
+           2007, Matt Lilek <pewtermoose@gmail.com>
+           2008, Matt Lilek <webkit@mattlilek.com>
+           2012, Motorola Mobility Inc
+           2007, Nicholas Shanks <contact@nickshanks.com>
+           2006-2007, Nicholas Shanks <webkit@nickshanks.com>
+           2010, Nikita Vasilyev
+           2008-2012, Nokia Corporation and/or its subsidiary(-ies)
+           2008, Nokia Inc
+           2008, Nuanti Ltd
+           2013-2014, Opera Software ASA
+           2012, Patrick Gansterer <paroga@paroga.com>
+           2010, ProFUSION embedded systems
+           2013, Samsung
+           2012-2014, Samsung Electronics
+           2009-2014, The Chromium Authors
+           2008, Tony Chang <idealisms@gmail.com>
+           2010, Torch Mobile (Beijing) Co. Ltd
+           2007-2009, Torch Mobile Inc
+           2008-2009, Torch Mobile Inc. (http://www.torchmobile.com/)
+           2009, Torch Mobile Inc. http://www.torchmobile.com
+           2007-2008, Torch Mobile, Inc
+           2013, Xidorn Quan <quanxunzhen@gmail.com>
+           2013, Yandex LLC
+           2012, Zan Dobersek <zandobersek@gmail.com>
+           2012, Zoltan Horvath, Adobe Systems Incorporated
+           2006-2011, the V8 project authors
+License: BSD-3-clause
+
 Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayValue.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayValue.h
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/Dictionary.cpp
@@ -2638,6 +2919,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/NPV8Object.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ScriptRegexp.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ScriptRegexp.h
+       src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/V8IdleTaskRunner.h
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/V8Initializer.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/V8Initializer.h
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/V8MutationCallback.cpp
@@ -2659,6 +2941,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/modules/v8/V8BindingForModules.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/modules/v8/V8BindingForModulesTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/modules/v8/custom/V8DeviceMotionEventCustom.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/LICENSE-APPLE
        src/3rdparty/chromium/third_party/WebKit/Source/core/animation/AnimationTranslationUtil.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/animation/AnimationTranslationUtilTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/animation/CompositorAnimationsTestHelper.h
@@ -2668,6 +2951,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/clipboard/Pasteboard.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/BasicShapeFunctions.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/BasicShapeFunctions.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSBasicShapeValues.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSBasicShapeValues.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSBorderImageSliceValue.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSBorderImageSliceValue.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSCrossfadeValue.cpp
@@ -2722,6 +3007,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/FontFaceCache.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/FontFaceSet.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/FontFaceSet.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/FontStyleMatcher.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/MediaList.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/MediaQuery.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/MediaQuery.h
@@ -2739,6 +3025,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/mathml.css
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControls.css
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControlsAndroid.css
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControlsAndroidNew.css
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControlsNew.css
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserMode.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ScopedStyleResolver.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ScopedStyleResolver.h
@@ -2840,10 +3128,16 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/XMLDocument.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/XMLDocument.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/XMLDocument.idl
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/CaretBase.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/CaretBase.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/CompositionUnderline.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/DragCaretController.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/DragCaretController.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditingBehavior.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditingBoundary.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditingStyle.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditingUtilities.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditingUtilities.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/Editor.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/Editor.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditorKeyBindings.cpp
@@ -2854,8 +3148,14 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/InputMethodController.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/PlainTextRange.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/PlainTextRange.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/Position.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/Position.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/PositionIterator.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/PositionIterator.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/SelectionController.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/SelectionController.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/SelectionEditor.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/SelectionEditor.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/SelectionType.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/TextAffinity.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/TextGranularity.h
@@ -2866,12 +3166,82 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/VisibleUnits.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/VisibleUnits.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/WritingDirection.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/AppendNodeCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/AppendNodeCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/ApplyBlockElementCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/ApplyStyleCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/ApplyStyleCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/BreakBlockquoteCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/BreakBlockquoteCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/CompositeEditCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/CompositeEditCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/CreateLinkCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/CreateLinkCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/DeleteFromTextNodeCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/DeleteFromTextNodeCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/DeleteSelectionCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/DeleteSelectionCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/EditAction.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/EditCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/EditCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/EditorCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/FormatBlockCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/FormatBlockCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/IndentOutdentCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/IndentOutdentCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertIntoTextNodeCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertIntoTextNodeCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertLineBreakCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertLineBreakCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertListCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertListCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertNodeBeforeCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertNodeBeforeCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertParagraphSeparatorCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertParagraphSeparatorCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertTextCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertTextCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/MergeIdenticalElementsCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/MergeIdenticalElementsCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/MoveSelectionCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/MoveSelectionCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveCSSPropertyCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveCSSPropertyCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveFormatCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveFormatCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveNodeCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveNodeCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveNodePreservingChildrenCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveNodePreservingChildrenCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/ReplaceSelectionCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/ReplaceSelectionCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SetNodeAttributeCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SetNodeAttributeCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SimplifyMarkupCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SimplifyMarkupCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SplitElementCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SplitElementCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SplitTextNodeCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SplitTextNodeCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SplitTextNodeContainingElementCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SplitTextNodeContainingElementCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/TextInsertionBaseCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/TextInsertionBaseCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/TypingCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/TypingCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/UndoStack.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/UnlinkCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/UnlinkCommand.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/WrapContentsInDummySpanCommand.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/WrapContentsInDummySpanCommand.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/BackwardsCharacterIterator.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/BackwardsCharacterIterator.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/BitStack.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/BitStack.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/CharacterIterator.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/CharacterIterator.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/SearchBuffer.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/SearchBuffer.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/SimplifiedBackwardsTextIterator.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/SimplifiedBackwardsTextIterator.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/TextIterator.cpp
@@ -2881,6 +3251,23 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/TextIteratorTextState.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/WordAwareIterator.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/iterators/WordAwareIterator.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/HTMLInterchange.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/HTMLInterchange.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/MarkupAccumulator.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/MarkupAccumulator.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/MarkupFormatter.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/MarkupFormatter.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/Serialization.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/Serialization.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/StyledMarkupAccumulator.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/StyledMarkupAccumulator.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/StyledMarkupSerializer.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/serializers/StyledMarkupSerializer.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/SpellCheckRequester.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/SpellCheckRequester.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/SpellChecker.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/SpellChecker.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/TextCheckingHelper.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/AnimationEvent.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/AnimationEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/AnimationEvent.idl
@@ -2970,6 +3357,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMWindowLifecycleObserver.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMWindowProperty.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMWindowProperty.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/frame/FrameSerializer.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/History.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/History.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/History.idl
@@ -3228,6 +3616,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutWordBreak.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutWordBreak.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/VerticalPositionCache.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/CompositedLayerMapping.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/CompositedLayerMapping.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/CompositingLayerAssigner.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/CompositingLayerAssigner.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/CompositingRequirementsUpdater.cpp
@@ -3236,6 +3626,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/GraphicsLayerTreeBuilder.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/GraphicsLayerUpdater.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/GraphicsLayerUpdater.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/PaintLayerCompositor.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/compositing/PaintLayerCompositor.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineWidth.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/line/LineWidth.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/shapes/BoxShape.cpp
@@ -3318,6 +3710,9 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/FilterEffectBuilder.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/MediaControlsPainter.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/MediaControlsPainter.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerFilterInfo.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerFilterInfo.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerFragment.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/plugins/PluginView.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/style/BasicShapes.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/style/BasicShapes.h
@@ -3516,6 +3911,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/common/Object.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/common/ParsedURL.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/components/ObjectPropertiesSection.js
+       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/elements/InspectElementModeController.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/profiler/CPUProfileBottomUpDataGrid.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/profiler/CPUProfileDataGrid.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/profiler/CPUProfileTopDownDataGrid.js
@@ -3804,6 +4200,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/storage/StorageEvent.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/storage/StorageNamespace.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/storage/StorageNamespace.h
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AbstractAudioContext.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AbstractAudioContext.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AnalyserNode.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AnalyserNode.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AnalyserNode.idl
@@ -3818,8 +4216,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AudioBufferSourceNode.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AudioBufferSourceNode.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AudioBufferSourceNode.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AudioContext.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AudioContext.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AudioContext.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AudioDestinationNode.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AudioDestinationNode.h
@@ -4138,6 +4534,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontBaseline.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontData.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontData.h
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontDataRange.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontDescriptionTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontFamily.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontFamily.h
@@ -4158,6 +4555,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/opentype/OpenTypeTypes.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/opentype/OpenTypeVerticalData.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/opentype/OpenTypeVerticalData.h
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/opentype/OpenTypeVerticalDataTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/shaping/CachingWordShapeIterator.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/shaping/CachingWordShaper.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/shaping/CachingWordShaper.h
@@ -4261,6 +4659,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/DistantLightSource.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FELighting.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FELighting.h
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/Filter.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperation.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperation.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperations.cpp
@@ -4307,6 +4706,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/network/ResourceRequest.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/network/ResourceResponse.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/network/ResourceResponse.h
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollAnimatorTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollTypes.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollableArea.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/Scrollbar.cpp
@@ -4379,6 +4779,9 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/web/GeolocationClientProxy.h
        src/3rdparty/chromium/third_party/WebKit/Source/web/GraphicsLayerFactoryChromium.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/GraphicsLayerFactoryChromium.h
+       src/3rdparty/chromium/third_party/WebKit/Source/web/LinkHighlightImpl.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/web/LinkHighlightImpl.h
+       src/3rdparty/chromium/third_party/WebKit/Source/web/LinkHighlightImplTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/PageOverlay.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/PageOverlay.h
        src/3rdparty/chromium/third_party/WebKit/Source/web/SpeechRecognitionClientProxy.cpp
@@ -4670,7 +5073,7 @@ Copyright: 2010-2011, Adam Barth
            2008, Collin Jackson <collinj@webkit.org>
            2010, Company 100 Inc
            2012, Company 100, Inc
-           2011-2012, Daniel Bates <dbates@intudata.com>
+           2011, Daniel Bates <dbates@intudata.com>
            2012, Digia Plc. and/or its subsidiary(-ies)
            2001, Dirk Mueller <mueller@kde.org>
            2008-2009, Dirk Schulze <krit@webkit.org>
@@ -4681,7 +5084,7 @@ Copyright: 2010-2011, Adam Barth
            2005, Frerich Raabe <raabe@kde.org>
            2012, Gabor Rapcsanyi (rgabor@inf.u-szeged.hu), University of Szeged
            2001, Gareth Rees
-           2006-2015, Google Inc
+           2008-2015, Google Inc
            2007-2013, Google, Inc
            2006, Graham Dennis <graham.dennis@gmail.com>
            2007, Henry Mason <hmason@mac.com>
@@ -4730,11 +5133,13 @@ License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/build/scripts/hasher.py
+       src/3rdparty/chromium/third_party/WebKit/Source/core/LICENSE-LGPL-2
        src/3rdparty/chromium/third_party/WebKit/Source/core/clipboard/DataTransfer.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSBorderImage.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSBorderImage.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSComputedStyleDeclaration.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSComputedStyleDeclaration.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSCounterValue.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSCursorImageValue.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSCursorImageValue.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSCustomFontData.h
@@ -4766,6 +5171,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSPrimitiveValue.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSProperty.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSProperty.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSQuadValue.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSRule.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSRule.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSRule.idl
@@ -4786,6 +5192,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSValue.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSValueList.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSValueList.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSValuePair.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/ComputedStyleCSSValueMapping.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/ElementRuleCollector.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/ElementRuleCollector.h
@@ -4833,11 +5240,13 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/html.css
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserMode.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserObserver.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserSelector.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserSelector.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserString.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserValues.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserValues.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSPropertyParser.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSPropertyParser.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/LegacyCSSPropertyParser.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/quirks.css
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/CSSToStyleMap.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/CSSToStyleMap.h
@@ -4987,6 +5396,12 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/VisitedLinkState.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditingBehavior.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/EditingBehaviorTypes.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/PendingSelection.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/PendingSelection.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/markers/DocumentMarker.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/markers/DocumentMarkerController.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/markers/DocumentMarkerController.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/TextCheckingHelper.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/BeforeUnloadEvent.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/BeforeUnloadEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/ClipboardEvent.cpp
@@ -5379,6 +5794,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutThemeMac.mm
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutView.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutView.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ListMarkerText.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ListMarkerText.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/OverflowModel.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/PointerEventsHitRules.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/PointerEventsHitRules.h
@@ -5710,6 +6127,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGNumberList.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGParserUtilities.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGParserUtilities.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPath.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathBlender.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathBlender.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathBuilder.cpp
@@ -5720,10 +6138,13 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathByteStreamSource.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathByteStreamSource.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathConsumer.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathData.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathElement.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathElement.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathParser.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathParser.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathQuery.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathQuery.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSource.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathStringBuilder.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathStringBuilder.h
@@ -5933,6 +6354,10 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/ImageDecoder.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/mac/LocalCurrentGraphicsContext.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/mac/LocalCurrentGraphicsContext.mm
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/network/EncodedFormData.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/network/EncodedFormData.h
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/network/FormDataEncoder.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/network/FormDataEncoder.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/plugins/PluginData.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/plugins/PluginData.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/BidiCharacterRun.cpp
@@ -5992,6 +6417,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/TypeTraits.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/Vector.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/VectorTraits.h
+       src/3rdparty/chromium/third_party/WebKit/Source/wtf/build_config.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/dtoa.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/ASCIIFastPath.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/AtomicString.cpp
@@ -6111,51 +6537,23 @@ Copyright: 2014, Adobe Systems Inc
            2004-2007, m 2008 Apple Inc
 License: LGPL-2+
 
-Files: src/3rdparty/chromium/third_party/WebKit/Source/core/animation/VisibilityStyleInterpolation.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/animation/VisibilityStyleInterpolation.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/animation/VisibilityStyleInterpolationTest.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/core.gypi
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSProperties.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSValueKeywords.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/MediaFeatureNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/MediaTypeNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/MediaValuesTest.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/SVGCSSValueKeywords.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/fullscreen.css
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControlsAndroidNew.css
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControlsNew.css
-       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/js/DocumentExecCommand.js
-       src/3rdparty/chromium/third_party/WebKit/Source/core/events/EventAliases.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/events/EventTargetFactory.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/events/EventTypeNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/FetchInitiatorTypeNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Settings.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLAttributeNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTagNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/InputTypeNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/parser/HTMLEntityNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/parser/HTMLTokenizerNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/parser/MathMLAttributeNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/parser/MathMLTagNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/parser/ParserSynchronizationPolicy.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorConsoleInstrumentation.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InstrumentingAgents.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGAttributeNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGTagNames.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/xlinkattrs.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/xml/xmlattrs.in
-       src/3rdparty/chromium/third_party/WebKit/Source/core/xml/xmlnsattrs.in
-Copyright: 2014, The Chromium Authors
-License: BSD-2-clause or LGPL-2+ or LGPL-2.1+
-
-Files: src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn/acorn.js
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/*
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/*
+Files: src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/*
 Copyright: Marijn Haverbeke and others
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignment.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignment.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayer.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayer.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerClipper.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerClipper.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerPaintingInfo.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerReflectionInfo.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerReflectionInfo.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.h
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerStackingNode.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerStackingNode.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/gif/GIFImageReader.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/gif/GIFImageReader.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/jpeg/JPEGImageDecoder.cpp
@@ -6174,6 +6572,18 @@ Copyright: 2006-2007, Apple Computer, Inc
            property of CompuServe
 License: LGPL-2.1+ or MPL-1.1
 
+Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/autopep8.py
+       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/pep8.py
+Copyright: 2009-2014, Florent Xicluna <florent.xicluna@gmail.com>
+           2010-2011, Hideo Hattori
+           2011-2013, Hideo Hattori, Steven Myint
+           2013-2014, Hideo Hattori, Steven Myint, Bill Wendling
+           2006-2009, Johann C. Rocholl <johann@rocholl.net>
+           2014, Marijn Haverbeke <marijnh@gmail.com> and others
+           2010, Timothy Farrell
+           2012-2014, various contributors (see AUTHORS)
+License: Expat
+
 Files: src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAlgorithm.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAlgorithmAuto.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAlgorithmAuto.h
@@ -6191,7 +6601,6 @@ License: LGPL-2
 Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/irc/ircbot.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/irc/irclib.py
 Copyright: 1999, 2002 Joel Rosdahl
-           2013, Apple Inc
            1991-1999, Free Software Foundation, Inc
 License: LGPL-2.1+
 
@@ -6206,7 +6615,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdpart
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/jquery.hotkeys.js
 Copyright: 2010, John Resig
            2010, The Dojo Foundation
-License: Expat or GPL-2
+License: GPL-2
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/wtf/DateMath.cpp
 Copyright: 2010, &yet, LLC <nate@andyet.net>
@@ -6255,6 +6664,46 @@ Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdpart
 Copyright: 2010, Laurence Wheway
 License: Expat or GPL
 
+Files: src/3rdparty/chromium/third_party/wayland-protocols/*
+       src/3rdparty/chromium/third_party/wayland/*
+Copyright: 2011, Benjamin Franzke
+           2012-2015, Collabora, Ltd
+           2010-2013, Intel Corporation
+           2013-2014, Jason Ekstrand
+           2013, Jasper St. Pierre
+           2014, Jonas Ådahl
+           2002, Keith Packard
+           2008-2013, Kristian Høgsberg
+           2012, Philipp Brüschweiler
+           2013, Rafael Antognolli
+           2015, Red Hat Inc
+           2015, Red Hat, Inc
+           1999, SuSE, Inc
+           1999, SuSE, Inc.
+License: MIT/X11
+
+Files: src/3rdparty/chromium/third_party/wayland-protocols/wayland-protocols.gyp
+       src/3rdparty/chromium/third_party/wayland/wayland.gyp
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/webpagereplay/*
+Copyright: 2007-2015, Google Inc
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/webpagereplay/third_party/dns/*
+Copyright: 2001-2010, Nominum, Inc
+License: ISC
+
+Files: src/3rdparty/chromium/third_party/webpagereplay/PRESUBMIT.py
+       src/3rdparty/chromium/third_party/webpagereplay/test_runner.py
+Copyright: 2014-2015, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/3rdparty/chromium/third_party/webrtc/*
+Copyright: 2004-2015, The WebRTC Project Authors
+License: BSD-3-clause
+
 Files: src/3rdparty/chromium/third_party/webrtc/modules/audio_device/mac/portaudio/pa_memorybarrier.h
        src/3rdparty/chromium/third_party/webrtc/modules/audio_device/mac/portaudio/pa_ringbuffer.c
        src/3rdparty/chromium/third_party/webrtc/modules/audio_device/mac/portaudio/pa_ringbuffer.h
@@ -6271,13 +6720,14 @@ Files: src/3rdparty/chromium/third_party/webrtc/base/md5.cc
 Copyright: Copyright is being disclaimed
 License: public-domain
 
-Files: src/3rdparty/chromium/third_party/webrtc/LICENSE_THIRD_PARTY
-Copyright: 1993, CMU
-           1999-2000, Ross Bencina and Phil Burk
-           1993-2009, Since DOC
-           2001-2005, Steve Underwood
-           1996-2001, Takuya OOURA
-License: BSL-1.0 or Expat
+Files: src/3rdparty/chromium/third_party/webrtc/examples/objc/AppRTCDemo/third_party/SocketRocket/SRWebSocket.h
+       src/3rdparty/chromium/third_party/webrtc/examples/objc/AppRTCDemo/third_party/SocketRocket/SRWebSocket.m
+Copyright: 2012, Square Inc
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/webrtc/examples/androidapp/third_party/autobanh/LICENSE.md
+Copyright: 2014, Cameron Lowell Palmer
+License: Expat
 
 Files: src/3rdparty/chromium/third_party/webrtc/modules/audio_processing/test/android/apmtest/jni/main.c
 Copyright: 2010, The Android Open Source Project
@@ -6286,6 +6736,14 @@ License: Apache-2.0
 Files: src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/codecs/isac/main/source/fft.c
 Copyright: 1968, Stanford Research Institute
 License: ISC-like-dmgfp
+
+Files: src/3rdparty/chromium/third_party/woff2/*
+Copyright: 2013-2015, Google Inc
+License: Apache-2.0
+
+Files: src/3rdparty/chromium/third_party/woff2/woff2.gyp
+Copyright: 2015, The Chromium Authors
+License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/xdg-utils/*
 Copyright: 2006, Bryce Harrington <bryce@osdl.org>
@@ -6336,8 +6794,7 @@ License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/ppapi/*
 Copyright: 2012, The Chromium Authors
-           2007-2010, The Khronos Group Inc
-License: BSD-3-clause or Expat
+License: BSD-3-clause
 
 Files: src/3rdparty/chromium/ppapi/lib/gl/include/EGL/egl.h
        src/3rdparty/chromium/ppapi/lib/gl/include/EGL/eglext.h
@@ -6409,6 +6866,13 @@ Files: src/3rdparty/chromium/tools/gyp/pylib/gyp/ordered_dict.py
        src/3rdparty/chromium/tools/gyp/pylib/gyp/ninja_syntax.py
 Copyright: 2009, Raymond Hettinger
 License: Expat
+
+Files: src/3rdparty/chromium/ui/base/clipboard/clipboard_util_win.cc
+       src/3rdparty/chromium/ui/base/dragdrop/os_exchange_data_provider_win.cc
+       src/3rdparty/chromium/ui/events/blink/input_scroll_elasticity_controller.cc
+       src/3rdparty/chromium/ui/events/blink/input_scroll_elasticity_controller.h
+Copyright: Apple Inc
+License: BSD-2-clause or BSD-3-clause
 
 Files: src/3rdparty/chromium/url/third_party/mozilla/*
 Copyright: 2007, Google Inc
@@ -6691,6 +7155,12 @@ License: Apache-2.0
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  See the License for the specific language governing permissions and
  limitations under the License.
+
+License: Beerware
+ "THE BEER-WARE LICENSE" (Revision 42):
+ <phk@FreeBSD.ORG> wrote this file.  As long as you retain this notice you
+ can do whatever you want with this stuff. If we meet some day, and you think
+ this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 
 License: BSD-2-clause
  Redistribution and use in source and binary forms, with or without
@@ -7445,6 +7915,27 @@ License: LGPL-2.1+
  .
  The complete text of the GNU Lesser General Public License version 2.1 can be
  found in `/usr/share/common-licenses/LGPL-2.1'
+
+License: LGPL-3_Qt-1.1Exception
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the License.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ Licensees holding valid commercial Qt licenses may use this file in
+ accordance with the commercial license agreement provided with the
+ Software or, alternatively, in accordance with the terms contained in
+ a written agreement between you and The Qt Company. For licensing terms
+ and conditions see https://www.qt.io/terms-conditions. For further
+ information use the contact form at https://www.qt.io/contact-us.
+ .
+ The complete text of the GNU Lesser General Public License version 3 can be
+ found in `/usr/share/common-licenses/LGPL-3'
 
 License: LGPL-3+
  This library is free software; you can redistribute it and/or
