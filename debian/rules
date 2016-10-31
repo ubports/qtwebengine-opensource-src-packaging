@@ -9,7 +9,7 @@ export CXXFLAGS := $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildfla
 export LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
 export QT_SELECT := qt5
 
-VERSION_CLEAN_UPSTREAM = $(call dpkg_late_eval,VERSION_CLEAN_UPSTREAM,echo '$(DEB_VERSION_UPSTREAM)' | sed -e 's/+dfsg//')
+VERSION_CLEAN_UPSTREAM = $(call dpkg_late_eval,VERSION_CLEAN_UPSTREAM,echo '$(DEB_VERSION_UPSTREAM)' | sed -e 's/\(~\|+\).*//')
 
 DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
