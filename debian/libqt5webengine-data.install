@@ -2,4 +2,5 @@ usr/share/qt5/resources/qtwebengine_devtools_resources.pak
 usr/share/qt5/resources/qtwebengine_resources.pak
 usr/share/qt5/resources/qtwebengine_resources_100p.pak
 usr/share/qt5/resources/qtwebengine_resources_200p.pak
+usr/share/qt5/resources/icudtl.dat
 usr/share/qt5/translations/qtwebengine_locales/*

@@ -23,7 +23,6 @@ defines+=use_system_expat=1 \
          use_system_ffmpeg=1 \
 	 use_system_flac=1 \
          use_system_harfbuzz=1 \
-         use_system_icu=1 \
          use_system_jsoncpp=1 \
          use_system_libevent=1 \
          use_system_libjpeg=1 \
@@ -44,6 +43,7 @@ defines+=use_system_expat=1 \
          # use_system_libxnvctrl=1 \
          # use_system_sqlite=1 \
          # use_system_libvpx=1 \
+         # use_system_icu=1 \
 
 replace_gyp_args = $(foreach define,$(defines),-D$(define))
 
