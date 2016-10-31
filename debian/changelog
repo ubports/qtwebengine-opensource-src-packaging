@@ -1,6 +1,6 @@
-qtwebengine-opensource-src (5.7.1+dfsg-1) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.7.1~20161021+dfsg-1) experimental; urgency=medium
 
   * Initial package (Closes: #832420)
   * Team upload.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 31 Jul 2016 20:52:38 +0200
+ -- Sandro Knauß <hefee@debian.org>  Mon, 31 Oct 2016 16:35:20 +0100
