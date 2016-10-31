@@ -50,10 +50,16 @@ replace_gyp_args = $(foreach define,$(defines),-D$(define))
 %:
 	dh $@ --with pkgkde_symbolshelper
 
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf $(CURDIR)/test_root
+	rm -rf $(CURDIR)/docs
+	rm -rf $(CURDIR)/.local
+
 override_dh_auto_configure:
 	src/3rdparty/chromium/build/linux/unbundle/replace_gyp_files.py $(replace_gyp_args)
 	# Run qmake once to create .qmake.conf and be sure to append the following values.
-	qmake WEBENGINE_CONFIG+="$(defines)"
+	qmake WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests"
 
 # Enable gstabs debugging symbols only on gstab_architectures.
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(gstab_architectures)))
@@ -84,13 +90,12 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_pch_architectur
 endif
 
 	# Run qmake again now with the proper values.
-	qmake  WEBENGINE_CONFIG+="$(defines)"
+	qmake  WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests"
 
 override_dh_auto_build-indep:
 	dh_auto_build -- docs
 
 override_dh_auto_install-arch:
-	#make install INSTALL_ROOT=$(CURDIR)/debian/tmp
 	dh_auto_install
 	
 	# Remove rpath from the offending binaries
@@ -126,5 +131,14 @@ override_dh_link:
 	
 	dh_link --remaining-packages
 
-#override_dh_auto_test-indep:
+override_dh_auto_test-arch:
+	$(MAKE) install -Csrc/core INSTALL_ROOT=$(CURDIR)/test_root
+	-xvfb-run -a \
+		-s "-screen 0 1024x768x24 +extension RANDR +extension RENDER +extension GLX" \
+		dh_auto_test --no-parallel -- -k \
+		QML2_IMPORT_PATH=$(CURDIR)/test_root/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/qml \
+		LD_LIBRARY_PATH=$(CURDIR)/lib \
+		HOME=$(CURDIR)
+
+override_dh_auto_test-indep:
 	# Do not attempt to run anything to make build-indep work
