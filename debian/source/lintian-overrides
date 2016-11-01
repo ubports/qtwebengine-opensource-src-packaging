@@ -20,3 +20,4 @@ qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/ui/accessibility/extensions/highcontrast/highcontrast.js *
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/ui/webui/resources/js/jstemplate_compiled.js
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/v8/benchmarks/regexp.js *
+qtwebengine-opensource-src source: configure-generated-file-in-source src/3rdparty/chromium/third_party/libxslt/linux/config.log
