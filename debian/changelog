@@ -1,11 +1,12 @@
 qtwebengine-opensource-src (5.7.1+dfsg-1) UNRELEASED; urgency=medium
 
   [ Sandro Knauß ]
-  * new upstream release
+  * new upstream release.
   * Change depends of qtwebengine5-dev to correct name of
     libqtwebchannel2-dev
   * add patch to use current system re2 package.
-  * remove minified javascript files
+  * remove minified javascript files and replace them with self constucted
+    files.
   * update source/linitian-overrides
   * Update copyright file.
 
