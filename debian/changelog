@@ -1,6 +1,7 @@
-qtwebengine-opensource-src (5.7.1~20161021+dfsg-2) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.7.1+dfsg-1) UNRELEASED; urgency=medium
 
   [ Sandro Knauß ]
+  * new upstream release
   * Change depends of qtwebengine5-dev to correct name of
     libqtwebchannel2-dev
   * add patch to use current system re2 package.
