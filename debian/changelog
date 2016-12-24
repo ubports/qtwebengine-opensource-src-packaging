@@ -1,16 +1,17 @@
-qtwebengine-opensource-src (5.7.1+dfsg-1) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.7.1+dfsg-1) unstable; urgency=medium
 
   [ Sandro Knauß ]
-  * new upstream release.
+  * New upstream release.
+  * Release to unstable, because all other Qt modules are now in unstable.
   * Change depends of qtwebengine5-dev to correct name of
     libqtwebchannel2-dev
-  * add patch to use current system re2 package.
-  * remove minified javascript files and replace them with self constucted
+  * Add patch to use current system re2 package.
+  * Remove minified javascript files and replace them with self constucted
     files.
-  * update source/linitian-overrides
+  * Update source/linitian-overrides
   * Update copyright file.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 21 Nov 2016 18:49:48 +0100
+ -- Sandro Knauß <hefee@debian.org>  Sat, 24 Dec 2016 03:15:08 +0100
 
 qtwebengine-opensource-src (5.7.1~20161021+dfsg-1) experimental; urgency=medium
 
