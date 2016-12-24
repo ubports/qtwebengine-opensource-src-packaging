@@ -1,23 +1,10 @@
-# Not used
+# Are replaced by build step with self minified version. Source is shipped in missing-sources dir.
 qtwebengine-opensource-src source: source-is-missing examples/webenginewidgets/contentmanipulation/jquery.min.js
 qtwebengine-opensource-src source: source-is-missing examples/webenginewidgets/markdowneditor/resources/marked.min.js
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/blanketjs/src/blanket.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/chaijs/chai.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/dom_distiller_js/dist/js/*.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/pycoverage/coverage/htmlfiles/*.min.js
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/pyelftools/examples/sample_exe64.elf
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/skia/platform_tools/android/bin/linux/perfhost
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/web-animations-js/sources/*.min.js
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn/acorn.js *
+# Valid files, with very long lines (files are not minified)
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/clojure.js *
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/clojure.js *
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/php.js *
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/stylus.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js *
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/*.min.js
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/ui/accessibility/extensions/highcontrast/highcontrast.js *
+# File includes javascript file, that is created within build step.
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/ui/webui/resources/js/jstemplate_compiled.js
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/v8/benchmarks/regexp.js *
-qtwebengine-opensource-src source: configure-generated-file-in-source src/3rdparty/chromium/third_party/libxslt/linux/config.log
