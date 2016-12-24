@@ -7,6 +7,21 @@ Files-Excluded: src/3rdparty/chromium/third_party/apple_apsl/*
                 src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cf/*
                 src/3rdparty/chromium/third_party/flot/*
                 src/3rdparty/chromium/third_party/bspatch/LICENSE
+                src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js
+                src/3rdparty/chromium/third_party/blanketjs/src/blanket.js
+                src/3rdparty/chromium/third_party/chaijs/chai.js
+                src/3rdparty/chromium/third_party/dom_distiller_js/dist/js/*.js
+                src/3rdparty/chromium/third_party/pycoverage/coverage/htmlfiles/*.min.js
+                src/3rdparty/chromium/third_party/pyelftools/examples/sample_exe64.elf
+                src/3rdparty/chromium/third_party/skia/platform_tools/android/bin/linux/perfhost
+                src/3rdparty/chromium/third_party/web-animations-js/sources/*.min.js
+                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn/acorn.js
+                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js
+                src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/*.min.js
+                src/3rdparty/chromium/ui/accessibility/extensions/highcontrast/highcontrast.js
+                src/3rdparty/chromium/third_party/jstemplate/jstemplate_compiled.js
+                src/3rdparty/chromium/v8/benchmarks/regexp.js
+                src/3rdparty/chromium/third_party/libxslt/linux/config.log
 
 Files: *
 Copyright: 2015-2016, The Qt Company Ltd.

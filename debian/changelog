@@ -5,6 +5,7 @@ qtwebengine-opensource-src (5.7.1+dfsg-1) UNRELEASED; urgency=medium
   * Change depends of qtwebengine5-dev to correct name of
     libqtwebchannel2-dev
   * add patch to use current system re2 package.
+  * remove minified javascript files
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 21 Nov 2016 18:49:48 +0100
 

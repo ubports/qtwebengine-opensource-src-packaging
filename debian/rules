@@ -47,6 +47,13 @@ defines+=use_system_expat=1 \
 
 replace_gyp_args = $(foreach define,$(defines),-D$(define))
 
+touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js \
+	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn/acorn.js \
+	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js \
+	      src/3rdparty/chromium/third_party/web-animations-js/sources/web-animations.min.js \
+	      src/3rdparty/chromium/third_party/web-animations-js/sources/web-animations-next.min.js \
+	      src/3rdparty/chromium/third_party/web-animations-js/sources/web-animations-next-lite.min.js
+
 %:
 	dh $@ --with pkgkde_symbolshelper
 
@@ -55,6 +62,13 @@ override_dh_auto_clean:
 	rm -rf $(CURDIR)/test_root
 	rm -rf $(CURDIR)/docs
 	rm -rf $(CURDIR)/.local
+	rm -rf $(CURDIR)/src/3rdparty/chromium/third_party/jstemplate/jstemplate_compiled.js
+	rm -rf $(CURDIR)/examples/webenginewidgets/contentmanipulation/jquery*.js
+	rm -rf $(CURDIR)/examples/webenginewidgets/markdowneditor/resources/marked*.js
+	
+	for fname in $(touch_files); do \
+		rm -rf $(CURDIR)/$${fname}; \
+	done
 
 override_dh_auto_configure:
 	src/3rdparty/chromium/build/linux/unbundle/replace_gyp_files.py $(replace_gyp_args)
@@ -91,6 +105,26 @@ endif
 
 	# Run qmake again now with the proper values.
 	qmake  WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests"
+
+override_dh_auto_build-arch:
+	cd $(CURDIR)/src/3rdparty/chromium/third_party/jstemplate/; \
+		closure-compiler --compilation_level ADVANCED_OPTIMIZATIONS \
+		--js util.js \
+		--js jsevalcontext.js \
+		--js jstemplate.js \
+		--js exports.js \
+		--js_output_file jstemplate_compiled.js
+	
+	>examples/webenginewidgets/contentmanipulation/jquery.js cat debian/missing-sources/jquery-*.js
+	yui-compressor --type js "examples/webenginewidgets/contentmanipulation/jquery.js" -o "examples/webenginewidgets/contentmanipulation/jquery.min.js"
+	>examples/webenginewidgets/markdowneditor/resources/marked.js tar xaf debian/missing-sources/marked*.tar.gz --wildcards --to-stdout '*/marked.js'
+	yui-compressor --type js "examples/webenginewidgets/markdowneditor/resources/marked.js" -o "examples/webenginewidgets/markdowneditor/resources/marked.min.js"
+	
+	for fname in $(touch_files); do \
+		touch $(CURDIR)/$${fname}; \
+	done
+
+	dh_auto_build
 
 override_dh_auto_build-indep:
 	dh_auto_build -- docs

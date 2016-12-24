@@ -8,6 +8,7 @@ Priority: optional
 Build-Depends: autotools-dev,
                bison,
                chrpath,
+               closure-compiler,
                debhelper (>= 10),
                dh-autoreconf,
                flex,
@@ -73,7 +74,8 @@ Build-Depends: autotools-dev,
                re2c,
                ruby,
                xauth,
-               xvfb
+               xvfb,
+               yui-compressor
 Build-Depends-Indep: libqt5sql5-sqlite (>= 5.7.1~20161021~),
                      qtbase5-doc-html (>= 5.7.1~20161021~),
                      qttools5-dev-tools (>= 5.7.1~20161021~)
