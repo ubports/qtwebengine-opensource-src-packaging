@@ -21,7 +21,7 @@ disabled_pch_architectures := amd64 powerpc s390x
 
 defines+=use_system_expat=1 \
          use_system_ffmpeg=1 \
-	 use_system_flac=1 \
+         use_system_flac=1 \
          use_system_harfbuzz=1 \
          use_system_jsoncpp=1 \
          use_system_libevent=1 \
@@ -149,7 +149,7 @@ override_dh_auto_install-arch:
 	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri
 	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/mkspecs/modules/qt_lib_webenginewidgets_private.pri
 	
-	# Remove libtool-like fileEngines
+	# Remove libtool-like files
 	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la
 
 override_dh_auto_install-indep:
