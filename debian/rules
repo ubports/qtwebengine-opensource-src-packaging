@@ -104,7 +104,7 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_pch_architectur
 endif
 
 	# Make ld not cache the symbol tables of input files in memory to avoid memory exhaustion during the linking phase.
-	QMAKE_LFLAGS += -Wl,--no-keep-memory
+	echo "QMAKE_LFLAGS += -Wl,--no-keep-memory" >> .qmake.conf
 
 	# Run qmake again now with the proper values.
 	qmake  WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests"
