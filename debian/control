@@ -90,6 +90,8 @@ Multi-Arch: same
 Section: libdevel
 Depends: libqt5webchannel5-dev,
          libqt5webengine5 (= ${binary:Version}),
+         libqt5webenginecore5 (= ${binary:Version}),
+         libqt5webenginewidgets5 (= ${binary:Version}),
          qtbase5-dev,
          qtdeclarative5-dev,
          ${misc:Depends}
