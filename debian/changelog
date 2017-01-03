@@ -6,6 +6,8 @@ qtwebengine-opensource-src (5.7.1+dfsg-2) UNRELEASED; urgency=medium
   * Add patch to get mips support.
   * do not build any debug symbols, because they use too much RAM on
     porterboxes
+  * Make ld not cache the symbol tables of input files in memory to
+    avoid memory exhaustion during the linking phase.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 25 Dec 2016 15:06:04 +0100
 
