@@ -1,2 +1,3 @@
 use_system_re2.patch
 add_mips_support.patch
+disable_debug_symbols_completly.patch
