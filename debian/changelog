@@ -3,6 +3,7 @@ qtwebengine-opensource-src (5.7.1+dfsg-2) UNRELEASED; urgency=medium
   [ Sandro Knauß ]
   * Fix "bad VCS links in debian/control" (Closes: #849301)
   * Fix "References to QtWebEngineWidgets is missing in dev package" (Closes: #849993)
+  * Add patch to get mips support.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 25 Dec 2016 15:06:04 +0100
 
