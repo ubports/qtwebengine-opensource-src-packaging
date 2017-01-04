@@ -10,6 +10,7 @@ qtwebengine-opensource-src (5.7.1+dfsg-2) UNRELEASED; urgency=medium
     avoid memory exhaustion during the linking phase.
   * Add patch to disable debug symbols build completly.
   * bump symbols from pre 5.7.1 to 5.7.1.
+  * Add symbols from i386.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 25 Dec 2016 15:06:04 +0100
 
