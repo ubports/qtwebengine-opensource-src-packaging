@@ -1,4 +1,4 @@
-Description: Disable any debug symbols from gym
+Description: Disable any debug symbols from gyp
  As Debian portboxes have limited space, we can't affort it to build
  with debug symbols enabled.
 Author: Sandro Knauß <hefee@debian.org>
