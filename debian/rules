@@ -91,7 +91,7 @@ else
 	echo "QMAKE_CXXFLAGS -= -g" >> .qmake.conf
 	echo "QMAKE_CXXFLAGS -= -gstabs" >> .qmake.conf
 	echo "QT_CONFIG -= force_debug_info" >> .qmake.conf
-	echo "QT_CONFIG -= seperate_debug_info" >> .qmake.conf
+	echo "QT_CONFIG -= separate_debug_info" >> .qmake.conf
 endif
 
 # Disable JIT on selected architectures
