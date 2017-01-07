@@ -104,14 +104,14 @@ endif
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_pch_architectures)))
 	echo "CONFIG -= precompile_header" >> .qmake.conf
 endif
-
+	
 	# Make ld not cache the symbol tables of input files in memory to avoid memory exhaustion during the linking phase.
 	echo "QMAKE_LFLAGS += -Wl,--no-keep-memory" >> .qmake.conf
 
 	# Run qmake again now with the proper values.
 	qmake  WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests"
 
-override_dh_auto_build-arch:
+	# Create js files, that are needed for building step for arch and indep builds
 	cd $(CURDIR)/src/3rdparty/chromium/third_party/jstemplate/; \
 		closure-compiler --compilation_level ADVANCED_OPTIMIZATIONS \
 		--js util.js \
@@ -129,9 +129,11 @@ override_dh_auto_build-arch:
 		touch $(CURDIR)/$${fname}; \
 	done
 
+override_dh_auto_build-arch:
 	dh_auto_build
 
-override_dh_auto_build-indep:
+#we also need the resources.pak files, so we need the normal build.
+override_dh_auto_build-indep: override_dh_auto_build-arch
 	dh_auto_build -- docs
 
 override_dh_auto_install-arch:
@@ -158,9 +160,10 @@ override_dh_auto_install-arch:
 	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la
 
 override_dh_auto_install-indep:
+	dh_auto_install -i
 	dh_auto_build -- INSTALL_ROOT=$(CURDIR)/debian/tmp install_docs
 
-override_dh_install:
+override_dh_install-arch:
 	dh_install --fail-missing
 
 override_dh_link:
