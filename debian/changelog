@@ -1,9 +1,9 @@
-qtwebengine-opensource-src (5.7.1+dfsg-3) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.7.1+dfsg-3) unstable; urgency=medium
 
-  [ Sandro Knauß ]
-  * Make arch=all build successfully
+  * Make arch=all build successfully (Closes: #849794)
+  * Release to unstable, to get bugs fixed.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 08 Jan 2017 00:33:31 +0100
+ -- Sandro Knauß <hefee@debian.org>  Sun, 08 Jan 2017 20:53:35 +0100
 
 qtwebengine-opensource-src (5.7.1+dfsg-2) experimental; urgency=medium
 
