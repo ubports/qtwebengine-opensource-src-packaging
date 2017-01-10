@@ -2,6 +2,7 @@ qtwebengine-opensource-src (5.7.1+dfsg-4) UNRELEASED; urgency=medium
 
   [ Sandro Knauß ]
   * Move QtWebEngineProcess to libqt5webenginecore5
+  * Make arch+indep build sucessfull too.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 10 Jan 2017 21:03:00 +0100
 

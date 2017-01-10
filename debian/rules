@@ -159,8 +159,7 @@ override_dh_auto_install-arch:
 	# Remove libtool-like files
 	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la
 
-override_dh_auto_install-indep:
-	dh_auto_install -i
+override_dh_auto_install-indep: override_dh_auto_install-arch
 	dh_auto_build -- INSTALL_ROOT=$(CURDIR)/debian/tmp install_docs
 
 override_dh_install-arch:
