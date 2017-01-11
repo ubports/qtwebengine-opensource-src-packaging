@@ -1,11 +1,11 @@
-qtwebengine-opensource-src (5.7.1+dfsg-4) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.7.1+dfsg-4) unstable; urgency=medium
 
   [ Sandro Knauß ]
   * Move QtWebEngineProcess to libqt5webenginecore5
   * Make arch+indep build sucessfull too.
   * Mark gold compiler symbols as optional
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 10 Jan 2017 21:03:00 +0100
+ -- Sandro Knauß <hefee@debian.org>  Wed, 11 Jan 2017 13:16:55 +0100
 
 qtwebengine-opensource-src (5.7.1+dfsg-3) unstable; urgency=medium
 
