@@ -109,6 +109,9 @@ endif
 	
 	# Make ld not cache the symbol tables of input files in memory to avoid memory exhaustion during the linking phase.
 	echo "QMAKE_LFLAGS += -Wl,--no-keep-memory" >> .qmake.conf
+	
+	# Missing hardening flag detected by blhc
+	echo "QMAKE_LFLAGS += -Wl,-z,now" >> .qmake.conf
 
 	# Run qmake again now with the proper values.
 	qmake  WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests"

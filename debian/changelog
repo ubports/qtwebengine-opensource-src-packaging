@@ -3,6 +3,7 @@ qtwebengine-opensource-src (5.7.1+dfsg-5~) UNRELEASED; urgency=medium
   [ Sandro Knauß ]
   * Fix "h.264 video does not seem to work" (Closes: #851170)
     - Add use_proprietary_codecs to defines, to be able to use ffmpeg and h264
+  * Add -Wl,-z,now to LFAGS, to make build full hardened
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 13 Jan 2017 21:06:56 +0100
 
