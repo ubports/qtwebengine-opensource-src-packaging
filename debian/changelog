@@ -6,6 +6,7 @@ qtwebengine-opensource-src (5.7.1+dfsg-5~) UNRELEASED; urgency=medium
   * Add -Wl,-z,now to LFAGS, to make build full hardened
   * Add Build-Deps ninja-build
   * Add patch to make armel built
+  * make build be less ram consuming on armhf and mipsel
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 13 Jan 2017 21:06:56 +0100
 
