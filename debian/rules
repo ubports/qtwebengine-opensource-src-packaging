@@ -94,6 +94,8 @@ else ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(fulldebug_architect
 	echo "QMAKE_LFLAGS += -fdebug-types-section" >> .qmake.conf
 else
 # Disable debugging symbols in all the other archs.
+	echo "QMAKE_CFLAGS -= -g" >> .qmake.conf
+	echo "QMAKE_CFLAGS -= -gstabs" >> .qmake.conf
 	echo "QMAKE_CXXFLAGS -= -g" >> .qmake.conf
 	echo "QMAKE_CXXFLAGS -= -gstabs" >> .qmake.conf
 	echo "QT_CONFIG -= force_debug_info" >> .qmake.conf
@@ -112,6 +114,7 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_pch_architectur
 endif
 
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(small_architectures)))
+	defines += reduce_binary_size
 	echo "QMAKE_CXXFLAGS += --param ggc-min-expand=20" >> .qmake.conf
 	echo "QMAKE_CFLAGS += --param ggc-min-expand=20" >> .qmake.conf
 	echo "QMAKE_LFLAGS -= Wl,--gc-sections" >> .qmake.conf
