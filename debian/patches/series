@@ -1,2 +1,3 @@
 use_system_re2.patch
 add_mips_support.patch
+add_armel_support.patch

@@ -1,0 +1,11 @@
+--- a/src/3rdparty/chromium/build/common.gypi
++++ b/src/3rdparty/chromium/build/common.gypi
+@@ -2373,7 +2373,7 @@
+           }, {
+             'arm_fpu%': 'vfpv3-d16',
+           }],
+-          ['OS=="android"', {
++          ['OS=="android" or target_arch=="armel"', {
+             'arm_float_abi%': 'softfp',
+           }, {
+             'arm_float_abi%': 'hard',
