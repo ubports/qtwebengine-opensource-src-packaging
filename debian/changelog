@@ -1,3 +1,10 @@
+qtwebengine-opensource-src (5.7.1+dfsg-6) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * Make it buildable on small archs again.
+
+ -- Sandro Knauß <hefee@debian.org>  Wed, 18 Jan 2017 19:08:01 +0100
+
 qtwebengine-opensource-src (5.7.1+dfsg-5) unstable; urgency=medium
 
   [ Sandro Knauß ]

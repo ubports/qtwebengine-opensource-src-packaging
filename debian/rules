@@ -53,6 +53,10 @@ replace_gyp_args = $(foreach define,$(defines),-D$(define))
 
 defines += use_proprietary_codecs use_system_ffmpeg
 
+ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(small_architectures)))
+	defines += reduce_binary_size
+endif
+
 touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js \
 	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn/acorn.js \
 	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js \
@@ -114,7 +118,6 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_pch_architectur
 endif
 
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(small_architectures)))
-	defines += reduce_binary_size
 	echo "QMAKE_CXXFLAGS += --param ggc-min-expand=20" >> .qmake.conf
 	echo "QMAKE_CFLAGS += --param ggc-min-expand=20" >> .qmake.conf
 	echo "QMAKE_LFLAGS -= Wl,--gc-sections" >> .qmake.conf
