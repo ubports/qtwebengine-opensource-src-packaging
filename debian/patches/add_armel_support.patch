@@ -1,3 +1,13 @@
+Description: Add armel support for QtWebEngine
+  It is disababled at the moment, because it do not work!
+  It should make sure that on armel softfp is used for arm_float_abi.
+  Works when removing the condition completly and make it softfp globaly, but
+  this is not a solution for every arch.
+Author: Sandro Knauß <bugs@ssandroknauss.de>
+Origin: debian
+Last-Update: 2017-01-18
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/build/common.gypi
 +++ b/src/3rdparty/chromium/build/common.gypi
 @@ -2373,7 +2373,7 @@
