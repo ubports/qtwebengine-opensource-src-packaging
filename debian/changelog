@@ -1,4 +1,4 @@
-qtwebengine-opensource-src (5.7.1+dfsg-5~) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.7.1+dfsg-5) unstable; urgency=medium
 
   [ Sandro Knauß ]
   * Fix "h.264 video does not seem to work" (Closes: #851170)
@@ -7,7 +7,7 @@ qtwebengine-opensource-src (5.7.1+dfsg-5~) UNRELEASED; urgency=medium
   * Add Build-Deps ninja-build
   * make build be less ram consuming on armhf and mipsel
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 13 Jan 2017 21:06:56 +0100
+ -- Sandro Knauß <hefee@debian.org>  Wed, 18 Jan 2017 13:04:01 +0100
 
 qtwebengine-opensource-src (5.7.1+dfsg-4) unstable; urgency=medium
 
