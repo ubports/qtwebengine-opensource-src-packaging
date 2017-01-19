@@ -121,8 +121,9 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(small_architectures)))
 	echo "QMAKE_CXXFLAGS += --param ggc-min-expand=20" >> .qmake.conf
 	echo "QMAKE_CFLAGS += --param ggc-min-expand=20" >> .qmake.conf
 	echo "QMAKE_LFLAGS -= Wl,--gc-sections" >> .qmake.conf
-	echo "QMAKE_LFLAGS -= -use-ld=gold" >> .qmake.conf
-	echo "QMAKE_LFLAGS += -use-ld=bfd" >> .qmake.conf
+	#Use not ld.gold
+	echo "QMAKE_LFLAGS -= -fuse-ld=gold" >> .qmake.conf
+	echo "QMAKE_LFLAGS += -fuse-ld=bfd" >> .qmake.conf
 endif
 
 	# Make ld not cache the symbol tables of input files in memory to avoid memory exhaustion during the linking phase.
