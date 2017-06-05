@@ -1,9 +1,12 @@
-qtwebengine-opensource-src (5.7.1+dfsg-7) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
 
   [ Sandro Knauß ]
   * do not use gold linker for small archs
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 19 Jan 2017 21:18:12 +0100
+  [ Simon Quigley ]
+  * New upstream release.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 05 Jun 2017 18:05:39 -0500
 
 qtwebengine-opensource-src (5.7.1+dfsg-6.1) unstable; urgency=medium
 
