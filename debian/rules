@@ -6,6 +6,14 @@ export NINJA_PATH=/usr/bin/ninja
 export NINJAFLAGS=-v
 include /usr/share/dpkg/default.mk
 
+DEB_HOST_ARCH_BITS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_BITS)
+
+# TODO: properly integrate with the other debug setting
+ifeq (32,$(DEB_HOST_ARCH_BITS))
+       export DEB_CFLAGS_MAINT_APPEND = -g1
+       export DEB_CXXFLAGS_MAINT_APPEND = -g1
+endif
+
 export CFLAGS := $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
 export CXXFLAGS := $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
 export LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
