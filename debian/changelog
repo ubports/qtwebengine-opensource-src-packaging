@@ -6,6 +6,7 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   [ Simon Quigley ]
   * New upstream release.
   * Fix debian/watch so it isn't hardcoded to 5.7.1.
+  * Refresh add_mips_support.patch.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 05 Jun 2017 18:05:39 -0500
 
