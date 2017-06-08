@@ -1,7 +1,7 @@
 Description: Add MIPS support for QtWebEngine
 Author: Sandro Knauß <bugs@ssandroknauss.de>
 Origin: debian
-Last-Update: 2017-01-03
+Last-Update: 2017-06-08
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/build/build_config.h
@@ -12,7 +12,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  #endif
 +#elif defined(__MIPSEB__)
 +#if defined(__LP64__)
-+#define ARCH_CPU_MIPS64_FAMILY 1
++#define ARCH_CPU_MIPS_FAMILY 1
 +#define ARCH_CPU_MIPS64 1
 +#define ARCH_CPU_64_BITS 1
 +#else
@@ -26,16 +26,15 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  #endif
 --- a/src/3rdparty/chromium/third_party/webrtc/typedefs.h
 +++ b/src/3rdparty/chromium/third_party/webrtc/typedefs.h
-@@ -44,6 +44,15 @@
+@@ -44,6 +44,14 @@
  #define WEBRTC_ARCH_32_BITS
  #endif
  #define WEBRTC_ARCH_LITTLE_ENDIAN
 +#elif defined(__MIPSEB__)
++#define WEBRTC_ARCH_MIPS_FAMILY
 +#if defined(__LP64__)
-+#define WEBRTC_ARCH_MIPS64_FAMILY
 +#define WEBRTC_ARCH_64_BITS
 +#else
-+#define WEBRTC_ARCH_MIPS_FAMILY
 +#define WEBRTC_ARCH_32_BITS
 +#endif
 +#define WEBRTC_ARCH_BIG_ENDIAN
