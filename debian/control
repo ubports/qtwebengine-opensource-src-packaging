@@ -103,6 +103,18 @@ Description: Web content engine library for Qt - development files
  This package contains the development files needed to build Qt 5 applications
  using QtWebEngine library.
 
+Package: qtwebengine5-private-dev
+Architecture: any
+Multi-Arch: same
+Section: libdevel
+Depends: qtwebengine5-dev (= ${binary:Version}), ${misc:Depends}
+Description: Web content engine library for Qt - private development files
+ QtWebEngine provides a Web browser engine that makes it easy to embed content
+ from the World Wide Web into your Qt application.
+ .
+ This package contains the private development files needed to build
+ Qt 5 applications using QtWebEngine library.
+
 Package: libqt5webengine5
 Architecture: any
 Multi-Arch: same
