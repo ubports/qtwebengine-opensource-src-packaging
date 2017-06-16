@@ -8,7 +8,11 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   * Fix debian/watch so it isn't hardcoded to 5.7.1.
   * Refresh add_mips_support.patch.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 05 Jun 2017 18:05:39 -0500
+  [ Jonathan Riddell ]
+  * New package qtwebengine5-private-dev for private headers used by
+    QtWebView
+
+ -- Jonathan Riddell <jr@jriddell.org>  Fri, 16 Jun 2017 16:54:53 +0100
 
 qtwebengine-opensource-src (5.7.1+dfsg-6.1) unstable; urgency=medium
 
