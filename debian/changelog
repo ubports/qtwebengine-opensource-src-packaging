@@ -4,7 +4,7 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   * do not use gold linker for small archs
 
   [ Simon Quigley ]
-  * New upstream release.
+  * New upstream release. (Closes: #865273)
   * Fix debian/watch so it isn't hardcoded to 5.7.1.
   * Refresh add_mips_support.patch.
 
