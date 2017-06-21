@@ -1,0 +1,24 @@
+diff -ur qtwebengine-opensource-src-5.9.0/src/3rdparty/chromium/build/linux/unbundle/re2.gn qtwebengine-opensource-src-5.9.0-system-re2/src/3rdparty/chromium/build/linux/unbundle/re2.gn
+--- qtwebengine-opensource-src-5.9.0/src/3rdparty/chromium/build/linux/unbundle/re2.gn	2017-05-18 16:51:44.000000000 +0200
++++ qtwebengine-opensource-src-5.9.0-system-re2/src/3rdparty/chromium/build/linux/unbundle/re2.gn	2017-06-10 23:22:13.065385884 +0200
+@@ -5,13 +5,14 @@
+ import("//build/shim_headers.gni")
+ 
+ shim_headers("re2_shim") {
+-  root_path = "src"
++  root_path = "src/re2"
++  prefix = "re2/"
+   headers = [
+-    "re2/filtered_re2.h",
+-    "re2/re2.h",
+-    "re2/set.h",
+-    "re2/stringpiece.h",
+-    "re2/variadic_function.h",
++    "filtered_re2.h",
++    "re2.h",
++    "set.h",
++    "stringpiece.h",
++    "variadic_function.h",
+   ]
+ }
+ 
