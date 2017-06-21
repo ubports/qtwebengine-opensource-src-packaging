@@ -179,10 +179,23 @@ Description: Qt WebEngine QML module
  .
  This package contains the WebEngine QML module for QtDeclarative.
 
+Package: qtwebengine5-dev-tools
+Architecture: any
+Multi-Arch: foreign
+Section: devel
+Depends: qtchooser, ${misc:Depends}, ${shlibs:Depends}
+Description: Qt WebEngine tools
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ This package contains qwebengine_convert_dict tool which converts hunspell
+ 'dic' dictionaries to binary 'bdic' format, which is required by spellchecker
+ in Qt WebEngine.
+
 Package: qtwebengine5-examples
 Architecture: any
 Multi-Arch: same
-Depends: libjs-jquery, libjs-marked, ${misc:Depends}, ${shlibs:Depends}
+Depends: libjs-jquery, libjs-marked, qtwebengine5-dev-tools, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Description: Qt WebEngine - Examples
  QtWebEngine provides a Web browser engine that makes it easy to embed content
