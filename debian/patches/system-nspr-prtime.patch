@@ -1,0 +1,75 @@
+--- a/src/3rdparty/chromium/base/BUILD.gn
++++ b/src/3rdparty/chromium/base/BUILD.gn
+@@ -49,6 +49,9 @@
+       "-Wno-char-subscripts",
+     ]
+   }
++  ldflags = [
++    "-lnspr4",
++  ]
+ }
+ 
+ config("base_implementation") {
+@@ -833,8 +836,6 @@
+     "third_party/dmg_fp/g_fmt.cc",
+     "third_party/icu/icu_utf.cc",
+     "third_party/icu/icu_utf.h",
+-    "third_party/nspr/prtime.cc",
+-    "third_party/nspr/prtime.h",
+     "third_party/superfasthash/superfasthash.c",
+     "threading/non_thread_safe.h",
+     "threading/non_thread_safe_impl.cc",
+--- a/src/3rdparty/chromium/base/time/pr_time_unittest.cc
++++ b/src/3rdparty/chromium/base/time/pr_time_unittest.cc
+@@ -7,7 +7,7 @@
+ 
+ #include "base/compiler_specific.h"
+ #include "base/macros.h"
+-#include "base/third_party/nspr/prtime.h"
++#include <nspr/prtime.h>
+ #include "base/time/time.h"
+ #include "build/build_config.h"
+ #include "testing/gtest/include/gtest/gtest.h"
+--- a/src/3rdparty/chromium/base/time/time.cc
++++ b/src/3rdparty/chromium/base/time/time.cc
+@@ -14,7 +14,7 @@
+ #include "base/logging.h"
+ #include "base/macros.h"
+ #include "base/strings/stringprintf.h"
+-#include "base/third_party/nspr/prtime.h"
++#include <nspr/prtime.h>
+ #include "build/build_config.h"
+ 
+ namespace base {
+--- a/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
++++ b/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
+@@ -473,7 +473,6 @@
+       'base/third_party/dmg_fp/dtoa_wrapper.cc',
+       'base/third_party/dmg_fp/g_fmt.cc',
+       'base/third_party/icu/icu_utf.cc',
+-      'base/third_party/nspr/prtime.cc',
+       'base/threading/non_thread_safe_impl.cc',
+       'base/threading/post_task_and_reply_impl.cc',
+       'base/threading/sequenced_task_runner_handle.cc',
+@@ -575,7 +574,7 @@
+     }
+ 
+   if is_linux:
+-    libs.extend(['-lrt'])
++    libs.extend(['-lrt', '-lnspr4'])
+     ldflags.extend(['-pthread'])
+ 
+     static_libraries['xdg_user_dirs'] = {
+--- a/src/3rdparty/chromium/tools/gn/BUILD.gn
++++ b/src/3rdparty/chromium/tools/gn/BUILD.gn
+@@ -274,6 +274,10 @@
+     "//build/config/sanitizers:deps",
+     "//build/win:default_exe_manifest",
+   ]
++
++  libs = [
++    "nspr4",
++  ]
+ }
+ 
+ test("gn_unittests") {

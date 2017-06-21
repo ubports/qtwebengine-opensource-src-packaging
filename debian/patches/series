@@ -1,3 +1,6 @@
 add_mips_support.patch
 linux-pri.patch
 system-re2.patch
+no-icudtl-dat.patch
+system-nspr-prtime.patch
+system-icu-utf.patch
