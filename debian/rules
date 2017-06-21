@@ -32,7 +32,6 @@ disabled_pch_architectures := amd64 powerpc s390x
 small_architectures := armhf mipsel
 
 defines+=use_system_expat \
-         use_system_ffmpeg \
          use_system_flac \
          use_system_harfbuzz \
          use_system_jsoncpp \
@@ -40,10 +39,8 @@ defines+=use_system_expat \
          use_system_libjpeg \
          use_system_libpng \
          use_system_libusb \
-         use_system_libwebp \
-         use_system_libxml \
+         use_system_libxml2 \
          use_system_libxslt \
-         use_system_opus \
          use_system_re2 \
          use_system_snappy \
          use_system_speex \
@@ -54,14 +51,17 @@ defines+=use_system_expat \
          use_system_protobuf
          # use_system_libxnvctrl \
          # use_system_sqlite \
-         # use_system_libvpx \
-         # use_system_icu \
-
-defines += use_proprietary_codecs use_system_ffmpeg
+         # use_system_libvpx
 
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(small_architectures)))
 	defines += reduce_binary_size
 endif
+
+config_args = -proprietary-codecs \
+              -system-ffmpeg \
+              -system-opus \
+              -system-webp \
+              -system-webengine-icu
 
 touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js \
 	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/acorn/acorn.js \
@@ -88,7 +88,7 @@ override_dh_auto_clean:
 
 override_dh_auto_configure:
 	# Run qmake once to create .qmake.conf and be sure to append the following values.
-	qmake WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests"
+	qmake WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests" QMAKE_EXTRA_ARGS+="$(config_args)"
 
 # Enable gstabs debugging symbols only on gstab_architectures.
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(gstab_architectures)))
@@ -138,7 +138,7 @@ endif
 	echo "QMAKE_LFLAGS += -Wl,-z,now" >> .qmake.conf
 
 	# Run qmake again now with the proper values.
-	qmake  WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests"
+	qmake  WEBENGINE_CONFIG+="$(defines)" QT_BUILD_PARTS+=" tests" QMAKE_EXTRA_ARGS+="$(config_args)"
 
 	# Create js files, that are needed for building step for arch and indep builds
 	cd $(CURDIR)/src/3rdparty/chromium/third_party/jstemplate/; \
