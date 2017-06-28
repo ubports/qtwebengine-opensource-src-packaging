@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.7.1 amd64
+# SymbolsHelper-Confirmed: 5.9.0 amd64
 libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1
  Qt_5.1@Qt_5.1 5.7.1
@@ -8,6 +8,8 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  Qt_5.5@Qt_5.5 5.7.1
  Qt_5.6@Qt_5.6 5.7.1
  Qt_5.7@Qt_5.7 5.7.1
+ Qt_5.8@Qt_5.8 5.9.0
+ Qt_5.9@Qt_5.9 5.9.0
  Qt_5@Qt_5 5.7.1
  Qt_5_PRIVATE_API@Qt_5_PRIVATE_API 5.7.1
  _ZN14QWebEnginePage10printToPdfERK18QWebEngineCallbackIRK10QByteArrayERK11QPageLayout@Qt_5 5.7.1
@@ -44,8 +46,10 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEnginePage18setBackgroundColorERK6QColor@Qt_5 5.7.1
  _ZN14QWebEnginePage19contentsSizeChangedERK6QSizeF@Qt_5 5.7.1
  _ZN14QWebEnginePage19fullScreenRequestedE27QWebEngineFullScreenRequest@Qt_5 5.7.1
+ _ZN14QWebEnginePage19pdfPrintingFinishedERK7QStringb@Qt_5 5.9.0
  _ZN14QWebEnginePage20setFeaturePermissionERK4QUrlNS_7FeatureENS_16PermissionPolicyE@Qt_5 5.7.1
  _ZN14QWebEnginePage20windowCloseRequestedEv@Qt_5 5.7.1
+ _ZN14QWebEnginePage21replaceMisspelledWordERK7QString@Qt_5 5.9.0
  _ZN14QWebEnginePage21scrollPositionChangedERK7QPointF@Qt_5 5.7.1
  _ZN14QWebEnginePage22authenticationRequiredERK4QUrlP14QAuthenticator@Qt_5 5.7.1
  _ZN14QWebEnginePage22recentlyAudibleChangedEb@Qt_5 5.7.1
@@ -57,8 +61,10 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEnginePage26featurePermissionRequestedERK4QUrlNS_7FeatureE@Qt_5 5.7.1
  _ZN14QWebEnginePage27proxyAuthenticationRequiredERK4QUrlP14QAuthenticatorRK7QString@Qt_5 5.7.1
  _ZN14QWebEnginePage32featurePermissionRequestCanceledERK4QUrlNS_7FeatureE@Qt_5 5.7.1
+ _ZN14QWebEnginePage4loadERK21QWebEngineHttpRequest@Qt_5 5.9.0
  _ZN14QWebEnginePage4loadERK4QUrl@Qt_5 5.7.1
  _ZN14QWebEnginePage5eventEP6QEvent@Qt_5 5.7.1
+ _ZN14QWebEnginePage5printEP8QPrinterRK18QWebEngineCallbackIbE@Qt_5 5.9.0
  _ZN14QWebEnginePage6setUrlERK4QUrl@Qt_5 5.7.1
  _ZN14QWebEnginePage7scriptsEv@Qt_5 5.7.1
  _ZN14QWebEnginePage7setHtmlERK7QStringRK4QUrl@Qt_5 5.7.1
@@ -92,6 +98,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEngineView17triggerPageActionEN14QWebEnginePage9WebActionEb@Qt_5 5.7.1
  _ZN14QWebEngineView23renderProcessTerminatedEN14QWebEnginePage30RenderProcessTerminationStatusEi@Qt_5 5.7.1
  _ZN14QWebEngineView4backEv@Qt_5 5.7.1
+ _ZN14QWebEngineView4loadERK21QWebEngineHttpRequest@Qt_5 5.9.0
  _ZN14QWebEngineView4loadERK4QUrl@Qt_5 5.7.1
  _ZN14QWebEngineView4stopEv@Qt_5 5.7.1
  _ZN14QWebEngineView5eventEP6QEvent@Qt_5 5.7.1
@@ -144,9 +151,11 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN17QWebEngineProfile17clearVisitedLinksERK5QListI4QUrlE@Qt_5 5.7.1
  _ZN17QWebEngineProfile17downloadRequestedEP22QWebEngineDownloadItem@Qt_5 5.7.1
  _ZN17QWebEngineProfile20clearAllVisitedLinksEv@Qt_5 5.7.1
+ _ZN17QWebEngineProfile20setSpellCheckEnabledEb@Qt_5 5.9.0
  _ZN17QWebEngineProfile21setHttpAcceptLanguageERK7QString@Qt_5 5.7.1
  _ZN17QWebEngineProfile21setRequestInterceptorEP31QWebEngineUrlRequestInterceptor@Qt_5 5.7.1
  _ZN17QWebEngineProfile22removeUrlSchemeHandlerEP26QWebEngineUrlSchemeHandler@Qt_5 5.7.1
+ _ZN17QWebEngineProfile22setSpellCheckLanguagesERK11QStringList@Qt_5 5.9.0
  _ZN17QWebEngineProfile23installUrlSchemeHandlerERK10QByteArrayP26QWebEngineUrlSchemeHandler@Qt_5 5.7.1
  _ZN17QWebEngineProfile23setHttpCacheMaximumSizeEi@Qt_5 5.7.1
  _ZN17QWebEngineProfile24setPersistentStoragePathERK7QString@Qt_5 5.7.1
@@ -238,6 +247,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK14QWebEnginePage15recentlyAudibleEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage3urlEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage4iconEv@Qt_5 5.7.1
+ _ZNK14QWebEnginePage4saveERK7QStringN22QWebEngineDownloadItem14SavePageFormatE@Qt_5 5.9.0
  _ZNK14QWebEnginePage4viewEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage5titleEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage6actionENS_9WebActionE@Qt_5 5.7.1
@@ -284,6 +294,8 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK17QWebEngineProfile14isOffTheRecordEv@Qt_5 5.7.1
  _ZNK17QWebEngineProfile16urlSchemeHandlerERK10QByteArray@Qt_5 5.7.1
  _ZNK17QWebEngineProfile18httpAcceptLanguageEv@Qt_5 5.7.1
+ _ZNK17QWebEngineProfile19isSpellCheckEnabledEv@Qt_5 5.9.0
+ _ZNK17QWebEngineProfile19spellCheckLanguagesEv@Qt_5 5.9.0
  _ZNK17QWebEngineProfile20httpCacheMaximumSizeEv@Qt_5 5.7.1
  _ZNK17QWebEngineProfile21persistentStoragePathEv@Qt_5 5.7.1
  _ZNK17QWebEngineProfile23persistentCookiesPolicyEv@Qt_5 5.7.1
@@ -306,13 +318,18 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK22QWebEngineDownloadItem10totalBytesEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem13receivedBytesEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem14savePageFormatEv@Qt_5 5.7.1
+ _ZNK22QWebEngineDownloadItem15interruptReasonEv@Qt_5 5.9.0
+ _ZNK22QWebEngineDownloadItem21interruptReasonStringEv@Qt_5 5.9.0
  _ZNK22QWebEngineDownloadItem2idEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem3urlEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem4pathEv@Qt_5 5.7.1
+ _ZNK22QWebEngineDownloadItem4typeEv@Qt_5 5.9.0
  _ZNK22QWebEngineDownloadItem5stateEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem8mimeTypeEv@Qt_5 5.7.1
  _ZNK25QWebEngineContextMenuData12selectedTextEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData14misspelledWordEv@Qt_5 5.9.0
  _ZNK25QWebEngineContextMenuData17isContentEditableEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData23spellCheckerSuggestionsEv@Qt_5 5.9.0
  _ZNK25QWebEngineContextMenuData7isValidEv@Qt_5 5.7.1
  _ZNK25QWebEngineContextMenuData7linkUrlEv@Qt_5 5.7.1
  _ZNK25QWebEngineContextMenuData8linkTextEv@Qt_5 5.7.1
