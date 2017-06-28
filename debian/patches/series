@@ -1,3 +1,4 @@
+disable-last_commit_position.patch
 add_mips_support.patch
 linux-pri.patch
 system-re2.patch
