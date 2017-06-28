@@ -7,14 +7,12 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   * New upstream release. (Closes: #865273)
   * Fix debian/watch so it isn't hardcoded to 5.7.1.
   * Refresh add_mips_support.patch.
+  * Add patch disabling last_commit_position as our tarballs are not Git
+    repositories.
 
   [ Jonathan Riddell ]
   * New package qtwebengine5-private-dev for private headers used by
     QtWebView
-
-  [ Simon Quigley ]
-  * Add patch disabling last_commit_position as our tarballs are not Git
-    repositories.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 16 Jun 2017 16:54:53 +0100
 
