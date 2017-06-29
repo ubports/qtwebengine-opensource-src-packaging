@@ -2,6 +2,9 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
 
   [ Sandro Knauß ]
   * do not use gold linker for small archs
+  * Bump Standards-Version:
+    - add Recommends to doc package for dev package
+    - MPL-1.0 and MPL-2.0 are now in common-licenses
 
   [ Simon Quigley ]
   * New upstream release. (Closes: #865273)

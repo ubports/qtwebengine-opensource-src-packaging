@@ -81,7 +81,7 @@ Build-Depends: autotools-dev,
 Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.0~),
                      qtbase5-doc-html (>= 5.9.0~),
                      qttools5-dev-tools (>= 5.9.0~)
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/qt/qtwebengine.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtwebengine.git
 Homepage: https://doc.qt.io/qt-5/qtwebengine-index.html
@@ -97,6 +97,7 @@ Depends: libqt5webchannel5-dev,
          qtbase5-dev,
          qtdeclarative5-dev,
          ${misc:Depends}
+Recommends: qtwebengine5-doc
 Description: Web content engine library for Qt - development files
  QtWebEngine provides a Web browser engine that makes it easy to embed content
  from the World Wide Web into your Qt application.
