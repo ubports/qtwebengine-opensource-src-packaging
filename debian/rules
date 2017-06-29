@@ -31,27 +31,35 @@ disabled_pch_architectures := amd64 powerpc s390x
 
 small_architectures := armhf mipsel
 
-defines+=use_system_expat \
+defines+=skia_use_system_expat \
+         skia_use_system_freetype2 \
+         skia_use_system_icu \
+         skia_use_system_json \
+         skia_use_system_libjpeg_turbo \
+         skia_use_system_libpng \
+         skia_use_system_libwebp \
+         skia_use_system_lua \
+         skia_use_system_zlib \
          use_system_flac \
          use_system_harfbuzz \
-         use_system_jsoncpp \
          use_system_libevent \
+         use_system_libffi \
          use_system_libjpeg \
          use_system_libpng \
-         use_system_libusb \
-         use_system_libxml2 \
+         use_system_libxml \
          use_system_libxslt \
-         use_system_re2 \
+         use_system_minizip \
          use_system_snappy \
-         use_system_speex \
-         use_system_v8 \
-         use_system_xdg_utils \
-         use_system_yasm \
          use_system_zlib \
-         use_system_protobuf
-         # use_system_libxnvctrl \
-         # use_system_sqlite \
-         # use_system_libvpx
+         #use_system_jsoncpp \ # not used anymore
+         #use_system_libusb \ # not used anymore
+         #use_system_protobuf \ # not used
+         #use_system_speex \ # not used anymore
+         #use_system_v8 \ # not used anymore
+         #use_system_xdg_utils \ # not used anymore
+         # use_system_libxnvctrl \ # not used anymore
+         # use_system_sqlite \ # internal copy is needed for Qt 5.9.0
+         # use_system_libvpx # see #812091
 
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(small_architectures)))
 	defines += reduce_binary_size
