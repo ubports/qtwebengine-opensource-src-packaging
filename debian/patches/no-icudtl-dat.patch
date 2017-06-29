@@ -1,3 +1,15 @@
+Description: Do not check for ICU data file
+ quick hack to avoid checking for the nonexistent icudtl.dat and silence the
+ resulting warnings - not upstreamable as is because it removes the fallback
+ mechanism for the ICU data directory (which is not used in our builds because
+ we use the system ICU, which embeds the data statically) completely
+Author: Kevin Kofler
+Origin: Fedora, http://pkgs.fedoraproject.org/cgit/rpms/qt5-qtwebengine.git/commit/qtwebengine-opensource-src-5.6.0-no-icudtl-dat.patch?id=4f844a7b2b6550e1d13c2ea973059eef0abcda99
+Forwarded: not-needed
+Reviewed-by: Sandro Knauß <hefee@debian.org>
+Last-Update: 2017-06-29
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/core/web_engine_library_info.cpp
 +++ b/src/core/web_engine_library_info.cpp
 @@ -254,24 +254,7 @@

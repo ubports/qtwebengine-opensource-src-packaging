@@ -1,3 +1,11 @@
+Description: Fix system re2 usage
+Author: Kevin Kofler
+Origin: Fedora, http://pkgs.fedoraproject.org/cgit/rpms/qt5-qtwebengine.git/commit/qtwebengine-opensource-src-5.9.0-system-re2.patch?id=ac7d2ae4c97de63eac6cf0e3d270b6b9c743acfa
+Forwarded: not-needed
+Reviewed-by: Sandro Knauß <hefee@debian.org>
+Last-Update: 2017-06-29
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 diff -ur qtwebengine-opensource-src-5.9.0/src/3rdparty/chromium/build/linux/unbundle/re2.gn qtwebengine-opensource-src-5.9.0-system-re2/src/3rdparty/chromium/build/linux/unbundle/re2.gn
 --- qtwebengine-opensource-src-5.9.0/src/3rdparty/chromium/build/linux/unbundle/re2.gn	2017-05-18 16:51:44.000000000 +0200
 +++ qtwebengine-opensource-src-5.9.0-system-re2/src/3rdparty/chromium/build/linux/unbundle/re2.gn	2017-06-10 23:22:13.065385884 +0200

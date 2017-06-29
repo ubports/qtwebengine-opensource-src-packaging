@@ -1,3 +1,14 @@
+Description: use the system ICU UTF functions
+ We already depend on ICU, so it is useless to copy these functions here.
+ I checked the history of that directory, and other than the renames I am
+ undoing, there were no modifications at all.
+Author: Kevin, Kofler
+Origin: Fedora, http://pkgs.fedoraproject.org/cgit/rpms/qt5-qtwebengine.git/tree/qtwebengine-opensource-src-5.9.0-system-icu-utf.patch?id=ac7d2ae4c97de63eac6cf0e3d270b6b9c743acfa
+Forwarded: not-needed
+Reviewed-by: Sandro Knauß <hefee@debian.org>
+Last-Update: 2017-06-29
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/BUILD.gn qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/BUILD.gn
 --- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/BUILD.gn	2017-06-08 10:52:51.565409865 +0200
 +++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/BUILD.gn	2017-06-08 11:13:47.297983554 +0200

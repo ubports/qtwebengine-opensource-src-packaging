@@ -1,3 +1,11 @@
+Description: Use system NSPR prtime
+Author: Kevin Kofler
+Origin: Fedora, http://pkgs.fedoraproject.org/cgit/rpms/qt5-qtwebengine.git/tree/qtwebengine-opensource-src-5.9.0-system-nspr-prtime.patch?id=f6784380ac380455d2c88b78543c5a4c2c5d0578
+Forwarded: not-needed
+Reviewed-by: Sandro Knauß <hefee@debian.org>
+Last-Update: 2017-06-29
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/base/BUILD.gn
 +++ b/src/3rdparty/chromium/base/BUILD.gn
 @@ -49,6 +49,9 @@
