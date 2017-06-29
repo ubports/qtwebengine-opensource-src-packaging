@@ -9,6 +9,7 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   * Check missing-source tarballs (one new occurence found)
   * Update short desciption of packages to make them unique.
   * Update lintian-overrides
+  * Update Excluded-File list
 
   [ Simon Quigley ]
   * New upstream release. (Closes: #865273)
