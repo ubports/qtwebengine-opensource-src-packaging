@@ -88,6 +88,10 @@ touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundl
 
 override_dh_auto_clean:
 	dh_auto_clean
+	rm -rf .qmake.cache
+	rm -rf config.tests/.qmake.cache
+	rm -rf qtwebengine-config.h
+
 	rm -rf $(CURDIR)/test_root
 	rm -rf $(CURDIR)/docs
 	rm -rf $(CURDIR)/.local
