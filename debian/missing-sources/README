@@ -7,7 +7,7 @@ The GPL requires you to provide the corresponding source code.
 For Debian all missing sources are bundled in this directory.
 They have been grabbed from the various upstream projects.
 
-Last synchronization was made with QtWebEngine v5.7.1 at 2016-12-23.
+Last synchronization was made with QtWebEngine v5.9.0 at 2016-06-29.
 
 Files: examples/webenginewidgets/contentmanipulation/jquery.min.js
 Project: jQuery v1.3.2
@@ -15,6 +15,11 @@ License: Expat or GPL
 Source: http://code.jquery.com/jquery-1.3.2.js
 
 Files: examples/webenginewidgets/markdowneditor/resources/marked.min.js
+Project: marked 0.3.6
+License: Expat
+Source: https://github.com/chjj/marked/archive/v0.3.6.tar.gz
+
+Files: examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js
 Project: marked 0.3.6
 License: Expat
 Source: https://github.com/chjj/marked/archive/v0.3.6.tar.gz

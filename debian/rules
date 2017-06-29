@@ -82,6 +82,7 @@ override_dh_auto_clean:
 	rm -rf $(CURDIR)/src/3rdparty/chromium/third_party/mocha/mocha.js
 	rm -rf $(CURDIR)/examples/webenginewidgets/contentmanipulation/jquery*.js
 	rm -rf $(CURDIR)/examples/webenginewidgets/markdowneditor/resources/marked*.js
+	rm -rf $(CURDIR)/examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.*.js
 	
 	for fname in $(touch_files); do \
 		rm -rf $(CURDIR)/$${fname}; \
@@ -153,6 +154,7 @@ endif
 	>examples/webenginewidgets/contentmanipulation/jquery.js cat debian/missing-sources/jquery-*.js
 	yui-compressor --type js "examples/webenginewidgets/contentmanipulation/jquery.js" -o "examples/webenginewidgets/contentmanipulation/jquery.min.js"
 	>examples/webenginewidgets/markdowneditor/resources/marked.js tar xaf debian/missing-sources/marked*.tar.gz --wildcards --to-stdout '*/marked.js'
+	>examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js tar xaf debian/missing-sources/marked*.tar.gz --wildcards --to-stdout '*/marked.js'
 	>src/3rdparty/chromium/third_party/mocha/mocha.js tar xaf debian/missing-sources/mocha*.tar.gz --wildcards --to-stdout '*/mocha.js'
 	yui-compressor --type js "examples/webenginewidgets/markdowneditor/resources/marked.js" -o "examples/webenginewidgets/markdowneditor/resources/marked.min.js"
 	
