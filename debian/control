@@ -139,7 +139,7 @@ Depends: libqt5webengine-data (= ${source:Version}),
 Pre-Depends: ${misc:Pre-Depends}
 Breaks: libqt5webengine5 (<< 5.7.1+dfsg-4)
 Replaces: libqt5webengine5 (<< 5.7.1+dfsg-4)
-Description: Web content engine library for Qt
+Description: Web content engine library for Qt - Core
  QtWebEngine provides a Web browser engine that makes it easy to embed content
  from the World Wide Web into your Qt application.
  .
@@ -152,7 +152,7 @@ Depends: libqt5webengine-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
-Description: Web content engine library for Qt
+Description: Web content engine library for Qt - Widget
  QtWebEngine provides a Web browser engine that makes it easy to embed content
  from the World Wide Web into your Qt application.
  .
@@ -163,7 +163,7 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
-Description: Web content engine library for Qt
+Description: Web content engine library for Qt - Data
  QtWebEngine provides a Web browser engine that makes it easy to embed content
  from the World Wide Web into your Qt application.
  .
