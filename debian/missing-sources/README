@@ -18,3 +18,8 @@ Files: examples/webenginewidgets/markdowneditor/resources/marked.min.js
 Project: marked 0.3.6
 License: Expat
 Source: https://github.com/chjj/marked/archive/v0.3.6.tar.gz
+
+Files: src/3rdparty/chromium/third_party/mocha/mocha.js
+Project: Mocha 2.5.3
+License: MIT
+Source: https://github.com/mochajs/mocha/archive/v2.5.3.tar.gz

@@ -5,6 +5,7 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   * Bump Standards-Version:
     - add Recommends to doc package for dev package
     - MPL-1.0 and MPL-2.0 are now in common-licenses
+  * replace mocha.js with a missing-source tarball
 
   [ Simon Quigley ]
   * New upstream release. (Closes: #865273)
