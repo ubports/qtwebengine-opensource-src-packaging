@@ -45,7 +45,9 @@ Files: debian/*
 Copyright: 2016 Scarlett Clark <sgclark@kubuntu.org>
 License: LGPL-2+
 
-Files: examples/webengine/minimal/main.cpp
+
+Files: examples/webengine/customdialogs/*
+       examples/webengine/minimal/main.cpp
        examples/webengine/minimal/main.qml
        examples/webengine/quicknanobrowser/ApplicationRoot.qml
        examples/webengine/quicknanobrowser/BrowserDialog.qml
@@ -54,6 +56,7 @@ Files: examples/webengine/minimal/main.cpp
        examples/webengine/quicknanobrowser/FullScreenNotification.qml
        examples/webengine/quicknanobrowser/main.cpp
        examples/webengine/quicknanobrowser/utils.h
+       examples/webengine/recipebrowser/*
        examples/webenginewidgets/contentmanipulation/main.cpp
        examples/webenginewidgets/contentmanipulation/mainwindow.cpp
        examples/webenginewidgets/contentmanipulation/mainwindow.h
@@ -61,6 +64,8 @@ Files: examples/webengine/minimal/main.cpp
        examples/webenginewidgets/markdowneditor/*
        examples/webenginewidgets/minimal/main.cpp
        examples/webenginewidgets/simplebrowser/*
+       examples/webenginewidgets/spellchecker/*
+       examples/webenginewidgets/videoplayer/*
 Copyright: 2015-2016, The Qt Company Ltd
 License: BSD-3-clause
 
@@ -6227,6 +6232,13 @@ Copyright: 2014, Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.
            2015-2016, The Qt Company Ltd
 License: GPL-3_Qt-1.1Exception or LGPL-2_Qt-1.1Exception
 
+Files: tests/auto/quick/qmltests/mock-delegates/QtWebEngine/Controls1Delegates/AlertDialog.qml
+       tests/auto/quick/qmltests/mock-delegates/QtWebEngine/Controls1Delegates/ConfirmDialog.qml
+       tests/auto/quick/qmltests/mock-delegates/QtWebEngine/Controls1Delegates/FilePicker.qml
+       tests/auto/quick/qmltests/mock-delegates/QtWebEngine/Controls1Delegates/PromptDialog.qml
+Copyright: 2016, The Qt Company Ltd
+License: GPL3_Qt-1.1Exception
+
 Files: tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
        tests/auto/quick/shared/testwindow.h
        tests/auto/quick/shared/util.h
@@ -6246,17 +6258,6 @@ Copyright: 2009, Girish Ramakrishnan <girish@forwardbias.in>
            2009, Torch Mobile Inc
 License: LGPL-2+
 
-Files: tests/quicktestbrowser/ApplicationRoot.qml
-       tests/quicktestbrowser/BrowserDialog.qml
-       tests/quicktestbrowser/BrowserWindow.qml
-       tests/quicktestbrowser/ButtonWithMenu.qml
-       tests/quicktestbrowser/DownloadView.qml
-       tests/quicktestbrowser/FeaturePermissionBar.qml
-       tests/quicktestbrowser/FullScreenNotification.qml
-       tests/quicktestbrowser/ZoomController.qml
-Copyright: 2015, The Qt Company Ltd
-License: BSD-3-clause
-
 Files: tests/auto/quick/qmltests/mock-delegates/TestParams/JSDialogParams.qml
        tests/auto/quick/qquickwebenginedefaultsurfaceformat/tst_qquickwebenginedefaultsurfaceformat.cpp
        tests/auto/widgets/qwebenginedefaultsurfaceformat/tst_qwebenginedefaultsurfaceformat.cpp
@@ -6267,6 +6268,39 @@ License: GPL-2_Qt-1.1Exception or LGPL-2+_Qt-1.1Exception
 Files: tests/auto/quick/qmltests/data/tst_javaScriptDialogs.qml
 Copyright: 2015, Digia Plc and/or its subsidiary(-ies)
 License: GPL-3_Qt-1.1Exception or LGPL-2.1_Qt-1.1Exception
+
+Files: tests/manual/widgets/inputmethods/colorpicker.cpp
+       tests/manual/widgets/inputmethods/colorpicker.h
+       tests/manual/widgets/inputmethods/controlview.cpp
+       tests/manual/widgets/inputmethods/controlview.h
+       tests/manual/widgets/inputmethods/main.cpp
+       tests/manual/widgets/inputmethods/referenceview.cpp
+       tests/manual/widgets/inputmethods/referenceview.h
+       tests/manual/widgets/inputmethods/testview.cpp
+       tests/manual/widgets/inputmethods/testview.h
+       tests/manual/widgets/inputmethods/webview.cpp
+       tests/manual/widgets/inputmethods/webview.h
+Copyright: 2016, The Qt Company Ltd
+License: GPL3_Qt-1.1Exception
+
+Files: tests/manual/quick/faviconbrowser/AddressBar.qml
+       tests/manual/quick/faviconbrowser/FaviconPanel.qml
+       tests/manual/quick/faviconbrowser/main.cpp
+       tests/manual/quick/faviconbrowser/main.qml
+       tests/manual/quick/faviconbrowser/utils.h
+Copyright: 2016, The Qt Company Ltd
+License: BSD-3-clause
+
+Files: tests/quicktestbrowser/ApplicationRoot.qml
+       tests/quicktestbrowser/BrowserDialog.qml
+       tests/quicktestbrowser/BrowserWindow.qml
+       tests/quicktestbrowser/ButtonWithMenu.qml
+       tests/quicktestbrowser/DownloadView.qml
+       tests/quicktestbrowser/FeaturePermissionBar.qml
+       tests/quicktestbrowser/FullScreenNotification.qml
+       tests/quicktestbrowser/ZoomController.qml
+Copyright: 2015, The Qt Company Ltd
+License: BSD-3-clause
 
 Files: tools/buildscripts/qtwebengine_utils.py
        tools/buildscripts/repack_locales.py
