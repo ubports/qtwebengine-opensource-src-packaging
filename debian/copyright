@@ -82,7 +82,14 @@ License: GPL or Expat
 
 Files: debian/missing-sources/marked-v0.3.6.tar.gz
        examples/webenginewidgets/markdowneditor/resources/marked.min.js
+       examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js
 Copyright: 2011-2014, Christopher Jeffrey (https://github.com/chjj/)
+License: Expat
+
+Files: debian/missing-sources/mocha-v2.5.3.tar.gz
+       src/3rdparty/chromium/third_party/mocha/*
+Copyright: Joyent, Inc. and other Node contributors
+           2011-2016, TJ Holowaychuk <tj@vision-media.ca>
 License: Expat
 
 Files: src/core/access_token_store_qt.cpp
