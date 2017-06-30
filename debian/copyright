@@ -94,10 +94,8 @@ Files: src/core/access_token_store_qt.cpp
        src/core/media_capture_devices_dispatcher.cpp
        src/core/native_web_keyboard_event_qt.cpp
        src/core/proxy_config_service_qt.cpp
-       src/core/renderer/pepper/pepper_flash_browser_host_qt.cpp
        src/core/renderer/pepper/pepper_flash_renderer_host_qt.cpp
        src/core/renderer/web_channel_ipc_transport.cpp
-       src/core/resource_dispatcher_host_delegate_qt.cpp
        src/core/web_contents_adapter.cpp
        src/core/web_contents_delegate_qt.cpp
 Copyright: 2011-2013, The Chromium Authors
@@ -105,9 +103,6 @@ Copyright: 2011-2013, The Chromium Authors
 License: BSD-3-clause or GPL-2 or LGPL-2+
 
 Files: src/core/common/qt_messages.*
-       src/core/resources/grit_action.gypi
-       src/core/resources/repack_locales.gypi
-       src/core/resources/repack_resources.gypi
 Copyright: 2010-2012, The Chromium Authors
 License: BSD-3-clause
 
@@ -246,30 +241,6 @@ Files: src/3rdparty/chromium/chrome/third_party/chromevox/third_party/closure-li
 Copyright: 2006-2012, The Closure Library Authors
 License: Apache-2.0
 
-Files: src/3rdparty/chromium/content/child/multipart_response_delegate.h
-Copyright: 2014, The Chromium Authors
-License: BSD-3-clause or LGPL-2.1+ or MPL-1.1
-
-Files: src/3rdparty/chromium/crypto/third_party/nss/*
-Copyright: 1994-2000, Netscape Communications Corporation.
-License: GPL-2+ or LGPL-2.1+ or MPL-1.1
-
-Files: src/3rdparty/chromium/crypto/third_party/nss/rsawrapr.c
-Copyright: 1994-2000, Netscape Communications Corporation.
-License: MPL-2.0
-
-Files: src/3rdparty/chromium/ios/third_party/blink/blink_html_tokenizer.gyp
-Copyright: 2014, The Chromium Authors
-License: BSD-3-clause
-
-Files: src/3rdparty/chromium/ios/third_party/gcdwebserver/gcdwebserver.gyp
-Copyright: 2014, The Chromium Authors
-License: BSD-3-clause
-
-Files: src/3rdparty/chromium/native_client/src/third_party/gtest/gtest.gyp
-Copyright: 2012, Google Inc
-License: BSD-3-clause
-
 Files: src/3rdparty/chromium/net/base/registry_controlled_domains/registry_controlled_domain.h
        src/3rdparty/chromium/net/cookies/canonical_cookie.cc
        src/3rdparty/chromium/net/cookies/cookie_monster.cc
@@ -279,7 +250,6 @@ Files: src/3rdparty/chromium/net/base/registry_controlled_domains/registry_contr
        src/3rdparty/chromium/net/http/http_chunked_decoder.*
        src/3rdparty/chromium/net/http/md4.*
        src/3rdparty/chromium/net/proxy/proxy_resolver_script.h
-       src/3rdparty/chromium/net/socket/ssl_client_socket_nss.cc
 Copyright: 1994-2000, Netscape Communications Corporation.
 License: BSD-3-clause or GPL-2+ or LGPL-2.1+ or MPL-1.1
 
@@ -291,15 +261,6 @@ Files: src/3rdparty/chromium/net/third_party/nss/ssl/*
 Copyright: 1994-2000, Netscape Communications Corporation.
            2012-2013, The Chromium Authors
 License: MPL-2.0
-
-Files: src/3rdparty/chromium/net/third_party/nss/ssl/exports_win.def
-Copyright: The Chromium Authors
-License: BSD-3-clause
-
-Files: src/3rdparty/chromium/net/third_party/nss/ssl/bodge/nssrenam.h
-       src/3rdparty/chromium/net/third_party/nss/ssl/sslplatf.c
-Copyright: 1994-2000, Netscape Communications Corporation.
-License: BSD-3-clause or GPL-2+ or LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/adobe/*
 Copyright: 2012-2014, The Chromium Authors
@@ -381,14 +342,6 @@ Files: src/3rdparty/chromium/third_party/angle/src/third_party/systeminfo/*
 Copyright: 2009, Apple Inc
 License: BSD-2-clause
 
-Files: src/3rdparty/chromium/third_party/apple_sample_code/apple_sample_code.gyp
-Copyright: 2013, The Chromium Authors
-License: BSD-3-clause
-
-Files: src/3rdparty/chromium/third_party/appurify-python/*
-Copyright: 2014, Appurify
-License: Apache-2.0
-
 Files: src/3rdparty/chromium/third_party/bintrees/*
 Copyright: 2010-2013, Manfred Moitzi
 License: Expat
@@ -408,7 +361,6 @@ License: OpenSSL or SSLeay
 
 Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bitstr.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bool.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bytes.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_d2i_fp.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_dup.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_enum.c
@@ -427,18 +379,14 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bitstr.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/asn1_lib.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/asn1_par.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/asn_pack.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/bio_asn1.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/bio_ndef.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/f_enum.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/f_int.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/f_string.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/t_bitst.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/t_pkey.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_dec.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_enc.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_fre.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_new.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_prn.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_typ.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/tasn_utl.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/x_bignum.c
@@ -480,14 +428,11 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bitstr.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/check.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/dh.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/dh_test.cc
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/dh/internal.h
        src/3rdparty/chromium/third_party/boringssl/src/crypto/digest/digest.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/digest/digests.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/digest/internal.h
        src/3rdparty/chromium/third_party/boringssl/src/crypto/dsa/dsa.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/dsa/dsa_test.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/dsa/internal.h
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/algorithm.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp_asn1.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/evp/evp_ctx.c
@@ -600,7 +545,6 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bitstr.c
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/type_check.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/x509.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/x509_vfy.h
-       src/3rdparty/chromium/third_party/boringssl/src/ssl/s3_meth.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_asn1.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_rsa.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_stat.c
@@ -653,7 +597,6 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/aes.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/cfb.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/ctr.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/gcm.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/gcm_test.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/internal.h
        src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/ofb.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/pem/pem_x509.c
@@ -718,12 +661,9 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/aes.c
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ecdh.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ecdsa.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/pkcs8.h
-       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/pqueue.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/time_support.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/x509v3.h
        src/3rdparty/chromium/third_party/boringssl/src/ssl/d1_lib.c
-       src/3rdparty/chromium/third_party/boringssl/src/ssl/d1_meth.c
-       src/3rdparty/chromium/third_party/boringssl/src/ssl/pqueue/pqueue.c
 Copyright: 2002, Sun Microsystems, Inc
            1998-2015, The OpenSSL Project
 License: OpenSSL
@@ -740,10 +680,6 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/cbb.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/cbs.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bytestring/internal.h
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/chacha/chacha_generic.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/chacha/chacha_vec.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/chacha/chacha_vec_arm.S
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/chacha/chacha_vec_arm_generate.go
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/aead.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/aead_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_chacha20poly1305.c
@@ -751,10 +687,8 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cipher/e_tls.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cmac/cmac_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/conf/internal.h
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu-arm-asm.S
        src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu-arm.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/crypto.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/curve25519/asm/x25519-arm.S
        src/3rdparty/chromium/third_party/boringssl/src/crypto/curve25519/curve25519.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/curve25519/ed25519_test.cc
        src/3rdparty/chromium/third_party/boringssl/src/crypto/curve25519/x25519_test.cc
@@ -808,7 +742,6 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/hkdf.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/lhash_macros.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/objects.h
-       src/3rdparty/chromium/third_party/boringssl/src/include/openssl/opensslfeatures.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/opensslv.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/ossl_typ.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/pkcs12.h
@@ -819,7 +752,6 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/srtp.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/stack_macros.h
        src/3rdparty/chromium/third_party/boringssl/src/ssl/custom_extensions.c
-       src/3rdparty/chromium/third_party/boringssl/src/ssl/pqueue/pqueue_test.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_aead_ctx.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_buffer.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_test.cc
@@ -869,8 +801,6 @@ Files: src/3rdparty/chromium/third_party/boringssl/linux-arm/crypto/aes/aes-armv
        src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/asm/ghash-x86.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/asm/ghash-x86_64.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/modes/asm/ghashv8-armx.pl
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/rc4/asm/rc4-586.pl
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/rc4/asm/rc4-x86_64.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha1-586.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha1-armv4-large.pl
        src/3rdparty/chromium/third_party/boringssl/src/crypto/sha/asm/sha1-armv8.pl
@@ -883,12 +813,7 @@ Files: src/3rdparty/chromium/third_party/boringssl/linux-arm/crypto/aes/aes-armv
 Copyright: Andy Polyakov <appro@openssl.org>
 License: CRYPTOGAMS or OpenSSL
 
-Files: src/3rdparty/chromium/third_party/boringssl/boringssl.gyp
-       src/3rdparty/chromium/third_party/boringssl/boringssl.gypi
-       src/3rdparty/chromium/third_party/boringssl/boringssl_nacl.gyp
-       src/3rdparty/chromium/third_party/boringssl/boringssl_tests.gyp
-       src/3rdparty/chromium/third_party/boringssl/boringssl_tests.gypi
-       src/3rdparty/chromium/third_party/boringssl/boringssl_unittest.cc
+Files: src/3rdparty/chromium/third_party/boringssl/boringssl_unittest.cc
        src/3rdparty/chromium/third_party/boringssl/roll_boringssl.py
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/go/bootstrap.py
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/go/env.py
@@ -905,12 +830,6 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/rsaz-avx2.p
 Copyright: 2012, Intel Corporation
            2004, Kungliga Tekniska Högskolan
 License: BSD-3-clause
-
-Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/directory.h
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/directory_posix.c
-       src/3rdparty/chromium/third_party/boringssl/src/crypto/directory_win.c
-Copyright: 2004, Richard Levitte <richard@levitte.org>
-License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/boringssl/src/util/generate_build_files.py
 Copyright: 2015, Google Inc
@@ -930,39 +849,16 @@ Copyright: 2013-2015, Google Inc
            2013-2014, The Chromium Authors
 License: Apache-2.0
 
-Files: src/3rdparty/chromium/third_party/bsdtrees/*
-Copyright: 2002, Niels Provos <provos@citi.umich.edu>
-License: BSD-2-clause
-
 Files: src/3rdparty/chromium/third_party/bspatch/*
 Copyright: 2003-2004, Colin Percival
 License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/bspatch/BUILD.gn
-       src/3rdparty/chromium/third_party/bspatch/bspatch.gyp
        src/3rdparty/chromium/third_party/bspatch/README.chromium
 Copyright: 2009-2015, The Chromium Authors
 License: BSD-3-clause
 Comment: these files are part of chromium and the LICENSE file the mention is
  the one in the chromium root source tree.
-
-Files: src/3rdparty/chromium/third_party/cacheinvalidation/cacheinvalidation.gyp
-       src/3rdparty/chromium/third_party/cacheinvalidation/cacheinvalidation_unittests.isolate
-Copyright: 2012, The Chromium Authors
-License: BSD-3-clause
-
-Files: src/3rdparty/chromium/third_party/cardboard-java/*
-Copyright: 2014, Google Inc
-           2015, The Chromium Authors
-License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/class-dump/*
-Copyright: 1997-2013, Steve Nygard
-License: GPL-2+
-
-Files: src/3rdparty/chromium/third_party/class-dump/class-dump.gyp
-Copyright: 2015, The Chromium Authors
-License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/cld/*
 Copyright: 2006-2014, The Chromium Authors
@@ -1012,10 +908,6 @@ Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/mini_chro
 Copyright: 2015, The Crashpad Authors
 License: Apache-2.0
 
-Files: src/3rdparty/chromium/third_party/cython/*
-Copyright: 2014, The Chromium Authors
-License: BSD-3-clause
-
 Files: src/3rdparty/chromium/third_party/d3/*
 Copyright: 2010-2014, Michael Bostock
 License: BSD-3-clause
@@ -1064,8 +956,6 @@ Copyright: 2000, Clark Cooper
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/expat/BUILD.gn
-       src/3rdparty/chromium/third_party/expat/expat.gyp
-       src/3rdparty/chromium/third_party/expat/expat_nacl.gyp
 Copyright: 2012-2014, The Chromium Authors
 License: BSD-3-clause
 
@@ -1536,7 +1426,6 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv2
        src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_altivec_template.c
        src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_internal.h
        src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_template.c
-       src/3rdparty/chromium/third_party/ffmpeg/libswresample/swresample-test.c
        src/3rdparty/chromium/third_party/ffmpeg/tools/coverity.c
 Copyright: 2002, A'rpi
            2014-2015, Arwa Arif <arwaarif1994@gmail.com>
@@ -1683,12 +1572,7 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/PRESUBMIT.py
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/build_ffmpeg.py
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/copy_config.sh
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/credits_updater_unittest.py
-       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/generate_gyp.py
-       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/generate_gyp_unittest.py
-       src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/munge_config_optimizations.sh
        src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/win_env.sh
-       src/3rdparty/chromium/third_party/ffmpeg/ffmpeg.gyp
-       src/3rdparty/chromium/third_party/ffmpeg/ffmpeg_generated.gypi
 Copyright: 2009-2016, The Chromium Authors
 License: BSD-3-clause
 
@@ -1727,12 +1611,6 @@ Copyright: 2014, Andreas Cadhalpun
            2007, Free Software Foundation, Inc. <http://fsf.org/>
            2014, Tiancheng "Timothy" Gu
 License: GPL-3+
-
-Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideo.h
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideodec.cpp
-       src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libutvideoenc.cpp
-Copyright: 2011-2012, Derek Buitenhuis
-License: GPL-2
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/libavutil/libm.h
        src/3rdparty/chromium/third_party/ffmpeg/libswresample/resample.c
@@ -1778,7 +1656,6 @@ License: BSD-3-clause
 Files: src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/ashmem/cutils/ashmem-dev.c
        src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/native_app_glue/android_native_app_glue.c
        src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/native_app_glue/android_native_app_glue.h
-       src/3rdparty/chromium/third_party/skia/src/images/SkImageDecoder_libwebp.cpp
        src/3rdparty/chromium/third_party/skia/third_party/etc1/LICENSE
        src/3rdparty/chromium/third_party/skia/third_party/etc1/etc1.cpp
        src/3rdparty/chromium/third_party/skia/third_party/etc1/etc1.h
@@ -1884,7 +1761,6 @@ Copyright: 2011, Daniel Richard G <skunk@iSKUNK.ORG>
 License: GPL-3+_AutoConfException
 
 Files: src/3rdparty/chromium/third_party/fontconfig/BUILD.gn
-       src/3rdparty/chromium/third_party/fontconfig/fontconfig.gyp
 Copyright: 2014, The Chromium Authors
 License: BSD-3-clause
 
@@ -1921,7 +1797,6 @@ Copyright: 1996-2015, David Turner, Robert Wilhelm, and Werner Lemberg
 License: FTL
 
 Files: src/3rdparty/chromium/third_party/freetype-android/BUILD.gn
-       src/3rdparty/chromium/third_party/freetype-android/freetype.gyp
 Copyright: 2011-2014, The Chromium Authors
 License: BSD-3-clause
 
@@ -1981,7 +1856,6 @@ Copyright: 1995-2002, Jean-loup Gailly
 License: Zlib
 
 Files: src/3rdparty/chromium/third_party/freetype2/BUILD.gn
-       src/3rdparty/chromium/third_party/freetype2/freetype2.gyp
        src/3rdparty/chromium/third_party/freetype2/src/src/tools/ftrandom/ftrandom.c
 Copyright: 2005-2008, George Williams
            2013-2014, The Chromium Authors
@@ -2034,7 +1908,6 @@ Copyright: 2006, Behdad Esfahbod
 License: MIT/X11
 
 Files: src/3rdparty/chromium/third_party/harfbuzz-ng/BUILD.gn
-       src/3rdparty/chromium/third_party/harfbuzz-ng/harfbuzz.gyp
 Copyright: 2012-2014, The Chromium Authors
 License: BSD-3-clause
 
@@ -2051,7 +1924,6 @@ Copyright: 2002-2003, Laszlo Nemeth
 License: LGPL-2+ or LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/hunspell/google/*
-       src/3rdparty/chromium/third_party/hunspell/hunspell.gyp
        src/3rdparty/chromium/third_party/hunspell/update_google_patch.sh
 Copyright: 2009-2014, The Chromium Authors
 License: BSD-3-clause
@@ -2148,11 +2020,6 @@ Copyright: 1992-2012, Free Software Foundation, Inc
            1999-2014, International Business Machines Corporation and others
 License: FSF_unlimited
 
-Files: src/3rdparty/chromium/third_party/icu/source/data/brkitr/laodict.txt
-Copyright: 2013, Brian Eugene Wilson, Robert Martin Campbell
-           2013, International Business Machines Corporation
-License: BSD-2-clause
-
 Files: src/3rdparty/chromium/third_party/icu/source/aclocal.m4
 Copyright: 2004, Scott James Remnant <scott@netsplit.com>
 License: GPL-2+_AutoConfException or FSF_unlimited
@@ -2175,7 +2042,6 @@ Copyright: 1998-2002, Netscape Communications Corporation
 License: GPL-2+ or LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/isimpledom/BUILD.gn
-       src/3rdparty/chromium/third_party/isimpledom/isimpledom.gyp
 Copyright: 2011-2014, The Chromium Authors
 License: BSD-3-clause
 
@@ -2188,9 +2054,6 @@ Copyright: 2007-2011, Baptiste Lepilleur
 License: Expat or public-domain
 
 Files: src/3rdparty/chromium/third_party/jsoncpp/BUILD.gn
-       src/3rdparty/chromium/third_party/jsoncpp/jsoncpp.gyp
-       src/3rdparty/chromium/third_party/jsoncpp/jsoncpp.gypi
-       src/3rdparty/chromium/third_party/jsoncpp/jsoncpp_nacl.gyp
 Copyright: 2012-2014, The Chromium Authors
 License: BSD-3-clause
 
@@ -2218,30 +2081,8 @@ Copyright: 1992, Silicon Graphics, Inc
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/khronos/BUILD.gn
-       src/3rdparty/chromium/third_party/khronos/khronos.gyp
 Copyright: 2012-2014, The Chromium Authors
 License: BSD-3-clause
-
-Files: src/3rdparty/chromium/third_party/lcov/*
-Copyright: 1989-1991, Free Software Foundation, Inc
-           2002, International Business Machines Corp
-License: GPL-2+
-
-Files: src/3rdparty/chromium/third_party/libexif/sources/libexif/*
-Copyright: 2007, Hans Ulrich Niedermann <gp@n-dimensional.de>
-           2002-2009, Lutz Mueller <lutz@users.sourceforge.net> et. al
-           2003, Matthieu Castet <mat-c@users.sourceforge.net>
-License: LGPL-2+
-
-Files: src/3rdparty/chromium/third_party/libexif/sources/COPYING
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.c
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-ifd.h
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/exif-mnote-data.c
-       src/3rdparty/chromium/third_party/libexif/sources/config.h
-       src/3rdparty/chromium/third_party/libexif/sources/libexif/_stdint.h
-Copyright: 1991-1999, Free Software Foundation, Inc
-           2002-2003, Lutz Mueller <lutz@users.sourceforge.net>
-License: LGPL-2.1+
 
 Files: src/3rdparty/chromium/third_party/libjpeg/*
 Copyright: 1998, Netscape Communications Corporation
@@ -2249,7 +2090,6 @@ Copyright: 1998, Netscape Communications Corporation
 License: IJG
 
 Files: src/3rdparty/chromium/third_party/libjpeg/jpeglibmangler.h
-       src/3rdparty/chromium/third_party/libjpeg/libjpeg.gyp
 Copyright: 2009-2012, The Chromium Authors
 License: BSD-3-clause
 
@@ -2281,16 +2121,6 @@ Copyright: 1996-1997, Andreas Dilger
            1995-1996, Guy Eric Schalnat, Group 42, Inc
 License: Zlib
 
-Files: src/3rdparty/chromium/third_party/libpng/libpng.gyp
-Copyright: 2012, The Chromium Authors
-License: BSD-3-clause
-
-Files: src/3rdparty/chromium/third_party/libpng/pngusr.h
-Copyright: Mozilla Foundation
-           Tim Rowley <tor@cs.brown.edu>
-           Apple Computer
-License: LGPL-2.1+ or MPL-1.1
-
 Files: src/3rdparty/chromium/third_party/libsecret/*
 Copyright: 2011, Collabora Ltd
            1991-1999, Free Software Foundation, Inc
@@ -2316,8 +2146,7 @@ Copyright: 2007-2009, Daniel Drake <dsd@gentoo.org>
            2011, Vitali Lovich <vlovich@aliph.com>
 License: LGPL-2.1+
 
-Files: src/3rdparty/chromium/third_party/libusb/libusb.gyp
-       src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.c
+Files: src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.c
        src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.h
 Copyright: 2012-2013, The Chromium Authors
 License: BSD-3-clause
@@ -2328,17 +2157,6 @@ Copyright: 2007-2012, Intel Corporation
            2009-2010, Splitted-Desktop Systems
 License: MIT/X11
 
-Files: src/3rdparty/chromium/third_party/libvpx_new/source/libvpx/third_party/libyuv/source/x86inc.asm
-       src/3rdparty/chromium/third_party/libvpx_new/source/libvpx/third_party/x86inc/LICENSE
-       src/3rdparty/chromium/third_party/libvpx_new/source/libvpx/third_party/x86inc/x86inc.asm
-Copyright: 2005-2012, x264 project
-License: ISC
-
-Files: src/3rdparty/chromium/third_party/libvpx_new/source/libvpx/md5_utils.c
-       src/3rdparty/chromium/third_party/libvpx_new/source/libvpx/md5_utils.h
-Copyright: no copyright claimed
-License: public-domain
-
 Files: src/3rdparty/chromium/third_party/libxml/*
 Copyright: 2001, Bjorn Reese <breese@users.sourceforge.net>
            1998-2001, Bjorn Reese and Daniel Stenberg
@@ -2347,7 +2165,6 @@ Copyright: 2001, Bjorn Reese <breese@users.sourceforge.net>
 License: ISC
 
 Files: src/3rdparty/chromium/third_party/libxml/chromium/libxml_utils.*
-       src/3rdparty/chromium/third_party/libxml/libxml.gyp
 Copyright: 2012, The Chromium Authors
 License: BSD-3-clause
 
@@ -2358,10 +2175,6 @@ License: Expat
 Files: src/3rdparty/chromium/third_party/libXNVCtrl/*
 Copyright: 2008-2010, NVIDIA, Corporation
 License: MIT/X11
-
-Files: src/3rdparty/chromium/third_party/libXNVCtrl/libXNVCtrl.gyp
-Copyright: 2012, The Chromium Authors
-License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/mesa/src/*
 Copyright: 2000-2002, ATI Technologies Inc., Ontario, Canada
@@ -2510,63 +2323,12 @@ Copyright: Mozilla Foundation
 License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/mozilla/MozillaExport.h
-       src/3rdparty/chromium/third_party/mozilla/mozilla.gyp
 Copyright: 2013, The Chromium Authors
 License: BSD-3-clause
-
-Files: src/3rdparty/chromium/third_party/mozilla/ComplexTextInputPanel.h
-       src/3rdparty/chromium/third_party/mozilla/ComplexTextInputPanel.mm
-Copyright: 2009, Apple Inc
-License: BSD-2-clause
-
-Files: src/3rdparty/chromium/third_party/npapi/bindings/*
-Copyright: 2006-2009 The Chromium Authors.
-License: LGPL-2.1+ or MPL-1.1
-
-Files: src/3rdparty/chromium/third_party/nss/*
-Copyright: 2013-2014, Intel Corp
-License: MPL-2.0
-
-Files: src/3rdparty/chromium/third_party/nss/nss.gyp
-       src/3rdparty/chromium/third_party/nss/nss/exports_win.def
-       src/3rdparty/chromium/third_party/nss/scripts/nspr-checkout.sh
-       src/3rdparty/chromium/third_party/nss/scripts/nss-checkout.sh
-Copyright: 2010-2012, The Chromium Authors
-License: BSD-3-clause
-
-Files: src/3rdparty/chromium/third_party/nss/nspr/pr/include/prerror.h
-       src/3rdparty/chromium/third_party/nss/nspr/pr/src/misc/prerrortable.c
-Copyright: 1987, 1988 Student Information Processing Board of MIT
-License: MIT/X11 or MPL-2.0
-
-Files: src/3rdparty/chromium/third_party/nss/nspr/pr/src/misc/praton.c
-Copyright: 1993, Digital Equipment Corporation
-           1996-1999, Internet Software Consortium
-           2004, Internet Systems Consortium, Inc. ("ISC")
-License: BSD-3-clause or ISC
-
-Files: src/3rdparty/chromium/third_party/nss/nspr/pr/src/misc/prdtoa.c
-Copyright: 1991-2001, Lucent Technologies
-License: ISC-like-dmgfp or MPL-2.0
-
-Files: src/3rdparty/chromium/third_party/nss/nspr/pr/src/md/windows/w95thred.c
-Copyright: 2006-2008, The Chromium Authors
-License: BSD-3-clause or MPL-2.0
-
-Files: src/3rdparty/chromium/third_party/nss/nspr/pr/src/malloc/prmalloc.c
-Copyright: Poul-Henning Kamp
-           The Chromium Authors
-License: Beerware or MPL-2.0
 
 Files: src/3rdparty/chromium/third_party/openh264/src/*
 Copyright: The OpenH264 Authors
 License: BSD-2-clause
-
-Files: src/3rdparty/chromium/third_party/openh264/openh264.gyp
-       src/3rdparty/chromium/third_party/openh264/openh264.gypi
-       src/3rdparty/chromium/third_party/openh264/openh264_args.gypi
-Copyright: 2015, The Chromium Authors
-License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/openh264/src/module/task_utils.h
        src/3rdparty/chromium/third_party/openh264/src/module/task_utils.py
@@ -2599,24 +2361,6 @@ Copyright: 2007-2008, CSIRO
            2002-2013, Xiph.org Foundation
 License: BSD-2-clause
 
-Files: src/3rdparty/chromium/third_party/opus/src/Makefile.in
-       src/3rdparty/chromium/third_party/opus/src/aclocal.m4
-       src/3rdparty/chromium/third_party/opus/src/doc/Makefile.in
-       src/3rdparty/chromium/third_party/opus/src/m4/ltoptions.m4
-       src/3rdparty/chromium/third_party/opus/src/m4/ltsugar.m4
-       src/3rdparty/chromium/third_party/opus/src/m4/ltversion.m4
-       src/3rdparty/chromium/third_party/opus/src/m4/lt~obsolete.m4
-Copyright: 2001-2011, Free Software Foundation
-License: FSF_unlimited
-
-Files: src/3rdparty/chromium/third_party/opus/src/m4/libtool.m4
-Copyright: 2011, Free Software Foundation, Inc
-License: FSF_unlimited or GPL-2+_LibToolException
-
-Files: src/3rdparty/chromium/third_party/opus/src/ltmain.sh
-Copyright: 1996, Gordon Matzigkeit
-License: GPL-2+_LibToolException
-
 Files: src/3rdparty/chromium/third_party/protobuf/python/mox.py
        src/3rdparty/chromium/third_party/protobuf/python/stubout.py
 Copyright: 2008, Google Inc
@@ -2641,10 +2385,6 @@ Copyright: 1998-2007, Marti Maria
            2009, Mozilla Corporation
 License: Expat
 
-Files: src/3rdparty/chromium/third_party/qcms/qcms.gyp
-Copyright: 2012, The Chromium Authors
-License: BSD-3-clause
-
 Files: src/3rdparty/chromium/third_party/qunit/*
 Copyright: 2014, jQuery Foundation and other contributors
 License: Expat
@@ -2657,10 +2397,6 @@ Files: src/3rdparty/chromium/third_party/sfntly/*
 Copyright: 2011-2015, Google Inc
            2011, The sfntly Open Source Project
 License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/sfntly/sfntly.gyp
-Copyright: 2011, The Chromium Authors
-License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/simplejson/*
 Copyright: Bob Ippolito
@@ -2686,37 +2422,6 @@ Files: src/3rdparty/chromium/third_party/speech-dispatcher/*
 Copyright: 2001-2004, Brailcom, o.p.s
            1989-1999, Free Software Foundation, Inc
 License: GPL-2+
-
-Files: src/3rdparty/chromium/third_party/talloc/*
-Copyright: 1995, Patrick Powell
-           1996-2007, The PostgreSQL Global Development Group
-           1994, The Regents of the University of California
-           1992-2006, Andrew Tridgell
-           2005-2008, Jelmer Vernooij
-           2008, Michael Adam <obnox@samba.org>
-           2006-2009, Stefan Metzmacher
-License: LGPL-3+
-
-Files: src/3rdparty/chromium/third_party/talloc/libreplace/getifaddrs.c
-       src/3rdparty/chromium/third_party/talloc/libreplace/socket.c
-       src/3rdparty/chromium/third_party/talloc/pytalloc.c
-       src/3rdparty/chromium/third_party/talloc/pytalloc.h
-       src/3rdparty/chromium/third_party/talloc/script/abi_checks.sh
-       src/3rdparty/chromium/third_party/talloc/script/mksigs.pl
-Copyright: 1998, Andrew Tridgell
-           2007-2008, Jelmer Vernooij <jelmer@samba.org>
-           2007, Jeremy Allison
-           2008-2009, Michael Adam <obnox@samba.org>
-License: GPL-3+
-
-Files: src/3rdparty/chromium/third_party/talloc/libreplace/inet_ntop.c
-       src/3rdparty/chromium/third_party/talloc/libreplace/inet_pton.c
-Copyright: 1996-2001, Internet Software Consortium
-License: ISC
-
-Files: src/3rdparty/chromium/third_party/talloc/libreplace/timegm.c
-Copyright: 1997, Kungliga Tekniska Högskolan
-License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/tcmalloc/vendor/Makefile.in
        src/3rdparty/chromium/third_party/tcmalloc/vendor/aclocal.m4
@@ -2788,11 +2493,6 @@ Copyright: 2009-2010, Brad Penoff
            file of
 License: BSD-2-clause
 
-Files: src/3rdparty/chromium/third_party/usrsctp/usrsctp.gyp
-       src/3rdparty/chromium/third_party/usrsctp/usrsctp_nacl.gyp
-Copyright: 2012-2014, The Chromium Authors
-License: BSD-3-clause
-
 Files: src/3rdparty/chromium/third_party/web-animations-js/*
 Copyright: 2014, Google Inc
 License: Apache-2.0
@@ -2863,7 +2563,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/Dictionary.h
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/DictionaryHelperForBindings.h
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/DictionaryHelperForCore.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/NPV8Object.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ScriptRegexp.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ScriptRegexp.h
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/V8IdleTaskRunner.h
@@ -2882,16 +2581,11 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/V8ThrowException.h
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/V8ValueCache.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/V8ValueCache.h
-       src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/npruntime.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/npruntime_priv.h
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/modules/v8/DictionaryHelperForModules.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/modules/v8/V8BindingForModules.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/modules/v8/V8BindingForModulesTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/bindings/modules/v8/custom/V8DeviceMotionEventCustom.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/LICENSE-APPLE
-       src/3rdparty/chromium/third_party/WebKit/Source/core/animation/AnimationTranslationUtil.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/animation/AnimationTranslationUtilTest.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/animation/CompositorAnimationsTestHelper.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/clipboard/DataTransfer.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/clipboard/DataTransferAccessPolicy.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/clipboard/DataTransferItemList.cpp
@@ -2932,8 +2626,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSReflectValue.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSReflectionDirection.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSRuleList.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSSVGDocumentValue.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSSVGDocumentValue.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSSegmentedFontFace.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSSegmentedFontFace.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/CSSSelectorList.cpp
@@ -2972,8 +2664,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/mathml.css
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControls.css
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControlsAndroid.css
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControlsAndroidNew.css
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/mediaControlsNew.css
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserMode.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ScopedStyleResolver.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/ScopedStyleResolver.h
@@ -2993,11 +2683,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ContextLifecycleNotifier.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ContextLifecycleNotifier.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ContextLifecycleObserver.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DOMError.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DOMError.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DOMSettableTokenList.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DOMSettableTokenList.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DOMSettableTokenList.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DOMStringList.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DOMStringList.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DOMStringList.idl
@@ -3020,9 +2705,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DecodedDataDocumentParser.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DocumentFullscreen.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DocumentFullscreen.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DocumentLifecycleNotifier.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DocumentLifecycleNotifier.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DocumentLifecycleObserver.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DocumentParser.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/DocumentTiming.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/ElementDataCache.cpp
@@ -3070,7 +2752,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TreeScope.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TreeScope.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/URL.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/URLUtils.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/URLUtilsReadOnly.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/XMLDocument.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/XMLDocument.h
@@ -3128,7 +2809,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/DeleteFromTextNodeCommand.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/DeleteSelectionCommand.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/DeleteSelectionCommand.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/EditAction.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/EditCommand.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/EditCommand.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/EditorCommand.cpp
@@ -3150,8 +2830,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/InsertTextCommand.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/MergeIdenticalElementsCommand.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/MergeIdenticalElementsCommand.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/MoveSelectionCommand.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/MoveSelectionCommand.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveCSSPropertyCommand.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveCSSPropertyCommand.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/RemoveFormatCommand.cpp
@@ -3172,8 +2850,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SplitTextNodeCommand.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SplitTextNodeContainingElementCommand.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/SplitTextNodeContainingElementCommand.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/TextInsertionBaseCommand.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/TextInsertionBaseCommand.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/TypingCommand.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/TypingCommand.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/commands/UndoStack.cpp
@@ -3214,12 +2890,9 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/SpellCheckRequester.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/SpellChecker.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/SpellChecker.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/TextCheckingHelper.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/AnimationEvent.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/AnimationEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/AnimationEvent.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/events/AutocompleteErrorEvent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/events/AutocompleteErrorEvent.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/BeforeTextInsertedEvent.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/BeforeTextInsertedEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/CompositionEvent.cpp
@@ -3280,15 +2953,12 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/CachePolicy.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/CrossOriginAccessControl.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/CrossOriginAccessControl.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/DocumentResourceReference.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/FetchInitiatorInfo.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/FetchRequest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/FetchRequest.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/FontResource.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/FontResource.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/RawResource.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ResourcePtr.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ResourcePtr.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/SubstituteData.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fileapi/File.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fileapi/File.h
@@ -3296,12 +2966,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/fileapi/FileList.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fileapi/FileList.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fileapi/FileList.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/frame/ConsoleTypes.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMTimer.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMTimer.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMWindowLifecycleNotifier.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMWindowLifecycleNotifier.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMWindowLifecycleObserver.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMWindowProperty.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/DOMWindowProperty.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/FrameSerializer.h
@@ -3310,7 +2976,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/History.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/LocalDOMWindow.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/LocalDOMWindow.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/frame/LocalFrameLifecycleObserver.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Settings.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Settings.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/SuspendableTimer.cpp
@@ -3362,11 +3027,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaError.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaFragmentURIParser.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaFragmentURIParser.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaKeyError.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaKeyError.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaKeyEvent.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaKeyEvent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/MediaKeyEvent.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/PluginDocument.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/PluginDocument.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/PublicURLManager.cpp
@@ -3386,8 +3046,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/canvas/CanvasImageSource.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/canvas/CanvasRenderingContext.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/canvas/CanvasRenderingContext.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/BaseChooserOnlyDateAndTimeInputType.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/BaseChooserOnlyDateAndTimeInputType.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/DateTimeFieldsState.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/DateTimeFieldsState.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/forms/TypeAhead.h
@@ -3492,24 +3150,16 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/track/vtt/VTTRegionList.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/input/EventHandler.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/input/EventHandler.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/ConsoleAPITypes.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/ContentSearchUtils.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/ContentSearchUtils.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/IdentifiersFactory.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/IdentifiersFactory.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorApplicationCacheAgent.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorApplicationCacheAgent.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorCSSAgent.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorCSSAgent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorConsoleAgent.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorConsoleAgent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorFrontendChannel.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorStateClient.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorStyleSheet.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/InspectorStyleSheet.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/NetworkResourcesData.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/inspector/NetworkResourcesData.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ClipPathOperation.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ClipRect.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ClipRect.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ClipRects.h
@@ -3552,7 +3202,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutThemeAndroid.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutThemeFontProvider.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutThemeFontProvider.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutThemeFontProviderLinux.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutThemeFontProviderWin.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutTreeAsText.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutTreeAsText.h
@@ -3597,8 +3246,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGRect.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGResourceFilterPrimitive.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/LayoutSVGResourceFilterPrimitive.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/ReferenceFilterBuilder.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/ReferenceFilterBuilder.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGLayoutTreeAsText.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGLayoutTreeAsText.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/loader/CookieJar.h
@@ -3628,7 +3275,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/CreateWindow.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/CreateWindow.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/DragActions.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/page/DragClient.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/DragController.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/DragController.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/DragData.cpp
@@ -3640,25 +3286,18 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/FocusController.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/NetworkStateNotifier.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/NetworkStateNotifier.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/page/PageLifecycleNotifier.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/page/PageLifecycleNotifier.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/page/PageLifecycleObserver.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/PointerLockController.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/PointerLockController.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/PopupOpeningObserver.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/SpatialNavigation.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/SpellCheckerClient.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/ValidationMessageClient.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/page/scrolling/ScrollingConstraints.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/page/scrolling/ScrollingConstraints.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/scrolling/ScrollingCoordinator.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/scrolling/ScrollingCoordinator.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/FilterEffectBuilder.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/FilterEffectBuilder.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/MediaControlsPainter.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/MediaControlsPainter.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerFilterInfo.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerFilterInfo.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerFragment.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/plugins/PluginView.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/style/BasicShapes.cpp
@@ -3766,9 +3405,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUnitTypes.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGUseElement.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGViewElement.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGViewSpec.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGZoomAndPan.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGZoomEvent.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/animation/SMILTime.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/animation/SMILTime.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/animation/SMILTimeContainer.cpp
@@ -3801,8 +3438,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/workers/WorkerGlobalScope.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/workers/WorkerGlobalScope.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/workers/WorkerLocation.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/workers/WorkerMessagingProxy.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/workers/WorkerMessagingProxy.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/workers/WorkerNavigator.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/workers/WorkerNavigator.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/workers/WorkerScriptLoader.cpp
@@ -3848,8 +3483,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/core/xml/parser/XMLErrors.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/xml/parser/XMLErrors.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequestEventTarget.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequestProgressEvent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequestProgressEvent.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequestProgressEventThrottle.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequestProgressEventThrottle.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequestUpload.cpp
@@ -3859,9 +3492,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/common/ParsedURL.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/components/ObjectPropertiesSection.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/elements/InspectElementModeController.js
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/profiler/CPUProfileBottomUpDataGrid.js
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/profiler/CPUProfileDataGrid.js
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/profiler/CPUProfileTopDownDataGrid.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/profiler/CPUProfileView.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/profiler/ProfilesPanel.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/resources/ApplicationCacheItemsView.js
@@ -3881,7 +3511,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/sources/TabbedEditorContainer.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/sources/UIList.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/sources/UISourceCodeFrame.js
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/ui/SidebarTreeElement.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/ui/SoftContextMenu.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/ui/SplitWidget.js
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/ui/StackView.js
@@ -3897,8 +3526,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXMenuListPopup.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXMockObject.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXMockObject.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXScrollView.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXScrollView.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXSpinButton.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXSpinButton.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/Canvas2DContextAttributes.idl
@@ -3950,7 +3577,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/filesystem/WindowFileSystem.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/filesystem/WorkerGlobalScopeFileSystem.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/filesystem/WorkerGlobalScopeFileSystem.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/filesystem/WorkerGlobalScopeFileSystem.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/gamepad/Gamepad.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/gamepad/Gamepad.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/gamepad/Gamepad.idl
@@ -3965,11 +3591,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/Geolocation.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/Geolocation.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/Geolocation.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/GeolocationClient.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/GeolocationController.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/GeolocationController.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/GeolocationError.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/GeolocationPosition.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/Geoposition.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/Geoposition.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/PositionCallback.h
@@ -3978,8 +3600,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/PositionError.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/PositionErrorCallback.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/geolocation/PositionErrorCallback.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/DOMWindowIndexedDatabase.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/DOMWindowIndexedDatabase.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/IDBAny.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/IDBAny.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/IDBCursor.cpp
@@ -4024,8 +3644,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/WebIDBDatabaseCallbacksImpl.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/WebIDBDatabaseCallbacksImpl.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/WindowIndexedDatabase.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/WorkerGlobalScopeIndexedDatabase.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/WorkerGlobalScopeIndexedDatabase.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/indexeddb/WorkerGlobalScopeIndexedDatabase.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/MediaDeviceInfo.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/MediaDeviceInfo.h
@@ -4046,44 +3664,12 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/MediaStreamTrackEvent.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/MediaStreamTrackEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/MediaStreamTrackEvent.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/MediaStreamTrackSourcesCallback.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/MediaStreamTrackSourcesCallback.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/MediaStreamTrackSourcesRequestImpl.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/MediaStreamTrackSourcesRequestImpl.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorUserMediaError.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorUserMediaError.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorUserMediaErrorCallback.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorUserMediaErrorCallback.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorUserMediaSuccessCallback.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/NavigatorUserMediaSuccessCallback.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDTMFSender.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDTMFSender.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDTMFSender.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDTMFToneChangeEvent.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDTMFToneChangeEvent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDTMFToneChangeEvent.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDataChannel.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDataChannel.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDataChannel.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDataChannelEvent.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDataChannelEvent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCDataChannelEvent.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCIceCandidateEvent.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCIceCandidateEvent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCIceCandidateEvent.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsCallback.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsCallback.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsReport.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsReport.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsReport.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsRequestImpl.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsRequestImpl.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsResponse.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsResponse.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/RTCStatsResponse.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/SourceInfo.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/SourceInfo.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/SourceInfo.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/UserMediaController.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/mediastream/UserMediaController.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/navigatorcontentutils/NavigatorContentUtils.cpp
@@ -4147,8 +3733,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/storage/StorageEvent.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/storage/StorageNamespace.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/storage/StorageNamespace.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AbstractAudioContext.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AbstractAudioContext.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AnalyserNode.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AnalyserNode.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webaudio/AnalyserNode.idl
@@ -4369,8 +3953,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webgl/WebGLVertexArrayObjectOES.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webgl/WebGLVertexArrayObjectOES.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/webgl/WebGLVertexArrayObjectOES.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/Clock.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/Clock.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/ContentType.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/ContentType.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/ContextMenu.cpp
@@ -4390,13 +3972,9 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/LifecycleNotifier.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/LifecycleObserver.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/LinkHash.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/Logging.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/Logging.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/MIMETypeFromURL.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/MIMETypeFromURL.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/MIMETypeRegistry.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/NotImplemented.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/NotImplemented.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/PODArena.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/PODArenaTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/PODFreeListArena.h
@@ -4408,11 +3986,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/PODRedBlackTreeTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/PlatformEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/PlatformGestureEvent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/PlatformKeyboardEvent.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/PlatformKeyboardEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/PlatformMouseEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/PlatformWheelEvent.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/RefCountedSupplement.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/SecureTextInput.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/SharedBuffer.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/SharedBuffer.h
@@ -4422,15 +3997,12 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/ThemeTypes.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/Timer.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/Timer.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/TraceEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/UserGestureIndicator.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/UserGestureIndicator.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/Widget.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/Widget.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/WindowsKeyboardCodes.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/animation/AnimationUtilities.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/animation/UnitBezier.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/animation/UnitBezierTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/audio/AudioDelayDSPKernel.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/audio/AudioDelayDSPKernel.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/audio/AudioResampler.cpp
@@ -4459,11 +4031,9 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebAudioDevice.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebContentDecryptionModule.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebContentDecryptionModuleSession.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebFilterKeyframe.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebMediaDeviceInfo.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebMediaStream.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebMediaStreamTrack.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebMediaStreamTrackSourcesRequest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebRTCStatsResponse.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebScrollbarImpl.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebScrollbarImpl.h
@@ -4472,16 +4042,13 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebScrollbarThemeGeometryNative.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebScrollbarThemeGeometryNative.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebScrollbarThemePainter.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebSourceInfo.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebSpeechSynthesisUtterance.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebSpeechSynthesisVoice.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebSpeechSynthesizerClientImpl.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebSpeechSynthesizerClientImpl.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/exported/WebTransformKeyframe.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontBaseline.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontData.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontData.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontDataRange.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontDescriptionTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontFamily.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontFamily.h
@@ -4574,7 +4141,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/GraphicsLayer.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/GraphicsLayer.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/GraphicsLayerClient.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/GraphicsLayerFactory.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/GraphicsLayerTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/GraphicsTypes.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/GraphicsTypes.h
@@ -4599,19 +4165,11 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/PathTraversalState.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/Pattern.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/Pattern.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/ThreadSafeDataTransport.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/ThreadSafeDataTransport.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/ThreadSafeDataTransportTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/cpu/arm/WebGLImageConversionNEON.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/DistantLightSource.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FELighting.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FELighting.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/Filter.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperation.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperation.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperations.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperations.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/FilterOperationsTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/ImageFilterBuilderTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/PointLightSource.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/graphics/filters/SkiaImageFilterBuilder.cpp
@@ -4637,8 +4195,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/mac/ThemeMac.mm
        src/3rdparty/chromium/third_party/WebKit/Source/platform/mac/WebCoreNSCellExtras.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/mac/WebCoreNSCellExtras.mm
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/mediastream/MediaStreamTrackSourcesRequest.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/mediastream/RTCStatsResponseBase.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/network/ContentSecurityPolicyResponseHeaders.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/network/ContentSecurityPolicyResponseHeaders.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/network/HTTPHeaderMap.h
@@ -4662,11 +4218,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarTheme.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarThemeAndroid.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarThemeClient.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarThemeMacCommon.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarThemeMacCommon.mm
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarThemeMock.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarThemeMock.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarThemeNonMacCommon.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarThemeOverlay.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/scroll/ScrollbarThemeOverlay.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/speech/PlatformSpeechSynthesisUtterance.cpp
@@ -4712,9 +4265,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/platform/weborigin/KnownPorts.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/weborigin/SchemeRegistry.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/weborigin/SchemeRegistry.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/win/HWndDC.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/win/SystemInfo.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/win/SystemInfo.h
        src/3rdparty/chromium/third_party/WebKit/Source/web/ColorChooserPopupUIController.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/ColorChooserPopupUIController.h
        src/3rdparty/chromium/third_party/WebKit/Source/web/ColorChooserUIController.cpp
@@ -4722,10 +4272,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/web/EditorClientImpl.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/ExternalDateTimeChooser.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/ExternalDateTimeChooser.h
-       src/3rdparty/chromium/third_party/WebKit/Source/web/GeolocationClientProxy.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/web/GeolocationClientProxy.h
-       src/3rdparty/chromium/third_party/WebKit/Source/web/GraphicsLayerFactoryChromium.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/web/GraphicsLayerFactoryChromium.h
        src/3rdparty/chromium/third_party/WebKit/Source/web/LinkHighlightImpl.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/LinkHighlightImpl.h
        src/3rdparty/chromium/third_party/WebKit/Source/web/LinkHighlightImplTest.cpp
@@ -4738,11 +4284,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/web/ValidationMessageClientImpl.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/ValidationMessageClientImpl.h
        src/3rdparty/chromium/third_party/WebKit/Source/web/WebDateTimeSuggestion.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/web/WebGeolocationController.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/web/WebGeolocationError.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/web/WebGeolocationPermissionRequest.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/web/WebGeolocationPermissionRequestManager.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/web/WebGeolocationPosition.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/WebHitTestResult.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/WebIDBKey.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/web/WebIDBKeyRange.cpp
@@ -4758,21 +4299,12 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/web/resources/pickerCommon.css
        src/3rdparty/chromium/third_party/WebKit/Source/web/resources/pickerCommon.js
        src/3rdparty/chromium/third_party/WebKit/Source/web/resources/suggestionPicker.js
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/ArrayBuffer.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/ArrayBuffer.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/ArrayBufferContents.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/ArrayBufferContents.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/ArrayBufferView.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/ArrayBufferView.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/Assertions.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/Assertions.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/BitArray.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/BitVector.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/BitVector.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/BloomFilter.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/CPU.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/CheckedArithmetic.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/CheckedArithmeticTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/Compiler.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/CryptographicallyRandomNumber.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/DataLog.cpp
@@ -4781,8 +4313,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/DoublyLinkedList.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/FilePrintStream.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/FilePrintStream.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/Float32Array.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/Float64Array.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/Functional.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/FunctionalTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/HashIterators.h
@@ -4790,32 +4320,19 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/HashSetTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/InstanceCounter.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/InstanceCounter.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/Int16Array.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/Int32Array.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/Int8Array.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/IntegralTypedArrayBase.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/ListHashSetTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/MathExtras.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/MathExtrasTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/NonCopyingSort.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/NotFound.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/OwnPtrCommon.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/PassOwnPtr.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/PrintStream.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/PrintStream.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/StdLibExtras.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/StringExtras.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/StringExtrasTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/StringHasherTest.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/TemporaryChange.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/TemporaryChangeTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/TreeNodeTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/TriState.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/TypedArrayBase.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/Uint16Array.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/Uint32Array.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/Uint8Array.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/Uint8ClampedArray.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/VectorTest.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/WTFThreadData.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/WTFThreadData.h
@@ -4854,8 +4371,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/UTF8.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/UTF8.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/WTFStringTest.cpp
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/bindings/main.py
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/common/config/irc.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/common/read_checksum_from_png_unittest.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/common/system/crashlogs_unittest.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/common/system/logtesting.py
@@ -4874,8 +4389,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/layout_tests/port/mock_drt.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/layout_tests/port/server_process.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/layout_tests/port/test.py
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/layout_tests/reftests/extract_reference_link.py
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/layout_tests/reftests/extract_reference_link_unittest.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/style/checkers/common.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/style/checkers/common_unittest.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/style/checkers/jsonchecker.py
@@ -4898,10 +4411,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/style/optparser.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/style/optparser_unittest.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/__init__.py
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/tool/bot/commitannouncer.py
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/tool/bot/commitannouncer_unittest.py
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/tool/commands/abstractlocalservercommand.py
-       src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/tool/commands/commitannouncer.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/w3c/test_converter.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/w3c/test_converter_unittest.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/w3c/test_importer.py
@@ -4918,13 +4427,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebCompositorSupport.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebContentLayer.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebContentLayerClient.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebDiscardableMemory.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebExternalTextureLayer.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebExternalTextureLayerClient.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebFilterOperations.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebFlingAnimator.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebFloatAnimationCurve.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebFloatKeyframe.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebGamepad.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebGamepads.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebGestureCurve.h
@@ -4938,8 +4442,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebMediaDeviceInfo.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebMediaStream.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebMediaStreamTrack.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebMediaStreamTrackSourcesRequest.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebPrivateOwnPtr.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebRTCDTMFSenderHandler.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebRTCDTMFSenderHandlerClient.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebRTCDataChannelHandler.h
@@ -4950,16 +4452,11 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebScrollbarLayer.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebScrollbarThemeGeometry.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebScrollbarThemePainter.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebSourceInfo.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebSpeechSynthesisUtterance.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebSpeechSynthesisVoice.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebSpeechSynthesizer.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebSpeechSynthesizerClient.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/WebThread.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebTransformAnimationCurve.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebTransformKeyframe.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebTransformOperations.h
-       src/3rdparty/chromium/third_party/WebKit/public/platform/WebUnitTestSupport.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/modules/indexeddb/WebIDBCallbacks.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/modules/indexeddb/WebIDBCursor.h
        src/3rdparty/chromium/third_party/WebKit/public/platform/modules/indexeddb/WebIDBDatabase.h
@@ -4972,16 +4469,9 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/public/web/WebActiveWheelFlingParameters.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebColorChooser.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebColorChooserClient.h
-       src/3rdparty/chromium/third_party/WebKit/public/web/WebContentDetectionResult.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebDateTimeChooserCompletion.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebDateTimeChooserParams.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebDateTimeSuggestion.h
-       src/3rdparty/chromium/third_party/WebKit/public/web/WebGeolocationClient.h
-       src/3rdparty/chromium/third_party/WebKit/public/web/WebGeolocationController.h
-       src/3rdparty/chromium/third_party/WebKit/public/web/WebGeolocationError.h
-       src/3rdparty/chromium/third_party/WebKit/public/web/WebGeolocationPermissionRequest.h
-       src/3rdparty/chromium/third_party/WebKit/public/web/WebGeolocationPermissionRequestManager.h
-       src/3rdparty/chromium/third_party/WebKit/public/web/WebGeolocationPosition.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebHitTestResult.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebMediaDevicesRequest.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebSpeechGrammar.h
@@ -4992,7 +4482,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/core/v8/ArrayVal
        src/3rdparty/chromium/third_party/WebKit/public/web/WebSpeechRecognizerClient.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebSurroundingText.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebTestingSupport.h
-       src/3rdparty/chromium/third_party/WebKit/public/web/WebTextInputInfo.h
 Copyright: 2010-2011, Adam Barth
            2011-2013, Adobe Systems Incorporated
            2008, Alex Mathews <possessedpenguinbob@gmail.com>
@@ -5166,11 +4655,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserObserver.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserSelector.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserSelector.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserString.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserValues.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSParserValues.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/CSSPropertyParser.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/css/parser/LegacyCSSPropertyParser.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/quirks.css
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/CSSToStyleMap.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/css/resolver/CSSToStyleMap.h
@@ -5310,7 +4795,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TreeScopeAdopter.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TreeScopeStyleSheetCollection.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TreeScopeStyleSheetCollection.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TreeShared.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TreeWalker.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TreeWalker.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/dom/TreeWalker.idl
@@ -5325,7 +4809,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/markers/DocumentMarker.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/markers/DocumentMarkerController.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/editing/markers/DocumentMarkerController.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/editing/spellcheck/TextCheckingHelper.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/BeforeUnloadEvent.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/BeforeUnloadEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/ClipboardEvent.cpp
@@ -5362,11 +4845,8 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/events/WheelEvent.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/CSSStyleSheetResource.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/CSSStyleSheetResource.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/DocumentResource.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/DocumentResource.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ImageResource.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ImageResource.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ImageResourceClient.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/MemoryCache.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/MemoryCache.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/RawResource.h
@@ -5376,11 +4856,7 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ResourceClientWalker.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ResourceFetcher.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ResourceFetcher.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ScriptResource.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/ScriptResource.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/StyleSheetResourceClient.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/XSLStyleSheetResource.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/XSLStyleSheetResource.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Frame.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/Frame.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/frame/FrameView.cpp
@@ -5507,7 +4983,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMenuElement.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMenuElement.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMenuElement.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMetaElement-in.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMetaElement.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMetaElement.idl
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLMeterElement.cpp
@@ -5586,8 +5061,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTextAreaElement.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTextAreaElement.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTextAreaElement.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTextFormControlElement.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTextFormControlElement.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTitleElement.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTitleElement.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLTitleElement.idl
@@ -5670,8 +5143,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutListMarker.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutMenuList.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutMenuList.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutMeter.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutMeter.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutObject.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutObject.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/LayoutPart.cpp
@@ -5810,8 +5281,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextChunkBuilder.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextChunkBuilder.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextFragment.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextLayoutAttributes.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextLayoutAttributes.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextLayoutAttributesBuilder.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextLayoutAttributesBuilder.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextLayoutEngine.cpp
@@ -5822,8 +5291,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextLayoutEngineSpacing.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextMetrics.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextMetrics.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextMetricsBuilder.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextMetricsBuilder.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextQuery.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/SVGTextQuery.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/svg/line/SVGInlineFlowBox.cpp
@@ -5843,8 +5310,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/Page.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/PrintContext.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/PrintContext.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/page/ScopedPageLoadDeferrer.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/page/ScopedPageLoadDeferrer.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/SpatialNavigation.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/TouchAdjustment.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/page/TouchAdjustment.h
@@ -6069,7 +5534,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathParser.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathQuery.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathQuery.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathSource.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathStringBuilder.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathStringBuilder.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGPathStringSource.cpp
@@ -6143,8 +5607,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGViewSpec.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGZoomAndPan.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGZoomAndPan.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGZoomEvent.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/svg/SVGZoomEvent.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/graphics/SVGImageForContainer.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/graphics/filters/SVGFEImage.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/svg/graphics/filters/SVGFEImage.h
@@ -6220,13 +5682,10 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontFallbackList.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontMetrics.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/FontPlatformData.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/Latin1TextIterator.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/SimpleFontData.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/UTF16TextIterator.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/UTF16TextIterator.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/mac/FontPlatformDataMac.mm
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/shaping/SimpleShaper.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/fonts/shaping/SimpleShaper.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/FloatPoint3D.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/FloatPoint3D.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/geometry/IntSizeHash.h
@@ -6290,7 +5749,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/BidiContext.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/BidiResolver.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/BidiRunList.h
-       src/3rdparty/chromium/third_party/WebKit/Source/platform/text/ParserUtilities.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/SegmentedString.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/SegmentedString.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/TextBreakIterator.cpp
@@ -6327,17 +5785,13 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/LinkedHashSet.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/ListHashSet.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/Noncopyable.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/OwnPtr.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/PassRefPtr.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/RefCounted.h
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/RefCountedLeakCounter.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/RefCountedLeakCounter.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/RefPtr.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/RetainPtr.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/StaticConstructors.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/StringHasher.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/ThreadSpecificWin.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/wtf/TypeTraits.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/TypeTraits.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/Vector.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/VectorTraits.h
@@ -6446,8 +5900,6 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignme
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerClipper.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerClipper.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerPaintingInfo.h
-       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerReflectionInfo.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerReflectionInfo.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayerStackingNode.cpp
@@ -6498,9 +5950,7 @@ Copyright: 1999, 2002 Joel Rosdahl
            1991-1999, Free Software Foundation, Inc
 License: LGPL-2.1+
 
-Files: src/3rdparty/chromium/third_party/WebKit/Source/build/scripts/rjsmin.py
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/es6.js
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/closure/COPYING
+Files: src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/closure/COPYING
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/closure/README.md
 Copyright: 2009-2014, The Closure Compiler Authors
 License: Apache-2.0
@@ -6549,10 +5999,6 @@ Copyright: 2007, Alexey Proskuryakov <ap@webkit.org>
            2001-2002, Thomas Broyer, Charlie Bozeman and Daniel Veillard
 License: MIT/X11
 
-Files: src/3rdparty/chromium/third_party/WebKit/Source/platform/CheckedInt.h
-Copyright: Mozilla Foundation
-License: MPL-2.0
-
 Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/jquery.isonscreen.js
 Copyright: 2010, Laurence Wheway
 License: Expat or GPL
@@ -6572,11 +6018,6 @@ Copyright: 2011, Benjamin Franzke
            2015, Red Hat Inc
            1999, SuSE, Inc
 License: MIT/X11
-
-Files: src/3rdparty/chromium/third_party/wayland-protocols/wayland-protocols.gyp
-       src/3rdparty/chromium/third_party/wayland/wayland.gyp
-Copyright: 2015, The Chromium Authors
-License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/webpagereplay/*
 Copyright: 2007-2015, Google Inc
@@ -6611,11 +6052,6 @@ Files: src/3rdparty/chromium/third_party/webrtc/base/md5.cc
 Copyright: Copyright is being disclaimed
 License: public-domain
 
-Files: src/3rdparty/chromium/third_party/webrtc/examples/objc/AppRTCDemo/third_party/SocketRocket/SRWebSocket.h
-       src/3rdparty/chromium/third_party/webrtc/examples/objc/AppRTCDemo/third_party/SocketRocket/SRWebSocket.m
-Copyright: 2012, Square Inc
-License: Apache-2.0
-
 Files: src/3rdparty/chromium/third_party/webrtc/examples/androidapp/third_party/autobanh/LICENSE.md
 Copyright: 2014, Cameron Lowell Palmer
 License: Expat
@@ -6631,10 +6067,6 @@ License: ISC-like-dmgfp
 Files: src/3rdparty/chromium/third_party/woff2/*
 Copyright: 2013-2015, Google Inc
 License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/woff2/woff2.gyp
-Copyright: 2015, The Chromium Authors
-License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/xdg-utils/*
 Copyright: 2006, Bryce Harrington <bryce@osdl.org>
@@ -6672,7 +6104,6 @@ Copyright: 2007-2008, Even Rouault
 License: Zlib
 
 Files: src/3rdparty/chromium/third_party/zlib/google/*
-       src/3rdparty/chromium/third_party/zlib/zlib.gyp
 Copyright: 2011-2013, The Chromium Authors
 License: BSD-3-clause
 
@@ -6695,15 +6126,6 @@ Files: src/3rdparty/chromium/sdch/open-vcdiff/*
 Copyright: 2005-2009, Google Inc
 License: Apache-2.0
 
-Files: src/3rdparty/chromium/sdch/open-vcdiff/Makefile.in
-       src/3rdparty/chromium/sdch/open-vcdiff/aclocal.m4
-       src/3rdparty/chromium/sdch/open-vcdiff/m4/ltoptions.m4
-       src/3rdparty/chromium/sdch/open-vcdiff/m4/ltsugar.m4
-       src/3rdparty/chromium/sdch/open-vcdiff/m4/ltversion.m4
-       src/3rdparty/chromium/sdch/open-vcdiff/m4/lt~obsolete.m4
-Copyright: 2001-2009, Free Software Foundation, Inc
-License: FSF_unlimited
-
 Files: src/3rdparty/chromium/sdch/open-vcdiff/src/zlib/adler32.c
        src/3rdparty/chromium/sdch/open-vcdiff/src/zlib/zconf.h
        src/3rdparty/chromium/sdch/open-vcdiff/src/zlib/zlib.h
@@ -6711,14 +6133,6 @@ Copyright: 1995-2005, Jean-loup Gailly
            1995-2005, Jean-loup Gailly and Mark Adler
            1995-2004, Mark Adler
 License: Zlib
-
-Files: src/3rdparty/chromium/sdch/open-vcdiff/ltmain.sh
-Copyright: 1996-2008, Free Software Foundation, Inc
-License: GPL-2+_LibToolException
-
-Files: src/3rdparty/chromium/sdch/open-vcdiff/m4/libtool.m4
-Copyright: 2008, Free Software Foundation, Inc
-License: FSF_unlimited or GPL-2+_LibToolException
 
 Files: src/3rdparty/chromium/skia/config/SkUserConfig.h
 Copyright: 2006, The Android Open Source Project
@@ -6837,7 +6251,6 @@ Files: tests/quicktestbrowser/ApplicationRoot.qml
        tests/quicktestbrowser/BrowserDialog.qml
        tests/quicktestbrowser/BrowserWindow.qml
        tests/quicktestbrowser/ButtonWithMenu.qml
-       tests/quicktestbrowser/ContextMenuExtras.qml
        tests/quicktestbrowser/DownloadView.qml
        tests/quicktestbrowser/FeaturePermissionBar.qml
        tests/quicktestbrowser/FullScreenNotification.qml
@@ -6845,10 +6258,7 @@ Files: tests/quicktestbrowser/ApplicationRoot.qml
 Copyright: 2015, The Qt Company Ltd
 License: BSD-3-clause
 
-Files: tests/auto/quick/qmltests/mock-delegates/QtWebEngine/UIDelegates/AlertDialog.qml
-       tests/auto/quick/qmltests/mock-delegates/QtWebEngine/UIDelegates/ConfirmDialog.qml
-       tests/auto/quick/qmltests/mock-delegates/QtWebEngine/UIDelegates/PromptDialog.qml
-       tests/auto/quick/qmltests/mock-delegates/TestParams/JSDialogParams.qml
+Files: tests/auto/quick/qmltests/mock-delegates/TestParams/JSDialogParams.qml
        tests/auto/quick/qquickwebenginedefaultsurfaceformat/tst_qquickwebenginedefaultsurfaceformat.cpp
        tests/auto/widgets/qwebenginedefaultsurfaceformat/tst_qwebenginedefaultsurfaceformat.cpp
        tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp
@@ -6873,12 +6283,6 @@ Files: tools/buildscripts/qtwebengine_utils.py
 Copyright: 2012, The Chromium Authors
            2015, The Qt Company Ltd
 License: GPL-3_Qt-1.1Exception or LGPL-2.1_Qt-1.1Exception
-
-Files: tools/qmake/config.tests/khr/khr.cpp
-       tools/qmake/config.tests/snappy/snappy.cpp
-       tools/qmake/config.tests/srtp/srtp.cpp
-Copyright: 2015, The Qt Company Ltd
-License: GPL-2_Qt-1.1Exception or LGPL-2+_Qt-1.1Exception
 
 License: Academic-2.0
  --------------------------------------------------------------------------------
