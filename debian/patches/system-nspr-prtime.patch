@@ -8,7 +8,7 @@ Last-Update: 2017-06-29
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/base/BUILD.gn
 +++ b/src/3rdparty/chromium/base/BUILD.gn
-@@ -49,6 +49,9 @@
+@@ -49,6 +49,9 @@ config("base_flags") {
        "-Wno-char-subscripts",
      ]
    }
@@ -18,7 +18,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  }
  
  config("base_implementation") {
-@@ -833,8 +836,6 @@
+@@ -837,8 +840,6 @@ component("base") {
      "third_party/dmg_fp/g_fmt.cc",
      "third_party/icu/icu_utf.cc",
      "third_party/icu/icu_utf.h",
@@ -51,7 +51,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  namespace base {
 --- a/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
 +++ b/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
-@@ -473,7 +473,6 @@
+@@ -473,7 +473,6 @@ def write_gn_ninja(path, root_gen_dir, o
        'base/third_party/dmg_fp/dtoa_wrapper.cc',
        'base/third_party/dmg_fp/g_fmt.cc',
        'base/third_party/icu/icu_utf.cc',
@@ -59,7 +59,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        'base/threading/non_thread_safe_impl.cc',
        'base/threading/post_task_and_reply_impl.cc',
        'base/threading/sequenced_task_runner_handle.cc',
-@@ -575,7 +574,7 @@
+@@ -575,7 +574,7 @@ def write_gn_ninja(path, root_gen_dir, o
      }
  
    if is_linux:
@@ -70,7 +70,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      static_libraries['xdg_user_dirs'] = {
 --- a/src/3rdparty/chromium/tools/gn/BUILD.gn
 +++ b/src/3rdparty/chromium/tools/gn/BUILD.gn
-@@ -274,6 +274,10 @@
+@@ -274,6 +274,10 @@ executable("gn") {
      "//build/config/sanitizers:deps",
      "//build/win:default_exe_manifest",
    ]

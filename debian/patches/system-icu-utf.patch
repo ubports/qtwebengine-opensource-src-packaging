@@ -9,10 +9,9 @@ Reviewed-by: Sandro Knauß <hefee@debian.org>
 Last-Update: 2017-06-29
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/BUILD.gn qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/BUILD.gn
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/BUILD.gn	2017-06-08 10:52:51.565409865 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/BUILD.gn	2017-06-08 11:13:47.297983554 +0200
-@@ -834,8 +834,6 @@
+--- a/src/3rdparty/chromium/base/BUILD.gn
++++ b/src/3rdparty/chromium/base/BUILD.gn
+@@ -838,8 +838,6 @@ component("base") {
      "third_party/dmg_fp/dmg_fp.h",
      "third_party/dmg_fp/dtoa_wrapper.cc",
      "third_party/dmg_fp/g_fmt.cc",
@@ -21,9 +20,8 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
      "third_party/superfasthash/superfasthash.c",
      "threading/non_thread_safe.h",
      "threading/non_thread_safe_impl.cc",
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/files/file_path.cc qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/files/file_path.cc
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/files/file_path.cc	2017-05-18 16:51:44.000000000 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/files/file_path.cc	2017-06-08 11:02:19.933803953 +0200
+--- a/src/3rdparty/chromium/base/files/file_path.cc
++++ b/src/3rdparty/chromium/base/files/file_path.cc
 @@ -18,7 +18,7 @@
  
  #if defined(OS_MACOSX)
@@ -33,7 +31,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
  #endif
  
  #if defined(OS_WIN)
-@@ -1156,9 +1156,9 @@
+@@ -1156,9 +1156,9 @@ inline int HFSReadNextNonIgnorableCodepo
                                              int* index) {
    int codepoint = 0;
    while (*index < length && codepoint == 0) {
@@ -45,9 +43,8 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
      DCHECK_GT(codepoint, 0);
      if (codepoint > 0) {
        // Check if there is a subtable for this upper byte.
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/json/json_parser.cc qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/json/json_parser.cc
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/json/json_parser.cc	2017-05-18 16:51:44.000000000 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/json/json_parser.cc	2017-06-08 11:05:52.045814002 +0200
+--- a/src/3rdparty/chromium/base/json/json_parser.cc
++++ b/src/3rdparty/chromium/base/json/json_parser.cc
 @@ -16,7 +16,7 @@
  #include "base/strings/stringprintf.h"
  #include "base/strings/utf_string_conversion_utils.h"
@@ -57,7 +54,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
  #include "base/values.h"
  
  namespace base {
-@@ -630,21 +630,21 @@
+@@ -630,21 +630,21 @@ bool JSONParser::ConsumeStringRaw(String
  
    while (CanConsume(1)) {
      int start_index = index_;
@@ -83,7 +80,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
        out->Swap(&string);
        return true;
      }
-@@ -774,10 +774,10 @@
+@@ -774,10 +774,10 @@ bool JSONParser::DecodeUTF16(std::string
  
    // If this is a high surrogate, consume the next code unit to get the
    // low surrogate.
@@ -96,7 +93,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
        return false;
  
      // Make sure that the token has more characters to consume the
-@@ -794,24 +794,24 @@
+@@ -794,24 +794,24 @@ bool JSONParser::DecodeUTF16(std::string
  
      NextNChars(3);
  
@@ -126,7 +123,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
    }
  
    dest_string->append(code_unit8);
-@@ -828,9 +828,9 @@
+@@ -828,9 +828,9 @@ void JSONParser::DecodeUTF8(const int32_
    } else {
      char utf8_units[4] = { 0 };
      int offset = 0;
@@ -138,9 +135,8 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
      // zero terminated at this point.  |offset| contains the correct length.
      dest->AppendString(std::string(utf8_units, offset));
    }
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/json/string_escape.cc qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/json/string_escape.cc
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/json/string_escape.cc	2017-05-18 16:51:44.000000000 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/json/string_escape.cc	2017-06-08 11:02:19.934803939 +0200
+--- a/src/3rdparty/chromium/base/json/string_escape.cc
++++ b/src/3rdparty/chromium/base/json/string_escape.cc
 @@ -14,7 +14,7 @@
  #include "base/strings/stringprintf.h"
  #include "base/strings/utf_string_conversion_utils.h"
@@ -150,9 +146,8 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
  
  namespace base {
  
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/strings/pattern.cc qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/strings/pattern.cc
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/strings/pattern.cc	2017-05-18 16:51:44.000000000 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/strings/pattern.cc	2017-06-08 11:02:21.774778002 +0200
+--- a/src/3rdparty/chromium/base/strings/pattern.cc
++++ b/src/3rdparty/chromium/base/strings/pattern.cc
 @@ -4,13 +4,13 @@
  
  #include "base/strings/pattern.h"
@@ -169,7 +164,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
    return character == '*' || character == '?';
  }
  
-@@ -37,9 +37,9 @@
+@@ -37,9 +37,9 @@ static void EatSameChars(const CHAR** pa
      // Check if the chars match, if so, increment the ptrs.
      const CHAR* pattern_next = *pattern;
      const CHAR* string_next = *string;
@@ -181,7 +176,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
        *pattern = pattern_next;
        *string = string_next;
      } else {
-@@ -133,20 +133,20 @@
+@@ -133,20 +133,20 @@ static bool MatchPatternT(const CHAR* ev
  }
  
  struct NextCharUTF8 {
@@ -208,9 +203,8 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
      *p += offset;
      return c;
    }
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/strings/string_split.cc qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/strings/string_split.cc
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/strings/string_split.cc	2017-05-18 16:51:44.000000000 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/strings/string_split.cc	2017-06-08 11:02:21.774778002 +0200
+--- a/src/3rdparty/chromium/base/strings/string_split.cc
++++ b/src/3rdparty/chromium/base/strings/string_split.cc
 @@ -8,7 +8,7 @@
  
  #include "base/logging.h"
@@ -220,9 +214,8 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
  
  namespace base {
  
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/strings/string_util.cc qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/strings/string_util.cc
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/strings/string_util.cc	2017-05-18 16:51:44.000000000 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/strings/string_util.cc	2017-06-08 11:02:21.775777988 +0200
+--- a/src/3rdparty/chromium/base/strings/string_util.cc
++++ b/src/3rdparty/chromium/base/strings/string_util.cc
 @@ -25,7 +25,7 @@
  #include "base/memory/singleton.h"
  #include "base/strings/utf_string_conversion_utils.h"
@@ -232,7 +225,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
  #include "build/build_config.h"
  
  namespace base {
-@@ -357,19 +357,19 @@
+@@ -357,19 +357,19 @@ void TruncateUTF8ToByteSize(const std::s
    }
    DCHECK_LE(byte_size,
              static_cast<uint32_t>(std::numeric_limits<int32_t>::max()));
@@ -256,7 +249,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
      if (!IsValidCharacter(code_point) ||
          !IsValidCodepoint(code_point)) {
        char_index = prev - 1;
-@@ -522,7 +522,7 @@
+@@ -522,7 +522,7 @@ bool IsStringUTF8(const StringPiece& str
  
    while (char_index < src_len) {
      int32_t code_point;
@@ -265,9 +258,8 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
      if (!IsValidCharacter(code_point))
        return false;
    }
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/strings/utf_string_conversion_utils.cc qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/strings/utf_string_conversion_utils.cc
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/base/strings/utf_string_conversion_utils.cc	2017-05-18 16:51:44.000000000 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/base/strings/utf_string_conversion_utils.cc	2017-06-08 11:02:21.775777988 +0200
+--- a/src/3rdparty/chromium/base/strings/utf_string_conversion_utils.cc
++++ b/src/3rdparty/chromium/base/strings/utf_string_conversion_utils.cc
 @@ -4,7 +4,7 @@
  
  #include "base/strings/utf_string_conversion_utils.h"
@@ -277,7 +269,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
  
  namespace base {
  
-@@ -18,7 +18,7 @@
+@@ -18,7 +18,7 @@ bool ReadUnicodeCharacter(const char* sr
    // use a signed type for code_point.  But this function returns false
    // on error anyway, so code_point_out is unsigned.
    int32_t code_point;
@@ -286,7 +278,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
    *code_point_out = static_cast<uint32_t>(code_point);
  
    // The ICU macro above moves to the next char, we want to point to the last
-@@ -33,16 +33,16 @@
+@@ -33,16 +33,16 @@ bool ReadUnicodeCharacter(const char16*
                            int32_t src_len,
                            int32_t* char_index,
                            uint32_t* code_point) {
@@ -307,7 +299,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
                                            src[*char_index + 1]);
      (*char_index)++;
    } else {
-@@ -76,30 +76,30 @@
+@@ -76,30 +76,30 @@ size_t WriteUnicodeCharacter(uint32_t co
    }
  
  
@@ -346,10 +338,9 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
  }
  
  // Generalized Unicode converter -----------------------------------------------
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py	2017-06-08 10:55:05.945934291 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py	2017-06-08 11:14:16.956570568 +0200
-@@ -472,7 +472,6 @@
+--- a/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
++++ b/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
+@@ -472,7 +472,6 @@ def write_gn_ninja(path, root_gen_dir, o
        'base/task_scheduler/task_traits.cc',
        'base/third_party/dmg_fp/dtoa_wrapper.cc',
        'base/third_party/dmg_fp/g_fmt.cc',
@@ -357,7 +348,7 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
        'base/threading/non_thread_safe_impl.cc',
        'base/threading/post_task_and_reply_impl.cc',
        'base/threading/sequenced_task_runner_handle.cc',
-@@ -574,7 +573,7 @@
+@@ -574,7 +573,7 @@ def write_gn_ninja(path, root_gen_dir, o
      }
  
    if is_linux:
@@ -366,10 +357,9 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
      ldflags.extend(['-pthread'])
  
      static_libraries['xdg_user_dirs'] = {
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/tools/gn/BUILD.gn qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/tools/gn/BUILD.gn
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/tools/gn/BUILD.gn	2017-06-10 22:18:26.863178931 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/tools/gn/BUILD.gn	2017-06-10 22:18:30.168114045 +0200
-@@ -277,6 +277,7 @@
+--- a/src/3rdparty/chromium/tools/gn/BUILD.gn
++++ b/src/3rdparty/chromium/tools/gn/BUILD.gn
+@@ -277,6 +277,7 @@ executable("gn") {
  
    libs = [
      "nspr4",
@@ -377,9 +367,8 @@ diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromi
    ]
  }
  
-diff -ur qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc
---- qtwebengine-opensource-src-5.9.0-system-nspr-prtime/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc	2017-05-18 16:51:44.000000000 +0200
-+++ qtwebengine-opensource-src-5.9.0-system-icu-utf/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc	2017-06-08 11:02:21.776777974 +0200
+--- a/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc
++++ b/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc
 @@ -5,13 +5,13 @@
  #include "ui/gfx/utf16_indexing.h"
  
