@@ -3735,7 +3735,6 @@ Copyright: 1991, Free Software Foundation, Inc
            1997, Martin Jones <mjones@kde.org>
            1997-1999, Torben Weis <weis@kde.org>
            1998, Lars Knoll <knoll@mpi-hd.mpg.de>
-           1998, Lars Knoll <knoll@mpi-hd.mpg.de>
            1998-2002, Waldo Bastian <bastian@kde.org>
            1998-2003, Lars Knoll <knoll@kde.org>
            1999, Antti Koivisto <koivisto@kde.org>
@@ -3750,17 +3749,12 @@ Copyright: 1991, Free Software Foundation, Inc
            2000-2001, Peter Kelly <pmk@post.com>
            2000-2003, Dirk Mueller <mueller@kde.org>
            2001, Dirk Mueller <mueller@kde.org>
-           2001, Dirk Mueller <mueller@kde.org>
-           2001, Dirk Mueller <mueller@kde.org>
            2001, Tobias Anton <anton@stud.fbi.fh-darmstadt.de>
            2002, Waldo Bastian <bastian@kde.org>
            2002-2003, The Karbon Developers
            2002-2014, Apple Inc
-           2003-2010, Apple Inc
            2004, Zack Rusin <zack@kde.org>
            2004-2006, Allan Sandfeld Jensen <kde@carewolf.com>
-           2004-2007, Apple Inc
-           2004-2008, Apple Inc
            2004-2009, Nikolas Zimmermann <zimmermann@kde.org>
            2004-2010, Rob Buis <buis@kde.org>
            2005-2006, Alexander Kellett <lypanov@kde.org>
@@ -3773,7 +3767,6 @@ Copyright: 1991, Free Software Foundation, Inc
            2006, Graham Dennis <graham.dennis@gmail.com>
            2006, Jon Shier <jshier@iastate.edu>
            2006, Michael Emmel <mike.emmel@gmail.com>
-           2006, Samuel Weinig <sam.weinig@gmail.com>
            2006, Samuel Weinig <sam.weinig@gmail.com>
            2006-2007, Nicholas Shanks <webkit@nickshanks.com>
            2006-2009, Apple Inc
@@ -3809,7 +3802,6 @@ Copyright: 1991, Free Software Foundation, Inc
            2011, Brent Fulgham
            2011, Code Aurora Forum
            2011, Cosmin Truta <ctruta@gmail.com>
-           2011, Cosmin Truta <ctruta@gmail.com>
            2011, Gabor Loki <loki@webkit.org>
            2011, Rik Cabanier <cabanier@adobe.com>
            2011, Robert Hogan <robert@roberthogan.net>
@@ -3833,13 +3825,7 @@ Copyright: 2016, The Chromium Authors
 License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDocument.cpp
-Copyright: 1999, Antti Koivisto <koivisto@kde.org>
-           1999, Lars Knoll <knoll@kde.org>
-           2002, Netscape Communications Corporation
-           2003-2008, Apple Inc
-License: LGPL-2+ or MPL-1.1
-
-Files: src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignment.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignment.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignment.h
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayer.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/paint/PaintLayer.h
@@ -3854,10 +3840,13 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/core/layout/ScrollAlignme
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/gif/GIFImageReader.h
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/jpeg/JPEGImageDecoder.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/png/PNGImageDecoder.cpp
+       src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/png/PNGImageReader.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/UnicodeRange.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/UnicodeRange.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/DateMath.h
 Copyright: 1998, Netscape Communications Corporation
+           1999, Antti Koivisto <koivisto@kde.org>
+           1999, Lars Knoll <knoll@kde.org>
            1999-2000, Harri Porten <porten@kde.org>
            2001-2006, mozilla.org
            2003-2012, Apple Inc
@@ -3889,20 +3878,13 @@ Copyright: Marijn Haverbeke and others
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/build/rjsmin.py
+       src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/closure/COPYING
+       src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/closure/README.md
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/hyphenation/HyphenatorAOSP.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/hyphenation/HyphenatorAOSP.h
-Copyright: 2015, The Android Open Source Project
-License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/closure/COPYING
-       src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/closure/README.md
 Copyright: 2009-2014, The Closure Compiler Authors
+           2015, The Android Open Source Project
 License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/WebKit/Source/platform/image-decoders/png/PNGImageReader.cpp
-Copyright: 2001, mozilla.org
-           2006, Apple Computer, Inc
-License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/wtf/CryptographicallyRandomNumber.cpp
 Copyright: 1996, David Mazieres <dm@uun.org>
@@ -4740,17 +4722,6 @@ Files: src/3rdparty/chromium/third_party/bspatch/*
 Copyright: 2003-2004, Colin Percival
 License: BSD-2-clause
 
-Files: src/3rdparty/chromium/third_party/bspatch/BUILD.gn
-       src/3rdparty/chromium/third_party/bspatch/README.chromium
-Copyright: 2009-2015, The Chromium Authors
-License: BSD-3-clause
-Comment: these files are part of chromium and the LICENSE file the mention is
- the one in the chromium root source tree.
-
-Files: src/3rdparty/chromium/third_party/catapult/telemetry/telemetry.gyp
-Copyright: 2014, The Chromium Authors
-License: BSD
-
 Files: src/3rdparty/chromium/third_party/ced/src/*
 Copyright: 2016, Google Inc
 License: Apache-2.0
@@ -4826,10 +4797,6 @@ License: Apache-2.0
 Files: src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/mini_chromium/*
 Copyright: 2015, The Crashpad Authors
 License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/cros_system_api/dbus/authpolicy/dbus-constants.h
-Copyright: 2016, The Chromium OS Authors
-License: BSD
 
 Files: src/3rdparty/chromium/third_party/d3/*
 Copyright: 2010-2014, Michael Bostock
@@ -6263,33 +6230,25 @@ Files: src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jccolext-altivec.c
        src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jidctint-altivec.c
        src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jquanti-altivec.c
        src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimd_altivec.h
+       src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimd_arm64_neon.S
+       src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimd_arm_neon.S
        src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimd_mips_dspr2.S
        src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimd_mips_dspr2_asm.h
-Copyright: 2014, D. R. Commander
-License: Zlib
-
-Files: src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimd_arm64_neon.S
-       src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimd_arm_neon.S
        src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jsimdext.inc
-Copyright: 1999-2006, MIYASAKA Masaru
-           2009, Pierre Ossman <ossman@cendio.se> for Cendio AB
-           2009-2011, Nokia Corporation and/or its subsidiary(-ies)
-           2010, D. R. Commander
-           2013-2014, Linaro Limited
-License: Zlib
-
-Files: src/3rdparty/chromium/third_party/libpng/*
-Copyright: 1995-1996, Guy Eric Schalnat, Group 42, Inc
-           1996-1997, Andreas Dilger
-           209-2015, Glenn Randers-Pehrson
-License: Zlib
-
-Files: src/3rdparty/chromium/third_party/libpng/arm/arm_init.c
+       src/3rdparty/chromium/third_party/libpng/*
+       src/3rdparty/chromium/third_party/libpng/arm/arm_init.c
        src/3rdparty/chromium/third_party/libpng/arm/filter_neon.S
        src/3rdparty/chromium/third_party/libpng/arm/filter_neon_intrinsics.c
        src/3rdparty/chromium/third_party/libpng/contrib/intel/filter_sse2_intrinsics.c
        src/3rdparty/chromium/third_party/libpng/contrib/intel/intel_init.c
-Copyright: 2014-2016, Glenn Randers-Pehrson
+Copyright: 1995-1996, Guy Eric Schalnat, Group 42, Inc
+           1996-1997, Andreas Dilger
+           1999-2006, MIYASAKA Masaru
+           2009, Pierre Ossman <ossman@cendio.se> for Cendio AB
+           2009-2011, Nokia Corporation and/or its subsidiary(-ies)
+           2010, D. R. Commander
+           2013-2014, Linaro Limited
+           2014-2016, Glenn Randers-Pehrson
 License: Zlib
 
 Files: src/3rdparty/chromium/third_party/libpng/pngprefix.h
@@ -6877,10 +6836,6 @@ Files: src/3rdparty/chromium/third_party/speech-dispatcher/*
 Copyright: 1989-1999, Free Software Foundation, Inc
            2001-2004, Brailcom, o.p.s
 License: GPL-2+
-
-Files: src/3rdparty/chromium/third_party/sqlite/fuzz/sqlite3_prepare_v2_fuzzer.cc
-Copyright: 2015, The Chromium Authors
-License: BSD
 
 Files: src/3rdparty/chromium/third_party/sqlite/sqlite-src-3100200/aclocal.m4
 Copyright: 2004-2008, Free Software Foundation, Inc
