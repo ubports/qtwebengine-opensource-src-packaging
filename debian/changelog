@@ -12,6 +12,8 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   * Update Excluded-File list
   * Clean qmake caches in clean step
   * Update copyright file.
+  * Add patch system-lcms2.patch - use system lcms2
+  * Add liblcms2-dev to Build-Deps
 
   [ Simon Quigley ]
   * New upstream release. (Closes: #865273)

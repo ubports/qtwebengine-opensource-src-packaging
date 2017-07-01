@@ -1,0 +1,80 @@
+Description: Use system lcms2
+Author: Sandro Knauß <hefee@debian.org>
+Origin: Debian
+Forwarded: https://bugreports.qt.io/browse/QTBUG-61746
+Reviewed-by: Sandro Knauß <hefee@debian.org>
+Last-Update: 2017-07-01
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/3rdparty/chromium/third_party/pdfium/third_party/BUILD.gn
++++ b/src/3rdparty/chromium/third_party/pdfium/third_party/BUILD.gn
+@@ -140,58 +140,21 @@ if (!pdf_use_skia && !pdf_use_skia_paths
+   }
+ }
+ 
+-config("fx_lcms2_warnings") {
+-  visibility = [ ":*" ]
+-  if (is_clang) {
+-    cflags = [
+-      # cmslut.cc is sloppy with aggregate initialization. Version 2.7 of this
+-      # library doesn't appear to have this problem.
+-      "-Wno-missing-braces",
++import("//build/shim_headers.gni")
+ 
+-      # FindPrev() in cmsplugin.c is unused.
+-      "-Wno-unused-function",
+-    ]
+-  }
++shim_headers("lcms2_shim") {
++  root_path = "lcms2-2.6/include"
++  headers = [
++    "lcms2.h",
++    "lcms2_plugin.h",
++  ]
+ }
+ 
+-static_library("fx_lcms2") {
+-  configs -= [ "//build/config/compiler:chromium_code" ]
+-  configs += [
+-    "//build/config/compiler:no_chromium_code",
+-    ":pdfium_third_party_config",
+-
+-    # Must be after no_chromium_code for warning flags to be ordered correctly.
+-    ":fx_lcms2_warnings",
+-  ]
+-  sources = [
+-    "lcms2-2.6/include/lcms2.h",
+-    "lcms2-2.6/include/lcms2_plugin.h",
+-    "lcms2-2.6/src/cmscam02.c",
+-    "lcms2-2.6/src/cmscgats.c",
+-    "lcms2-2.6/src/cmscnvrt.c",
+-    "lcms2-2.6/src/cmserr.c",
+-    "lcms2-2.6/src/cmsgamma.c",
+-    "lcms2-2.6/src/cmsgmt.c",
+-    "lcms2-2.6/src/cmshalf.c",
+-    "lcms2-2.6/src/cmsintrp.c",
+-    "lcms2-2.6/src/cmsio0.c",
+-    "lcms2-2.6/src/cmsio1.c",
+-    "lcms2-2.6/src/cmslut.c",
+-    "lcms2-2.6/src/cmsmd5.c",
+-    "lcms2-2.6/src/cmsmtrx.c",
+-    "lcms2-2.6/src/cmsnamed.c",
+-    "lcms2-2.6/src/cmsopt.c",
+-    "lcms2-2.6/src/cmspack.c",
+-    "lcms2-2.6/src/cmspcs.c",
+-    "lcms2-2.6/src/cmsplugin.c",
+-    "lcms2-2.6/src/cmsps2.c",
+-    "lcms2-2.6/src/cmssamp.c",
+-    "lcms2-2.6/src/cmssm.c",
+-    "lcms2-2.6/src/cmstypes.c",
+-    "lcms2-2.6/src/cmsvirt.c",
+-    "lcms2-2.6/src/cmswtpnt.c",
+-    "lcms2-2.6/src/cmsxform.c",
++source_set("fx_lcms2") {
++  deps = [
++    ":lcms2_shim",
+   ]
++  libs = ["lcms2"]
+ }
+ 
+ # This is only used for standalone builds.
