@@ -1339,36 +1339,20 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/IDLExtendedAttri
        src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXSpinButton.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/accessibility/AXSpinButton.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/Canvas2DContextAttributes.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/Canvas2DContextAttributes.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasGradient.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasGradient.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasGradient.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasGradient.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasGradient.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasGradient.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPathMethods.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPathMethods.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPathMethods.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPathMethods.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPattern.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPattern.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPattern.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPattern.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPattern.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasPattern.idl
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasRenderingContext2D.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasRenderingContext2D.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasRenderingContext2D.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasRenderingContext2D.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasRenderingContext2D.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasRenderingContext2D.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasStyle.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasStyle.cpp
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasStyle.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/CanvasStyle.h
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/Path2D.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/Path2D.h
-       src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/Path2D.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/canvas2d/Path2D.idl
        src/3rdparty/chromium/third_party/WebKit/Source/modules/device_orientation/DeviceAcceleration.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/modules/device_orientation/DeviceAcceleration.h
