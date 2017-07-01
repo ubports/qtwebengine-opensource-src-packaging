@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.9.0 amd64
+# SymbolsHelper-Confirmed: 5.9.1 amd64
 libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1
  Qt_5.1@Qt_5.1 5.7.1
@@ -255,7 +255,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN26QQuickWebEngineViewPrivate12titleChangedERK7QString@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate13loadCommittedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate13startDraggingERKN7content8DropDataE6QFlagsIN2Qt10DropActionEERK7QPixmapRK6QPoint@Qt_5_PRIVATE_API 5.7.1
- _ZN26QQuickWebEngineViewPrivate14adoptNewWindowE14QSharedPointerIN15QtWebEngineCore18WebContentsAdapterEENS1_24WebContentsAdapterClient21WindowOpenDispositionEbRK5QRect@Qt_5_PRIVATE_API 5.7.1
+ _ZN26QQuickWebEngineViewPrivate14adoptNewWindowE14QSharedPointerIN15QtWebEngineCore18WebContentsAdapterEENS1_24WebContentsAdapterClient21WindowOpenDispositionEbRK5QRectRK4QUrl@Qt_5_PRIVATE_API 5.9.1
  _ZN26QQuickWebEngineViewPrivate14focusContainerEv@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate14isBeingAdoptedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate14runFileChooserE14QSharedPointerIN15QtWebEngineCore20FilePickerControllerEE@Qt_5_PRIVATE_API 5.9.0
