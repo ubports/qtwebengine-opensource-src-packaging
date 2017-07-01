@@ -35,9 +35,9 @@ Files-Excluded: src/3rdparty/chromium/third_party/apple_apsl/*
                 src/3rdparty/chromium/third_party/libxslt/linux/config.log
 
 Files: *
-Copyright: 2012, The Chromium Authors. All rights reserved.
-           2013, BlackBerry Limited
+Copyright: 2013, BlackBerry Limited
            2015, Digia Plc and/or its subsidiary(-ies)
+           2012, The Chromium Authors. All rights reserved.
            2015-2016, The Qt Company Ltd.
 License: LGPL-3_Qt-1.1Exception or GPL-2_Qt-1.1Exception
 
@@ -59,8 +59,8 @@ License: Expat
 
 Files: debian/missing-sources/mocha-v2.5.3.tar.gz
        src/3rdparty/chromium/third_party/mocha/*
-Copyright: 2011-2016, TJ Holowaychuk <tj@vision-media.ca>
-           Joyent, Inc. and other Node contributors
+Copyright: Joyent, Inc. and other Node contributors
+           2011-2016, TJ Holowaychuk <tj@vision-media.ca>
 License: Expat
 
 Files: examples/webengine/customdialogs/*
@@ -101,7 +101,7 @@ Copyright: 2012 The Chromium Authors. All rights reserved.
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/base/i18n/icu_string_conversions.cc
-Copyright: 1995-2006 International Business Machines Corporation and others
+Copyright: 1995-2006, International Business Machines Corporation and others
            The Chromium Authors
 License: BSD-3-clause or MIT-like-icu
 
@@ -137,9 +137,9 @@ Copyright: 2000-2010, Julian Seward
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/base/third_party/xdg_mime/*
-Copyright: 200-2005, Matthias Clasen <mclasen@redhat.com>
+Copyright: 2003-2004, Jonathan Blandford <jrb@alum.mit.edu>
            2003, Lawrence E. Rosen
-           2003-2004, Jonathan Blandford <jrb@alum.mit.edu>
+           2000-2005, Matthias Clasen <mclasen@redhat.com>
            2003-2008, Red Hat, Inc
            2013, The Chromium Authors
 License: Academic-2.0 or LGPL-2+
@@ -192,8 +192,8 @@ Copyright: 2011, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/chrome/third_party/chromevox/*
-Copyright: 2012-2014, The Chromium Authors
-           2013, Google Inc
+Copyright: 2013, Google Inc
+           2012-2014, The Chromium Authors
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/chrome/third_party/chromevox/third_party/closure-library/*
@@ -244,9 +244,9 @@ License: Apache-2.0
 Files: src/3rdparty/chromium/sdch/open-vcdiff/src/zlib/adler32.c
        src/3rdparty/chromium/sdch/open-vcdiff/src/zlib/zconf.h
        src/3rdparty/chromium/sdch/open-vcdiff/src/zlib/zlib.h
-Copyright: 1995-2004, Mark Adler
-           1995-2005, Jean-loup Gailly
+Copyright: 1995-2005, Jean-loup Gailly
            1995-2005, Jean-loup Gailly and Mark Adler
+           1995-2004, Mark Adler
 License: Zlib
 
 Files: src/3rdparty/chromium/skia/config/SkUserConfig.h
@@ -276,8 +276,8 @@ Copyright: 2007, Google Inc
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/SPIRV-Tools/*
-Copyright: 2014-2016, The Khronos Group Inc
-           2015-2016, Google Inc
+Copyright: 2015-2016, Google Inc
+           2014-2016, The Khronos Group Inc
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/SPIRV-Tools/src/utils/update_build_version.py
@@ -285,57 +285,57 @@ Copyright: 2016, The Shaderc Authors
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/WebKit/*
-Copyright: 1991-1999, Free Software Foundation, Inc
-           1999, Antti Koivisto <koivisto@kde.org>
-           1999, Lars Knoll <knoll@kde.org>
-           2003-2014, Apple Inc
-           2004-2005, Allan Sandfeld Jensen <kde@carewolf.com>
-           2004-2010, Leonard Richardson
-           2006-2007, Alexey Proskuryakov <ap@webkit.org>
-           2006-2007, Nicholas Shanks <webkit@nickshanks.com>
-           2006-2011, the V8 project authors
-           2006-2015, Google Inc
-           2007, David Smith <catfish.man@gmail.com>
-           2007, Graham Dennis <graham.dennis@gmail.com>
-           2007, Justin Haygood <jhaygood@reaktix.com>
-           2007-2008, Eric Seidel <eric@webkit.org>
-           2007-2009, Torch Mobile Inc
-           2008, Alp Toker <alp@atoker.com>
-           2008, Matt Lilek <webkit@mattlilek.com>
-           2008, Nuanti Ltd
-           2008, Tony Chang <idealisms@gmail.com>
-           2008-2009, Anthony Ricaud <rik@webkit.org>
-           2008-2012, Nokia Corporation and/or its subsidiary(-ies)
-           2009, Dirk Schulze <krit@webkit.org>
-           2009, IBM Corp
-           2009, Jian Li <jianli@chromium.org>
+Copyright: 2010, 2012 Google Inc
            2009-2010, Adam Barth
+           2006-2007, Alexey Proskuryakov <ap@webkit.org>
+           2004-2005, Allan Sandfeld Jensen <kde@carewolf.com>
+           2008, Alp Toker <alp@atoker.com>
+           2008-2009, Anthony Ricaud <rik@webkit.org>
+           1999, Antti Koivisto <koivisto@kde.org>
+           2003-2014, Apple Inc
+           2013, BlackBerry Limited
+           2011, Brian Grinstead
+           2010, Chris Jerdonek <cjerdonek@webkit.org>
+           2011, Code Aurora Forum
+           2010, Company 100, Inc
+           2009-2011, Daniel Bates <dbates@intudata.com>
+           2007, David Smith <catfish.man@gmail.com>
+           2009, Dirk Schulze <krit@webkit.org>
+           2007-2008, Eric Seidel <eric@webkit.org>
+           2009-2012, Ericsson AB
+           1991-1999, Free Software Foundation, Inc
+           2010, Gabor Rapcsanyi (rgabor@inf.u-szeged.hu), University of Szeged
+           2006-2015, Google Inc
+           2007, Graham Dennis <graham.dennis@gmail.com>
+           2009, IBM Corp
+           2013, Igalia S.L
+           2012-2013, Intel Corporation
+           2009, Jian Li <jianli@chromium.org>
            2009-2010, Joel Stanley
            2009-2010, Joseph Pecoraro
-           2009-2011, Daniel Bates <dbates@intudata.com>
-           2009-2012, Ericsson AB
-           2009-2014, The Chromium Authors
-           2010, 2012 Google Inc
-           2010, Chris Jerdonek <cjerdonek@webkit.org>
-           2010, Company 100, Inc
-           2010, Gabor Rapcsanyi (rgabor@inf.u-szeged.hu), University of Szeged
-           2010, Nikita Vasilyev
-           2010, ProFUSION embedded systems
-           2010, Torch Mobile (Beijing) Co. Ltd
-           2011, Brian Grinstead
-           2011, Code Aurora Forum
+           2007, Justin Haygood <jhaygood@reaktix.com>
            2011, Kris Jordan <krisjordan@gmail.com>
+           1999, Lars Knoll <knoll@kde.org>
+           2004-2010, Leonard Richardson
+           2008, Matt Lilek <webkit@mattlilek.com>
            2012, Motorola Mobility Inc
+           2006-2007, Nicholas Shanks <webkit@nickshanks.com>
+           2010, Nikita Vasilyev
+           2008-2012, Nokia Corporation and/or its subsidiary(-ies)
+           2008, Nuanti Ltd
+           2013-2014, Opera Software ASA
            2012, Patrick Gansterer <paroga@paroga.com>
-           2012, Zan Dobersek <zandobersek@gmail.com>
-           2012, Zoltan Horvath, Adobe Systems Incorporated
-           2012-2013, Intel Corporation
+           2010, ProFUSION embedded systems
            2012-2014, Samsung Electronics
-           2013, BlackBerry Limited
-           2013, Igalia S.L
+           2009-2014, The Chromium Authors
+           2008, Tony Chang <idealisms@gmail.com>
+           2010, Torch Mobile (Beijing) Co. Ltd
+           2007-2009, Torch Mobile Inc
            2013, Xidorn Quan <quanxunzhen@gmail.com>
            2013, Yandex LLC
-           2013-2014, Opera Software ASA
+           2012, Zan Dobersek <zandobersek@gmail.com>
+           2012, Zoltan Horvath, Adobe Systems Incorporated
+           2006-2011, the V8 project authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/IDLExtendedAttributes.md
@@ -2374,76 +2374,67 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/bindings/IDLExtendedAttri
        src/3rdparty/chromium/third_party/WebKit/public/web/WebSpeechRecognizerClient.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebSurroundingText.h
        src/3rdparty/chromium/third_party/WebKit/public/web/WebTestingSupport.h
-Copyright: 1999, Antti Koivisto <koivisto@kde.org>
-           1999, Lars Knoll <knoll@kde.org>
-           2001, Dirk Mueller <mueller@kde.org>
-           2001, Gareth Rees
-           2003-2014, Apple Inc
-           2004-2005, Rob Buis <buis@kde.org>
-           2004-2008, Nikolas Zimmermann <zimmermann@kde.org>
-           2004-2010, Ned Batchelder
-           2004-2012, Apple Inc
-           2005, Frerich Raabe <raabe@kde.org>
-           2005, Maksim Orlovich <maksim@kde.org>
-           2005-2006, Kimmo Kinnunen <kimmo.t.kinnunen@nokia.com>
-           2005-2008, Eric Seidel <eric@webkit.org>
-           2006, Alexander Kellett <lypanov@kde.org>
-           2006, Graham Dennis <graham.dennis@gmail.com>
-           2006, Samuel Weinig <sam.weinig@gmail.com>
-           2006-2007, Alexey Proskuryakov <ap@webkit.org>
-           2006-2008, Apple Computer, Inc
-           2007, Alp Toker <alp.toker@collabora.co.uk>
-           2007, Alp Toker <alp@atoker.com>
-           2007, Henry Mason <hmason@mac.com>
-           2007, Justin Haygood <jhaygood@reaktix.com>
-           2007, Nicholas Shanks <webkit@nickshanks.com>
-           2007-2010, Torch Mobile Inc
-           2007-2015, Google Inc
+Copyright: 2010-2011, Adam Barth
+           2011-2013, Adobe Systems Incorporated
            2008, Alex Mathews <possessedpenguinbob@gmail.com>
-           2008, Collabora Ltd
-           2008, Collin Jackson <collinj@webkit.org>
-           2008, Dirk Schulze <krit@webkit.org>
-           2008, Eric Seidel <eric@webkit.org>
-           2008, Nuanti Ltd
-           2008-2009, Dirk Schulze <krit@webkit.org>
-           2008-2010, Julien Chaffraix <jchaffraix@webkit.org>
-           2008-2010, Nokia Corporation and/or its subsidiary(-ies)
-           2008-2010, The Android Open Source Project
-           2008-2012, Nokia Corporation and/or its subsidiary(-ies)
+           2006, Alexander Kellett <lypanov@kde.org>
+           2006-2007, Alexey Proskuryakov <ap@webkit.org>
+           2007, Alp Toker <alp.toker@collabora.co.uk>
+           2011, Andreas Kling <kling@webkit.org>
            2009, Anthony Ricaud <rik@webkit.org>
            2009, Antonio Gomes <tonikitoo@webkit.org>
+           1999, Antti Koivisto <koivisto@kde.org>
+           2003-2014, Apple Inc
+           2012, Balazs Ankes (bank@inf.u-szeged.hu) University of Szeged
            2009, Cameron McCormack <cam@mcc.id.au>
+           2010, Chris Jerdonek <cjerdonek@webkit.org>
+           2008, Collabora Ltd
+           2008, Collin Jackson <collinj@webkit.org>
+           2010, Company 100 Inc
+           2011, Daniel Bates <dbates@intudata.com>
+           2012, Digia Plc. and/or its subsidiary(-ies)
+           2001, Dirk Mueller <mueller@kde.org>
+           2008-2009, Dirk Schulze <krit@webkit.org>
            2009, Dominik Roettsches <dominik.roettsches@access-company.com>
+           2005-2008, Eric Seidel <eric@webkit.org>
+           2011-2012, Ericsson AB
+           2005, Frerich Raabe <raabe@kde.org>
+           2012, Gabor Rapcsanyi (rgabor@inf.u-szeged.hu), University of Szeged
+           2001, Gareth Rees
+           2007-2015, Google Inc
+           2006, Graham Dennis <graham.dennis@gmail.com>
+           2007, Henry Mason <hmason@mac.com>
+           2009-2011, Igalia S.L
+           2012-2013, Intel Corporation
            2009, Jeff Schiller <codedread@gmail.com>
            2009, Joseph Pecoraro
-           2009-2011, Igalia S.L
-           2010, Chris Jerdonek <cjerdonek@webkit.org>
-           2010, Company 100 Inc
+           2008-2010, Julien Chaffraix <jchaffraix@webkit.org>
+           2007, Justin Haygood <jhaygood@reaktix.com>
+           2005-2006, Kimmo Kinnunen <kimmo.t.kinnunen@nokia.com>
+           2012, Koji Ishii <kojiishi@gmail.com>
+           1999, Lars Knoll <knoll@kde.org>
+           2005, Maksim Orlovich <maksim@kde.org>
+           2011-2013, Motorola Mobility
+           2004-2010, Ned Batchelder
+           2007, Nicholas Shanks <webkit@nickshanks.com>
+           2004-2008, Nikolas Zimmermann <zimmermann@kde.org>
+           2008-2012, Nokia Corporation and/or its subsidiary(-ies)
+           2008-2009, North Inc
+           2008, Nuanti Ltd
+           2014, Opera Software ASA
            2010, Patrick Gansterer <paroga@paroga.com>
-           2010, Torch Mobile (Beijing) Co. Ltd
-           2010, Zoltan Herczeg <zherczeg@webkit.org>
-           2010-2011, Adam Barth
-           2010-2011, University of Szeged
-           2011, Andreas Kling <kling@webkit.org>
-           2011, Daniel Bates <dbates@intudata.com>
            2011, Peter Varga (pvarga@webkit.org), University of Szeged
            2011, Renata Hodovan <reni@webkit.org>
-           2011-2012, Ericsson AB
-           2011-2013, Adobe Systems Incorporated
-           2011-2013, Motorola Mobility
-           2012, Balazs Ankes (bank@inf.u-szeged.hu) University of Szeged
-           2012, Digia Plc. and/or its subsidiary(-ies)
-           2012, Gabor Rapcsanyi (rgabor@inf.u-szeged.hu), University of Szeged
-           2012, Koji Ishii <kojiishi@gmail.com>
            2012, Rik Cabanier <cabanier@adobe.com>
-           2012, Victor Carbune <victor@rosedu.org>
-           2012-2013, Adobe Systems Incorporated
-           2012-2013, Intel Corporation
-           2012-2013, Intel Corporation
+           2004-2005, Rob Buis <buis@kde.org>
            2012-2014, Samsung Electronics
-           2013, Google Inc
-           2014, Opera Software ASA
-           280-2009, North Inc
+           2006, Samuel Weinig <sam.weinig@gmail.com>
+           2008-2010, The Android Open Source Project
+           2010, Torch Mobile (Beijing) Co. Ltd
+           2007-2010, Torch Mobile Inc
+           2010-2011, University of Szeged
+           2012, Victor Carbune <victor@rosedu.org>
+           2010, Zoltan Herczeg <zherczeg@webkit.org>
 License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
@@ -3731,93 +3722,80 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/build/mac/Prefix.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/WTFString.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/WTFString.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/icu/UnicodeIcu.h
-Copyright: 1991, Free Software Foundation, Inc
-           1997, Martin Jones <mjones@kde.org>
-           1997-1999, Torben Weis <weis@kde.org>
-           1998, Lars Knoll <knoll@mpi-hd.mpg.de>
-           1998-2002, Waldo Bastian <bastian@kde.org>
-           1998-2003, Lars Knoll <knoll@kde.org>
-           1999, Antti Koivisto <koivisto@kde.org>
-           1999, Lars Knoll <knoll@kde.org>
+Copyright: 2014, Adobe Systems Inc
+           2011-2014, Adobe Systems Incorporated
+           2008, Alex Mathews <possessedpenguinbob@gmail.com>
+           2005-2006, Alexander Kellett <lypanov@kde.org>
+           2005-2007, Alexey Proskuryakov <ap@webkit.org>
+           2004-2006, Allan Sandfeld Jensen <kde@carewolf.com>
+           2007-2008, Alp Toker <alp@atoker.com>
+           2010, Andras Becsi <abecsi@inf.u-szeged.hu>, University of Szeged
+           2011, Andreas Kling <kling@webkit.org>
+           2006, Andrew Wellington <proton@wiretapped.net>
+           2009, Antonio Gomes <tonikitoo@webkit.org>
            1999-2000, Antti Koivisto <koivisto@kde.org>
+           2002-2014, Apple Inc
+           2011, Benjamin Poulain <ikipou@gmail.com>
+           2011, Brent Fulgham
+           2008-2009, Cameron McCormack <cam@mcc.id.au>
+           2011, Code Aurora Forum
+           2008-2015, Collabora Ltd
+           2011, Cosmin Truta <ctruta@gmail.com>
+           2010, Daniel Bates <dbates@intudata.com>
            2000, Daniel Molkentin <molkentin@kde.org>
+           2008, David Levin <levin@chromium.org>
+           2007-2008, David Smith <catfish.man@gmail.com>
+           2012, Digia Plc. and/or its subsidiary(-ies)
+           2000-2003, Dirk Mueller <mueller@kde.org>
+           2008-2011, Dirk Schulze <krit@webkit.org>
+           2005-2008, Eric Seidel <eric@webkit.org>
+           2009, Ericsson AB
            2000, Frederik Holljen <frederik.holljen@hig.no>
+           1991, Free Software Foundation, Inc
+           2011, Gabor Loki <loki@webkit.org>
+           2006, George Staikos <staikos@kde.org>
+           2007-2015, Google Inc
+           2006, Graham Dennis <graham.dennis@gmail.com>
            2000, Gunnstein Lye <gunnstein@netcom.no>
            2000, Harri Porten <porten@kde.org>
-           2000, Simon Hausmann <hausmann@kde.org>
-           2000, Stefan Schimanski <schimmi@kde.org>
-           2000-2001, Peter Kelly <pmk@post.com>
-           2000-2003, Dirk Mueller <mueller@kde.org>
-           2001, Dirk Mueller <mueller@kde.org>
-           2001, Tobias Anton <anton@stud.fbi.fh-darmstadt.de>
-           2002, Waldo Bastian <bastian@kde.org>
-           2002-2003, The Karbon Developers
-           2002-2014, Apple Inc
-           2004, Zack Rusin <zack@kde.org>
-           2004-2006, Allan Sandfeld Jensen <kde@carewolf.com>
-           2004-2009, Nikolas Zimmermann <zimmermann@kde.org>
-           2004-2010, Rob Buis <buis@kde.org>
-           2005-2006, Alexander Kellett <lypanov@kde.org>
-           2005-2006, Oliver Hunt <oliver@nerget.com>
-           2005-2007, Alexey Proskuryakov <ap@webkit.org>
-           2005-2007, Samuel Weinig <sam@webkit.org>
-           2005-2008, Eric Seidel <eric@webkit.org>
-           2006, Andrew Wellington <proton@wiretapped.net>
-           2006, George Staikos <staikos@kde.org>
-           2006, Graham Dennis <graham.dennis@gmail.com>
-           2006, Jon Shier <jshier@iastate.edu>
-           2006, Michael Emmel <mike.emmel@gmail.com>
-           2006, Samuel Weinig <sam.weinig@gmail.com>
-           2006-2007, Nicholas Shanks <webkit@nickshanks.com>
-           2006-2009, Apple Inc
-           2007-2008, Alp Toker <alp@atoker.com>
-           2007-2008, David Smith <catfish.man@gmail.com>
            2007-2008, Holger Hans Peter Freyther
-           2007-2008, Julien Chaffraix <jchaffraix@webkit.org>
-           2007-2011, Torch Mobile (Beijing) Co. Ltd
-           2007-2015, Google Inc
-           2008, Alex Mathews <possessedpenguinbob@gmail.com>
-           2008, David Levin <levin@chromium.org>
-           2008, Nokia Corporation and/or its subsidiary(-ies)
-           2008-2009, Cameron McCormack <cam@mcc.id.au>
-           2008-2011, Dirk Schulze <krit@webkit.org>
-           2008-2012, Nokia Corporation and/or its subsidiary(-ies)
-           2008-2015, Collabora Ltd
-           2009, Antonio Gomes <tonikitoo@webkit.org>
-           2009, Ericsson AB
+           2010, Igalia, S.L
+           2012-2013, Intel Corporation
            2009, Jakub Wieczorek <faw217@gmail.com>
            2009, Jeff Schiller <codedread@gmail.com>
            2009, Jian Li <jianli@chromium.org>
+           2006, Jon Shier <jshier@iastate.edu>
+           2007-2008, Julien Chaffraix <jchaffraix@webkit.org>
            2009, Kenneth Rohde Christiansen
+           1998-2003, Lars Knoll <knoll@mpi-hd.mpg.de>
+           1997, Martin Jones <mjones@kde.org>
+           2006, Michael Emmel <mike.emmel@gmail.com>
            2009, Michelangelo De Simone <micdesim@gmail.com>
-           2010, Andras Becsi <abecsi@inf.u-szeged.hu>, University of Szeged
-           2010, Daniel Bates <dbates@intudata.com>
-           2010, Igalia, S.L
-           2010, Renata Hodovan <reni@inf.u-szeged.hu>
-           2010, Rob Buis <rwlbuis@gmail.com>
-           2010-2012, Patrick Gansterer <paroga@paroga.com>
-           2010-2012, Zoltan Herczeg <zherczeg@webkit.org>
-           2011, Andreas Kling <kling@webkit.org>
-           2011, Benjamin Poulain <ikipou@gmail.com>
-           2011, Brent Fulgham
-           2011, Code Aurora Forum
-           2011, Cosmin Truta <ctruta@gmail.com>
-           2011, Gabor Loki <loki@webkit.org>
-           2011, Rik Cabanier <cabanier@adobe.com>
-           2011, Robert Hogan <robert@roberthogan.net>
-           2011, Sencha, Inc
            2011-2012, Motorola Mobility, Inc
-           2011-2012, Renata Hodovan <reni@webkit.org>
-           2011-2012, University of Szeged
-           2011-2014, Adobe Systems Incorporated
-           2012, Digia Plc. and/or its subsidiary(-ies)
-           2012, Renata Hodovan <reni@webkit.org>
-           2012, Samsung Electronics
-           2012, University of Szeged
-           2012-2013, Intel Corporation
+           2006-2007, Nicholas Shanks <webkit@nickshanks.com>
+           2004-2009, Nikolas Zimmermann <zimmermann@kde.org>
+           2008-2012, Nokia Corporation and/or its subsidiary(-ies)
+           2005-2006, Oliver Hunt <oliver@nerget.com>
+           2010-2012, Patrick Gansterer <paroga@paroga.com>
+           2000-2001, Peter Kelly <pmk@post.com>
+           2010-2012, Renata Hodovan <reni@inf.u-szeged.hu>
+           2011, Rik Cabanier <cabanier@adobe.com>
+           2004-2010, Rob Buis <buis@kde.org>
+           2011, Robert Hogan <robert@roberthogan.net>
            2012-2014, Samsung Electronics
-           2014, Adobe Systems Inc
+           2005-2007, Samuel Weinig <sam@webkit.org>
+           2011, Sencha, Inc
+           2000, Simon Hausmann <hausmann@kde.org>
+           2000, Stefan Schimanski <schimmi@kde.org>
            2014, The Chromium Authors
+           2002-2003, The Karbon Developers
+           2001, Tobias Anton <anton@stud.fbi.fh-darmstadt.de>
+           1997-1999, Torben Weis <weis@kde.org>
+           2007-2011, Torch Mobile (Beijing) Co. Ltd
+           2011-2012, University of Szeged
+           1998-2002, Waldo Bastian <bastian@kde.org>
+           2004, Zack Rusin <zack@kde.org>
+           2010-2012, Zoltan Herczeg <zherczeg@webkit.org>
 License: LGPL-2+
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/core/fetch/MultipartImageResourceParser.h
@@ -3844,14 +3822,14 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/core/html/HTMLDocument.cp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/UnicodeRange.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/UnicodeRange.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/DateMath.h
-Copyright: 1998, Netscape Communications Corporation
-           1999, Antti Koivisto <koivisto@kde.org>
-           1999, Lars Knoll <knoll@kde.org>
-           1999-2000, Harri Porten <porten@kde.org>
-           2001-2006, mozilla.org
+Copyright: 1999, Antti Koivisto <koivisto@kde.org>
            2003-2012, Apple Inc
            2009, Google Inc
+           1999-2000, Harri Porten <porten@kde.org>
            2013, Intel Corporation
+           1999, Lars Knoll <knoll@kde.org>
+           1998, Netscape Communications Corporation
+           2001-2006, mozilla.org
 License: LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAlgorithm.h
@@ -3860,17 +3838,17 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAl
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAlgorithmFixed.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/core/layout/TableLayoutAlgorithmFixed.h
        src/3rdparty/chromium/third_party/WebKit/Source/wtf/text/Base64.cpp
-Copyright: 2000-2001, Dawit Alemayehu <adawit@kde.org>
+Copyright: 2006, Alexey Proskuryakov <ap@webkit.org>
+           2003-2013, Apple Inc
+           2000-2001, Dawit Alemayehu <adawit@kde.org>
            2002, Dirk Mueller <mueller@kde.org>
            2002, Lars Knoll <knoll@kde.org>
-           2003-2013, Apple Inc
-           2006, Alexey Proskuryakov <ap@webkit.org>
            2010, Patrick Gansterer <paroga@paroga.com>
 License: LGPL-2
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/core/xml/XSLTExtensions.cpp
-Copyright: 2001-2002, Thomas Broyer, Charlie Bozeman and Daniel Veillard
-           2007, Alexey Proskuryakov <ap@webkit.org>
+Copyright: 2007, Alexey Proskuryakov <ap@webkit.org>
+           2001-2002, Thomas Broyer, Charlie Bozeman and Daniel Veillard
 License: MIT/X11
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/*
@@ -3882,46 +3860,46 @@ Files: src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/build/rj
        src/3rdparty/chromium/third_party/WebKit/Source/devtools/scripts/closure/README.md
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/hyphenation/HyphenatorAOSP.cpp
        src/3rdparty/chromium/third_party/WebKit/Source/platform/text/hyphenation/HyphenatorAOSP.h
-Copyright: 2009-2014, The Closure Compiler Authors
-           2015, The Android Open Source Project
+Copyright: 2015, The Android Open Source Project
+           2009-2014, The Closure Compiler Authors
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/wtf/CryptographicallyRandomNumber.cpp
-Copyright: 1996, David Mazieres <dm@uun.org>
-           2008, Damien Miller <djm@openbsd.org>
+Copyright: 2008, Damien Miller <djm@openbsd.org>
+           1996, David Mazieres <dm@uun.org>
 License: ISC
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/wtf/DateMath.cpp
-Copyright: 1999-2000, Harri Porten <porten@kde.org>
+Copyright: 2010, &yet, LLC <nate@andyet.net>
            2006-2007, Apple Inc
-           2006-2008, the V8 project authors
-           2007-2009, Torch Mobile, Inc
            2009, Google Inc
-           2010, &yet, LLC <nate@andyet.net>
+           1999-2000, Harri Porten <porten@kde.org>
+           2007-2009, Torch Mobile, Inc
+           2006-2008, the V8 project authors
 License: BSD-3-clause or LGPL-2.1+ or MPL-1.1
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/wtf/ThreadingWin.cpp
-Copyright: 1998, John E. Bossom
-           1999-2005, Pthreads-win32 contributors
-           2007-2008, Apple Inc
+Copyright: 2007-2008, Apple Inc
            2009, Google Inc
+           1998, John E. Bossom
+           1999-2005, Pthreads-win32 contributors
            2009, Torch Mobile, Inc
 License: BSD-3-clause or LGPL-2+
 
 Files: src/3rdparty/chromium/third_party/WebKit/Source/wtf/dtoa.cpp
-Copyright: 1991-2001, Lucent Technologies
-           2002-2012, Apple Inc
+Copyright: 2002-2012, Apple Inc
+           1991-2001, Lucent Technologies
 License: ISC-like-dmgfp
 
 Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/autopep8.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/pep8.py
-Copyright: 2006-2009, Johann C. Rocholl <johann@rocholl.net>
-           2009-2014, Florent Xicluna <florent.xicluna@gmail.com>
-           2010, Timothy Farrell
+Copyright: 2009-2014, Florent Xicluna <florent.xicluna@gmail.com>
            2010-2011, Hideo Hattori
            2011-2013, Hideo Hattori, Steven Myint
            2013-2014, Hideo Hattori, Steven Myint, Bill Wendling
+           2006-2009, Johann C. Rocholl <johann@rocholl.net>
            2014, Marijn Haverbeke <marijnh@gmail.com> and others
+           2010, Timothy Farrell
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/jquery.hotkeys.js
@@ -3935,8 +3913,8 @@ License: Expat or GPL
 
 Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/irc/ircbot.py
        src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/irc/irclib.py
-Copyright: 1991-1999, Free Software Foundation, Inc
-           1999, 2002 Joel Rosdahl
+Copyright: 1999, 2002 Joel Rosdahl
+           1991-1999, Free Software Foundation, Inc
 License: LGPL-2.1+
 
 Files: src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/wpt/wpt/tools/six/LICENSE
@@ -4056,11 +4034,11 @@ License: Expat
 
 Files: src/3rdparty/chromium/third_party/boringssl/*
 Copyright: 1995-1998, Eric Young <eay@cryptsoft.com>
-           1998-2011, The OpenSSL Project
-           2002, Sun Microsystems, Inc
-           2005, Nokia
            2006, Network Resonance, Inc
+           2005, Nokia
            2011, RTFM, Inc
+           2002, Sun Microsystems, Inc
+           1998-2011, The OpenSSL Project
 License: OpenSSL or SSLeay
 
 Files: src/3rdparty/chromium/third_party/boringssl/boringssl_unittest.cc
@@ -4178,8 +4156,8 @@ Files: src/3rdparty/chromium/third_party/boringssl/err_data.c
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/update_clang.py
        src/3rdparty/chromium/third_party/boringssl/src/util/bot/vs_env.py
        src/3rdparty/chromium/third_party/boringssl/src/util/make_errors.go
-Copyright: 2014, Intel Corporation
-           2014-2016, Google Inc
+Copyright: 2014-2016, Google Inc
+           2014, Intel Corporation
            2015, Intel Inc
 License: ISC
 
@@ -4326,8 +4304,8 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/aes.c
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/time_support.h
        src/3rdparty/chromium/third_party/boringssl/src/include/openssl/x509v3.h
        src/3rdparty/chromium/third_party/boringssl/src/ssl/d1_lib.c
-Copyright: 1998-2015, The OpenSSL Project
-           2002, Sun Microsystems, Inc
+Copyright: 2002, Sun Microsystems, Inc
+           1998-2015, The OpenSSL Project
 License: OpenSSL
 
 Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/aes/asm/aesp8-ppc.pl
@@ -4528,8 +4506,8 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/asn1/a_bitstr.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_rsa.c
        src/3rdparty/chromium/third_party/boringssl/src/ssl/ssl_stat.c
 Copyright: 1995-1998, Eric Young <eay@cryptsoft.com>
-           2002, Sun Microsystems, Inc
            2005, Nokia
+           2002, Sun Microsystems, Inc
            2014, The OpenSSL Project
 License: SSLeay
 
@@ -4539,8 +4517,8 @@ Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/asm/rsaz-avx2.p
        src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/rsaz_exp.h
        src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_pci.c
        src/3rdparty/chromium/third_party/boringssl/src/crypto/x509v3/v3_pcia.c
-Copyright: 2004, Kungliga Tekniska Högskolan
-           2012, Intel Corporation
+Copyright: 2012, Intel Corporation
+           2004, Kungliga Tekniska Högskolan
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/boringssl/src/crypto/bn/check_bn_tests.go
@@ -4695,8 +4673,8 @@ Copyright: 1995-1998, Eric Young <eay@cryptsoft.com>
 License: SSLeay
 
 Files: src/3rdparty/chromium/third_party/boringssl/src/third_party/android-cmake/*
-Copyright: 2010-2011, Ethan Rublee
-           2011-2014, Andrey Kamaev
+Copyright: 2011-2014, Andrey Kamaev
+           2010-2011, Ethan Rublee
            2014, Pavel Rojtberg
 License: BSD-3-clause
 
@@ -4708,14 +4686,14 @@ Copyright: 2016, Google Inc
 License: ISC
 
 Files: src/3rdparty/chromium/third_party/boringssl/src/util/generate_build_files.py
-Copyright: 2014, The Chromium Authors
-           2015, Google Inc
+Copyright: 2015, Google Inc
            2015, The Android Open Source Project
+           2014, The Chromium Authors
 License: Apache-2.0 or BSD-3-clause or ISC
 
 Files: src/3rdparty/chromium/third_party/brotli/*
-Copyright: 2013-2014, The Chromium Authors
-           2013-2015, Google Inc
+Copyright: 2013-2015, Google Inc
+           2013-2014, The Chromium Authors
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/bspatch/*
@@ -4739,8 +4717,8 @@ Copyright: 2006-2016, Google Inc
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/closure_compiler/*
-Copyright: 2009, The Closure Compiler Authors
-           2014-2015, The Chromium Authors
+Copyright: 2014-2015, The Chromium Authors
+           2009, The Closure Compiler Authors
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/closure_compiler/externs/compiled_resources2.gyp
@@ -4764,8 +4742,8 @@ Copyright: 2016, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/closure_linter/*
-Copyright: 2007-2013, The Closure Linter Authors
-           2011, Google Inc
+Copyright: 2011, Google Inc
+           2007-2013, The Closure Linter Authors
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/codesighs/*
@@ -4807,16 +4785,16 @@ Copyright: 2009-2015, Blackmagic Design
 License: BSL-1.0
 
 Files: src/3rdparty/chromium/third_party/devscripts/*
-Copyright: 1989-1991, Free Software Foundation, Inc
-           2007-2008, Adam D. Barratt
+Copyright: 2007-2008, Adam D. Barratt
            2012, Francesco Poli
+           1989-1991, Free Software Foundation, Inc
 License: GPL-2+
 
 Files: src/3rdparty/chromium/third_party/dom_distiller_js/*
-Copyright: 2007, Timepedia.org
+Copyright: 2009-2011, Christian Kohlschütter
            2008, Google
-           2009-2011, Christian Kohlschütter
            2014-2015, The Chromium Authors
+           2007, Timepedia.org
 License: Apache-2.0 or BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/dom_distiller_js/protoc_plugins/json_values_converter.py
@@ -4829,35 +4807,30 @@ Copyright: 2016, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/dpkg-dev/*
-Copyright: 1989-1991, Free Software Foundation, Inc
-           1996, Ian Jackson
-           1998, Richard Braakman
-           1999, Darren Benham
-           2000, Sean 'Shaleh' Perry
-           2000, Wichert Akkerman
-           2002, Adam Heath <doogie@debian.org>
-           2004-2006, Frank Lichtenheld
-           2005-2007, Frank Lichtenheld <frank@lichtenheld.de>
-           2006, Russ Allbery
-           2006-2008, Frank Lichtenheld <djpig@debian.org>
-           2006-2013, Guillem Jover <guillem@debian.org>
-           2007, Colin Watson <cjwatson@debian.org>
-           2007, Don Armstrong <don@donarmstrong.com>
-           2007, Raphaël Hertzog
+Copyright: 2002, Adam Heath <doogie@debian.org>
            2007-2008, Canonical, Ltd
-           2007-2010, Joey Hess <joeyh@debian.org>
-           2007-2012, Raphaël Hertzog <hertzog@debian.org>
-           2008, Ian Jackson <ian@davenant.greenend.org.uk>
+           2007, Colin Watson <cjwatson@debian.org>
+           1999, Darren Benham
+           2007, Don Armstrong <don@donarmstrong.com>
+           2004-2008, Frank Lichtenheld <frank@lichtenheld.de>
+           1989-1991, Free Software Foundation, Inc
+           2006-2013, Guillem Jover <guillem@debian.org>
+           1996-2008, Ian Jackson <ian@davenant.greenend.org.uk>
            2008, James Westby <jw+debian@jameswestby.net>
-           2009-2010, Modestas Vainius <modax@debian.org>
+           2007-2010, Joey Hess <joeyh@debian.org>
            2009-2011, Kees Cook <kees@debian.org>
            2011, Linaro Limited
-           Ian Jackson <iwj@debian.org>
+           2009-2010, Modestas Vainius <modax@debian.org>
+           2007-2012, Raphaël Hertzog <hertzog@debian.org>
+           1998, Richard Braakman
+           2006, Russ Allbery
+           2000, Sean 'Shaleh' Perry
+           2000, Wichert Akkerman
 License: GPL-2+
 
 Files: src/3rdparty/chromium/third_party/drmemory/*
-Copyright: 2008-2010, VMware, Inc.
-           2010-2015, Google, Inc.
+Copyright: 2010-2015, Google, Inc.
+           2008-2010, VMware, Inc.
 License: LGPL-2.1
 Comment: Actually drmemory is not included in the source tree, the
  README.chromium file explains how to obtain it, though.
@@ -4880,9 +4853,9 @@ Copyright: 2015, The Android Open Source Project, Inc
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/expat/*
-Copyright: 1998-2000, Thai Open Source Software Center Ltd
-           2000, Clark Cooper
+Copyright: 2000, Clark Cooper
            2001-2006, Expat maintainers
+           1998-2000, Thai Open Source Software Center Ltd
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/expat/BUILD.gn
@@ -4891,403 +4864,387 @@ Copyright: 2012-2014, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/*
-Copyright: 1990, James Ashton - Sydney University
-           1991-1999, Free Software Foundation, Inc
-           1993, CMUComputer Science, Speech Group
-           1994-2012, the Xiph.Org Foundation
-           1997-1999, H. Dietz and R. Fisher
-           1998, Juergen Mueller And Sundry Contributors
-           1998-2009, Conifer Software
-           1999, Intel Corporation
-           1999, Nick Bailey
-           1999, Roger Hardiman
-           1999-2000, Sebastien Rougeaux <sebastien.rougeaux@anu.edu.au>
-           1999-2001, Chris Bagwell
-           2000, Chris Ausbrooks <weed@bucket.pp.ualr.edu>
-           2000, Chris Bagwell <cbagwell@sprynet.com>
-           2000, Edward Beingessner And Sundry Contributors
-           2000, Fabien COELHO <fabien@coelho.net>
-           2000, Michel Lespinasse <walken@zoy.org>
-           2000-2001, Peter Gubanov <peter@elecard.net.ru>
-           2000-2010, Fabrice Bellard <fabrice@bellard.org>
-           2001, Daniel Maas <dmaas@dcine.com>
-           2001, Heikki Leinonen
-           2001, Juan J. Sierralta P
-           2001, Lionel Ulmer
-           2001, Tim Ferguson
-           2001, ffmpeg project
+Copyright: 2004, AGAWA Koji <i@atty.jp>
+           2004, Adam Thayer <krevnik@comcast.net>
+           2010, Adrian Daerr and Nicolas George
+           2008, Affine Systems, Inc (Michael Sullivan, Bobby Impollonia)
+           2005, Alban Bedel <albeu@free.fr>
+           2012, Aleksi Nurmi
+           2008, Alessandro Sappia
+           2002-2006, Alex Beregszaszi
+           2003, Alex Beregszaszi & Mike Melanson
+           2008-2013, Alex Converse <alex.converse@gmail.com>
+           2008-2012, Alexander E. Patrakov
+           2008-2010, Alexander Strange <astrange@ithinksw.com>
+           2014, Alexandra Hájková
+           2007, Alexis Ballier
+           2014, Aman Gupta <ffmpeg@tmm1.net>
+           2010, Amanda, Y.N. Wu <amanda11192003@gmail.com>
+           2013, Anand Meher Kotra
+           2011, Anatoliy Wasserman
+           2010-2011, Anatoly Nenashev
+           2002, Anders Johansson <ajh@atri.curtin.edu.au>
+           2015, Andreas Cadhalpun <Andreas.Cadhalpun@googlemail.com>
+           2013-2015, Andreas Fuchs, Wolfgang Hrauda
+           2011, Andreas Öman
+           2008-2009, Andrej Stepanchuk
+           2012, Andrew D'Addesio
+           2013-2014, Andrew Kelley
+           2012, Andrey Utkin
+           2013, Andrey Utkin <andrey.krieger.utkin gmail com>
+           2013, Aneesh Dogra <aneesh@sugarlabs.org>
+           2012, Aneesh Dogra (lionaneesh) <lionaneesh@gmail.com>
+           2005, Anonymous, Alex Beregszaszi, Michael Niedermayer
+           2015, Anshul Maheshwari
+           2007-2013, Anssi Hannula <anssi.hannula@gmail.com>
+           2010-2015, Anton Khirnov <anton@khirnov.net>
+           2012, Anton Khirnov <anton khirnov net>
+           2012, Antti Seppälä
+           2014-2015, Arwa Arif <arwaarif1994@gmail.com>
+           2013, Ash Hughes
+           2006-2010, Aurelien Jacobs <aurel@gnuage.org>
+           2012, AvxSynth Team
+           2008, BBC, Anuradha Suraparaju <asuraparaju@gmail.com>
            2001-2003, BERO <bero@geocities.co.jp>
+           2005, Balatoni Denes
+           2006-2009, Baptiste Coudurier <baptiste.coudurier@gmail.com>
+           2007, Baptiste Coudurier, Benjamin Larsson, Ulion
+           2007-2008, Bartlomiej Wolowiec <bartek.wolowiec@gmail.com>
+           2005-2009, Benjamin Larsson
+           2004-2007, Benjamin Zores <ben@geexbox.org>
+           2007-2014, Benoit Fouet <benoit.fouet@free.fr>
+           2009, Bjorn Axelsson
+           2007, Björn Axelsson
+           2007-2010, Bobby Bingham
+           2010, Brandon Mintern
+           2002, Brian Foley
+           2012, British Broadcasting Corporation
+           1993, CMUComputer Science, Speech Group
+           2013, Calvin Walton <calvin.walton@kepstin.ca>
+           2010-2015, Carl Eugen Hoyos
+           2000, Chris Ausbrooks <weed@bucket.pp.ualr.edu>
+           1999-2001, Chris Bagwell <cbagwell@sprynet.com>
+           2007, Christian Ohm, 2008 Eli Friedman
+           2009-2013, Christian Schmidt
+           2007, Christophe GISQUET <christophe.gisquet@free.fr>
+           2012-2014, Christophe Gisquet <christophe.gisquet@gmail.com>
+           2003-2005, Christopher R. Hertel <crh@ubiqx.mn.org>
+           2015, Claudio Freire
+           2007, Clemens Fruhwirth
+           2012-2014, Clément Bœsch
+           2015, Clément Bœsch <clement stupeflix.com>
+           2011-2015, Clément Bœsch <u pkh me>
+           2009, Colin McQuillan
+           2009, Colin McQuillian
+           2007, Collabora Ltd, Philippe Kalaf
+           1998-2009, Conifer Software
+           2006, Corey Hickey
+           2006, Cyril Zorin
+           2010, Daniel G. Taylor <dan@programmer-art.org>
+           2011-2013, Daniel Kang <daniel.d.kang@gmail.com>
+           2001-2006, Daniel Maas <dmaas@dcine.com>
+           2014, Daniel Oberhoff
+           2009-2013, Daniel Verkamp <daniel@drv.nu>
+           2013, Darryl Wallace <wallacdj@gmail.com>
+           2014, Dave Rice @dericed
+           2007-2010, David Conrad <lessen42@gmail.com>
+           2005, David Hammerton
+           2012, David Kment
+           2005, Denes Balatoni ( dbalatoni programozo hu )
+           2011-2015, Derek Buitenhuis
+           2014, Deti Fliegl
+           2013, Diego Biurrun <diego@biurrun.de>
+           2002, Dieter Shirley
+           2013, Dirk Farin <dirk.farin@gmail.com>
+           2005, DivX, Inc
+           2003, Donnie Smith
+           2015, Donny Yang
+           2003, Dr. Tim Ferguson
+           2009, Dylan Yudaken
+           2000, Edward Beingessner And Sundry Contributors
+           2007, Edward Hervey
+           2014, Eejya Singh
+           2008-2010, Eli Friedman <eli.friedman@gmail.com>
+           2010-2011, Elvis Presley
+           2015, Eran Kornblau <erankor@gmail.com>
+           2004-2007, Eric Lasota
+           2003, Ewald Snel
+           2000, Fabien COELHO <fabien@coelho.net>
+           2000-2010, Fabrice Bellard <fabrice@bellard.org>
+           2002, Falk Hueffner <falk@debian.org>
+           2010, Fiona Glaser <fiona@x264.com>
+           2010, Francesco Lavra <francescolavra@interfree.it>
+           2002-2005, Francois Revol <revol@free.fr>
+           2002, Frederic 'dilb' Boulay
+           2012-2013, Fredrik Mellbin
+           1991-1999, Free Software Foundation, Inc
+           2015, Ganesh Ajjanagadde
+           2012-2014, Georg Lippitsch <georg.lippitsch@gmx.at>
+           2010-2013, Georg Martius <georg.martius@web.de>
+           2004, Gildas Bazin <gbazin@videolan.org>
+           2012-2013, Gildas Cocherel
+           2009, Giliard B. de Freitas <giliarde@gmail.com>
+           2015, Gilles Chanteperdrix <gch@xenomai.org>
+           2010-2012, Google, Inc
+           2006-2008, Gregory Montoir <cyx@users.sourceforge.net>
+           2012-2103, Guillaume Martres <smarter@ubuntu.com>
+           2006, Guillaume Poirier <gpoirier@mplayerhq.hu>
+           2002, Gunnar Monell <gmo@linux.nu>
+           2003, Gustavo Sverzut Barbieri <gsbarbieri@yahoo.com.br>
+           1997-1999, H. Dietz and R. Fisher
+           2010, Hans de Goede <hdegoede@redhat.com>
+           2001, Heikki Leinonen
+           2014-2015, Hendrik Leppkes
+           2015, Henrik Gramner <henrik gramner com>
+           2015, Himangi Saraogi <himangi774@gmail.com>
+           2010, Holger Lubitz
+           2009-2010, Howard Chu
+           2011-2012, Hyllian/Jararaca <sergiogdb@gmail.com>
+           2005-2008, Ian Caulfield
+           2015, Imagination Technologies Ltd
+           1999, Intel Corporation
+           2003, International Business Machines, Corp
+           2003, Ivan Kalvachev
+           2007-2008, Ivo van Poorten
+           2010, Jacob Meuser
+           2008-2009, Jaikrishnan Menon <realityman@gmx.net>
+           2012-2015, James Almer <jamrial@gmail.com>
+           1990, James Ashton - Sydney University
+           2009-2015, James Darnley <james.darnley@gmail.com>
+           2003, James Klicman <james@klicman.org>
+           2014, James Yu <james.yu@linaro.org>
+           2012, Jan Ekström
+           2010-2015, Janne Grunau <janne-libav@jannau.net>
+           2013, Jeff Moguillansky
+           2005, Jeff Muizelaar
+           2012, Jeremy Tran
+           2009, Jimmy Christensen
+           2011, Jordi Ortiz
+           2010, Josh Allmann
+           2009, Joshua Warner
+           2011, Juan Carlos Rodriguez <ing.juancarlosrodriguez@hotmail.com>
+           2001, Juan J. Sierralta P
+           1998, Juergen Mueller And Sundry Contributors
+           2006-2013, Justin Ruggles <justin.ruggles@gmail.com>
+           2011, KO Myung-Hun <komh@chollian.net>
+           2007, Kamil Nowosad
+           2006, Kartikey Mahendra BHATT <bhattkm@gmail.com>
+           2009, Kenan Gillet
+           2015, Kevin Wheatley <kevin.j.wheatley@gmail.com>
+           2011-2014, Kieran Kunhya <kierank@obe.tv>
+           2004-2014, Konstantin Shishkov <kostya.shishkov@gmail.com>
+           2009, Kostya Shishkov
            2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen
            2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen and others
            2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen, Damien Zammit
            2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen, Damien Zammit and others
            2001-2010, Krzysztof Foltman, Markus Schmidt, Thor Harald Johansen, Vladimir Sadovnikov and others
-           2001-2014, Peter Ross <pross@xvid.org>
-           2001-2015, Michael Niedermayer <michaelni@gmx.at>
-           2001-2015, The FFmpeg Project
-           2002, Anders Johansson <ajh@atri.curtin.edu.au>
-           2002, Brian Foley
-           2002, Dieter Shirley
-           2002, Falk Hueffner <falk@debian.org>
-           2002, Frederic 'dilb' Boulay
-           2002, Gunnar Monell <gmo@linux.nu>
+           2015, Kyle Swanson <k@ylo.ph>
            2002, Laszlo Torok <torokl@alpha.dfmk.hu>
-           2002, Lennert Buytenhek <buytenh@gnu.org>
-           2002, Mark Hills <mark@pogo.org.uk>
-           2002, Remi Guyomarch <rguyom@pobox.com>
-           2002, Steve O'Hara-Smith
-           2002, The Xine Project
-           2002, Zdenek Kabelac <kabi@informatics.muni.cz>
-           2002-2005, Roberto Togni
-           2002-2006, Alex Beregszaszi
-           2002-2013, Maxim Poliakovski
-           2002-205, Francois Revol <revol@free.fr>
-           2003, Alex Beregszaszi & Mike Melanson
-           2003, Donnie Smith
-           2003, Dr. Tim Ferguson
-           2003, Ewald Snel
-           2003, Gustavo Sverzut Barbieri <gsbarbieri@yahoo.com.br>
-           2003, International Business Machines, Corp
-           2003, Ivan Kalvachev
-           2003, James Klicman <james@klicman.org>
-           2003, Max Krasnyansky <maxk@qualcomm.com>
-           2003, Nick Kurshev <nickols_k@mail.ru>
-           2003, Rich Felker
-           2003, Thomas Raivio
-           2003, Tinic Uro
-           2003-2004, Romain Dolbeau <romain@dolbeau.org>
-           2003-2005, Christopher R. Hertel <crh@ubiqx.mn.org>
-           2003-2006, Roman Shaposhnik
-           2003-2009, Sascha Sommer <saschasommer@freenet.de>
-           2003-2011, x264 project
-           2003-2014, Loren Merritt <lorenm@u.washington.edu>
-           2003-2014, Pascal Massimino <skal@planet-d.net>
-           2004, AGAWA Koji <i@atty.jp>
-           2004, Adam Thayer <krevnik@comcast.net>
-           2004, Benjamin Zores
-           2004, Gildas Bazin <gbazin@videolan.org>
-           2004, Maarten Daniels
-           2004, Marc Hoffman <marc.hoffman@analog.com>
-           2004, Mike Melanson <melanson@pcisys.net>
-           2004-2005, Michael Niedermayer, Loren Merritt
+           2008-2010, Laurent Aimar <fenrir@videolan.org>
+           2012, Laurent de Soras
            2004-2006, Lennart Poettering
-           2004-2007, Eric Lasota
-           2004-2014, Konstantin Shishkov <kostya.shishkov@gmail.com>
-           2005, Alban Bedel <albeu@free.fr>
-           2005, Anonymous, Alex Beregszaszi, Michael Niedermayer
-           2005, Balatoni Denes
-           2005, David Hammerton
-           2005, Denes Balatoni ( dbalatoni programozo hu )
-           2005, DivX, Inc
-           2005, Jeff Muizelaar
-           2005, Matthieu CASTET
-           2005, Ole André Vadla Ravnås <oleavr@gmail.com>
-           2005, Roine Gustafsson
-           2005, Steve Underwood <steveu@coppice.org>
-           2005, Vidar Madsen
-           2005, Wim Taymans
-           2005, Zoltan Hidvegi <hzoli -a- hzoli -d- com>
-           2005, anonymous, Alex Beregszaszi, Michael Niedermayer
-           2005-2006, Oded Shimon <ods15@ods15.dyndns.org>
-           2005-2006, Robert Edele <yartrebo@earthlink.net>
-           2005-2007, Wolfram Gloger
-           2005-2008, Ian Caulfield
-           2005-2009, Benjamin Larsson
-           2005-2012, Mans Rullgard <mans@mansr.com>
-           2005-2015, Luca Barbato <lu_zero@gentoo.org>
-           2006, Corey Hickey
-           2006, Cyril Zorin
-           2006, Daniel Maas <dmaas@maasdigital.com>
-           2006, Guillaume Poirier <gpoirier@mplayerhq.hu>
-           2006, Kartikey Mahendra BHATT <bhattkm@gmail.com>
-           2006, Patrick Guimond
-           2006, Paul Richards <paul.richards@gmail.com>
-           2006, Thijs Vermeir <thijs.vermeir@barco.com>
-           2006-2007, Maxim Gavrilov ( maxim.gavrilov gmail com )
-           2006-2007, Michel Bardiaux <mbardiaux@mediaxim.be>
-           2006-2007, Reynaldo H. Verdejo Pinochet
-           2006-2007, Ryan Martell <rdm4@martellventures.com>
-           2006-2008, Gregory Montoir <cyx@users.sourceforge.net>
-           2006-2009, Baptiste Coudurier <baptiste.coudurier@gmail.com>
+           2002, Lennert Buytenhek <buytenh@gnu.org>
+           2013, Lenny Wang <lwanghpc@gmail.com>
+           2012, Li Cao <li@multicorewareinc.com>
+           2001, Lionel Ulmer
+           2015, LoRd_MuldeR <mulder2@gmx.de>
+           2015, Loongson Technology Corporation Limited
+           2003-2014, Loren Merritt <lorenm@u.washington.edu>
            2006-2009, Luca Abeni
-           2006-2009, Stefan Gehrer <stefan.gehrer@gmx.de>
-           2006-2010, Aurelien Jacobs <aurel@gnuage.org>
-           2006-2010, Prakash Punnoor <prakash@punnoor.de>
-           2006-2011, Xvid Solutions GmbH
-           2006-2012, Rob Sykes <robs@users.sourceforge.net>
-           2006-2013, Justin Ruggles <justin.ruggles@gmail.com>
-           2006-2014, Ramiro Polla
-           2006-2015, Steve Lhomme
-           2007, Alexis Ballier
-           2007, Anssi Hannula <anssi.hannula@gmail.com>
-           2007, Baptiste Coudurier, Benjamin Larsson, Ulion
-           2007, Benjamin Zores <ben@geexbox.org>
-           2007, Benoit Fouet <benoit.fouet@free.fr>
-           2007, Björn Axelsson
-           2007, Christian Ohm, 2008 Eli Friedman
-           2007, Christophe GISQUET <christophe.gisquet@free.fr>
-           2007, Clemens Fruhwirth
-           2007, Collabora Ltd, Philippe Kalaf
-           2007, Edward Hervey
-           2007, Kamil Nowosad
-           2007, Marco Gerards
-           2007, Mike Melanson, Konstantin Shishkov
-           2007, Nicholas Tung
-           2007, Nokia Corporation
-           2007, Reynaldo H. Verdejo Pinochet (QCELP decoder)
-           2007, Richard Spindler (author of frei0r plugin from which this was derived)
-           2007-2008, Bartlomiej Wolowiec <bartek.wolowiec@gmail.com>
-           2007-2008, Ivo van Poorten
-           2007-2008, Marco Gerards <marco@gnu.org>
-           2007-2008, Siarhei Siamashka <ssvb@users.sourceforge.net>
-           2007-2010, Bobby Bingham
-           2007-2010, David Conrad <lessen42@gmail.com>
-           2007-2011, Vitor Sessak <vitor1001@gmail.com>
-           2007-2011, Vladimir Voroshilov
-           2007-2012, Nicolas George <nicolas.george@normalesup.org>
-           2007-2014, Benoit Fouet
-           2008, Affine Systems, Inc (Michael Sullivan, Bobby Impollonia)
-           2008, Alessandro Sappia
-           2008, BBC, Anuradha Suraparaju <asuraparaju@gmail.com>
-           2008, Laurent Aimar <fenrir@videolan.org>
-           2008, NVIDIA
-           2008, Robert Marston
-           2008, Sisir Koppaka
-           2008, Victor Paesa
-           2008, vmrsss
-           2008-2009, Andrej Stepanchuk
-           2008-2009, Jaikrishnan Menon <realityman@gmx.net>
-           2008-2009, Robert Swain ( rob opendot cl )
-           2008-2009, Splitted-Desktop Systems
-           2008-2009, robs@users.sourceforge.net
-           2008-2010, Alexander Strange <astrange@ithinksw.com>
-           2008-2010, Eli Friedman <eli.friedman@gmail.com>
-           2008-2010, Paul Kendall <paul@kcbbs.gen.nz>
-           2008-2011, Sascha Sommer, Benjamin Larsson
-           2008-2011, Zhentan Feng <spyfeng@gmail.com>
-           2008-2012, Alexander E. Patrakov
-           2008-2013, Alex Converse <alex.converse@gmail.com>
-           2009, Alex Converse
-           2009, Bjorn Axelsson
-           2009, Colin McQuillan
-           2009, Colin McQuillian
-           2009, Dylan Yudaken
-           2009, Giliard B. de Freitas <giliarde@gmail.com>
-           2009, Jimmy Christensen
-           2009, Joshua Warner
-           2009, Kenan Gillet
-           2009, Kostya Shishkov
-           2009, Michael Tison
-           2009, Naotoshi Nojiri
-           2009, Nathan Caldwell <saintdev@gmail.com>
-           2009, Nicolas Martin <martinic@iro.umontreal.ca>
-           2009, Peter Holik
-           2009, Samalyse
-           2009, Sebastien Lucas <sebastien.lucas@gmail.com>
-           2009, Stephen Backway
-           2009, Thomas P. Higdon <thomas.p.higdon@gmail.com>
-           2009, Tobias Bindhammer
-           2009, Toshimitsu Kimura
-           2009, Xuggle Incorporated
-           2009, Zuxy Meng <zuxy.meng@gmail.com>
-           2009-2010, Howard Chu
-           2009-2010, Laurent Aimar
-           2009-2011, Sebastian Gesemann
-           2009-2013, Christian Schmidt
-           2009-2013, Daniel Verkamp <daniel@drv.nu>
-           2009-2014, Reimar Döffinger <Reimar.Doeffinger@gmx.de>
-           2009-2014, Thilo Borgmann <thilo.borgmann@mail.de>
-           2009-2015, James Darnley <james.darnley@gmail.com>
-           2009-2015, Martin Storsjo
-           2010, Adrian Daerr and Nicolas George
-           2010, Amanda, Y.N. Wu <amanda11192003@gmail.com>
-           2010, Anssi Hannula <anssi.hannula@iki.fi>
-           2010, Brandon Mintern
-           2010, Daniel G. Taylor <dan@programmer-art.org>
-           2010, Fiona Glaser <fiona@x264.com>
-           2010, Francesco Lavra <francescolavra@interfree.it>
-           2010, Hans de Goede <hdegoede@redhat.com>
-           2010, Holger Lubitz
-           2010, Jacob Meuser
-           2010, Josh Allmann
+           2005-2015, Luca Barbato <lu_zero@gentoo.org>
+           2013-2014, Luca Barbato, Deti Fliegl
+           2013-2014, Lukasz Marek <lukasz.m.luki@gmail.com>
+           2004, Maarten Daniels
+           2015, Manojkumar Bhosale <Manojkumar.Bhosale@imgtec.com>
+           2005-2012, Mans Rullgard <mans@mansr.com>
+           2004, Marc Hoffman <marc.hoffman@analog.com>
            2010, Marcelo Galvao Povoa
+           2007-2008, Marco Gerards <marco@gnu.org>
            2010, Mark Heath <mjpeg0@silicontrip.org>
+           2002, Mark Hills <mark@pogo.org.uk>
+           2011-2012, Mark Himsley
            2010, Mark Nauwelaerts
-           2010, Michael Chinen
-           2010, Michele Orrù
-           2010, Mohamed Naufal Basheer <naufal11@gmail.com>
-           2010, Nolan Lum <nol888@gmail.com>
-           2010, Rafael Carre
-           2010, Rob Clark <rob@ti.com>
-           2010, S.N. Hemanth Meenakshisundaram <smeenaks@ucsd.edu>
-           2010, Sebastian Vater <cdgs.basty@googlemail.com>
-           2010, Tomas Härdin
-           2010, tipok <piratfm@gmail.com>
-           2010-2011, Anatoly Nenashev
-           2010-2011, Elvis Presley
-           2010-2011, Stefano Sabatini <stefasab gmail com>
-           2010-2012, Google, Inc
-           2010-2013, Anssi Hannula
-           2010-2013, Georg Martius <georg.martius@web.de>
-           2010-2013, Philip Langdale <ffmpeg.philipl@overt.org>
-           2010-2015, Anton Khirnov
-           2010-2015, Carl Eugen Hoyos
-           2010-2015, Janne Grunau <janne-libav@jannau.net>
-           2010-2015, Ronald S. Bultje <rsbultje@gmail.com>
-           2011, Anatoliy Wasserman
-           2011, Andreas Öman
-           2011, Jordi Ortiz
-           2011, Juan Carlos Rodriguez <ing.juancarlosrodriguez@hotmail.com>
-           2011, KO Myung-Hun <komh@chollian.net>
+           2009-2015, Martin Storsjo
+           2013, Marton Balint
+           2014, Marvin Scholz
+           2011-2012, Mashiat Sarker Shakkhar
+           2015, Mats Peterson
+           2013, Matthew Heaney
            2011, Matthew Hoops <clone2727@gmail.com>
+           2015, Matthieu Bouron <matthieu.bouron stupeflix.com>
+           2005, Matthieu CASTET
            2011, Max Horn
+           2003, Max Krasnyansky <maxk@qualcomm.com>
+           2006-2007, Maxim Gavrilov ( maxim.gavrilov gmail com )
+           2002-2013, Maxim Poliakovski
+           2011-2012, Michael Bradshaw <mjbshaw gmail com>
+           2010, Michael Chinen
            2011, Michael Karcher
+           2001-2015, Michael Niedermayer <michaelni@gmx.at>
+           2004-2005, Michael Niedermayer, Loren Merritt
+           2009, Michael Tison
+           2006-2007, Michel Bardiaux <mbardiaux@mediaxim.be>
+           2000, Michel Lespinasse <walken@zoy.org>
+           2010, Michele Orrù
+           2012-2103, Mickael Raulet
+           2004, Mike Melanson <melanson@pcisys.net>
+           2007, Mike Melanson, Konstantin Shishkov
            2011, Mina Nagy Zaki
            2011, Miroslav Slugeň <Thunder.m@seznam.cz>
            2011, MirriAd Ltd
-           2011, Oskar Arvidsson
-           2011, Roger Pau Monné <roger.pau@entel.upc.edu>
-           2011, Sven Hesse <drmccoy@drmccoy.de>
-           2011, Thomas Kuehnel
-           2011-2012, Hyllian/Jararaca <sergiogdb@gmail.com>
-           2011-2012, Mark Himsley
-           2011-2012, Mashiat Sarker Shakkhar
-           2011-2012, Michael Bradshaw <mjbshaw gmail com>
-           2011-2012, Sebastien Zwickert
-           2011-2012, Smartjog S.A.S, Clément Bœsch <clement.boesch@smartjog.com>
-           2011-2013, Daniel Kang
-           2011-2014, Kieran Kunhya <kierank@obe.tv>
-           2011-2015, Anton Khirnov <anton@khirnov.net>
-           2011-2015, Clément Bœsch <u pkh me>
-           2011-2015, Derek Buitenhuis
-           2011-2015, Nicolas George
-           2011-2015, Paul B Mahol
-           2012, Aleksi Nurmi
-           2012, Andrew D'Addesio
-           2012, Andrey Utkin
-           2012, Aneesh Dogra (lionaneesh) <lionaneesh@gmail.com>
-           2012, Anton Khirnov <anton khirnov net>
-           2012, Antti Seppälä
-           2012, AvxSynth Team
-           2012, British Broadcasting Corporation
-           2012, David Kment
-           2012, Jan Ekström
-           2012, Jeremy Tran
-           2012, Laurent de Soras
-           2012, Li Cao <li@multicorewareinc.com>
-           2012, Nathan Caldwell
-           2012, Pavel Koshevoy <pkoshevoy@gmail.com>
-           2012, Peng Gao <peng@multicorewareinc.com>
-           2012, Petri Hintukainen <phintuka <at> users.sourceforge.net>
-           2012, Robert Nagy <ronag89 gmail com>
-           2012, Samuel Pitoiset
-           2012, Steven Robertson
-           2012, VLC authors and VideoLAN
-           2012, Vitaliy E Sugrobov
-           2012, Xidorn Quan
-           2012-2013, Fredrik Mellbin
-           2012-2013, Gildas Cocherel
-           2012-2013, Oka Motofumi <chikuzen.mo@gmail.com>
-           2012-2013, Wassim Hamidouche
-           2012-2013, Wei Gao <weigao@multicorewareinc.com>
-           2012-2014, Christophe Gisquet <christophe.gisquet@gmail.com>
-           2012-2014, Clément Bœsch
-           2012-2014, Georg Lippitsch <georg.lippitsch@gmx.at>
-           2012-2015, James Almer <jamrial@gmail.com>
-           2012-2103, Guillaume Martres
-           2012-2103, Mickael Raulet
-           2013, Anand Meher Kotra
-           2013, Andrey Utkin <andrey.krieger.utkin gmail com>
-           2013, Aneesh Dogra <aneesh@sugarlabs.org>
-           2013, Ash Hughes
-           2013, Calvin Walton <calvin.walton@kepstin.ca>
-           2013, Daniel Kang <daniel.d.kang@gmail.com>
-           2013, Darryl Wallace <wallacdj@gmail.com>
-           2013, Diego Biurrun <diego@biurrun.de>
-           2013, Dirk Farin <dirk.farin@gmail.com>
-           2013, Guillaume Martres <smarter@ubuntu.com>
-           2013, Jeff Moguillansky
-           2013, Lenny Wang <lwanghpc@gmail.com>
-           2013, Marton Balint
-           2013, Matthew Heaney
-           2013, Nicolas Bertrand <nicoinattendu@gmail.com>
-           2013, RISC OS Open Ltd <bavison@riscosopen.org>
-           2013, Rl, Aetey Global Technologies AB
-           2013, Rudolf Polzer <divverent@xonotic.org>
-           2013, Rémi Denis-Courmont
-           2013, Seppo Tomperi
-           2013, VTT
-           2013, Vadim Kalinsky <vadim@kalinsky.ru>
-           2013, Xiaolei Yu <dreifachstein@gmail.com>
-           2013, Yukinori Yamazoe
-           2013-2014, Andrew Kelley
-           2013-2014, Luca Barbato, Deti Fliegl
-           2013-2014, Lukasz Marek <lukasz.m.luki@gmail.com>
+           2022, Mohamed Naufal <naufal@gmail.com>
+           2010, Mohamed Naufal Basheer <naufal11@gmail.com>
            2013-2014, Mozilla Corporation
-           2013-2014, Pierre-Edouard Lepere
-           2013-2014, Ramiro Polla, Luca Barbato, Deti Fliegl
-           2013-2015, Andreas Fuchs, Wolfgang Hrauda
-           2013-2015, Vittorio Giovara
-           2013-2015, Vittorio Giovara <vittorio.giovara@gmail.com>
-           2014, Alexandra Hájková
-           2014, Aman Gupta <ffmpeg@tmm1.net>
-           2014, Daniel Oberhoff
-           2014, Dave Rice @dericed
-           2014, Deti Fliegl
-           2014, Eejya Singh
-           2014, James Yu <james.yu@linaro.org>
-           2014, Marvin Scholz
+           2014-2015, Muhammad Faiz <mfcc64@gmail.com>
+           2008, NVIDIA
+           2009, Naotoshi Nojiri
+           2009-2012, Nathan Caldwell <saintdev@gmail.com>
            2014, Neil Birkbeck <birkbeck@google.com>
            2014, Nicholas Robbins
+           2007, Nicholas Tung
+           1999, Nick Bailey
+           2003, Nick Kurshev <nickols_k@mail.ru>
+           2013, Nicolas Bertrand <nicoinattendu@gmail.com>
+           2007-2015, Nicolas George <nicolas.george@normalesup.org>
+           2009, Nicolas Martin <martinic@iro.umontreal.ca>
            2014, Niels Möller
+           2007, Nokia Corporation
+           2010, Nolan Lum <nol888@gmail.com>
+           2005-2006, Oded Shimon <ods15@ods15.dyndns.org>
+           2012-2013, Oka Motofumi <chikuzen.mo@gmail.com>
+           2005, Ole André Vadla Ravnås <oleavr@gmail.com>
            2014, Oleksij Rempel <linux@rempel-privat.de>
-           2014, Rong Yan
-           2014, Samsung Electronics
-           2014, StarBrilliant <m13253@hotmail.com>
-           2014, Tiancheng "Timothy" Gu <timothygu99@gmail.com>
-           2014, Tim Walker <tdskywalker@gmail.com>
-           2014-2015, Arwa Arif <arwaarif1994@gmail.com>
-           2014-2015, Hendrik Leppkes
-           2014-2015, Muhammad Faiz <mfcc64@gmail.com>
-           2014-2015, Peter Meerwald <pmeerw@pmeerw.net>
-           2014-2015, Seppo Tomperi <seppo.tomperi@vtt.fi>
-           2014-2015, Supraja Meedinti
-           2014-2015, Thomas Volkert <thomas@homer-conferencing.com>
-           2014-2015, Timo Rothenpieler <timo@rothenpieler.org>
-           2014-2015, Vignesh Venkatasubramanian
-           2015, Andreas Cadhalpun <Andreas.Cadhalpun@googlemail.com>
-           2015, Anshul Maheshwari
-           2015, Claudio Freire
-           2015, Clément Bœsch <clement stupeflix.com>
-           2015, Donny Yang
-           2015, Eran Kornblau <erankor@gmail.com>
-           2015, Ganesh Ajjanagadde
-           2015, Gilles Chanteperdrix <gch@xenomai.org>
-           2015, Henrik Gramner <henrik gramner com>
-           2015, Himangi Saraogi <himangi774@gmail.com>
-           2015, Imagination Technologies Ltd
-           2015, Kevin Wheatley <kevin.j.wheatley@gmail.com>
-           2015, Kyle Swanson <k@ylo.ph>
-           2015, LoRd_MuldeR <mulder2@gmx.de>
-           2015, Loongson Technology Corporation Limited
-           2015, Manojkumar Bhosale <Manojkumar.Bhosale@imgtec.com>
-           2015, Mats Peterson
-           2015, Matthieu Bouron <matthieu.bouron stupeflix.com>
            2015, Open Broadcast Systems Ltd
+           2011, Oskar Arvidsson
            2015, Parag Salasakar <parag.salasakar@imgtec.com>
+           2003-2014, Pascal Massimino <skal@planet-d.net>
+           2006, Patrick Guimond
+           2011-2015, Paul B Mahol
+           2008-2010, Paul Kendall <paul@kcbbs.gen.nz>
+           2006, Paul Richards <paul.richards@gmail.com>
+           2012, Pavel Koshevoy <pkoshevoy@gmail.com>
            2015, Pedro Arthur <bygrandao@gmail.com>
+           2012, Peng Gao <peng@multicorewareinc.com>
+           2000-2001, Peter Gubanov <peter@elecard.net.ru>
+           2009, Peter Holik
+           2014-2015, Peter Meerwald <pmeerw@pmeerw.net>
+           2001-2014, Peter Ross <pross@xvid.org>
+           2012, Petri Hintukainen <phintuka <at> users.sourceforge.net>
+           2010-2013, Philip Langdale <ffmpeg.philipl@overt.org>
+           2013-2014, Pierre-Edouard Lepere
+           2006-2010, Prakash Punnoor <prakash@punnoor.de>
+           2013, RISC OS Open Ltd <bavison@riscosopen.org>
+           2010, Rafael Carre
+           2006-2014, Ramiro Polla
+           2013-2014, Ramiro Polla, Luca Barbato, Deti Fliegl
+           2009-2014, Reimar Döffinger <Reimar.Doeffinger@gmx.de>
+           2002, Remi Guyomarch <rguyom@pobox.com>
+           2006-2007, Reynaldo H. Verdejo Pinochet
+           2007, Reynaldo H. Verdejo Pinochet (QCELP decoder)
+           2003, Rich Felker
+           2007, Richard Spindler (author of frei0r plugin from which this was derived)
+           2013, Rl, Aetey Global Technologies AB
+           2010, Rob Clark <rob@ti.com>
+           2006-2012, Rob Sykes <robs@users.sourceforge.net>
+           2005-2006, Robert Edele <yartrebo@earthlink.net>
+           2008, Robert Marston
+           2012, Robert Nagy <ronag89 gmail com>
+           2008-2009, Robert Swain ( rob opendot cl )
+           2002-2005, Roberto Togni
            2015, Rodger Combs <rodger.combs@gmail.com>
+           1999, Roger Hardiman
            2015, Roger Pack
+           2011, Roger Pau Monné <roger.pau@entel.upc.edu>
+           2005, Roine Gustafsson
+           2003-2004, Romain Dolbeau <romain@dolbeau.org>
+           2003-2006, Roman Shaposhnik
+           2010-2015, Ronald S. Bultje <rsbultje@gmail.com>
+           2014, Rong Yan
            2015, Rostislav Pehlivanov <atomnuker@gmail.com>
+           2013, Rudolf Polzer <divverent@xonotic.org>
+           2006-2007, Ryan Martell <rdm4@martellventures.com>
+           2013, Rémi Denis-Courmont
+           2010, S.N. Hemanth Meenakshisundaram <smeenaks@ucsd.edu>
+           2009, Samalyse
+           2014, Samsung Electronics
+           2012, Samuel Pitoiset
+           2003-2009, Sascha Sommer <saschasommer@freenet.de>
+           2008-2011, Sascha Sommer, Benjamin Larsson
+           2009-2011, Sebastian Gesemann
+           2010, Sebastian Vater <cdgs.basty@googlemail.com>
+           2009, Sebastien Lucas <sebastien.lucas@gmail.com>
+           1999-2000, Sebastien Rougeaux <sebastien.rougeaux@anu.edu.au>
+           2011-2012, Sebastien Zwickert
+           2013-2015, Seppo Tomperi <seppo.tomperi@vtt.fi>
            2015, Shivraj Patil <Shivraj.Patil@imgtec.com>
+           2007-2008, Siarhei Siamashka <ssvb@users.sourceforge.net>
+           2008, Sisir Koppaka
+           2011-2012, Smartjog S.A.S, Clément Bœsch <clement.boesch@smartjog.com>
+           2008-2009, Splitted-Desktop Systems
+           2014, StarBrilliant <m13253@hotmail.com>
+           2006-2009, Stefan Gehrer <stefan.gehrer@gmx.de>
+           2010-2011, Stefano Sabatini <stefasab gmail com>
+           2009, Stephen Backway
+           2006-2015, Steve Lhomme
+           2002, Steve O'Hara-Smith
+           2005, Steve Underwood <steveu@coppice.org>
+           2012, Steven Robertson
            2015, Stupeflix
+           2014-2015, Supraja Meedinti
+           2011, Sven Hesse <drmccoy@drmccoy.de>
            2015, Tampere University of Technology
+           2001-2015, The FFmpeg Project
+           2002, The Xine Project
+           2006, Thijs Vermeir <thijs.vermeir@barco.com>
+           2009-2014, Thilo Borgmann <thilo.borgmann@mail.de>
+           2011, Thomas Kuehnel
+           2009, Thomas P. Higdon <thomas.p.higdon@gmail.com>
+           2003, Thomas Raivio
+           2014-2015, Thomas Volkert <thomas@homer-conferencing.com>
+           2014, Tiancheng "Timothy" Gu <timothygu99@gmail.com>
+           2001, Tim Ferguson
+           2014, Tim Walker <tdskywalker@gmail.com>
+           2014-2015, Timo Rothenpieler <timo@rothenpieler.org>
+           2003, Tinic Uro
+           2009, Tobias Bindhammer
            2015, Tom Butterworth <bangnoise@gmail.com>
+           2010, Tomas Härdin
+           2009, Toshimitsu Kimura
            2015, Urvang Joshi
+           2012, VLC authors and VideoLAN
+           2013, VTT
+           2013, Vadim Kalinsky <vadim@kalinsky.ru>
            2015, Vesselin Bontchev
+           2008, Victor Paesa
+           2005, Vidar Madsen
+           2014-2015, Vignesh Venkatasubramanian
+           2012, Vitaliy E Sugrobov
+           2007-2011, Vitor Sessak <vitor1001@gmail.com>
+           2013-2015, Vittorio Giovara <vittorio.giovara@gmail.com>
+           2007-2011, Vladimir Voroshilov
+           2012-2013, Wassim Hamidouche
+           2012-2013, Wei Gao <weigao@multicorewareinc.com>
+           2005, Wim Taymans
+           2005-2007, Wolfram Gloger
+           2013, Xiaolei Yu <dreifachstein@gmail.com>
+           2012, Xidorn Quan
+           2009, Xuggle Incorporated
+           2006-2011, Xvid Solutions GmbH
+           2013, Yukinori Yamazoe
+           2002, Zdenek Kabelac <kabi@informatics.muni.cz>
            2015, Zhang Rui <bbcallen@gmail.com>
+           2008-2011, Zhentan Feng <spyfeng@gmail.com>
            2015, Zhou Xiaoyong <zhouxiaoyong@loongson.cn>
-           2022, Mohamed Naufal <naufal@gmail.com>
+           2005, Zoltan Hidvegi <hzoli -a- hzoli -d- com>
+           2009, Zuxy Meng <zuxy.meng@gmail.com>
+           2005, anonymous, Alex Beregszaszi, Michael Niedermayer
+           2001, ffmpeg project
+           2008-2009, robs@users.sourceforge.net
+           1994-2012, the Xiph.Org Foundation
+           2010, tipok <piratfm@gmail.com>
+           2008, vmrsss
+           2003-2011, x264 project
 License: LGPL-2.1+
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv2
@@ -5360,50 +5317,50 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv2
        src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_internal.h
        src/3rdparty/chromium/third_party/ffmpeg/libpostproc/postprocess_template.c
        src/3rdparty/chromium/third_party/ffmpeg/tools/coverity.c
-Copyright: 1989-2001, Free Software Foundation, Inc
-           1997-1998, Rasca, Berlin
-           1997-2001, ZSNES Team ( zsknight@zsnes.com / _demo_@zsnes.com )
-           2000-2002, Fabrice Bellard
-           2001-2003, Donald A. Graft
-           2001-2015, Michael Niedermayer <michaelni@gmx.at>
-           2002, A'rpi
-           2002, Jindrich Makovicka <makovick@gmail.com>
-           2002-2003, Brian J. Murrell
-           2003, Daniel Moreno <comac@comac.darktech.org>
-           2003, Kevin Atkinson
-           2003, Michael Zucchi <notzed@ximian.com>
-           2003, Rich Felker
-           2003-2004, Tobias Diedrich
-           2004, Romain Dolbeau <romain@dolbeau.org>
-           2004, Ville Saari
-           2005, Nikolaj Poroshin <porosh3@psu.ru>
-           2006, Clemens Fruhwirth <clemens@endorphin.org>
-           2006, Ivo van Poorten
-           2006, Julian Hall
-           2006-2007, Kevin Stone
-           2010, Baptiste Coudurier
-           2010, Gordon Schmidt <gordon.schmidt <at> s2000.tu-chemnitz.de>
-           2010, Niel van der Westhuizen <nielkie@gmail.com>
-           2010-2012, Stefano Sabatini
-           2012, Jeremy Tran
-           2012, Loren Merritt
-           2012-2013, Clément Bœsch
-           2013, Vittorio Giovara <vittorio.giovara@gmail.com>
-           2013-2015, Jean Delvare <jdelvare@suse.com>
-           2013-2015, Paul B Mahol
-           2014, James Darnley <james.darnley@gmail.com>
-           2014, Kieran Kunhya <kierank@obe.tv>
-           2014, Red Hat, Inc
+Copyright: 2002, A'rpi
            2014-2015, Arwa Arif <arwaarif1994@gmail.com>
+           2010, Baptiste Coudurier
+           2002-2003, Brian J. Murrell
+           2006, Clemens Fruhwirth <clemens@endorphin.org>
+           2012-2013, Clément Bœsch
+           2003, Daniel Moreno <comac@comac.darktech.org>
+           2001-2003, Donald A. Graft
+           2000-2002, Fabrice Bellard
+           1989-2001, Free Software Foundation, Inc
+           2010, Gordon Schmidt <gordon.schmidt <at> s2000.tu-chemnitz.de>
+           2006, Ivo van Poorten
+           2014, James Darnley <james.darnley@gmail.com>
+           2013-2015, Jean Delvare <jdelvare@suse.com>
+           2012, Jeremy Tran
+           2002, Jindrich Makovicka <makovick@gmail.com>
+           2006, Julian Hall
+           2003, Kevin Atkinson
+           2006-2007, Kevin Stone
+           2014, Kieran Kunhya <kierank@obe.tv>
+           2012, Loren Merritt
+           2001-2015, Michael Niedermayer <michaelni@gmx.at>
+           2003, Michael Zucchi <notzed@ximian.com>
+           2010, Niel van der Westhuizen <nielkie@gmail.com>
+           2005, Nikolaj Poroshin <porosh3@psu.ru>
+           2013-2015, Paul B Mahol
+           1997-1998, Rasca, Berlin
+           2014, Red Hat, Inc
+           2003, Rich Felker
+           2004, Romain Dolbeau <romain@dolbeau.org>
+           2010-2012, Stefano Sabatini
+           2003-2004, Tobias Diedrich
+           2004, Ville Saari
+           2013, Vittorio Giovara <vittorio.giovara@gmail.com>
            Wilbert Dijkhof
+           1997-2001, ZSNES Team ( zsknight@zsnes.com / _demo_@zsnes.com )
 License: GPL-2+
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/COPYING.GPLv3
        src/3rdparty/chromium/third_party/ffmpeg/compat/solaris/make_sunver.pl
        src/3rdparty/chromium/third_party/ffmpeg/doc/t2h.pm
-Copyright: 2007, Free Software Foundation, Inc. <http://fsf.org/>
+Copyright: 2014, Andreas Cadhalpun
            2011-2012, Free Software Foundation, Inc
-           2014, Andreas Cadhalpun
+           2007, Free Software Foundation, Inc. <http://fsf.org/>
            2014, Tiancheng "Timothy" Gu
 License: GPL-3+
 
@@ -5467,30 +5424,30 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/chromium/scripts/license_texts/o
        src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparsespeex.c
        src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparsetheora.c
        src/3rdparty/chromium/third_party/ffmpeg/libavformat/oggparsevorbis.c
-Copyright: 2001, Lionel Ulmer (lionel.ulmer@free.fr / <bbrox@bbrox.org>
+Copyright: 2014, Andrey Utkin
+           2015, Anton Khirnov
+           2014, Barbara Lepage <db0company@gmail.com>
+           2009, Benjamin Dobell, Glass Echidna
+           2007, Christophe GISQUET <christophe.gisquet@free.fr>
+           2012-2014, Clément Bœsch
            2001-2003, Fabrice Bellard
+           2001, Lionel Ulmer (lionel.ulmer@free.fr / <bbrox@bbrox.org>
+           2007, Loic Minier <lool@dooz.org>
+           2014, Lukasz Marek
            2005, Matthieu CASTET, Alex Beregszaszi
+           2012, Matthäus G. "Anteru" Chajdas (http://anteru.net)
            2005, Michael Ahlberg, MÃ¥ns RullgÃ¥rd
            2005, Michael Ahlberg, Måns Rullgård
-           2007, Christophe GISQUET <christophe.gisquet@free.fr>
-           2007, Loic Minier <lool@dooz.org>
-           2008, Reimar Döffinger
-           2009, Benjamin Dobell, Glass Echidna
-           2010, Nicolas George
            2010-2016, NVIDIA Corporation
-           2011, Reinhard Tartler
-           2011, Tomas Härdin
-           2011-2014, Stefano Sabatini
-           2012, Matthäus G. "Anteru" Chajdas (http://anteru.net)
-           2012-2014, Clément Bœsch
-           2013-2014, Rl, Aetey Global Technologies AB
-           2014, Andrey Utkin
-           2014, Barbara Lepage <db0company@gmail.com>
-           2014, Lukasz Marek
-           2015, Anton Khirnov
+           2010, Nicolas George
            2015, Niklas Haas
            2015, Paul B Mahol
+           2008, Reimar Döffinger
+           2011, Reinhard Tartler
+           2013-2014, Rl, Aetey Global Technologies AB
+           2011-2014, Stefano Sabatini
            2015, Stephan Holljes
+           2011, Tomas Härdin
            2015, Vittorio Giovara <vittorio.giovara@gmail.com>
 License: Expat
 
@@ -5528,13 +5485,13 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/aacdec_fixed.c
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/fixed_dsp.h
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/mips/float_dsp_mips.c
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/mips/libm_mips.h
-Copyright: 2005-2006, Oded Shimon ( ods15 ods15 dyndns org )
-           2006-2007, Maxim Gavrilov ( maxim.gavrilov gmail com )
-           2008-2009, Robert Swain ( rob opendot cl )
-           2009-2010, Alex Converse <alex.converse@gmail.com>
+Copyright: 2009-2010, Alex Converse <alex.converse@gmail.com>
            2010, Google Inc
-           2010, Rob Clark <rob@ti.com>
            2011, Mans Rullgard <mans@mansr.com>
+           2006-2007, Maxim Gavrilov ( maxim.gavrilov gmail com )
+           2005-2006, Oded Shimon ( ods15 ods15 dyndns org )
+           2010, Rob Clark <rob@ti.com>
+           2008-2009, Robert Swain ( rob opendot cl )
 License: BSD-3-clause or LGPL-2.1+
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/faandct.c
@@ -5545,21 +5502,21 @@ Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/faandct.c
        src/3rdparty/chromium/third_party/ffmpeg/libavdevice/openal-dec.c
        src/3rdparty/chromium/third_party/ffmpeg/libavfilter/vf_hqx.c
        src/3rdparty/chromium/third_party/ffmpeg/libavutil/x86/x86inc.asm
-Copyright: 2003, Michael Niedermayer <michaelni@gmx.at>
-           2003, Roman Shaposhnik
-           2004-2008, Marko Kreen
-           2005-2015, x264 project
-           2008, Adam Gashlin
-           2011, Jonathan Baldwin
-           2012, Derek Buitenhuis
-           2012, Martin Storsjo
+Copyright: 2008, Adam Gashlin
            2014, Clément Bœsch
+           2012, Derek Buitenhuis
+           2011, Jonathan Baldwin
+           2004-2008, Marko Kreen
+           2012, Martin Storsjo
+           2003, Michael Niedermayer <michaelni@gmx.at>
            2015, Paul B Mahol
+           2003, Roman Shaposhnik
+           2005-2015, x264 project
 License: ISC
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/libzvbi-teletextdec.c
-Copyright: 2005-2012, Wolfram Gloger
-           2013, Marton Balint
+Copyright: 2013, Marton Balint
+           2005-2012, Wolfram Gloger
 License: LGPL-2+
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/libavcodec/mips/fmtconvert_mips.c
@@ -5583,8 +5540,8 @@ License: Zlib
 
 Files: src/3rdparty/chromium/third_party/ffmpeg/libavutil/libm.h
        src/3rdparty/chromium/third_party/ffmpeg/libswresample/resample.c
-Copyright: 2004-2012, Michael Niedermayer <michaelni@gmx.at>
-           2006, John Maddock
+Copyright: 2006, John Maddock
+           2004-2012, Michael Niedermayer <michaelni@gmx.at>
            2006, Xiaogang Zhang
 License: BSL-1.0 or LGPL-2.1+
 
@@ -5620,8 +5577,8 @@ Comment:
  Still in the public domain.
 
 Files: src/3rdparty/chromium/third_party/flatbuffers/*
-Copyright: 2014, Stefan.Eilemann@epfl.ch
-           2014-2016, Google Inc
+Copyright: 2014-2016, Google Inc
+           2014, Stefan.Eilemann@epfl.ch
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/flatbuffers/src/android/build_apk.sh
@@ -5635,25 +5592,25 @@ Copyright: 2013-2014, Google, Inc
 License: Zlib
 
 Files: src/3rdparty/chromium/third_party/fontconfig/*
-Copyright: 2000, Tuomas J. Lukka
-           2000-2007, Keith Packard
-           2004-2013, Red Hat, Inc
-           2005, Patrick Lam
-           2005, Sharif FarsiWeb, Inc <license@farsiweb.info>
-           2006, Danis Jacquerye
-           2006, 息Keith Packard
-           2007, Chris Wilson
-           2007, Dwayne Bailey and Translate.org.za
-           2008, Danilo Šegan
-           2008, Neskie Manuel
+Copyright: 2011, Akira TAGOH
            2008-2010, Behdad Esfahbod
-           2009, Reşat SABIQ
-           2009, Roozbeh Pournader
-           2010, 息Behdad Esfahbod
-           2011, Akira TAGOH
+           2007, Chris Wilson
+           2008, Danilo Šegan
+           2006, Danis Jacquerye
+           2007, Dwayne Bailey and Translate.org.za
            2011-2013, Google, Inc
+           2000-2007, Keith Packard
+           2008, Neskie Manuel
            2012, Parag Nemade
            2012, Parag Nemade, Pravin Satpute <psatpute@redhat.com>
+           2005, Patrick Lam
+           2004-2013, Red Hat, Inc
+           2009, Reşat SABIQ
+           2009, Roozbeh Pournader
+           2005, Sharif FarsiWeb, Inc <license@farsiweb.info>
+           2000, Tuomas J. Lukka
+           2010, 息Behdad Esfahbod
+           2006, 息Keith Packard
 License: MIT/X11
 
 Files: src/3rdparty/chromium/third_party/fontconfig/BUILD.gn
@@ -5670,16 +5627,16 @@ Copyright: 1991-2013, Unicode, Inc
 License: Unicode
 
 Files: src/3rdparty/chromium/third_party/fontconfig/src/git.mk
-Copyright: 2009, Red Hat, Inc
-           2010-2011, Behdad Esfahbod
+Copyright: 2010-2011, Behdad Esfahbod
+           2009, Red Hat, Inc
 License: Permissive
 
 Files: src/3rdparty/chromium/third_party/fontconfig/src/m4/ax_cc_for_build.m4
        src/3rdparty/chromium/third_party/fontconfig/src/m4/ax_pthread.m4
-Copyright: 1999, Richard Henderson <rth@redhat.com>
-           2008, Steven G. Johnson <stevenj@alum.mit.edu>
+Copyright: 2011, Daniel Richard G <skunk@iSKUNK.ORG>
            2010, Reuben Thomas <rrt@sc3d.org>
-           2011, Daniel Richard G <skunk@iSKUNK.ORG>
+           1999, Richard Henderson <rth@redhat.com>
+           2008, Steven G. Johnson <stevenj@alum.mit.edu>
 License: GPL-3+_AutoConfException
 
 Files: src/3rdparty/chromium/third_party/fontconfig/src/m4/ax_create_stdint_h.m4
@@ -5692,21 +5649,21 @@ Copyright: 2000, Keith Packard
 License: MIT/X11 or public-domain
 
 Files: src/3rdparty/chromium/third_party/fontconfig/src/src/fcfreetype.c
-Copyright: 2001, Keith Packard
-           2002-2003, Juliusz Chroboczek
+Copyright: 2002-2003, Juliusz Chroboczek
+           2001, Keith Packard
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/freetype2/*
 Copyright: 1996-2011, David Turner
            1996-2015, David Turner, Robert Wilhelm, and Werner Lemberg
-           2002-2011, Roberto Alameda
-           2003, Huw D M Davies for Codeweavers
-           2004-2006, Masatake YAMATO and Redhat K.K
-           2004-2007, suzuki toshiya, Masatake YAMATO, Red Hat K.K
-           2006-2008, suzuki toshiya
-           2007, Dmitry Timoshkov for Codeweavers
            2007-2009, Dereg Clegg, Michael Toftdal
            2007-2009, Derek Clegg, Michael Toftdal
+           2007, Dmitry Timoshkov for Codeweavers
+           2003, Huw D M Davies for Codeweavers
+           2004-2006, Masatake YAMATO and Redhat K.K
+           2002-2011, Roberto Alameda
+           2006-2008, suzuki toshiya
+           2004-2007, suzuki toshiya, Masatake YAMATO, Red Hat K.K
 License: FTL
 
 Files: src/3rdparty/chromium/third_party/freetype2/BUILD.gn
@@ -5888,11 +5845,11 @@ Files: src/3rdparty/chromium/third_party/glslang/src/OGLCompilersDLL/InitializeD
        src/3rdparty/chromium/third_party/glslang/src/hlsl/hlslTokenStream.cpp
        src/3rdparty/chromium/third_party/glslang/src/hlsl/hlslTokenStream.h
        src/3rdparty/chromium/third_party/glslang/src/hlsl/hlslTokens.h
-Copyright: 2002, NVIDIA Corporation
-           2002-2005, 3Dlabs Inc. Ltd
-           2002-2010, The ANGLE Project Authors
-           2012-2015, LunarG, Inc
+Copyright: 2002-2005, 3Dlabs Inc. Ltd
            2015-2016, Google, Inc
+           2012-2015, LunarG, Inc
+           2002, NVIDIA Corporation
+           2002-2010, The ANGLE Project Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/glslang/src/glslang/MachineIndependent/glslang_tab.cpp
@@ -5936,19 +5893,19 @@ Copyright: 2000-2015, www.hamcrest.org
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/harfbuzz-ng/*
-Copyright: 1998-2004, David Turner and Werner Lemberg
-           2004-2013, Red Hat, Inc
-           2005, David Turner
-           2006, Behdad Esfahbod
+Copyright: 2006, Behdad Esfahbod
            2007, Chris Wilson
-           2008-2010, Nokia Corporation and/or its subsidiary(-ies)
-           2009, Keith Stribley
-           2009, Martin Hosken and SIL International
-           2010-2015, Google, Inc
            2011, Codethink Limited
+           2005, David Turner
+           1998-2004, David Turner and Werner Lemberg
+           2010-2015, Google, Inc
+           2009, Keith Stribley
            2011, Martin Hosken
-           2011, SIL International
+           2009, Martin Hosken and SIL International
            2012-2015, Mozilla Foundation
+           2008-2010, Nokia Corporation and/or its subsidiary(-ies)
+           2004-2013, Red Hat, Inc
+           2011, SIL International
 License: MIT/X11
 
 Files: src/3rdparty/chromium/third_party/harfbuzz-ng/BUILD.gn
@@ -5988,8 +5945,8 @@ Copyright: 2000, Bjoern Jacke
 License: LGPL-2.1
 
 Files: src/3rdparty/chromium/third_party/hwcplus/*
-Copyright: 2005-2011, The Android Open Source Project
-           2012, Google, Inc
+Copyright: 2012, Google, Inc
+           2005-2011, The Android Open Source Project
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/hwcplus/LICENSE
@@ -6000,45 +5957,36 @@ Copyright: 2014, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/iaccessible2/*
-Copyright: 2000-2006, Sun Microsystems, Inc.
-           2006, IBM Corporation
+Copyright: 2006, IBM Corporation
            2007-2013, Linux Foundation
+           2000-2006, Sun Microsystems, Inc.
            2012-2014, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/iccjpeg/*
-Copyright: 1991-1998, Thomas G. Lane
-           2011-2014, The Chromium Authors
+Copyright: 2011-2014, The Chromium Authors
+           1991-1998, Thomas G. Lane
 License: IJG
 
 Files: src/3rdparty/chromium/third_party/icu/*
-Copyright: 1991-2014, Unicode, Inc
-           1991-2014, Unicode, Inc
-           1995-2014, International Business Machines Corporation and others
+Copyright: 2013, Brian Eugene Wilson, Robert Martin Campbell
+           1996, Chih-Hao Tsai@Beckman Institute, University of Illinois
+           1999, Computer Systems and Communication Lab
+           2006-2014, Google Inc
+           1998-2014, IBM Corp
+           2003-2009, IBM, Ken Foskey, and others
            1995-2015, International Business Machines
            1995-2015, International Business Machines Corporation
-           1996, Chih-Hao Tsai@Beckman Institute, University of Illinois
-           1996, Chih-Hao Tsai@Beckman Institute, University of Illinois
-           1998-2014, IBM Corp
-           1999, Computer Systems and Communication Lab
-           1999, Computer Systems and Communication Lab
-           1999, Pai-Hsiang Hsiao
+           1995-2014, International Business Machines Corporation and others
+           2013, LeRoy Benjamin Sharon
+           2000-2003, Nara Institute of Science
            1999, Pai-Hsiang Hsiao
            1999, TaBE Project
-           1999, TaBE Project
-           2000-2003, Nara Institute of Science
-           2000-2003, Nara Institute of Science
-           2001-2004, and onwards Google Inc
-           2002, The Internet Society
-           2003-2009, IBM, Ken Foskey, and others
-           2006-2008, Google Inc
-           2008-2014, Google Inc
-           2010, Yahoo! Inc
            2012-2015, The Chromium Authors
-           2013, Brian Eugene Wilson, Robert Martin Campbell
-           2013, LeRoy Benjamin Sharon
-           2013, LeRoy Benjamin Sharon
-           2014, International Business Machines Corporation
+           2002, The Internet Society
+           1991-2014, Unicode, Inc
+           2010, Yahoo! Inc
+           2001-2004, and onwards Google Inc
 License: BSD-3-clause or MIT-like-icu
 
 Files: src/3rdparty/chromium/third_party/icu/scripts/*
@@ -6063,13 +6011,13 @@ Files: src/3rdparty/chromium/third_party/icu/source/data/brkitr/dictionaries/bur
        src/3rdparty/chromium/third_party/icu/source/data/brkitr/dictionaries/cjdict.txt
 Copyright: 1996, Chih-Hao Tsai@Beckman Institute, University of Illinois
            1999, Computer Systems and Communication Lab
-           1999, Pai-Hsiang Hsiao
-           1999, TaBE Project
-           2000-2003, Nara Institute of Science
            2006-2008, Google Inc
            2012-2015, Google Inc, International Business Machines Corporation
-           2013, LeRoy Benjamin Sharon
            2015, International Business Machines Corporation
+           2013, LeRoy Benjamin Sharon
+           2000-2003, Nara Institute of Science
+           1999, Pai-Hsiang Hsiao
+           1999, TaBE Project
            2016, and later: Unicode, Inc. and others
 License: BSD-3-clause
 
@@ -6082,8 +6030,8 @@ License: BSD-2-clause
 Files: src/3rdparty/chromium/third_party/icu/source/data/mappings/iso-8859_10-1998.ucm
        src/3rdparty/chromium/third_party/icu/source/data/mappings/iso-8859_11-2001.ucm
        src/3rdparty/chromium/third_party/icu/source/data/mappings/iso-8859_14-1998.ucm
-Copyright: 1998-2002, Unicode, Inc
-           2002-2005, International Business Machines
+Copyright: 2002-2005, International Business Machines
+           1998-2002, Unicode, Inc
 License: Unicode
 
 Files: src/3rdparty/chromium/third_party/icu/source/install-sh
@@ -6102,16 +6050,16 @@ Copyright: No copyright claimed
 License: public-domain
 
 Files: src/3rdparty/chromium/third_party/icu4j/LICENSE
-Copyright: 1991-2014, Unicode, Inc
-           1995-2014, International Business Machines Corporation
+Copyright: 2013, Brian Eugene Wilson, Robert Martin Campbell
            1996, Chih-Hao Tsai@Beckman Institute, University of Illinois
            1999, Computer Systems and Communication Lab
+           2006-2008, Google Inc
+           1995-2014, International Business Machines Corporation
+           2013, LeRoy Benjamin Sharon
+           2000-2003, Nara Institute of Science
            1999, Pai-Hsiang Hsiao
            1999, TaBE Project
-           2000-2003, Nara Institute of Science
-           2006-2008, Google Inc
-           2013, Brian Eugene Wilson, Robert Martin Campbell
-           2013, LeRoy Benjamin Sharon
+           1991-2014, Unicode, Inc
            notic
 License: BSD-3-clause or MIT-like-icu
 
@@ -6194,8 +6142,8 @@ Copyright: 2011, The Chromium Authors
 License: BSD or public-domain
 
 Files: src/3rdparty/chromium/third_party/libjpeg/*
-Copyright: 1991-1998, Thomas G. Lane
-           1998, Netscape Communications Corporation
+Copyright: 1998, Netscape Communications Corporation
+           1991-1998, Thomas G. Lane
 License: IJG
 
 Files: src/3rdparty/chromium/third_party/libjpeg/jconfig.h
@@ -6241,14 +6189,14 @@ Files: src/3rdparty/chromium/third_party/libjpeg_turbo/simd/jccolext-altivec.c
        src/3rdparty/chromium/third_party/libpng/arm/filter_neon_intrinsics.c
        src/3rdparty/chromium/third_party/libpng/contrib/intel/filter_sse2_intrinsics.c
        src/3rdparty/chromium/third_party/libpng/contrib/intel/intel_init.c
-Copyright: 1995-1996, Guy Eric Schalnat, Group 42, Inc
-           1996-1997, Andreas Dilger
-           1999-2006, MIYASAKA Masaru
-           2009, Pierre Ossman <ossman@cendio.se> for Cendio AB
-           2009-2011, Nokia Corporation and/or its subsidiary(-ies)
+Copyright: 1996-1997, Andreas Dilger
            2010, D. R. Commander
-           2013-2014, Linaro Limited
            2014-2016, Glenn Randers-Pehrson
+           1995-1996, Guy Eric Schalnat, Group 42, Inc
+           2013-2014, Linaro Limited
+           1999-2006, MIYASAKA Masaru
+           2009-2011, Nokia Corporation and/or its subsidiary(-ies)
+           2009, Pierre Ossman <ossman@cendio.se> for Cendio AB
 License: Zlib
 
 Files: src/3rdparty/chromium/third_party/libpng/pngprefix.h
@@ -6256,8 +6204,8 @@ Copyright: 2016, Google Inc
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/libsecret/*
-Copyright: 1991-1999, Free Software Foundation, Inc
-           2011, Collabora Ltd
+Copyright: 2011, Collabora Ltd
+           1991-1999, Free Software Foundation, Inc
            2011-2012, Red Hat Inc
            2012, Stef Walter
 License: LGPL-2.1+
@@ -6280,16 +6228,16 @@ Copyright: 1991-1999, Free Software Foundation, Inc
 License: LGPL-2.1+
 
 Files: src/3rdparty/chromium/third_party/libusb/*
-Copyright: 1991-1999, Free Software Foundation, Inc
-           2001, Johannes Erdfelt <johannes@erdfelt.com>
-           2007-2009, Daniel Drake <dsd@gentoo.org>
-           2009-2013, Peter Stuge <peter@stuge.se>
-           2010, Michael Plante <michael.plante@gmail.com>
-           2011, Vitali Lovich <vlovich@aliph.com>
-           2011-2013, Martin Pieuchot <mpi@openbsd.org>
-           2011-2013, RealVNC Ltd
+Copyright: 2007-2009, Daniel Drake <dsd@gentoo.org>
+           1991-1999, Free Software Foundation, Inc
            2012-2013, Hans de Goede <hdegoede@redhat.com>
+           2001, Johannes Erdfelt <johannes@erdfelt.com>
+           2011-2013, Martin Pieuchot <mpi@openbsd.org>
+           2010, Michael Plante <michael.plante@gmail.com>
            2012-2013, Nathan Hjelm <hjelmn@cs.unm.edu>
+           2009-2013, Peter Stuge <peter@stuge.se>
+           2011-2013, RealVNC Ltd
+           2011, Vitali Lovich <vlovich@aliph.com>
 License: LGPL-2.1+
 
 Files: src/3rdparty/chromium/third_party/libusb/src/libusb/interrupt.c
@@ -6304,10 +6252,10 @@ Copyright: 2007-2012, Intel Corporation
 License: MIT/X11
 
 Files: src/3rdparty/chromium/third_party/libvpx/*
-Copyright: 2002-2010, The Xiph.Org Foundation
-           2010-2016, The WebM project authors
+Copyright: 2013-2014, Google Inc
            2011-2015, The LibYuv Project Authors
-           2013-2014, Google Inc
+           2010-2016, The WebM project authors
+           2002-2010, The Xiph.Org Foundation
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/libvpx/source/libvpx/md5_utils.c
@@ -6321,10 +6269,10 @@ Copyright: 2005-2016, x264 project
 License: ISC
 
 Files: src/3rdparty/chromium/third_party/libxml/*
-Copyright: 1998-2001, Bjorn Reese and Daniel Stenberg
-           2000, Gary Pennington and Daniel Veillard
-           2001, Bjorn Reese <breese@users.sourceforge.net>
+Copyright: 2001, Bjorn Reese <breese@users.sourceforge.net>
+           1998-2001, Bjorn Reese and Daniel Stenberg
            2003-2012, Daniel Veillard
+           2000, Gary Pennington and Daniel Veillard
 License: ISC
 
 Files: src/3rdparty/chromium/third_party/libxml/chromium/libxml_utils.*
@@ -6348,9 +6296,9 @@ Copyright: 1994-2014, Free Software Foundation, Inc
 License: FSF_unlimited
 
 Files: src/3rdparty/chromium/third_party/libxml/src/aclocal.m4
-Copyright: 1996-2014, Free Software Foundation, Inc
+Copyright: 2012-2015, Dan Nicholson <dbn.lists@gmail.com>
+           1996-2014, Free Software Foundation, Inc
            2004, Scott James Remnant <scott@netsplit.com>
-           2012-2015, Dan Nicholson <dbn.lists@gmail.com>
 License: FSF_unlimited or GPL-2+_AutoConfException
 
 Files: src/3rdparty/chromium/third_party/libxml/src/timsort.h
@@ -6358,60 +6306,57 @@ Copyright: 2010, Christopher Swenson
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/mesa/src/*
-Copyright: 1991-2000, Silicon Graphics, Inc
-           1992, Vrije Universiteit, The Netherlands
-           1998-1999, Precision Insight, Inc., Cedar Park, Texas
-           1999-2008, Brian Paul
-           2000-2001, VA Linux Systems Inc., Fremont, California
-           2000-2002, ATI Technologies Inc., Ontario, Canada
-           2002, The Weather Channel, Inc
-           2002-2008, Tungsten Graphics Inc., Cedar Park, Texas
-           2002-2009, Apple Computer, Inc
-           2002-2012, Intel Corporation
-           2004, David Airlie
-           2004, Roland Scheidegger
-           2004-2009, Nicolai Haehnle
+Copyright: 2000-2002, ATI Technologies Inc., Ontario, Canada
            2005, Aapo Tahkola
+           2011, Adam Rak <adam.rak@streamnovation.com>
+           2010-2012, Advanced Micro Devices, Inc
+           2002-2009, Apple Computer, Inc
+           2008-2011, Apple Inc
            2005, Ben Skeggs
-           2005, Zack Rusin
-           2007-2010, The Nouveau Project
-           2007-2012, Red Hat, Inc
-           2007-2012, VMware, Inc
+           2011, Benjamin Franzke
+           1999-2008, Brian Paul
+           2011, Bryan Cain
+           2009-2010, Chia-I Wu <olv@0xlab.org>
+           2010-2012, Christian König
+           2008-2010, Corbin Simpson <MostAwesomeDude@gmail.com>
+           2004, David Airlie
            2008, Dennis Smit
+           2009-2012, Francisco Jerez
+           2008-2010, George Sapountzis <gsapountzis@gmail.com>
+           2002-2012, Intel Corporation
+           2009-2010, Jakob Bornecrantz
+           2010, Jerome Glisse <glisse@freedesktop.org>
+           2009, Joakim Sindholt <opensource@zhasha.com>
+           2012, Jon TURNEY
            2008, Jérôme Glisse
            2008, Keith Packard
-           2008-2010, Corbin Simpson <MostAwesomeDude@gmail.com>
-           2008-2010, George Sapountzis <gsapountzis@gmail.com>
-           2008-2010, Maciej Cencora <m.cencora@gmail.com>
-           2008-2011, Apple Inc
-           2009, Chia-I Wu <olv@0xlab.org>
-           2009, Joakim Sindholt <opensource@zhasha.com>
-           2009, Maciej Cencora
-           2009, Nicolai Haehnle <nhaehnle@gmail.com>
-           2009, Pauli Nieminen
-           2009-2010, Chia-I Wu <olvaffe@gmail.com>
-           2009-2010, Jakob Bornecrantz
-           2009-2010, Younes Manton
-           2009-2012, Francisco Jerez
-           2009-2012, Marek Olšák <maraeo@gmail.com>
-           2010, Jerome Glisse <glisse@freedesktop.org>
-           2010, Luca Barbieri
-           2010, Thomas Balling Sørensen & Orasanu Lucian
-           2010-2011, LunarG, Inc
-           2010-2011, Tom Stellard <tstellar@gmail.com>
-           2010-2012, Advanced Micro Devices, Inc
-           2010-2012, Christian König
-           2011, Adam Rak <adam.rak@streamnovation.com>
-           2011, Benjamin Franzke
-           2011, Bryan Cain
            2011, Kristian Høgsberg
-           2011, Lauri Kasanen
-           2011, Maarten Lankhorst
-           2011, The Chromium OS authors
-           2012, Jon TURNEY
            2012, Laurent Carlier <lordheavym@gmail.com>
+           2011, Lauri Kasanen
+           2010, Luca Barbieri
+           2010-2011, LunarG, Inc
+           2011, Maarten Lankhorst
+           2008-2010, Maciej Cencora <m.cencora@gmail.com>
+           2009-2012, Marek Olšák <maraeo@gmail.com>
            2012, Matt Turner <mattst88@gmail.com>
+           2004-2009, Nicolai Haehnle <nhaehnle@gmail.com>
+           2009, Pauli Nieminen
+           1998-1999, Precision Insight, Inc., Cedar Park, Texas
+           2007-2012, Red Hat, Inc
+           2004, Roland Scheidegger
+           1991-2000, Silicon Graphics, Inc
+           2011, The Chromium OS authors
+           2007-2010, The Nouveau Project
+           2002, The Weather Channel, Inc
+           2010, Thomas Balling Sørensen & Orasanu Lucian
+           2010-2011, Tom Stellard <tstellar@gmail.com>
+           2002-2008, Tungsten Graphics Inc., Cedar Park, Texas
+           2000-2001, VA Linux Systems Inc., Fremont, California
+           2007-2012, VMware, Inc
            2012, Vincent Lejeune
+           1992, Vrije Universiteit, The Netherlands
+           2009-2010, Younes Manton
+           2005, Zack Rusin
 License: MIT/X11
 
 Files: src/3rdparty/chromium/third_party/mesa/src/chromium_gensrc/mesa/glcpp-parse.c
@@ -6434,8 +6379,8 @@ License: LGPL-2+
 
 Files: src/3rdparty/chromium/third_party/mesa/src/include/GL/wmesa.h
        src/3rdparty/chromium/third_party/mesa/src/src/mesa/drivers/windows/gdi/wgl.c
-Copyright: 1991, Free Software Foundation, Inc
-           1995-1998, Brian Paul
+Copyright: 1995-1998, Brian Paul
+           1991, Free Software Foundation, Inc
            file
 License: LGPL-2+
 
@@ -6446,9 +6391,7 @@ Files: src/3rdparty/chromium/third_party/mesa/src/include/c99/inttypes.h
        src/3rdparty/chromium/third_party/mesa/src/src/gallium/auxiliary/postprocess/pp_mlaa_areamap.h
        src/3rdparty/chromium/third_party/mesa/src/src/getopt/getopt.h
        src/3rdparty/chromium/third_party/mesa/src/src/mesa/main/vsnprintf.c
-Copyright: 1997, Theo de Raadt
-           2000, The NetBSD Foundation, Inc
-           2006-2008, Alexander Chemeris
+Copyright: 2006-2008, Alexander Chemeris
            2010, Belen Masia <bmasia@unizar.es>
            2010, Diego Gutierrez <diegog@unizar.es>
            2010, Fernando Navarro <fernandn@microsoft.com>
@@ -6456,11 +6399,13 @@ Copyright: 1997, Theo de Raadt
            2010, Jorge Jimenez, Belen Masia
            2010, Jose I. Echevarria <joseignacioechevarria@gmail.com>
            2011, Lauri Kasanen <cand@gmx.com>
+           2000, The NetBSD Foundation, Inc
+           1997, Theo de Raadt
 License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/mesa/src/m4/ax_pthread.m4
-Copyright: 2008, Steven G. Johnson <stevenj@alum.mit.edu>
-           2011, Daniel Richard G <skunk@iSKUNK.ORG>
+Copyright: 2011, Daniel Richard G <skunk@iSKUNK.ORG>
+           2008, Steven G. Johnson <stevenj@alum.mit.edu>
 License: GPL-3+_AutoConfException
 
 Files: src/3rdparty/chromium/third_party/mesa/src/m4/ax_python_module.m4
@@ -6522,24 +6467,24 @@ Copyright: Mozilla Foundation
 License: MPL-2.0
 
 Files: src/3rdparty/chromium/third_party/opus/src/*
-Copyright: 1994-2013, Xiph.Org Foundation
+Copyright: 2007-2008, CSIRO
            2001, Erik de Castro Lopo <erikd@mega-nerd.com>
-           2001-2011, Timothy B. Terriberry
-           2001-2011, Xiph.Org, Skype Limited, Octasic
-           2002-2013, Jean-Marc Valin
-           2002-2013, Xiph.org Foundation
-           2003-2004, Mark Borgerding
-           2006-2011, Skype Limited
-           2007-2008, CSIRO
-           2008, Xiph.Org Foundation, CSIRO
-           2008-2011, Octasic Inc
            2008-2012, Gregory Maxwell
-           2010-2011, Xiph.Org Foundation, Skype Limited
-           2011-2012, Xiph.Org Foundation and Mozilla Corporation
-           2011-2012, Xiph.Org Foundation, Mozilla Corporation
+           2002-2013, Jean-Marc Valin
            2013, Jean-Marc Valin and John Ridges
+           2003-2004, Mark Borgerding
            2013, Mozilla Corporation
+           2008-2011, Octasic Inc
            2013, Parrot
+           2006-2011, Skype Limited
+           2001-2011, Timothy B. Terriberry
+           1994-2013, Xiph.Org Foundation
+           2011-2012, Xiph.Org Foundation and Mozilla Corporation
+           2008, Xiph.Org Foundation, CSIRO
+           2011-2012, Xiph.Org Foundation, Mozilla Corporation
+           2010-2011, Xiph.Org Foundation, Skype Limited
+           2001-2011, Xiph.Org, Skype Limited, Octasic
+           2002-2013, Xiph.org Foundation
 License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/ow2_asm/*
@@ -6556,17 +6501,17 @@ Copyright: 2006, The Android Open Source Project
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/pdfium/third_party/freetype/*
-Copyright: 1996-2000, David Turner
-           1996-2006, by
-           1996-2015, /
-           2013, Google, Inc
+Copyright: 1996-2015, /
            <year> The FreeType
+           1996-2000, David Turner
+           2013, Google, Inc
+           1996-2006, by
 License: FTL
 
 Files: src/3rdparty/chromium/third_party/pdfium/third_party/lcms2-2.6/*
-Copyright: 1998-2014, Marti Maria Saguer
+Copyright: = (cmsMLU*) cmsReadTag(hProfile, cmsSigCopyrightTag)
+           1998-2014, Marti Maria Saguer
            2001, softSurfer (www.softsurfer.com)
-           = (cmsMLU*) cmsReadTag(hProfile, cmsSigCopyrightTag)
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/pdfium/third_party/libjpeg/jconfig.h
@@ -6575,32 +6520,32 @@ Copyright: 2014, Foxit Software Inc. http://www.foxitsoftware.com
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/pdfium/third_party/libopenjpeg20/*
-Copyright: 2001-2003, David Janssens
-           2002-2004, Yannick Verschueren
+Copyright: 2003-2014, Antonin Descampe
+           2007, Callum Lerwick <seg@haxxed.com>
+           2008-2012, Centre National d'Etudes Spatiales (CNES), FR
+           2011-2012, Centre National d'Etudes Spatiales (CNES), France
+           2001-2003, David Janssens
+           2003-2007, Francois-Olivier Devaux
+           2005, Herve Drolon, FreeImage Team
+           2008, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
+           2007, Jonathan Ballard <dzonatas@dzonux.net>
+           2010-2011, Kaori Hagihara
+           2012, Mathieu Malaterre <mathieu.malaterre@gmail.com>
+           2006-2007, Parvatha Elangovan
            2002-2014, Professor Benoit Macq
            2002-2014, Universite catholique de Louvain (UCL), Belgium
-           2003-2007, Francois-Olivier Devaux
-           2003-2014, Antonin Descampe
-           2005, Herve Drolon, FreeImage Team
-           2006-2007, Parvatha Elangovan
-           2007, Callum Lerwick <seg@haxxed.com>
-           2007, Jonathan Ballard <dzonatas@dzonux.net>
-           2008, Jerome Fimes, Communications & Systemes <jerome.fimes@c-s.fr>
-           2008-2012, Centre National d'Etudes Spatiales (CNES), FR
-           2010-2011, Kaori Hagihara
-           2011-2012, Centre National d'Etudes Spatiales (CNES), France
-           2012, Mathieu Malaterre <mathieu.malaterre@gmail.com>
+           2002-2004, Yannick Verschueren
 License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/pdfium/third_party/libpng16/*
-Copyright: 1995-1996, Guy Eric Schalnat, Group 42, Inc
-           1996-1997, Andreas Dilger
+Copyright: 1996-1997, Andreas Dilger
            1996-1997, Andreas Dilger" PNG_STRING_NEWLINE
            1996-1997, Andreas Dilger, are derived from libpng-0.88
-           1998-2000, Glenn Randers-Pehrson, are derived from
            1998-2016, Glenn Randers-Pehrson
            2000-2016, Glenn Randers-Pehrson, are
+           1998-2000, Glenn Randers-Pehrson, are derived from
            2016, Google, Inc
+           1995-1996, Guy Eric Schalnat, Group 42, Inc
 License: Zlib
 
 Files: src/3rdparty/chromium/third_party/pdfium/third_party/libpng16/pngprefix.h
@@ -6618,10 +6563,10 @@ Copyright: 1995-2013, Jean-loup Gailly
 License: Zlib
 
 Files: src/3rdparty/chromium/third_party/pdfium/xfa/fxbarcode/*
-Copyright: 2006-2007, Jeremias Maerki
-           2007-2012, ZXing authors
-           2014, Foxit Software Inc. http://www.foxitsoftware.com
+Copyright: 2014, Foxit Software Inc. http://www.foxitsoftware.com
+           2006-2007, Jeremias Maerki
            2014-2016, PDFium Authors
+           2007-2012, ZXing authors
 License: Apache-2.0 or BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/protobuf/*
@@ -6653,7 +6598,7 @@ License: public-domain
 
 Files: src/3rdparty/chromium/third_party/pyelftools/elftools/construct/*
 Copyright: 2009 Tomer Filiba
-           2010-2011 Corbin Simpson
+           2010-2011, Corbin Simpson
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/qcms/src/*
@@ -6670,8 +6615,8 @@ Copyright: 2014, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/sfntly/*
-Copyright: 2011, The sfntly Open Source Project
-           2011-2015, Google Inc
+Copyright: 2011-2015, Google Inc
+           2011, The sfntly Open Source Project
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/shaderc/*
@@ -6685,13 +6630,13 @@ License: BSD-3-clause
 Files: src/3rdparty/chromium/third_party/shaderc/src/third_party/Android.mk
        src/3rdparty/chromium/third_party/shaderc/src/third_party/CMakeLists.txt
        src/3rdparty/chromium/third_party/shaderc/src/third_party/LICENSE.glslang
-Copyright: 1984-2012, Free Software Foundation, Inc
-           2002, NVIDIA Corporation
-           2002-2005, 3Dlabs Inc. Ltd
-           2002-2010, The ANGLE Project Authors
-           2012-2014, LunarG, Inc
-           2013-2016, The Khronos Group Inc
+Copyright: 2002-2005, 3Dlabs Inc. Ltd
+           1984-2012, Free Software Foundation, Inc
            2015-2016, Google, Inc
+           2012-2014, LunarG, Inc
+           2002, NVIDIA Corporation
+           2002-2010, The ANGLE Project Authors
+           2013-2016, The Khronos Group Inc
 License: BSD-3-clause or Expat or GPL-3+
 
 Files: src/3rdparty/chromium/third_party/shaderc/src/third_party/LICENSE.spirv-tools
@@ -6703,13 +6648,13 @@ Copyright: Bob Ippolito
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/skia/*
-Copyright: 2005-2015, The Android Open Source Project
-           2008-2016, Google Inc
-           2009, Motorola
-           2011-2015, Skia
-           2011-2015, The Chromium Authors
+Copyright: 2008-2016, Google Inc
            2012, Intel Inc
+           2009, Motorola
            2012, Mozilla Foundation
+           2011-2015, Skia
+           2005-2015, The Android Open Source Project
+           2011-2015, The Chromium Authors
            2012, The Native Client Authors
 License: BSD-3-clause
 
@@ -6725,8 +6670,8 @@ Files: src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party
        src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/native_app_glue/android_native_app_glue.c
        src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/native_app_glue/android_native_app_glue.h
        src/3rdparty/chromium/third_party/skia/third_party/etc1/*
-Copyright: 2008-2010, The Android Open Source Project
-           2009, Google Inc
+Copyright: 2009, Google Inc
+           2008-2010, The Android Open Source Project
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/skia/platform_tools/android/third_party/ashmem/cutils/ashmem.h
@@ -6801,11 +6746,11 @@ Files: src/3rdparty/chromium/third_party/skia/third_party/libpng/arm/arm_init.c
        src/3rdparty/chromium/third_party/skia/third_party/libsdl/android/SDL_config.h
        src/3rdparty/chromium/third_party/skia/third_party/libsdl/linux/SDL_config.h
        src/3rdparty/chromium/third_party/skia/third_party/libsdl/mac/SDL_config.h
-Copyright: 1995-1996, Guy Eric Schalnat, Group 42, Inc
-           1996-1997, Andreas Dilger
-           1997-2015, Sam Lantinga <slouken@libsdl.org>
+Copyright: 1996-1997, Andreas Dilger
            1998-2014, Glenn Randers-Pehrson
            1998-2014, Glenn Randers-Pehrson, and are
+           1995-1996, Guy Eric Schalnat, Group 42, Inc
+           1997-2015, Sam Lantinga <slouken@libsdl.org>
 License: Zlib
 
 Files: src/3rdparty/chromium/third_party/skia/third_party/lua/doc/readme.html
@@ -6833,8 +6778,8 @@ Copyright: 1995-1998, Mark Adler
 License: Zlib
 
 Files: src/3rdparty/chromium/third_party/speech-dispatcher/*
-Copyright: 1989-1999, Free Software Foundation, Inc
-           2001-2004, Brailcom, o.p.s
+Copyright: 2001-2004, Brailcom, o.p.s
+           1989-1999, Free Software Foundation, Inc
 License: GPL-2+
 
 Files: src/3rdparty/chromium/third_party/sqlite/sqlite-src-3100200/aclocal.m4
@@ -6879,8 +6824,8 @@ Copyright: 1984-2015, Free Software Foundation, Inc
 License: GPL-3+_BisonException
 
 Files: src/3rdparty/chromium/third_party/swiftshader/third_party/LLVM/*
-Copyright: 1992-1994, Henry Spencer
-           2003-2009, Google Inc
+Copyright: 2003-2009, Google Inc
+           1992-1994, Henry Spencer
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/swiftshader/third_party/LLVM/autoconf/*
@@ -6936,18 +6881,18 @@ Copyright: 2014, Dirk Pranke
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/usrsctp/*
-Copyright: 1995-1997, and 1998 WIDE Project
+Copyright: 2008-2012, Brad Penoff
            2001-2008, Cisco Systems, Inc
+           2015, Felix Weinrank
            2004-2006, Intel Corporation
-           2005, Robert N. M. Watson
-           2005-2015, Michael Tuexen
-           2008-2012, Brad Penoff
-           2008-2012, Randall Stewart
            2011-2015, Irene Ruengeler
            2013, Lally Singh
-           2015, Felix Weinrank
+           2005-2015, Michael Tuexen
            2015, Oleg Alexeenkov
+           2008-2012, Randall Stewart
            2015, Randall Stewart and Michael Tuexen
+           2005, Robert N. M. Watson
+           1995-1997, and 1998 WIDE Project
            locked by SOCKBUF_LOCK(&so->so_rcv)
 License: BSD-3-clause
 
@@ -6961,24 +6906,24 @@ Files: src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/netinet/s
        src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/user_socket.c
        src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/user_uma.h
        src/3rdparty/chromium/third_party/usrsctp/usrsctplib/usrsctplib/usrsctp.h
-Copyright: 1993-2012, Since DOC
+Copyright: 2009-2010, Brad Penoff
            2001-2002, Cisco Systems, Inc
+           2009-2010, Humaira Kamal
+           2011-2012, Irene Ruengeler
            2002-2012, Michael Tuexen
            2002-2012, Randall R. Stewart
-           2004, The FreeBSD Foundation
-           2004-2008, Robert N. M. Watson
-           2009-2010, Brad Penoff
-           2009-2010, Humaira Kamal
            2010-2012, Randall Stewart
+           2004-2008, Robert N. M. Watson
            2010-2012, Robin Seggelmann
-           2011-2012, Irene Ruengeler
+           1993-2012, Since DOC
+           2004, The FreeBSD Foundation
            file of
 License: BSD-2-clause
 
 Files: src/3rdparty/chromium/third_party/vulkan/*
 Copyright: 2005-2014, G-Truc Creation (www.g-truc.net)
-           2015-2016, Valve Corporation
            2016, Google Inc
+           2015-2016, Valve Corporation
 License: Expat
 
 Files: src/3rdparty/chromium/third_party/vulkan/include/vulkan/vk_debug_marker_layer.h
@@ -6996,18 +6941,18 @@ License: Expat
 
 Files: src/3rdparty/chromium/third_party/wayland-protocols/*
        src/3rdparty/chromium/third_party/wayland/*
-Copyright: 1999, SuSE, Inc
+Copyright: 2011, Benjamin Franzke
+           2012-2015, Collabora, Ltd
+           2010-2013, Intel Corporation
+           2013-2014, Jason Ekstrand
+           2013, Jasper St. Pierre
+           2014, Jonas Ådahl
            2002, Keith Packard
            2008-2013, Kristian Høgsberg
-           2010-2013, Intel Corporation
-           2011, Benjamin Franzke
            2012, Philipp Brüschweiler
-           2012-2015, Collabora, Ltd
-           2013, Jasper St. Pierre
            2013, Rafael Antognolli
-           2013-2014, Jason Ekstrand
-           2014, Jonas Ådahl
            2015, Red Hat Inc
+           1999, SuSE, Inc
 License: MIT/X11
 
 Files: src/3rdparty/chromium/third_party/wds/*
@@ -7027,8 +6972,8 @@ License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/webdriver/*
 Copyright: 2007-2012, Google Inc
-           2007-2012, WebDriver committers
            2011-2014, Software Freedom Conservancy
+           2007-2012, WebDriver committers
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/webpagereplay/*
@@ -7092,10 +7037,10 @@ License: Apache-2.0
 
 Files: src/3rdparty/chromium/third_party/xdg-utils/*
 Copyright: 2006, Bryce Harrington <bryce@osdl.org>
+           2009-2010, Fathi Boudra <fabo@freedesktop.org>
+           2009, Google Inc
            2006, Jeremy White <jwhite@codeweavers.com>
            2006, Kevin Krammer <kevin.krammer@gmx.at>
-           2009, Google Inc
-           2009-2010, Fathi Boudra <fabo@freedesktop.org>
            2009-2010, Rex Dieter <rdieter@fedoraproject.org>
 License: Expat
 
@@ -7119,9 +7064,9 @@ Copyright: issue. I hereby disclaim
 License: public-domain
 
 Files: src/3rdparty/chromium/third_party/zlib/*
-Copyright: 1998-2010, Gilles Vollant
+Copyright: 2007-2008, Even Rouault
+           1998-2010, Gilles Vollant
            1998-2010, Gilles Vollant, Even Rouault, Mathias Svensson
-           2007-2008, Even Rouault
            2009-2010, Mathias Svensson ( http://result42.com )
 License: Zlib
 
@@ -7170,13 +7115,13 @@ License: BSD-3-clause or LGPL-2.1+ or MPL-1.1
 Files: src/3rdparty/chromium/v8/*
 Copyright: 2009-2012, Google Inc
            2014, The Chromium Authors
-           206-2015, the V8 project authors
+           2006-2015, the V8 project authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/v8/benchmarks/crypto.js
        src/3rdparty/chromium/v8/benchmarks/navier-stokes.js
-Copyright: 2003-2005, Tom Wu
-           2009, Oliver Hunt <http://nerget.com>
+Copyright: 2009, Oliver Hunt <http://nerget.com>
+           2003-2005, Tom Wu
            2012, the V8 project authors
 License: Expat
 
@@ -7204,13 +7149,13 @@ Copyright: 1994-2006, Sun Microsystems Inc
 License: BSD-2-clause
 
 Files: src/3rdparty/chromium/v8/src/inspector/build/rjsmin.py
-Copyright: 2011 - 2013, Andr\xe9 Malo
+Copyright: 2011-2013, Andr\xe9 Malo
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/v8/src/third_party/valgrind/*
        src/3rdparty/chromium/v8/src/third_party/vtune/*
-Copyright: 2000-2010, Julian Seward
-           2005-2012, Intel Corporation
+Copyright: 2005-2012, Intel Corporation
+           2000-2010, Julian Seward
 License: BSD-3-clause or GPL-2
 
 Files: src/3rdparty/ninja/*
@@ -7300,11 +7245,11 @@ Files: tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
        tests/auto/widgets/qwebenginesettings/tst_qwebenginesettings.cpp
        tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
        tests/auto/widgets/util.h
-Copyright: 2008-2010, Holger Hans Peter Freyther
+Copyright: 2009, Girish Ramakrishnan <girish@forwardbias.in>
+           2008-2010, Holger Hans Peter Freyther
            2008-2011, Nokia Corporation and/or its subsidiary(-ies)
-           2009, Girish Ramakrishnan <girish@forwardbias.in>
-           2009, Torch Mobile Inc
            2015, The Qt Company Ltd
+           2009, Torch Mobile Inc
 License: LGPL-2+
 
 Files: tests/manual/quick/faviconbrowser/AddressBar.qml
