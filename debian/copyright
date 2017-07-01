@@ -237,8 +237,13 @@ Files: src/3rdparty/chromium/ppapi/lib/gl/include/EGL/egl.h
 Copyright: 2007-2010, The Khronos Group Inc
 License: Expat
 
-Files: src/3rdparty/chromium/sdch/open-vcdiff/*
+Files: src/3rdparty/chromium/sdch/ios/config.h
+       src/3rdparty/chromium/sdch/linux/config.h
+       src/3rdparty/chromium/sdch/mac/config.h
+       src/3rdparty/chromium/sdch/open-vcdiff/*
+       src/3rdparty/chromium/sdch/win/config.h
 Copyright: 2005-2009, Google Inc
+           2016, The open-vcdiff Authors
 License: Apache-2.0
 
 Files: src/3rdparty/chromium/sdch/open-vcdiff/src/zlib/adler32.c
@@ -4787,6 +4792,7 @@ Files: src/3rdparty/chromium/third_party/dom_distiller_js/protoc_plugins/json_va
        src/3rdparty/chromium/third_party/dom_distiller_js/protoc_plugins/util/types.py
        src/3rdparty/chromium/third_party/dom_distiller_js/protoc_plugins/util/writer.py
        src/3rdparty/chromium/third_party/dom_distiller_js/test_sample.proto
+       src/3rdparty/chromium/third_party/dom_distiller_js/update_domdistiller_js.sh
 Copyright: 2016, The Chromium Authors
 License: BSD-3-clause
 
@@ -5981,6 +5987,12 @@ Files: src/3rdparty/chromium/third_party/icu/source/aclocal.m4
 Copyright: 2004, Scott James Remnant <scott@netsplit.com>
 License: GPL-2+_AutoConfException or FSF_unlimited
 
+Files: src/3rdparty/chromium/third_party/icu/source/aclocal.m4
+Copyright: 2012-2015, Dan Nicholson <dbn.lists@gmail.com>
+           1996-2014, Free Software Foundation, Inc
+           2004, Scott James Remnant <scott@netsplit.com>
+License: FSF_unlimited or GPL-2+_AutoConfException
+
 Files: src/3rdparty/chromium/third_party/icu/source/config.guess
        src/3rdparty/chromium/third_party/icu/source/config.sub
 Copyright: 1992-2013, Free Software Foundation, Inc
@@ -6731,8 +6743,7 @@ Files: src/3rdparty/chromium/third_party/skia/third_party/libpng/arm/arm_init.c
        src/3rdparty/chromium/third_party/skia/third_party/libsdl/linux/SDL_config.h
        src/3rdparty/chromium/third_party/skia/third_party/libsdl/mac/SDL_config.h
 Copyright: 1996-1997, Andreas Dilger
-           1998-2014, Glenn Randers-Pehrson
-           1998-2014, Glenn Randers-Pehrson, and are
+           1998-2016, Glenn Randers-Pehrson
            1995-1996, Guy Eric Schalnat, Group 42, Inc
            1997-2015, Sam Lantinga <slouken@libsdl.org>
 License: Zlib
@@ -7170,6 +7181,11 @@ License: BSD-3-clause or GPL-2 or LGPL-2+
 Files: src/core/common/qt_messages.*
 Copyright: 2010-2012, The Chromium Authors
 License: BSD-3-clause
+
+Files: src/core/renderer/content_renderer_client_qt.cpp
+Copyright: 2013, The Chromium Authors
+           2016, The Qt Company Ltd
+License: GPL-2 or GPL-3 or LGPL-3
 
 Files: src/core/web_event_factory.cpp
 Copyright: 2006, Nikolas Zimmermann <zimmermann@kde.org>
