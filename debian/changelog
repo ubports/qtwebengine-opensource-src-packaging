@@ -27,6 +27,10 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   * Add yasm to Build-Depends
   * New package qtwebengine5-dev-tools for tools used by examples
 
+  [ Dmitry Shachnev ]
+  * Temporarily drop libv8-dev build-dependency. It is currently unused,
+    and cannot be used as long as our packaged v8 is ancient (see #785696).
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 16 Jun 2017 16:54:53 +0100
 
 qtwebengine-opensource-src (5.7.1+dfsg-6.1) unstable; urgency=medium
