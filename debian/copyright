@@ -78,12 +78,16 @@ Files: examples/webengine/customdialogs/*
        examples/webenginewidgets/contentmanipulation/mainwindow.cpp
        examples/webenginewidgets/contentmanipulation/mainwindow.h
        examples/webenginewidgets/demobrowser/*
+       examples/webenginewidgets/html2pdf/html2pdf.cpp
+       examples/webenginewidgets/maps/main.cpp
+       examples/webenginewidgets/maps/mainwindow.cpp
+       examples/webenginewidgets/maps/mainwindow.h
        examples/webenginewidgets/markdowneditor/*
        examples/webenginewidgets/minimal/main.cpp
        examples/webenginewidgets/simplebrowser/*
        examples/webenginewidgets/spellchecker/*
        examples/webenginewidgets/videoplayer/*
-Copyright: 2015-2016, The Qt Company Ltd
+Copyright: 2015-2017, The Qt Company Ltd
 License: BSD-3-clause
 
 Files: examples/webenginewidgets/cookiebrowser/*
