@@ -11,6 +11,7 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   * Update lintian-overrides
   * Update Excluded-File list
   * Clean qmake caches in clean step
+  * Update copyright file.
 
   [ Simon Quigley ]
   * New upstream release. (Closes: #865273)
