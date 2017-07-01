@@ -31,6 +31,7 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Temporarily drop libv8-dev build-dependency. It is currently unused,
     and cannot be used as long as our packaged v8 is ancient (see #785696).
+  * Update symbols files from the current armhf and i386 build logs.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 16 Jun 2017 16:54:53 +0100
 
