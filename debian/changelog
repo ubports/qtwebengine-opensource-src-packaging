@@ -6,7 +6,7 @@ qtwebengine-opensource-src (5.9.0+dfsg-1) UNRELEASED; urgency=medium
     - add Recommends to doc package for dev package
     - MPL-1.0 and MPL-2.0 are now in common-licenses
   * replace mocha.js with a missing-source tarball
-  * Check missing-source tarballs (one new occurence found)
+  * Check missing-source tarballs (one new occurrence found)
   * Update short desciption of packages to make them unique.
   * Update lintian-overrides
   * Update Excluded-File list
