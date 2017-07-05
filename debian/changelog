@@ -14,6 +14,9 @@ qtwebengine-opensource-src (5.9.1+dfsg-1) UNRELEASED; urgency=medium
   * Change qtlocation5-dev build-dependency to qtpositioning5-dev, this
     is what qtwebengine really uses for positioning support.
 
+  [ Jonathan Riddell ]
+  * Build-dep on qttools5-dev to build Qt Designer plugin
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 01 Jul 2017 22:09:58 +0200
 
 qtwebengine-opensource-src (5.9.0+dfsg-1) experimental; urgency=medium
