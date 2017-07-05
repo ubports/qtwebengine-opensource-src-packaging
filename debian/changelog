@@ -13,6 +13,8 @@ qtwebengine-opensource-src (5.9.1+dfsg-1) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Change qtlocation5-dev build-dependency to qtpositioning5-dev, this
     is what qtwebengine really uses for positioning support.
+  * Drop unused libqt5xmlpatterns5-dev and qtscript5-private-dev
+    build-dependencies.
 
   [ Jonathan Riddell ]
   * Build-dep on qttools5-dev to build Qt Designer plugin
