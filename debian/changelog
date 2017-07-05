@@ -5,6 +5,8 @@ qtwebengine-opensource-src (5.9.1+dfsg-1) UNRELEASED; urgency=medium
   * Update copyright file.
   * Update patch hunks
   * Update sysmbols for amd64.
+  * Remove version dependency from libre2-dev, because with the new stable all
+    releases have the new enough version.
 
   [ Dmitry Shachnev ]
   * Change qtlocation5-dev build-dependency to qtpositioning5-dev, this
