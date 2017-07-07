@@ -15,6 +15,7 @@ qtwebengine-opensource-src (5.9.1+dfsg-1) UNRELEASED; urgency=medium
     is what qtwebengine really uses for positioning support.
   * Drop unused libqt5xmlpatterns5-dev and qtscript5-private-dev
     build-dependencies.
+  * Update libqt5webenginecore5.symbols from the arm64 build log.
 
   [ Jonathan Riddell ]
   * Build-dep on qttools5-dev to build Qt Designer plugin
