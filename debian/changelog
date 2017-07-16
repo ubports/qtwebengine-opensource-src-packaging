@@ -9,6 +9,7 @@ qtwebengine-opensource-src (5.9.1+dfsg-1) UNRELEASED; urgency=medium
     releases have the new enough version.
   * Add version dependency to libav*-dev packages, otherwise it fails on
     ubuntu xenial.
+  * Bump Qt build-dependencies to 5.9.1.
 
   [ Dmitry Shachnev ]
   * Change qtlocation5-dev build-dependency to qtpositioning5-dev, this
