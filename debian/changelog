@@ -1,4 +1,4 @@
-qtwebengine-opensource-src (5.9.1+dfsg-1) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.9.1+dfsg-1) experimental; urgency=medium
 
   [ Sandro Knauß ]
   * New upstream release.
@@ -21,7 +21,7 @@ qtwebengine-opensource-src (5.9.1+dfsg-1) UNRELEASED; urgency=medium
   [ Jonathan Riddell ]
   * Build-dep on qttools5-dev to build Qt Designer plugin
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 01 Jul 2017 22:09:58 +0200
+ -- Sandro Knauß <hefee@debian.org>  Sun, 16 Jul 2017 19:49:50 +0200
 
 qtwebengine-opensource-src (5.9.0+dfsg-1) experimental; urgency=medium
 
