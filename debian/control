@@ -95,7 +95,8 @@ Depends: libqt5webchannel5-dev,
          libqt5webenginewidgets5 (= ${binary:Version}),
          qtbase5-dev,
          qtdeclarative5-dev,
-         ${misc:Depends}
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: qtwebengine5-doc
 Description: Web content engine library for Qt - development files
  QtWebEngine provides a Web browser engine that makes it easy to embed content
