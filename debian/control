@@ -95,6 +95,7 @@ Depends: libqt5webchannel5-dev,
          libqt5webenginewidgets5 (= ${binary:Version}),
          qtbase5-dev,
          qtdeclarative5-dev,
+         qtpositioning5-dev,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: qtwebengine5-doc
