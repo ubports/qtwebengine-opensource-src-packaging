@@ -3,6 +3,8 @@ qtwebengine-opensource-src (5.9.1+dfsg-2) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Make qtwebengine5-dev depend on qtpositioning5-dev, as the built CMake
     files now include it as dependency.
+  * Add a patch to print compiler commands when bootstrapping gn. This helps
+    us discover wrong compiler flags, such as using -mfpu=neon on armhf.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 18 Jul 2017 15:57:05 +0300
 
