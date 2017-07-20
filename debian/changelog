@@ -5,6 +5,8 @@ qtwebengine-opensource-src (5.9.1+dfsg-2) UNRELEASED; urgency=medium
     files now include it as dependency.
   * Add a patch to print compiler commands when bootstrapping gn. This helps
     us discover wrong compiler flags, such as using -mfpu=neon on armhf.
+  * Add a patch to apply ARM compiler options even on host builds, to make
+    sure NEON is not used for gn bootstrap.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 18 Jul 2017 15:57:05 +0300
 

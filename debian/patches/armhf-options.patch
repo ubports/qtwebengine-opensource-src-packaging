@@ -1,0 +1,18 @@
+Description: apply ARM options on host builds too
+ Is is needed to make sure NEON is not used on Debian armhf.
+ This partially reverts upstream commit f0fc1606d5b6d2ad.
+Author: Dmitry Shachnev <mitya57@debian.org>
+Forwarded: no
+Last-Update: 2017-07-20
+
+--- a/src/core/config/linux.pri
++++ b/src/core/config/linux.pri
+@@ -41,7 +41,7 @@
+     !isEmpty(TOOLCHAIN_SYSROOT): gn_args += target_sysroot=\"$${TOOLCHAIN_SYSROOT}\"
+ }
+ 
+-contains(QT_ARCH, "arm"):!host_build {
++contains(QT_ARCH, "arm") {
+     # Extract ARM specific compiler options that we have to pass to gn,
+     # but let gn figure out a default if an option is not present.
+     MTUNE = $$extractCFlag("-mtune=.*")
