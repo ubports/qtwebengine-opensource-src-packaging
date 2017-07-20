@@ -2,6 +2,7 @@ Source: qtwebengine-opensource-src
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Scarlett Clark <sgclark@kubuntu.org>,
            Sandro Knauß <hefee@debian.org>,
+           Dmitry Shachnev <mitya57@debian.org>,
            Simon Quigley <tsimonq2@ubuntu.com>
 Section: libs
 Priority: optional
