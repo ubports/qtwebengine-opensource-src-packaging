@@ -1,6 +1,9 @@
-qtwebengine-opensource-src (5.9.1+dfsg-3) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.9.1+dfsg-3) unstable; urgency=medium
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 16 Aug 2017 15:22:29 -0300
+  * Team upload.
+  * Release to unstable.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 16 Aug 2017 15:27:58 -0300
 
 qtwebengine-opensource-src (5.9.1+dfsg-2) experimental; urgency=medium
 
