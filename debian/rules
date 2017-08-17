@@ -30,6 +30,7 @@ disabled_jit_architectures := armel mips mipsel
 disabled_pch_architectures := amd64 powerpc s390x
 
 small_architectures := armhf mipsel
+no_gold_architectures := arm64 armhf mipsel
 
 defines+=skia_use_system_expat \
          skia_use_system_freetype2 \
@@ -145,7 +146,10 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(small_architectures)))
 	echo "QMAKE_CXXFLAGS += --param ggc-min-expand=20" >> .qmake.conf
 	echo "QMAKE_CFLAGS += --param ggc-min-expand=20" >> .qmake.conf
 	echo "QMAKE_LFLAGS -= Wl,--gc-sections" >> .qmake.conf
-	#Use not ld.gold
+endif
+
+ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(no_gold_architectures)))
+	# Do not use ld.gold
 	echo "QMAKE_LFLAGS -= -fuse-ld=gold" >> .qmake.conf
 	echo "QMAKE_LFLAGS += -fuse-ld=bfd" >> .qmake.conf
 endif

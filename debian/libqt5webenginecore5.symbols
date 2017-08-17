@@ -1,17 +1,17 @@
 # SymbolsHelper-Confirmed: 5.9.1 amd64 arm64 armhf i386
 libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
- (optional=gold|arch=!i386)Qt_5.0@Qt_5.0 5.7.1
- (optional=gold|arch=!i386)Qt_5.1@Qt_5.1 5.7.1
- (optional=gold|arch=!i386)Qt_5.2@Qt_5.2 5.7.1
- (optional=gold|arch=!i386)Qt_5.3@Qt_5.3 5.7.1
- (optional=gold|arch=!i386)Qt_5.4@Qt_5.4 5.7.1
- (optional=gold|arch=!i386)Qt_5.5@Qt_5.5 5.7.1
- (optional=gold|arch=!i386)Qt_5.6@Qt_5.6 5.7.1
- (optional=gold|arch=!i386)Qt_5.7@Qt_5.7 5.7.1
- (optional=gold|arch=!i386)Qt_5.8@Qt_5.8 5.9.1
- (optional=gold|arch=!i386)Qt_5.9@Qt_5.9 5.9.1
- (optional=gold|arch=!i386)Qt_5@Qt_5 5.7.1
- (optional=gold|arch=!i386)Qt_5_PRIVATE_API@Qt_5_PRIVATE_API 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.0@Qt_5.0 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.1@Qt_5.1 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.2@Qt_5.2 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.3@Qt_5.3 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.4@Qt_5.4 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.5@Qt_5.5 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.6@Qt_5.6 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.7@Qt_5.7 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.8@Qt_5.8 5.9.1
+ (optional=gold|arch=!arm64 !i386)Qt_5.9@Qt_5.9 5.9.1
+ (optional=gold|arch=!arm64 !i386)Qt_5@Qt_5 5.7.1
+ (optional=gold|arch=!arm64 !i386)Qt_5_PRIVATE_API@Qt_5_PRIVATE_API 5.7.1
  _ZN11QtWebEngine11processMainEiPPKc@Qt_5 5.7.1
  _ZN14WebEngineError15toQtErrorDomainEi@Qt_5 5.7.1
  _ZN14WebEngineError16UserAbortedErrorE@Qt_5 5.7.1
