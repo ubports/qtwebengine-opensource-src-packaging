@@ -174,7 +174,7 @@ Description: Web content engine library for Qt - Data
 Package: qml-module-qtwebengine
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: qml-module-qtquick2, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Description: Qt WebEngine QML module
  QtWebEngine provides a Web browser engine that makes it easy to embed content
@@ -200,6 +200,11 @@ Architecture: any
 Multi-Arch: same
 Depends: libjs-jquery,
          libjs-marked,
+         qml-module-qt-labs-settings,
+         qml-module-qtquick-controls,
+         qml-module-qtquick-layouts,
+         qml-module-qtquick-window2,
+         qml-module-qtwebengine,
          qtwebengine5-dev-tools,
          ${misc:Depends},
          ${shlibs:Depends}

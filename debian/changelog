@@ -2,6 +2,8 @@ qtwebengine-opensource-src (5.9.1+dfsg-4) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
   * Disable gold on arm64, to workaround bug #869768.
+  * Add the needed QML dependencies to qtwebengine5-examples package
+    (closes: #857859).
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 17 Aug 2017 15:22:07 +0300
 
