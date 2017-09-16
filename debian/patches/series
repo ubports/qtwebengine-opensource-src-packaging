@@ -5,6 +5,5 @@ system-nspr-prtime.patch
 system-icu-utf.patch
 no-icudtl-dat.patch
 disable-last_commit_position.patch
-add_mips_support.patch
 verbose-gn-bootstrap.patch
 armhf-options.patch
