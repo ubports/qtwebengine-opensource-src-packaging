@@ -3,6 +3,8 @@ qtwebengine-opensource-src (5.9.1+dfsg-5) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Drop add_mips_support.patch. Chromium cannot be built for big endian
     anyway, because of skia.
+  * Limit Architecture field to architectures supported by upstream
+    (closes: #864323, #864324, #864325, #864326).
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 16 Sep 2017 12:17:23 +0300
 

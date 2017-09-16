@@ -87,7 +87,7 @@ Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtwebengine.git
 Homepage: https://doc.qt.io/qt-5/qtwebengine-index.html
 
 Package: qtwebengine5-dev
-Architecture: any
+Architecture: amd64 arm64 armhf i386 mipsel
 Multi-Arch: same
 Section: libdevel
 Depends: libqt5webchannel5-dev,
@@ -108,7 +108,7 @@ Description: Web content engine library for Qt - development files
  using QtWebEngine library.
 
 Package: qtwebengine5-private-dev
-Architecture: any
+Architecture: amd64 arm64 armhf i386 mipsel
 Multi-Arch: same
 Section: libdevel
 Depends: qtwebengine5-dev (= ${binary:Version}), ${misc:Depends}
@@ -120,7 +120,7 @@ Description: Web content engine library for Qt - private development files
  Qt 5 applications using QtWebEngine library.
 
 Package: libqt5webengine5
-Architecture: any
+Architecture: amd64 arm64 armhf i386 mipsel
 Multi-Arch: same
 Depends: libqt5webengine-data (= ${source:Version}),
          ${misc:Depends},
@@ -133,7 +133,7 @@ Description: Web content engine library for Qt
  This package contains the QtWebEngine library.
 
 Package: libqt5webenginecore5
-Architecture: any
+Architecture: amd64 arm64 armhf i386 mipsel
 Multi-Arch: same
 Depends: libqt5webengine-data (= ${source:Version}),
          ${misc:Depends},
@@ -148,7 +148,7 @@ Description: Web content engine library for Qt - Core
  This package contains the core QtWebEngine library.
 
 Package: libqt5webenginewidgets5
-Architecture: any
+Architecture: amd64 arm64 armhf i386 mipsel
 Multi-Arch: same
 Depends: libqt5webengine-data (= ${source:Version}),
          ${misc:Depends},
@@ -172,7 +172,7 @@ Description: Web content engine library for Qt - Data
  This package contains the arch independent parts of QtWebEngine libraries.
 
 Package: qml-module-qtwebengine
-Architecture: any
+Architecture: amd64 arm64 armhf i386 mipsel
 Multi-Arch: same
 Depends: qml-module-qtquick2, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
@@ -183,7 +183,7 @@ Description: Qt WebEngine QML module
  This package contains the WebEngine QML module for QtDeclarative.
 
 Package: qtwebengine5-dev-tools
-Architecture: any
+Architecture: amd64 arm64 armhf i386 mipsel
 Multi-Arch: foreign
 Section: devel
 Depends: qtchooser, ${misc:Depends}, ${shlibs:Depends}
@@ -196,7 +196,7 @@ Description: Qt WebEngine tools
  in Qt WebEngine.
 
 Package: qtwebengine5-examples
-Architecture: any
+Architecture: amd64 arm64 armhf i386 mipsel
 Multi-Arch: same
 Depends: libjs-jquery,
          libjs-marked,
