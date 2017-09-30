@@ -6,12 +6,10 @@ Uploaders: Scarlett Clark <sgclark@kubuntu.org>,
            Simon Quigley <tsimonq2@ubuntu.com>
 Section: libs
 Priority: optional
-Build-Depends: autotools-dev,
-               bison,
+Build-Depends: bison,
                chrpath,
                closure-compiler,
                debhelper (>= 10),
-               dh-autoreconf,
                flex,
                gperf,
                khronos-api,
