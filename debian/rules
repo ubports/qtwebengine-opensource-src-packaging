@@ -210,7 +210,7 @@ override_dh_install-arch:
 	dh_install --fail-missing
 
 override_dh_link:
-	dh_link --package=qt5webengine-examples \
+	dh_link --package=qtwebengine5-examples \
 		usr/share/javascript/jquery/jquery.min.js usr/lib/$(DEB_HOST_MULTIARCH)/qt5/examples/webenginewidgets/contentmanipulation/jquery.min.js \
 		usr/share/javascript/marked/marked.min.js usr/lib/$(DEB_HOST_MULTIARCH)/qt5/examples/webenginewidgets/markdowneditor/resources/marked.min.js
 	
