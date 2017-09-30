@@ -6,6 +6,7 @@ qtwebengine-opensource-src (5.9.1+dfsg-5) UNRELEASED; urgency=medium
   * Limit Architecture field to architectures supported by upstream
     (closes: #864323, #864324, #864325, #864326).
   * Fix package name in dh_link command (closes: #876860).
+  * Bump Standards-Version to 4.1.1, stop using deprecated Priority: extra.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 16 Sep 2017 12:17:23 +0300
 
