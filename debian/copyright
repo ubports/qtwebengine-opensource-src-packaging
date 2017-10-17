@@ -42,7 +42,8 @@ Copyright: 2013, BlackBerry Limited
 License: LGPL-3_Qt-1.1Exception or GPL-2_Qt-1.1Exception
 
 Files: debian/*
-Copyright: 2016 Scarlett Clark <sgclark@kubuntu.org>
+Copyright: 2016, Scarlett Clark <sgclark@kubuntu.org>
+           2016-2017, Sandro Knauß <hefee@debian.org>
 License: LGPL-2+
 
 Files: debian/missing-sources/jquery-1.3.2.js
@@ -92,6 +93,12 @@ License: BSD-3-clause
 Files: examples/webenginewidgets/cookiebrowser/*
 Copyright: 2016, The Qt Company Ltd
 License: GPL-3_Qt-1.1Exception or LGPL-2.1_Qt-1.1Exception
+
+Files: examples/webenginewidgets/cookiebrowser/main.cpp
+       examples/webenginewidgets/cookiebrowser/mainwindow.cpp
+       examples/webenginewidgets/cookiebrowser/mainwindow.h
+Copyright: 2016, The Qt Company Ltd
+License: BSD-3-clause
 
 Files: src/3rdparty/chromium/*
 Copyright: 2012 The Chromium Authors. All rights reserved.
@@ -7141,23 +7148,6 @@ Files: src/3rdparty/ninja/src/getopt.*
 Copyright: 1997 Gregory Pietsch
 License: public-domain
 
-Files: src/core/access_token_store_qt.cpp
-       src/core/browser_accessibility_qt.cpp
-       src/core/chromium_gpu_helper.cpp
-       src/core/clipboard_qt.cpp
-       src/core/dev_tools_http_handler_delegate_qt.cpp
-       src/core/gl_surface_qt.cpp
-       src/core/media_capture_devices_dispatcher.cpp
-       src/core/native_web_keyboard_event_qt.cpp
-       src/core/proxy_config_service_qt.cpp
-       src/core/renderer/pepper/pepper_flash_renderer_host_qt.cpp
-       src/core/renderer/web_channel_ipc_transport.cpp
-       src/core/web_contents_adapter.cpp
-       src/core/web_contents_delegate_qt.cpp
-Copyright: 2011-2013, The Chromium Authors
-           2015, The Qt Company Ltd
-License: BSD-3-clause or GPL-2 or LGPL-2+
-
 Files: src/core/common/qt_messages.*
 Copyright: 2010-2012, The Chromium Authors
 License: BSD-3-clause
@@ -7165,12 +7155,17 @@ License: BSD-3-clause
 Files: src/core/renderer/content_renderer_client_qt.cpp
 Copyright: 2013, The Chromium Authors
            2016, The Qt Company Ltd
-License: GPL-2 or GPL-3 or LGPL-3
+License: GPL-2_Qt-1.1Exception or GPL-3_Qt-1.1Exception or LGPL-3_Qt-1.1Exception
 
 Files: src/core/web_event_factory.cpp
 Copyright: 2006, Nikolas Zimmermann <zimmermann@kde.org>
            2015, The Qt Company Ltd
 License: BSD-2-clause or GPL-2 or LGPL-2+
+
+Files: src/tools/qwebengine_convert_dict/main.cpp
+Copyright: 2006-2008, The Chromium Authors
+           2016, The Qt Company Ltd
+License: BSD-3-clause
 
 Files: src/webengine/doc/snippets/qtwebengine_webengineview_newviewrequested.qml
 Copyright: 2015, The Qt Company Ltd
@@ -7183,12 +7178,13 @@ Copyright: 2008-2014, Nokia Corporation and/or its subsidiary(-ies)
 License: LGPL-2+
 
 Files: src/webenginewidgets/doc/snippets/qtwebengine_qwebenginepage_snippet.cpp
+       src/webenginewidgets/doc/snippets/qtwebengine_qwebengineview_snippet.cpp
 Copyright: 2015, The Qt Company Ltd
 License: GFDL-1.3_Qt1.1Exception
 
-Files: src/webenginewidgets/doc/snippets/qtwebengine_qwebengineview_snippet.cpp
-Copyright: 2005-2009, Apple Inc
-License: BSD-2-clause
+Files: src/webenginewidgets/doc/snippets/simple/main.cpp
+Copyright: 2016, The Qt Company Ltd
+License: BSD-3-clause
 
 Files: tests/*
 Copyright: 2014, Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.com, author Milian Wolff <milian.wolff@kdab.com>
@@ -7199,10 +7195,13 @@ Files: tests/auto/quick/qmltests/data/tst_javaScriptDialogs.qml
 Copyright: 2015, Digia Plc and/or its subsidiary(-ies)
 License: GPL-3_Qt-1.1Exception or LGPL-2.1_Qt-1.1Exception
 
-Files: tests/auto/quick/qmltests/mock-delegates/QtWebEngine/Controls1Delegates/AlertDialog.qml
+Files: tests/auto/quick/qmltests/data/tst_settings.qml
+       tests/auto/quick/qmltests/mock-delegates/QtWebEngine/Controls1Delegates/AlertDialog.qml
        tests/auto/quick/qmltests/mock-delegates/QtWebEngine/Controls1Delegates/ConfirmDialog.qml
        tests/auto/quick/qmltests/mock-delegates/QtWebEngine/Controls1Delegates/FilePicker.qml
        tests/auto/quick/qmltests/mock-delegates/QtWebEngine/Controls1Delegates/PromptDialog.qml
+       tests/auto/quick/qquickwebenginedefaultsurfaceformat/tst_qquickwebenginedefaultsurfaceformat.cpp
+       tests/auto/widgets/qwebenginedefaultsurfaceformat/tst_qwebenginedefaultsurfaceformat.cpp
 Copyright: 2016, The Qt Company Ltd
 License: GPL-3_Qt-1.1Exception
 
@@ -7238,7 +7237,7 @@ Files: tests/manual/quick/faviconbrowser/AddressBar.qml
        tests/manual/quick/faviconbrowser/main.qml
        tests/manual/quick/faviconbrowser/utils.h
 Copyright: 2016, The Qt Company Ltd
-License: BSD-3-clause
+License: GPL-3_Qt-1.1Exception
 
 Files: tests/manual/widgets/inputmethods/colorpicker.cpp
        tests/manual/widgets/inputmethods/colorpicker.h
@@ -7279,6 +7278,10 @@ Files: tools/buildscripts/qtwebengine_utils.py
 Copyright: 2012, The Chromium Authors
            2015, The Qt Company Ltd
 License: GPL-3_Qt-1.1Exception or LGPL-2.1_Qt-1.1Exception
+
+Files: tools/scripts/windeploy-examples.py
+Copyright: 2015, The Qt Company Ltd
+License: GPL-3_Qt-1.1Exception
 
 License: Academic-2.0
  --------------------------------------------------------------------------------
