@@ -53,7 +53,6 @@ License: GPL or Expat
 
 Files: debian/missing-sources/marked-v0.3.6.tar.gz
        examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js
-       examples/webenginewidgets/markdowneditor/resources/marked.min.js
 Copyright: 2011-2014, Christopher Jeffrey (https://github.com/chjj/)
 License: Expat
 
@@ -93,12 +92,6 @@ License: BSD-3-clause
 Files: examples/webenginewidgets/cookiebrowser/*
 Copyright: 2016, The Qt Company Ltd
 License: GPL-3_Qt-1.1Exception or LGPL-2.1_Qt-1.1Exception
-
-Files: examples/webenginewidgets/markdowneditor/resources/markdown.css
-       examples/webenginewidgets/markdowneditor/resources/marked.min.js
-Copyright: 2011-2014, Christopher Jeffrey.
-           Twitter Inc
-License: MIT/X11
 
 Files: src/3rdparty/chromium/*
 Copyright: 2012 The Chromium Authors. All rights reserved.
@@ -3917,15 +3910,6 @@ License: Expat
 
 Files: src/3rdparty/chromium/third_party/adobe/*
 Copyright: 2012-2014, The Chromium Authors
-License: BSD-3-clause
-
-Files: src/3rdparty/chromium/third_party/afl/*
-Copyright: 2013-2016, Google Inc
-           2015, Institute for Defense Analyses
-License: Apache-2.0
-
-Files: src/3rdparty/chromium/third_party/afl/update.py
-Copyright: 2016, The Chromium Authors
 License: BSD-3-clause
 
 Files: src/3rdparty/chromium/third_party/analytics/*
