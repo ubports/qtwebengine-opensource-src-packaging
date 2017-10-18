@@ -7889,19 +7889,6 @@ License: GPL-2+_LibToolException
  The complete text of the GNU General Public License version 2 can be found in
  `/usr/share/common-licenses/GPL-2'
 
-License: GPL-3
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 3 of the License.
- .
- This program is distributed in the hope that it will be useful, but
- WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
- Public License for more details.
- .
- The complete text of the GNU General Public License version 3 can be found in
- `/usr/share/common-licenses/GPL-3'
-
 License: GPL-3_Qt-1.1Exception
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -8213,20 +8200,6 @@ License: LGPL-2.1+
  .
  The complete text of the GNU Lesser General Public License version 2.1 can be
  found in `/usr/share/common-licenses/LGPL-2.1'
-
-License: LGPL-3
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 3 of the License.
- .
- This library is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- The complete text of the GNU Lesser General Public License version 3 can be
- found in `/usr/share/common-licenses/LGPL-3'
 
 License: LGPL-3_Qt-1.1Exception
  This library is free software; you can redistribute it and/or
