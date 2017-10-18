@@ -6,6 +6,7 @@ qtwebengine-opensource-src (5.9.2+dfsg-1~) UNRELEASED; urgency=medium
   * Update patch hunks.
   * Update copyright for 5.9.2.
   * Add new Build-Dependency: qtquickcontrols2-5-dev
+  * Bump Qt build-dependencies to 5.9.2.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 17 Oct 2017 23:57:46 +0200
 
