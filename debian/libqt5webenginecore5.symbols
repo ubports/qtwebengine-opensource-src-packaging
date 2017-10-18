@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.9.1 amd64 arm64 armhf i386 mipsel
+# SymbolsHelper-Confirmed: 5.9.2 amd64
 libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  (optional=gold)Qt_5.0@Qt_5.0 5.7.1
  (optional=gold)Qt_5.1@Qt_5.1 5.7.1
@@ -137,6 +137,7 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  _ZN15QtWebEngineCore18WebContentsAdapter25getNavigationEntryIconUrlEi@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter26executeMediaPlayerActionAtERK6QPointNS0_17MediaPlayerActionEb@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter26grantMediaAccessPermissionERK4QUrl6QFlagsINS_24WebContentsAdapterClient16MediaRequestFlagEE@Qt_5 5.7.1
+ _ZN15QtWebEngineCore18WebContentsAdapter26handleDropDataFileContentsERKN7content8DropDataEP9QMimeData@Qt_5 5.9.2
  _ZN15QtWebEngineCore18WebContentsAdapter26serializeNavigationHistoryER11QDataStream@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter27currentNavigationEntryIndexEv@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter27getNavigationEntryTimestampEi@Qt_5 5.7.1
@@ -155,7 +156,8 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  _ZN15QtWebEngineCore18WebContentsAdapter4undoEv@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter5pasteEv@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter6reloadEv@Qt_5 5.7.1
- _ZN15QtWebEngineCore18WebContentsAdapter8downloadERK4QUrlRK7QString@Qt_5 5.7.1
+#MISSING: 5.9.2# _ZN15QtWebEngineCore18WebContentsAdapter8downloadERK4QUrlRK7QString@Qt_5 5.7.1
+ _ZN15QtWebEngineCore18WebContentsAdapter8downloadERK4QUrlRK7QStringS3_NS_14ReferrerPolicyE@Qt_5 5.9.2
  _ZN15QtWebEngineCore18WebContentsAdapter8findTextERK7QStringbb@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter8unselectEv@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter8wasShownEv@Qt_5 5.7.1
@@ -2494,7 +2496,18 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  __ShimCppNewArray@Qt_5 5.9.0
  __ShimCppNewArrayNoThrow@Qt_5 5.9.0
  __ShimCppNewNoThrow@Qt_5 5.9.0
+ __calloc@Qt_5 5.9.2
+ __cfree@Qt_5 5.9.2
+ __free@Qt_5 5.9.2
+ __malloc@Qt_5 5.9.2
+ __memalign@Qt_5 5.9.2
+ __posix_memalign@Qt_5 5.9.2
+ __pvalloc@Qt_5 5.9.2
+ __realloc@Qt_5 5.9.2
+ __valloc@Qt_5 5.9.2
  calloc@Qt_5 5.7.1
+ cfree@Qt_5 5.9.2
+ free@Qt_5 5.9.2
  malloc@Qt_5 5.7.1
  memalign@Qt_5 5.7.1
  posix_memalign@Qt_5 5.7.1
