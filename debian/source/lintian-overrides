@@ -1,8 +1,8 @@
 # Are replaced by build step with self minified version. Source is shipped in missing-sources dir.
 qtwebengine-opensource-src source: source-is-missing examples/webenginewidgets/contentmanipulation/jquery.min.js
 qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object examples/webenginewidgets/contentmanipulation/jquery.min.js
-qtwebengine-opensource-src source: source-is-missing examples/webenginewidgets/markdowneditor/resources/marked.min.js
-qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object examples/webenginewidgets/markdowneditor/resources/marked.min.js
+qtwebengine-opensource-src source: source-is-missing examples/webenginewidgets/markdowneditor/resources/3rdparty/marked.min.js
+qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object examples/webenginewidgets/markdowneditor/resources/3rdparty/marked.min.js
 qtwebengine-opensource-src source: source-is-missing examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js
 qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/mocha/mocha.js .*
