@@ -156,7 +156,6 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  _ZN15QtWebEngineCore18WebContentsAdapter4undoEv@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter5pasteEv@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter6reloadEv@Qt_5 5.7.1
-#MISSING: 5.9.2# _ZN15QtWebEngineCore18WebContentsAdapter8downloadERK4QUrlRK7QString@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter8downloadERK4QUrlRK7QStringS3_NS_14ReferrerPolicyE@Qt_5 5.9.2
  _ZN15QtWebEngineCore18WebContentsAdapter8findTextERK7QStringbb@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter8unselectEv@Qt_5 5.7.1
