@@ -10,6 +10,7 @@ qtwebengine-opensource-src (5.9.2+dfsg-1~) UNRELEASED; urgency=medium
   * Update symbols for libqt5webenginecore5 for 5.9.2 for amd64.
   * Synchronize missing-sources for 5.9.2.
   * Update lintian-overrides for source.
+  * Update lintian-overrides for libqt5webenginecore5
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 17 Oct 2017 23:57:46 +0200
 
