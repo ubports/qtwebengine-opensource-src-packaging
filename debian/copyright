@@ -54,6 +54,7 @@ License: GPL or Expat
 
 Files: debian/missing-sources/marked-v0.3.6.tar.gz
        examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js
+       examples/webenginewidgets/markdowneditor/resources/3rdparty/marked.min.js
 Copyright: 2011-2014, Christopher Jeffrey (https://github.com/chjj/)
 License: Expat
 
