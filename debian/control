@@ -66,7 +66,7 @@ Build-Depends: bison,
                pkg-kde-tools,
                protobuf-compiler,
                python,
-               qtbase5-private-dev (>= 5.9.2~),
+               qtbase5-private-dev (>= 5.9.2+dfsg-3~),
                qtdeclarative5-private-dev (>= 5.9.2~),
                qtpositioning5-dev,
                qtquickcontrols2-5-dev,
@@ -79,7 +79,7 @@ Build-Depends: bison,
                yui-compressor
 Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.2~),
                      qtbase5-doc-html (>= 5.9.2~),
-                     qttools5-dev-tools (>= 5.9.2~)
+                     qttools5-dev-tools (>= 5.9.2-2~)
 Standards-Version: 4.1.1
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/qt/qtwebengine.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtwebengine.git

@@ -1,5 +1,10 @@
 qtwebengine-opensource-src (5.9.2+dfsg-2) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * Update for Qt binaries location change in qtbase 5.9.2+dfsg-3.
+    - Install qwebengine_convert_dict tool into the new location.
+    - Provide a compatibility symlink for the old location.
+    - Bump qtbase5-private-dev and qttools5-dev-tools build-dependencies.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 20 Oct 2017 21:09:14 +0300
 

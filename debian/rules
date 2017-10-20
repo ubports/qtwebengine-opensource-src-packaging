@@ -215,6 +215,8 @@ override_dh_link:
 	dh_link --package=qtwebengine5-examples \
 		usr/share/javascript/jquery/jquery.min.js usr/lib/$(DEB_HOST_MULTIARCH)/qt5/examples/webenginewidgets/contentmanipulation/jquery.min.js \
 		usr/share/javascript/marked/marked.min.js usr/lib/$(DEB_HOST_MULTIARCH)/qt5/examples/webenginewidgets/markdowneditor/resources/marked.min.js
+	dh_link --package=qtwebengine5-dev-tools \
+		usr/lib/qt5/bin/qwebengine_convert_dict usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin/qwebengine_convert_dict
 	
 	dh_link --remaining-packages
 
