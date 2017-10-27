@@ -5,6 +5,7 @@ qtwebengine-opensource-src (5.9.2+dfsg-2) UNRELEASED; urgency=medium
     - Install qwebengine_convert_dict tool into the new location.
     - Provide a compatibility symlink for the old location.
     - Bump qtbase5-private-dev and qttools5-dev-tools build-dependencies.
+  * Update libqt5webenginecore5.symbols from buildds’ logs.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 20 Oct 2017 21:09:14 +0300
 
