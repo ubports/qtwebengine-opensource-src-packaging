@@ -1,7 +1,7 @@
 Source: qtwebengine-opensource-src
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Scarlett Clark <sgclark@kubuntu.org>,
-           Sandro Knauß <hefee@debian.org>,
+           Sandro Knauss <hefee@debian.org>,
            Dmitry Shachnev <mitya57@debian.org>,
            Simon Quigley <tsimonq2@ubuntu.com>
 Section: libs
@@ -10,7 +10,7 @@ Build-Depends: autotools-dev,
                bison,
                chrpath,
                closure-compiler,
-               debhelper (>= 10),
+               debhelper (>= 9),
                dh-autoreconf,
                flex,
                gperf,
@@ -79,7 +79,7 @@ Build-Depends: autotools-dev,
                yasm [amd64 i386],
                yui-compressor
 Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.1~),
-                     qtbase5-doc-html (>= 5.9.1~),
+                     qtbase5-doc-html (>= 5.6.0~),
                      qttools5-dev-tools (>= 5.9.1~)
 Standards-Version: 4.0.0
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/qt/qtwebengine.git

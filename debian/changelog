@@ -1,4 +1,4 @@
-qtwebengine-opensource-src (5.9.1+dfsg-4) unstable; urgency=medium
+qtwebengine-opensource-src (5.9.1+dfsg+ubports) xenial; urgency=medium
 
   * Disable gold on arm64, to workaround bug #869768.
   * Add the needed QML dependencies to qtwebengine5-examples package
