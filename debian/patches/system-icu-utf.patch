@@ -1,0 +1,387 @@
+Description: use the system ICU UTF functions
+ We already depend on ICU, so it is useless to copy these functions here.
+ I checked the history of that directory, and other than the renames I am
+ undoing, there were no modifications at all.
+Author: Kevin, Kofler
+Origin: Fedora, http://pkgs.fedoraproject.org/cgit/rpms/qt5-qtwebengine.git/tree/qtwebengine-opensource-src-5.9.0-system-icu-utf.patch?id=ac7d2ae4c97de63eac6cf0e3d270b6b9c743acfa
+Forwarded: not-needed
+Reviewed-by: Sandro Knauß <hefee@debian.org>
+Last-Update: 2017-06-29
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/3rdparty/chromium/base/BUILD.gn
++++ b/src/3rdparty/chromium/base/BUILD.gn
+@@ -838,8 +838,6 @@ component("base") {
+     "third_party/dmg_fp/dmg_fp.h",
+     "third_party/dmg_fp/dtoa_wrapper.cc",
+     "third_party/dmg_fp/g_fmt.cc",
+-    "third_party/icu/icu_utf.cc",
+-    "third_party/icu/icu_utf.h",
+     "third_party/superfasthash/superfasthash.c",
+     "threading/non_thread_safe.h",
+     "threading/non_thread_safe_impl.cc",
+--- a/src/3rdparty/chromium/base/files/file_path.cc
++++ b/src/3rdparty/chromium/base/files/file_path.cc
+@@ -18,7 +18,7 @@
+ 
+ #if defined(OS_MACOSX)
+ #include "base/mac/scoped_cftyperef.h"
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ #endif
+ 
+ #if defined(OS_WIN)
+@@ -1156,9 +1156,9 @@ inline int HFSReadNextNonIgnorableCodepo
+                                             int* index) {
+   int codepoint = 0;
+   while (*index < length && codepoint == 0) {
+-    // CBU8_NEXT returns a value < 0 in error cases. For purposes of string
++    // U8_NEXT returns a value < 0 in error cases. For purposes of string
+     // comparison, we just use that value and flag it with DCHECK.
+-    CBU8_NEXT(string, *index, length, codepoint);
++    U8_NEXT(string, *index, length, codepoint);
+     DCHECK_GT(codepoint, 0);
+     if (codepoint > 0) {
+       // Check if there is a subtable for this upper byte.
+--- a/src/3rdparty/chromium/base/json/json_parser.cc
++++ b/src/3rdparty/chromium/base/json/json_parser.cc
+@@ -16,7 +16,7 @@
+ #include "base/strings/stringprintf.h"
+ #include "base/strings/utf_string_conversion_utils.h"
+ #include "base/strings/utf_string_conversions.h"
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ #include "base/values.h"
+ 
+ namespace base {
+@@ -630,21 +630,21 @@ bool JSONParser::ConsumeStringRaw(String
+ 
+   while (CanConsume(1)) {
+     int start_index = index_;
+-    pos_ = start_pos_ + index_;  // CBU8_NEXT is postcrement.
+-    CBU8_NEXT(start_pos_, index_, length, next_char);
++    pos_ = start_pos_ + index_;  // U8_NEXT is postcrement.
++    U8_NEXT(start_pos_, index_, length, next_char);
+     if (next_char < 0 || !IsValidCharacter(next_char)) {
+       if ((options_ & JSON_REPLACE_INVALID_CHARACTERS) == 0) {
+         ReportError(JSONReader::JSON_UNSUPPORTED_ENCODING, 1);
+         return false;
+       }
+-      CBU8_NEXT(start_pos_, start_index, length, next_char);
++      U8_NEXT(start_pos_, start_index, length, next_char);
+       string.Convert();
+       string.AppendString(kUnicodeReplacementString);
+       continue;
+     }
+ 
+     if (next_char == '"') {
+-      --index_;  // Rewind by one because of CBU8_NEXT.
++      --index_;  // Rewind by one because of U8_NEXT.
+       out->Swap(&string);
+       return true;
+     }
+@@ -774,10 +774,10 @@ bool JSONParser::DecodeUTF16(std::string
+ 
+   // If this is a high surrogate, consume the next code unit to get the
+   // low surrogate.
+-  if (CBU16_IS_SURROGATE(code_unit16_high)) {
++  if (U16_IS_SURROGATE(code_unit16_high)) {
+     // Make sure this is the high surrogate. If not, it's an encoding
+     // error.
+-    if (!CBU16_IS_SURROGATE_LEAD(code_unit16_high))
++    if (!U16_IS_SURROGATE_LEAD(code_unit16_high))
+       return false;
+ 
+     // Make sure that the token has more characters to consume the
+@@ -794,24 +794,24 @@ bool JSONParser::DecodeUTF16(std::string
+ 
+     NextNChars(3);
+ 
+-    if (!CBU16_IS_TRAIL(code_unit16_low)) {
++    if (!U16_IS_TRAIL(code_unit16_low)) {
+       return false;
+     }
+ 
+     uint32_t code_point =
+-        CBU16_GET_SUPPLEMENTARY(code_unit16_high, code_unit16_low);
++        U16_GET_SUPPLEMENTARY(code_unit16_high, code_unit16_low);
+     if (!IsValidCharacter(code_point))
+       return false;
+ 
+     offset = 0;
+-    CBU8_APPEND_UNSAFE(code_unit8, offset, code_point);
++    U8_APPEND_UNSAFE(code_unit8, offset, code_point);
+   } else {
+     // Not a surrogate.
+-    DCHECK(CBU16_IS_SINGLE(code_unit16_high));
++    DCHECK(U16_IS_SINGLE(code_unit16_high));
+     if (!IsValidCharacter(code_unit16_high))
+       return false;
+ 
+-    CBU8_APPEND_UNSAFE(code_unit8, offset, code_unit16_high);
++    U8_APPEND_UNSAFE(code_unit8, offset, code_unit16_high);
+   }
+ 
+   dest_string->append(code_unit8);
+@@ -828,9 +828,9 @@ void JSONParser::DecodeUTF8(const int32_
+   } else {
+     char utf8_units[4] = { 0 };
+     int offset = 0;
+-    CBU8_APPEND_UNSAFE(utf8_units, offset, point);
++    U8_APPEND_UNSAFE(utf8_units, offset, point);
+     dest->Convert();
+-    // CBU8_APPEND_UNSAFE can overwrite up to 4 bytes, so utf8_units may not be
++    // U8_APPEND_UNSAFE can overwrite up to 4 bytes, so utf8_units may not be
+     // zero terminated at this point.  |offset| contains the correct length.
+     dest->AppendString(std::string(utf8_units, offset));
+   }
+--- a/src/3rdparty/chromium/base/json/string_escape.cc
++++ b/src/3rdparty/chromium/base/json/string_escape.cc
+@@ -14,7 +14,7 @@
+ #include "base/strings/stringprintf.h"
+ #include "base/strings/utf_string_conversion_utils.h"
+ #include "base/strings/utf_string_conversions.h"
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ 
+ namespace base {
+ 
+--- a/src/3rdparty/chromium/base/strings/pattern.cc
++++ b/src/3rdparty/chromium/base/strings/pattern.cc
+@@ -4,13 +4,13 @@
+ 
+ #include "base/strings/pattern.h"
+ 
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ 
+ namespace base {
+ 
+ namespace {
+ 
+-static bool IsWildcard(base_icu::UChar32 character) {
++static bool IsWildcard(UChar32 character) {
+   return character == '*' || character == '?';
+ }
+ 
+@@ -37,9 +37,9 @@ static void EatSameChars(const CHAR** pa
+     // Check if the chars match, if so, increment the ptrs.
+     const CHAR* pattern_next = *pattern;
+     const CHAR* string_next = *string;
+-    base_icu::UChar32 pattern_char = next(&pattern_next, pattern_end);
++    UChar32 pattern_char = next(&pattern_next, pattern_end);
+     if (pattern_char == next(&string_next, string_end) &&
+-        pattern_char != CBU_SENTINEL) {
++        pattern_char != U_SENTINEL) {
+       *pattern = pattern_next;
+       *string = string_next;
+     } else {
+@@ -133,20 +133,20 @@ static bool MatchPatternT(const CHAR* ev
+ }
+ 
+ struct NextCharUTF8 {
+-  base_icu::UChar32 operator()(const char** p, const char* end) {
+-    base_icu::UChar32 c;
++  UChar32 operator()(const char** p, const char* end) {
++    UChar32 c;
+     int offset = 0;
+-    CBU8_NEXT(*p, offset, end - *p, c);
++    U8_NEXT(*p, offset, end - *p, c);
+     *p += offset;
+     return c;
+   }
+ };
+ 
+ struct NextCharUTF16 {
+-  base_icu::UChar32 operator()(const char16** p, const char16* end) {
+-    base_icu::UChar32 c;
++  UChar32 operator()(const char16** p, const char16* end) {
++    UChar32 c;
+     int offset = 0;
+-    CBU16_NEXT(*p, offset, end - *p, c);
++    U16_NEXT(*p, offset, end - *p, c);
+     *p += offset;
+     return c;
+   }
+--- a/src/3rdparty/chromium/base/strings/string_split.cc
++++ b/src/3rdparty/chromium/base/strings/string_split.cc
+@@ -8,7 +8,7 @@
+ 
+ #include "base/logging.h"
+ #include "base/strings/string_util.h"
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ 
+ namespace base {
+ 
+--- a/src/3rdparty/chromium/base/strings/string_util.cc
++++ b/src/3rdparty/chromium/base/strings/string_util.cc
+@@ -25,7 +25,7 @@
+ #include "base/memory/singleton.h"
+ #include "base/strings/utf_string_conversion_utils.h"
+ #include "base/strings/utf_string_conversions.h"
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ #include "build/build_config.h"
+ 
+ namespace base {
+@@ -357,19 +357,19 @@ void TruncateUTF8ToByteSize(const std::s
+   }
+   DCHECK_LE(byte_size,
+             static_cast<uint32_t>(std::numeric_limits<int32_t>::max()));
+-  // Note: This cast is necessary because CBU8_NEXT uses int32_ts.
++  // Note: This cast is necessary because U8_NEXT uses int32_ts.
+   int32_t truncation_length = static_cast<int32_t>(byte_size);
+   int32_t char_index = truncation_length - 1;
+   const char* data = input.data();
+ 
+-  // Using CBU8, we will move backwards from the truncation point
++  // Using U8, we will move backwards from the truncation point
+   // to the beginning of the string looking for a valid UTF8
+   // character.  Once a full UTF8 character is found, we will
+   // truncate the string to the end of that character.
+   while (char_index >= 0) {
+     int32_t prev = char_index;
+-    base_icu::UChar32 code_point = 0;
+-    CBU8_NEXT(data, char_index, truncation_length, code_point);
++    UChar32 code_point = 0;
++    U8_NEXT(data, char_index, truncation_length, code_point);
+     if (!IsValidCharacter(code_point) ||
+         !IsValidCodepoint(code_point)) {
+       char_index = prev - 1;
+@@ -522,7 +522,7 @@ bool IsStringUTF8(const StringPiece& str
+ 
+   while (char_index < src_len) {
+     int32_t code_point;
+-    CBU8_NEXT(src, char_index, src_len, code_point);
++    U8_NEXT(src, char_index, src_len, code_point);
+     if (!IsValidCharacter(code_point))
+       return false;
+   }
+--- a/src/3rdparty/chromium/base/strings/utf_string_conversion_utils.cc
++++ b/src/3rdparty/chromium/base/strings/utf_string_conversion_utils.cc
+@@ -4,7 +4,7 @@
+ 
+ #include "base/strings/utf_string_conversion_utils.h"
+ 
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ 
+ namespace base {
+ 
+@@ -18,7 +18,7 @@ bool ReadUnicodeCharacter(const char* sr
+   // use a signed type for code_point.  But this function returns false
+   // on error anyway, so code_point_out is unsigned.
+   int32_t code_point;
+-  CBU8_NEXT(src, *char_index, src_len, code_point);
++  U8_NEXT(src, *char_index, src_len, code_point);
+   *code_point_out = static_cast<uint32_t>(code_point);
+ 
+   // The ICU macro above moves to the next char, we want to point to the last
+@@ -33,16 +33,16 @@ bool ReadUnicodeCharacter(const char16*
+                           int32_t src_len,
+                           int32_t* char_index,
+                           uint32_t* code_point) {
+-  if (CBU16_IS_SURROGATE(src[*char_index])) {
+-    if (!CBU16_IS_SURROGATE_LEAD(src[*char_index]) ||
++  if (U16_IS_SURROGATE(src[*char_index])) {
++    if (!U16_IS_SURROGATE_LEAD(src[*char_index]) ||
+         *char_index + 1 >= src_len ||
+-        !CBU16_IS_TRAIL(src[*char_index + 1])) {
++        !U16_IS_TRAIL(src[*char_index + 1])) {
+       // Invalid surrogate pair.
+       return false;
+     }
+ 
+     // Valid surrogate pair.
+-    *code_point = CBU16_GET_SUPPLEMENTARY(src[*char_index],
++    *code_point = U16_GET_SUPPLEMENTARY(src[*char_index],
+                                           src[*char_index + 1]);
+     (*char_index)++;
+   } else {
+@@ -76,30 +76,30 @@ size_t WriteUnicodeCharacter(uint32_t co
+   }
+ 
+ 
+-  // CBU8_APPEND_UNSAFE can append up to 4 bytes.
++  // U8_APPEND_UNSAFE can append up to 4 bytes.
+   size_t char_offset = output->length();
+   size_t original_char_offset = char_offset;
+-  output->resize(char_offset + CBU8_MAX_LENGTH);
++  output->resize(char_offset + U8_MAX_LENGTH);
+ 
+-  CBU8_APPEND_UNSAFE(&(*output)[0], char_offset, code_point);
++  U8_APPEND_UNSAFE(&(*output)[0], char_offset, code_point);
+ 
+-  // CBU8_APPEND_UNSAFE will advance our pointer past the inserted character, so
++  // U8_APPEND_UNSAFE will advance our pointer past the inserted character, so
+   // it will represent the new length of the string.
+   output->resize(char_offset);
+   return char_offset - original_char_offset;
+ }
+ 
+ size_t WriteUnicodeCharacter(uint32_t code_point, string16* output) {
+-  if (CBU16_LENGTH(code_point) == 1) {
++  if (U16_LENGTH(code_point) == 1) {
+     // Thie code point is in the Basic Multilingual Plane (BMP).
+     output->push_back(static_cast<char16>(code_point));
+     return 1;
+   }
+   // Non-BMP characters use a double-character encoding.
+   size_t char_offset = output->length();
+-  output->resize(char_offset + CBU16_MAX_LENGTH);
+-  CBU16_APPEND_UNSAFE(&(*output)[0], char_offset, code_point);
+-  return CBU16_MAX_LENGTH;
++  output->resize(char_offset + U16_MAX_LENGTH);
++  U16_APPEND_UNSAFE(&(*output)[0], char_offset, code_point);
++  return U16_MAX_LENGTH;
+ }
+ 
+ // Generalized Unicode converter -----------------------------------------------
+--- a/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
++++ b/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
+@@ -472,7 +472,6 @@ def write_gn_ninja(path, root_gen_dir, o
+       'base/task_scheduler/task_traits.cc',
+       'base/third_party/dmg_fp/dtoa_wrapper.cc',
+       'base/third_party/dmg_fp/g_fmt.cc',
+-      'base/third_party/icu/icu_utf.cc',
+       'base/threading/non_thread_safe_impl.cc',
+       'base/threading/post_task_and_reply_impl.cc',
+       'base/threading/sequenced_task_runner_handle.cc',
+@@ -574,7 +573,7 @@ def write_gn_ninja(path, root_gen_dir, o
+     }
+ 
+   if is_linux:
+-    libs.extend(['-lrt', '-lnspr4'])
++    libs.extend(['-lrt', '-lnspr4', '-licuuc'])
+     ldflags.extend(['-pthread'])
+ 
+     static_libraries['xdg_user_dirs'] = {
+--- a/src/3rdparty/chromium/tools/gn/BUILD.gn
++++ b/src/3rdparty/chromium/tools/gn/BUILD.gn
+@@ -277,6 +277,7 @@ executable("gn") {
+ 
+   libs = [
+     "nspr4",
++    "icuuc",
+   ]
+ }
+ 
+--- a/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc
++++ b/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc
+@@ -5,13 +5,13 @@
+ #include "ui/gfx/utf16_indexing.h"
+ 
+ #include "base/logging.h"
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ 
+ namespace gfx {
+ 
+ bool IsValidCodePointIndex(const base::string16& s, size_t index) {
+   return index == 0 || index == s.length() ||
+-    !(CBU16_IS_TRAIL(s[index]) && CBU16_IS_LEAD(s[index - 1]));
++    !(U16_IS_TRAIL(s[index]) && U16_IS_LEAD(s[index - 1]));
+ }
+ 
+ ptrdiff_t UTF16IndexToOffset(const base::string16& s, size_t base, size_t pos) {

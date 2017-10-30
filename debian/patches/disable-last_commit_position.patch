@@ -1,0 +1,62 @@
+Description: Disable last_commit_position
+ In Debian, we work off of tarballs that aren't Git repositories. We can't
+ expect a Git directory to exist in the tarball, so just remove this useless
+ function.
+Author: Simon Quigley <tsimonq2@ubuntu.com>
+Forwarded: not-needed
+Last-Update: 2017-06-25
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/3rdparty/chromium/tools/gn/BUILD.gn
++++ b/src/3rdparty/chromium/tools/gn/BUILD.gn
+@@ -237,26 +237,6 @@ static_library("gn_lib") {
+   ]
+ }
+ 
+-action("last_commit_position") {
+-  script = "last_commit_position.py"
+-
+-  # This dependency forces a re-run when the code is synced.
+-  inputs = [
+-    "//build/util/LASTCHANGE",
+-  ]
+-
+-  outfile = "$target_gen_dir/last_commit_position.h"
+-  outputs = [
+-    outfile,
+-  ]
+-
+-  args = [
+-    rebase_path("//", root_build_dir),
+-    rebase_path(outfile, root_build_dir),
+-    "TOOLS_GN_LAST_COMMIT_POSITION_H_",
+-  ]
+-}
+-
+ # Note for Windows debugging: GN is super-multithreaded and uses a lot of STL.
+ # Iterator debugging on Windows does locking for every access, which ends up
+ # slowing down debug runtime from 0:36 to 9:40. If you want to run debug builds
+@@ -269,7 +249,6 @@ executable("gn") {
+ 
+   deps = [
+     ":gn_lib",
+-    ":last_commit_position",
+     "//base",
+     "//build/config/sanitizers:deps",
+     "//build/win:default_exe_manifest",
+--- a/src/3rdparty/chromium/tools/gn/gn_main.cc
++++ b/src/3rdparty/chromium/tools/gn/gn_main.cc
+@@ -12,13 +12,7 @@
+ #include "tools/gn/standard_out.h"
+ #include "tools/gn/switches.h"
+ 
+-// Only the GN-generated build makes this header for now.
+-// TODO(brettw) consider adding this if we need it in GYP.
+-#if defined(GN_BUILD)
+-#include "tools/gn/last_commit_position.h"
+-#else
+ #define LAST_COMMIT_POSITION "UNKNOWN"
+-#endif
+ 
+ namespace {
+ 
