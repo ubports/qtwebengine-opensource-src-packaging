@@ -8,4 +8,5 @@ disable-last_commit_position.patch
 add_mips_support.patch
 verbose-gn-bootstrap.patch
 armhf-options.patch
+fix-host-arch-detection.patch
 fix-multilib-builds.patch

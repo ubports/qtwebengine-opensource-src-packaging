@@ -1,0 +1,92 @@
+From 77cf13a719b567df009f825c09c693e15d6ef651 Mon Sep 17 00:00:00 2001
+From: Allan Sandfeld Jensen <allan.jensen@qt.io>
+Date: Tue, 20 Jun 2017 11:26:29 +0200
+Subject: [PATCH] Fix host architecture detection
+
+Read the correct QT_ARCH and QT_TARGET_ARCH variables from QMAKE. This
+fixes cases where toolchain arch does not match host arch (e.g. x86 tools
+on x64).
+
+Also removes unnecessary WEBENGINE_ARCH variable, and a mismatch in GN
+mips names.
+
+Task-number: QTBUG-61528
+Change-Id: I11b050977ce6203c10d1776a15eb32efa4693290
+Reviewed-by: Rolf Eike Beer <eb@emlix.com>
+Reviewed-by: Michal Klocek <michal.klocek@qt.io>
+Reviewed-by: Oswald Buddenhagen <oswald.buddenhagen@qt.io>
+---
+ mkspecs/features/configure.prf    | 4 ----
+ src/buildtools/configure_host.pro | 9 +++++----
+ src/core/config/linux.pri         | 5 +++--
+ 3 files changed, 8 insertions(+), 10 deletions(-)
+
+diff --git a/mkspecs/features/configure.prf b/mkspecs/features/configure.prf
+index c1e91960..f7a38ac1 100644
+--- a/mkspecs/features/configure.prf
++++ b/mkspecs/features/configure.prf
+@@ -133,10 +133,6 @@ defineTest(runConfigure) {
+             cache(WEBENGINE_CONFIG, add, $$list($$WEBENGINE_CONFIG))
+             export(WEBENGINE_CONFIG)
+         }
+-        # Set a global WEBENGINE_ARCH for the target architecture we can also read from option(host_build)
+-        WEBENGINE_ARCH = $$QT_ARCH
+-        cache(WEBENGINE_ARCH)
+-        export(WEBENGINE_ARCH)
+     }
+ 
+     unix:!darwin {
+diff --git a/src/buildtools/configure_host.pro b/src/buildtools/configure_host.pro
+index fd27643e..f1b3d47b 100644
+--- a/src/buildtools/configure_host.pro
++++ b/src/buildtools/configure_host.pro
+@@ -4,8 +4,9 @@ TEMPLATE = aux
+ # Pick up the host toolchain
+ option(host_build)
+ 
+-GN_HOST_CPU = $$gnArch($$QMAKE_HOST.arch)
+-GN_TARGET_CPU = $$gnArch($$WEBENGINE_ARCH)
++GN_HOST_CPU = $$gnArch($$QT_ARCH)
++!isEmpty(QT_TARGET_ARCH): GN_TARGET_CPU = $$gnArch($$QT_TARGET_ARCH)
++else: GN_TARGET_CPU = $$GN_HOST_CPU
+ GN_OS = $$gnOS()
+ 
+ clang: GN_CLANG = true
+@@ -15,11 +16,11 @@ use_gold_linker: GN_USE_GOLD=true
+ else: GN_USE_GOLD=false
+ 
+ GN_V8_HOST_CPU = $$GN_HOST_CPU
+-contains(GN_TARGET_CPU, "arm")|contains(GN_TARGET_CPU, "mips")|contains(GN_TARGET_CPU, "x86") {
++contains(GN_TARGET_CPU, "arm")|contains(GN_TARGET_CPU, "mipsel")|contains(GN_TARGET_CPU, "x86") {
+     # The v8 snapshot need a host that matches bitwidth, so we build makesnapshot to 32-bit variants of host.
+     contains(GN_V8_HOST_CPU, x64): GN_V8_HOST_CPU = "x86"
+     else: contains(GN_V8_HOST_CPU, arm64): GN_V8_HOST_CPU = "arm"
+-    else: contains(GN_V8_HOST_CPU, mips64): GN_V8_HOST_CPU = "mips"
++    else: contains(GN_V8_HOST_CPU, mips64el): GN_V8_HOST_CPU = "mipsel"
+ }
+ 
+ # We always use the gcc_toolchain, because clang_toolchain is just
+diff --git a/src/core/config/linux.pri b/src/core/config/linux.pri
+index 076d8a3c..60cfa685 100644
+--- a/src/core/config/linux.pri
++++ b/src/core/config/linux.pri
+@@ -98,6 +98,8 @@ contains(QT_ARCH, "mips"):!host_build {
+ 
+ host_build {
+     gn_args += custom_toolchain=\"$$QTWEBENGINE_OUT_ROOT/src/toolchain:host\"
++    GN_HOST_CPU = $$gnArch($$QT_ARCH)
++    gn_args += host_cpu=\"$$GN_HOST_CPU\"
+     # Don't bother trying to use system libraries in this case
+     gn_args += use_glib=false
+     gn_args += use_system_libffi=false
+@@ -106,9 +108,8 @@ host_build {
+     gn_args += host_toolchain=\"$$QTWEBENGINE_OUT_ROOT/src/toolchain:host\"
+     cross_compile {
+         gn_args += v8_snapshot_toolchain=\"$$QTWEBENGINE_OUT_ROOT/src/toolchain:v8_snapshot\"
+-        GN_HOST_CPU = $$gnArch($$QMAKE_HOST.arch)
+         GN_TARGET_CPU = $$gnArch($$QT_ARCH)
+-        gn_args += host_cpu=\"$$GN_HOST_CPU\" target_cpu=\"$$GN_TARGET_CPU\"
++        gn_args += target_cpu=\"$$GN_TARGET_CPU\"
+     }
+     !contains(QT_CONFIG, no-pkg-config) {
+         # Strip '>2 /dev/null' from $$pkgConfigExecutable()

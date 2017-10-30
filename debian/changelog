@@ -1,7 +1,7 @@
 qtwebengine-opensource-src (5.9.1+dfsg+ubports1) xenial; urgency=medium
 
-  * Add patch: Fix multilib builds with different archs of toolchain and
- system
+  * Add patch: Fix multilib builds with different archs of toolchain and system
+  * Add patch: Fix host architecture detection
 
  -- Marius Gripsgard <marius@ubports.com>  Mon, 30 Oct 2017 15:13:59 +0100
 
