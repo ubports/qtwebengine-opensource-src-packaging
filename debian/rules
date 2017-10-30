@@ -67,7 +67,6 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(small_architectures)))
 endif
 
 config_args = -proprietary-codecs \
-              -system-ffmpeg \
               -system-opus \
               -system-webp \
               -system-webengine-icu
