@@ -11,6 +11,7 @@ qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
     System re2 is auto-detected out of the box.
   * Update system-icu-utf.patch to fix linking with icuuc.
   * Update system-nspr-prtime.patch.
+  * Update verbose-gn-bootstrap.patch.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 09 Nov 2017 13:46:23 +0300
 
