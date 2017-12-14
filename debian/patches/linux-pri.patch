@@ -4,18 +4,15 @@ Author: Kevin Kofler
 Origin: Fedora, http://pkgs.fedoraproject.org/cgit/rpms/qt5-qtwebengine.git/commit/qtwebengine-opensource-src-5.9.0-linux-pri.patch?id=c87d486b0024c40d9ecb66f76d518aadb53deb92
 Forwarded: not-needed
 Reviewed-by: Sandro Knauß <hefee@debian.org>
-Last-Update: 2017-06-29
+Last-Update: 2018-03-04
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/core/config/linux.pri
 +++ b/src/core/config/linux.pri
-@@ -153,3 +153,22 @@ host_build {
-     use?(system_re2):      gn_args += use_system_re2=true
-     #use?(system_protobuf): gn_args += use_system_protobuf=true
+@@ -164,3 +164,19 @@ host_build {
+     #qtConfig(webengine-system-jsoncpp): gn_args += use_system_jsoncpp=true
+     #qtConfig(webengine-system-libsrtp: gn_args += use_system_libsrtp=true
  }
-+
-+# some more system packages, that are not checked for for some reason
-+gn_args += use_system_re2=true
 +
 +# yasm is only used on x86, and passing use_system_yasm makes the build fail on
 +# other architectures (e.g., ARM), so make it conditional on the architecture
@@ -29,6 +26,6 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +# run the unbundling script Chromium provides
 +CHROMIUM_SRC_DIR = "$$QTWEBENGINE_ROOT/$$getChromiumSrcDir()"
 +R_G_F_PY = "$$CHROMIUM_SRC_DIR/build/linux/unbundle/replace_gn_files.py"
-+R_G_F_PY_ARGS = "--system-libraries re2 yasm"
++R_G_F_PY_ARGS = "--system-libraries yasm"
 +log("Running python $$R_G_F_PY $$R_G_F_PY_ARGS$${EOL}")
 +!system("python $$R_G_F_PY $$R_G_F_PY_ARGS"): error("-- unbundling failed")

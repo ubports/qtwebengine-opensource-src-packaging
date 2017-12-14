@@ -1,5 +1,4 @@
 linux-pri.patch
-system-re2.patch
 system-lcms2.patch
 system-nspr-prtime.patch
 system-icu-utf.patch

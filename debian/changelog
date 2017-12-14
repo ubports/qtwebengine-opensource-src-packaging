@@ -6,6 +6,10 @@ qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
   * Update debian/watch for the new upstream tarball names.
   * Remove items from Files-Excluded which are no longer in the tarball.
 
+  [ Alexander Volkov ]
+  * Drop system-re2.patch and remove re2 changes from linux-pri.patch.
+    System re2 is auto-detected out of the box.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 09 Nov 2017 13:46:23 +0300
 
 qtwebengine-opensource-src (5.9.2+dfsg-2) unstable; urgency=medium
