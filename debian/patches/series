@@ -10,3 +10,4 @@ verbose-gn-bootstrap.patch
 armhf-options.patch
 fix-host-arch-detection.patch
 fix-multilib-builds.patch
+0001-Add-support-for-mir.patch
