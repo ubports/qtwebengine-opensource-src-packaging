@@ -10,20 +10,15 @@ Files-Excluded: src/3rdparty/chromium/third_party/apple_apsl/*
                 src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js
                 src/3rdparty/chromium/third_party/blanketjs/src/blanket.js
                 src/3rdparty/chromium/third_party/chaijs/chai.js
-                src/3rdparty/chromium/chrome/browser/resources/md_downloads/crisper.js
-                src/3rdparty/chromium/chrome/browser/resources/md_history/app.crisper.js
-                src/3rdparty/chromium/chrome/browser/resources/md_history/lazy_load.crisper.js
                 src/3rdparty/chromium/third_party/dom_distiller_js/dist/js/*.js
                 src/3rdparty/chromium/third_party/pycoverage/coverage/htmlfiles/*.min.js
                 src/3rdparty/chromium/third_party/pyelftools/examples/sample_exe64.elf
                 src/3rdparty/chromium/third_party/skia/platform_tools/android/bin/linux/perfhost
-                src/3rdparty/chromium/third_party/skia/third_party/yasm/android/yasm-android
                 src/3rdparty/chromium/third_party/skia/resources/icc_profiles/srgb_lab_pcs.icc
                 src/3rdparty/chromium/third_party/web-animations-js/sources/*.min.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/gonzales/gonzales-scss.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/network/NetworkConfigView.js
-                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/settings/EditFileSystemView.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/audits2_worker/lighthouse/lighthouse-background.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/formatter_worker/acorn/acorn.js
                 src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/*.min.js
