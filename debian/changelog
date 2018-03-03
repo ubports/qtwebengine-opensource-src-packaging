@@ -2,7 +2,6 @@ qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
   * New upstream release.
-  * Backport upstream patch to fix build with ICU 60.
   * Update debian/watch for the new upstream tarball names.
   * Remove items from Files-Excluded which are no longer in the tarball.
 
