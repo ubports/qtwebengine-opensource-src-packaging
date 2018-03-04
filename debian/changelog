@@ -5,6 +5,7 @@ qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
   * Update debian/watch for the new upstream tarball names.
   * Remove items from Files-Excluded which are no longer in the tarball.
   * Refresh other patches.
+  * Bump Qt build-dependencies to 5.10.1.
 
   [ Alexander Volkov ]
   * Drop system-re2.patch and remove re2 changes from linux-pri.patch.
