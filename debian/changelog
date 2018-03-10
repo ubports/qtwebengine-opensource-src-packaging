@@ -1,12 +1,11 @@
-qtwebengine-opensource-src (5.9.2+dfsg-3) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.9.2+dfsg-3) unstable; urgency=medium
 
-  [ Dmitry Shachnev ]
   * Backport upstream patch to fix build with ICU 60.
   * Forcefully disable make output synchronization introduced in debhelper
     11.1.5~alpha1. Ninja is a single process, and with synchronized output
     the buildds do not see any activity and think that the build is hung.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 09 Nov 2017 13:46:23 +0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 10 Mar 2018 16:01:36 +0300
 
 qtwebengine-opensource-src (5.9.2+dfsg-2) unstable; urgency=medium
 
