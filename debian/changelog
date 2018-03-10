@@ -8,6 +8,7 @@ qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
   * Bump Qt build-dependencies to 5.10.1.
   * Update symbols files from the current build log.
   * Stop using WEBENGINE_CONFIG, it has been removed in 5.10.
+  * Remove undefined linux_link_libpci option.
 
   [ Alexander Volkov ]
   * Drop system-re2.patch and remove re2 changes from linux-pri.patch.

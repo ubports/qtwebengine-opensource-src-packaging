@@ -1,15 +1,14 @@
-Description: some tweaks to linux.pri
- use system libs, link libpci, run unbundling script
+Description: use system yasm, run unbundling script
 Author: Kevin Kofler
-Origin: Fedora, http://pkgs.fedoraproject.org/cgit/rpms/qt5-qtwebengine.git/commit/qtwebengine-opensource-src-5.9.0-linux-pri.patch?id=c87d486b0024c40d9ecb66f76d518aadb53deb92
+Origin: Fedora, https://src.fedoraproject.org/rpms/qt5-qtwebengine/blob/master/f/qtwebengine-everywhere-src-5.10.0-linux-pri.patch
 Forwarded: not-needed
 Reviewed-by: Sandro Knauß <hefee@debian.org>
-Last-Update: 2018-03-04
+Last-Update: 2018-03-10
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/core/config/linux.pri
 +++ b/src/core/config/linux.pri
-@@ -164,3 +164,19 @@ host_build {
+@@ -164,3 +164,16 @@ host_build {
      #qtConfig(webengine-system-jsoncpp): gn_args += use_system_jsoncpp=true
      #qtConfig(webengine-system-libsrtp: gn_args += use_system_libsrtp=true
  }
@@ -19,9 +18,6 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +contains(QT_ARCH, "x86_64")|contains(QT_ARCH, "i386") {
 +    gn_args += use_system_yasm=true
 +}
-+
-+# link libpci instead of dlopening it, our Qt packaging depends on it anyway
-+gn_args += linux_link_libpci=true
 +
 +# run the unbundling script Chromium provides
 +CHROMIUM_SRC_DIR = "$$QTWEBENGINE_ROOT/$$getChromiumSrcDir()"
