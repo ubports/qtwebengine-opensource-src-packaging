@@ -186,7 +186,7 @@ endif
 	done
 
 override_dh_auto_build-arch:
-	dh_auto_build
+	dh_auto_build -- -Onone
 
 #we also need the resources.pak files, so we need the normal build.
 override_dh_auto_build-indep: override_dh_auto_build-arch

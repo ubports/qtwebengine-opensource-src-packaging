@@ -17,6 +17,15 @@ qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 09 Nov 2017 13:46:23 +0300
 
+qtwebengine-opensource-src (5.9.2+dfsg-3) unstable; urgency=medium
+
+  * Backport upstream patch to fix build with ICU 60.
+  * Forcefully disable make output synchronization introduced in debhelper
+    11.1.5~alpha1. Ninja is a single process, and with synchronized output
+    the buildds do not see any activity and think that the build is hung.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 10 Mar 2018 16:01:36 +0300
+
 qtwebengine-opensource-src (5.9.2+dfsg-2) unstable; urgency=medium
 
   * Update for Qt binaries location change in qtbase 5.9.2+dfsg-3.
