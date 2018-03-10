@@ -9,6 +9,8 @@ qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
   * Update symbols files from the current build log.
   * Stop using WEBENGINE_CONFIG, it has been removed in 5.10.
   * Remove undefined linux_link_libpci option.
+  * Remove undefined use_system_yasm option, we unbundle it using the
+    replace_gn_files.py script anyway.
 
   [ Alexander Volkov ]
   * Drop system-re2.patch and remove re2 changes from linux-pri.patch.

@@ -1,4 +1,4 @@
-linux-pri.patch
+run-unbundling-script.patch
 system-lcms2.patch
 system-nspr-prtime.patch
 system-icu-utf.patch
