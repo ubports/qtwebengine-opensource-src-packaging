@@ -1,6 +1,7 @@
-# SymbolsHelper-Confirmed: 5.9.0 amd64
+# SymbolsHelper-Confirmed: 5.10.1 amd64
 libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1
+ Qt_5.10@Qt_5.10 5.10.1
  Qt_5.1@Qt_5.1 5.7.1
  Qt_5.2@Qt_5.2 5.7.1
  Qt_5.3@Qt_5.3 5.7.1
@@ -69,6 +70,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEnginePage7scriptsEv@Qt_5 5.7.1
  _ZN14QWebEnginePage7setHtmlERK7QStringRK4QUrl@Qt_5 5.7.1
  _ZN14QWebEnginePage7setViewEP7QWidget@Qt_5 5.7.1
+ _ZN14QWebEnginePage8downloadERK4QUrlRK7QString@Qt_5 5.10.1
  _ZN14QWebEnginePage8findTextERK7QString6QFlagsINS_8FindFlagEERK18QWebEngineCallbackIbE@Qt_5 5.7.1
  _ZN14QWebEnginePageC1EP17QWebEngineProfileP7QObject@Qt_5 5.7.1
  _ZN14QWebEnginePageC1EP7QObject@Qt_5 5.7.1
@@ -194,11 +196,14 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN22QWebEngineDownloadItem11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItem11qt_metacastEPKc@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItem12stateChangedENS_13DownloadStateE@Qt_5 5.7.1
+ _ZN22QWebEngineDownloadItem15isPausedChangedEb@Qt_5 5.10.1
  _ZN22QWebEngineDownloadItem16downloadProgressExx@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItem16staticMetaObjectE@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItem17setSavePageFormatENS_14SavePageFormatE@Qt_5 5.7.1
+ _ZN22QWebEngineDownloadItem5pauseEv@Qt_5 5.10.1
  _ZN22QWebEngineDownloadItem6acceptEv@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItem6cancelEv@Qt_5 5.7.1
+ _ZN22QWebEngineDownloadItem6resumeEv@Qt_5 5.10.1
  _ZN22QWebEngineDownloadItem7setPathE7QString@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItem8finishedEv@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItemC1EP29QWebEngineDownloadItemPrivateP7QObject@Qt_5 5.7.1
@@ -325,6 +330,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK22QWebEngineDownloadItem4pathEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem4typeEv@Qt_5 5.9.0
  _ZNK22QWebEngineDownloadItem5stateEv@Qt_5 5.7.1
+ _ZNK22QWebEngineDownloadItem8isPausedEv@Qt_5 5.10.1
  _ZNK22QWebEngineDownloadItem8mimeTypeEv@Qt_5 5.7.1
  _ZNK25QWebEngineContextMenuData12selectedTextEv@Qt_5 5.7.1
  _ZNK25QWebEngineContextMenuData14misspelledWordEv@Qt_5 5.9.0
