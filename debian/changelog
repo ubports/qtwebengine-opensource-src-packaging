@@ -12,6 +12,7 @@ qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
   * Remove undefined use_system_yasm option, we unbundle it using the
     replace_gn_files.py script anyway.
   * Sort Files-Excluded field in debian/copyright.
+  * Fix or override some Lintian source-is-missing warnings.
 
   [ Alexander Volkov ]
   * Drop system-re2.patch and remove re2 changes from linux-pri.patch.

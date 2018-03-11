@@ -10,6 +10,7 @@ Files-Excluded: src/3rdparty/chromium/third_party/analytics/google-analytics-bun
                 src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cctools/*
                 src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cf/*
                 src/3rdparty/chromium/third_party/dom_distiller_js/dist/js/*.js
+                src/3rdparty/chromium/third_party/eu-strip/bin/eu-strip
                 src/3rdparty/chromium/third_party/flot/*
                 src/3rdparty/chromium/third_party/jstemplate/jstemplate_compiled.js
                 src/3rdparty/chromium/third_party/libxslt/linux/config.log
