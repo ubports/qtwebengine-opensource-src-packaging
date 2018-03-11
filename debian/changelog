@@ -1,4 +1,4 @@
-qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.10.1+dfsg-1) experimental; urgency=medium
 
   [ Dmitry Shachnev ]
   * New upstream release.
@@ -21,7 +21,7 @@ qtwebengine-opensource-src (5.10.1+dfsg-1) UNRELEASED; urgency=medium
   * Update system-nspr-prtime.patch.
   * Update verbose-gn-bootstrap.patch.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 09 Nov 2017 13:46:23 +0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 12 Mar 2018 00:57:13 +0300
 
 qtwebengine-opensource-src (5.9.2+dfsg-3) unstable; urgency=medium
 
