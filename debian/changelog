@@ -1,3 +1,7 @@
+qtwebengine-opensource-src (5.10.1+dfsg-3) UNRELEASED; urgency=medium
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 07 Apr 2018 20:38:42 -0300
+
 qtwebengine-opensource-src (5.10.1+dfsg-2) experimental; urgency=medium
 
   * Update debian/libqt5webenginecore5.symbols from buildds’ logs.
