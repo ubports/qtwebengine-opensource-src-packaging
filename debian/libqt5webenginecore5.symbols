@@ -866,8 +866,6 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  (optional=templinst|subst)_ZNSt11_Deque_baseISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_ESaIS7_EE17_M_initialize_mapE{size_t}@Qt_5 5.9.0
  (optional=templinst|subst)_ZNSt11_Deque_baseISt4pairI{int64_t}jESaIS1_EED1Ev@Qt_5 5.7.1
  (optional=templinst|subst)_ZNSt11_Deque_baseISt4pairI{int64_t}jESaIS1_EED2Ev@Qt_5 5.7.1
- (optional=templinst|subst|arch=armhf)_ZNSt11_Deque_baseISt4pairI{uint64_t}jESaIS1_EED1Ev@Qt_5 5.7.1
- (optional=templinst|subst|arch=!amd64 !arm64 !i386)_ZNSt11_Deque_baseISt4pairI{uint64_t}jESaIS1_EED2Ev@Qt_5 5.7.1
  (optional=templinst|subst)_ZNSt11_Deque_baseIcSaIcEE17_M_initialize_mapE{size_t}@Qt_5 5.7.1
  (optional=templinst|arch=armhf i386 mipsel)_ZNSt11_Deque_baseIiSaIiEE17_M_initialize_mapEj@Qt_5 5.7.1
  (optional=templinst|arch=amd64 arm64)_ZNSt11_Deque_baseIiSaIiEE17_M_initialize_mapEm@Qt_5 5.7.1
@@ -894,6 +892,7 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  (optional=templinst)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv@Qt_5 5.9.0
  (optional=templinst)_ZNSt17_Function_handlerIFviPKcEPS2_E9_M_invokeERKSt9_Any_dataOiOS1_@Qt_5 5.9.0
  (optional=templinst)_ZNSt17_Function_handlerIFvvEPS0_E9_M_invokeERKSt9_Any_data@Qt_5 5.9.0
+ (optional=templinst|arch=amd64 arm64)_ZNSt3_V28__rotateIN9__gnu_cxx17__normal_iteratorIPjSt6vectorIjSaIjEEEEEET_S8_S8_S8_St26random_access_iterator_tag@Qt_5 5.10.1
  (optional=templinst|arch=!amd64 !arm64)_ZNSt3_V28__rotateIN9__gnu_cxx17__normal_iteratorIPySt6vectorIySaIyEEEEEET_S8_S8_S8_St26random_access_iterator_tag@Qt_5 5.10.1
  (optional=templinst|subst)_ZNSt3_V28__rotateIN9__gnu_cxx17__normal_iteratorIP{size_t}St6vectorI{size_t}SaI{size_t}EEEEEET_S8_S8_S8_St26random_access_iterator_tag@Qt_5 5.9.0
  (optional=templinst)_ZNSt3_V28__rotateIPfEET_S2_S2_S2_St26random_access_iterator_tag@Qt_5 5.9.0
@@ -1262,7 +1261,6 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  (optional=templinst|arch=armhf i386 mipsel)_ZNSt6vectorIjSaIjEE17_M_default_appendEj@Qt_5 5.7.1
  (optional=templinst|arch=amd64 arm64)_ZNSt6vectorIjSaIjEE17_M_default_appendEm@Qt_5 5.7.1
  (optional=templinst)_ZNSt6vectorIjSaIjEE17_M_realloc_insertIJRKjEEEvN9__gnu_cxx17__normal_iteratorIPjS1_EEDpOT_@Qt_5 5.9.1
- (optional=templinst)_ZNSt6vectorIjSaIjEE17_M_realloc_insertIJRjEEEvN9__gnu_cxx17__normal_iteratorIPjS1_EEDpOT_@Qt_5 5.10.1
  (optional=templinst)_ZNSt6vectorIjSaIjEE17_M_realloc_insertIJjEEEvN9__gnu_cxx17__normal_iteratorIPjS1_EEDpOT_@Qt_5 5.9.1
  (optional=templinst|arch=armhf i386 mipsel)_ZNSt6vectorIjSaIjEE6resizeEj@Qt_5 5.9.0
  (optional=templinst|subst)_ZNSt6vectorIjSaIjEE6resizeE{size_t}RKj@Qt_5 5.10.1
@@ -1701,6 +1699,7 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  (optional=templinst)_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE12_M_erase_auxESt23_Rb_tree_const_iteratorIjE@Qt_5 5.7.1
  (optional=templinst)_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE16_M_insert_uniqueIRKjEESt4pairISt17_Rb_tree_iteratorIjEbEOT_@Qt_5 5.7.1
  (optional=templinst|arch=armhf i386 mipsel)_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE16_M_insert_uniqueISt23_Rb_tree_const_iteratorIjEEEvT_S9_@Qt_5 5.7.1
+ (optional=templinst|arch=amd64 arm64)_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE16_M_insert_uniqueIjEESt4pairISt17_Rb_tree_iteratorIjEbEOT_@Qt_5 5.10.1
  (optional=templinst)_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE24_M_get_insert_unique_posERKj@Qt_5 5.7.1
  (optional=templinst|arch=amd64 arm64)_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIjERKj@Qt_5 5.7.1
  (optional=templinst)_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE5eraseERKj@Qt_5 5.7.1
