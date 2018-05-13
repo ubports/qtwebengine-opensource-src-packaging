@@ -8,6 +8,7 @@ qtwebengine-opensource-src (5.10.1+dfsg-4) UNRELEASED; urgency=medium
     (separate-argv.patch, see upstream QTBUG-66346).
   * Update Vcs fields for migration to salsa.debian.org.
   * Update symbols files from buildds’ logs.
+  * Bump Standards-Version to 4.1.4, no changes needed.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 13 May 2018 11:18:42 +0300
 
