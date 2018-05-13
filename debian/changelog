@@ -7,6 +7,7 @@ qtwebengine-opensource-src (5.10.1+dfsg-4) UNRELEASED; urgency=medium
   * Backport upstream patch to fix QtWebEngineProcess resources loading
     (separate-argv.patch, see upstream QTBUG-66346).
   * Update Vcs fields for migration to salsa.debian.org.
+  * Update symbols files from buildds’ logs.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 13 May 2018 11:18:42 +0300
 
