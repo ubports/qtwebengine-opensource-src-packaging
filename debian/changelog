@@ -1,5 +1,9 @@
 qtwebengine-opensource-src (5.10.1+dfsg-4) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * Backport two upstream patches to fix build with system ICU 60:
+    - icu60-no-aspirational-scripts.patch to disallow aspirational scripts.
+    - icu60-uchar.patch to fix build when UChar is signed char16_t.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 13 May 2018 11:18:42 +0300
 
