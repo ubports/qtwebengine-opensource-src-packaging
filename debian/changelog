@@ -6,6 +6,7 @@ qtwebengine-opensource-src (5.10.1+dfsg-4) UNRELEASED; urgency=medium
     - icu60-uchar.patch to fix build when UChar is signed char16_t.
   * Backport upstream patch to fix QtWebEngineProcess resources loading
     (separate-argv.patch, see upstream QTBUG-66346).
+  * Update Vcs fields for migration to salsa.debian.org.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 13 May 2018 11:18:42 +0300
 
