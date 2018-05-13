@@ -1,6 +1,5 @@
-qtwebengine-opensource-src (5.10.1+dfsg-4) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.10.1+dfsg-4) unstable; urgency=medium
 
-  [ Dmitry Shachnev ]
   * Backport two upstream patches to fix build with system ICU 60:
     - icu60-no-aspirational-scripts.patch to disallow aspirational scripts.
     - icu60-uchar.patch to fix build when UChar is signed char16_t.
@@ -10,7 +9,7 @@ qtwebengine-opensource-src (5.10.1+dfsg-4) UNRELEASED; urgency=medium
   * Update symbols files from buildds’ logs.
   * Bump Standards-Version to 4.1.4, no changes needed.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 13 May 2018 11:18:42 +0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 13 May 2018 11:50:52 +0300
 
 qtwebengine-opensource-src (5.10.1+dfsg-3) unstable; urgency=medium
 
