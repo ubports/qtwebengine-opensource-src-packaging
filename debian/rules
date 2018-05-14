@@ -67,6 +67,7 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(small_architectures)))
 endif
 
 config_args = -proprietary-codecs \
+              -system-ffmpeg \
               -system-opus \
               -system-webp \
               -system-webengine-icu
@@ -98,8 +99,8 @@ override_dh_auto_clean:
 	rm -rf $(CURDIR)/src/3rdparty/chromium/third_party/jstemplate/jstemplate_compiled.js
 	rm -rf $(CURDIR)/src/3rdparty/chromium/third_party/mocha/mocha.js
 	rm -rf $(CURDIR)/examples/webenginewidgets/contentmanipulation/jquery*.js
-	rm -rf $(CURDIR)/examples/webenginewidgets/markdowneditor/resources/marked*.js
-	rm -rf $(CURDIR)/examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.*.js
+	rm -rf $(CURDIR)/examples/webenginewidgets/markdowneditor/resources/3rdparty/marked*.js
+	rm -rf $(CURDIR)/examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked*.js
 	
 	for fname in $(touch_files); do \
 		rm -rf $(CURDIR)/$${fname}; \
@@ -173,10 +174,12 @@ endif
 	
 	>examples/webenginewidgets/contentmanipulation/jquery.js cat debian/missing-sources/jquery-*.js
 	yui-compressor --type js "examples/webenginewidgets/contentmanipulation/jquery.js" -o "examples/webenginewidgets/contentmanipulation/jquery.min.js"
-	>examples/webenginewidgets/markdowneditor/resources/marked.js tar xaf debian/missing-sources/marked*.tar.gz --wildcards --to-stdout '*/marked.js'
-	>examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js tar xaf debian/missing-sources/marked*.tar.gz --wildcards --to-stdout '*/marked.js'
+	>examples/webenginewidgets/markdowneditor/resources/3rdparty/marked.js tar xaf debian/missing-sources/marked*.tar.gz --wildcards --to-stdout '*/marked.js'
+	>examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.js tar xaf debian/missing-sources/marked*.tar.gz --wildcards --to-stdout '*/marked.js'
 	>src/3rdparty/chromium/third_party/mocha/mocha.js tar xaf debian/missing-sources/mocha*.tar.gz --wildcards --to-stdout '*/mocha.js'
-	yui-compressor --type js "examples/webenginewidgets/markdowneditor/resources/marked.js" -o "examples/webenginewidgets/markdowneditor/resources/marked.min.js"
+	yui-compressor --type js "examples/webenginewidgets/markdowneditor/resources/3rdparty/marked.js" -o "examples/webenginewidgets/markdowneditor/resources/3rdparty/marked.min.js"
+	yui-compressor --type js "examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.js" -o "examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js"
+
 	
 	for fname in $(touch_files); do \
 		touch $(CURDIR)/$${fname}; \
@@ -209,9 +212,11 @@ override_dh_install-arch:
 	dh_install --fail-missing
 
 override_dh_link:
-	dh_link --package=qt5webengine-examples \
+	dh_link --package=qtwebengine5-examples \
 		usr/share/javascript/jquery/jquery.min.js usr/lib/$(DEB_HOST_MULTIARCH)/qt5/examples/webenginewidgets/contentmanipulation/jquery.min.js \
 		usr/share/javascript/marked/marked.min.js usr/lib/$(DEB_HOST_MULTIARCH)/qt5/examples/webenginewidgets/markdowneditor/resources/marked.min.js
+	dh_link --package=qtwebengine5-dev-tools \
+		usr/lib/qt5/bin/qwebengine_convert_dict usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin/qwebengine_convert_dict
 	
 	dh_link --remaining-packages
 

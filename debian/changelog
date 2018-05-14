@@ -1,11 +1,60 @@
-qtwebengine-opensource-src (5.9.1+dfsg+ubports1) xenial; urgency=medium
+qtwebengine-opensource-src (5.9.4+dfsg-0ubuntu1) bionic; urgency=medium
 
-  * Add patch: Fix multilib builds with different archs of toolchain and system
-  * Add patch: Fix host architecture detection
+  * New upstream release.
 
- -- Marius Gripsgard <marius@ubports.com>  Mon, 30 Oct 2017 15:13:59 +0100
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 26 Feb 2018 17:33:29 -0600
 
-qtwebengine-opensource-src (5.9.1+dfsg+ubports) xenial; urgency=medium
+qtwebengine-opensource-src (5.9.3+dfsg-0ubuntu1) bionic; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Backport upstream patch to fix build with ICU 60.
+
+  [ Simon Quigley ]
+  * New upstream release.
+  * Update symbols from build logs.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 09 Dec 2017 22:16:48 -0600
+
+qtwebengine-opensource-src (5.9.2+dfsg-2) unstable; urgency=medium
+
+  * Update for Qt binaries location change in qtbase 5.9.2+dfsg-3.
+    - Install qwebengine_convert_dict tool into the new location.
+    - Provide a compatibility symlink for the old location.
+    - Bump qtbase5-private-dev and qttools5-dev-tools build-dependencies.
+  * Update libqt5webenginecore5.symbols from buildds’ logs.
+  * Upload to unstable.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 27 Oct 2017 21:39:36 +0300
+
+qtwebengine-opensource-src (5.9.2+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Remove upstream applied patch: armhf-options.patch
+  * Update patch hunks.
+  * Update copyright for 5.9.2.
+  * Add new Build-Dependency: qtquickcontrols2-5-dev
+  * Bump Qt build-dependencies to 5.9.2.
+  * Update symbols for libqt5webenginecore5 for 5.9.2 for amd64.
+  * Synchronize missing-sources for 5.9.2.
+  * Update lintian-overrides for source.
+  * Update lintian-overrides for libqt5webenginecore5
+
+ -- Sandro Knauß <hefee@debian.org>  Thu, 19 Oct 2017 14:33:00 +0200
+
+qtwebengine-opensource-src (5.9.1+dfsg-5) unstable; urgency=medium
+
+  * Drop add_mips_support.patch. Chromium cannot be built for big endian
+    anyway, because of skia.
+  * Limit Architecture field to architectures supported by upstream
+    (closes: #864323, #864324, #864325, #864326).
+  * Fix package name in dh_link command (closes: #876860).
+  * Bump Standards-Version to 4.1.1, stop using deprecated Priority: extra.
+  * Drop autotools-dev and dh-autoreconf build-dependencies, they are
+    unnecessary with debhelper 10.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 30 Sep 2017 20:25:06 +0300
+
+qtwebengine-opensource-src (5.9.1+dfsg-4) unstable; urgency=medium
 
   * Disable gold on arm64, to workaround bug #869768.
   * Add the needed QML dependencies to qtwebengine5-examples package

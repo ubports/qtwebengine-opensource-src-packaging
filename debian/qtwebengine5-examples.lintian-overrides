@@ -1,2 +1,0 @@
-#jQuery is changing very fast there interface, and we have no way to make sure, that a new jquery works again with this example
-qtwebengine5-examples: embedded-javascript-library usr/lib/x86_64-linux-gnu/qt5/examples/webenginewidgets/contentmanipulation/jquery.min.js please use libjs-jquery

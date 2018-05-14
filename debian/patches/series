@@ -5,12 +5,5 @@ system-nspr-prtime.patch
 system-icu-utf.patch
 no-icudtl-dat.patch
 disable-last_commit_position.patch
-add_mips_support.patch
 verbose-gn-bootstrap.patch
-armhf-options.patch
-fix-host-arch-detection.patch
-fix-multilib-builds.patch
-
-# UBports
-0001-Fix-Chromium-built-with-X11-running-without.patch
-0001-Add-support-for-mir.patch
+icu60.patch
