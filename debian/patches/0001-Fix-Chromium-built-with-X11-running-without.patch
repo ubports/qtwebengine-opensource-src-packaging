@@ -1,0 +1,151 @@
+From ab53fa446041ce8d6fde55294c5558bafeec5173 Mon Sep 17 00:00:00 2001
+From: Allan Sandfeld Jensen <allan.jensen@qt.io>
+Date: Tue, 10 Oct 2017 15:11:42 +0200
+Subject: [PATCH] Fix Chromium built with X11 running without
+
+Handles cases where gfx::GetXDisplay() returns null at least for Qt.
+
+Task-number: QTBUG-55384
+Change-Id: Ie57c57d7189c279cb5c702325b450f9fb964ac60
+Reviewed-by: Michal Klocek <michal.klocek@qt.io>
+---
+ src/3rdparty/chromium/content/browser/browser_main_loop.cc            |  6 ++++--
+ src/3rdparty/chromium/content/browser/gpu/gpu_internals_ui.cc         | 16 +++++++++-------
+ src/3rdparty/chromium/ui/base/x/x11_util.cc                           |  3 +++
+ src/3rdparty/chromium/ui/display/util/x11/edid_parser_x11.cc          |  8 +++++---
+ src/3rdparty/chromium/ui/events/platform/x11/x11_event_source_libevent.cc  |  2 +-
+ src/3rdparty/chromium/ui/gfx/icc_profile_x11.cc                       |  2 ++
+ 6 files changed, 24 insertions(+), 13 deletions(-)
+
+diff --git a/src/3rdparty/chromium/content/browser/browser_main_loop.cc b/src/3rdparty/chromium/content/browser/browser_main_loop.cc
+index 4dba498..4370906 100644
+--- a/src/3rdparty/chromium/content/browser/browser_main_loop.cc
++++ b/src/3rdparty/chromium/content/browser/browser_main_loop.cc
+@@ -399,6 +399,8 @@ class GpuDataManagerVisualProxy : public GpuDataManagerObserver {
+   }
+ 
+   void OnGpuInfoUpdate() override {
++    if (!gfx::GetXDisplay())
++      return;
+     gpu::GPUInfo gpu_info = gpu_data_manager_->GetGPUInfo();
+     if (!ui::XVisualManager::GetInstance()->OnGPUInfoChanged(
+             gpu_info.software_rendering ||
+@@ -494,7 +496,7 @@ void BrowserMainLoop::EarlyInitialization() {
+   SetupSandbox(parsed_command_line_);
+ #endif
+ 
+-#if defined(USE_X11)
++#if defined(USE_X11) && !defined(TOOLKIT_QT)
+   if (UsingInProcessGpu()) {
+     if (!gfx::InitializeThreadedX11()) {
+       LOG(ERROR) << "Failed to put Xlib into threaded mode.";
+@@ -1472,7 +1474,7 @@ bool BrowserMainLoop::InitializeToolkit() {
+ 
+ #if defined(USE_AURA)
+ 
+-#if defined(USE_X11)
++#if defined(USE_X11) && !defined(TOOLKIT_QT)
+   if (!gfx::GetXDisplay()) {
+     LOG(ERROR) << "Unable to open X display.";
+     return false;
+diff --git a/src/3rdparty/chromium/content/browser/gpu/gpu_internals_ui.cc b/src/3rdparty/chromium/content/browser/gpu/gpu_internals_ui.cc
+index e5db500..3239a6a 100644
+--- a/src/3rdparty/chromium/content/browser/gpu/gpu_internals_ui.cc
++++ b/src/3rdparty/chromium/content/browser/gpu/gpu_internals_ui.cc
+@@ -207,9 +207,9 @@ base::DictionaryValue* GpuInfoAsDictionaryValue() {
+   basic_info->Append(NewDescriptionValuePair("Window system binding extensions",
+                                              gpu_info.gl_ws_extensions));
+ #if defined(OS_LINUX) && defined(USE_X11)
+-  basic_info->Append(NewDescriptionValuePair("Window manager",
+-                                             ui::GuessWindowManagerName()));
+-  {
++  if (gfx::GetXDisplay()) {
++    basic_info->Append(NewDescriptionValuePair("Window manager",
++                                               ui::GuessWindowManagerName()));
+     std::unique_ptr<base::Environment> env(base::Environment::Create());
+     std::string value;
+     const char kXDGCurrentDesktop[] = "XDG_CURRENT_DESKTOP";
+@@ -254,10 +254,12 @@ base::DictionaryValue* GpuInfoAsDictionaryValue() {
+ #endif
+ 
+ #if defined(USE_X11) && !defined(OS_CHROMEOS)
+-  basic_info->Append(NewDescriptionValuePair(
+-      "System visual ID", base::Uint64ToString(gpu_info.system_visual)));
+-  basic_info->Append(NewDescriptionValuePair(
+-      "RGBA visual ID", base::Uint64ToString(gpu_info.rgba_visual)));
++  if (gfx::GetXDisplay()) {
++    basic_info->Append(NewDescriptionValuePair(
++        "System visual ID", base::Uint64ToString(gpu_info.system_visual)));
++    basic_info->Append(NewDescriptionValuePair(
++        "RGBA visual ID", base::Uint64ToString(gpu_info.rgba_visual)));
++  }
+ #endif
+ 
+   return info;
+diff --git a/src/3rdparty/chromium/ui/base/x/x11_util.cc b/src/3rdparty/chromium/ui/base/x/x11_util.cc
+index 4a2b16b..24b5d2e 100644
+--- a/src/3rdparty/chromium/ui/base/x/x11_util.cc
++++ b/src/3rdparty/chromium/ui/base/x/x11_util.cc
+@@ -145,6 +145,9 @@ bool SupportsEWMH() {
+ 
+ bool GetWindowManagerName(std::string* wm_name) {
+   DCHECK(wm_name);
++  if (!gfx::GetXDisplay())
++    return false;
++
+   if (!SupportsEWMH())
+     return false;
+ 
+diff --git a/src/3rdparty/chromium/ui/display/util/x11/edid_parser_x11.cc b/src/3rdparty/chromium/ui/display/util/x11/edid_parser_x11.cc
+index c7d8e59..699576b 100644
+--- a/src/3rdparty/chromium/ui/display/util/x11/edid_parser_x11.cc
++++ b/src/3rdparty/chromium/ui/display/util/x11/edid_parser_x11.cc
+@@ -28,13 +28,15 @@ bool IsRandRAvailable() {
+ // Returns true if EDID property is successfully obtained. Otherwise returns
+ // false and does not touch |edid|.
+ bool GetEDIDProperty(XID output, std::vector<uint8_t>* edid) {
+-  if (!IsRandRAvailable())
++  Display* display = gfx::GetXDisplay();
++  if (!display)
+     return false;
+ 
+-  Display* display = gfx::GetXDisplay();
++  if (!IsRandRAvailable())
++    return false;
+ 
+   static Atom edid_property = XInternAtom(
+-      gfx::GetXDisplay(),
++      display,
+       RR_PROPERTY_RANDR_EDID, false);
+ 
+   bool has_edid_property = false;
+diff --git a/src/3rdparty/chromium/ui/events/platform/x11/x11_event_source_libevent.cc b/src/3rdparty/chromium/ui/events/platform/x11/x11_event_source_libevent.cc
+index 6476373..794029a 100644
+--- a/src/3rdparty/chromium/ui/events/platform/x11/x11_event_source_libevent.cc
++++ b/src/3rdparty/chromium/ui/events/platform/x11/x11_event_source_libevent.cc
+@@ -207,7 +207,7 @@ void X11EventSourceLibevent::OnFileCanWriteWithoutBlocking(int fd) {
+   NOTREACHED();
+ }
+ 
+-#if defined(USE_X11)
++#if defined(USE_X11) && !defined(TOOLKIT_QT)
+ std::unique_ptr<PlatformEventSource> PlatformEventSource::CreateDefault() {
+   return base::MakeUnique<X11EventSourceLibevent>(gfx::GetXDisplay());
+ }
+diff --git a/src/3rdparty/chromium/ui/gfx/icc_profile_x11.cc b/src/3rdparty/chromium/ui/gfx/icc_profile_x11.cc
+index 21ae82c..af7146b 100644
+--- a/src/3rdparty/chromium/ui/gfx/icc_profile_x11.cc
++++ b/src/3rdparty/chromium/ui/gfx/icc_profile_x11.cc
+@@ -18,6 +18,8 @@ namespace gfx {
+ // static
+ ICCProfile ICCProfile::FromBestMonitor() {
+   ICCProfile icc_profile;
++  if (!GetXDisplay())
++    return icc_profile;
+   Atom property = XInternAtom(GetXDisplay(), "_ICC_PROFILE", true);
+   if (property != None) {
+     Atom prop_type = None;
+-- 
+2.7.4
+
+
