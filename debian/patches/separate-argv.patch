@@ -1,0 +1,57 @@
+Description: separate argv for QCoreApplication and Chromium in WebEngineProcess
+ On Linux, Chromium manipulates argv, merging all command line
+ arguments into argv[0] and deleting the other arguments - see
+ set_process_title_linux.cc for the glory details. This potentially
+ confuses QCoreApplication::applicationDirPath(), which assumes
+ that argv[0] contains the binary path. This in turn caused a
+ regression in Qt 5.9.4 where resource files could not be located
+ anymore for QtWebEngineProcess.
+ .
+ Avoid this by making two distinct copies of argv already in main().
+Origin: upstream, https://code.qt.io/cgit/qt/qtwebengine.git/commit/?id=488b8e8ed01018c1
+Last-Update: 2018-05-13
+
+--- a/src/process/main.cpp
++++ b/src/process/main.cpp
+@@ -41,6 +41,7 @@
+ 
+ #include <QCoreApplication>
+ #include <stdio.h>
++#include <memory>
+ 
+ #if defined(Q_OS_LINUX)
+ 
+@@ -97,9 +98,30 @@ int main(int argc, const char **argv)
+     initDpiAwareness();
+ #endif
+ 
+-    // QCoreApplication needs a non-const pointer, while the
+-    // ContentMain in Chromium needs the pointer to be const.
+-    QCoreApplication qtApplication(argc, const_cast<char**>(argv));
++    // Chromium on Linux manipulates argv to set a process title
++    // (see set_process_title_linux.cc).
++    // This can interfere with QCoreApplication::applicationFilePath,
++    // which assumes that argv[0] only contains the executable path.
++    //
++    // Avoid this by making a deep copy of argv and pass this
++    // to QCoreApplication. Use a unique_ptr with custom deleter to
++    // clean up on exit.
++
++    auto dt = [](char* av[]) {
++        for (char **a = av; *a; a++)
++          delete[] *a;
++        delete[] av;
++    };
++
++    std::unique_ptr<char*[], decltype(dt)> argv_(new char*[argc+1], dt);
++    for (int i = 0; i < argc; ++i) {
++        size_t len = strlen(argv[i]) + 1;
++        argv_[i] = new char[len];
++        strcpy(argv_[i], argv[i]);
++    }
++    argv_[argc] = 0;
++
++    QCoreApplication qtApplication(argc, argv_.get());
+ 
+     return QtWebEngine::processMain(argc, argv);
+ }

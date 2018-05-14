@@ -10,24 +10,24 @@ Description: disallow 5 aspirational scripts in IDN display
  .
  This is also necessary for updating ICU to version 60.
 Origin: upstream, https://chromium-review.googlesource.com/731871
-Last-Update: 2017-11-08
+Last-Update: 2018-05-13
 
---- a/src/3rdparty/chromium/components/url_formatter/url_formatter.cc
-+++ b/src/3rdparty/chromium/components/url_formatter/url_formatter.cc
-@@ -474,39 +474,6 @@
+--- a/src/3rdparty/chromium/components/url_formatter/idn_spoof_checker.cc
++++ b/src/3rdparty/chromium/components/url_formatter/idn_spoof_checker.cc
+@@ -337,39 +337,6 @@ void IDNSpoofChecker::SetAllowedUnicodeS
    const icu::UnicodeSet* inclusion_set = uspoof_getInclusionUnicodeSet(status);
    allowed_set.addAll(*inclusion_set);
  
--  // Five aspirational scripts are taken from UTR 31 Table 6 at
--  // http://www.unicode.org/reports/tr31/#Aspirational_Use_Scripts .
--  // Not all the characters of aspirational scripts are suitable for
--  // identifiers. Therefore, only characters belonging to
--  // [:Identifier_Type=Aspirational:] (listed in 'Status/Type=Aspirational'
--  // section at
--  // http://www.unicode.org/Public/security/latest/xidmodifications.txt) are
--  // are added to the allowed set. The list has to be updated when a new
--  // version of Unicode is released. The current version is 9.0.0 and ICU 60
--  // will have Unicode 10.0 data.
+-// Five aspirational scripts are taken from UTR 31 Table 6 at
+-// http://www.unicode.org/reports/tr31/#Aspirational_Use_Scripts .
+-// Not all the characters of aspirational scripts are suitable for
+-// identifiers. Therefore, only characters belonging to
+-// [:Identifier_Type=Aspirational:] (listed in 'Status/Type=Aspirational'
+-// section at
+-// http://www.unicode.org/Public/security/latest/xidmodifications.txt) are
+-// are added to the allowed set. The list has to be updated when a new
+-// version of Unicode is released. The current version is 9.0.0 and ICU 60
+-// will have Unicode 10.0 data.
 -#if U_ICU_VERSION_MAJOR_NUM < 60
 -  const icu::UnicodeSet aspirational_scripts(
 -      icu::UnicodeString(
@@ -51,6 +51,6 @@ Last-Update: 2017-11-08
 -#error "Update aspirational_scripts per Unicode 10.0"
 -#endif
 -
-   // U+0338 is included in the recommended set, while U+05F4 and U+2027 are in
-   // the inclusion set. However, they are blacklisted as a part of Mozilla's
-   // IDN blacklist (http://kb.mozillazine.org/Network.IDN.blacklist_chars).
+   // The sections below refer to Mozilla's IDN blacklist:
+   // http://kb.mozillazine.org/Network.IDN.blacklist_chars
+   //

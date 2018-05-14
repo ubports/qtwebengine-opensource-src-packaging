@@ -1,26 +1,69 @@
-qtwebengine-opensource-src (5.9.4+dfsg-1ubports1) xenial; urgency=medium
+qtwebengine-opensource-src (5.10.1+dfsg-4ubports1) xenial; urgency=medium
 
   * Add mir patch
-  * Add fix running without x patch
 
- -- Marius <mariogrip@ubports.com>  Mon, 14 May 2018 19:54:14 +0200
+ -- Marius <mariogrip@ubports.com>  Mon, 14 May 2018 22:28:16 +0200
 
-qtwebengine-opensource-src (5.9.4+dfsg-0ubuntu1) bionic; urgency=medium
+qtwebengine-opensource-src (5.10.1+dfsg-4) unstable; urgency=medium
 
-  * New upstream release.
+  * Backport two upstream patches to fix build with system ICU 60:
+    - icu60-no-aspirational-scripts.patch to disallow aspirational scripts.
+    - icu60-uchar.patch to fix build when UChar is signed char16_t.
+  * Backport upstream patch to fix QtWebEngineProcess resources loading
+    (separate-argv.patch, see upstream QTBUG-66346).
+  * Update Vcs fields for migration to salsa.debian.org.
+  * Update symbols files from buildds’ logs.
+  * Bump Standards-Version to 4.1.4, no changes needed.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 26 Feb 2018 17:33:29 -0600
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 13 May 2018 11:50:52 +0300
 
-qtwebengine-opensource-src (5.9.3+dfsg-0ubuntu1) bionic; urgency=medium
+qtwebengine-opensource-src (5.10.1+dfsg-3) unstable; urgency=medium
+
+  * Update symbols files with buildds' logs.
+  * Release to unstable.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 07 Apr 2018 20:43:19 -0300
+
+qtwebengine-opensource-src (5.10.1+dfsg-2) experimental; urgency=medium
+
+  * Update debian/libqt5webenginecore5.symbols from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 17 Mar 2018 16:07:29 +0300
+
+qtwebengine-opensource-src (5.10.1+dfsg-1) experimental; urgency=medium
 
   [ Dmitry Shachnev ]
-  * Backport upstream patch to fix build with ICU 60.
-
-  [ Simon Quigley ]
   * New upstream release.
-  * Update symbols from build logs.
+  * Backport upstream patch to fix build with ICU 60.
+  * Update debian/watch for the new upstream tarball names.
+  * Remove items from Files-Excluded which are no longer in the tarball.
+  * Refresh other patches.
+  * Bump Qt build-dependencies to 5.10.1.
+  * Update symbols files from the current build log.
+  * Stop using WEBENGINE_CONFIG, it has been removed in 5.10.
+  * Remove undefined linux_link_libpci option.
+  * Remove undefined use_system_yasm option, we unbundle it using the
+    replace_gn_files.py script anyway.
+  * Sort Files-Excluded field in debian/copyright.
+  * Fix or override some Lintian source-is-missing warnings.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 09 Dec 2017 22:16:48 -0600
+  [ Alexander Volkov ]
+  * Drop system-re2.patch and remove re2 changes from linux-pri.patch.
+    System re2 is auto-detected out of the box.
+  * Update system-icu-utf.patch to fix linking with icuuc.
+  * Update system-nspr-prtime.patch.
+  * Update verbose-gn-bootstrap.patch.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 12 Mar 2018 00:57:13 +0300
+
+qtwebengine-opensource-src (5.9.2+dfsg-3) unstable; urgency=medium
+
+  * Backport upstream patch to fix build with ICU 60.
+  * Forcefully disable make output synchronization introduced in debhelper
+    11.1.5~alpha1. Ninja is a single process, and with synchronized output
+    the buildds do not see any activity and think that the build is hung.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 10 Mar 2018 16:01:36 +0300
 
 qtwebengine-opensource-src (5.9.2+dfsg-2) unstable; urgency=medium
 
