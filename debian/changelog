@@ -1,3 +1,10 @@
+qtwebengine-opensource-src (5.9.4+dfsg-1ubports1) xenial; urgency=medium
+
+  * Add mir patch
+  * Add fix running without x patch
+
+ -- Marius <mariogrip@ubports.com>  Mon, 14 May 2018 19:54:14 +0200
+
 qtwebengine-opensource-src (5.9.4+dfsg-0ubuntu1) bionic; urgency=medium
 
   * New upstream release.

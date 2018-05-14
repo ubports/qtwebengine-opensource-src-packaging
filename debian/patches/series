@@ -7,3 +7,7 @@ no-icudtl-dat.patch
 disable-last_commit_position.patch
 verbose-gn-bootstrap.patch
 icu60.patch
+
+# UBports
+0001-Fix-Chromium-built-with-X11-running-without.patch
+0001-Add-support-for-mir.patch
