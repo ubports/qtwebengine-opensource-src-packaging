@@ -1,0 +1,41 @@
+From 15a619d4dc0fece9ca2c386b6802e9ca56798a70 Mon Sep 17 00:00:00 2001
+From: Michal Klocek <michal.klocek@qt.io>
+Date: Tue, 10 Apr 2018 10:36:50 +0200
+Subject: [PATCH] Do not initialize static bindings in x11_initializer
+
+We still do not use ozone for glx or wayland if
+webengine compiled with x11 support. X11 initializer
+tries to load egl libraries, this will be
+reimplemented with lazy binding in core.
+
+Task-number: QTBUG-65682
+Change-Id: I47012f487652e750f223b086e7ca4b224340cc22
+Reviewed-by: Allan Sandfeld Jensen <allan.jensen@qt.io>
+---
+ src/3rdparty/chromium/ui/gl/init/gl_initializer_x11.cc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/3rdparty/chromium/ui/gl/init/gl_initializer_x11.cc b/src/3rdparty/chromium/ui/gl/init/gl_initializer_x11.cc
+index 66e754d..4f8074d 100644
+--- a/src/3rdparty/chromium/ui/gl/init/gl_initializer_x11.cc
++++ b/src/3rdparty/chromium/ui/gl/init/gl_initializer_x11.cc
+@@ -172,7 +172,6 @@ bool InitializeGLOneOffPlatform() {
+       return true;
+   }
+ }
+-#endif
+ 
+ bool InitializeStaticGLBindings(GLImplementation implementation) {
+   // Prevent reinitialization with a different implementation. Once the gpu
+@@ -205,6 +204,7 @@ bool InitializeStaticGLBindings(GLImplementation implementation) {
+ 
+   return false;
+ }
++#endif // !defined(TOOLKIT_QT)
+ 
+ void InitializeDebugGLBindings() {
+   InitializeDebugGLBindingsEGL();
+-- 
+2.7.4
+
+

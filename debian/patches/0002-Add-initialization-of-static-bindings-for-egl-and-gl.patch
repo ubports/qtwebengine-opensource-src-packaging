@@ -1,0 +1,133 @@
+From cbd4ca8636b763a3baadf99cccb03ac95bf2b7de Mon Sep 17 00:00:00 2001
+From: Michal Klocek <michal.klocek@qt.io>
+Date: Tue, 10 Apr 2018 10:53:15 +0200
+Subject: [PATCH 2/2] Add initialization of static bindings for egl and glx
+
+Use lazy binding for static bindings initialization, the
+same way we do in ozone.
+
+Task-number: QTBUG-65682
+Change-Id: I51ecdfa3b7daca8b1345cf2c0c89a4ac6e25a7c9
+Reviewed-by: Allan Sandfeld Jensen <allan.jensen@qt.io>
+---
+ src/core/gl_surface_qt.cpp | 83 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 83 insertions(+)
+
+diff --git a/src/core/gl_surface_qt.cpp b/src/core/gl_surface_qt.cpp
+index 4917547..150e7a7 100644
+--- a/src/core/gl_surface_qt.cpp
++++ b/src/core/gl_surface_qt.cpp
+@@ -51,6 +51,7 @@
+ #include "web_engine_context.h"
+ 
+ #include "base/logging.h"
++#include "base/threading/thread_restrictions.h"
+ #include "gpu/ipc/service/image_transport_surface.h"
+ #include "ui/gl/egl_util.h"
+ #include "ui/gl/gl_context.h"
+@@ -67,6 +68,8 @@ extern "C" {
+ }
+ #endif
+ 
++#include "ui/gl/gl_gl_api_implementation.h"
++
+ #if defined(OS_WIN)
+ #include "ui/gl/gl_surface_wgl.h"
+ #include "ui/gl/gl_context_wgl.h"
+@@ -81,6 +84,13 @@ extern "C" {
+ 
+ using ui::GetLastEGLErrorString;
+ 
++#if defined(USE_X11)
++#include "ui/gl/gl_glx_api_implementation.h"
++#include <dlfcn.h>
++#endif
++
++#include "ui/gl/gl_egl_api_implementation.h"
++
+ namespace gl {
+ 
+ namespace {
+@@ -653,6 +663,79 @@ bool InitializeGLOneOffPlatform()
+     return false;
+ }
+ 
++#if defined(USE_X11)
++// FIXME: This should be removed when we switch to OZONE only
++bool InitializeStaticGLBindings(GLImplementation implementation) {
++  // Prevent reinitialization with a different implementation. Once the gpu
++  // unit tests have initialized with kGLImplementationMock, we don't want to
++  // later switch to another GL implementation.
++  DCHECK_EQ(kGLImplementationNone, GetGLImplementation());
++  base::ThreadRestrictions::ScopedAllowIO allow_io;
++
++  switch (implementation) {
++    case kGLImplementationOSMesaGL:
++      return false;
++    case kGLImplementationDesktopGL: {
++      base::NativeLibrary library = dlopen(NULL, RTLD_LAZY);
++      if (!library) {
++          LOG(ERROR) << "Failed to obtain glx handle" << dlerror();
++          return false;
++      }
++
++      GLGetProcAddressProc get_proc_address =
++          reinterpret_cast<GLGetProcAddressProc>(
++              base::GetFunctionPointerFromNativeLibrary(library,
++                                                        "glXGetProcAddress"));
++      if (!get_proc_address) {
++        LOG(ERROR) << "glxGetProcAddress not found.";
++        base::UnloadNativeLibrary(library);
++        return false;
++      }
++
++      SetGLGetProcAddressProc(get_proc_address);
++      AddGLNativeLibrary(library);
++      SetGLImplementation(kGLImplementationDesktopGL);
++
++      InitializeStaticGLBindingsGL();
++      InitializeStaticGLBindingsGLX();
++      return true;
++    }
++    case kGLImplementationSwiftShaderGL:
++    case kGLImplementationEGLGLES2: {
++       base::NativeLibrary library = dlopen(NULL, RTLD_LAZY);
++       if (!library) {
++           LOG(ERROR) << "Failed to obtain egl handle" << dlerror();
++           return false;
++       }
++
++       GLGetProcAddressProc get_proc_address =
++          reinterpret_cast<GLGetProcAddressProc>(
++              base::GetFunctionPointerFromNativeLibrary(library,
++                                                        "eglGetProcAddress"));
++      if (!get_proc_address) {
++        LOG(ERROR) << "eglGetProcAddress not found.";
++        base::UnloadNativeLibrary(library);
++        return false;
++      }
++
++      SetGLGetProcAddressProc(get_proc_address);
++      AddGLNativeLibrary(library);
++      SetGLImplementation(kGLImplementationEGLGLES2);
++
++      InitializeStaticGLBindingsGL();
++      InitializeStaticGLBindingsEGL();
++      return true;
++    }
++    case kGLImplementationMockGL:
++    case kGLImplementationStubGL:
++      return false;
++    default:
++      NOTREACHED();
++  }
++  return false;
++}
++#endif
++
+ bool usingSoftwareDynamicGL()
+ {
+     return QtWebEngineCore::usingSoftwareDynamicGL();
+-- 
+2.7.4
+

@@ -11,3 +11,6 @@ separate-argv.patch
 
 # UBports
 0001-Add-support-for-mir.patch
+0001-Do-no-log-pbuffer-creation-failure-as-error.patch
+0002-Add-initialization-of-static-bindings-for-egl-and-gl.patch
+0001-Do-not-initialize-static-bindings-in-x11_initializer.patch
