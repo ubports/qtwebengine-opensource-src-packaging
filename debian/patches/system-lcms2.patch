@@ -8,7 +8,7 @@ Last-Update: 2017-07-01
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/third_party/pdfium/third_party/BUILD.gn
 +++ b/src/3rdparty/chromium/third_party/pdfium/third_party/BUILD.gn
-@@ -140,58 +140,21 @@ if (!pdf_use_skia && !pdf_use_skia_paths
+@@ -229,58 +229,21 @@ if (!pdf_use_skia && !pdf_use_skia_paths
    }
  }
  
@@ -77,4 +77,4 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +  libs = ["lcms2"]
  }
  
- # This is only used for standalone builds.
+ if (!build_with_chromium) {

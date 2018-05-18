@@ -1,0 +1,31 @@
+From cda46c9653b9dcd6d76d371f4c4b6619188b78bf Mon Sep 17 00:00:00 2001
+From: Michal Klocek <michal.klocek@qt.io>
+Date: Tue, 10 Apr 2018 11:06:03 +0200
+Subject: [PATCH 1/2] Do no log pbuffer creation failure as error
+
+The pbuffer creation with egl can fail, however
+this is expexted if surfaceless egl is used.
+
+Task-number: QTBUG-65682
+Change-Id: I0aefda0bec3d3b4943df20697b495dba83e012a7
+Reviewed-by: Allan Sandfeld Jensen <allan.jensen@qt.io>
+---
+ src/core/gl_surface_qt.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/core/gl_surface_qt.cpp b/src/core/gl_surface_qt.cpp
+index 344a445..4917547 100644
+--- a/src/core/gl_surface_qt.cpp
++++ b/src/core/gl_surface_qt.cpp
+@@ -692,6 +692,7 @@ CreateOffscreenGLSurfaceWithFormat(const gfx::Size& size, GLSurfaceFormat format
+             if (surface->Initialize(format))
+                 return surface;
+         }
++        LOG(ERROR) << "eglCreatePbufferSurface failed and surfaceless context not available";
+         LOG(WARNING) << "Failed to create offscreen GL surface";
+         break;
+     }
+-- 
+2.7.4
+
+

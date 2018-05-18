@@ -13,3 +13,7 @@ qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object sr
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/stylus.js .*
 qtwebengine-opensource-src source: insane-line-length-in-source-file src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/stylus.js .*
 qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/stylus.js .*
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/codemirror.js .*
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/persistence/WorkspaceSettingsTab.js .*
+# min means minimum, not minified
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/v8/src/js/max-min.js
