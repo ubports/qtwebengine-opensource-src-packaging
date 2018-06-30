@@ -9,7 +9,7 @@ Priority: optional
 Build-Depends: bison,
                chrpath,
                closure-compiler,
-               debhelper (>= 10),
+               debhelper (>= 11),
                flex,
                gperf,
                khronos-api,
