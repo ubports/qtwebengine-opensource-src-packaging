@@ -4,6 +4,13 @@ qtwebengine-opensource-src (5.11.1+dfsg-1) UNRELEASED; urgency=medium
   * New upstream release.
   * Update debhelper compat to 11, no changes needed.
 
+  [ Dmitry Shachnev ]
+  * Drop patches, applied in the new release:
+    - icu60-no-aspirational-scripts.patch
+    - icu60-uchar.patch
+    - separate-argv.patch
+  * Rebase and refresh other patches.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 30 Jun 2018 14:37:33 -0500
 
 qtwebengine-opensource-src (5.10.1+dfsg-4) unstable; urgency=medium

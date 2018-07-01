@@ -3,12 +3,12 @@ Author: Kevin Kofler
 Origin: Fedora, https://src.fedoraproject.org/rpms/qt5-qtwebengine/blob/master/f/qtwebengine-everywhere-src-5.10.0-system-nspr-prtime.patch
 Forwarded: not-needed
 Reviewed-by: Sandro Knauß <hefee@debian.org>
-Last-Update: 2018-03-04
+Last-Update: 2018-07-01
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/base/BUILD.gn
 +++ b/src/3rdparty/chromium/base/BUILD.gn
-@@ -53,6 +53,9 @@ config("base_flags") {
+@@ -69,6 +69,9 @@ config("base_flags") {
        "-Wno-char-subscripts",
      ]
    }
@@ -18,15 +18,15 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  }
  
  config("base_implementation") {
-@@ -858,8 +861,6 @@ component("base") {
+@@ -874,8 +877,6 @@ jumbo_component("base") {
      "third_party/dmg_fp/g_fmt.cc",
      "third_party/icu/icu_utf.cc",
      "third_party/icu/icu_utf.h",
 -    "third_party/nspr/prtime.cc",
 -    "third_party/nspr/prtime.h",
      "third_party/superfasthash/superfasthash.c",
-     "third_party/valgrind/memcheck.h",
      "threading/platform_thread.h",
+     "threading/platform_thread_android.cc",
 --- a/src/3rdparty/chromium/base/time/pr_time_unittest.cc
 +++ b/src/3rdparty/chromium/base/time/pr_time_unittest.cc
 @@ -7,7 +7,7 @@
@@ -51,15 +51,15 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  namespace base {
 --- a/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
 +++ b/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
-@@ -527,7 +527,6 @@ def write_gn_ninja(path, root_gen_dir, o
+@@ -567,7 +567,6 @@ def write_gn_ninja(path, root_gen_dir, o
        'base/third_party/dmg_fp/dtoa_wrapper.cc',
        'base/third_party/dmg_fp/g_fmt.cc',
        'base/third_party/icu/icu_utf.cc',
 -      'base/third_party/nspr/prtime.cc',
        'base/threading/post_task_and_reply_impl.cc',
+       'base/threading/scoped_blocking_call.cc',
        'base/threading/sequence_local_storage_map.cc',
-       'base/threading/sequenced_task_runner_handle.cc',
-@@ -680,7 +679,7 @@ def write_gn_ninja(path, root_gen_dir, o
+@@ -714,7 +713,7 @@ def write_gn_ninja(path, root_gen_dir, o
          'base/allocator/allocator_shim.cc',
          'base/allocator/allocator_shim_default_dispatch_to_glibc.cc',
        ])
@@ -70,7 +70,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        ])
 --- a/src/3rdparty/chromium/tools/gn/BUILD.gn
 +++ b/src/3rdparty/chromium/tools/gn/BUILD.gn
-@@ -275,6 +275,10 @@ executable("gn") {
+@@ -276,6 +276,10 @@ executable("gn") {
      "//build/config:exe_and_shlib_deps",
      "//build/win:default_exe_manifest",
    ]

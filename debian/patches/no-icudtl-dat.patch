@@ -7,17 +7,22 @@ Author: Kevin Kofler
 Origin: Fedora, http://pkgs.fedoraproject.org/cgit/rpms/qt5-qtwebengine.git/commit/qtwebengine-opensource-src-5.6.0-no-icudtl-dat.patch?id=4f844a7b2b6550e1d13c2ea973059eef0abcda99
 Forwarded: not-needed
 Reviewed-by: Sandro Knauß <hefee@debian.org>
-Last-Update: 2017-06-29
+Last-Update: 2018-07-01
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/core/web_engine_library_info.cpp
 +++ b/src/core/web_engine_library_info.cpp
-@@ -260,24 +260,7 @@ QString icuDataPath()
- #if defined(OS_MACOSX) && defined(QT_MAC_FRAMEWORK_BUILD)
-     return getResourcesPath(frameworkBundle());
- #else
+@@ -258,29 +258,12 @@ QString dictionariesPath()
+ 
+ QString icuDataPath()
+ {
 -    static bool initialized = false;
-     static QString potentialResourcesPath = QLibraryInfo::location(QLibraryInfo::DataPath) % QLatin1String("/resources");
+     static QString potentialResourcesPath =
+ #if defined(OS_MACOSX) && defined(QT_MAC_FRAMEWORK_BUILD)
+             getResourcesPath(frameworkBundle());
+ #else
+             QLibraryInfo::location(QLibraryInfo::DataPath) % QLatin1String("/resources");
+ #endif
 -    if (!initialized) {
 -        initialized = true;
 -        if (!QFileInfo::exists(potentialResourcesPath % QLatin1String("/icudtl.dat"))) {
@@ -35,5 +40,5 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 -    }
 -
      return potentialResourcesPath;
- #endif
  }
+ 

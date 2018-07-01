@@ -9,7 +9,7 @@ Last-Update: 2017-06-25
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/tools/gn/BUILD.gn
 +++ b/src/3rdparty/chromium/tools/gn/BUILD.gn
-@@ -238,26 +238,6 @@ static_library("gn_lib") {
+@@ -239,26 +239,6 @@ jumbo_static_library("gn_lib") {
    ]
  }
  
@@ -36,7 +36,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  # Note for Windows debugging: GN is super-multithreaded and uses a lot of STL.
  # Iterator debugging on Windows does locking for every access, which ends up
  # slowing down debug runtime from 0:36 to 9:40. If you want to run debug builds
-@@ -270,7 +250,6 @@ executable("gn") {
+@@ -271,7 +251,6 @@ executable("gn") {
  
    deps = [
      ":gn_lib",

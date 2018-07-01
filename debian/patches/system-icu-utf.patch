@@ -6,20 +6,20 @@ Author: Kevin, Kofler
 Origin: Fedora, https://src.fedoraproject.org/rpms/qt5-qtwebengine/blob/master/f/qtwebengine-everywhere-src-5.10.0-system-icu-utf.patch
 Forwarded: not-needed
 Reviewed-by: Sandro Knauß <hefee@debian.org>
-Last-Update: 2018-03-04
+Last-Update: 2018-07-01
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/base/BUILD.gn
 +++ b/src/3rdparty/chromium/base/BUILD.gn
-@@ -859,8 +859,6 @@ component("base") {
+@@ -875,8 +875,6 @@ jumbo_component("base") {
      "third_party/dmg_fp/dmg_fp.h",
      "third_party/dmg_fp/dtoa_wrapper.cc",
      "third_party/dmg_fp/g_fmt.cc",
 -    "third_party/icu/icu_utf.cc",
 -    "third_party/icu/icu_utf.h",
      "third_party/superfasthash/superfasthash.c",
-     "third_party/valgrind/memcheck.h",
      "threading/platform_thread.h",
+     "threading/platform_thread_android.cc",
 --- a/src/3rdparty/chromium/base/files/file_path.cc
 +++ b/src/3rdparty/chromium/base/files/file_path.cc
 @@ -18,7 +18,7 @@
@@ -31,7 +31,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  #endif
  
  #if defined(OS_WIN)
-@@ -1163,9 +1163,9 @@ inline int HFSReadNextNonIgnorableCodepo
+@@ -1149,9 +1149,9 @@ inline int HFSReadNextNonIgnorableCodepo
                                              int* index) {
    int codepoint = 0;
    while (*index < length && codepoint == 0) {
@@ -45,7 +45,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        // Check if there is a subtable for this upper byte.
 --- a/src/3rdparty/chromium/base/json/json_parser.cc
 +++ b/src/3rdparty/chromium/base/json/json_parser.cc
-@@ -16,7 +16,7 @@
+@@ -17,7 +17,7 @@
  #include "base/strings/stringprintf.h"
  #include "base/strings/utf_string_conversion_utils.h"
  #include "base/strings/utf_string_conversions.h"
@@ -54,7 +54,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  #include "base/values.h"
  
  namespace base {
-@@ -482,14 +482,14 @@ bool JSONParser::ConsumeStringRaw(String
+@@ -483,14 +483,14 @@ bool JSONParser::ConsumeStringRaw(String
    // string character and the terminating closing quote.
    while (CanConsume(2)) {
      int start_index = index_;
@@ -72,7 +72,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        string.Convert();
        string.AppendString(kUnicodeReplacementString,
                            arraysize(kUnicodeReplacementString) - 1);
-@@ -497,7 +497,7 @@ bool JSONParser::ConsumeStringRaw(String
+@@ -498,7 +498,7 @@ bool JSONParser::ConsumeStringRaw(String
      }
  
      if (next_char == '"') {
@@ -81,7 +81,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        *out = std::move(string);
        return true;
      }
-@@ -633,10 +633,10 @@ bool JSONParser::DecodeUTF16(std::string
+@@ -634,10 +634,10 @@ bool JSONParser::DecodeUTF16(std::string
  
    // If this is a high surrogate, consume the next code unit to get the
    // low surrogate.
@@ -94,7 +94,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        return false;
  
      // Make sure that the token has more characters to consume the
-@@ -653,20 +653,20 @@ bool JSONParser::DecodeUTF16(std::string
+@@ -654,20 +654,20 @@ bool JSONParser::DecodeUTF16(std::string
  
      NextNChars(3);
  
@@ -119,7 +119,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      if (!IsValidCharacter(code_unit16_high)) {
        if ((options_ & JSON_REPLACE_INVALID_CHARACTERS) == 0) {
          return false;
-@@ -675,7 +675,7 @@ bool JSONParser::DecodeUTF16(std::string
+@@ -676,7 +676,7 @@ bool JSONParser::DecodeUTF16(std::string
        return true;
      }
  
@@ -128,7 +128,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
    }
  
    dest_string->append(code_unit8, offset);
-@@ -692,9 +692,9 @@ void JSONParser::DecodeUTF8(const int32_
+@@ -693,9 +693,9 @@ void JSONParser::DecodeUTF8(const int32_
    } else {
      char utf8_units[4] = { 0 };
      int offset = 0;
@@ -239,7 +239,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  #include "build/build_config.h"
  
  namespace base {
-@@ -372,19 +372,19 @@ void TruncateUTF8ToByteSize(const std::s
+@@ -359,19 +359,19 @@ void TruncateUTF8ToByteSize(const std::s
    }
    DCHECK_LE(byte_size,
              static_cast<uint32_t>(std::numeric_limits<int32_t>::max()));
@@ -263,7 +263,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      if (!IsValidCharacter(code_point) ||
          !IsValidCodepoint(code_point)) {
        char_index = prev - 1;
-@@ -537,7 +537,7 @@ bool IsStringUTF8(const StringPiece& str
+@@ -522,7 +522,7 @@ bool IsStringUTF8(StringPiece str) {
  
    while (char_index < src_len) {
      int32_t code_point;
@@ -354,15 +354,15 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  // Generalized Unicode converter -----------------------------------------------
 --- a/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
 +++ b/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
-@@ -526,7 +526,6 @@ def write_gn_ninja(path, root_gen_dir, o
+@@ -566,7 +566,6 @@ def write_gn_ninja(path, root_gen_dir, o
        'base/task_scheduler/task_traits.cc',
        'base/third_party/dmg_fp/dtoa_wrapper.cc',
        'base/third_party/dmg_fp/g_fmt.cc',
 -      'base/third_party/icu/icu_utf.cc',
        'base/threading/post_task_and_reply_impl.cc',
+       'base/threading/scoped_blocking_call.cc',
        'base/threading/sequence_local_storage_map.cc',
-       'base/threading/sequenced_task_runner_handle.cc',
-@@ -679,7 +678,7 @@ def write_gn_ninja(path, root_gen_dir, o
+@@ -713,7 +712,7 @@ def write_gn_ninja(path, root_gen_dir, o
          'base/allocator/allocator_shim.cc',
          'base/allocator/allocator_shim_default_dispatch_to_glibc.cc',
        ])
@@ -373,7 +373,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        ])
 --- a/src/3rdparty/chromium/tools/gn/BUILD.gn
 +++ b/src/3rdparty/chromium/tools/gn/BUILD.gn
-@@ -278,6 +278,7 @@ executable("gn") {
+@@ -279,6 +279,7 @@ executable("gn") {
  
    libs = [
      "nspr4",
@@ -401,26 +401,28 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  ptrdiff_t UTF16IndexToOffset(const base::string16& s, size_t base, size_t pos) {
 --- a/src/3rdparty/chromium/net/tools/transport_security_state_generator/BUILD.gn
 +++ b/src/3rdparty/chromium/net/tools/transport_security_state_generator/BUILD.gn
-@@ -66,4 +66,7 @@ executable("transport_security_state_gen
-     "//crypto",
+@@ -53,6 +53,9 @@ source_set("transport_security_state_gen
+     "//testing/gtest",
      "//third_party/boringssl",
    ]
 +  libs = [
 +    "icuuc",
 +  ]
  }
+ 
+ executable("transport_security_state_generator") {
 --- a/src/3rdparty/chromium/content/browser/devtools/devtools_io_context.cc
 +++ b/src/3rdparty/chromium/content/browser/devtools/devtools_io_context.cc
-@@ -10,7 +10,7 @@
- #include "base/strings/string_number_conversions.h"
+@@ -15,7 +15,7 @@
  #include "base/strings/string_util.h"
+ #include "base/task_scheduler/lazy_task_runner.h"
  #include "base/task_scheduler/post_task.h"
 -#include "base/third_party/icu/icu_utf.h"
 +#include <unicode/utf.h>
  #include "base/threading/thread_restrictions.h"
+ #include "content/browser/blob_storage/chrome_blob_storage_context.h"
  #include "content/public/browser/browser_thread.h"
- 
-@@ -92,7 +92,7 @@ void Stream::ReadOnFileSequence(off_t po
+@@ -146,7 +146,7 @@ void TempFileStream::ReadOnFileSequence(
      } else {
        // Provided client has requested sufficient large block, make their
        // life easier by not truncating in the middle of a UTF-8 character.
@@ -438,9 +440,9 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 -#include "base/third_party/icu/icu_utf.h"
 +#include <unicode/utf.h>
  
- #if !defined(OS_NACL)
- #include "net/base/net_string_util.h"
-@@ -38,7 +38,7 @@ bool ConvertBmpStringValue(const der::In
+ namespace net {
+ 
+@@ -34,7 +34,7 @@ bool ConvertBmpStringValue(const der::In
  
      // BMPString only supports codepoints in the Basic Multilingual Plane;
      // surrogates are not allowed.
@@ -449,7 +451,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        return false;
    }
    return base::UTF16ToUTF8(in_16bit.data(), in_16bit.size(), out);
-@@ -58,7 +58,7 @@ bool ConvertUniversalStringValue(const d
+@@ -54,7 +54,7 @@ bool ConvertUniversalStringValue(const d
    for (const uint32_t c : in_32bit) {
      // UniversalString is UCS-4 in big-endian order.
      uint32_t codepoint = base::NetToHost32(c);
@@ -460,8 +462,8 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      base::WriteUnicodeCharacter(codepoint, out);
 --- a/src/3rdparty/chromium/ui/base/ime/input_method_chromeos.cc
 +++ b/src/3rdparty/chromium/ui/base/ime/input_method_chromeos.cc
-@@ -17,7 +17,6 @@
- #include "base/logging.h"
+@@ -18,7 +18,6 @@
+ #include "base/memory/ptr_util.h"
  #include "base/strings/string_util.h"
  #include "base/strings/utf_string_conversions.h"
 -#include "base/third_party/icu/icu_utf.h"
