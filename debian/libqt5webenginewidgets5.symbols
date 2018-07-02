@@ -1,7 +1,8 @@
-# SymbolsHelper-Confirmed: 5.10.1 amd64
+# SymbolsHelper-Confirmed: 5.11.1 amd64
 libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1
  Qt_5.10@Qt_5.10 5.10.1
+ Qt_5.11@Qt_5.11 5.11.1
  Qt_5.1@Qt_5.1 5.7.1
  Qt_5.2@Qt_5.2 5.7.1
  Qt_5.3@Qt_5.3 5.7.1
@@ -37,10 +38,13 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEnginePage13setZoomFactorEd@Qt_5 5.7.1
  _ZN14QWebEnginePage13triggerActionENS_9WebActionEb@Qt_5 5.7.1
  _ZN14QWebEnginePage14iconUrlChangedERK4QUrl@Qt_5 5.7.1
+ _ZN14QWebEnginePage14quotaRequestedE22QWebEngineQuotaRequest@Qt_5 5.11.1
  _ZN14QWebEnginePage15javaScriptAlertERK4QUrlRK7QString@Qt_5 5.7.1
+ _ZN14QWebEnginePage15setDevToolsPageEPS_@Qt_5 5.11.1
  _ZN14QWebEnginePage16certificateErrorERK26QWebEngineCertificateError@Qt_5 5.7.1
  _ZN14QWebEnginePage16javaScriptPromptERK4QUrlRK7QStringS5_PS3_@Qt_5 5.7.1
  _ZN14QWebEnginePage16selectionChangedEv@Qt_5 5.7.1
+ _ZN14QWebEnginePage16setInspectedPageEPS_@Qt_5 5.11.1
  _ZN14QWebEnginePage16staticMetaObjectE@Qt_5 5.7.1
  _ZN14QWebEnginePage17audioMutedChangedEb@Qt_5 5.7.1
  _ZN14QWebEnginePage17javaScriptConfirmERK4QUrlRK7QString@Qt_5 5.7.1
@@ -62,6 +66,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN14QWebEnginePage26featurePermissionRequestedERK4QUrlNS_7FeatureE@Qt_5 5.7.1
  _ZN14QWebEnginePage27proxyAuthenticationRequiredERK4QUrlP14QAuthenticatorRK7QString@Qt_5 5.7.1
  _ZN14QWebEnginePage32featurePermissionRequestCanceledERK4QUrlNS_7FeatureE@Qt_5 5.7.1
+ _ZN14QWebEnginePage32registerProtocolHandlerRequestedE40QWebEngineRegisterProtocolHandlerRequest@Qt_5 5.11.1
  _ZN14QWebEnginePage4loadERK21QWebEngineHttpRequest@Qt_5 5.9.0
  _ZN14QWebEnginePage4loadERK4QUrl@Qt_5 5.7.1
  _ZN14QWebEnginePage5eventEP6QEvent@Qt_5 5.7.1
@@ -182,6 +187,8 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN18QWebEngineSettings15defaultSettingsEv@Qt_5 5.7.1
  _ZN18QWebEngineSettings15resetFontFamilyENS_10FontFamilyE@Qt_5 5.7.1
  _ZN18QWebEngineSettings22setDefaultTextEncodingERK7QString@Qt_5 5.7.1
+ _ZN18QWebEngineSettings25setUnknownUrlSchemePolicyENS_22UnknownUrlSchemePolicyE@Qt_5 5.11.1
+ _ZN18QWebEngineSettings27resetUnknownUrlSchemePolicyEv@Qt_5 5.11.1
  _ZN18QWebEngineSettingsC1EPS_@Qt_5 5.7.1
  _ZN18QWebEngineSettingsC2EPS_@Qt_5 5.7.1
  _ZN18QWebEngineSettingsD1Ev@Qt_5 5.7.1
@@ -211,6 +218,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZN22QWebEngineDownloadItemD0Ev@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItemD1Ev@Qt_5 5.7.1
  _ZN22QWebEngineDownloadItemD2Ev@Qt_5 5.7.1
+ _ZN25QWebEngineContextMenuData16staticMetaObjectE@Qt_5 5.11.1
  _ZN25QWebEngineContextMenuData5resetEv@Qt_5 5.7.1
  _ZN25QWebEngineContextMenuDataC1ERKS_@Qt_5 5.7.1
  _ZN25QWebEngineContextMenuDataC1Ev@Qt_5 5.7.1
@@ -242,10 +250,12 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK14QWebEnginePage10zoomFactorEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage11toPlainTextERK18QWebEngineCallbackIRK7QStringE@Qt_5 5.7.1
  _ZNK14QWebEnginePage12contentsSizeEv@Qt_5 5.7.1
+ _ZNK14QWebEnginePage12devToolsPageEv@Qt_5 5.11.1
  _ZNK14QWebEnginePage12hasSelectionEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage12isAudioMutedEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage12requestedUrlEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage12selectedTextEv@Qt_5 5.7.1
+ _ZNK14QWebEnginePage13inspectedPageEv@Qt_5 5.11.1
  _ZNK14QWebEnginePage14scrollPositionEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage15backgroundColorEv@Qt_5 5.7.1
  _ZNK14QWebEnginePage15contextMenuDataEv@Qt_5 5.7.1
@@ -311,6 +321,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK18QWebEngineSettings10fontFamilyENS_10FontFamilyE@Qt_5 5.7.1
  _ZNK18QWebEngineSettings13testAttributeENS_12WebAttributeE@Qt_5 5.7.1
  _ZNK18QWebEngineSettings19defaultTextEncodingEv@Qt_5 5.7.1
+ _ZNK18QWebEngineSettings22unknownUrlSchemePolicyEv@Qt_5 5.11.1
  _ZNK18QWebEngineSettings8fontSizeENS_8FontSizeE@Qt_5 5.7.1
  _ZNK21QWebEngineHistoryItem11lastVisitedEv@Qt_5 5.7.1
  _ZNK21QWebEngineHistoryItem11originalUrlEv@Qt_5 5.7.1
@@ -324,6 +335,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK22QWebEngineDownloadItem13receivedBytesEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem14savePageFormatEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem15interruptReasonEv@Qt_5 5.9.0
+ _ZNK22QWebEngineDownloadItem18isSavePageDownloadEv@Qt_5 5.11.1
  _ZNK22QWebEngineDownloadItem21interruptReasonStringEv@Qt_5 5.9.0
  _ZNK22QWebEngineDownloadItem2idEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem3urlEv@Qt_5 5.7.1
@@ -332,6 +344,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK22QWebEngineDownloadItem5stateEv@Qt_5 5.7.1
  _ZNK22QWebEngineDownloadItem8isPausedEv@Qt_5 5.10.1
  _ZNK22QWebEngineDownloadItem8mimeTypeEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData10mediaFlagsEv@Qt_5 5.11.1
  _ZNK25QWebEngineContextMenuData12selectedTextEv@Qt_5 5.7.1
  _ZNK25QWebEngineContextMenuData14misspelledWordEv@Qt_5 5.9.0
  _ZNK25QWebEngineContextMenuData17isContentEditableEv@Qt_5 5.7.1
@@ -341,6 +354,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZNK25QWebEngineContextMenuData8linkTextEv@Qt_5 5.7.1
  _ZNK25QWebEngineContextMenuData8mediaUrlEv@Qt_5 5.7.1
  _ZNK25QWebEngineContextMenuData8positionEv@Qt_5 5.7.1
+ _ZNK25QWebEngineContextMenuData9editFlagsEv@Qt_5 5.11.1
  _ZNK25QWebEngineContextMenuData9mediaTypeEv@Qt_5 5.7.1
  _ZNK26QWebEngineCertificateError13isOverridableEv@Qt_5 5.7.1
  _ZNK26QWebEngineCertificateError16errorDescriptionEv@Qt_5 5.7.1
@@ -355,6 +369,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZTI14QWebEngineView@Qt_5 5.7.1
  _ZTI17QWebEngineProfile@Qt_5 5.7.1
  _ZTI22QWebEngineDownloadItem@Qt_5 5.7.1
+ _ZTIN15QtWebEngineCore23RenderViewContextMenuQtE@Qt_5 5.11.1
  _ZTIN15QtWebEngineCore24WebContentsAdapterClientE@Qt_5 5.7.1
  _ZTIN15QtWebEngineCore27BrowserContextAdapterClientE@Qt_5 5.7.1
  _ZTIN15QtWebEngineCore30RenderWidgetHostViewQtDelegateE@Qt_5 5.7.1
@@ -362,6 +377,7 @@ libQt5WebEngineWidgets.so.5 libqt5webenginewidgets5 #MINVER#
  _ZTS14QWebEngineView@Qt_5 5.7.1
  _ZTS17QWebEngineProfile@Qt_5 5.7.1
  _ZTS22QWebEngineDownloadItem@Qt_5 5.7.1
+ _ZTSN15QtWebEngineCore23RenderViewContextMenuQtE@Qt_5 5.11.1
  _ZTSN15QtWebEngineCore24WebContentsAdapterClientE@Qt_5 5.7.1
  _ZTSN15QtWebEngineCore27BrowserContextAdapterClientE@Qt_5 5.7.1
  _ZTSN15QtWebEngineCore30RenderWidgetHostViewQtDelegateE@Qt_5 5.7.1
