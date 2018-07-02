@@ -7,13 +7,11 @@ Files-Excluded: src/3rdparty/chromium/third_party/analytics/google-analytics-bun
                 src/3rdparty/chromium/third_party/bspatch/LICENSE
                 src/3rdparty/chromium/third_party/chaijs/chai.js
                 src/3rdparty/chromium/third_party/checkstyle/*
-                src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cctools/*
                 src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cf/*
                 src/3rdparty/chromium/third_party/dom_distiller_js/dist/js/*.js
                 src/3rdparty/chromium/third_party/eu-strip/bin/eu-strip
                 src/3rdparty/chromium/third_party/flot/*
                 src/3rdparty/chromium/third_party/jstemplate/jstemplate_compiled.js
-                src/3rdparty/chromium/third_party/libxslt/linux/config.log
                 src/3rdparty/chromium/third_party/pycoverage/coverage/htmlfiles/*.min.js
                 src/3rdparty/chromium/third_party/pyelftools/examples/sample_exe64.elf
                 src/3rdparty/chromium/third_party/skia/platform_tools/android/bin/linux/perfhost
@@ -23,7 +21,6 @@ Files-Excluded: src/3rdparty/chromium/third_party/analytics/google-analytics-bun
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/audits2_worker/lighthouse/lighthouse-background.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/formatter_worker/acorn/acorn.js
-                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/gonzales/gonzales-scss.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/network/NetworkConfigView.js
                 src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/*.min.js
                 src/3rdparty/chromium/ui/accessibility/extensions/highcontrast/highcontrast.js
