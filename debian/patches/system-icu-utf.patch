@@ -20,6 +20,14 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      "third_party/superfasthash/superfasthash.c",
      "threading/platform_thread.h",
      "threading/platform_thread_android.cc",
+@@ -1145,6 +1143,7 @@ jumbo_component("base") {
+     "//base/allocator:features",
+     "//base/third_party/dynamic_annotations",
+     "//third_party/modp_b64",
++    "//third_party/icu:icuuc",
+   ]
+ 
+   public_deps = [
 --- a/src/3rdparty/chromium/base/files/file_path.cc
 +++ b/src/3rdparty/chromium/base/files/file_path.cc
 @@ -18,7 +18,7 @@

@@ -11,6 +11,7 @@ qtwebengine-opensource-src (5.11.1+dfsg-1) UNRELEASED; urgency=medium
     - separate-argv.patch
   * Rebase and refresh other patches.
   * Drop three paths from Files-Excluded that have been removed upstream.
+  * Add icu:icuuc to dependencies of jumbo_component("base").
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 30 Jun 2018 14:37:33 -0500
 
