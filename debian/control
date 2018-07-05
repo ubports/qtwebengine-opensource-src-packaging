@@ -42,8 +42,8 @@ Build-Depends: bison,
                libpng-dev,
                libprotobuf-dev,
                libpulse-dev,
-               libqt5opengl5-dev (>= 5.10.1+dfsg~),
-               libqt5webchannel5-dev (>= 5.10.1~),
+               libqt5opengl5-dev (>= 5.11.1+dfsg~),
+               libqt5webchannel5-dev (>= 5.11.1~),
                libre2-dev,
                libsnappy-dev,
                libsqlite3-dev,
@@ -66,8 +66,8 @@ Build-Depends: bison,
                pkg-kde-tools,
                protobuf-compiler,
                python,
-               qtbase5-private-dev (>= 5.10.1+dfsg~),
-               qtdeclarative5-private-dev (>= 5.10.1~),
+               qtbase5-private-dev (>= 5.11.1+dfsg~),
+               qtdeclarative5-private-dev (>= 5.11.1~),
                qtpositioning5-dev,
                qtquickcontrols2-5-dev,
                qttools5-dev,
@@ -77,8 +77,8 @@ Build-Depends: bison,
                xvfb,
                yasm [amd64 i386],
                yui-compressor
-Build-Depends-Indep: qtbase5-doc-html (>= 5.10.1+dfsg~),
-                     qttools5-dev-tools (>= 5.10.1~)
+Build-Depends-Indep: qtbase5-doc-html (>= 5.11.1+dfsg~),
+                     qttools5-dev-tools (>= 5.11.1~)
 Standards-Version: 4.1.4
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/qt/qtwebengine
 Vcs-Git: https://salsa.debian.org/qt-kde-team/qt/qtwebengine.git
