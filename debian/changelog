@@ -5,6 +5,7 @@ qtwebengine-opensource-src (5.11.1+dfsg-1) UNRELEASED; urgency=medium
   * Update debhelper compat to 11, no changes needed.
   * Update build dependencies to 5.11.1.
   * Update symbols from amd64 build logs.
+  * Bump Standards-version to 4.1.5, no changes needed.
 
   [ Dmitry Shachnev ]
   * Drop patches, applied in the new release:
