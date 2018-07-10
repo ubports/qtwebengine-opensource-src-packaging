@@ -1,4 +1,4 @@
-qtwebengine-opensource-src (5.11.1+dfsg-1) experimental; urgency=medium
+qtwebengine-opensource-src (5.11.1+dfsg-1) UNRELEASED; urgency=medium
 
   [ Simon Quigley ]
   * New upstream release.
@@ -17,7 +17,7 @@ qtwebengine-opensource-src (5.11.1+dfsg-1) experimental; urgency=medium
   * Add icu:icuuc to dependencies of jumbo_component("base").
   * Update symbols files from the current amd64 build log.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 07 Jul 2018 20:01:47 -0500
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 30 Jun 2018 14:37:33 -0500
 
 qtwebengine-opensource-src (5.10.1+dfsg-4) unstable; urgency=medium
 
