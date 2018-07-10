@@ -33,6 +33,7 @@ small_architectures := armhf mipsel
 no_gold_architectures := arm64 armhf mipsel
 
 config_args = -proprietary-codecs \
+              -feature-webengine-system-libvpx \
               -system-ffmpeg \
               -system-opus \
               -system-webp \

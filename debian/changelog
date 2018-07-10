@@ -17,6 +17,8 @@ qtwebengine-opensource-src (5.11.1+dfsg-1) UNRELEASED; urgency=medium
   * Add icu:icuuc to dependencies of jumbo_component("base").
   * Update symbols files from the current amd64 build log.
   * Fix or override the remaining source-is-missing warnings.
+  * Make sure that system libvpx library is used (closes: #903126).
+    Thanks to Jonas Smedegaard for the patch.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 30 Jun 2018 14:37:33 -0500
 
