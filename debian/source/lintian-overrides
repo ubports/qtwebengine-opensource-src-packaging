@@ -1,19 +1,39 @@
+# license was updated in https://chromium.googlesource.com/breakpad/breakpad/+/14bbefbd9600e08d6a34d7250faa8bc9dba2113e
+# see also https://bugs.chromium.org/p/google-breakpad/issues/detail?id=270
+qtwebengine-opensource-src source: license-problem-convert-utf-code src/3rdparty/chromium/third_party/breakpad/breakpad/src/common/convert_UTF.c
 # Are replaced by build step with self minified version. Source is shipped in missing-sources dir.
 qtwebengine-opensource-src source: source-is-missing examples/webenginewidgets/contentmanipulation/jquery.min.js
-qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object examples/webenginewidgets/contentmanipulation/jquery.min.js
 qtwebengine-opensource-src source: source-is-missing examples/webenginewidgets/markdowneditor/resources/3rdparty/marked.min.js
-qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object examples/webenginewidgets/markdowneditor/resources/3rdparty/marked.min.js
 qtwebengine-opensource-src source: source-is-missing examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js
-qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/mocha/mocha.js .*
-qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object src/3rdparty/chromium/third_party/mocha/mocha.js .*
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/mocha/mocha.js *
 # Valid files, with very long lines (files are not minified)
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/php.js .*
-qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/php.js .*
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/stylus.js .*
-qtwebengine-opensource-src source: insane-line-length-in-source-file src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/stylus.js .*
-qtwebengine-opensource-src source: source-contains-prebuilt-javascript-object src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/stylus.js .*
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/codemirror.js .*
-qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/persistence/WorkspaceSettingsTab.js .*
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/acorn-jsx/node_modules/acorn/src/identifier.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/lib/compile/formats.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/lib/dotjs/_limit.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/lib/dotjs/custom.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/lib/dotjs/format.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/lib/dotjs/properties.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/lib/dotjs/propertyNames.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/esutils/lib/code.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ignore/ignore.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/js-tokens/index.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/php.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm_modes/stylus.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/cm/codemirror.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/persistence/WorkspaceSettingsTab.js *
 # min means minimum, not minified
 qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/v8/src/js/max-min.js
+# source in src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/lib/
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/dist/ajv.bundle.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/dist/ajv.min.js
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/dist/nodent.min.js
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/ajv/dist/regenerator.min.js
+# source in src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/circular-json/build/circular-json.max.js
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/circular-json/build/circular-json.js *
+# source in src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/js-yaml/lib/
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/js-yaml/dist/js-yaml.js *
+# source in src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/acorn-jsx/node_modules/acorn/src/
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/acorn-jsx/node_modules/acorn/dist/acorn.es.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/acorn-jsx/node_modules/acorn/dist/acorn.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/acorn/dist/acorn.es.js *
+qtwebengine-opensource-src source: source-is-missing src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/acorn/dist/acorn.js *

@@ -8,13 +8,25 @@ Files-Excluded: src/3rdparty/chromium/third_party/analytics/google-analytics-bun
                 src/3rdparty/chromium/third_party/chaijs/chai.js
                 src/3rdparty/chromium/third_party/checkstyle/*
                 src/3rdparty/chromium/third_party/crashpad/crashpad/third_party/apple_cf/*
+                src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/eslint/lib/util/patterns/letters.js
+                src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/external-editor/main
+                src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/iconv-lite/encodings/sbcs-data-generated.js
+                src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/mute-stream/coverage
+                src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/prelude-ls/lib
+                src/3rdparty/chromium/third_party/devtools-node-modules/third_party/node_modules/rx-lite/rx.lite.js
                 src/3rdparty/chromium/third_party/dom_distiller_js/dist/js/*.js
                 src/3rdparty/chromium/third_party/eu-strip/bin/eu-strip
                 src/3rdparty/chromium/third_party/flot/*
+                src/3rdparty/chromium/third_party/ink/ink/web/js/main.soy.js
+                src/3rdparty/chromium/third_party/ink/prebuilt/ink_lib_binary.js
+                src/3rdparty/chromium/third_party/ink/prebuilt/_platform_specific
+                src/3rdparty/chromium/third_party/ink/sketchology/public/nacl/embed.soy.js
                 src/3rdparty/chromium/third_party/jstemplate/jstemplate_compiled.js
+                src/3rdparty/chromium/third_party/pdfium/third_party/eu-strip/bin/eu-strip
                 src/3rdparty/chromium/third_party/pycoverage/coverage/htmlfiles/*.min.js
                 src/3rdparty/chromium/third_party/pyelftools/examples/sample_exe64.elf
                 src/3rdparty/chromium/third_party/skia/platform_tools/android/bin/linux/perfhost
+                src/3rdparty/chromium/third_party/skia/resources/icc_profiles/AdobeRGB1998.icc
                 src/3rdparty/chromium/third_party/skia/resources/icc_profiles/srgb_lab_pcs.icc
                 src/3rdparty/chromium/third_party/swiftshader/third_party/llvm-subzero/lib/Support/ConvertUTF.*
                 src/3rdparty/chromium/third_party/web-animations-js/sources/*.min.js
@@ -22,10 +34,12 @@ Files-Excluded: src/3rdparty/chromium/third_party/analytics/google-analytics-bun
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/formatter_worker/acorn/acorn.js
                 src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/network/NetworkConfigView.js
+                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/terminal/xterm.js/build
                 src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/*.min.js
                 src/3rdparty/chromium/ui/accessibility/extensions/highcontrast/highcontrast.js
                 src/3rdparty/chromium/ui/webui/resources/js/jstemplate_compiled.js
                 src/3rdparty/chromium/v8/benchmarks/regexp.js
+                src/3rdparty/chromium/v8/third_party/eu-strip/bin/eu-strip
 
 Files: *
 Copyright: 2013, BlackBerry Limited
