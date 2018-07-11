@@ -1,0 +1,37 @@
+Description: exclude xterm.{css,js} from the build process
+ We strip them from tarball because they are prebuilt files without source.
+Author: Dmitry Shachnev <mitya57@debian.org>
+Forwarded: not-needed
+Last-Update: 2018-07-10
+
+--- a/src/3rdparty/chromium/third_party/WebKit/Source/devtools/BUILD.gn
++++ b/src/3rdparty/chromium/third_party/WebKit/Source/devtools/BUILD.gn
+@@ -664,8 +664,6 @@ all_devtools_files = [
+   "front_end/terminal/terminal.css",
+   "front_end/terminal/TerminalWidget.js",
+   "front_end/terminal/xterm.js/addons/fit/fit.js",
+-  "front_end/terminal/xterm.js/build/xterm.css",
+-  "front_end/terminal/xterm.js/build/xterm.js",
+   "front_end/test_runner/module.json",
+   "front_end/test_runner/TestRunner.js",
+   "front_end/text_editor/cmdevtools.css",
+--- a/src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/terminal/module.json
++++ b/src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/terminal/module.json
+@@ -17,16 +17,13 @@
+     ],
+     "experiment": "terminalInDrawer",
+     "scripts": [
+-        "xterm.js/build/xterm.js",
+         "xterm.js/addons/fit/fit.js",
+         "TerminalWidget.js"
+     ],
+     "skip_compilation": [
+-        "xterm.js/build/xterm.js",
+         "xterm.js/addons/fit/fit.js"
+     ],
+     "resources": [
+-        "terminal.css",
+-        "xterm.js/build/xterm.css"
++        "terminal.css"
+     ]
+ }
