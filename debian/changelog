@@ -1,4 +1,4 @@
-qtwebengine-opensource-src (5.11.1+dfsg-1) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.11.1+dfsg-1) experimental; urgency=medium
 
   [ Simon Quigley ]
   * New upstream release.
@@ -21,7 +21,7 @@ qtwebengine-opensource-src (5.11.1+dfsg-1) UNRELEASED; urgency=medium
   * Make sure that system libvpx library is used (closes: #903126).
     Thanks to Jonas Smedegaard for the patch.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 30 Jun 2018 14:37:33 -0500
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 11 Jul 2018 14:12:09 +0300
 
 qtwebengine-opensource-src (5.10.1+dfsg-4) unstable; urgency=medium
 
