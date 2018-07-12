@@ -1,5 +1,7 @@
 qtwebengine-opensource-src (5.11.1+dfsg-3) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * Exclude both non-free rx.lite.min.js and rx.lite.js from the tarball.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 12 Jul 2018 18:56:31 +0300
 
