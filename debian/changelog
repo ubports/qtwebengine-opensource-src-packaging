@@ -3,6 +3,7 @@ qtwebengine-opensource-src (5.11.1+dfsg-2) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Update symbols files from buildds’ logs.
   * Replace no-xterm-build.patch with more generic touch_files approach.
+  * Do not use rm -rf for removing files.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 12 Jul 2018 17:03:13 +0300
 
