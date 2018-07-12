@@ -49,6 +49,8 @@ touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundl
 	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/gonzales/gonzales-scss.js \
 	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/network/NetworkConfigView.js \
 	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/settings/EditFileSystemView.js \
+	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/terminal/xterm.js/build/xterm.css \
+	      src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/terminal/xterm.js/build/xterm.js \
 	      src/3rdparty/chromium/ui/webui/resources/js/jstemplate_compiled.js
 
 %:
@@ -148,7 +150,8 @@ endif
 	yui-compressor --type js "examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.js" -o "examples/webengine/recipebrowser/resources/pages/assets/3rdparty/marked.min.js"
 
 
-	for fname in $(touch_files); do \
+	set -ex; for fname in $(touch_files); do \
+		mkdir -p $(CURDIR)/$$(dirname $${fname}); \
 		touch $(CURDIR)/$${fname}; \
 	done
 
