@@ -6,3 +6,4 @@ no-icudtl-dat.patch
 disable-last_commit_position.patch
 verbose-gn-bootstrap.patch
 system-libvpx.patch
+increase_decoderbuffer_kpaddingsize.patch
