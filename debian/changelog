@@ -1,3 +1,7 @@
+qtwebengine-opensource-src (5.11.1+dfsg-5) UNRELEASED; urgency=medium
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 10:00:45 -0300
+
 qtwebengine-opensource-src (5.11.1+dfsg-4) unstable; urgency=medium
 
   * Add increase_decoderbuffer_kpaddingsize.patch to fix FTBFS with new FFmpeg
