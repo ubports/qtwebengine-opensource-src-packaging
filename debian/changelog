@@ -1,10 +1,10 @@
-qtwebengine-opensource-src (5.11.1+dfsg-5) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.11.1+dfsg-5) unstable; urgency=medium
 
-  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Team upload.
   * Add fix-gcc-8-i386.patch to solve an alignment issue on i386.
   * Update symbols files with buildds' logs.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 10:00:45 -0300
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Fri, 27 Jul 2018 10:28:56 -0300
 
 qtwebengine-opensource-src (5.11.1+dfsg-4) unstable; urgency=medium
 
