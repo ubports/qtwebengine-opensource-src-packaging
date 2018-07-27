@@ -2,6 +2,7 @@ qtwebengine-opensource-src (5.11.1+dfsg-5) UNRELEASED; urgency=medium
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Add fix-gcc-8-i386.patch to solve an alignment issue on i386.
+  * Update symbols files with buildds' logs.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 10:00:45 -0300
 
