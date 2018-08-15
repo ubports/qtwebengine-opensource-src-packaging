@@ -1,8 +1,11 @@
 qtwebengine-opensource-src (5.11.1+dfsg-6) UNRELEASED; urgency=medium
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
-  * Depend upon libicu-dev >= 59 (Closes: #905596). Thanks Andreas Ferber for
-    the bug report.
+  * Depend upon:
+    - libicu-dev >= 59~ (Closes: #905596).
+    - libvpx >= 1.7.0~ (Closes: #905658).
+    This matches reality and allows easier backporting.
+    Thanks Andreas Ferber for the bug reports.
   * Add ~ to various build dependencies versions in order to let the package be
     backported.
 
