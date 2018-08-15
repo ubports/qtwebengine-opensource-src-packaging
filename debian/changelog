@@ -3,6 +3,8 @@ qtwebengine-opensource-src (5.11.1+dfsg-6) UNRELEASED; urgency=medium
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Depend upon libicu-dev >= 59 (Closes: #905596). Thanks Andreas Ferber for
     the bug report.
+  * Add ~ to various build dependencies versions in order to let the package be
+    backported.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 15 Aug 2018 19:36:49 -0300
 
