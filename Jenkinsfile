@@ -27,19 +27,19 @@ build-binary.sh'''
               cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
               unstash 'build-armhf'
               archiveArtifacts(artifacts: '*.gz,*.bz2,*.xz,*.deb,*.dsc,*.changes,*.buildinfo', fingerprint: true, onlyIfSuccessful: true)
-              sh '''/usr/bin/build-repo.sh'''
             }
           },
-          "Build binary - arm64": {
-            node(label: 'arm64') {
-              cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
-              unstash 'source'
-              sh '''export architecture="arm64"
-    build-binary.sh'''
-              stash(includes: '*.gz,*.bz2,*.xz,*.deb,*.dsc,*.changes,*.buildinfo,lintian.txt', name: 'build-arm64')
-              cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
-            }
-          },
+          // ARM64 build disabled due to dependency issues - re-enable when issues have been resolved
+    //       "Build binary - arm64": {
+    //         node(label: 'arm64') {
+    //           cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
+    //           unstash 'source'
+    //           sh '''export architecture="arm64"
+    // build-binary.sh'''
+    //           stash(includes: '*.gz,*.bz2,*.xz,*.deb,*.dsc,*.changes,*.buildinfo,lintian.txt', name: 'build-arm64')
+    //           cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
+    //         }
+    //       },
           "Build binary - amd64": {
             node(label: 'amd64') {
               cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
@@ -56,7 +56,8 @@ build-binary.sh'''
     stage('Results') {
       steps {
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
-        unstash 'build-arm64'
+        // unstash 'build-arm64'
+        unstash 'build-armhf'
         unstash 'build-amd64'
         archiveArtifacts(artifacts: '*.gz,*.bz2,*.xz,*.deb,*.dsc,*.changes,*.buildinfo', fingerprint: true, onlyIfSuccessful: true)
         sh '''/usr/bin/build-repo.sh'''

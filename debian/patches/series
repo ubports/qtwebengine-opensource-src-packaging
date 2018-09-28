@@ -15,3 +15,4 @@ separate-argv.patch
 0002-Add-initialization-of-static-bindings-for-egl-and-gl.patch
 0001-Do-not-initialize-static-bindings-in-x11_initializer.patch
 qtwebengine-no-gpu.patch
+ninja-path-too-long-workaround.patch

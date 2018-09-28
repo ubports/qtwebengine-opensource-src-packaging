@@ -1,3 +1,10 @@
+qtwebengine-opensource-src (5.10.1+dfsg-4ubports2) xenial; urgency=medium
+
+  * Change upstream source location
+  * Add patch to fix FTBFS due to a file name being too long
+
+ -- Dalton Durst <mariogrip@ubports.com>  Tue, 25 Sep 2018 14:25:00 -0500
+
 qtwebengine-opensource-src (5.10.1+dfsg-4ubports1) xenial; urgency=medium
 
   * Add mir patch
