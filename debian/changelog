@@ -1,4 +1,4 @@
-qtwebengine-opensource-src (5.11.1+dfsg-6) UNRELEASED; urgency=medium
+qtwebengine-opensource-src (5.11.2+dfsg-1) UNRELEASED; urgency=medium
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Depend upon:
@@ -12,6 +12,7 @@ qtwebengine-opensource-src (5.11.1+dfsg-6) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Update libqt5webenginecore5.symbols from buildds’ logs.
   * Set QTWEBENGINEPROCESS_PATH when running the tests.
+  * New upstream release.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 15 Aug 2018 19:36:49 -0300
 
