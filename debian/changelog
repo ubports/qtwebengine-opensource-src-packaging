@@ -18,6 +18,7 @@ qtwebengine-opensource-src (5.11.2+dfsg-1) UNRELEASED; urgency=medium
     - increase_decoderbuffer_kpaddingsize.patch
   * Bump Qt build-dependencies to 5.11.2.
   * Update libqt5webenginecore5.symbols from the current build log.
+  * Bump FFmpeg build-dependencies to >= 7:4.0 (closes: #905595).
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 15 Aug 2018 19:36:49 -0300
 
