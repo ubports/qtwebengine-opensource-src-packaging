@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.11.1 amd64 arm64 armhf i386 mipsel
+# SymbolsHelper-Confirmed: 5.11.2 amd64
 libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  (optional=gold)Qt_5.0@Qt_5.0 5.7.1
  (optional=gold)Qt_5.10@Qt_5.10 5.10.1
@@ -101,7 +101,7 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  _ZN15QtWebEngineCore18WebContentsAdapter10setContentERK10QByteArrayRK7QStringRK4QUrl@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter10viewSourceEv@Qt_5 5.9.0
  _ZN15QtWebEngineCore18WebContentsAdapter11copyImageAtERK6QPoint@Qt_5 5.7.1
- _ZN15QtWebEngineCore18WebContentsAdapter11endDraggingERK7QPointFS3_@Qt_5 5.11.1
+ _ZN15QtWebEngineCore18WebContentsAdapter11endDraggingEP10QDropEventRK7QPointF@Qt_5 5.11.2
  _ZN15QtWebEngineCore18WebContentsAdapter11loadDefaultEv@Qt_5 5.11.1
  _ZN15QtWebEngineCore18WebContentsAdapter11stopFindingEv@Qt_5 5.7.1
  _ZN15QtWebEngineCore18WebContentsAdapter12reattachRWHVEv@Qt_5 5.7.1
@@ -1611,6 +1611,8 @@ libQt5WebEngineCore.so.5 libqt5webenginecore5 #MINVER#
  (optional=templinst)_ZNSt8_Rb_treeIN6webrtc14RTCPPacketTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE24_M_get_insert_unique_posERKS1_@Qt_5 5.7.1
  (optional=templinst|arch=amd64 arm64)_ZNSt8_Rb_treeIN6webrtc14RTCPPacketTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS1_ERKS1_@Qt_5 5.7.1
  (optional=templinst)_ZNSt8_Rb_treeIN6webrtc14RTCPPacketTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE8_M_eraseEPSt13_Rb_tree_nodeIS1_E@Qt_5 5.7.1
+ (optional=templinst)_ZNSt8_Rb_treeIN7content14PermissionTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE16_M_insert_uniqueIRKS1_EESt4pairISt17_Rb_tree_iteratorIS1_EbEOT_@Qt_5 5.11.2
+ (optional=templinst)_ZNSt8_Rb_treeIN7content14PermissionTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE8_M_eraseEPSt13_Rb_tree_nodeIS1_E@Qt_5 5.11.2
  (optional=templinst)_ZNSt8_Rb_treeIN7content18VideoTrackRecorder7CodecIdESt4pairIKS2_N5media17VideoCodecProfileEESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE16_M_insert_uniqueIS3_IS2_S6_EEES3_ISt17_Rb_tree_iteratorIS7_EbEOT_@Qt_5 5.10.1
  (optional=templinst)_ZNSt8_Rb_treeIN7storage14FileSystemTypeESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE24_M_get_insert_unique_posERS3_@Qt_5 5.7.1
  (optional=templinst|arch=amd64 arm64)_ZNSt8_Rb_treeIN7storage14FileSystemTypeESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS3_@Qt_5 5.7.1

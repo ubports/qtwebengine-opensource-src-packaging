@@ -17,6 +17,7 @@ qtwebengine-opensource-src (5.11.2+dfsg-1) UNRELEASED; urgency=medium
     - system-libvpx.patch
     - increase_decoderbuffer_kpaddingsize.patch
   * Bump Qt build-dependencies to 5.11.2.
+  * Update libqt5webenginecore5.symbols from the current build log.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 15 Aug 2018 19:36:49 -0300
 
