@@ -1,3 +1,9 @@
+qtwebengine-opensource-src (5.11.2+dfsg-1ubports2) xenial; urgency=medium
+
+  * Add back qtwebengine-no-gpu.patch since gpu seems not 100% yet
+
+ -- Marius Gripsgard <marius@ubports.com>  Sun, 07 Oct 2018 21:56:18 +0200
+
 qtwebengine-opensource-src (5.11.2+dfsg-1ubports1) xenial; urgency=medium
 
   * Add mir patch
