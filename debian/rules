@@ -32,12 +32,12 @@ disabled_pch_architectures := amd64 powerpc s390x
 small_architectures := armhf mipsel
 no_gold_architectures := arm64 armhf mipsel
 
+#              -feature-webengine-system-libvpx
+#              -system-ffmpeg
+#              -system-webengine-icu
 config_args = -proprietary-codecs \
-#              -feature-webengine-system-libvpx \
-              -system-ffmpeg \
               -system-opus \
-              -system-webp \
-              -system-webengine-icu
+              -system-webp
 
 touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js \
 	      src/3rdparty/chromium/third_party/web-animations-js/sources/web-animations.min.js \
