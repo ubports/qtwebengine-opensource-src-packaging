@@ -1,3 +1,9 @@
+qtwebengine-opensource-src (5.11.2+dfsg-1ubports4) xenial; urgency=medium
+
+  * Rebuild SYNCQT headers during build
+
+ -- Dalton Durst <dalton@ubports.com>  Tue, 06 Nov 2018 14:52:28 -0600
+
 qtwebengine-opensource-src (5.11.2+dfsg-1ubports3) xenial; urgency=medium
 
   * Add back qtwebengine-no-gpu.patch since gpu seems not 100% yet
