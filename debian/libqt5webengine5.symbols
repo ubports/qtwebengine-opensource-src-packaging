@@ -1,7 +1,8 @@
-# SymbolsHelper-Confirmed: 5.10.1 amd64
+# SymbolsHelper-Confirmed: 5.11.1 amd64
 libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1
  Qt_5.10@Qt_5.10 5.10.1
+ Qt_5.11@Qt_5.11 5.11.1
  Qt_5.1@Qt_5.1 5.7.1
  Qt_5.2@Qt_5.2 5.7.1
  Qt_5.3@Qt_5.3 5.7.1
@@ -37,11 +38,14 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN19QQuickWebEngineView14lazyInitializeEv@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView14loadingChangedEP26QQuickWebEngineLoadRequest@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView14profileChangedEv@Qt_5_PRIVATE_API 5.7.1
+ _ZN19QQuickWebEngineView14quotaRequestedERK22QWebEngineQuotaRequest@Qt_5_PRIVATE_API 5.11.1
  _ZN19QQuickWebEngineView14setTestSupportEP26QQuickWebEngineTestSupport@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView15geometryChangedERK6QRectFS2_@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView15goBackOrForwardEi@Qt_5_PRIVATE_API 5.7.1
+ _ZN19QQuickWebEngineView15setDevToolsViewEPS_@Qt_5_PRIVATE_API 5.11.1
  _ZN19QQuickWebEngineView16certificateErrorEP31QQuickWebEngineCertificateError@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView16newViewRequestedEP29QQuickWebEngineNewViewRequest@Qt_5_PRIVATE_API 5.7.1
+ _ZN19QQuickWebEngineView16setInspectedViewEPS_@Qt_5_PRIVATE_API 5.11.1
  _ZN19QQuickWebEngineView16staticMetaObjectE@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView16triggerWebActionENS_9WebActionE@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView17audioMutedChangedEb@Qt_5_PRIVATE_API 5.7.1
@@ -52,6 +56,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN19QQuickWebEngineView18setWebChannelWorldEj@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView18testSupportChangedEv@Qt_5_PRIVATE_API 5.9.0
  _ZN19QQuickWebEngineView19contentsSizeChangedERK6QSizeF@Qt_5_PRIVATE_API 5.7.1
+ _ZN19QQuickWebEngineView19devToolsViewChangedEv@Qt_5_PRIVATE_API 5.11.1
  _ZN19QQuickWebEngineView19fileDialogRequestedEP32QQuickWebEngineFileDialogRequest@Qt_5_PRIVATE_API 5.9.0
  _ZN19QQuickWebEngineView19fullScreenCancelledEv@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView19fullScreenRequestedERK32QQuickWebEngineFullScreenRequest@Qt_5_PRIVATE_API 5.7.1
@@ -61,6 +66,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN19QQuickWebEngineView19pdfPrintingFinishedERK7QStringb@Qt_5_PRIVATE_API 5.9.0
  _ZN19QQuickWebEngineView20colorDialogRequestedEP33QQuickWebEngineColorDialogRequest@Qt_5_PRIVATE_API 5.9.0
  _ZN19QQuickWebEngineView20contextMenuRequestedEP33QQuickWebEngineContextMenuRequest@Qt_5_PRIVATE_API 5.9.0
+ _ZN19QQuickWebEngineView20inspectedViewChangedEv@Qt_5_PRIVATE_API 5.11.1
  _ZN19QQuickWebEngineView20reloadAndBypassCacheEv@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView20windowCloseRequestedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView21replaceMisspelledWordERK7QString@Qt_5_PRIVATE_API 5.9.0
@@ -70,6 +76,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN19QQuickWebEngineView22grantFeaturePermissionERK4QUrlNS_7FeatureEb@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView22recentlyAudibleChangedEb@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView22webChannelWorldChangedEj@Qt_5_PRIVATE_API 5.7.1
+ _ZN19QQuickWebEngineView23geometryChangeRequestedERK5QRectS2_@Qt_5_PRIVATE_API 5.11.1
  _ZN19QQuickWebEngineView23renderProcessTerminatedENS_30RenderProcessTerminationStatusEi@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView24javaScriptConsoleMessageENS_29JavaScriptConsoleMessageLevelERK7QStringiS3_@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView25activeFocusOnPressChangedEb@Qt_5_PRIVATE_API 5.7.1
@@ -77,6 +84,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN19QQuickWebEngineView26featurePermissionRequestedERK4QUrlNS_7FeatureE@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView29authenticationDialogRequestedEP42QQuickWebEngineAuthenticationDialogRequest@Qt_5_PRIVATE_API 5.9.0
  _ZN19QQuickWebEngineView30formValidationMessageRequestedEP43QQuickWebEngineFormValidationMessageRequest@Qt_5_PRIVATE_API 5.9.0
+ _ZN19QQuickWebEngineView32registerProtocolHandlerRequestedERK40QWebEngineRegisterProtocolHandlerRequest@Qt_5_PRIVATE_API 5.11.1
  _ZN19QQuickWebEngineView4stopEv@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView6goBackEv@Qt_5_PRIVATE_API 5.7.1
  _ZN19QQuickWebEngineView6reloadEv@Qt_5_PRIVATE_API 5.7.1
@@ -177,6 +185,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN23QQuickWebEngineSettings20setTouchIconsEnabledEb@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings21autoLoadImagesChangedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings21pluginsEnabledChangedEv@Qt_5_PRIVATE_API 5.7.1
+ _ZN23QQuickWebEngineSettings21setJavascriptCanPasteEb@Qt_5_PRIVATE_API 5.11.1
  _ZN23QQuickWebEngineSettings21showScrollBarsChangedEv@Qt_5_PRIVATE_API 5.10.1
  _ZN23QQuickWebEngineSettings22setDefaultTextEncodingE7QString@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings22setLocalStorageEnabledEb@Qt_5_PRIVATE_API 5.7.1
@@ -185,6 +194,8 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN23QQuickWebEngineSettings23setScreenCaptureEnabledEb@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings24javascriptEnabledChangedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings24touchIconsEnabledChangedEv@Qt_5_PRIVATE_API 5.7.1
+ _ZN23QQuickWebEngineSettings25javascriptCanPasteChangedEv@Qt_5_PRIVATE_API 5.11.1
+ _ZN23QQuickWebEngineSettings25setUnknownUrlSchemePolicyENS_22UnknownUrlSchemePolicyE@Qt_5_PRIVATE_API 5.11.1
  _ZN23QQuickWebEngineSettings26defaultTextEncodingChangedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings26localStorageEnabledChangedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings26setPrintElementBackgroundsEb@Qt_5_PRIVATE_API 5.9.0
@@ -197,8 +208,11 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN23QQuickWebEngineSettings27setSpatialNavigationEnabledEb@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings28setLinksIncludedInFocusChainEb@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings29setAccelerated2dCanvasEnabledEb@Qt_5_PRIVATE_API 5.7.1
+ _ZN23QQuickWebEngineSettings29setWebRTCPublicInterfacesOnlyEb@Qt_5_PRIVATE_API 5.11.1
+ _ZN23QQuickWebEngineSettings29unknownUrlSchemePolicyChangedEv@Qt_5_PRIVATE_API 5.11.1
  _ZN23QQuickWebEngineSettings30printElementBackgroundsChangedEv@Qt_5_PRIVATE_API 5.9.0
  _ZN23QQuickWebEngineSettings30setAllowRunningInsecureContentEb@Qt_5_PRIVATE_API 5.9.0
+ _ZN23QQuickWebEngineSettings30setPlaybackRequiresUserGestureEb@Qt_5_PRIVATE_API 5.11.1
  _ZN23QQuickWebEngineSettings31focusOnNavigationEnabledChangedEv@Qt_5_PRIVATE_API 5.9.0
  _ZN23QQuickWebEngineSettings31fullScreenSupportEnabledChangedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings31hyperlinkAuditingEnabledChangedEv@Qt_5_PRIVATE_API 5.7.1
@@ -208,7 +222,9 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN23QQuickWebEngineSettings32linksIncludedInFocusChainChangedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings32setLocalContentCanAccessFileUrlsEb@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings33accelerated2dCanvasEnabledChangedEv@Qt_5_PRIVATE_API 5.7.1
+ _ZN23QQuickWebEngineSettings33webRTCPublicInterfacesOnlyChangedEv@Qt_5_PRIVATE_API 5.11.1
  _ZN23QQuickWebEngineSettings34allowRunningInsecureContentChangedEv@Qt_5_PRIVATE_API 5.9.0
+ _ZN23QQuickWebEngineSettings34playbackRequiresUserGestureChangedEv@Qt_5_PRIVATE_API 5.11.1
  _ZN23QQuickWebEngineSettings34setLocalContentCanAccessRemoteUrlsEb@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings35javascriptCanAccessClipboardChangedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN23QQuickWebEngineSettings36localContentCanAccessFileUrlsChangedEv@Qt_5_PRIVATE_API 5.7.1
@@ -273,6 +289,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN26QQuickWebEngineViewPrivate14isBeingAdoptedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate14runFileChooserE14QSharedPointerIN15QtWebEngineCore20FilePickerControllerEE@Qt_5_PRIVATE_API 5.9.0
  _ZN26QQuickWebEngineViewPrivate14userScripts_atEP16QQmlListPropertyI21QQuickWebEngineScriptEi@Qt_5_PRIVATE_API 5.7.1
+ _ZN26QQuickWebEngineViewPrivate15runQuotaRequestE22QWebEngineQuotaRequest@Qt_5_PRIVATE_API 5.11.1
  _ZN26QQuickWebEngineViewPrivate15showColorDialogE14QSharedPointerIN15QtWebEngineCore22ColorChooserControllerEE@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate16adoptWebContentsEPN15QtWebEngineCore18WebContentsAdapterE@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate16didRunJavaScriptEyRK8QVariant@Qt_5_PRIVATE_API 5.7.1
@@ -288,19 +305,17 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN26QQuickWebEngineViewPrivate18webContentsAdapterEv@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate19loadProgressChangedEi@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate19navigationRequestedEiRK4QUrlRib@Qt_5_PRIVATE_API 5.7.1
- _ZN26QQuickWebEngineViewPrivate19setDevicePixelRatioEd@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate19windowCloseRejectedEv@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate20contextMenuRequestedERKN15QtWebEngineCore24WebEngineContextMenuDataE@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate20updateScrollPositionERK7QPointF@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate21allowCertificateErrorERK14QSharedPointerI26CertificateErrorControllerE@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate21browserContextAdapterEv@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate21ensureContentsAdapterEv@Qt_5_PRIVATE_API 5.7.1
- _ZN26QQuickWebEngineViewPrivate21hideValidationMessageEv@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate21loadVisuallyCommittedEv@Qt_5_PRIVATE_API 5.7.1
- _ZN26QQuickWebEngineViewPrivate21moveValidationMessageERK5QRect@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate21requestFullScreenModeERK4QUrlb@Qt_5_PRIVATE_API 5.7.1
- _ZN26QQuickWebEngineViewPrivate21showValidationMessageERK5QRectRK7QStringS5_@Qt_5_PRIVATE_API 5.7.1
+ _ZN26QQuickWebEngineViewPrivate21requestGeometryChangeERK5QRectS2_@Qt_5_PRIVATE_API 5.11.1
  _ZN26QQuickWebEngineViewPrivate22authenticationRequiredE14QSharedPointerIN15QtWebEngineCore30AuthenticationDialogControllerEE@Qt_5_PRIVATE_API 5.7.1
+ _ZN26QQuickWebEngineViewPrivate22initializationFinishedEv@Qt_5_PRIVATE_API 5.11.1
  _ZN26QQuickWebEngineViewPrivate22recentlyAudibleChangedEb@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate23renderProcessTerminatedEN15QtWebEngineCore24WebContentsAdapterClient30RenderProcessTerminationStatusEi@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate24javaScriptConsoleMessageEN15QtWebEngineCore24WebContentsAdapterClient29JavaScriptConsoleMessageLevelERK7QStringiS5_@Qt_5_PRIVATE_API 5.7.1
@@ -309,6 +324,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZN26QQuickWebEngineViewPrivate2uiEv@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate31runGeolocationPermissionRequestERK4QUrl@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate31runMediaAccessPermissionRequestERK4QUrl6QFlagsIN15QtWebEngineCore24WebContentsAdapterClient16MediaRequestFlagEE@Qt_5_PRIVATE_API 5.7.1
+ _ZN26QQuickWebEngineViewPrivate33runRegisterProtocolHandlerRequestE40QWebEngineRegisterProtocolHandlerRequest@Qt_5_PRIVATE_API 5.11.1
  _ZN26QQuickWebEngineViewPrivate36CreateRenderWidgetHostViewQtDelegateEPN15QtWebEngineCore36RenderWidgetHostViewQtDelegateClientE@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate44CreateRenderWidgetHostViewQtDelegateForPopupEPN15QtWebEngineCore36RenderWidgetHostViewQtDelegateClientE@Qt_5_PRIVATE_API 5.7.1
  _ZN26QQuickWebEngineViewPrivate5closeEv@Qt_5_PRIVATE_API 5.7.1
@@ -478,9 +494,11 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZNK19QQuickWebEngineView11testSupportEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK19QQuickWebEngineView12canGoForwardEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK19QQuickWebEngineView12contentsSizeEv@Qt_5_PRIVATE_API 5.7.1
+ _ZNK19QQuickWebEngineView12devToolsViewEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK19QQuickWebEngineView12isAudioMutedEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK19QQuickWebEngineView12isFullScreenEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK19QQuickWebEngineView12loadProgressEv@Qt_5_PRIVATE_API 5.7.1
+ _ZNK19QQuickWebEngineView13inspectedViewEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK19QQuickWebEngineView14scrollPositionEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK19QQuickWebEngineView15backgroundColorEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK19QQuickWebEngineView15recentlyAudibleEv@Qt_5_PRIVATE_API 5.7.1
@@ -529,10 +547,12 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZNK23QQuickWebEngineSettings16errorPageEnabledEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK23QQuickWebEngineSettings17javascriptEnabledEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK23QQuickWebEngineSettings17touchIconsEnabledEv@Qt_5_PRIVATE_API 5.7.1
+ _ZNK23QQuickWebEngineSettings18javascriptCanPasteEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK23QQuickWebEngineSettings19defaultTextEncodingEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK23QQuickWebEngineSettings19localStorageEnabledEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK23QQuickWebEngineSettings20autoLoadIconsForPageEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK23QQuickWebEngineSettings20screenCaptureEnabledEv@Qt_5_PRIVATE_API 5.7.1
+ _ZNK23QQuickWebEngineSettings22unknownUrlSchemePolicyEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK23QQuickWebEngineSettings23printElementBackgroundsEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK23QQuickWebEngineSettings24focusOnNavigationEnabledEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK23QQuickWebEngineSettings24fullScreenSupportEnabledEv@Qt_5_PRIVATE_API 5.7.1
@@ -541,7 +561,9 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZNK23QQuickWebEngineSettings24spatialNavigationEnabledEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK23QQuickWebEngineSettings25linksIncludedInFocusChainEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK23QQuickWebEngineSettings26accelerated2dCanvasEnabledEv@Qt_5_PRIVATE_API 5.7.1
+ _ZNK23QQuickWebEngineSettings26webRTCPublicInterfacesOnlyEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK23QQuickWebEngineSettings27allowRunningInsecureContentEv@Qt_5_PRIVATE_API 5.9.0
+ _ZNK23QQuickWebEngineSettings27playbackRequiresUserGestureEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK23QQuickWebEngineSettings28javascriptCanAccessClipboardEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK23QQuickWebEngineSettings29localContentCanAccessFileUrlsEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK23QQuickWebEngineSettings31localContentCanAccessRemoteUrlsEv@Qt_5_PRIVATE_API 5.7.1
@@ -566,6 +588,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZNK26QQuickWebEngineViewPrivate14holdingQObjectEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK26QQuickWebEngineViewPrivate15backgroundColorEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK26QQuickWebEngineViewPrivate16isFullScreenModeEv@Qt_5_PRIVATE_API 5.7.1
+ _ZNK26QQuickWebEngineViewPrivate16supportsDraggingEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK26QQuickWebEngineViewPrivate17webEngineSettingsEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK26QQuickWebEngineViewPrivate8dpiScaleEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK26QQuickWebEngineViewPrivate9isEnabledEv@Qt_5_PRIVATE_API 5.7.1
@@ -575,6 +598,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZNK27QQuickWebEngineDownloadItem13receivedBytesEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK27QQuickWebEngineDownloadItem14savePageFormatEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK27QQuickWebEngineDownloadItem15interruptReasonEv@Qt_5_PRIVATE_API 5.9.0
+ _ZNK27QQuickWebEngineDownloadItem18isSavePageDownloadEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK27QQuickWebEngineDownloadItem21interruptReasonStringEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK27QQuickWebEngineDownloadItem2idEv@Qt_5_PRIVATE_API 5.7.1
  _ZNK27QQuickWebEngineDownloadItem4pathEv@Qt_5_PRIVATE_API 5.7.1
@@ -615,6 +639,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZNK33QQuickWebEngineColorDialogRequest10metaObjectEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK33QQuickWebEngineColorDialogRequest5colorEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK33QQuickWebEngineContextMenuRequest10isAcceptedEv@Qt_5_PRIVATE_API 5.9.0
+ _ZNK33QQuickWebEngineContextMenuRequest10mediaFlagsEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK33QQuickWebEngineContextMenuRequest10metaObjectEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK33QQuickWebEngineContextMenuRequest12selectedTextEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK33QQuickWebEngineContextMenuRequest14misspelledWordEv@Qt_5_PRIVATE_API 5.9.0
@@ -625,6 +650,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZNK33QQuickWebEngineContextMenuRequest7linkUrlEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK33QQuickWebEngineContextMenuRequest8linkTextEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK33QQuickWebEngineContextMenuRequest8mediaUrlEv@Qt_5_PRIVATE_API 5.9.0
+ _ZNK33QQuickWebEngineContextMenuRequest9editFlagsEv@Qt_5_PRIVATE_API 5.11.1
  _ZNK33QQuickWebEngineContextMenuRequest9mediaTypeEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK38QQuickWebEngineJavaScriptDialogRequest10isAcceptedEv@Qt_5_PRIVATE_API 5.9.0
  _ZNK38QQuickWebEngineJavaScriptDialogRequest10metaObjectEv@Qt_5_PRIVATE_API 5.9.0
@@ -669,6 +695,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZTI38QQuickWebEngineJavaScriptDialogRequest@Qt_5_PRIVATE_API 5.9.0
  _ZTI42QQuickWebEngineAuthenticationDialogRequest@Qt_5_PRIVATE_API 5.9.0
  _ZTI43QQuickWebEngineFormValidationMessageRequest@Qt_5_PRIVATE_API 5.9.0
+ _ZTIN15QtWebEngineCore23RenderViewContextMenuQtE@Qt_5 5.11.1
  _ZTIN15QtWebEngineCore24WebContentsAdapterClientE@Qt_5 5.7.1
  _ZTIN15QtWebEngineCore27BrowserContextAdapterClientE@Qt_5 5.7.1
  _ZTIN15QtWebEngineCore30RenderWidgetHostViewQtDelegateE@Qt_5 5.7.1
@@ -696,6 +723,7 @@ libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  _ZTS38QQuickWebEngineJavaScriptDialogRequest@Qt_5_PRIVATE_API 5.9.0
  _ZTS42QQuickWebEngineAuthenticationDialogRequest@Qt_5_PRIVATE_API 5.9.0
  _ZTS43QQuickWebEngineFormValidationMessageRequest@Qt_5_PRIVATE_API 5.9.0
+ _ZTSN15QtWebEngineCore23RenderViewContextMenuQtE@Qt_5 5.11.1
  _ZTSN15QtWebEngineCore24WebContentsAdapterClientE@Qt_5 5.7.1
  _ZTSN15QtWebEngineCore27BrowserContextAdapterClientE@Qt_5 5.7.1
  _ZTSN15QtWebEngineCore30RenderWidgetHostViewQtDelegateE@Qt_5 5.7.1
