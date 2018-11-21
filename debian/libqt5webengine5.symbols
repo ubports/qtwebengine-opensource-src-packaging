@@ -1,8 +1,6 @@
 # SymbolsHelper-Confirmed: 5.11.1 amd64
 libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  Qt_5.0@Qt_5.0 5.7.1
- Qt_5.10@Qt_5.10 5.10.1
- Qt_5.11@Qt_5.11 5.11.1
  Qt_5.1@Qt_5.1 5.7.1
  Qt_5.2@Qt_5.2 5.7.1
  Qt_5.3@Qt_5.3 5.7.1
