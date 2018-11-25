@@ -1,3 +1,9 @@
+qtwebengine-opensource-src (5.11.2+dfsg-1ubports5) xenial; urgency=medium
+
+  * Enable ARM64
+
+ -- Marius Gripsgard <marius@ubports.com>  Sun, 25 Nov 2018 11:22:47 +0100
+
 qtwebengine-opensource-src (5.11.2+dfsg-1ubports4) xenial; urgency=medium
 
   * Rebuild SYNCQT headers during build
