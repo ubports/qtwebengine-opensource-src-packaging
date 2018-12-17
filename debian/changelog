@@ -1,3 +1,9 @@
+qtwebengine-opensource-src (5.11.3+dfsg-1ubports0) xenial; urgency=medium
+
+  * Update to QtWebEngine 5.11.3
+
+ -- Dalton Durst <dalton@ubports.com>  Mon, 17 Dec 2018 12:21:47 -0600
+
 qtwebengine-opensource-src (5.11.2+dfsg-1ubports5) xenial; urgency=medium
 
   * Enable ARM64
