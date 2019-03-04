@@ -12,7 +12,7 @@ pipeline {
       steps {
         parallel(
           "Build binary - armhf": {
-            node(label: 'arm64') {
+            node(label: 'armhf') {
               cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
               unstash 'source'
               sh '''export architecture="armhf"
@@ -21,15 +21,14 @@ pipeline {
               stash(includes: '*.gz,*.bz2,*.xz,*.deb,*.dsc,*.changes,*.buildinfo,lintian.txt', name: 'build-armhf')
               cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
             }
-         )
+          }
+        )
       }
     }
     stage('Results') {
       steps {
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
-        unstash 'build-arm64'
         unstash 'build-armhf'
-        unstash 'build-amd64'
         archiveArtifacts(artifacts: '*.gz,*.bz2,*.xz,*.deb,*.dsc,*.changes,*.buildinfo', fingerprint: true, onlyIfSuccessful: true)
         sh '''/usr/bin/build-repo.sh'''
       }
