@@ -2,164 +2,825 @@ From: Chris Clime <chris.clime@gmx.net>
 Subject: some prototyping regarding capture device (camera) - deleting whole file (should not build)
 
 ===================================================================
---- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_linux.cc
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_linux.cc
-@@ -1,158 +0,0 @@
--// Copyright (c) 2012 The Chromium Authors. All rights reserved.
--// Use of this source code is governed by a BSD-style license that can be
--// found in the LICENSE file.
--
--#include "media/capture/video/linux/video_capture_device_linux.h"
--
--#include <stddef.h>
--
--#include <list>
--#include <memory>
--
--#include "base/bind.h"
--#include "base/single_thread_task_runner.h"
--#include "build/build_config.h"
--#include "media/capture/video/linux/v4l2_capture_delegate.h"
--
--#if defined(OS_OPENBSD)
--#include <sys/videoio.h>
--#else
--#include <linux/videodev2.h>
--#include <linux/version.h>
--#endif
--
--namespace media {
--
--// Translates Video4Linux pixel formats to Chromium pixel formats.
--// static
--VideoPixelFormat VideoCaptureDeviceLinux::V4l2FourCcToChromiumPixelFormat(
--    uint32_t v4l2_fourcc) {
--  return V4L2CaptureDelegate::V4l2FourCcToChromiumPixelFormat(v4l2_fourcc);
--}
--
--// Gets a list of usable Four CC formats prioritized.
--// static
--std::list<uint32_t> VideoCaptureDeviceLinux::GetListOfUsableFourCCs(
--    bool favour_mjpeg) {
--  return V4L2CaptureDelegate::GetListOfUsableFourCcs(favour_mjpeg);
--}
--
--VideoCaptureDeviceLinux::VideoCaptureDeviceLinux(
--    const VideoCaptureDeviceDescriptor& device_descriptor)
--    : device_descriptor_(device_descriptor),
--      v4l2_thread_("V4L2CaptureThread") {}
--
--VideoCaptureDeviceLinux::~VideoCaptureDeviceLinux() {
--  // Check if the thread is running.
--  // This means that the device has not been StopAndDeAllocate()d properly.
--  DCHECK(!v4l2_thread_.IsRunning());
--  v4l2_thread_.Stop();
--}
--
--void VideoCaptureDeviceLinux::AllocateAndStart(
--    const VideoCaptureParams& params,
--    std::unique_ptr<VideoCaptureDevice::Client> client) {
--  DCHECK(!capture_impl_);
--  if (v4l2_thread_.IsRunning())
--    return;  // Wrong state.
--  v4l2_thread_.Start();
--
--  const int line_frequency =
--      TranslatePowerLineFrequencyToV4L2(GetPowerLineFrequency(params));
--  capture_impl_ = std::make_unique<V4L2CaptureDelegate>(
--      device_descriptor_, v4l2_thread_.task_runner(), line_frequency);
--  if (!capture_impl_) {
--    client->OnError(FROM_HERE, "Failed to create VideoCaptureDelegate");
--    return;
--  }
--  v4l2_thread_.task_runner()->PostTask(
--      FROM_HERE,
--      base::Bind(&V4L2CaptureDelegate::AllocateAndStart,
--                 capture_impl_->GetWeakPtr(),
--                 params.requested_format.frame_size.width(),
--                 params.requested_format.frame_size.height(),
--                 params.requested_format.frame_rate, base::Passed(&client)));
--
--  for (const auto& request : photo_requests_queue_)
--    v4l2_thread_.task_runner()->PostTask(FROM_HERE, request);
--  photo_requests_queue_.clear();
--}
--
--void VideoCaptureDeviceLinux::StopAndDeAllocate() {
--  if (!v4l2_thread_.IsRunning())
--    return;  // Wrong state.
--  v4l2_thread_.task_runner()->PostTask(
--      FROM_HERE, base::Bind(&V4L2CaptureDelegate::StopAndDeAllocate,
--                            capture_impl_->GetWeakPtr()));
--  v4l2_thread_.task_runner()->DeleteSoon(FROM_HERE, capture_impl_.release());
--  v4l2_thread_.Stop();
--
--  capture_impl_ = nullptr;
--}
--
--void VideoCaptureDeviceLinux::TakePhoto(TakePhotoCallback callback) {
--  DCHECK(capture_impl_);
--  auto functor =
--      base::Bind(&V4L2CaptureDelegate::TakePhoto, capture_impl_->GetWeakPtr(),
--                 base::Passed(&callback));
--  if (!v4l2_thread_.IsRunning()) {
--    // We have to wait until we get the device AllocateAndStart()ed.
--    photo_requests_queue_.push_back(std::move(functor));
--    return;
--  }
--  v4l2_thread_.task_runner()->PostTask(FROM_HERE, std::move(functor));
--}
--
--void VideoCaptureDeviceLinux::GetPhotoState(GetPhotoStateCallback callback) {
--  auto functor =
--      base::Bind(&V4L2CaptureDelegate::GetPhotoState,
--                 capture_impl_->GetWeakPtr(), base::Passed(&callback));
--  if (!v4l2_thread_.IsRunning()) {
--    // We have to wait until we get the device AllocateAndStart()ed.
--    photo_requests_queue_.push_back(std::move(functor));
--    return;
--  }
--  v4l2_thread_.task_runner()->PostTask(FROM_HERE, std::move(functor));
--}
--
--void VideoCaptureDeviceLinux::SetPhotoOptions(
--    mojom::PhotoSettingsPtr settings,
--    SetPhotoOptionsCallback callback) {
--  auto functor = base::Bind(&V4L2CaptureDelegate::SetPhotoOptions,
--                            capture_impl_->GetWeakPtr(),
--                            base::Passed(&settings), base::Passed(&callback));
--  if (!v4l2_thread_.IsRunning()) {
--    // We have to wait until we get the device AllocateAndStart()ed.
--    photo_requests_queue_.push_back(std::move(functor));
--    return;
--  }
--  v4l2_thread_.task_runner()->PostTask(FROM_HERE, std::move(functor));
--}
--
--void VideoCaptureDeviceLinux::SetRotation(int rotation) {
--  if (v4l2_thread_.IsRunning()) {
--    v4l2_thread_.task_runner()->PostTask(
--        FROM_HERE, base::Bind(&V4L2CaptureDelegate::SetRotation,
--                              capture_impl_->GetWeakPtr(), rotation));
--  }
--}
--
--// static
--int VideoCaptureDeviceLinux::TranslatePowerLineFrequencyToV4L2(
--    PowerLineFrequency frequency) {
--  switch (frequency) {
--    case PowerLineFrequency::FREQUENCY_50HZ:
--      return V4L2_CID_POWER_LINE_FREQUENCY_50HZ;
--    case PowerLineFrequency::FREQUENCY_60HZ:
--      return V4L2_CID_POWER_LINE_FREQUENCY_60HZ;
--    default:
--#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,2,0)
--      // If we have no idea of the frequency, at least try and set it to AUTO.
--      return V4L2_CID_POWER_LINE_FREQUENCY_AUTO;
--#else
--      return V4L2_CID_POWER_LINE_FREQUENCY_60HZ;
--#endif
--  }
--}
--
--}  // namespace media
+--- a/src/3rdparty/chromium/media/capture/BUILD.gn	2019-03-13 19:21:59.310100900 +0100
++++ b/src/3rdparty/chromium/media/capture/BUILD.gn	2019-03-16 12:43:09.730628500 +0100
+@@ -99,6 +99,10 @@
+     "video/linux/video_capture_device_factory_linux.h",
+     "video/linux/video_capture_device_linux.cc",
+     "video/linux/video_capture_device_linux.h",
++    "video/linux/video_capture_device_hybris.cc",
++    "video/linux/video_capture_device_hybris.h",
++    "video/linux/hybris_utils.cc",
++    "video/linux/hybris_utils.h",
+     "video/mac/video_capture_device_avfoundation_mac.h",
+     "video/mac/video_capture_device_avfoundation_mac.mm",
+     "video/mac/video_capture_device_decklink_mac.h",
+--- a/src/3rdparty/chromium/media/capture/video/linux/hybris_utils.cc	1970-01-01 01:00:00.000000000 +0100
++++ b/src/3rdparty/chromium/media/capture/video/linux/hybris_utils.cc	2019-03-10 17:53:20.746126700 +0100
+@@ -0,0 +1,229 @@
++// vim:expandtab:shiftwidth=2:tabstop=2:
++// Copyright (C) 2015-2016 Canonical Ltd.
++
++// This library is free software; you can redistribute it and/or
++// modify it under the terms of the GNU Lesser General Public
++// License as published by the Free Software Foundation; either
++// version 2.1 of the License, or (at your option) any later version.
++
++// This library is distributed in the hope that it will be useful,
++// but WITHOUT ANY WARRANTY; without even the implied warranty of
++// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++// Lesser General Public License for more details.
++
++// You should have received a copy of the GNU Lesser General Public
++// License along with this library; if not, write to the Free Software
++// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
++
++#include "hybris_utils.h"
++
++#include <cstdio>
++#include <hybris/properties/properties.h>
++
++#include "base/files/file_path.h"
++//#include "base/lazy_instance.h"
++#include "base/no_destructor.h"
++#include "base/logging.h"
++#include "base/memory/singleton.h"
++#include "base/native_library.h"
++#include "base/strings/stringprintf.h"
++
++namespace media {
++
++// Copied from base/sys_info_internal.h
++template<typename T, T (*F)(void)>
++class LazyHybrisValue {
++ public:
++  LazyHybrisValue()
++      : value_(F()) { }
++
++  ~LazyHybrisValue() { }
++
++  const T& value() { return value_; }
++
++ private:
++  const T value_;
++
++  DISALLOW_COPY_AND_ASSIGN(LazyHybrisValue);
++};
++
++struct DevicePropertyData {
++  HybrisUtils::DeviceProperties properties;
++  bool available = false;
++};
++
++namespace {
++
++std::string ParseOSVersion(const char* os_version_str) {
++  int32_t major, minor, bugfix;
++
++  if (!os_version_str[0]) {
++    return std::string();
++  }
++
++  int num_read = sscanf(os_version_str, "%d.%d.%d", &major, &minor, &bugfix);
++  if (num_read <= 0) {
++    return std::string();
++  }
++
++  if (num_read < 2) {
++    minor = 0;
++  }
++  if (num_read < 3) {
++    bugfix = 0;
++  }
++
++  return base::StringPrintf("%d.%d.%d", major, minor, bugfix);
++}
++
++DevicePropertyData PopulateDeviceProperties() {
++  DevicePropertyData data;
++  data.available = false;
++
++  char value[PROP_VALUE_MAX];
++
++  if (::property_get("ro.product.name", value, nullptr) <= 0) {
++    return data;
++  }
++
++  data.available = true;
++  data.properties.product = value;
++
++  ::property_get("ro.product.device", value, nullptr);
++  data.properties.device = value;
++
++  ::property_get("ro.product.board", value, nullptr);
++  data.properties.board = value;
++
++  ::property_get("ro.product.brand", value, nullptr);
++  data.properties.brand = value;
++
++  ::property_get("ro.product.model", value, nullptr);
++  data.properties.model = value;
++
++  ::property_get("ro.build.version.release", value, nullptr);
++  data.properties.os_version = ParseOSVersion(value);
++
++  return data;
++}
++
++bool UsingAndroidEGL() {
++  base::NativeLibrary egl_lib =
++      base::LoadNativeLibrary(base::FilePath("libEGL.so.1"), nullptr);
++  if (!egl_lib) {
++    return false;
++  }
++
++  return !!base::GetFunctionPointerFromNativeLibrary(
++      egl_lib, "hybris_egl_display_get_mapping");
++}
++
++#if defined(ENABLE_HYBRIS_CAMERA)
++bool CameraCompatAvailable() {
++  base::NativeLibrary camera_lib =
++      base::LoadNativeLibrary(base::FilePath("libcamera.so.1"), nullptr);
++  DCHECK(camera_lib);
++
++  typedef void (*hybris_camera_initialize_fn)();
++  auto hybris_camera_initialize =
++      reinterpret_cast<hybris_camera_initialize_fn>(
++        base::GetFunctionPointerFromNativeLibrary(camera_lib,
++                                                  "hybris_camera_initialize"));
++  DCHECK(hybris_camera_initialize);
++
++  hybris_camera_initialize();
++
++  void** handle =
++      reinterpret_cast<void**>(base::GetFunctionPointerFromNativeLibrary(
++        camera_lib, "camera_handle"));
++  DCHECK(handle);
++
++  return !!*handle;
++}
++#endif
++
++/*
++base::LazyInstance<
++    LazyHybrisValue<DevicePropertyData, PopulateDeviceProperties>>
++      g_device_properties = LAZY_INSTANCE_INITIALIZER;
++base::LazyInstance<LazyHybrisValue<bool, UsingAndroidEGL>>
++    g_using_android_egl = LAZY_INSTANCE_INITIALIZER;
++#if defined(ENABLE_HYBRIS_CAMERA)
++base::LazyInstance<LazyHybrisValue<bool, CameraCompatAvailable>>
++    g_camera_compat_available = LAZY_INSTANCE_INITIALIZER;
++#endif
++*/
++
++HybrisUtils* g_fake_hybris_utils;
++
++}
++
++class HybrisUtilsImpl : public HybrisUtils {
++ public:
++  static HybrisUtilsImpl* GetInstance();
++
++  bool HasDeviceProperties() override;
++  const DeviceProperties& GetDeviceProperties() override;
++  bool IsUsingAndroidEGL() override;
++#if defined(ENABLE_HYBRIS_CAMERA)
++  bool IsCameraCompatAvailable() override;
++#endif
++
++ private:
++  friend class base::DefaultSingletonTraits<HybrisUtilsImpl>;
++  HybrisUtilsImpl() {}
++};
++
++// static
++HybrisUtilsImpl* HybrisUtilsImpl::GetInstance() {
++  return base::Singleton<HybrisUtilsImpl,
++                         base::LeakySingletonTraits<HybrisUtilsImpl>>::get();
++}
++
++bool HybrisUtilsImpl::HasDeviceProperties() {
++  //return g_device_properties.Get().value().available;
++  static base::NoDestructor<LazyHybrisValue<DevicePropertyData, PopulateDeviceProperties>> instance;
++  return instance->value().available;
++}
++
++const HybrisUtils::DeviceProperties& HybrisUtilsImpl::GetDeviceProperties() {
++  DCHECK(HasDeviceProperties());
++  //return g_device_properties.Get().value().properties;
++  static base::NoDestructor<LazyHybrisValue<DevicePropertyData, PopulateDeviceProperties>> instance;
++  return instance->value().properties;
++}
++
++bool HybrisUtilsImpl::IsUsingAndroidEGL() {
++  //return g_using_android_egl.Get().value();
++  static base::NoDestructor<LazyHybrisValue<bool, UsingAndroidEGL>> instance;
++  return instance->value();
++}
++
++#if defined(ENABLE_HYBRIS_CAMERA)
++bool HybrisUtilsImpl::IsCameraCompatAvailable() {
++  //return g_camera_compat_available.Get().value();
++  static base::NoDestructor<LazyHybrisValue<bool, CameraCompatAvailable>> instance;
++  return instance->value();
++}
++#endif
++
++HybrisUtils::HybrisUtils() {}
++
++HybrisUtils::~HybrisUtils() {}
++
++// static
++HybrisUtils* HybrisUtils::GetInstance() {
++  if (g_fake_hybris_utils) {
++    return g_fake_hybris_utils;
++  }
++
++  return HybrisUtilsImpl::GetInstance();
++}
++
++void HybrisUtils::OverrideForTesting(HybrisUtils* fake) {
++  DCHECK(!fake || !g_fake_hybris_utils);
++  g_fake_hybris_utils = fake;
++}
++
++} // namespace oxide
++ 
+--- a/src/3rdparty/chromium/media/capture/video/linux/hybris_utils.h	1970-01-01 01:00:00.000000000 +0100
++++ b/src/3rdparty/chromium/media/capture/video/linux/hybris_utils.h	2019-03-10 17:53:10.797812500 +0100
+@@ -0,0 +1,71 @@
++ 
++// vim:expandtab:shiftwidth=2:tabstop=2:
++// Copyright (C) 2015-2016 Canonical Ltd.
++
++// This library is free software; you can redistribute it and/or
++// modify it under the terms of the GNU Lesser General Public
++// License as published by the Free Software Foundation; either
++// version 2.1 of the License, or (at your option) any later version.
++
++// This library is distributed in the hope that it will be useful,
++// but WITHOUT ANY WARRANTY; without even the implied warranty of
++// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++// Lesser General Public License for more details.
++
++// You should have received a copy of the GNU Lesser General Public
++// License along with this library; if not, write to the Free Software
++// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
++
++#ifndef _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
++#define _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
++
++#define ENABLE_HYBRIS_CAMERA
++
++#include <string>
++
++#include "base/macros.h"
++
++//#include "shared/common/oxide_shared_export.h"
++
++namespace media {
++
++// Threadsafe class for retreiving device information on devices with libhybris
++class HybrisUtils {
++ public:
++
++  struct DeviceProperties {
++    std::string product; // ro.product.name
++    std::string device; // ro.product.device
++    std::string board; // ro.product.board
++    std::string brand; // ro.product.brand
++    std::string model; // ro.product.model
++    std::string os_version; // Parsed version of ro.build.version.release
++  };
++
++  virtual ~HybrisUtils();
++  static HybrisUtils* GetInstance();
++
++  virtual bool HasDeviceProperties() = 0;
++
++  virtual const DeviceProperties& GetDeviceProperties() = 0;
++
++  virtual bool IsUsingAndroidEGL() = 0;
++
++#if defined(ENABLE_HYBRIS_CAMERA)
++  virtual bool IsCameraCompatAvailable() = 0;
++#endif
++
++  // Provide a fake HybrisUtils for testing. Note that this is *NOT*
++  // threadsafe
++  static void OverrideForTesting(HybrisUtils* fake);
++
++ protected:
++  HybrisUtils();
++
++ private:
++  DISALLOW_COPY_AND_ASSIGN(HybrisUtils);
++};
++
++} // namespace oxide
++
++#endif // _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
+--- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2018-11-19 19:55:45.000000000 +0100
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-03-16 13:39:51.203239000 +0100
+@@ -9,6 +9,14 @@
+ #include <stdint.h>
+ #include <sys/ioctl.h>
+ 
++#include <algorithm>
++#include <hybris/camera/camera_compatibility_layer.h>
++#include <hybris/camera/camera_compatibility_layer_capabilities.h>
++
++#include "hybris_utils.h"
++
++#include "video_capture_device_hybris.h"
++
+ #include "base/files/file_enumerator.h"
+ #include "base/files/file_util.h"
+ #include "base/files/scoped_file.h"
+@@ -187,6 +195,54 @@
+   return display_name;
+ }
+ 
++const char* GetDeviceNameFromCameraType(CameraType type) {
++  switch (type) {
++    case BACK_FACING_CAMERA_TYPE:
++      return "Rear camera"; //dgettext(OXIDE_GETTEXT_DOMAIN, "Rear camera");
++    case FRONT_FACING_CAMERA_TYPE:
++      return "Front camera"; // dgettext(OXIDE_GETTEXT_DOMAIN, "Front camera");
++  }
++
++  NOTREACHED();
++  return "";
++}
++
++std::unique_ptr<media::VideoCaptureDeviceDescriptors>
++GetDeviceDescriptorsFromHybris() {
++  DCHECK(media::HybrisUtils::GetInstance()->IsCameraCompatAvailable());
++
++  int32_t number_of_devices = android_camera_get_number_of_devices();
++
++  std::unique_ptr<media::VideoCaptureDeviceDescriptors> descriptors(
++      new media::VideoCaptureDeviceDescriptors());
++
++  for (int32_t camera_id = 0; camera_id < number_of_devices; ++camera_id) {
++    CameraType type;
++    int orientation;
++    if (android_camera_get_device_info(camera_id,
++                                       reinterpret_cast<int*>(&type),
++                                       &orientation) != 0) {
++      LOG(ERROR) <<
++          "Failed to get device info for camera with ID " << camera_id;
++      continue;
++    }
++
++    std::string device_id =
++        base::StringPrintf("%s%d",
++                           VideoCaptureDeviceHybris::GetDeviceIdPrefix(),
++                           camera_id);
++
++    descriptors->push_back(
++        media::VideoCaptureDeviceDescriptor(
++          // XXX: We should append an integer to this when there are multiple
++          // cameras facing the same direction
++          GetDeviceNameFromCameraType(type),
++          device_id));
++  }
++
++  return descriptors;
++}
++
+ }  // namespace
+ 
+ VideoCaptureDeviceFactoryLinux::VideoCaptureDeviceFactoryLinux(
+@@ -204,8 +260,9 @@
+   VideoCaptureDeviceChromeOS* self =
+       new VideoCaptureDeviceChromeOS(ui_task_runner_, device_descriptor);
+ #else
+-  VideoCaptureDeviceLinux* self =
+-      new VideoCaptureDeviceLinux(device_descriptor);
++  //VideoCaptureDeviceLinux* self = new VideoCaptureDeviceLinux(device_descriptor);
++  VideoCaptureDeviceHybris* self = new VideoCaptureDeviceHybris(device_descriptor);
++  return std::unique_ptr<VideoCaptureDevice>(self);   
+ #endif
+   if (!self)
+     return std::unique_ptr<VideoCaptureDevice>();
+@@ -227,6 +284,10 @@
+     VideoCaptureDeviceDescriptors* device_descriptors) {
+   DCHECK(thread_checker_.CalledOnValidThread());
+   DCHECK(device_descriptors->empty());
++  
++  device_descriptors = GetDeviceDescriptorsFromHybris().get();
++  return;
++  
+   const base::FilePath path("/dev/");
+   base::FileEnumerator enumerator(path, false, base::FileEnumerator::FILES,
+                                   "video*");
+@@ -275,6 +336,9 @@
+ void VideoCaptureDeviceFactoryLinux::GetSupportedFormats(
+     const VideoCaptureDeviceDescriptor& device,
+     VideoCaptureFormats* supported_formats) {
++    
++    return;
++    
+   DCHECK(thread_checker_.CalledOnValidThread());
+   if (device.device_id.empty())
+     return;
+--- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	1970-01-01 01:00:00.000000000 +0100
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-03-16 13:33:37.961251700 +0100
+@@ -0,0 +1,298 @@
++// vim:expandtab:shiftwidth=2:tabstop=2:
++// Copyright (C) 2015 Canonical Ltd.
++
++// This library is free software; you can redistribute it and/or
++// modify it under the terms of the GNU Lesser General Public
++// License as published by the Free Software Foundation; either
++// version 2.1 of the License, or (at your option) any later version.
++
++// This library is distributed in the hope that it will be useful,
++// but WITHOUT ANY WARRANTY; without even the implied warranty of
++// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++// Lesser General Public License for more details.
++
++// You should have received a copy of the GNU Lesser General Public
++// License along with this library; if not, write to the Free Software
++// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
++// USA
++
++#include "video_capture_device_hybris.h"
++
++#include "media/capture/content/screen_capture_device_core.h"
++
++#include <hybris/camera/camera_compatibility_layer_capabilities.h>
++#include <utility>
++
++#include "base/logging.h"
++#include "base/memory/singleton.h"
++#include "base/single_thread_task_runner.h"
++#include "base/strings/stringprintf.h"
++#include "base/threading/thread_task_runner_handle.h"
++#include "media/base/video_types.h"
++#include "ui/display/display.h"
++#include "ui/gl/gl_bindings.h"
++#include "ui/gl/gl_context.h"
++#include "ui/gl/gl_implementation.h"
++#include "ui/gl/gl_surface.h"
++#include "ui/gl/init/gl_factory.h"
++
++#include "hybris_utils.h"
++//#include "shared/browser/oxide_browser_platform_integration.h"
++//#include "shared/browser/screen.h"
++//#include "shared/browser/screen_observer.h"
++
++namespace media {
++
++/*
++class RotationHelper : public ScreenObserver {
++ public:
++  static RotationHelper* GetInstance();
++
++  int GetRotation(CameraType position, int orientation);
++
++ private:
++  friend class base::DefaultSingletonTraits<RotationHelper>;
++  RotationHelper();
++
++  // ScreenObserver implementation
++  void OnDisplayPropertiesChanged(const display::Display& display);
++
++  base::Lock lock_;
++
++  display::Display primary_display_;
++};
++
++RotationHelper::RotationHelper()
++    : primary_display_(Screen::GetInstance()->GetPrimaryDisplay()) {}
++
++void RotationHelper::OnDisplayPropertiesChanged(
++    const display::Display& display) {
++  display::Display primary_display = Screen::GetInstance()->GetPrimaryDisplay();
++  if (display.id() != primary_display.id()) {
++    return;
++  }
++
++  base::AutoLock lock(lock_);
++  primary_display_ = primary_display;
++}
++
++// static
++RotationHelper* RotationHelper::GetInstance() {
++  return base::Singleton<RotationHelper>::get();
++}
++
++int RotationHelper::GetRotation(CameraType position, int orientation) {
++  int display_rotation;
++  {
++    base::AutoLock lock(lock_);
++    display_rotation = primary_display_.RotationAsDegree();
++  }
++
++  if (position == FRONT_FACING_CAMERA_TYPE) {
++    display_rotation = 360 - display_rotation;
++  }
++
++  if (position == FRONT_FACING_CAMERA_TYPE &&
++      (HybrisUtils::GetInstance()->GetDeviceProperties().device == "krillin" ||
++       HybrisUtils::GetInstance()->GetDeviceProperties().device == "vegetahd")) {
++    // krillin / vegetahd lies to us - the top of the front facing camera
++    // points to the right of the screen (viewed from the front), which means
++    // the camera image needs rotating by 270deg with the device in its natural
++    // orientation (portrait). It tells us the camera orientation is 90deg
++    // though (see https://launchpad.net/bugs/1567542)
++    orientation = 270;
++  }
++
++  return (orientation + display_rotation) % 360;
++
++}
++
++*/
++
++namespace {
++void DummyOnPreviewTextureNeedsUpdateCallback(void* context) {}
++}
++
++// static
++void VideoCaptureDeviceHybris::OnMsgErrorCallback(void* context) {
++  reinterpret_cast<VideoCaptureDeviceHybris*>(context)->OnError();
++}
++
++// static
++void VideoCaptureDeviceHybris::OnPreviewFrameCallback(void* data,
++                                                      uint32_t size,
++                                                      void* context) {
++  reinterpret_cast<VideoCaptureDeviceHybris*>(context)
++      ->OnFrameAvailable(data, size);
++}
++
++void VideoCaptureDeviceHybris::OnError() {
++  // XXX: Can we get any more information about the error?
++  client_->OnError(FROM_HERE, "Error from Hybris");
++}
++
++void VideoCaptureDeviceHybris::OnFrameAvailable(void* data, uint32_t size) {
++  const base::TimeTicks now = base::TimeTicks::Now();
++
++  if (first_ref_time_.is_null()) {
++    first_ref_time_ = now;
++  }
++
++  client_->OnIncomingCapturedData(
++      static_cast<uint8_t*>(data),
++      size,
++      capture_format_,
++      0,
++      //RotationHelper::GetInstance()->GetRotation(position_, orientation_),
++      now,
++      now - first_ref_time_);
++}
++
++void VideoCaptureDeviceHybris::AllocateAndStart(
++    const media::VideoCaptureParams& params,
++    std::unique_ptr<Client> client) {
++  DCHECK(params.requested_format.IsValid());
++  DCHECK(!camera_control_);
++
++  client_ = std::move(client);
++
++  task_runner_ = base::ThreadTaskRunnerHandle::Get();
++
++  if (gl::GetGLImplementation() != gl::kGLImplementationEGLGLES2) {
++    client_->OnError(FROM_HERE, "Unsupported GL implementation");
++    return;
++  }
++
++  first_ref_time_ = base::TimeTicks();
++
++  listener_.reset(new CameraControlListener());
++  memset(listener_.get(), 0, sizeof(CameraControlListener));
++  listener_->context = this;
++  listener_->on_msg_error_cb = &OnMsgErrorCallback;
++  listener_->on_preview_texture_needs_update_cb =
++      &DummyOnPreviewTextureNeedsUpdateCallback;
++  listener_->on_preview_frame_cb = &OnPreviewFrameCallback;
++
++  int32_t camera_id = GetCameraIdfromDeviceId(device_descriptor_.device_id);
++
++  if (android_camera_get_device_info(camera_id,
++                                     reinterpret_cast<int*>(&position_),
++                                     &orientation_) != 0) {
++    client_->OnError(FROM_HERE, "Failed to get camera info");
++    return;
++  }
++
++  camera_control_ = android_camera_connect_by_id(camera_id, listener_.get());
++  if (!camera_control_) {
++    client_->OnError(FROM_HERE, "Couldn't create camera for specified id");
++    return;
++  }
++
++  android_camera_set_preview_callback_mode(camera_control_,
++                                           PREVIEW_CALLBACK_ENABLED);
++
++  android_camera_set_preview_size(camera_control_,
++                                  params.requested_format.frame_size.width(),
++                                  params.requested_format.frame_size.height());
++  android_camera_set_preview_fps(
++      camera_control_,
++      static_cast<int>(params.requested_format.frame_rate));
++  android_camera_set_preview_format(camera_control_,
++                                    CAMERA_PIXEL_FORMAT_YUV420P);      
++
++  // We have to provide a preview texture, even though we aren't using it
++  gl_surface_ = gl::init::CreateOffscreenGLSurface(gfx::Size(0, 0));
++  
++  gl::GLContextAttribs attribs;
++  attribs.gpu_preference = gl::PreferIntegratedGpu;
++  
++  gl_context_ = gl::init::CreateGLContext(nullptr,
++                                          gl_surface_.get(),
++                                          attribs);
++  if (!gl_context_) {
++    client_->OnError(FROM_HERE, "Failed to create GL context");
++    return;
++  }
++  gl_context_->MakeCurrent(gl_surface_.get());
++  glGenTextures(1, &preview_texture_);
++  android_camera_set_preview_texture(camera_control_, preview_texture_);
++
++  int width = 0;
++  int height = 0;
++  android_camera_get_preview_size(camera_control_, &width, &height);
++
++  int fps = 0;
++  android_camera_get_preview_fps(camera_control_, &fps);
++
++  capture_format_ =
++      media::VideoCaptureFormat(gfx::Size(width, height),
++                                fps,
++                                media::PIXEL_FORMAT_YV12,
++                                VideoPixelStorage::CPU);
++
++  android_camera_start_preview(camera_control_);
++}
++
++void VideoCaptureDeviceHybris::StopAndDeAllocate() {
++  if (camera_control_) {
++    android_camera_stop_preview(camera_control_);
++    android_camera_disconnect(camera_control_);
++    android_camera_delete(camera_control_);
++    camera_control_ = nullptr;
++  }
++
++  if (gl_context_) {
++    gl_context_->MakeCurrent(gl_surface_.get());
++    glDeleteTextures(1, &preview_texture_);
++
++    gl_context_ = nullptr;
++    gl_surface_ = nullptr;
++  }
++}
++
++VideoCaptureDeviceHybris::VideoCaptureDeviceHybris(
++    const media::VideoCaptureDeviceDescriptor& device_descriptor)
++    : device_descriptor_(device_descriptor),
++      position_(BACK_FACING_CAMERA_TYPE),
++      orientation_(0),
++      camera_control_(nullptr) {
++  DCHECK(HybrisUtils::GetInstance()->IsCameraCompatAvailable());
++}
++
++VideoCaptureDeviceHybris::~VideoCaptureDeviceHybris() {
++  StopAndDeAllocate();
++
++  // XXX(chrisccoulson): As the listener is called on another thread, we need
++  //  a guarantee that it will no longer be called in to from Android before
++  //  we delete it now
++}
++
++// static
++void VideoCaptureDeviceHybris::Initialize() {
++  // This must be done on the UI thread. It's kind of ugly tbh, but is needed
++  // so that we can remove the synchronization from Screen
++  //RotationHelper::GetInstance();
++}
++
++// static
++const char* VideoCaptureDeviceHybris::GetDeviceIdPrefix() {
++  return "Hybris";
++}
++
++// static
++int32_t VideoCaptureDeviceHybris::GetCameraIdfromDeviceId(
++    const std::string& device_id) {
++  std::string device_id_format =
++      base::StringPrintf("%s%%d",
++                         VideoCaptureDeviceHybris::GetDeviceIdPrefix());
++
++  int32_t camera_id = -1;
++  int rv =
++      sscanf(device_id.c_str(), device_id_format.c_str(), &camera_id);
++  CHECK_EQ(rv, 1);
++
++  return camera_id;
++}
++
++} // namespace oxide
++ 
+--- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.h	1970-01-01 01:00:00.000000000 +0100
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.h	2019-03-13 19:04:59.543945700 +0100
+@@ -0,0 +1,94 @@
++// vim:expandtab:shiftwidth=2:tabstop=2:
++// Copyright (C) 2015 Canonical Ltd.
++
++// This library is free software; you can redistribute it and/or
++// modify it under the terms of the GNU Lesser General Public
++// License as published by the Free Software Foundation; either
++// version 2.1 of the License, or (at your option) any later version.
++
++// This library is distributed in the hope that it will be useful,
++// but WITHOUT ANY WARRANTY; without even the implied warranty of
++// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++// Lesser General Public License for more details.
++
++// You should have received a copy of the GNU Lesser General Public
++// License along with this library; if not, write to the Free Software
++// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
++// USA
++
++#ifndef _OXIDE_SHARED_BROWSER_MEDIA_VIDEO_CAPTURE_DEVICE_HYBRIS_H_
++#define _OXIDE_SHARED_BROWSER_MEDIA_VIDEO_CAPTURE_DEVICE_HYBRIS_H_
++
++#include <hybris/camera/camera_compatibility_layer.h>
++
++#include <memory>
++
++#include "base/macros.h"
++#include "base/memory/ref_counted.h"
++//#include "media/base/video_capture_types.h"
++#include "media/capture/video/video_capture_device.h"
++#include "media/capture/video/video_capture_device_descriptor.h"
++
++typedef unsigned int GLuint;
++
++namespace base {
++class SingleThreadTaskRunner;
++}
++
++namespace gl {
++class GLContext;
++class GLSurface;
++}
++
++namespace media {
++
++class VideoCaptureDeviceHybris : public media::VideoCaptureDevice {
++ public:
++  VideoCaptureDeviceHybris(
++      const media::VideoCaptureDeviceDescriptor& device_descriptor);
++  ~VideoCaptureDeviceHybris() override;
++
++  static void Initialize();
++
++  static const char* GetDeviceIdPrefix();
++  static int32_t GetCameraIdfromDeviceId(const std::string& device_id);
++
++ private:
++  static void OnMsgErrorCallback(void* context);
++  static void OnPreviewFrameCallback(void* data, uint32_t size, void* context);
++
++  void OnError();
++  void OnFrameAvailable(void* data, uint32_t size);
++
++  // media::VideoCaptureDevice implementation
++  void AllocateAndStart(const media::VideoCaptureParams& params,
++                        std::unique_ptr<Client> client) override;
++  void StopAndDeAllocate() override;
++
++  media::VideoCaptureDeviceDescriptor device_descriptor_;
++
++  CameraType position_;
++  int orientation_;
++
++  std::unique_ptr<Client> client_;
++
++  scoped_refptr<base::SingleThreadTaskRunner> task_runner_;
++
++  std::unique_ptr<CameraControlListener> listener_;
++
++  media::VideoCaptureFormat capture_format_;
++
++  scoped_refptr<gl::GLSurface> gl_surface_;
++  scoped_refptr<gl::GLContext> gl_context_;
++  GLuint preview_texture_;
++  base::TimeTicks first_ref_time_;
++
++  CameraControl* camera_control_;
++
++  DISALLOW_COPY_AND_ASSIGN(VideoCaptureDeviceHybris);
++};
++
++} // namespace oxide
++
++#endif // _OXIDE_SHARED_BROWSER_MEDIA_VIDEO_CAPTURE_DEVICE_HYBRIS_H_
++ 
