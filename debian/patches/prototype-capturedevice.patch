@@ -2,6 +2,18 @@ From: Chris Clime <chris.clime@gmx.net>
 Subject: some prototyping regarding capture device (camera) - deleting whole file (should not build)
 
 ===================================================================
+--- a/src/core/core_module.pro     2018-11-23 07:35:08.000000000 +0100
++++ b/src/core/core_module.pro     2019-03-17 12:35:50.807284500 +0100
+@@ -41,6 +41,9 @@
+ # GN's LFLAGS doesn't always work across all the Linux configurations we support.
+ # The Windows and macOS ones from GN does provide a few useful flags however
+ 
++LIBS_PRIVATE += -landroid-properties
++LIBS_PRIVATE += -lhybris-common -lcamera
++
+ linux {
+     QMAKE_LFLAGS += -Wl,--gc-sections -Wl,-O1 -Wl,-z,now
+     # Embedded address sanitizer symbols are undefined and are picked up by the dynamic link loader
 --- a/src/3rdparty/chromium/media/capture/BUILD.gn	2019-03-13 19:21:59.310100900 +0100
 +++ b/src/3rdparty/chromium/media/capture/BUILD.gn	2019-03-16 16:03:02.555024600 +0100
 @@ -3,9 +3,18 @@
