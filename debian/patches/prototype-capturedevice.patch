@@ -353,7 +353,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +#endif // _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2018-11-19 19:55:45.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-03-24 12:45:27.425430600 +0100
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-03-24 15:34:50.466505200 +0100
 @@ -9,6 +9,14 @@
  #include <stdint.h>
  #include <sys/ioctl.h>
@@ -447,7 +447,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    const base::FilePath path("/dev/");
    base::FileEnumerator enumerator(path, false, base::FileEnumerator::FILES,
                                    "video*");
-@@ -275,6 +336,24 @@
+@@ -275,6 +336,26 @@
  void VideoCaptureDeviceFactoryLinux::GetSupportedFormats(
      const VideoCaptureDeviceDescriptor& device,
      VideoCaptureFormats* supported_formats) {
@@ -462,7 +462,9 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +    //android_camera_get_preview_fps(camera_control_, &fps);
 +
 +    VideoCaptureFormat format640 = VideoCaptureFormat(gfx::Size(640, 480),
-+                                                                24);
++                                                                30,
++                                                                PIXEL_FORMAT_YV12,
++                                                                VideoPixelStorage::CPU);
 +    
 +    formats->push_back(format640);
 +    supported_formats = formats.get();
