@@ -362,7 +362,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +#endif // _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2018-11-19 19:55:45.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-03-24 15:34:50.466505200 +0100
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-03-31 13:28:59.890059500 +0200
 @@ -9,6 +9,14 @@
  #include <stdint.h>
  #include <sys/ioctl.h>
@@ -456,12 +456,10 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    const base::FilePath path("/dev/");
    base::FileEnumerator enumerator(path, false, base::FileEnumerator::FILES,
                                    "video*");
-@@ -275,6 +336,26 @@
+@@ -275,6 +336,25 @@
  void VideoCaptureDeviceFactoryLinux::GetSupportedFormats(
      const VideoCaptureDeviceDescriptor& device,
      VideoCaptureFormats* supported_formats) {
-+    
-+    std::unique_ptr<media::VideoCaptureFormats> formats(new media::VideoCaptureFormats());
 +    
 +    //int width = 0;
 +    //int height = 0;
@@ -475,8 +473,9 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +                                                                PIXEL_FORMAT_YV12,
 +                                                                VideoPixelStorage::CPU);
 +    
-+    formats->push_back(format640);
-+    supported_formats = formats.get();
++    supported_formats->clear();
++    supported_formats->push_back(format640);
++    DVLOG(1) << "PATCH(format640x480): " << VideoCaptureFormat::ToString(format640);
 +    
 +    return;
 +    
