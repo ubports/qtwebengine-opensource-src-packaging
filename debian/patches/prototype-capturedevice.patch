@@ -353,7 +353,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +#endif // _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2018-11-19 19:55:45.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-04-23 19:44:31.658928800 +0200
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-04-23 22:12:43.508692100 +0200
 @@ -9,6 +9,14 @@
  #include <stdint.h>
  #include <sys/ioctl.h>
@@ -369,7 +369,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  #include "base/files/file_enumerator.h"
  #include "base/files/file_util.h"
  #include "base/files/scoped_file.h"
-@@ -187,6 +195,57 @@
+@@ -187,6 +195,62 @@
    return display_name;
  }
  
@@ -393,7 +393,10 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +  DCHECK(media::HybrisUtils::GetInstance()->IsCameraCompatAvailable());
 +
 +  int32_t number_of_devices = android_camera_get_number_of_devices();
++  
++  VLOG(1) << "number_of_devices: " << number_of_devices;
 +
++  VLOG(1) << "init descriptors...";
 +  std::unique_ptr<media::VideoCaptureDeviceDescriptors> descriptors(
 +      new media::VideoCaptureDeviceDescriptors());
 +
@@ -412,6 +415,8 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +        base::StringPrintf("%s%d",
 +                           VideoCaptureDeviceHybris::GetDeviceIdPrefix(),
 +                           camera_id);
++        
++    VLOG(1) << "device_id: " << device_id;    
 +
 +    descriptors->push_back(
 +        media::VideoCaptureDeviceDescriptor(
@@ -427,7 +432,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  }  // namespace
  
  VideoCaptureDeviceFactoryLinux::VideoCaptureDeviceFactoryLinux(
-@@ -199,13 +258,17 @@
+@@ -199,13 +263,17 @@
  std::unique_ptr<VideoCaptureDevice>
  VideoCaptureDeviceFactoryLinux::CreateDevice(
      const VideoCaptureDeviceDescriptor& device_descriptor) {
@@ -447,7 +452,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  #endif
    if (!self)
      return std::unique_ptr<VideoCaptureDevice>();
-@@ -225,8 +288,14 @@
+@@ -225,8 +293,14 @@
  
  void VideoCaptureDeviceFactoryLinux::GetDeviceDescriptors(
      VideoCaptureDeviceDescriptors* device_descriptors) {
@@ -462,7 +467,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    const base::FilePath path("/dev/");
    base::FileEnumerator enumerator(path, false, base::FileEnumerator::FILES,
                                    "video*");
-@@ -275,6 +344,27 @@
+@@ -275,6 +349,27 @@
  void VideoCaptureDeviceFactoryLinux::GetSupportedFormats(
      const VideoCaptureDeviceDescriptor& device,
      VideoCaptureFormats* supported_formats) {
@@ -490,7 +495,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    DCHECK(thread_checker_.CalledOnValidThread());
    if (device.device_id.empty())
      return;
-@@ -293,6 +383,7 @@
+@@ -293,6 +388,7 @@
  VideoCaptureDeviceFactory::CreateVideoCaptureDeviceFactory(
      scoped_refptr<base::SingleThreadTaskRunner> ui_task_runner,
      gpu::GpuMemoryBufferManager* gpu_memory_buffer_manager) {
