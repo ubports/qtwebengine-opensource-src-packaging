@@ -14,15 +14,6 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  linux {
      QMAKE_LFLAGS += -Wl,--gc-sections -Wl,-O1 -Wl,-z,now
      # Embedded address sanitizer symbols are undefined and are picked up by the dynamic link loader
---- a/src/3rdparty/chromium/build/config/dcheck_always_on.gni   2018-11-19 19:55:45.000000000 +0100
-+++ b/src/3rdparty/chromium/build/config/dcheck_always_on.gni   2019-03-31 00:11:47.190729900 +0100
-@@ -7,5 +7,5 @@
- declare_args() {
-   # Set to true to enable dcheck in Release builds.
-   # is_syzyasan defaults to logging/non-fatal DCHECKs - see crbug.com/596231.
--  dcheck_always_on = is_syzyasan
-+  dcheck_always_on = true
- }
 --- a/src/3rdparty/chromium/media/capture/BUILD.gn	2019-03-13 19:21:59.310100900 +0100
 +++ b/src/3rdparty/chromium/media/capture/BUILD.gn	2019-03-16 16:03:02.555024600 +0100
 @@ -3,9 +3,18 @@
@@ -362,7 +353,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +#endif // _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2018-11-19 19:55:45.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-03-31 13:28:59.890059500 +0200
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-04-23 19:44:31.658928800 +0200
 @@ -9,6 +9,14 @@
  #include <stdint.h>
  #include <sys/ioctl.h>
@@ -378,7 +369,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  #include "base/files/file_enumerator.h"
  #include "base/files/file_util.h"
  #include "base/files/scoped_file.h"
-@@ -187,6 +195,54 @@
+@@ -187,6 +195,57 @@
    return display_name;
  }
  
@@ -396,6 +387,9 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +std::unique_ptr<media::VideoCaptureDeviceDescriptors>
 +GetDeviceDescriptorsFromHybris() {
++    
++  VLOG(1) << "GetDeviceDescriptorsFromHybris()";
++  
 +  DCHECK(media::HybrisUtils::GetInstance()->IsCameraCompatAvailable());
 +
 +  int32_t number_of_devices = android_camera_get_number_of_devices();
@@ -433,7 +427,15 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  }  // namespace
  
  VideoCaptureDeviceFactoryLinux::VideoCaptureDeviceFactoryLinux(
-@@ -204,8 +260,9 @@
+@@ -199,13 +258,17 @@
+ std::unique_ptr<VideoCaptureDevice>
+ VideoCaptureDeviceFactoryLinux::CreateDevice(
+     const VideoCaptureDeviceDescriptor& device_descriptor) {
++    
++  VLOG(1) << "CreateDevice()";
++      
+   DCHECK(thread_checker_.CalledOnValidThread());
+ #if defined(OS_CHROMEOS)
    VideoCaptureDeviceChromeOS* self =
        new VideoCaptureDeviceChromeOS(ui_task_runner_, device_descriptor);
  #else
@@ -445,8 +447,12 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  #endif
    if (!self)
      return std::unique_ptr<VideoCaptureDevice>();
-@@ -227,6 +284,10 @@
+@@ -225,8 +288,14 @@
+ 
+ void VideoCaptureDeviceFactoryLinux::GetDeviceDescriptors(
      VideoCaptureDeviceDescriptors* device_descriptors) {
++    
++  VLOG(1) << "GetDeviceDescriptors()";
    DCHECK(thread_checker_.CalledOnValidThread());
    DCHECK(device_descriptors->empty());
 +  
@@ -456,10 +462,12 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    const base::FilePath path("/dev/");
    base::FileEnumerator enumerator(path, false, base::FileEnumerator::FILES,
                                    "video*");
-@@ -275,6 +336,25 @@
+@@ -275,6 +344,27 @@
  void VideoCaptureDeviceFactoryLinux::GetSupportedFormats(
      const VideoCaptureDeviceDescriptor& device,
      VideoCaptureFormats* supported_formats) {
++    
++    VLOG(1) << "GetSupportedFormats()";
 +    
 +    //int width = 0;
 +    //int height = 0;
@@ -475,13 +483,21 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +    
 +    supported_formats->clear();
 +    supported_formats->push_back(format640);
-+    DVLOG(1) << "PATCH(format640x480): " << VideoCaptureFormat::ToString(format640);
++    VLOG(1) << "PATCH(format640x480): " << VideoCaptureFormat::ToString(format640);
 +    
 +    return;
 +    
    DCHECK(thread_checker_.CalledOnValidThread());
    if (device.device_id.empty())
      return;
+@@ -293,6 +383,7 @@
+ VideoCaptureDeviceFactory::CreateVideoCaptureDeviceFactory(
+     scoped_refptr<base::SingleThreadTaskRunner> ui_task_runner,
+     gpu::GpuMemoryBufferManager* gpu_memory_buffer_manager) {
++  VLOG(1) << "CreateVideoCaptureDeviceFactory()";
+   return new VideoCaptureDeviceFactoryLinux(ui_task_runner);
+ }
+ #endif
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	1970-01-01 01:00:00.000000000 +0100
 +++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-03-16 13:33:37.961251700 +0100
 @@ -0,0 +1,298 @@
