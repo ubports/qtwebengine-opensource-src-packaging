@@ -902,7 +902,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +#endif // _OXIDE_SHARED_BROWSER_MEDIA_VIDEO_CAPTURE_DEVICE_HYBRIS_H_
 + 
 --- a/src/3rdparty/chromium/media/capture/video/video_capture_system_impl.cc	2018-11-19 19:55:45.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/video_capture_system_impl.cc	2019-04-24 07:22:42.891673300 +0200
++++ b/src/3rdparty/chromium/media/capture/video/video_capture_system_impl.cc	2019-04-24 08:25:35.321890700 +0200
 @@ -60,6 +60,7 @@
  VideoCaptureSystemImpl::VideoCaptureSystemImpl(
      std::unique_ptr<VideoCaptureDeviceFactory> factory)
@@ -919,7 +919,17 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    DCHECK(thread_checker_.CalledOnValidThread());
    VideoCaptureDeviceDescriptors descriptors;
    factory_->GetDeviceDescriptors(&descriptors);
-@@ -94,6 +96,7 @@
+@@ -75,6 +77,9 @@
+   // simply copy them from |devices_info_cache_|.
+   std::vector<VideoCaptureDeviceInfo> new_devices_info_cache;
+   new_devices_info_cache.reserve(descriptors.size());
++  
++  VLOG(1) << "descriptors.size() is " << descriptors.size();
++  
+   for (const auto& descriptor : descriptors) {
+     if (auto* cached_info = LookupDeviceInfoFromId(descriptor.device_id)) {
+       new_devices_info_cache.push_back(*cached_info);
+@@ -94,6 +99,7 @@
  // Creates a VideoCaptureDevice object. Returns NULL if something goes wrong.
  std::unique_ptr<VideoCaptureDevice> VideoCaptureSystemImpl::CreateDevice(
      const std::string& device_id) {
@@ -927,7 +937,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    DCHECK(thread_checker_.CalledOnValidThread());
    const VideoCaptureDeviceInfo* device_info = LookupDeviceInfoFromId(device_id);
    if (!device_info)
-@@ -103,6 +106,7 @@
+@@ -103,6 +109,7 @@
  
  const VideoCaptureDeviceInfo* VideoCaptureSystemImpl::LookupDeviceInfoFromId(
      const std::string& device_id) {
