@@ -525,8 +525,8 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  }
  #endif
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	1970-01-01 01:00:00.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-04-24 14:36:36.461526400 +0200
-@@ -0,0 +1,325 @@
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-04-24 15:33:01.476849100 +0200
+@@ -0,0 +1,332 @@
 +// vim:expandtab:shiftwidth=2:tabstop=2:
 +// Copyright (C) 2015 Canonical Ltd.
 +
@@ -688,20 +688,27 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +    std::unique_ptr<Client> client) {
 +  
 +  VLOG(1) << "AllocateAndStart()";
++  VLOG(1) << "params.requested_format.IsValid: " << params.requested_format.IsValid();
 +  DCHECK(params.requested_format.IsValid());
++  VLOG(1) << "!camera_control_: " << !camera_control_;
 +  DCHECK(!camera_control_);
 +
++  VLOG(1) << "std::move(client)";
 +  client_ = std::move(client);
 +
++  VLOG(1) << "base::ThreadTaskRunnerHandle::Get()";
 +  task_runner_ = base::ThreadTaskRunnerHandle::Get();
 +
 +  if (gl::GetGLImplementation() != gl::kGLImplementationEGLGLES2) {
++    VLOG(1) << "Unsupported GL implementation";
 +    client_->OnError(FROM_HERE, "Unsupported GL implementation");
 +    return;
 +  }
-+
++  
++  VLOG(1) << "first_ref_time_ = base::TimeTicks()";
 +  first_ref_time_ = base::TimeTicks();
 +
++  VLOG(1) << "listener_.reset(new CameraControlListener());";
 +  listener_.reset(new CameraControlListener());
 +  memset(listener_.get(), 0, sizeof(CameraControlListener));
 +  listener_->context = this;
