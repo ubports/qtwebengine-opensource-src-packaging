@@ -525,8 +525,8 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  }
  #endif
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	1970-01-01 01:00:00.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-03-16 13:33:37.961251700 +0100
-@@ -0,0 +1,298 @@
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-04-24 12:10:52.819993700 +0200
+@@ -0,0 +1,310 @@
 +// vim:expandtab:shiftwidth=2:tabstop=2:
 +// Copyright (C) 2015 Canonical Ltd.
 +
@@ -639,11 +639,14 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +*/
 +
 +namespace {
-+void DummyOnPreviewTextureNeedsUpdateCallback(void* context) {}
++void DummyOnPreviewTextureNeedsUpdateCallback(void* context) {
++    VLOG(1) << "DummyOnPreviewTextureNeedsUpdateCallback()";
++}
 +}
 +
 +// static
 +void VideoCaptureDeviceHybris::OnMsgErrorCallback(void* context) {
++  VLOG(1) << "OnMsgErrorCallback()";
 +  reinterpret_cast<VideoCaptureDeviceHybris*>(context)->OnError();
 +}
 +
@@ -651,16 +654,19 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +void VideoCaptureDeviceHybris::OnPreviewFrameCallback(void* data,
 +                                                      uint32_t size,
 +                                                      void* context) {
++  VLOG(1) << "OnPreviewFrameCallback()";
 +  reinterpret_cast<VideoCaptureDeviceHybris*>(context)
 +      ->OnFrameAvailable(data, size);
 +}
 +
 +void VideoCaptureDeviceHybris::OnError() {
 +  // XXX: Can we get any more information about the error?
++    VLOG(1) << "OnError()";
 +  client_->OnError(FROM_HERE, "Error from Hybris");
 +}
 +
 +void VideoCaptureDeviceHybris::OnFrameAvailable(void* data, uint32_t size) {
++  VLOG(1) << "OnFrameAvailable()";  
 +  const base::TimeTicks now = base::TimeTicks::Now();
 +
 +  if (first_ref_time_.is_null()) {
@@ -680,6 +686,8 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +void VideoCaptureDeviceHybris::AllocateAndStart(
 +    const media::VideoCaptureParams& params,
 +    std::unique_ptr<Client> client) {
++  
++  VLOG(1) << "AllocateAndStart()";
 +  DCHECK(params.requested_format.IsValid());
 +  DCHECK(!camera_control_);
 +
@@ -763,6 +771,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +}
 +
 +void VideoCaptureDeviceHybris::StopAndDeAllocate() {
++  VLOG(1) << "StopAndDeAllocate()";  
 +  if (camera_control_) {
 +    android_camera_stop_preview(camera_control_);
 +    android_camera_disconnect(camera_control_);
@@ -798,6 +807,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +// static
 +void VideoCaptureDeviceHybris::Initialize() {
++  VLOG(1) << "Initialize()";
 +  // This must be done on the UI thread. It's kind of ugly tbh, but is needed
 +  // so that we can remove the synchronization from Screen
 +  //RotationHelper::GetInstance();
@@ -805,12 +815,14 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +// static
 +const char* VideoCaptureDeviceHybris::GetDeviceIdPrefix() {
++  VLOG(1) << "GetDeviceIdPrefix()";
 +  return "Hybris";
 +}
 +
 +// static
 +int32_t VideoCaptureDeviceHybris::GetCameraIdfromDeviceId(
 +    const std::string& device_id) {
++  VLOG(1) << "GetCameraIdfromDeviceId()";
 +  std::string device_id_format =
 +      base::StringPrintf("%s%%d",
 +                         VideoCaptureDeviceHybris::GetDeviceIdPrefix());
