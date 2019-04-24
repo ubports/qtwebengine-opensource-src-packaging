@@ -525,8 +525,8 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  }
  #endif
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	1970-01-01 01:00:00.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-04-24 12:10:52.819993700 +0200
-@@ -0,0 +1,310 @@
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-04-24 14:36:36.461526400 +0200
+@@ -0,0 +1,325 @@
 +// vim:expandtab:shiftwidth=2:tabstop=2:
 +// Copyright (C) 2015 Canonical Ltd.
 +
@@ -710,7 +710,9 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +      &DummyOnPreviewTextureNeedsUpdateCallback;
 +  listener_->on_preview_frame_cb = &OnPreviewFrameCallback;
 +
++  VLOG(1) << "device_id: " << device_descriptor_.device_id;
 +  int32_t camera_id = GetCameraIdfromDeviceId(device_descriptor_.device_id);
++  VLOG(1) << "camera_id: " << camera_id;
 +
 +  if (android_camera_get_device_info(camera_id,
 +                                     reinterpret_cast<int*>(&position_),
@@ -725,15 +727,21 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +    return;
 +  }
 +
++  VLOG(1) << "android_camera_set_preview_callback_mode()";
 +  android_camera_set_preview_callback_mode(camera_control_,
 +                                           PREVIEW_CALLBACK_ENABLED);
 +
++  VLOG(1) << "android_camera_set_preview_size()";
 +  android_camera_set_preview_size(camera_control_,
 +                                  params.requested_format.frame_size.width(),
 +                                  params.requested_format.frame_size.height());
++  
++  VLOG(1) << "android_camera_set_preview_fps()";
 +  android_camera_set_preview_fps(
 +      camera_control_,
 +      static_cast<int>(params.requested_format.frame_rate));
++  
++  VLOG(1) << "android_camera_set_preview_format()";
 +  android_camera_set_preview_format(camera_control_,
 +                                    CAMERA_PIXEL_FORMAT_YUV420P);      
 +
@@ -743,6 +751,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +  gl::GLContextAttribs attribs;
 +  attribs.gpu_preference = gl::PreferIntegratedGpu;
 +  
++  VLOG(1) << "gl::init::CreateGLContext()";
 +  gl_context_ = gl::init::CreateGLContext(nullptr,
 +                                          gl_surface_.get(),
 +                                          attribs);
@@ -752,6 +761,8 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +  }
 +  gl_context_->MakeCurrent(gl_surface_.get());
 +  glGenTextures(1, &preview_texture_);
++  
++  VLOG(1) << "android_camera_set_preview_texture()";
 +  android_camera_set_preview_texture(camera_control_, preview_texture_);
 +
 +  int width = 0;
@@ -760,13 +771,17 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +  int fps = 0;
 +  android_camera_get_preview_fps(camera_control_, &fps);
++  
++  VLOG(1) << "width: " << width << ", height: " << height << ", fps: " << fps;
 +
++  VLOG(1) << "capture_format_";
 +  capture_format_ =
 +      media::VideoCaptureFormat(gfx::Size(width, height),
 +                                fps,
 +                                media::PIXEL_FORMAT_YV12,
 +                                VideoPixelStorage::CPU);
 +
++  VLOG(1) << "android_camera_start_preview()";    
 +  android_camera_start_preview(camera_control_);
 +}
 +
