@@ -353,7 +353,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +#endif // _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2018-11-19 19:55:45.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-04-24 09:42:30.297336100 +0200
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-04-24 10:44:36.326956700 +0200
 @@ -9,6 +9,14 @@
  #include <stdint.h>
  #include <sys/ioctl.h>
@@ -452,7 +452,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  #endif
    if (!self)
      return std::unique_ptr<VideoCaptureDevice>();
-@@ -225,8 +293,14 @@
+@@ -225,8 +293,35 @@
  
  void VideoCaptureDeviceFactoryLinux::GetDeviceDescriptors(
      VideoCaptureDeviceDescriptors* device_descriptors) {
@@ -461,13 +461,34 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    DCHECK(thread_checker_.CalledOnValidThread());
    DCHECK(device_descriptors->empty());
 +  
-+  device_descriptors = GetDeviceDescriptorsFromHybris().release();
++  //device_descriptors = GetDeviceDescriptorsFromHybris().release();
++  
++    DCHECK(media::HybrisUtils::GetInstance()->IsCameraCompatAvailable());
++
++  int32_t number_of_devices = android_camera_get_number_of_devices();
++  
++  VLOG(1) << "[GetDeviceDescriptors()] number_of_devices: " << number_of_devices;
++
++  for (int32_t camera_id = 0; camera_id < number_of_devices; ++camera_id) {
++    CameraType type;
++    int orientation;
++    if (android_camera_get_device_info(camera_id, reinterpret_cast<int*>(&type),&orientation) != 0) {
++      LOG(ERROR) << "[GetDeviceDescriptors()] Failed to get device info for camera with ID " << camera_id;
++      continue;
++    }
++
++    std::string device_id = base::StringPrintf("%s%d", VideoCaptureDeviceHybris::GetDeviceIdPrefix(), camera_id);
++        
++    VLOG(1) << "[GetDeviceDescriptors()] device_id: " << device_id;    
++
++    descriptors->emplace_back(media::VideoCaptureDeviceDescriptor(GetDeviceNameFromCameraType(type), device_id));
++  }
 +  return;
 +  
    const base::FilePath path("/dev/");
    base::FileEnumerator enumerator(path, false, base::FileEnumerator::FILES,
                                    "video*");
-@@ -275,6 +349,27 @@
+@@ -275,6 +370,27 @@
  void VideoCaptureDeviceFactoryLinux::GetSupportedFormats(
      const VideoCaptureDeviceDescriptor& device,
      VideoCaptureFormats* supported_formats) {
@@ -495,7 +516,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    DCHECK(thread_checker_.CalledOnValidThread());
    if (device.device_id.empty())
      return;
-@@ -293,6 +388,7 @@
+@@ -293,6 +409,7 @@
  VideoCaptureDeviceFactory::CreateVideoCaptureDeviceFactory(
      scoped_refptr<base::SingleThreadTaskRunner> ui_task_runner,
      gpu::GpuMemoryBufferManager* gpu_memory_buffer_manager) {
