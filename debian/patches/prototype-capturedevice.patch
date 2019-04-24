@@ -353,7 +353,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +#endif // _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2018-11-19 19:55:45.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-04-24 10:44:36.326956700 +0200
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-04-24 11:08:02.882286000 +0200
 @@ -9,6 +9,14 @@
  #include <stdint.h>
  #include <sys/ioctl.h>
@@ -481,7 +481,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +        
 +    VLOG(1) << "[GetDeviceDescriptors()] device_id: " << device_id;    
 +
-+    descriptors->emplace_back(media::VideoCaptureDeviceDescriptor(GetDeviceNameFromCameraType(type), device_id));
++    device_descriptors->emplace_back(media::VideoCaptureDeviceDescriptor(GetDeviceNameFromCameraType(type), device_id));
 +  }
 +  return;
 +  
