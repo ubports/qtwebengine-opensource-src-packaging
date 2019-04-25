@@ -353,7 +353,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +#endif // _OXIDE_SHARED_BROWSER_HYBRIS_UTILS_H_
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2018-11-19 19:55:45.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-04-24 11:08:02.882286000 +0200
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc	2019-04-24 20:13:25.659952300 +0200
 @@ -9,6 +9,14 @@
  #include <stdint.h>
  #include <sys/ioctl.h>
@@ -369,6 +369,15 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  #include "base/files/file_enumerator.h"
  #include "base/files/file_util.h"
  #include "base/files/scoped_file.h"
+@@ -73,7 +81,7 @@
+     }
+   }
+ 
+-  DLOG(ERROR) << "No usable formats found";
++  LOG(ERROR) << "No usable formats found";
+   return false;
+ }
+ 
 @@ -187,6 +195,62 @@
    return display_name;
  }
@@ -452,6 +461,15 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  #endif
    if (!self)
      return std::unique_ptr<VideoCaptureDevice>();
+@@ -215,7 +283,7 @@
+   base::ScopedFD fd(
+       HANDLE_EINTR(open(device_descriptor.device_id.c_str(), O_RDONLY)));
+   if (!fd.is_valid()) {
+-    DLOG(ERROR) << "Cannot open device";
++    LOG(ERROR) << "Cannot open device";
+     delete self;
+     return std::unique_ptr<VideoCaptureDevice>();
+   }
 @@ -225,8 +293,35 @@
  
  void VideoCaptureDeviceFactoryLinux::GetDeviceDescriptors(
@@ -488,6 +506,15 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
    const base::FilePath path("/dev/");
    base::FileEnumerator enumerator(path, false, base::FileEnumerator::FILES,
                                    "video*");
+@@ -236,7 +331,7 @@
+     const std::string unique_id = path.value() + info.GetName().value();
+     const base::ScopedFD fd(HANDLE_EINTR(open(unique_id.c_str(), O_RDONLY)));
+     if (!fd.is_valid()) {
+-      DLOG(ERROR) << "Couldn't open " << info.GetName().value();
++      LOG(ERROR) << "Couldn't open " << info.GetName().value();
+       continue;
+     }
+     // Test if this is a V4L2 capture device and if it has at least one
 @@ -275,6 +370,27 @@
  void VideoCaptureDeviceFactoryLinux::GetSupportedFormats(
      const VideoCaptureDeviceDescriptor& device,
@@ -525,8 +552,8 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  }
  #endif
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	1970-01-01 01:00:00.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-04-24 15:33:01.476849100 +0200
-@@ -0,0 +1,332 @@
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-04-24 20:11:14.495466700 +0200
+@@ -0,0 +1,331 @@
 +// vim:expandtab:shiftwidth=2:tabstop=2:
 +// Copyright (C) 2015 Canonical Ltd.
 +
@@ -661,7 +688,6 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +void VideoCaptureDeviceHybris::OnError() {
 +  // XXX: Can we get any more information about the error?
-+    VLOG(1) << "OnError()";
 +  client_->OnError(FROM_HERE, "Error from Hybris");
 +}
 +
@@ -700,7 +726,7 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +  task_runner_ = base::ThreadTaskRunnerHandle::Get();
 +
 +  if (gl::GetGLImplementation() != gl::kGLImplementationEGLGLES2) {
-+    VLOG(1) << "Unsupported GL implementation";
++    VLOG(1) << "Unsupported GL implementation: " << gl::GetGLImplementation();
 +    client_->OnError(FROM_HERE, "Unsupported GL implementation");
 +    return;
 +  }
@@ -956,6 +982,26 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +
 +#endif // _OXIDE_SHARED_BROWSER_MEDIA_VIDEO_CAPTURE_DEVICE_HYBRIS_H_
 + 
+--- a/src/3rdparty/chromium/media/capture/video/video_capture_device_client.cc	2018-11-19 19:55:45.000000000 +0100
++++ b/src/3rdparty/chromium/media/capture/video/video_capture_device_client.cc	2019-04-24 20:12:02.659241100 +0200
+@@ -272,7 +272,7 @@
+           format.frame_size.width(),
+           (flip ? -1 : 1) * format.frame_size.height(), new_unrotated_width,
+           new_unrotated_height, rotation_mode, origin_colorspace) != 0) {
+-    DLOG(WARNING) << "Failed to convert buffer's pixel format to I420 from "
++    LOG(WARNING) << "Failed to convert buffer's pixel format to I420 from "
+                   << VideoPixelFormatToString(format.pixel_format);
+     return;
+   }
+@@ -382,7 +382,7 @@
+       reason.c_str(),
+       logging::SystemErrorCodeToString(logging::GetLastSystemErrorCode())
+           .c_str());
+-  DLOG(ERROR) << log_message;
++  LOG(ERROR) << log_message;
+   OnLog(log_message);
+   receiver_->OnError();
+ }
 --- a/src/3rdparty/chromium/media/capture/video/video_capture_system_impl.cc	2018-11-19 19:55:45.000000000 +0100
 +++ b/src/3rdparty/chromium/media/capture/video/video_capture_system_impl.cc	2019-04-24 08:25:35.321890700 +0200
 @@ -60,6 +60,7 @@
