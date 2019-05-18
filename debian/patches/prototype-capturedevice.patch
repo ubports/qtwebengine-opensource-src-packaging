@@ -552,8 +552,8 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  }
  #endif
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	1970-01-01 01:00:00.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-05-18 16:52:09.917388000 +0200
-@@ -0,0 +1,334 @@
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-05-18 23:28:47.113229500 +0200
+@@ -0,0 +1,333 @@
 +// vim:expandtab:shiftwidth=2:tabstop=2:
 +// Copyright (C) 2015 Canonical Ltd.
 +
@@ -728,7 +728,6 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +  if (gl::GetGLImplementation() != gl::kGLImplementationEGLGLES2) {
 +    VLOG(1) << "Unsupported GL implementation: " << gl::GetGLImplementation();
 +    client_->OnError(FROM_HERE, "Unsupported GL implementation (... try init)");
-+    ScopedBindGLESAPI gles_binder;
 +    gl::init::InitializeGLOneOff();
 +    VLOG(1) << "implementation is now: " << gl::GetGLImplementation();
 +    //return;
