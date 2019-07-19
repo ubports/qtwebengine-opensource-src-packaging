@@ -9,11 +9,11 @@ Subject: [PATCH] Add support for mir
  2 files changed, 2 insertions(+), 5 deletions(-)
 
 diff --git a/mkspecs/features/platform.prf b/mkspecs/features/platform.prf
-index bb171f7..1e9032c 100644
+index 67be73f74..53ea51014 100644
 --- a/mkspecs/features/platform.prf
 +++ b/mkspecs/features/platform.prf
-@@ -65,10 +65,6 @@ defineTest(isPlatformSupported) {
-     skipBuild("C++11 support is required in order to build chromium.")
+@@ -67,10 +67,6 @@ defineTest(isPlatformSupported) {
+     skipBuild("C++14 support is required in order to build chromium.")
      return(false)
    }
 -  qtConfig(mirclient) {
