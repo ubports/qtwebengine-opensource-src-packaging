@@ -3,7 +3,7 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 export NINJA_PATH=/usr/bin/ninja
-export NINJAFLAGS=-v -j1
+export NINJAFLAGS=-v
 include /usr/share/dpkg/default.mk
 
 DEB_HOST_ARCH_BITS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_BITS)
