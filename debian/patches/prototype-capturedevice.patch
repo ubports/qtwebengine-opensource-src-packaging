@@ -14,42 +14,6 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  linux {
      QMAKE_LFLAGS += -Wl,--gc-sections -Wl,-O1 -Wl,-z,now
      # Embedded address sanitizer symbols are undefined and are picked up by the dynamic link loader
---- a/src/core/gl_surface_qt.cpp   2018-11-23 07:35:08.000000000 +0100
-+++ b/src/core/gl_surface_qt.cpp   2019-07-21 17:19:18.282375300 +0200
-@@ -73,6 +73,14 @@
- #include "ui/gl/gl_glx_api_implementation.h"
- #include <dlfcn.h>
- 
-+#include <QOpenGLContext>
-+
-+QT_BEGIN_NAMESPACE
-+
-+Q_GUI_EXPORT QOpenGLContext *qt_gl_global_share_context();
-+
-+QT_END_NAMESPACE
-+
- #endif
- 
- #include "ozone/gl_surface_egl_qt.h"
-@@ -201,6 +209,18 @@
-           get_proc_address = reinterpret_cast<gl::GLGetProcAddressProc>(address);
-       }
-       if (!get_proc_address) {
-+          // glx handle not loaded , fallback to qpa
-+
-+          if (QOpenGLContext *context = qt_gl_global_share_context()) {
-+
-+              get_proc_address = reinterpret_cast<gl::GLGetProcAddressProc>(
-+
-+                          context->getProcAddress("glXGetProcAddress"));
-+
-+          }
-+
-+      }
-+      if (!get_proc_address) {
-           LOG(ERROR) << "glxGetProcAddress not found.";
-           base::UnloadNativeLibrary(library);
-           return false;
 --- a/src/3rdparty/chromium/media/capture/BUILD.gn	2019-03-13 19:21:59.310100900 +0100
 +++ b/src/3rdparty/chromium/media/capture/BUILD.gn	2019-03-16 16:03:02.555024600 +0100
 @@ -3,9 +3,18 @@
@@ -588,8 +552,8 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
  }
  #endif
 --- a/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	1970-01-01 01:00:00.000000000 +0100
-+++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-05-18 23:28:47.113229500 +0200
-@@ -0,0 +1,333 @@
++++ b/src/3rdparty/chromium/media/capture/video/linux/video_capture_device_hybris.cc	2019-07-21 18:29:26.108003300 +0200
+@@ -0,0 +1,339 @@
 +// vim:expandtab:shiftwidth=2:tabstop=2:
 +// Copyright (C) 2015 Canonical Ltd.
 +
@@ -764,7 +728,13 @@ Subject: some prototyping regarding capture device (camera) - deleting whole fil
 +  if (gl::GetGLImplementation() != gl::kGLImplementationEGLGLES2) {
 +    VLOG(1) << "Unsupported GL implementation: " << gl::GetGLImplementation();
 +    client_->OnError(FROM_HERE, "Unsupported GL implementation (... try init)");
-+    gl::init::InitializeGLOneOff();
++    gl::init::InitializeGLOneOffImplementation(
++            gl::GLImplementation::kGLImplementationEGLGLES2,
++            false,  // fallback_to_software_gl
++            false,  // gpu_service_logging
++            false,  // disable_gl_drawing
++            false   // init_extensions
++            );
 +    VLOG(1) << "implementation is now: " << gl::GetGLImplementation();
 +    //return;
 +  }
