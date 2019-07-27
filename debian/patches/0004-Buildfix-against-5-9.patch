@@ -87,3 +87,19 @@ index 56e5c5c..a332288 100644
          qmlRegisterUncreatableType<QWebEngineNotification>(uri, 1, 9, "WebEngineNotification", msgUncreatableType("WebEngineNotification"));
      }
  
+diff --git a/src/webengine/render_widget_host_view_qt_delegate_quick.cpp b/src/webengine/render_widget_host_view_qt_delegate_quick.cpp
+index e756ee157..8ec759118 100644
+--- a/src/webengine/render_widget_host_view_qt_delegate_quick.cpp
++++ b/src/webengine/render_widget_host_view_qt_delegate_quick.cpp
+@@ -101,7 +101,11 @@ void RenderWidgetHostViewQtDelegateQuick::initAsPopup(const QRect &r)
+ 
+ QRectF RenderWidgetHostViewQtDelegateQuick::viewGeometry() const
+ {
++#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+     return QRectF(mapToGlobal(QPointF(0, 0)), size());
++#else
++    return QRectF(mapToGlobal(QPointF(0, 0)), QRectF(width(), height()));
++#endif
+ }
+ 
+ void RenderWidgetHostViewQtDelegateQuick::setKeyboardFocus()
