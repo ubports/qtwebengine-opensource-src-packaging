@@ -98,7 +98,7 @@ index e756ee157..8ec759118 100644
 +#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
      return QRectF(mapToGlobal(QPointF(0, 0)), size());
 +#else
-+    return QRectF(mapToGlobal(QPointF(0, 0)), QRectF(width(), height()));
++    return QRectF(mapToGlobal(QPointF(0, 0)), QSizeF(width(), height()));
 +#endif
  }
  
