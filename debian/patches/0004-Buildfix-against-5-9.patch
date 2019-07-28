@@ -277,23 +277,24 @@ index 9a2ee9311..d95805ef2 100644
  #endif
  QTEST_MAIN(tst_QWebEngineScript)
 diff --git a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
-index 74adbaba9..04a9320ff 100644
+index 74adbaba9..533e91975 100644
 --- a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 +++ b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
-@@ -50,7 +50,11 @@
+@@ -49,8 +49,13 @@
+ #include <QWebEngineProfile>
  #include <QtCore/qregularexpression.h>
  
- #define VERIFY_INPUTMETHOD_HINTS(actual, expect) \
--    QVERIFY(actual == (expect | Qt::ImhNoPredictiveText | Qt::ImhNoTextHandles | Qt::ImhNoEditMenu));
-+    QVERIFY(actual == (expect | Qt::ImhNoPredictiveText \
 +#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-+ | Qt::ImhNoTextHandles | Qt::ImhNoEditMenu \
+ #define VERIFY_INPUTMETHOD_HINTS(actual, expect) \
+     QVERIFY(actual == (expect | Qt::ImhNoPredictiveText | Qt::ImhNoTextHandles | Qt::ImhNoEditMenu));
++#else
++#define VERIFY_INPUTMETHOD_HINTS(actual, expect) \
++    QVERIFY(actual == (expect | Qt::ImhNoPredictiveText));
 +#endif
-+));
  
  #define QTRY_COMPARE_WITH_TIMEOUT_FAIL_BLOCK(__expr, __expected, __timeout, __fail_block) \
  do { \
-@@ -296,14 +300,14 @@ void tst_QWebEngineView::changePage()
+@@ -296,14 +301,14 @@ void tst_QWebEngineView::changePage()
      QFETCH(bool, fromIsNullPage);
      QFETCH(bool, toIsNullPage);
  
@@ -314,7 +315,7 @@ index 74adbaba9..04a9320ff 100644
      pageFrom->load(urlFrom);
      QTRY_COMPARE(pageFromLoadSpy.count(), 1);
      QCOMPARE(pageFromLoadSpy.last().value(0).toBool(), true);
-@@ -312,7 +316,7 @@ void tst_QWebEngineView::changePage()
+@@ -312,7 +317,7 @@ void tst_QWebEngineView::changePage()
          QVERIFY(!pageFromIconLoadSpy.last().value(0).isNull());
      }
  
@@ -323,7 +324,7 @@ index 74adbaba9..04a9320ff 100644
  
      QTRY_COMPARE(spyUrl.count(), 1);
      QCOMPARE(spyUrl.last().value(0).toUrl(), pageFrom->url());
-@@ -328,8 +332,8 @@ void tst_QWebEngineView::changePage()
+@@ -328,8 +333,8 @@ void tst_QWebEngineView::changePage()
      }
  
      QScopedPointer<QWebEnginePage> pageTo(new QWebEnginePage);
@@ -334,7 +335,7 @@ index 74adbaba9..04a9320ff 100644
      pageTo->load(urlTo);
      QTRY_COMPARE(pageToLoadSpy.count(), 1);
      QCOMPARE(pageToLoadSpy.last().value(0).toBool(), true);
-@@ -338,7 +342,7 @@ void tst_QWebEngineView::changePage()
+@@ -338,7 +343,7 @@ void tst_QWebEngineView::changePage()
          QVERIFY(!pageToIconLoadSpy.last().value(0).isNull());
      }
  
