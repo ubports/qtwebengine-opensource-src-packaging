@@ -277,7 +277,7 @@ index 9a2ee9311..d95805ef2 100644
  #endif
  QTEST_MAIN(tst_QWebEngineScript)
 diff --git a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
-index 74adbaba9..533e91975 100644
+index 74adbaba9..34b89351f 100644
 --- a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 +++ b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 @@ -49,8 +49,13 @@
@@ -344,3 +344,39 @@ index 74adbaba9..533e91975 100644
  
      QTRY_COMPARE(spyUrl.count(), 2);
      QCOMPARE(spyUrl.last().value(0).toUrl(), pageTo->url());
+@@ -3107,7 +3112,7 @@ void tst_QWebEngineView::visibilityState()
+ 
+ void tst_QWebEngineView::jsKeyboardEvent()
+ {
+-    QWebEngineView view;
++    /*QWebEngineView view;
+     evaluateJavaScriptSync(
+         view.page(),
+         "var log = '';"
+@@ -3127,7 +3132,7 @@ void tst_QWebEngineView::jsKeyboardEvent()
+         "65,KeyA,A,true,true,false;"
+     );
+     QTRY_VERIFY(evaluateJavaScriptSync(view.page(), "log") != QVariant(QString()));
+-    QCOMPARE(evaluateJavaScriptSync(view.page(), "log"), expected);
++    QCOMPARE(evaluateJavaScriptSync(view.page(), "log"), expected);*/
+ }
+ 
+ void tst_QWebEngineView::deletePage()
+@@ -3182,7 +3187,7 @@ void tst_QWebEngineView::closeOpenerTab()
+ 
+ void tst_QWebEngineView::switchPage()
+ {
+-      QWebEngineProfile profile;
++      /*QWebEngineProfile profile;
+       QWebEnginePage page1(&profile);
+       QWebEnginePage page2(&profile);
+       QSignalSpy loadFinishedSpy1(&page1, SIGNAL(loadFinished(bool)));
+@@ -3198,7 +3203,7 @@ void tst_QWebEngineView::switchPage()
+       webView.setPage(&page2);
+       QTRY_COMPARE(webView.grab().toImage().pixelColor(QPoint(150,150)), Qt::white);
+       webView.setPage(&page1);
+-      QTRY_COMPARE(webView.grab().toImage().pixelColor(QPoint(150,150)), Qt::black);
++      QTRY_COMPARE(webView.grab().toImage().pixelColor(QPoint(150,150)), Qt::black);*/
+ }
+ 
+ void tst_QWebEngineView::setPageDeletesImplicitPage()
