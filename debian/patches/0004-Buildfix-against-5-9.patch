@@ -380,3 +380,28 @@ index 74adbaba9..34b89351f 100644
  }
  
  void tst_QWebEngineView::setPageDeletesImplicitPage()
+diff --git a/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp b/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp
+index 5629998fd..9a9d2e921 100644
+--- a/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp
++++ b/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp
+@@ -381,17 +381,17 @@ void tst_QWebEngineUrlRequestInterceptor::firstPartyUrlNestedIframes()
+     RequestInfo info = interceptor.requestInfos.at(0);
+     QCOMPARE(info.requestUrl, requestUrl);
+     QCOMPARE(info.firstPartyUrl, requestUrl);
+-    QCOMPARE(info.resourceType, QWebEngineUrlRequestInfo::ResourceTypeMainFrame);
++    QCOMPARE(info.resourceType, (int)QWebEngineUrlRequestInfo::ResourceTypeMainFrame);
+ 
+     info = interceptor.requestInfos.at(1);
+     QCOMPARE(info.requestUrl, QUrl(adjustedUrl + "iframe2.html"));
+     QCOMPARE(info.firstPartyUrl, requestUrl);
+-    QCOMPARE(info.resourceType, QWebEngineUrlRequestInfo::ResourceTypeSubFrame);
++    QCOMPARE(info.resourceType, (int)QWebEngineUrlRequestInfo::ResourceTypeSubFrame);
+ 
+     info = interceptor.requestInfos.at(2);
+     QCOMPARE(info.requestUrl, QUrl(adjustedUrl + "iframe3.html"));
+     QCOMPARE(info.firstPartyUrl, requestUrl);
+-    QCOMPARE(info.resourceType, QWebEngineUrlRequestInfo::ResourceTypeSubFrame);
++    QCOMPARE(info.resourceType, (int)QWebEngineUrlRequestInfo::ResourceTypeSubFrame);
+ }
+ 
+ void tst_QWebEngineUrlRequestInterceptor::requestInterceptorByResourceType_data()
