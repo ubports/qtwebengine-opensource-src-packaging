@@ -4,3 +4,4 @@
 0003-Bugfix-crash-background-tab.patch
 0004-Buildfix-against-5-9.patch
 0005-Buildfix-path-too-long.patch
+0006-Buildfix-ptrace-defines.patch
