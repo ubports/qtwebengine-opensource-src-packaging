@@ -1,0 +1,26 @@
+diff --git a/src/3rdparty/chromium/third_party/pdfium/skia/BUILD.gn b/src/3rdparty/chromium/third_party/pdfium/skia/BUILD.gn
+index 1d1ff2391..1bb8cacd7 100644
+--- a/src/3rdparty/chromium/third_party/pdfium/skia/BUILD.gn
++++ b/src/3rdparty/chromium/third_party/pdfium/skia/BUILD.gn
+@@ -182,7 +182,7 @@ config("skia_library_config") {
+ }
+ 
+ source_set("skcms") {
+-  cflags = []
++  cflags = [ "-mmemcpy" ]
+   if (!is_win || is_clang) {
+     cflags += [
+       "-w",
+diff --git a/src/3rdparty/chromium/third_party/skia/BUILD.gn b/src/3rdparty/chromium/third_party/skia/BUILD.gn
+index 3eae2ce43..d46e74ae9 100644
+--- a/src/3rdparty/chromium/third_party/skia/BUILD.gn
++++ b/src/3rdparty/chromium/third_party/skia/BUILD.gn
+@@ -765,7 +765,7 @@ optional("raw") {
+ 
+ import("third_party/skcms/skcms.gni")
+ source_set("skcms") {
+-  cflags = []
++  cflags = [ "-mmemcpy" ]
+   if (!is_win || is_clang) {
+     cflags += [
+       "-w",
