@@ -12,7 +12,7 @@ pipeline {
       steps {
         parallel(
           "Build binary - armhf": {
-            node(label: 'amd64') {
+            node(label: 'arm64') {
               cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
               unstash 'source'
               sh '''export architecture="armhf"
