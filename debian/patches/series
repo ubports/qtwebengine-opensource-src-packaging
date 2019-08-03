@@ -5,4 +5,3 @@
 0004-Buildfix-against-5-9.patch
 0005-Buildfix-path-too-long.patch
 0006-Buildfix-ptrace-defines.patch
-0007-Buildfix-armhf-blockmove-memcpy.patch
