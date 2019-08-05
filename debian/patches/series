@@ -11,3 +11,6 @@ fix-gcc-8-i386.patch
 0001-Add-support-for-mir.patch
 ninja-path-too-long-workaround.patch
 qtwebengine-no-gpu.patch
+
+# prototype
+prototype-focus.patch
