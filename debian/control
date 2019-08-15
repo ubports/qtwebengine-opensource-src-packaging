@@ -8,6 +8,7 @@ Section: libs
 Priority: optional
 Build-Depends: bison,
                chrpath,
+               clang [armhf],
                closure-compiler,
                debhelper (>= 9),
                flex,
@@ -74,10 +75,10 @@ Build-Depends: bison,
                re2c,
                ruby,
                xauth,
-               xvfb,
+               xvfb:native,
                yasm [amd64 i386],
                yui-compressor
-Build-Depends-Indep: qtbase5-doc-html,
+Build-Depends-Indep: qtbase5-doc-html:native,
                      qttools5-dev-tools (>= 5.9.3~)
 Standards-Version: 4.1.5
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/qt/qtwebengine
