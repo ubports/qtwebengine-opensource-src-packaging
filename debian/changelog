@@ -1,3 +1,166 @@
+qtwebengine-opensource-src (5.12.5+dfsg-5ubports0) xenial; urgency=medium
+
+  * Update QtWebEngine to 5.12.5
+
+ -- Dalton Durst <dalton@ubports.com>  Mon, 30 Dec 2019 11:38:54 -0600
+
+qtwebengine-opensource-src (5.12.5+dfsg-6) unstable; urgency=medium
+
+  * Remove one i386 symbol that is not present in build with system libvpx.
+  * Make libgl-dev build-dependency versioned, the virtual package provided
+    by older mesa is no longer enough and causes build failure on mipsel.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 21 Dec 2019 18:52:30 +0300
+
+qtwebengine-opensource-src (5.12.5+dfsg-5) unstable; urgency=medium
+
+  * Build-depend on libx11-xcb-dev and libxdamage-dev, to fix build with
+    the latest mesa and libglvnd.
+  * Build with system libvpx again.
+  * Stop build-depending on transitional packages from mesa.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 20 Dec 2019 22:23:56 +0300
+
+qtwebengine-opensource-src (5.12.5+dfsg-4) unstable; urgency=medium
+
+  [ Alexander Volkov ]
+  * Do not build the documentation packages when nodoc profile is enabled.
+
+  [ Dmitry Shachnev ]
+  * Backport upstream patches to fix CVE-2019-13720 and CVE-2019-5870.
+  * Update debian/libqt5webenginecore5.symbols from buildds’ logs.
+  * Use ui/webui/resources/js/jstemplate_compiled.js provided by upstream
+    instead of the empty file (closes: #882805).
+  * Backport upstream patch to fix build with ICU 65.1.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 19 Dec 2019 12:42:13 +0300
+
+qtwebengine-opensource-src (5.12.5+dfsg-3) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.4.1, no changes needed.
+  * Upload to unstable.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 21 Oct 2019 18:12:06 +0300
+
+qtwebengine-opensource-src (5.12.5+dfsg-2) experimental; urgency=medium
+
+  * Add a patch to fix mipsel build with Linux ≥ 5.0.
+  * Update libqt5webenginecore5.symbols from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 15 Oct 2019 14:31:27 +0300
+
+qtwebengine-opensource-src (5.12.5+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump Qt build-dependencies to 5.12.5.
+  * Backport upstream patch to fix build with Pulseaudio 13.
+  * Update symbols files from the current build log.
+  * Bump ABI version to qtwebengine-abi-5-12-5.
+  * Override Lintian warnings about symbols dependencies on -abi- packages.
+  * Do not hardcode minor version number in the Lintian overrides file.
+  * Bump Standards-Version to 4.4.0.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 24 Sep 2019 18:44:14 +0300
+
+qtwebengine-opensource-src (5.12.4+dfsg-1) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Build-depend on binutils ≥ 2.32-8 to fix link failure on amd64.
+  * Add a virtual ABI package that the private symbols will depend on.
+  * Add Build-Depends-Package field to all symbols files.
+  * New upstream release.
+  * Drop mips-link-atomic.patch, applied upstream.
+  * Refresh run-unbundling-script.patch.
+  * Update debian/libqt5webenginecore5.symbols from buildds’ logs.
+  * Bump Qt build-dependencies to 5.12.4.
+  * Bump Standards-Version to 4.3.0.
+
+  [ Scarlett Moore ]
+  * Update my name/email.
+  * Update packaging to use doc-base as per policy 9.10.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 29 Jun 2019 20:48:15 +0300
+
+qtwebengine-opensource-src (5.12.3+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Link with -latomic on mipsel to fix build failure.
+  * Update debian/libqt5webenginecore5.symbols from buildds’ logs.
+  * Refresh run-unbundling-script.patch.
+  * Bump Qt build-dependencies to 5.12.3.
+  * Update symbols files from the current build logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 01 May 2019 20:31:19 +0300
+
+qtwebengine-opensource-src (5.12.2+dfsg-2) experimental; urgency=medium
+
+  * Bump Qt build-dependencies to 5.12.2.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 27 Mar 2019 21:27:39 +0300
+
+qtwebengine-opensource-src (5.12.2+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update Files-Excluded and touch_files for upstream file moves.
+  * Drop patches, applied upstream:
+    - disable-last_commit_position.patch
+    - fix-gcc-8-i386.patch
+  * Refresh and rebase the remaining patches.
+  * Update debian/libqt5webenginecore5.symbols from buildds’ logs.
+  * Temporarily build without system VPX. WebRTC requires a newer,
+    unreleased, version of libvpx.
+  * Update symbols files from the current build logs.
+  * Remove ${shlibs:Depends} from libqt5webengine-data.
+  * Update Lintian overrides, and remove some unused ones.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 26 Mar 2019 22:47:50 +0300
+
+qtwebengine-opensource-src (5.11.3+dfsg-2) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Drop libsrtp-dev build-dependency (closes: #910300). The code uses a
+    private copy of SRTP2 because it needs its private headers.
+
+  [ Simon Quigley ]
+  * Change my email to tsimonq2@debian.org now that I am a Debian Developer.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Upload to unstable.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 26 Dec 2018 16:37:02 -0300
+
+qtwebengine-opensource-src (5.11.3+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+    - Security fixes from Chromium up to version 70.0.3538.102, including:
+      - CVE-2018-16066
+      - CVE-2018-16067
+      - CVE-2018-16068
+      - CVE-2018-16070
+      - CVE-2018-16071
+      - CVE-2018-16072
+      - CVE-2018-16073
+      - CVE-2018-16074
+      - CVE-2018-16076
+      - CVE-2018-16077
+      - CVE-2018-16083
+      - CVE-2018-16085
+      - CVE-2018-17462
+      - CVE-2018-17466
+      - CVE-2018-17468
+      - CVE-2018-17468
+      - CVE-2018-17469
+      - CVE-2018-17470
+      - CVE-2018-17471
+      - CVE-2018-17473
+      - CVE-2018-17474
+      - CVE-2018-17476
+      - CVE-2018-17478
+  * Bump Qt build dependencies.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 23 Dec 2018 20:39:47 -0300
+
 qtwebengine-opensource-src (5.11.3+dfsg-1ubports0) xenial; urgency=medium
 
   * Update to QtWebEngine 5.11.3
@@ -15,6 +178,12 @@ qtwebengine-opensource-src (5.11.2+dfsg-1ubports4) xenial; urgency=medium
   * Rebuild SYNCQT headers during build
 
  -- Dalton Durst <dalton@ubports.com>  Tue, 06 Nov 2018 14:52:28 -0600
+
+qtwebengine-opensource-src (5.11.2+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 16 Oct 2018 18:52:08 +0300
 
 qtwebengine-opensource-src (5.11.2+dfsg-1ubports3) xenial; urgency=medium
 

@@ -7,11 +7,9 @@ It also crashes when running on wayland, the cause is not yet known.
 Work around these issues by not doing GPU-accelerated rendering in such
 cases.
 
-Index: qtwebengine-everywhere-src-5.10.0/src/core/web_engine_context.cpp
-===================================================================
---- qtwebengine-everywhere-src-5.10.0.orig/src/core/web_engine_context.cpp
-+++ qtwebengine-everywhere-src-5.10.0/src/core/web_engine_context.cpp
-@@ -93,6 +93,7 @@
+--- a/src/core/web_engine_context.cpp
++++ b/src/core/web_engine_context.cpp
+@@ -104,6 +104,7 @@
  #include <QOffscreenSurface>
  #ifndef QT_NO_OPENGL
  # include <QOpenGLContext>
@@ -19,7 +17,7 @@ Index: qtwebengine-everywhere-src-5.10.0/src/core/web_engine_context.cpp
  #endif
  #include <QQuickWindow>
  #include <QStringList>
-@@ -167,6 +168,39 @@ void dummyGetPluginCallback(const std::v
+@@ -163,6 +164,39 @@
  }
  #endif
  
@@ -59,7 +57,7 @@ Index: qtwebengine-everywhere-src-5.10.0/src/core/web_engine_context.cpp
  } // namespace
  
  namespace QtWebEngineCore {
-@@ -379,6 +413,27 @@ WebEngineContext::WebEngineContext()
+@@ -474,6 +508,27 @@
      const char *glType = 0;
  #ifndef QT_NO_OPENGL
  
@@ -87,13 +85,12 @@ Index: qtwebengine-everywhere-src-5.10.0/src/core/web_engine_context.cpp
      bool tryGL =
              !usingANGLE()
              && (!usingSoftwareDynamicGL()
-@@ -389,7 +444,7 @@ WebEngineContext::WebEngineContext()
+@@ -482,7 +537,7 @@
+                 // performant, but at least provides WebGL support.
                  || enableWebGLSoftwareRendering
- #endif
                  )
 -            && !usingQtQuick2DRenderer();
 +            && !usingQtQuick2DRenderer() && !disableGpu;
  
      if (tryGL) {
          if (qt_gl_global_share_context() && qt_gl_global_share_context()->isValid()) {
-

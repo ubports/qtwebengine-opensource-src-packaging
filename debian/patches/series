@@ -3,11 +3,13 @@ system-lcms2.patch
 system-nspr-prtime.patch
 system-icu-utf.patch
 no-icudtl-dat.patch
-disable-last_commit_position.patch
 verbose-gn-bootstrap.patch
-fix-gcc-8-i386.patch
+pulseaudio-13.patch
+mipsel-linux-5.patch
+CVE-2019-13720.patch
+icu-65.patch
+CVE-2019-5870.patch
 
 # UBports
 0001-Add-support-for-mir.patch
-ninja-path-too-long-workaround.patch
 qtwebengine-no-gpu.patch

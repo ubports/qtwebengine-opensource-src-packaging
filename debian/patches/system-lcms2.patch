@@ -8,7 +8,7 @@ Last-Update: 2018-07-01
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/third_party/pdfium/third_party/BUILD.gn
 +++ b/src/3rdparty/chromium/third_party/pdfium/third_party/BUILD.gn
-@@ -232,60 +232,21 @@ if (!pdf_use_skia && !pdf_use_skia_paths
+@@ -231,60 +231,21 @@ if (!pdf_use_skia && !pdf_use_skia_paths
    }
  }
  

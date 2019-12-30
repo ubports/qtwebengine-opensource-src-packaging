@@ -6,22 +6,30 @@ Author: Kevin, Kofler
 Origin: Fedora, https://src.fedoraproject.org/rpms/qt5-qtwebengine/blob/master/f/qtwebengine-everywhere-src-5.10.0-system-icu-utf.patch
 Forwarded: not-needed
 Reviewed-by: Sandro Knauß <hefee@debian.org>
-Last-Update: 2018-07-01
+Last-Update: 2019-03-20
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/src/3rdparty/chromium/base/BUILD.gn
 +++ b/src/3rdparty/chromium/base/BUILD.gn
-@@ -875,8 +875,6 @@ jumbo_component("base") {
+@@ -88,6 +88,7 @@ config("base_flags") {
+   }
+   ldflags = [
+     "-lnspr4",
++    "-licuuc",
+   ]
+ }
+ 
+@@ -916,8 +917,6 @@ jumbo_component("base") {
      "third_party/dmg_fp/dmg_fp.h",
      "third_party/dmg_fp/dtoa_wrapper.cc",
      "third_party/dmg_fp/g_fmt.cc",
 -    "third_party/icu/icu_utf.cc",
 -    "third_party/icu/icu_utf.h",
      "third_party/superfasthash/superfasthash.c",
+     "thread_annotations.h",
      "threading/platform_thread.h",
-     "threading/platform_thread_android.cc",
-@@ -1145,6 +1143,7 @@ jumbo_component("base") {
-     "//base/allocator:features",
+@@ -1231,6 +1230,7 @@ jumbo_component("base") {
+     "//base/allocator:buildflags",
      "//base/third_party/dynamic_annotations",
      "//third_party/modp_b64",
 +    "//third_party/icu:icuuc",
@@ -39,7 +47,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  #endif
  
  #if defined(OS_WIN)
-@@ -1149,9 +1149,9 @@ inline int HFSReadNextNonIgnorableCodepo
+@@ -1156,9 +1156,9 @@ inline int HFSReadNextNonIgnorableCodepo
                                              int* index) {
    int codepoint = 0;
    while (*index < length && codepoint == 0) {
@@ -62,34 +70,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  #include "base/values.h"
  
  namespace base {
-@@ -483,14 +483,14 @@ bool JSONParser::ConsumeStringRaw(String
-   // string character and the terminating closing quote.
-   while (CanConsume(2)) {
-     int start_index = index_;
--    pos_ = start_pos_ + index_;  // CBU8_NEXT is postcrement.
--    CBU8_NEXT(start_pos_, index_, length, next_char);
-+    pos_ = start_pos_ + index_;  // U8_NEXT is postcrement.
-+    U8_NEXT(start_pos_, index_, length, next_char);
-     if (next_char < 0 || !IsValidCharacter(next_char)) {
-       if ((options_ & JSON_REPLACE_INVALID_CHARACTERS) == 0) {
-         ReportError(JSONReader::JSON_UNSUPPORTED_ENCODING, 1);
-         return false;
-       }
--      CBU8_NEXT(start_pos_, start_index, length, next_char);
-+      U8_NEXT(start_pos_, start_index, length, next_char);
-       string.Convert();
-       string.AppendString(kUnicodeReplacementString,
-                           arraysize(kUnicodeReplacementString) - 1);
-@@ -498,7 +498,7 @@ bool JSONParser::ConsumeStringRaw(String
-     }
- 
-     if (next_char == '"') {
--      --index_;  // Rewind by one because of CBU8_NEXT.
-+      --index_;  // Rewind by one because of U8_NEXT.
-       *out = std::move(string);
-       return true;
-     }
-@@ -634,10 +634,10 @@ bool JSONParser::DecodeUTF16(std::string
+@@ -572,10 +572,10 @@ bool JSONParser::DecodeUTF16(uint32_t* o
  
    // If this is a high surrogate, consume the next code unit to get the
    // low surrogate.
@@ -102,14 +83,13 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        return false;
  
      // Make sure that the token has more characters to consume the
-@@ -654,20 +654,20 @@ bool JSONParser::DecodeUTF16(std::string
- 
-     NextNChars(3);
- 
--    if (!CBU16_IS_TRAIL(code_unit16_low)) {
-+    if (!U16_IS_TRAIL(code_unit16_low)) {
+@@ -591,18 +591,18 @@ bool JSONParser::DecodeUTF16(uint32_t* o
+     if (!HexStringToInt(*escape_sequence, &code_unit16_low))
        return false;
-     }
+ 
+-    if (!CBU16_IS_TRAIL(code_unit16_low))
++    if (!U16_IS_TRAIL(code_unit16_low))
+       return false;
  
      uint32_t code_point =
 -        CBU16_GET_SUPPLEMENTARY(code_unit16_high, code_unit16_low);
@@ -117,9 +97,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      if (!IsValidCharacter(code_point))
        return false;
  
-     offset = 0;
--    CBU8_APPEND_UNSAFE(code_unit8, offset, code_point);
-+    U8_APPEND_UNSAFE(code_unit8, offset, code_point);
+     *out_code_point = code_point;
    } else {
      // Not a surrogate.
 -    DCHECK(CBU16_IS_SINGLE(code_unit16_high));
@@ -127,27 +105,6 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      if (!IsValidCharacter(code_unit16_high)) {
        if ((options_ & JSON_REPLACE_INVALID_CHARACTERS) == 0) {
          return false;
-@@ -676,7 +676,7 @@ bool JSONParser::DecodeUTF16(std::string
-       return true;
-     }
- 
--    CBU8_APPEND_UNSAFE(code_unit8, offset, code_unit16_high);
-+    U8_APPEND_UNSAFE(code_unit8, offset, code_unit16_high);
-   }
- 
-   dest_string->append(code_unit8, offset);
-@@ -693,9 +693,9 @@ void JSONParser::DecodeUTF8(const int32_
-   } else {
-     char utf8_units[4] = { 0 };
-     int offset = 0;
--    CBU8_APPEND_UNSAFE(utf8_units, offset, point);
-+    U8_APPEND_UNSAFE(utf8_units, offset, point);
-     dest->Convert();
--    // CBU8_APPEND_UNSAFE can overwrite up to 4 bytes, so utf8_units may not be
-+    // U8_APPEND_UNSAFE can overwrite up to 4 bytes, so utf8_units may not be
-     // zero terminated at this point.  |offset| contains the correct length.
-     dest->AppendString(utf8_units, offset);
-   }
 --- a/src/3rdparty/chromium/base/json/string_escape.cc
 +++ b/src/3rdparty/chromium/base/json/string_escape.cc
 @@ -14,7 +14,7 @@
@@ -181,24 +138,24 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  namespace {
  
--static bool IsWildcard(base_icu::UChar32 character) {
-+static bool IsWildcard(UChar32 character) {
+-constexpr bool IsWildcard(base_icu::UChar32 character) {
++constexpr bool IsWildcard(UChar32 character) {
    return character == '*' || character == '?';
  }
  
-@@ -37,9 +37,9 @@ static void EatSameChars(const CHAR** pa
-     // Check if the chars match, if so, increment the ptrs.
-     const CHAR* pattern_next = *pattern;
-     const CHAR* string_next = *string;
--    base_icu::UChar32 pattern_char = next(&pattern_next, pattern_end);
-+    UChar32 pattern_char = next(&pattern_next, pattern_end);
-     if (pattern_char == next(&string_next, string_end) &&
--        pattern_char != CBU_SENTINEL) {
-+        pattern_char != U_SENTINEL) {
-       *pattern = pattern_next;
-       *string = string_next;
-     } else {
-@@ -133,20 +133,20 @@ static bool MatchPatternT(const CHAR* ev
+@@ -55,9 +55,9 @@ constexpr bool SearchForChars(const CHAR
+       // Check if the chars match, if so, increment the ptrs.
+       const CHAR* pattern_next = *pattern;
+       const CHAR* string_next = *string;
+-      base_icu::UChar32 pattern_char = next(&pattern_next, pattern_end);
++      UChar32 pattern_char = next(&pattern_next, pattern_end);
+       if (pattern_char == next(&string_next, string_end) &&
+-          pattern_char != CBU_SENTINEL) {
++          pattern_char != U_SENTINEL) {
+         *pattern = pattern_next;
+         *string = string_next;
+         continue;
+@@ -121,20 +121,20 @@ constexpr bool MatchPatternT(const CHAR*
  }
  
  struct NextCharUTF8 {
@@ -271,7 +228,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      if (!IsValidCharacter(code_point) ||
          !IsValidCodepoint(code_point)) {
        char_index = prev - 1;
-@@ -522,7 +522,7 @@ bool IsStringUTF8(StringPiece str) {
+@@ -518,7 +518,7 @@ bool IsStringUTF8(StringPiece str) {
  
    while (char_index < src_len) {
      int32_t code_point;
@@ -288,10 +245,10 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
 -#include "base/third_party/icu/icu_utf.h"
 +#include <unicode/utf.h>
+ #include "build/build_config.h"
  
  namespace base {
- 
-@@ -18,7 +18,7 @@ bool ReadUnicodeCharacter(const char* sr
+@@ -19,7 +19,7 @@ bool ReadUnicodeCharacter(const char* sr
    // use a signed type for code_point.  But this function returns false
    // on error anyway, so code_point_out is unsigned.
    int32_t code_point;
@@ -300,7 +257,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
    *code_point_out = static_cast<uint32_t>(code_point);
  
    // The ICU macro above moves to the next char, we want to point to the last
-@@ -33,16 +33,16 @@ bool ReadUnicodeCharacter(const char16*
+@@ -34,16 +34,16 @@ bool ReadUnicodeCharacter(const char16*
                            int32_t src_len,
                            int32_t* char_index,
                            uint32_t* code_point) {
@@ -321,7 +278,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
                                            src[*char_index + 1]);
      (*char_index)++;
    } else {
-@@ -76,30 +76,30 @@ size_t WriteUnicodeCharacter(uint32_t co
+@@ -77,30 +77,30 @@ size_t WriteUnicodeCharacter(uint32_t co
    }
  
  
@@ -360,77 +317,92 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  }
  
  // Generalized Unicode converter -----------------------------------------------
---- a/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
-+++ b/src/3rdparty/chromium/tools/gn/bootstrap/bootstrap.py
-@@ -566,7 +566,6 @@ def write_gn_ninja(path, root_gen_dir, o
-       'base/task_scheduler/task_traits.cc',
-       'base/third_party/dmg_fp/dtoa_wrapper.cc',
-       'base/third_party/dmg_fp/g_fmt.cc',
--      'base/third_party/icu/icu_utf.cc',
-       'base/threading/post_task_and_reply_impl.cc',
-       'base/threading/scoped_blocking_call.cc',
-       'base/threading/sequence_local_storage_map.cc',
-@@ -713,7 +712,7 @@ def write_gn_ninja(path, root_gen_dir, o
-         'base/allocator/allocator_shim.cc',
-         'base/allocator/allocator_shim_default_dispatch_to_glibc.cc',
-       ])
--      libs.extend(['-lrt', '-lnspr4'])
-+      libs.extend(['-lrt', '-lnspr4', '-licuuc'])
-       static_libraries['libevent']['include_dirs'].extend([
-           os.path.join(SRC_ROOT, 'base', 'third_party', 'libevent', 'linux')
-       ])
---- a/src/3rdparty/chromium/tools/gn/BUILD.gn
-+++ b/src/3rdparty/chromium/tools/gn/BUILD.gn
-@@ -279,6 +279,7 @@ executable("gn") {
- 
-   libs = [
-     "nspr4",
-+    "icuuc",
-   ]
- }
- 
---- a/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc
-+++ b/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc
-@@ -5,13 +5,13 @@
- #include "ui/gfx/utf16_indexing.h"
- 
- #include "base/logging.h"
+--- a/src/3rdparty/chromium/base/strings/utf_string_conversions.cc
++++ b/src/3rdparty/chromium/base/strings/utf_string_conversions.cc
+@@ -9,7 +9,7 @@
+ #include "base/strings/string_piece.h"
+ #include "base/strings/string_util.h"
+ #include "base/strings/utf_string_conversion_utils.h"
 -#include "base/third_party/icu/icu_utf.h"
 +#include <unicode/utf.h>
+ #include "build/build_config.h"
  
- namespace gfx {
+ namespace base {
+@@ -60,11 +60,11 @@ constexpr int size_coefficient_v =
+ // has to have enough space for the codepoint.
  
- bool IsValidCodePointIndex(const base::string16& s, size_t index) {
-   return index == 0 || index == s.length() ||
--    !(CBU16_IS_TRAIL(s[index]) && CBU16_IS_LEAD(s[index - 1]));
-+    !(U16_IS_TRAIL(s[index]) && U16_IS_LEAD(s[index - 1]));
+ void UnicodeAppendUnsafe(char* out, int32_t* size, uint32_t code_point) {
+-  CBU8_APPEND_UNSAFE(out, *size, code_point);
++  U8_APPEND_UNSAFE(out, *size, code_point);
  }
  
- ptrdiff_t UTF16IndexToOffset(const base::string16& s, size_t base, size_t pos) {
---- a/src/3rdparty/chromium/net/tools/transport_security_state_generator/BUILD.gn
-+++ b/src/3rdparty/chromium/net/tools/transport_security_state_generator/BUILD.gn
-@@ -53,6 +53,9 @@ source_set("transport_security_state_gen
-     "//testing/gtest",
-     "//third_party/boringssl",
-   ]
-+  libs = [
-+    "icuuc",
-+  ]
+ void UnicodeAppendUnsafe(char16* out, int32_t* size, uint32_t code_point) {
+-  CBU16_APPEND_UNSAFE(out, *size, code_point);
++  U16_APPEND_UNSAFE(out, *size, code_point);
  }
  
- executable("transport_security_state_generator") {
---- a/src/3rdparty/chromium/content/browser/devtools/devtools_io_context.cc
-+++ b/src/3rdparty/chromium/content/browser/devtools/devtools_io_context.cc
-@@ -15,7 +15,7 @@
+ #if defined(WCHAR_T_IS_UTF32)
+@@ -88,7 +88,7 @@ bool DoUTFConversion(const char* src,
+ 
+   for (int32_t i = 0; i < src_len;) {
+     int32_t code_point;
+-    CBU8_NEXT(src, i, src_len, code_point);
++    U8_NEXT(src, i, src_len, code_point);
+ 
+     if (!IsValidCodepoint(code_point)) {
+       success = false;
+@@ -109,7 +109,7 @@ bool DoUTFConversion(const char16* src,
+   bool success = true;
+ 
+   auto ConvertSingleChar = [&success](char16 in) -> int32_t {
+-    if (!CBU16_IS_SINGLE(in) || !IsValidCodepoint(in)) {
++    if (!U16_IS_SINGLE(in) || !IsValidCodepoint(in)) {
+       success = false;
+       return kErrorCodePoint;
+     }
+@@ -123,8 +123,8 @@ bool DoUTFConversion(const char16* src,
+   while (i < src_len - 1) {
+     int32_t code_point;
+ 
+-    if (CBU16_IS_LEAD(src[i]) && CBU16_IS_TRAIL(src[i + 1])) {
+-      code_point = CBU16_GET_SUPPLEMENTARY(src[i], src[i + 1]);
++    if (U16_IS_LEAD(src[i]) && U16_IS_TRAIL(src[i + 1])) {
++      code_point = U16_GET_SUPPLEMENTARY(src[i], src[i + 1]);
+       if (!IsValidCodepoint(code_point)) {
+         code_point = kErrorCodePoint;
+         success = false;
+--- a/src/3rdparty/chromium/components/filename_generation/filename_generation.cc
++++ b/src/3rdparty/chromium/components/filename_generation/filename_generation.cc
+@@ -11,7 +11,7 @@
+ #include "base/strings/string_util.h"
+ #include "base/strings/sys_string_conversions.h"
+ #include "base/strings/utf_string_conversions.h"
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ #include "base/threading/thread_restrictions.h"
+ #include "build/build_config.h"
+ #include "components/url_formatter/url_formatter.h"
+@@ -172,7 +172,7 @@ bool TruncateFilename(base::FilePath* pa
+ #elif defined(OS_WIN)
+   // UTF-16.
+   DCHECK(name.size() > limit);
+-  truncated = name.substr(0, CBU16_IS_TRAIL(name[limit]) ? limit - 1 : limit);
++  truncated = name.substr(0, U16_IS_TRAIL(name[limit]) ? limit - 1 : limit);
+ #else
+ // We cannot generally assume that the file name encoding is in UTF-8 (see
+ // the comment for FilePath::AsUTF8Unsafe), hence no safe way to truncate.
+--- a/src/3rdparty/chromium/content/browser/devtools/devtools_stream_file.cc
++++ b/src/3rdparty/chromium/content/browser/devtools/devtools_stream_file.cc
+@@ -11,7 +11,7 @@
  #include "base/strings/string_util.h"
  #include "base/task_scheduler/lazy_task_runner.h"
  #include "base/task_scheduler/post_task.h"
 -#include "base/third_party/icu/icu_utf.h"
 +#include <unicode/utf.h>
  #include "base/threading/thread_restrictions.h"
- #include "content/browser/blob_storage/chrome_blob_storage_context.h"
  #include "content/public/browser/browser_thread.h"
-@@ -146,7 +146,7 @@ void TempFileStream::ReadOnFileSequence(
+ #include "storage/browser/fileapi/file_system_context.h"
+@@ -106,7 +106,7 @@ void DevToolsStreamFile::ReadOnFileSeque
      } else {
        // Provided client has requested sufficient large block, make their
        // life easier by not truncating in the middle of a UTF-8 character.
@@ -439,6 +411,43 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
          base::TruncateUTF8ToByteSize(buffer, size_got, &buffer);
          size_got = buffer.size();
        } else {
+--- a/src/3rdparty/chromium/net/base/escape.cc
++++ b/src/3rdparty/chromium/net/base/escape.cc
+@@ -9,7 +9,7 @@
+ #include "base/strings/string_util.h"
+ #include "base/strings/utf_string_conversion_utils.h"
+ #include "base/strings/utf_string_conversions.h"
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ 
+ namespace net {
+ 
+@@ -134,14 +134,14 @@ bool UnescapeUTF8CharacterAtIndex(base::
+                                   std::string* unescaped_out) {
+   DCHECK(unescaped_out->empty());
+ 
+-  unsigned char bytes[CBU8_MAX_LENGTH];
++  unsigned char bytes[U8_MAX_LENGTH];
+   if (!UnescapeUnsignedByteAtIndex(escaped_text, index, &bytes[0]))
+     return false;
+ 
+   size_t num_bytes = 1;
+ 
+   // If this is a lead byte, need to collect trail bytes as well.
+-  if (CBU8_IS_LEAD(bytes[0])) {
++  if (U8_IS_LEAD(bytes[0])) {
+     // Look for the last trail byte of the UTF-8 character.  Give up once
+     // reach max character length number of bytes, or hit an unescaped
+     // character. No need to check length of escaped_text, as
+@@ -149,7 +149,7 @@ bool UnescapeUTF8CharacterAtIndex(base::
+     while (num_bytes < base::size(bytes) &&
+            UnescapeUnsignedByteAtIndex(escaped_text, index + num_bytes * 3,
+                                        &bytes[num_bytes]) &&
+-           CBU8_IS_TRAIL(bytes[num_bytes])) {
++           U8_IS_TRAIL(bytes[num_bytes])) {
+       ++num_bytes;
+     }
+   }
 --- a/src/3rdparty/chromium/net/cert/internal/parse_name.cc
 +++ b/src/3rdparty/chromium/net/cert/internal/parse_name.cc
 @@ -9,7 +9,7 @@
@@ -468,13 +477,43 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
        return false;
  
      base::WriteUnicodeCharacter(codepoint, out);
+--- a/src/3rdparty/chromium/net/tools/transport_security_state_generator/BUILD.gn
++++ b/src/3rdparty/chromium/net/tools/transport_security_state_generator/BUILD.gn
+@@ -43,6 +43,9 @@ source_set("transport_security_state_gen
+     "//testing/gtest",
+     "//third_party/boringssl",
+   ]
++  libs = [
++    "icuuc",
++  ]
+ }
+ 
+ executable("transport_security_state_generator") {
 --- a/src/3rdparty/chromium/ui/base/ime/input_method_chromeos.cc
 +++ b/src/3rdparty/chromium/ui/base/ime/input_method_chromeos.cc
-@@ -18,7 +18,6 @@
- #include "base/memory/ptr_util.h"
+@@ -17,7 +17,6 @@
+ #include "base/logging.h"
  #include "base/strings/string_util.h"
  #include "base/strings/utf_string_conversions.h"
 -#include "base/third_party/icu/icu_utf.h"
  #include "chromeos/system/devicemode.h"
  #include "ui/base/ime/chromeos/ime_keyboard.h"
  #include "ui/base/ime/chromeos/input_method_manager.h"
+--- a/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc
++++ b/src/3rdparty/chromium/ui/gfx/utf16_indexing.cc
+@@ -5,13 +5,13 @@
+ #include "ui/gfx/utf16_indexing.h"
+ 
+ #include "base/logging.h"
+-#include "base/third_party/icu/icu_utf.h"
++#include <unicode/utf.h>
+ 
+ namespace gfx {
+ 
+ bool IsValidCodePointIndex(const base::string16& s, size_t index) {
+   return index == 0 || index == s.length() ||
+-    !(CBU16_IS_TRAIL(s[index]) && CBU16_IS_LEAD(s[index - 1]));
++    !(U16_IS_TRAIL(s[index]) && U16_IS_LEAD(s[index - 1]));
+ }
+ 
+ ptrdiff_t UTF16IndexToOffset(const base::string16& s, size_t base, size_t pos) {

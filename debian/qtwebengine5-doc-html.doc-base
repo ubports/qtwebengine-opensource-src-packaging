@@ -1,0 +1,9 @@
+Document: qtwebengine5-doc-html
+Title: Qt 5 WebEngine module
+Author: The Qt Company Ltd
+Abstract: This is the HTML documentation for Qt 5 WebEngine
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/qtwebengine5-doc-html/html/qtwebengine/qtwebengine-index.html
+Files: /usr/share/doc/qtwebengine5-doc-html/html/qtwebengine/*.html

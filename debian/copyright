@@ -4,6 +4,11 @@ Files-Excluded: src/3rdparty/chromium/third_party/analytics/google-analytics-bun
                 src/3rdparty/chromium/third_party/apple_apsl/*
                 src/3rdparty/chromium/third_party/bidichecker/*
                 src/3rdparty/chromium/third_party/blanketjs/src/blanket.js
+                src/3rdparty/chromium/third_party/blink/renderer/devtools/front_end/audits2_worker/lighthouse/lighthouse-background.js
+                src/3rdparty/chromium/third_party/blink/renderer/devtools/front_end/diff/diff_match_patch.js
+                src/3rdparty/chromium/third_party/blink/renderer/devtools/front_end/formatter_worker/acorn/acorn.js
+                src/3rdparty/chromium/third_party/blink/renderer/devtools/front_end/network/NetworkConfigView.js
+                src/3rdparty/chromium/third_party/blink/renderer/devtools/front_end/terminal/xterm.js/build
                 src/3rdparty/chromium/third_party/bspatch/LICENSE
                 src/3rdparty/chromium/third_party/chaijs/chai.js
                 src/3rdparty/chromium/third_party/checkstyle/*
@@ -19,8 +24,10 @@ Files-Excluded: src/3rdparty/chromium/third_party/analytics/google-analytics-bun
                 src/3rdparty/chromium/third_party/eu-strip/bin/eu-strip
                 src/3rdparty/chromium/third_party/flot/*
                 src/3rdparty/chromium/third_party/ink/ink/web/js/main.soy.js
-                src/3rdparty/chromium/third_party/ink/prebuilt/ink_lib_binary.js
-                src/3rdparty/chromium/third_party/ink/prebuilt/_platform_specific
+                src/3rdparty/chromium/third_party/ink/prebuilt/nacl/ink_lib_binary.js
+                src/3rdparty/chromium/third_party/ink/prebuilt/nacl/_platform_specific
+                src/3rdparty/chromium/third_party/ink/prebuilt/wasm/glcore_base.wasm
+                src/3rdparty/chromium/third_party/ink/prebuilt/wasm/ink_lib_binary.js
                 src/3rdparty/chromium/third_party/ink/sketchology/public/nacl/embed.soy.js
                 src/3rdparty/chromium/third_party/jstemplate/jstemplate_compiled.js
                 src/3rdparty/chromium/third_party/pdfium/third_party/eu-strip/bin/eu-strip
@@ -31,14 +38,7 @@ Files-Excluded: src/3rdparty/chromium/third_party/analytics/google-analytics-bun
                 src/3rdparty/chromium/third_party/skia/resources/icc_profiles/srgb_lab_pcs.icc
                 src/3rdparty/chromium/third_party/swiftshader/third_party/llvm-subzero/lib/Support/ConvertUTF.*
                 src/3rdparty/chromium/third_party/web-animations-js/sources/*.min.js
-                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/audits2_worker/lighthouse/lighthouse-background.js
-                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/diff/diff_match_patch.js
-                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/formatter_worker/acorn/acorn.js
-                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/network/NetworkConfigView.js
-                src/3rdparty/chromium/third_party/WebKit/Source/devtools/front_end/terminal/xterm.js/build
-                src/3rdparty/chromium/third_party/WebKit/Tools/Scripts/webkitpy/thirdparty/coverage/htmlfiles/*.min.js
                 src/3rdparty/chromium/ui/accessibility/extensions/highcontrast/highcontrast.js
-                src/3rdparty/chromium/ui/webui/resources/js/jstemplate_compiled.js
                 src/3rdparty/chromium/v8/benchmarks/regexp.js
                 src/3rdparty/chromium/v8/third_party/eu-strip/bin/eu-strip
 
@@ -50,7 +50,7 @@ Copyright: 2013, BlackBerry Limited
 License: LGPL-3_Qt-1.1Exception or GPL-2_Qt-1.1Exception
 
 Files: debian/*
-Copyright: 2016, Scarlett Clark <sgclark@kubuntu.org>
+Copyright: 2016-2019 Scarlett Moore <sgmoore@kde.org>
            2016-2017, Sandro Knauß <hefee@debian.org>
 License: LGPL-2+
 
