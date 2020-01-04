@@ -37,7 +37,9 @@ no_gold_architectures := arm64 armhf mipsel
 #              -system-webengine-icu
 config_args = -proprietary-codecs \
               -system-opus \
-              -system-webp
+              -system-webp \
+              -webengine-system-x11 \
+              -webengine-extensions
 
 touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js \
 	      src/3rdparty/chromium/third_party/web-animations-js/sources/web-animations.min.js \
