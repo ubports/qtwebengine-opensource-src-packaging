@@ -38,7 +38,7 @@ no_gold_architectures := arm64 armhf mipsel
 config_args = -proprietary-codecs \
               -system-opus \
               -system-webp \
-              -webengine-system-x11 \
+              -webengine-embedded-build \
               -webengine-extensions
 
 touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js \
