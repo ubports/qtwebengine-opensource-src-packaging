@@ -1,6 +1,6 @@
-qtwebengine-opensource-src (5.13.1+dfsg-1ubports0) xenial; urgency=medium
+qtwebengine-opensource-src (5.13.2+dfsg-1ubports0) xenial; urgency=medium
 
-  * Update to QtWebEngine 5.13.1
+  * Update to QtWebEngine 5.13.2
 
  -- Chris Clime <chris.clie@gmx.net>  Sat, 04 Jan 2020 14:11:58 +0100
 

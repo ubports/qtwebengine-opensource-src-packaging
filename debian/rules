@@ -37,7 +37,8 @@ no_gold_architectures := arm64 armhf mipsel
 #              -system-webengine-icu
 config_args = -proprietary-codecs \
               -system-opus \
-              -system-webp
+              -system-webp \
+              -webengine-extensions 
 
 touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js \
 	      src/3rdparty/chromium/third_party/web-animations-js/sources/web-animations.min.js \
@@ -135,10 +136,10 @@ endif
 	# Run qmake again now with the proper values.
 	qmake QT_BUILD_PARTS+=tests QMAKE_EXTRA_ARGS+="$(config_args)"
 
-	# Copy required header files to where they belong
-	mkdir -p ./include/QtWebEngineCore/5.13.0/QtWebEngineCore/private
-	find . -type f -iname "qtwebenginecore-config.h" -exec cp {} ./include/QtWebEngineCore/5.13.0/QtWebEngineCore/ \;
-	find . -type f -iname "qtwebenginecore-config_p.h" -exec cp {} ./include/QtWebEngineCore/5.13.0/QtWebEngineCore/private/ \;
+	# Copy required header files to where they belong (https://bugreports.qt.io/browse/QTBUG-77121)
+	mkdir -p ./include/QtWebEngineCore/5.13.2/QtWebEngineCore/private
+	find . -type f -iname "qtwebenginecore-config.h" -exec cp {} ./include/QtWebEngineCore/5.13.2/QtWebEngineCore/ \;
+	find . -type f -iname "qtwebenginecore-config_p.h" -exec cp {} ./include/QtWebEngineCore/5.13.2/QtWebEngineCore/private/ \;
 
 	# Create js files, that are needed for building step for arch and indep builds
 	cd $(CURDIR)/src/3rdparty/chromium/third_party/jstemplate/; \
