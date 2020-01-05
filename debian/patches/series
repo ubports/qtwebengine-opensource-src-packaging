@@ -1,4 +1,5 @@
 # UBports
 0001-Add-support-for-mir.patch
-0005-Buildfix-path-too-long.patch
-0006-Buildfix-ptrace-defines.patch
+0002-Buildfix-path-too-long.patch
+0003-Buildfix-ptrace-defines.patch
+0004-examples-build-with-qt5-9.patch
