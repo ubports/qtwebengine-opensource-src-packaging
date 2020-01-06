@@ -158,6 +158,27 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
  }
  
  static QByteArrayList params = {QByteArrayLiteral("--use-fake-device-for-media-stream")};
+diff -urp a/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp b/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp
+--- a/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp	2019-10-23 12:30:32.000000000 +0200
++++ b/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp	2020-01-06 12:20:52.000000000 +0100
+@@ -653,7 +653,7 @@ public:
+ 
+ void tst_QWebEngineProfile::urlSchemeHandlerXhrStatus()
+ {
+-#if QT_CONFIG(webengine_webchannel)
++/*#if QT_CONFIG(webengine_webchannel)
+     XhrStatusUrlSchemeHandler handler;
+     XhrStatusHost host;
+     QWebEngineProfile profile;
+@@ -675,7 +675,7 @@ void tst_QWebEngineProfile::urlSchemeHan
+     QCOMPARE(host.requests[QUrl("aviancarrier:/notfound")], -1);
+ #else
+     QSKIP("No QtWebChannel");
+-#endif
++#endif*/
+ }
+ 
+ void tst_QWebEngineProfile::customUserAgent()
 diff -urp a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp
 --- a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp	2019-10-23 12:30:32.000000000 +0200
 +++ b/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp	2020-01-06 11:26:46.000000000 +0100
