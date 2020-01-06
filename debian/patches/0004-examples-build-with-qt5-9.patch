@@ -1,15 +1,28 @@
 --- a/examples/webenginewidgets/simplebrowser/browser.cpp
 +++ b/examples/webenginewidgets/simplebrowser/browser.cpp
-@@ -66,10 +66,10 @@
+@@ -66,13 +66,13 @@ BrowserWindow *Browser::createWindow(bool offTheRecord)
      if (offTheRecord && !m_otrProfile) {
          m_otrProfile.reset(new QWebEngineProfile);
          QObject::connect(
 -            m_otrProfile.get(), &QWebEngineProfile::downloadRequested,
-+            &m_otrProfile, &QWebEngineProfile::downloadRequested,
++            m_otrProfile.data(), &QWebEngineProfile::downloadRequested,
              &m_downloadManagerWidget, &DownloadManagerWidget::downloadRequested);
      }
 -    auto profile = offTheRecord ? m_otrProfile.get() : QWebEngineProfile::defaultProfile();
-+    auto profile = offTheRecord ? &m_otrProfile : QWebEngineProfile::defaultProfile();
++    auto profile = offTheRecord ? m_otrProfile.data() : QWebEngineProfile::defaultProfile();
      auto mainWindow = new BrowserWindow(this, profile, false);
      m_windows.append(mainWindow);
-     QObject::connect(mainWindow, &QObject::destroyed, [this, mainWindow]() {
+-    QObject::connect(mainWindow, &QObject::destroyed, [this, mainWindow]() {
++    QObject::connect(mainWindow, &QObject::destroyed, [=]() {
+         m_windows.removeOne(mainWindow);
+     });
+     mainWindow->show();
+@@ -84,7 +84,7 @@ BrowserWindow *Browser::createDevToolsWindow()
+     auto profile = QWebEngineProfile::defaultProfile();
+     auto mainWindow = new BrowserWindow(this, profile, true);
+     m_windows.append(mainWindow);
+-    QObject::connect(mainWindow, &QObject::destroyed, [this, mainWindow]() {
++    QObject::connect(mainWindow, &QObject::destroyed, [=]() {
+         m_windows.removeOne(mainWindow);
+     });
+     mainWindow->show();
