@@ -4,3 +4,4 @@
 0003-Buildfix-ptrace-defines.patch
 0004-examples-build-with-qt5-9.patch
 0005-tests-build-with-qt5-9.patch
+0006-remove-example-doc-include.patch
