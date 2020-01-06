@@ -1,6 +1,6 @@
 diff -urp a/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp b/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp
 --- a/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp	2019-10-23 12:30:32.000000000 +0200
-+++ b/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp	2020-01-06 11:33:29.000000000 +0100
++++ b/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp	2020-01-06 11:33:28.000000000 +0100
 @@ -391,17 +391,17 @@ void tst_QWebEngineUrlRequestInterceptor
      RequestInfo info = interceptor.requestInfos.at(0);
      QCOMPARE(info.requestUrl, requestUrl);
@@ -91,7 +91,7 @@ diff -urp a/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp b/t
  void tst_QQuickWebEngineView::setZoomFactor()
 diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp
 --- a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp	2019-10-23 12:30:32.000000000 +0200
-+++ b/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp	2020-01-06 11:25:26.000000000 +0100
++++ b/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp	2020-01-06 12:01:32.000000000 +0100
 @@ -3334,7 +3334,7 @@ void tst_QWebEnginePage::notificationReq
  
  void tst_QWebEnginePage::notificationRequest()
@@ -140,6 +140,24 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
  }
  
  void tst_QWebEnginePage::editActionsWithExplicitFocus()
+@@ -3508,7 +3508,7 @@ void tst_QWebEnginePage::editActionsWith
+ 
+ void tst_QWebEnginePage::customUserAgentInNewTab()
+ {
+-    HttpServer server;
++    /*HttpServer server;
+     QByteArray lastUserAgent;
+     connect(&server, &HttpServer::newRequest, [&](HttpReqRep *rr) {
+         QCOMPARE(rr->requestMethod(), "GET");
+@@ -3566,7 +3566,7 @@ void tst_QWebEnginePage::customUserAgent
+     QTest::mouseClick(view.focusProxy(), Qt::LeftButton, 0, elementCenter(&page, "link"));
+     QTRY_VERIFY(page.newPage);
+     QTRY_VERIFY(!lastUserAgent.isEmpty());
+-    QCOMPARE(lastUserAgent, profile2.httpUserAgent().toUtf8());
++    QCOMPARE(lastUserAgent, profile2.httpUserAgent().toUtf8());*/
+ }
+ 
+ static QByteArrayList params = {QByteArrayLiteral("--use-fake-device-for-media-stream")};
 diff -urp a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp
 --- a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp	2019-10-23 12:30:32.000000000 +0200
 +++ b/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp	2020-01-06 11:26:46.000000000 +0100
@@ -163,7 +181,7 @@ diff -urp a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests
  QTEST_MAIN(tst_QWebEngineScript)
 diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 --- a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp	2019-10-23 12:30:32.000000000 +0200
-+++ b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp	2020-01-06 11:31:25.000000000 +0100
++++ b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp	2020-01-06 11:31:24.000000000 +0100
 @@ -49,8 +49,12 @@
  #include <QWebEngineProfile>
  #include <QtCore/qregularexpression.h>
