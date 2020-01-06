@@ -202,8 +202,8 @@ diff -urp a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests
  QTEST_MAIN(tst_QWebEngineScript)
 diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 --- a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp	2019-10-23 12:30:32.000000000 +0200
-+++ b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp	2020-01-06 11:31:24.000000000 +0100
-@@ -49,8 +49,12 @@
++++ b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp	2020-01-06 12:34:24.000000000 +0100
+@@ -49,8 +49,13 @@
  #include <QWebEngineProfile>
  #include <QtCore/qregularexpression.h>
  
@@ -211,12 +211,13 @@ diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/aut
  #define VERIFY_INPUTMETHOD_HINTS(actual, expect) \
      QVERIFY(actual == (expect | Qt::ImhNoPredictiveText | Qt::ImhNoTextHandles | Qt::ImhNoEditMenu));
 +#else
++#define VERIFY_INPUTMETHOD_HINTS(actual, expect) \
 +    QVERIFY(actual == (expect | Qt::ImhNoPredictiveText));
 +#endif
  
  #define QTRY_COMPARE_WITH_TIMEOUT_FAIL_BLOCK(__expr, __expected, __timeout, __fail_block) \
  do { \
-@@ -299,14 +303,14 @@ void tst_QWebEngineView::changePage()
+@@ -299,14 +304,14 @@ void tst_QWebEngineView::changePage()
      QFETCH(bool, fromIsNullPage);
      QFETCH(bool, toIsNullPage);
  
@@ -237,7 +238,7 @@ diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/aut
      pageFrom->load(urlFrom);
      QTRY_COMPARE(pageFromLoadSpy.count(), 1);
      QCOMPARE(pageFromLoadSpy.last().value(0).toBool(), true);
-@@ -315,7 +319,7 @@ void tst_QWebEngineView::changePage()
+@@ -315,7 +320,7 @@ void tst_QWebEngineView::changePage()
          QVERIFY(!pageFromIconLoadSpy.last().value(0).isNull());
      }
  
@@ -246,7 +247,7 @@ diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/aut
  
      QTRY_COMPARE(spyUrl.count(), 1);
      QCOMPARE(spyUrl.last().value(0).toUrl(), pageFrom->url());
-@@ -331,8 +335,8 @@ void tst_QWebEngineView::changePage()
+@@ -331,8 +336,8 @@ void tst_QWebEngineView::changePage()
      }
  
      QScopedPointer<QWebEnginePage> pageTo(new QWebEnginePage);
@@ -257,7 +258,7 @@ diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/aut
      pageTo->load(urlTo);
      QTRY_COMPARE(pageToLoadSpy.count(), 1);
      QCOMPARE(pageToLoadSpy.last().value(0).toBool(), true);
-@@ -341,7 +345,7 @@ void tst_QWebEngineView::changePage()
+@@ -341,7 +346,7 @@ void tst_QWebEngineView::changePage()
          QVERIFY(!pageToIconLoadSpy.last().value(0).isNull());
      }
  
@@ -266,7 +267,7 @@ diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/aut
  
      QTRY_COMPARE(spyUrl.count(), 2);
      QCOMPARE(spyUrl.last().value(0).toUrl(), pageTo->url());
-@@ -3142,7 +3146,7 @@ void tst_QWebEngineView::visibilityState
+@@ -3142,7 +3147,7 @@ void tst_QWebEngineView::visibilityState
  
  void tst_QWebEngineView::jsKeyboardEvent()
  {
@@ -275,7 +276,7 @@ diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/aut
      evaluateJavaScriptSync(
          view.page(),
          "var log = '';"
-@@ -3162,7 +3166,7 @@ void tst_QWebEngineView::jsKeyboardEvent
+@@ -3162,7 +3167,7 @@ void tst_QWebEngineView::jsKeyboardEvent
          "65,KeyA,A,true,true,false;"
      );
      QTRY_VERIFY(evaluateJavaScriptSync(view.page(), "log") != QVariant(QString()));
@@ -284,7 +285,7 @@ diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/aut
  }
  
  void tst_QWebEngineView::deletePage()
-@@ -3217,7 +3221,7 @@ void tst_QWebEngineView::closeOpenerTab(
+@@ -3217,7 +3222,7 @@ void tst_QWebEngineView::closeOpenerTab(
  
  void tst_QWebEngineView::switchPage()
  {
@@ -293,7 +294,7 @@ diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/aut
        QWebEnginePage page1(&profile);
        QWebEnginePage page2(&profile);
        QSignalSpy loadFinishedSpy1(&page1, SIGNAL(loadFinished(bool)));
-@@ -3233,7 +3237,7 @@ void tst_QWebEngineView::switchPage()
+@@ -3233,7 +3238,7 @@ void tst_QWebEngineView::switchPage()
        webView.setPage(&page2);
        QTRY_COMPARE(webView.grab().toImage().pixelColor(QPoint(150,150)), Qt::white);
        webView.setPage(&page1);
