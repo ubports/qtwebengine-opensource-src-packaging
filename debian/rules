@@ -104,9 +104,6 @@ else
 	echo "QT_CONFIG -= separate_debug_info" >> .qmake.conf
 endif
 
-# set webengine-ozone-x11
-echo "QT_CONFIG += webengine-ozone-x11" >> .qmake.conf
-
 # Disable JIT on selected architectures
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_jit_architectures)))
 	echo "QMAKE_CXXFLAGS += -DENABLE_JIT=0" >> .qmake.conf
@@ -129,6 +126,9 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(no_gold_architectures)))
 	echo "QMAKE_LFLAGS -= -fuse-ld=gold" >> .qmake.conf
 	echo "QMAKE_LFLAGS += -fuse-ld=bfd" >> .qmake.conf
 endif
+
+	# set webengine-ozone-x11
+	echo "QT_CONFIG += webengine-ozone-x11" >> .qmake.conf
 
 	# Make ld not cache the symbol tables of input files in memory to avoid memory exhaustion during the linking phase.
 	echo "QMAKE_LFLAGS += -Wl,--no-keep-memory" >> .qmake.conf
