@@ -104,6 +104,9 @@ else
 	echo "QT_CONFIG -= separate_debug_info" >> .qmake.conf
 endif
 
+# set webengine-ozone-x11
+echo "QT_CONFIG += webengine-ozone-x11" >> .qmake.conf
+
 # Disable JIT on selected architectures
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_jit_architectures)))
 	echo "QMAKE_CXXFLAGS += -DENABLE_JIT=0" >> .qmake.conf
