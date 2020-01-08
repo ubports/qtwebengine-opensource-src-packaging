@@ -3,7 +3,7 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 export NINJA_PATH=/usr/bin/ninja
-export NINJAFLAGS=-v -j12
+export NINJAFLAGS=-v
 include /usr/share/dpkg/default.mk
 
 DEB_HOST_ARCH_BITS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_BITS)
@@ -128,7 +128,10 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(no_gold_architectures)))
 endif
 
 	# set webengine-ozone-x11
-	echo "QT_CONFIG += webengine-ozone-x11" >> .qmake.conf
+	#echo "QT_CONFIG += webengine-ozone-x11" >> .qmake.conf
+	
+	# define GLX
+	echo "DEFINES += USE_GLX" >> .qmake.conf
 
 	# Make ld not cache the symbol tables of input files in memory to avoid memory exhaustion during the linking phase.
 	echo "QMAKE_LFLAGS += -Wl,--no-keep-memory" >> .qmake.conf
