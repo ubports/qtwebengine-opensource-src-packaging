@@ -131,7 +131,7 @@ endif
 	#echo "QT_CONFIG += webengine-ozone-x11" >> .qmake.conf
 	
 	# define GLX
-	echo "DEFINES += USE_GLX" >> .qmake.conf
+	#echo "DEFINES += USE_GLX" >> .qmake.conf
 
 	# Make ld not cache the symbol tables of input files in memory to avoid memory exhaustion during the linking phase.
 	echo "QMAKE_LFLAGS += -Wl,--no-keep-memory" >> .qmake.conf
