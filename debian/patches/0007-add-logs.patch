@@ -8,3 +8,51 @@
      QOpenGLContext *shareContext = qt_gl_global_share_context();
      if (!shareContext) {
          qFatal("QWebEngine: OpenGL resource sharing is not set up in QtQuick. Please make sure to call QtWebEngine::initialize() in your main() function.");
+--- a/src/webenginewidgets/render_widget_host_view_qt_delegate_widget.cpp
++++ b/src/webenginewidgets/render_widget_host_view_qt_delegate_widget.cpp
+@@ -227,6 +227,7 @@ void RenderWidgetHostViewQtDelegateWidge
+ 
+ QRectF RenderWidgetHostViewQtDelegateWidget::viewGeometry() const
+ {
++    LOG(INFO) << "QRectF RenderWidgetHostViewQtDelegateWidget::viewGeometry()";
+     return QRectF(mapToGlobal(pos()), size());
+ }
+
+diff -urp a/src/webengine/render_widget_host_view_qt_delegate_quick.cpp b/src/webengine/render_widget_host_view_qt_delegate_quick.cpp
+--- a/src/webengine/render_widget_host_view_qt_delegate_quick.cpp	2019-10-23 12:30:32.000000000 +0200
++++ b/src/webengine/render_widget_host_view_qt_delegate_quick.cpp	2020-01-17 16:29:55.000000000 +0100
+@@ -101,6 +101,7 @@ void RenderWidgetHostViewQtDelegateQuick
+ 
+ QRectF RenderWidgetHostViewQtDelegateQuick::viewGeometry() const
+ {
++    LOG(INFO) << "QRectF RenderWidgetHostViewQtDelegateQuick::viewGeometry()";
+     // Transform the entire rect to find the correct top left corner.
+     const QPointF p1 = mapToGlobal(mapFromScene(QPointF(0, 0)));
+     const QPointF p2 = mapToGlobal(mapFromScene(QPointF(width(), height())));
+diff -urp a/src/webengine/render_widget_host_view_qt_delegate_quickwindow.cpp b/src/webengine/render_widget_host_view_qt_delegate_quickwindow.cpp
+--- a/src/webengine/render_widget_host_view_qt_delegate_quickwindow.cpp	2019-10-23 12:30:32.000000000 +0200
++++ b/src/webengine/render_widget_host_view_qt_delegate_quickwindow.cpp	2020-01-17 16:21:45.000000000 +0100
+@@ -63,6 +63,7 @@ void RenderWidgetHostViewQtDelegateQuick
+ 
+ static inline QRectF mapRectToGlobal(const QQuickItem *item, const QRectF &rect)
+ {
++    LOG(INFO) << "static inline QRectF mapRectToGlobal";
+     const QPointF p1 = item->mapToGlobal(rect.topLeft());
+     const QPointF p2 = item->mapToGlobal(rect.bottomRight());
+     return QRectF(p1, p2).normalized();
+@@ -77,6 +78,7 @@ static inline QRectF mapRectFromGlobal(c
+ 
+ void RenderWidgetHostViewQtDelegateQuickWindow::initAsPopup(const QRect &screenRect)
+ {
++    LOG(INFO) << "void RenderWidgetHostViewQtDelegateQuickWindow::initAsPopup";
+     QRectF popupRect(screenRect);
+     popupRect = mapRectFromGlobal(m_virtualParent, popupRect);
+     popupRect = m_virtualParent->mapRectToScene(popupRect);
+@@ -165,6 +167,7 @@ void RenderWidgetHostViewQtDelegateQuick
+ 
+ void RenderWidgetHostViewQtDelegateQuickWindow::move(const QPoint &screenPos)
+ {
++    LOG(INFO) << "void RenderWidgetHostViewQtDelegateQuickWindow::move";
+     QRectF popupRect(screenPos, size());
+     popupRect = mapRectFromGlobal(m_virtualParent, popupRect);
+     popupRect = m_virtualParent->mapRectToScene(popupRect);
