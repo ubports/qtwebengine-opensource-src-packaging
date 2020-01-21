@@ -1,5 +1,5 @@
---- a/src/3rdparty/chromium/3rdparty/blink/renderer/bindings/core/v8/local_window_proxy.cc
-+++ b/src/3rdparty/chromium/3rdparty/blink/renderer/bindings/core/v8/local_window_proxy.cc
+--- a/src/3rdparty/chromium/third_party/blink/renderer/bindings/core/v8/local_window_proxy.cc
++++ b/src/3rdparty/chromium/third_party/blink/renderer/bindings/core/v8/local_window_proxy.cc
 @@ -250,6 +250,9 @@
    }
    CHECK(!context.IsEmpty());
