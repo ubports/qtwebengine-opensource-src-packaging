@@ -39,7 +39,9 @@ config_args = -proprietary-codecs \
               -system-opus \
               -system-webp \
               -webengine-extensions \
-              -webengine-ffmpeg
+              -webengine-embedded-build \
+              -webengine-printing-and-pdf \
+              -webengine-webrtc
 
 touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js \
 	      src/3rdparty/chromium/third_party/web-animations-js/sources/web-animations.min.js \
