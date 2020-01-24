@@ -38,10 +38,7 @@ no_gold_architectures := arm64 armhf mipsel
 config_args = -proprietary-codecs \
               -system-opus \
               -system-webp \
-              -webengine-extensions \
-              -webengine-embedded-build \
-              -webengine-printing-and-pdf \
-              -webengine-webrtc
+              -webengine-extensions
 
 touch_files = src/3rdparty/chromium/third_party/analytics/google-analytics-bundle.js \
 	      src/3rdparty/chromium/third_party/web-animations-js/sources/web-animations.min.js \
@@ -135,6 +132,9 @@ endif
 	
 	# define GLX
 	#echo "DEFINES += USE_GLX" >> .qmake.conf
+
+	# -mthumb, without that media_use_ffmpeg=false and use_webaudio_ffmpeg=false are set in /src/buildtools/config/linux.pri
+	echo "QT_CONFIG += webengine-arm-thumb" >> .qmake.conf
 
 	# Make ld not cache the symbol tables of input files in memory to avoid memory exhaustion during the linking phase.
 	echo "QMAKE_LFLAGS += -Wl,--no-keep-memory" >> .qmake.conf
