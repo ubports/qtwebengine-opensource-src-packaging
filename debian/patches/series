@@ -4,7 +4,6 @@ system-nspr-prtime.patch
 system-icu-utf.patch
 no-icudtl-dat.patch
 verbose-gn-bootstrap.patch
-pulseaudio-13.patch
 mipsel-linux-5.patch
 CVE-2019-13720.patch
 icu-65.patch
