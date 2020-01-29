@@ -7,7 +7,6 @@ verbose-gn-bootstrap.patch
 mipsel-linux-5.patch
 CVE-2019-13720.patch
 icu-65.patch
-CVE-2019-5870.patch
 
 # UBports
 0001-Add-support-for-mir.patch
