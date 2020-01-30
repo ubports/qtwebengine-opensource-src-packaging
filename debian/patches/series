@@ -5,6 +5,7 @@ system-icu-utf.patch
 no-icudtl-dat.patch
 verbose-gn-bootstrap.patch
 mipsel-linux-5.patch
+buildfix-against-5-9.patch
 
 # UBports
 0001-Add-support-for-mir.patch
