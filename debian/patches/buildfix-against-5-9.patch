@@ -128,6 +128,15 @@ index 9a2ee9311..d95805ef2 100644
      TestObject host;
      QSignalSpy hostSpy(&host, &TestObject::textChanged);
      QWebChannel channel;
+@@ -546,7 +546,7 @@ void tst_QWebEngineScript::webChannelWit
+     page.setWebChannel(&channel);
+     page.setUrl(QStringLiteral("qrc:/resources/webChannelWithBadString.html"));
+     QVERIFY(hostSpy.wait(20000));
+-    QCOMPARE(host.text(), QString(QChar(QChar::ReplacementCharacter)));
++    QCOMPARE(host.text(), QString(QChar(QChar::ReplacementCharacter)));*/
+ }
+ #endif
+ QTEST_MAIN(tst_QWebEngineScript)
 diff --git a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 index 74adbaba9..34b89351f 100644
 --- a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
