@@ -131,7 +131,7 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
      m_view->show();
  
      QSignalSpy loadSpy(m_page, &QWebEnginePage::loadFinished);
-@@ -3416,7 +3416,7 @@ void tst_QWebEnginePage::contentsSize()
+@@ -3416,6 +3416,6 @@ void tst_QWebEnginePage::contentsSize()
      // Verify resizing the view does not affect the contents size.
      m_view->resize(1600, 1200);
      QCOMPARE(m_page->contentsSize().width(), 1608);
@@ -148,7 +148,7 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
      QByteArray lastUserAgent;
      connect(&server, &HttpServer::newRequest, [&](HttpReqRep *rr) {
          QCOMPARE(rr->requestMethod(), "GET");
-@@ -3566,7 +3566,7 @@ void tst_QWebEnginePage::customUserAgent
+@@ -3566,6 +3566,6 @@ void tst_QWebEnginePage::customUserAgent
      QTest::mouseClick(view.focusProxy(), Qt::LeftButton, 0, elementCenter(&page, "link"));
      QTRY_VERIFY(page.newPage);
      QTRY_VERIFY(!lastUserAgent.isEmpty());
@@ -168,7 +168,7 @@ diff -urp a/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp b/tes
      XhrStatusUrlSchemeHandler handler;
      XhrStatusHost host;
      QWebEngineProfile profile;
-@@ -675,7 +675,7 @@ void tst_QWebEngineProfile::urlSchemeHan
+@@ -675,6 +675,6 @@ void tst_QWebEngineProfile::urlSchemeHan
      QCOMPARE(host.requests[QUrl("aviancarrier:/notfound")], -1);
  #else
      QSKIP("No QtWebChannel");
@@ -188,7 +188,7 @@ diff -urp a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests
      TestObject host;
      QSignalSpy hostSpy(&host, &TestObject::textChanged);
      QWebChannel channel;
-@@ -548,7 +548,7 @@ void tst_QWebEngineScript::webChannelWit
+@@ -548,6 +548,6 @@ void tst_QWebEngineScript::webChannelWit
      QVERIFY(hostSpy.wait(20000));
      // expect 0xD800 see https://chromium-review.googlesource.com/c/1282993
      QChar data(0xd800);
