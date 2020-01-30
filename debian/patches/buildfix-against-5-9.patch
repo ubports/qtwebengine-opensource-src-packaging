@@ -105,6 +105,7 @@ index 68458b2a4..2618d409a 100644
 -    QCOMPARE(lastUserAgent, profile2.httpUserAgent().toUtf8());
 +    QCOMPARE(lastUserAgent, profile2.httpUserAgent().toUtf8());*/
  }
+ 
 --- a/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
 +++ b/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
 @@ -783,7 +783,11 @@ void tst_QQuickWebEngineView::inputMethodHints()
