@@ -1,5 +1,5 @@
---- a/src/core/config/linux.pri
-+++ b/src/core/config/linux.pri
+--- a/src/buildtools/config/linux.pri
++++ b/src/buildtools/config/linux.pri
 @@ -91,16 +91,7 @@ contains(QT_ARCH, "arm") {
          }
      }
