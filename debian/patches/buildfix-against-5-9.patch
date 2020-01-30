@@ -20,7 +20,7 @@ index 4407e70..3be0c93 100644
 +#else
 +    m_delegate->setInputMethodHints(toQtInputMethodHints(getTextInputType()) | Qt::ImhNoPredictiveText);
 +#endif
-     m_surroundingText = toQt(state->value);
+     m_surroundingText = QString::fromStdString(state->value);
      // Remove IME composition text from the surrounding text
      if (state->composition_start != -1 && state->composition_end != -1)
 @@ -1101,7 +1104,11 @@
@@ -102,58 +102,6 @@ index 68458b2a4..2618d409a 100644
  }
  
  void tst_QQuickWebEngineView::setZoomFactor()
-diff --git a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp
-index 19f9b6df1..10aaa3c78 100644
---- a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp
-+++ b/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp
-@@ -3301,7 +3301,7 @@ void tst_QWebEnginePage::notificationRequest_data()
- 
- void tst_QWebEnginePage::notificationRequest()
- {
--    QFETCH(QWebEnginePage::PermissionPolicy, policy);
-+    /*QFETCH(QWebEnginePage::PermissionPolicy, policy);
-     QFETCH(QString, permission);
- 
-     NotificationPage page(policy);
-@@ -3314,12 +3314,12 @@ void tst_QWebEnginePage::notificationRequest()
-     page.spyRequest.waitForResult();
-     QVERIFY(page.spyRequest.wasCalled());
- 
--    QCOMPARE(page.getPermission(), permission);
-+    QCOMPARE(page.getPermission(), permission);*/
- }
- 
- void tst_QWebEnginePage::sendNotification()
- {
--    NotificationPage page(QWebEnginePage::PermissionGrantedByUser);
-+    /*NotificationPage page(QWebEnginePage::PermissionGrantedByUser);
-     QVERIFY(page.spyLoad.waitForResult());
- 
-     page.resetPermission();
-@@ -3355,12 +3355,12 @@ void tst_QWebEnginePage::sendNotification()
-     activeNotification->click();
-     QTRY_VERIFY2(page.messages.contains("onclick"), page.messages.join("\n").toLatin1().constData());
-     activeNotification->close();
--    QTRY_VERIFY2(page.messages.contains("onclose"), page.messages.join("\n").toLatin1().constData());
-+    QTRY_VERIFY2(page.messages.contains("onclose"), page.messages.join("\n").toLatin1().constData());*/
- }
- 
- void tst_QWebEnginePage::contentsSize()
- {
--    m_view->resize(800, 600);
-+    /*m_view->resize(800, 600);
-     m_view->show();
- 
-     QSignalSpy loadSpy(m_page, &QWebEnginePage::loadFinished);
-@@ -3383,7 +3383,7 @@ void tst_QWebEnginePage::contentsSize()
-     // Verify resizing the view does not affect the contents size.
-     m_view->resize(1600, 1200);
-     QCOMPARE(m_page->contentsSize().width(), 1608);
--    QCOMPARE(m_page->contentsSize().height(), 1216);
-+    QCOMPARE(m_page->contentsSize().height(), 1216);*/
- }
- 
- static QByteArrayList params = {QByteArrayLiteral("--use-fake-device-for-media-stream")};
 diff --git a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp
 index 9a2ee9311..d95805ef2 100644
 --- a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp
