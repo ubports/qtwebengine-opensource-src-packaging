@@ -63,7 +63,7 @@ cases.
  
 +    bool disableGpu = qEnvironmentVariableIsSet("QT_WEBENGINE_DISABLE_GPU");
 +
-+    if (!qEnvironmentVariableIsSet("QT_WEBENGINE_DISABLE_WAYLAND_WORKAROUND") && platform.startsWith("wayland", Qt::CaseInsensitive))
++    if (!qEnvironmentVariableIsSet("QT_WEBENGINE_DISABLE_WAYLAND_WORKAROUND") && qApp->platformName().startsWith("wayland", Qt::CaseInsensitive))
 +    {
 +        qWarning() << "Running on wayland. Qt WebEngine will disable usage of the GPU.\n"
 +                      "Note: you can set the QT_WEBENGINE_DISABLE_WAYLAND_WORKAROUND\n"

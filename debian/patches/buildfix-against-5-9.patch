@@ -35,19 +35,6 @@ index 4407e70..3be0c93 100644
      default:
          return QVariant();
      }
-diff --git a/src/core/touch_selection_controller_client_qt.cpp b/src/core/touch_selection_controller_client_qt.cpp
-index da3c78b..0f44210 100644
---- a/src/core/touch_selection_controller_client_qt.cpp
-+++ b/src/core/touch_selection_controller_client_qt.cpp
-@@ -315,7 +315,7 @@
- 
-     WebContentsAdapterClient *adapterClient = m_rwhv->adapterClient();
-     Q_ASSERT(adapterClient);
--    adapterClient->showTouchSelectionMenu(m_menuController.get(),
-+    adapterClient->showTouchSelectionMenu(m_menuController.data(),
-                                           QRect(toQt(gfx::ToEnclosingRect(anchor_rect))),
-                                           QSize(toQt(gfx::ToRoundedSize(max_handle_size))));
-     m_menuShowing = true;
 diff --git a/src/core/web_event_factory.cpp b/src/core/web_event_factory.cpp
 index b976960..a0fac73 100644
 --- a/src/core/web_event_factory.cpp
@@ -70,39 +57,6 @@ index b976960..a0fac73 100644
      // General-Purpose Function Keys
      case Qt::Key_F1:
          return ui::DomKey::F1;
-diff --git a/src/webengine/plugin/plugin.cpp b/src/webengine/plugin/plugin.cpp
-index 56e5c5c..a332288 100644
---- a/src/webengine/plugin/plugin.cpp
-+++ b/src/webengine/plugin/plugin.cpp
-@@ -159,10 +159,12 @@
-         qmlRegisterUncreatableType<QWebEngineRegisterProtocolHandlerRequest>(uri, 1, 7, "RegisterProtocolHandlerRequest",
-                                                                              msgUncreatableType("RegisterProtocolHandlerRequest"));
-         qmlRegisterUncreatableType<QQuickWebEngineAction>(uri, 1, 8, "WebEngineAction", msgUncreatableType("WebEngineAction"));
-+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-         qmlRegisterUncreatableType<QQuickWebEngineClientCertificateSelection>(uri, 1, 9, "WebEngineClientCertificateSelection",
-                                                                               msgUncreatableType("WebEngineClientCertificateSelection"));
-         qmlRegisterUncreatableType<QQuickWebEngineClientCertificateOption>(uri, 1, 9, "WebEngineClientCertificateOption",
-                                                                            msgUncreatableType("WebEngineClientCertificateOption"));
-+#endif
-         qmlRegisterUncreatableType<QWebEngineNotification>(uri, 1, 9, "WebEngineNotification", msgUncreatableType("WebEngineNotification"));
-     }
- 
-diff --git a/src/webengine/render_widget_host_view_qt_delegate_quick.cpp b/src/webengine/render_widget_host_view_qt_delegate_quick.cpp
-index e756ee157..8ec759118 100644
---- a/src/webengine/render_widget_host_view_qt_delegate_quick.cpp
-+++ b/src/webengine/render_widget_host_view_qt_delegate_quick.cpp
-@@ -101,7 +101,11 @@ void RenderWidgetHostViewQtDelegateQuick::initAsPopup(const QRect &r)
- 
- QRectF RenderWidgetHostViewQtDelegateQuick::viewGeometry() const
- {
-+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
-     return QRectF(mapToGlobal(QPointF(0, 0)), size());
-+#else
-+    return QRectF(mapToGlobal(QPointF(0, 0)), QSizeF(width(), height()));
-+#endif
- }
- 
- void RenderWidgetHostViewQtDelegateQuick::setKeyboardFocus()
 diff --git a/examples/webenginewidgets/simplebrowser/browser.cpp b/examples/webenginewidgets/simplebrowser/browser.cpp
 index 68458b2a4..2618d409a 100644
 --- a/examples/webenginewidgets/simplebrowser/browser.cpp
@@ -133,63 +87,9 @@ index 68458b2a4..2618d409a 100644
          m_windows.removeOne(mainWindow);
      });
      mainWindow->show();
-diff --git a/tests/auto/quick/publicapi/tst_publicapi.cpp b/tests/auto/quick/publicapi/tst_publicapi.cpp
-index 90b768ac7..1b1314f28 100644
---- a/tests/auto/quick/publicapi/tst_publicapi.cpp
-+++ b/tests/auto/quick/publicapi/tst_publicapi.cpp
-@@ -62,8 +62,10 @@ static const QList<const QMetaObject *> typesToCheck = QList<const QMetaObject *
-     << &QQuickWebEngineView::staticMetaObject
-     << &QQuickWebEngineAction::staticMetaObject
-     << &QQuickWebEngineCertificateError::staticMetaObject
-+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-     << &QQuickWebEngineClientCertificateOption::staticMetaObject
-     << &QQuickWebEngineClientCertificateSelection::staticMetaObject
-+#endif
-     << &QQuickWebEngineDownloadItem::staticMetaObject
-     << &QQuickWebEngineHistory::staticMetaObject
-     << &QQuickWebEngineHistoryListModel::staticMetaObject
-@@ -91,8 +93,10 @@ static QList<const char *> knownEnumNames = QList<const char *>();
- static const QStringList hardcodedTypes = QStringList()
-     << "QJSValue"
-     << "QQmlListProperty<QQuickWebEngineScript>"
-+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-     << "QQmlListProperty<QQuickWebEngineClientCertificateOption>"
-     << "const QQuickWebEngineClientCertificateOption*"
-+#endif
-     << "QQmlWebChannel*"
-     // Ignore the testSupport types without making a fuss.
-     << "QQuickWebEngineTestSupport*"
-@@ -140,6 +144,7 @@ static const QStringList expectedAPI = QStringList()
-     << "QQuickWebEngineCertificateError.overridable --> bool"
-     << "QQuickWebEngineCertificateError.rejectCertificate() --> void"
-     << "QQuickWebEngineCertificateError.url --> QUrl"
-+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-     << "QQuickWebEngineClientCertificateOption.issuer --> QString"
-     << "QQuickWebEngineClientCertificateOption.subject --> QString"
-     << "QQuickWebEngineClientCertificateOption.effectiveDate --> QDateTime"
-@@ -151,6 +156,7 @@ static const QStringList expectedAPI = QStringList()
-     << "QQuickWebEngineClientCertificateSelection.select(int) --> void"
-     << "QQuickWebEngineClientCertificateSelection.select(const QQuickWebEngineClientCertificateOption*) --> void"
-     << "QQuickWebEngineClientCertificateSelection.selectNone() --> void"
-+#endif
-     << "QQuickWebEngineColorDialogRequest.accepted --> bool"
-     << "QQuickWebEngineColorDialogRequest.color --> QColor"
-     << "QQuickWebEngineContextMenuRequest.CanUndo --> EditFlags"
-@@ -726,7 +732,9 @@ static const QStringList expectedAPI = QStringList()
-     << "QQuickWebEngineView.runJavaScript(QString,uint,QJSValue) --> void"
-     << "QQuickWebEngineView.scrollPosition --> QPointF"
-     << "QQuickWebEngineView.scrollPositionChanged(QPointF) --> void"
-+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-     << "QQuickWebEngineView.selectClientCertificate(QQuickWebEngineClientCertificateSelection*) --> void"
-+#endif
-     << "QQuickWebEngineView.setActiveFocusOnPress(bool) --> void"
-     << "QQuickWebEngineView.settings --> QQuickWebEngineSettings*"
-     << "QQuickWebEngineView.stop() --> void"
-diff --git a/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp b/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
-index 74c04635f..6209c719b 100644
 --- a/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
 +++ b/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
-@@ -785,7 +785,11 @@ void tst_QQuickWebEngineView::inputMethodHints()
+@@ -783,7 +783,11 @@ void tst_QQuickWebEngineView::inputMethodHints()
      QVERIFY(view->flags().testFlag(QQuickItem::ItemAcceptsInputMethod));
      query = QInputMethodQueryEvent(Qt::ImHints);
      QGuiApplication::sendEvent(input, &query);
@@ -267,33 +167,10 @@ index 9a2ee9311..d95805ef2 100644
      TestObject host;
      QSignalSpy hostSpy(&host, &TestObject::textChanged);
      QWebChannel channel;
-@@ -548,7 +548,7 @@ void tst_QWebEngineScript::webChannelWithBadString()
-     QVERIFY(hostSpy.wait(20000));
-     // expect 0xD800 see https://chromium-review.googlesource.com/c/1282993
-     QChar data(0xd800);
--    QCOMPARE(host.text(), data);
-+    QCOMPARE(host.text(), data);*/
- }
- #endif
- QTEST_MAIN(tst_QWebEngineScript)
 diff --git a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 index 74adbaba9..34b89351f 100644
 --- a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 +++ b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
-@@ -49,8 +49,13 @@
- #include <QWebEngineProfile>
- #include <QtCore/qregularexpression.h>
- 
-+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
- #define VERIFY_INPUTMETHOD_HINTS(actual, expect) \
-     QVERIFY(actual == (expect | Qt::ImhNoPredictiveText | Qt::ImhNoTextHandles | Qt::ImhNoEditMenu));
-+#else
-+#define VERIFY_INPUTMETHOD_HINTS(actual, expect) \
-+    QVERIFY(actual == (expect | Qt::ImhNoPredictiveText));
-+#endif
- 
- #define QTRY_COMPARE_WITH_TIMEOUT_FAIL_BLOCK(__expr, __expected, __timeout, __fail_block) \
- do { \
 @@ -296,14 +301,14 @@ void tst_QWebEngineView::changePage()
      QFETCH(bool, fromIsNullPage);
      QFETCH(bool, toIsNullPage);
@@ -384,7 +261,7 @@ diff --git a/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlre
 index 5629998fd..9a9d2e921 100644
 --- a/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp
 +++ b/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlrequestinterceptor.cpp
-@@ -381,17 +381,17 @@ void tst_QWebEngineUrlRequestInterceptor::firstPartyUrlNestedIframes()
+@@ -368,17 +368,17 @@ void tst_QWebEngineUrlRequestInterceptor::firstPartyUrlNestedIframes()
      RequestInfo info = interceptor.requestInfos.at(0);
      QCOMPARE(info.requestUrl, requestUrl);
      QCOMPARE(info.firstPartyUrl, requestUrl);
