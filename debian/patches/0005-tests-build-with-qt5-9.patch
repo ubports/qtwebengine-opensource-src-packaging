@@ -90,9 +90,9 @@ diff -urp a/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp b/t
  
  void tst_QQuickWebEngineView::setZoomFactor()
 diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp
---- a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp	2019-10-23 12:30:32.000000000 +0200
-+++ b/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp	2020-01-06 12:01:32.000000000 +0100
-@@ -3334,7 +3334,7 @@ void tst_QWebEnginePage::notificationReq
+--- a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp
++++ b/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp
+@@ -3387,7 +3387,7 @@ void tst_QWebEnginePage::notificationReq
  
  void tst_QWebEnginePage::notificationRequest()
  {
@@ -101,7 +101,7 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
      QFETCH(QString, permission);
  
      NotificationPage page(policy);
-@@ -3347,12 +3347,12 @@ void tst_QWebEnginePage::notificationReq
+@@ -3400,12 +3400,12 @@ void tst_QWebEnginePage::notificationReq
      page.spyRequest.waitForResult();
      QVERIFY(page.spyRequest.wasCalled());
  
@@ -116,7 +116,7 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
      QVERIFY(page.spyLoad.waitForResult());
  
      page.resetPermission();
-@@ -3388,12 +3388,12 @@ void tst_QWebEnginePage::sendNotificatio
+@@ -3441,12 +3441,12 @@ void tst_QWebEnginePage::sendNotificatio
      activeNotification->click();
      QTRY_VERIFY2(page.messages.contains("onclick"), page.messages.join("\n").toLatin1().constData());
      activeNotification->close();
@@ -131,7 +131,7 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
      m_view->show();
  
      QSignalSpy loadSpy(m_page, &QWebEnginePage::loadFinished);
-@@ -3416,6 +3416,6 @@ void tst_QWebEnginePage::contentsSize()
+@@ -3469,7 +3469,7 @@ void tst_QWebEnginePage::contentsSize()
      // Verify resizing the view does not affect the contents size.
      m_view->resize(1600, 1200);
      QCOMPARE(m_page->contentsSize().width(), 1608);
@@ -139,7 +139,8 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
 +    QCOMPARE(m_page->contentsSize().height(), 1216);*/
  }
  
-@@ -3508,7 +3508,7 @@ void tst_QWebEnginePage::editActionsWith
+ void tst_QWebEnginePage::setLifecycleState()
+@@ -4238,7 +4238,7 @@ void tst_QWebEnginePage::editActionsWith
  
  void tst_QWebEnginePage::customUserAgentInNewTab()
  {
@@ -148,7 +149,7 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
      QByteArray lastUserAgent;
      connect(&server, &HttpServer::newRequest, [&](HttpReqRep *rr) {
          QCOMPARE(rr->requestMethod(), "GET");
-@@ -3566,6 +3566,6 @@ void tst_QWebEnginePage::customUserAgent
+@@ -4296,7 +4296,7 @@ void tst_QWebEnginePage::customUserAgent
      QTest::mouseClick(view.focusProxy(), Qt::LeftButton, 0, elementCenter(&page, "link"));
      QTRY_VERIFY(page.newPage);
      QTRY_VERIFY(!lastUserAgent.isEmpty());
@@ -156,10 +157,13 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
 +    QCOMPARE(lastUserAgent, profile2.httpUserAgent().toUtf8());*/
  }
  
+ void tst_QWebEnginePage::renderProcessCrashed()
+
+
 diff -urp a/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp b/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp
 --- a/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp	2019-10-23 12:30:32.000000000 +0200
 +++ b/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp	2020-01-06 12:20:52.000000000 +0100
-@@ -653,7 +653,7 @@ public:
+@@ -661,7 +661,7 @@ public:
  
  void tst_QWebEngineProfile::urlSchemeHandlerXhrStatus()
  {
@@ -168,18 +172,20 @@ diff -urp a/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp b/tes
      XhrStatusUrlSchemeHandler handler;
      XhrStatusHost host;
      QWebEngineProfile profile;
-@@ -675,6 +675,6 @@ void tst_QWebEngineProfile::urlSchemeHan
+@@ -683,7 +683,7 @@ void tst_QWebEngineProfile::urlSchemeHan
      QCOMPARE(host.requests[QUrl("aviancarrier:/notfound")], -1);
  #else
      QSKIP("No QtWebChannel");
 -#endif
 +#endif*/
  }
+ 
+ class ScriptsUrlSchemeHandler : public QWebEngineUrlSchemeHandler
 
 diff -urp a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp
 --- a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp	2019-10-23 12:30:32.000000000 +0200
 +++ b/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp	2020-01-06 11:26:46.000000000 +0100
-@@ -538,7 +538,7 @@ void tst_QWebEngineScript::navigation()
+@@ -577,7 +577,7 @@ void tst_QWebEngineScript::navigation()
  // See QTBUG-61969.
  void tst_QWebEngineScript::webChannelWithBadString()
  {
@@ -188,7 +194,7 @@ diff -urp a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests
      TestObject host;
      QSignalSpy hostSpy(&host, &TestObject::textChanged);
      QWebChannel channel;
-@@ -548,6 +548,6 @@ void tst_QWebEngineScript::webChannelWit
+@@ -587,7 +587,7 @@ void tst_QWebEngineScript::webChannelWit
      QVERIFY(hostSpy.wait(20000));
      // expect 0xD800 see https://chromium-review.googlesource.com/c/1282993
      QChar data(0xd800);
