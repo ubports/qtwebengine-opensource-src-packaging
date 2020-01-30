@@ -1,11 +1,3 @@
-From dec8531daa826ad0988d0d9b113cda705d7bae60 Mon Sep 17 00:00:00 2001
-From: Michal Klocek <michal.klocek@qt.io>
-Date: Mon, 22 Jul 2019 15:24:59 +0200
-Subject: [PATCH] Fix compilation against 5.9
-
-Change-Id: Icfe50ba5c60a6e2e588af6cdc07500013b6df9a1
----
-
 diff --git a/src/core/render_widget_host_view_qt.cpp b/src/core/render_widget_host_view_qt.cpp
 index 4407e70..3be0c93 100644
 --- a/src/core/render_widget_host_view_qt.cpp
@@ -106,6 +98,8 @@ index 68458b2a4..2618d409a 100644
 +    QCOMPARE(lastUserAgent, profile2.httpUserAgent().toUtf8());*/
  }
  
+ static QByteArrayList params = {QByteArrayLiteral("--use-fake-device-for-media-stream")};
+
 --- a/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
 +++ b/tests/auto/quick/qquickwebengineview/tst_qquickwebengineview.cpp
 @@ -783,7 +783,11 @@ void tst_QQuickWebEngineView::inputMethodHints()
