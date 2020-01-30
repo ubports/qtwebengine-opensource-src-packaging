@@ -25,7 +25,7 @@ diff -urp a/tests/auto/core/qwebengineurlrequestinterceptor/tst_qwebengineurlreq
 diff -urp a/tests/auto/quick/publicapi/tst_publicapi.cpp b/tests/auto/quick/publicapi/tst_publicapi.cpp
 --- a/tests/auto/quick/publicapi/tst_publicapi.cpp	2019-10-23 12:30:32.000000000 +0200
 +++ b/tests/auto/quick/publicapi/tst_publicapi.cpp	2020-01-06 11:20:46.000000000 +0100
-@@ -62,8 +62,10 @@ static const QList<const QMetaObject *>
+@@ -63,8 +63,10 @@ static const QList<const QMetaObject *>
      << &QQuickWebEngineView::staticMetaObject
      << &QQuickWebEngineAction::staticMetaObject
      << &QQuickWebEngineCertificateError::staticMetaObject
@@ -139,7 +139,6 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
 +    QCOMPARE(m_page->contentsSize().height(), 1216);*/
  }
  
- void tst_QWebEnginePage::editActionsWithExplicitFocus()
 @@ -3508,7 +3508,7 @@ void tst_QWebEnginePage::editActionsWith
  
  void tst_QWebEnginePage::customUserAgentInNewTab()
@@ -157,7 +156,6 @@ diff -urp a/tests/auto/widgets/qwebenginepage/tst_qwebenginepage.cpp b/tests/aut
 +    QCOMPARE(lastUserAgent, profile2.httpUserAgent().toUtf8());*/
  }
  
- static QByteArrayList params = {QByteArrayLiteral("--use-fake-device-for-media-stream")};
 diff -urp a/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp b/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp
 --- a/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp	2019-10-23 12:30:32.000000000 +0200
 +++ b/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp	2020-01-06 12:20:52.000000000 +0100
@@ -177,8 +175,7 @@ diff -urp a/tests/auto/widgets/qwebengineprofile/tst_qwebengineprofile.cpp b/tes
 -#endif
 +#endif*/
  }
- 
- void tst_QWebEngineProfile::customUserAgent()
+
 diff -urp a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp
 --- a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp	2019-10-23 12:30:32.000000000 +0200
 +++ b/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp	2020-01-06 11:26:46.000000000 +0100
@@ -199,7 +196,7 @@ diff -urp a/tests/auto/widgets/qwebenginescript/tst_qwebenginescript.cpp b/tests
 +    QCOMPARE(host.text(), data);*/
  }
  #endif
- QTEST_MAIN(tst_QWebEngineScript)
+
 diff -urp a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 --- a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp	2019-10-23 12:30:32.000000000 +0200
 +++ b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp	2020-01-06 12:34:24.000000000 +0100
