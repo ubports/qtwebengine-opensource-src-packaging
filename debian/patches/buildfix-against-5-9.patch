@@ -141,6 +141,20 @@ diff --git a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp b/tests/au
 index 74adbaba9..34b89351f 100644
 --- a/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
 +++ b/tests/auto/widgets/qwebengineview/tst_qwebengineview.cpp
+@@ -48,8 +48,11 @@
+ #include <QtWidgets/qaction.h>
+ #include <QWebEngineProfile>
+ 
+-#define VERIFY_INPUTMETHOD_HINTS(actual, expect) \
+-    QVERIFY(actual == (expect | Qt::ImhNoPredictiveText | Qt::ImhNoTextHandles | Qt::ImhNoEditMenu));
++#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
++#define VERIFY_INPUTMETHOD_HINTS(actual, expect) QVERIFY(actual == (expect | Qt::ImhNoPredictiveText | Qt::ImhNoTextHandles | Qt::ImhNoEditMenu));
++#else
++#define VERIFY_INPUTMETHOD_HINTS(actual, expect) QVERIFY(actual == (expect | Qt::ImhNoPredictiveText));
++#endif
+ 
+ #define QTRY_COMPARE_WITH_TIMEOUT_FAIL_BLOCK(__expr, __expected, __timeout, __fail_block) \
+ do { \
 @@ -296,14 +301,14 @@ void tst_QWebEngineView::changePage()
      QFETCH(bool, fromIsNullPage);
      QFETCH(bool, toIsNullPage);
