@@ -1,0 +1,12 @@
+--- a/src/core/content_browser_client_qt.cpp
++++ b/src/core/content_browser_client_qt.cpp
+@@ -209,7 +209,7 @@ public:
+ #if QT_CONFIG(opengl)
+         if (QOpenGLContext *context = qt_gl_global_share_context()) {
+             if (context->format().testOption(QSurfaceFormat::ResetNotification))
+-                return context->extraFunctions()->glGetGraphicsResetStatus();
++                return 0; // context->extraFunctions()->glGetGraphicsResetStatus();
+         }
+ #endif
+         return 0 /*GL_NO_ERROR*/;
+
