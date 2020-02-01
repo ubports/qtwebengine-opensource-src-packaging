@@ -8,3 +8,4 @@
 0007-add-logs.patch
 0008-arm-use-thumb.patch
 0009-opengl-extra.patch
+0010-5-14-build-with-qt5-9.patch

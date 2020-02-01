@@ -1,0 +1,18 @@
+--- a/src/webenginewidgets/api/qwebenginedownloaditem.h
++++ b/src/webenginewidgets/api/qwebenginedownloaditem.h
+@@ -119,10 +119,10 @@ public:
+     QUrl url() const;
+     QString mimeType() const;
+ #if QT_DEPRECATED_SINCE(5, 14)
+-    QT_DEPRECATED_VERSION_X(5, 14, "Use downloadDirectory() and downloadFileName() instead")
+-    QString path() const;
+-    QT_DEPRECATED_VERSION_X(5, 14, "Use setDownloadDirectory() and setDownloadFileName() instead")
+-    void setPath(QString path);
++    //QT_DEPRECATED_VERSION_X(5, 14, "Use downloadDirectory() and downloadFileName() instead")
++    QString Q_DECL_DEPRECATED path() const;
++    //QT_DEPRECATED_VERSION_X(5, 14, "Use setDownloadDirectory() and setDownloadFileName() instead")
++    void Q_DECL_DEPRECATED setPath(QString path);
+ #endif
+     bool isFinished() const;
+     bool isPaused() const;
+
