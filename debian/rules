@@ -137,9 +137,9 @@ endif
 
 	# Copy required header files to where they belong (https://bugreports.qt.io/browse/QTBUG-77121)
 	# ToDo: do not hardcode the version
-	mkdir -p ./include/QtWebEngineCore/5.12.6/QtWebEngineCore/private
-	find . -type f -iname "qtwebenginecore-config.h" -exec cp {} ./include/QtWebEngineCore/5.12.6/QtWebEngineCore/ \;
-	find . -type f -iname "qtwebenginecore-config_p.h" -exec cp {} ./include/QtWebEngineCore/5.12.6/QtWebEngineCore/private/ \;
+	mkdir -p ./include/QtWebEngineCore/5.12.7/QtWebEngineCore/private
+	find . -type f -iname "qtwebenginecore-config.h" -exec cp {} ./include/QtWebEngineCore/5.12.7/QtWebEngineCore/ \;
+	find . -type f -iname "qtwebenginecore-config_p.h" -exec cp {} ./include/QtWebEngineCore/5.12.7/QtWebEngineCore/private/ \;
 
 	# Create js files, that are needed for building step for arch and indep builds
 	cd $(CURDIR)/src/3rdparty/chromium/third_party/jstemplate/; \
