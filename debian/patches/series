@@ -8,4 +8,3 @@ mipsel-linux-5.patch
 
 # UBports
 0001-Add-support-for-mir.patch
-qtwebengine-no-gpu.patch
