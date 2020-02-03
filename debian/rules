@@ -77,7 +77,8 @@ override_dh_auto_clean:
 
 override_dh_auto_configure:
 	# Run qmake once to create .qmake.conf and be sure to append the following values.
-	qmake QT_BUILD_PARTS+=tests QMAKE_EXTRA_ARGS+="$(config_args)"
+	#qmake QT_BUILD_PARTS+=tests QMAKE_EXTRA_ARGS+="$(config_args)"
+	qmake QMAKE_EXTRA_ARGS+="$(config_args)"
 	# Rebuild the SyncQt header files
 	rm -rf include/
 	/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin/syncqt.pl -version $(DEB_VERSION_UPSTREAM:+dfsg=)
@@ -133,7 +134,8 @@ endif
 	echo "QMAKE_LFLAGS += -Wl,-z,now" >> .qmake.conf
 
 	# Run qmake again now with the proper values.
-	qmake QT_BUILD_PARTS+=tests QMAKE_EXTRA_ARGS+="$(config_args)"
+	#qmake QT_BUILD_PARTS+=tests QMAKE_EXTRA_ARGS+="$(config_args)"
+	qmake QMAKE_EXTRA_ARGS+="$(config_args)"
 
 	# Copy required header files to where they belong (https://bugreports.qt.io/browse/QTBUG-77121)
 	# ToDo: do not hardcode the version
