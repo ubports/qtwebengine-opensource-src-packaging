@@ -8,3 +8,4 @@ mipsel-linux-5.patch
 
 # UBports
 0001-Add-support-for-mir.patch
+0002-fix-QTBUG-72393-for-5-12-0.patch
