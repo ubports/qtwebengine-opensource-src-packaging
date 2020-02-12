@@ -8,4 +8,5 @@
 +    origins.clear();
 +    std::move(result_callback).Run(std::move(origins));
  }
-
+ 
+ bool NetworkDelegateQt::OnCanSetReportingClient(const url::Origin& origin, const GURL& endpoint) const
