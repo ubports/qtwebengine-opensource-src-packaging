@@ -1,0 +1,11 @@
+--- a/src/3rdparty/chromium/content/browser/indexed_db/indexed_db_context_impl.cc
++++ b/src/3rdparty/chromium/content/browser/indexed_db/indexed_db_context_impl.cc
+@@ -585,7 +585,7 @@ int64_t IndexedDBContextImpl::ReadUsageF
+ 
+ void IndexedDBContextImpl::EnsureDiskUsageCacheInitialized(
+     const Origin& origin) {
+-  if (origin_size_map_.find(origin) == origin_size_map_.end())
++  if (origin_size_map_.count(origin) == 0)
+     origin_size_map_[origin] = ReadUsageFromDisk(origin);
+ }
+ 
