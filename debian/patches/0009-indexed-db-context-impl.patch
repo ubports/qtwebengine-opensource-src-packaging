@@ -5,7 +5,7 @@
  void IndexedDBContextImpl::EnsureDiskUsageCacheInitialized(
      const Origin& origin) {
 -  if (origin_size_map_.find(origin) == origin_size_map_.end())
-+  if (origin_size_map_.count(origin) == 0)
++  //if (origin_size_map_.find(origin) == origin_size_map_.end())
      origin_size_map_[origin] = ReadUsageFromDisk(origin);
  }
  
