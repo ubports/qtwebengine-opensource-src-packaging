@@ -8,3 +8,5 @@
 0008-arm-use-thumb.patch
 0009-opengl-extra.patch
 0010-5-14-build-with-qt5-9.patch
+0011-v8-build-arm64.patch
+0012-ubports-depends.patch
