@@ -11,3 +11,4 @@ buildfix-against-5-9.patch
 0001-Add-support-for-mir.patch
 qtwebengine-no-gpu.patch
 web-event-factory.patch
+ubports-depends.patch
