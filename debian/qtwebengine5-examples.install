@@ -1,2 +1,5 @@
+usr/lib/*/qt5/examples/pdf/*
+usr/lib/*/qt5/examples/pdfwidgets/*
 usr/lib/*/qt5/examples/webengine/*
 usr/lib/*/qt5/examples/webenginewidgets/*
+	
