@@ -26,11 +26,3 @@
          m_windows.removeOne(mainWindow);
      });
      mainWindow->show();
---- a/examples/examples.pro
-+++ b/examples/examples.pro
-@@ -6,4 +6,4 @@ qtHaveModule(webenginewidgets): SUBDIRS
- 
- qtHaveModule(pdfwidgets): SUBDIRS += pdfwidgets
- 
--qtHaveModule(quick): qtHaveModule(pdf): qtHaveModule(pdfwidgets): SUBDIRS += pdf
-+qtHaveModule(quick): qtHaveModule(pdf): qtHaveModule(pdfwidgets): qtHaveModule(svg): SUBDIRS += pdf
