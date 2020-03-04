@@ -1,0 +1,16 @@
+--- a/src/tools/qwebengine_convert_dict/main.cpp
++++ b/src/tools/qwebengine_convert_dict/main.cpp
+@@ -33,6 +33,13 @@
+ #include <QDir>
+ #include <QCoreApplication>
+ 
++namespace Qt {
++  #if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
++  using TextStreamFunction = QTextStream& (*)(QTextStream&);
++  constexpr TextStreamFunction endl = ::endl;
++  #endif
++}
++
+ // see also src/core/type_conversion.h
+ inline base::FilePath::StringType toFilePathString(const QString &str)
+ {
