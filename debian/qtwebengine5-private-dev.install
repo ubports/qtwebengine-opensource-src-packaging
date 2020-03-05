@@ -1,7 +1,11 @@
 usr/include/*/qt5/QtWebEngine/*/QtWebEngine/
 usr/include/*/qt5/QtWebEngineCore/*/QtWebEngineCore/
 usr/include/*/qt5/QtWebEngineWidgets/*/QtWebEngineWidgets/
+usr/include/*/qt5/QtPdf/*/QtPdf/
+usr/include/*/qt5/QtPdfWidgets/*/QtPdfWidgets/
 usr/lib/*/qt5/mkspecs/modules/qt_lib_webengine_private.pri
 usr/lib/*/qt5/mkspecs/modules/qt_lib_webenginecore_private.pri
 usr/lib/*/qt5/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri
 usr/lib/*/qt5/mkspecs/modules/qt_lib_webenginewidgets_private.pri
+usr/lib/*/qt5/mkspecs/modules/qt_lib_pdfwidgets_private.pri
+usr/lib/*/qt5/mkspecs/modules/qt_lib_pdf_private.pri
