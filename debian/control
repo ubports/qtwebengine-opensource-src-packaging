@@ -189,6 +189,20 @@ Depends: qml-module-qtquick2, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Description: Pdf library used by QtWebEngine
 
+Package: qtpdf-doc
+Architecture: all
+Multi-Arch: foreign
+Section: doc
+Depends: ${misc:Depends}
+Description: documentation for libqt5pdf
+
+Package: qtpdf-doc-html
+Architecture: all
+Multi-Arch: foreign
+Section: doc
+Depends: ${misc:Depends}
+Description: html documentation for libqt5pdf
+
 Package: libqt5pdfwidgets
 Architecture: amd64 arm64 armhf
 Multi-Arch: same
