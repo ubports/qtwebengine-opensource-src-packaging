@@ -182,6 +182,27 @@ Description: Qt WebEngine QML module
  .
  This package contains the WebEngine QML module for QtDeclarative.
 
+Package: libqt5pdf
+Architecture: amd64 arm64 armhf
+Multi-Arch: same
+Depends: qml-module-qtquick2, ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Pdf library used by QtWebEngine
+
+Package: libqt5pdfwidgets
+Architecture: amd64 arm64 armhf
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Pdf library used by QtWebEngineWidgets
+
+Package: qml-module-qtquick-pdf
+Architecture: amd64 arm64 armhf
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Qml module for Pdf library used by QtWebEngineWidgets
+
 Package: qtwebengine5-dev-tools
 Architecture: amd64 arm64 armhf i386 mipsel
 Multi-Arch: foreign
