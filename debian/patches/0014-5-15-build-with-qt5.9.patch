@@ -1,0 +1,40 @@
+--- a/src/core/profile_adapter.cpp
++++ b/src/core/profile_adapter.cpp
+@@ -364,7 +364,7 @@ void ProfileAdapter::setHttpUserAgent(co
+             web_contents->SetUserAgentOverride(stdUserAgent, true);
+ 
+     content::BrowserContext::ForEachStoragePartition(
+-        m_profile.get(), base::BindRepeating([](const std::string &user_agent, content::StoragePartition *storage_partition) {
++        m_profile.data(), base::BindRepeating([](const std::string &user_agent, content::StoragePartition *storage_partition) {
+                                                  storage_partition->GetNetworkContext()->SetUserAgent(user_agent);
+                                              }, stdUserAgent));
+ }
+@@ -506,7 +506,7 @@ const QList<QByteArray> ProfileAdapter::
+ void ProfileAdapter::updateCustomUrlSchemeHandlers()
+ {
+     content::BrowserContext::ForEachStoragePartition(
+-        m_profile.get(), base::BindRepeating([](content::StoragePartition *storage_partition) {
++        m_profile.data(), base::BindRepeating([](content::StoragePartition *storage_partition) {
+                                                  storage_partition->ResetURLLoaderFactories();
+                                              }));
+ }
+@@ -628,7 +628,7 @@ void ProfileAdapter::setHttpAcceptLangua
+     }
+ 
+     content::BrowserContext::ForEachStoragePartition(
+-        m_profile.get(), base::BindRepeating([](std::string accept_language, content::StoragePartition *storage_partition) {
++        m_profile.data(), base::BindRepeating([](std::string accept_language, content::StoragePartition *storage_partition) {
+                                                  storage_partition->GetNetworkContext()->SetAcceptLanguage(accept_language);
+                                              }, http_accept_language));
+ }
+--- a/src/core/web_contents_adapter.cpp
++++ b/src/core/web_contents_adapter.cpp
+@@ -384,7 +384,7 @@ static void NavigateTask(QWeakPointer<We
+     const auto adapter = weakAdapter.toStrongRef();
+     if (!adapter)
+         return;
+-    Navigate(adapter.get(), params);
++    Navigate(adapter.data(), params);
+ }
+ 
+ namespace {
