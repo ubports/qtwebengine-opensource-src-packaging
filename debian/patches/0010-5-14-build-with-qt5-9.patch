@@ -15,4 +15,15 @@
  #endif
      bool isFinished() const;
      bool isPaused() const;
+--- a/src/core/web_contents_adapter.cpp
++++ b/src/core/web_contents_adapter.cpp
+@@ -384,7 +384,7 @@ static void NavigateTask(QWeakPointer<We
+     const auto adapter = weakAdapter.toStrongRef();
+     if (!adapter)
+         return;
+-    Navigate(adapter.get(), params);
++    Navigate(adapter.data(), params);
+ }
+ 
+ namespace {
 
