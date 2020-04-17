@@ -1,11 +1,17 @@
 --- a/src/core/ozone/gl_ozone_egl_qt.cpp
 +++ b/src/core/ozone/gl_ozone_egl_qt.cpp
-@@ -78,7 +78,7 @@ base::NativeLibrary LoadLibrary(const ba
+@@ -100,11 +100,11 @@ bool GLOzoneEGLQt::LoadGLES2Bindings(gl:
  
- bool GLOzoneEGLQt::LoadGLES2Bindings(gl::GLImplementation /*implementation*/)
- {
--    base::NativeLibrary eglgles2Library = dlopen(NULL, RTLD_LAZY);
-+    base::NativeLibrary eglgles2Library = dlopen("libEGL.so.1", RTLD_LAZY);
-     if (!eglgles2Library) {
-         LOG(ERROR) << "Failed to open EGL/GLES2 context " << dlerror();
-         return false;
+     if (!get_proc_address) {
+         LOG(ERROR) << "eglGetProcAddress not found.";
+-        base::UnloadNativeLibrary(eglgles2Library);
+-        return false;
++        //base::UnloadNativeLibrary(eglgles2Library);
++        //return false;
+     }
+ 
+-    gl::SetGLGetProcAddressProc(get_proc_address);
++    //gl::SetGLGetProcAddressProc(get_proc_address);
+     gl::AddGLNativeLibrary(eglgles2Library);
+     return true;
+ }
