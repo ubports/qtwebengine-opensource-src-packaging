@@ -1,0 +1,39 @@
+--- a/src/core/ozone/gl_context_qt.cpp
++++ b/src/core/ozone/gl_context_qt.cpp
+@@ -60,6 +60,7 @@ namespace {
+ inline void *resourceForContext(const QByteArray &resource)
+ {
+ #ifndef QT_NO_OPENGL
++    LOG(INFO) << "calling resourceForContext: " << QString(resource).toStdString(); 
+     QOpenGLContext *shareContext = qt_gl_global_share_context();
+     if (!shareContext) {
+         qFatal("QWebEngine: OpenGL resource sharing is not set up in QtQuick. Please make sure to call QtWebEngine::initialize() in your main() function.");
+
+--- a/src/3rdparty/chromium/net/disk_cache/simple/simple_index_file.cc
++++ b/src/3rdparty/chromium/net/disk_cache/simple/simple_index_file.cc
+@@ -607,10 +607,14 @@ void SimpleIndexFile::SyncRestoreFromDis
+                                           const base::FilePath& index_file_path,
+                                           SimpleIndexLoadResult* out_result) {
+   VLOG(1) << "Simple Cache Index is being restored from disk.";
++  VLOG(1) << "simple_util::SimpleCacheDeleteFile(index_file_path);";
+   simple_util::SimpleCacheDeleteFile(index_file_path);
++  VLOG(1) << "out_result->Reset();";
+   out_result->Reset();
++  VLOG(1) << "SimpleIndex::EntrySet* entries = &out_result->entries;";
+   SimpleIndex::EntrySet* entries = &out_result->entries;
+ 
++  VLOG(1) << "const bool did_succeed = TraverseCacheDirectory(cache_directory,base::BindRepeating(&ProcessEntryFile, cache_type, entries));";
+   const bool did_succeed = TraverseCacheDirectory(
+       cache_directory,
+       base::BindRepeating(&ProcessEntryFile, cache_type, entries));
+@@ -618,9 +622,11 @@ void SimpleIndexFile::SyncRestoreFromDis
+     LOG(ERROR) << "Could not reconstruct index from disk";
+     return;
+   }
++  VLOG(1) << "out_result->did_load = true;";
+   out_result->did_load = true;
+   // When we restore from disk we write the merged index file to disk right
+   // away, this might save us from having to restore again next time.
++  VLOG(1) << "out_result->flush_required = true;";
+   out_result->flush_required = true;
+ }
