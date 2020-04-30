@@ -77,7 +77,8 @@ Build-Depends: bison,
                xvfb,
                yasm [amd64 i386],
                yui-compressor,
-               gcc-5 (= 5.4.0-6ubuntu1~16.04.11~ubports4) [armhf]
+               gcc-5 (= 5.4.0-6ubuntu1~16.04.11~ubports4) [armhf],
+               libhybris-dev
 Build-Depends-Indep: qtbase5-doc-html,
                      qttools5-dev-tools (>= 5.9.3~)
 Standards-Version: 4.1.5
