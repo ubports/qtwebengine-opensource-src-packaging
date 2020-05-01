@@ -1,9 +1,0 @@
---- a/src/webengine/doc/qtwebengine.qdocconf
-+++ b/src/webengine/doc/qtwebengine.qdocconf
-@@ -1,5 +1,5 @@
- include($QT_INSTALL_DOCS/global/qt-module-defaults.qdocconf)
--include($QT_INSTALL_DOCS/config/exampleurl-qtwebengine.qdocconf)
-+#include($QT_INSTALL_DOCS/config/exampleurl-qtwebengine.qdocconf)
- 
- project                 = QtWebEngine
- description             = Qt WebEngine Reference Documentation

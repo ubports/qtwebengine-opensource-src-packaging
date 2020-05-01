@@ -1,5 +1,0 @@
---- /dev/null
-+++ b/ubports.depends
-@@ -0,0 +1,2 @@
-+xenial
-+xenial_-_gcc-patch-build-qtwebengine

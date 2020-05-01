@@ -36,7 +36,6 @@ no_gold_architectures := arm64 armhf mipsel
 #              -system-ffmpeg
 #              -system-webengine-icu
 config_args = -proprietary-codecs \
-              -system-opus \
               -system-webp \
               -webengine-extensions
 
