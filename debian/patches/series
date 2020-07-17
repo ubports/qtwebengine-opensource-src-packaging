@@ -1,13 +1,13 @@
-run-unbundling-script.patch
-system-lcms2.patch
-system-nspr-prtime.patch
-system-icu-utf.patch
-no-icudtl-dat.patch
-disable-last_commit_position.patch
-verbose-gn-bootstrap.patch
-fix-gcc-8-i386.patch
-
 # UBports
 0001-Add-support-for-mir.patch
-ninja-path-too-long-workaround.patch
-qtwebengine-no-gpu.patch
+0002-Buildfix-path-too-long.patch
+0003-Buildfix-ptrace-defines.patch
+0004-examples-build-with-qt5-9.patch
+0005-tests-build-with-qt5-9.patch
+0006-remove-example-doc-include.patch
+0007-add-logs.patch
+0008-arm-use-thumb.patch
+0009-opengl-extra.patch
+0010-5-14-build-with-qt5-9.patch
+0011-v8-build-arm64.patch
+0012-ubports-depends.patch

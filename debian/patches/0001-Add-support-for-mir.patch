@@ -1,33 +1,6 @@
-From c5eabd4f36927648f2908aec153a3d17b9ed6f4f Mon Sep 17 00:00:00 2001
-From: Marius Gripsgard <marius@ubports.com>
-Date: Mon, 14 May 2018 20:39:02 +0000
-Subject: [PATCH] Add support for mir
-
----
- mkspecs/features/platform.prf          | 4 ----
- src/core/content_browser_client_qt.cpp | 3 ++-
- 2 files changed, 2 insertions(+), 5 deletions(-)
-
-diff --git a/mkspecs/features/platform.prf b/mkspecs/features/platform.prf
-index bb171f7..1e9032c 100644
---- a/mkspecs/features/platform.prf
-+++ b/mkspecs/features/platform.prf
-@@ -65,10 +65,6 @@ defineTest(isPlatformSupported) {
-     skipBuild("C++11 support is required in order to build chromium.")
-     return(false)
-   }
--  qtConfig(mirclient) {
--    skipBuild("Mir is not yet supported as graphics backend for Qt WebEngine.")
--    return(false)
--  }
-   static {
-     skipBuild("Static builds of QtWebEngine aren't supported.")
-     return(false)
-diff --git a/src/core/content_browser_client_qt.cpp b/src/core/content_browser_client_qt.cpp
-index 2495e1d..87e64ff 100644
 --- a/src/core/content_browser_client_qt.cpp
 +++ b/src/core/content_browser_client_qt.cpp
-@@ -329,7 +329,8 @@ public:
+@@ -189,7 +189,8 @@ public:
          else if (platform == QLatin1String("qnx"))
              m_handle = pni->nativeResourceForContext(QByteArrayLiteral("eglcontext"), qtContext);
          else if (platform == QLatin1String("eglfs") || platform == QLatin1String("wayland")

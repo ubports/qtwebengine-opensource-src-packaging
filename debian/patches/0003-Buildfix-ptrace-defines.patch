@@ -1,0 +1,24 @@
+diff --git a/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/syscall_parameters_restrictions.cc b/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/syscall_parameters_restrictions.cc
+index 68ce32a13..5d3bff2bc 100644
+--- a/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/syscall_parameters_restrictions.cc
++++ b/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/syscall_parameters_restrictions.cc
+@@ -41,6 +41,19 @@
+ // asm/ptrace-abi.h doesn't exist on arm32 and PTRACE_GET_THREAD_AREA isn't
+ // defined on aarch64, so don't try to include this on those platforms.
+ #include <asm/ptrace-abi.h>
++#elif defined(OS_LINUX) && !defined(OS_CHROMEOS) && defined(__arm__) && \
++    !defined(__aarch64__)
++#ifndef PTRACE_GET_THREAD_AREA
++#define PTRACE_GET_THREAD_AREA 22
++#endif
++
++#ifndef PTRACE_GETVFPREGS
++#define PTRACE_GETVFPREGS 27
++#endif
++
++#ifndef PTRACE_SETVFPREGS
++#define PTRACE_SETVFPREGS 28
++#endif
+ #endif
+ #endif  // !OS_NACL_NONSFI
+ 

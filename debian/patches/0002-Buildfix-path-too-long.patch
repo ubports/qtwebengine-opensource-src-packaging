@@ -1,13 +1,8 @@
-Description:
- Depending on some factors, such as the build directory, the build of
- QtWebEngine may attempt to create file names which are over the 255 character
- limit on Linux. Ref: https://bugreports.qt.io/browse/QTBUG-59769
-Origin: Attached to referenced bug as workaround
-Last-Update: 2018-09-25
-
---- a/src/3rdparty/chromium/tools/gn/ninja_action_target_writer.cc
-+++ b/src/3rdparty/chromium/tools/gn/ninja_action_target_writer.cc
-@@ -115,9 +115,18 @@ std::string NinjaActionTargetWriter::WriteRuleDefinition() {
+diff --git a/src/3rdparty/gn/tools/gn/ninja_action_target_writer.cc b/src/3rdparty/gn/tools/gn/ninja_action_target_writer.cc
+index 7e945c0de..502e11e38 100644
+--- a/src/3rdparty/gn/tools/gn/ninja_action_target_writer.cc
++++ b/src/3rdparty/gn/tools/gn/ninja_action_target_writer.cc
+@@ -118,6 +118,14 @@ std::string NinjaActionTargetWriter::WriteRuleDefinition() {
      // strictly necessary for regular one-shot actions, but it's easier to
      // just always define unique_name.
      std::string rspfile = custom_rule_name;
@@ -22,7 +17,3 @@ Last-Update: 2018-09-25
      if (!target_->sources().empty())
        rspfile += ".$unique_name";
      rspfile += ".rsp";
-+
-     out_ << "  rspfile = " << rspfile << std::endl;
- 
-     // Response file contents.
