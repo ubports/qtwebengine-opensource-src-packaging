@@ -4,7 +4,7 @@
  
      LifecycleState recommendedState() const;
  
-+    void setHeight(qreal h) override { QQuickItem::setHeight(qRound(h)); }
++    void setHeight(qreal h) { QQuickItem::setHeight(qRound(h)); }
 +
  public Q_SLOTS:
      void runJavaScript(const QString&, const QJSValue & = QJSValue());
