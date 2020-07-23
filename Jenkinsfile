@@ -37,7 +37,7 @@ pipeline {
              }
            },
           "Build binary - amd64": {
-            node(label: 'amd64') {
+            node(label: 'amd64-fast') {
               cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
               unstash 'source'
               sh '''export architecture="amd64"
