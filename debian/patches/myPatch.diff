@@ -8,11 +8,13 @@
  
      Q_PROPERTY(QQuickWebEngineView *inspectedView READ inspectedView WRITE setInspectedView NOTIFY inspectedViewChanged REVISION 7 FINAL)
      Q_PROPERTY(QQuickWebEngineView *devToolsView READ devToolsView WRITE setDevToolsView NOTIFY devToolsViewChanged REVISION 7 FINAL)
-@@ -510,6 +511,8 @@
+@@ -510,6 +511,10 @@
  
      LifecycleState recommendedState() const;
  
 +    void setHeight(qreal h) { QQuickItem::setHeight(qRound(h)); }
++
++    qreal getHeight() { return QQuickItem::getHeight(); }
 +
  public Q_SLOTS:
      void runJavaScript(const QString&, const QJSValue & = QJSValue());
