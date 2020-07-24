@@ -4,7 +4,7 @@
      Q_PROPERTY(bool audioMuted READ isAudioMuted WRITE setAudioMuted NOTIFY audioMutedChanged FINAL REVISION 3)
      Q_PROPERTY(bool recentlyAudible READ recentlyAudible NOTIFY recentlyAudibleChanged FINAL REVISION 3)
      Q_PROPERTY(uint webChannelWorld READ webChannelWorld WRITE setWebChannelWorld NOTIFY webChannelWorldChanged REVISION 3 FINAL)
-+    Q_PROPERTY(real height READ getHeight WRITE setHeight NOTIFY heightChanged)
++    Q_PROPERTY(real height READ getHeight WRITE setHeight)
  
      Q_PROPERTY(QQuickWebEngineView *inspectedView READ inspectedView WRITE setInspectedView NOTIFY inspectedViewChanged REVISION 7 FINAL)
      Q_PROPERTY(QQuickWebEngineView *devToolsView READ devToolsView WRITE setDevToolsView NOTIFY devToolsViewChanged REVISION 7 FINAL)
