@@ -1,0 +1,52 @@
+From 92416a2c3791d7ae650c3061e564fb8ad8fc0293 Mon Sep 17 00:00:00 2001
+From: Dalton Durst <dalton@ubports.com>
+Date: Tue, 4 Aug 2020 17:05:09 -0500
+Subject: [PATCH] Use Viz' viewport, not QDeclarative's
+
+Very occasionally (though more often on slower CPUs), it was possible
+for Chromium to be notified about a change in WebEngineView height but
+not our apiDelegate. This caused a situation where we thought we could
+render to the existing object tree, but we ended up trying to reuse
+freed texture nodes in DelegatedNodeTreeUpdater::setupTextureContentNode
+instead. Whether this was due to signals arriving late or something
+else, I do not know.
+
+This lead to crashing when the view was being resized while it was being
+scrolled. Given other similar bug reports, it is possible that the crash
+could have been triggered by animations on screen. However, I was unable
+to reproduce these.
+
+Fix this by using the Chromium's understood viewport size directly
+
+https://bugreports.qt.io/browse/QTBUG-85802
+---
+ src/core/compositor/delegated_frame_node.cpp | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/src/core/compositor/delegated_frame_node.cpp b/src/core/compositor/delegated_frame_node.cpp
+index 4d74937d..36676578 100644
+--- a/src/core/compositor/delegated_frame_node.cpp
++++ b/src/core/compositor/delegated_frame_node.cpp
+@@ -614,9 +614,9 @@ void DelegatedFrameNode::commit(const viz::CompositorFrame &pendingFrame,
+ 
+     QScopedPointer<DelegatedNodeTreeHandler> nodeHandler;
+ 
+-    const QSizeF viewportSizeInPt = apiDelegate->viewGeometry().size();
+-    const QSizeF viewportSizeF = viewportSizeInPt * devicePixelRatio;
+-    const QSize viewportSize(std::ceil(viewportSizeF.width()), std::ceil(viewportSizeF.height()));
++    gfx::Rect viewportRect = frameData->render_pass_list.back()->output_rect;
++    gfx::Size vizViewportSize = viewportRect.size();
++    const QSize viewportSize = QSize(vizViewportSize.width(), vizViewportSize.height());
+ 
+     // We first compare if the render passes from the previous frame data are structurally
+     // equivalent to the render passes in the current frame data. If they are, we are going
+@@ -651,7 +651,6 @@ void DelegatedFrameNode::commit(const viz::CompositorFrame &pendingFrame,
+     // All RenderPasses except the last one are rendered to an FBO.
+     viz::RenderPass *rootRenderPass = frameData->render_pass_list.back().get();
+ 
+-    gfx::Rect viewportRect(toGfx(viewportSize));
+     for (unsigned i = 0; i < frameData->render_pass_list.size(); ++i) {
+         viz::RenderPass *pass = frameData->render_pass_list.at(i).get();
+ 
+-- 
+2.25.1
