@@ -1,3 +1,9 @@
+qtwebengine-opensource-src (5.14.2+dfsg-2ubports0) xenial; urgency=medium
+
+  * 0013-use-viz-viewport.patch: Use Viz' viewport, not QDeclarative's
+
+ -- Dalton Durst <dalton@ubports.com>  Fri, 07 Aug 2020 12:23:02 -0500
+
 qtwebengine-opensource-src (5.14.2+dfsg-1ubports0) xenial; urgency=medium
 
   * Update to QtWebEngine 5.14.2
