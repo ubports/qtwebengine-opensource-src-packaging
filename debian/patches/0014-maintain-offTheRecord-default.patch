@@ -1,0 +1,25 @@
+Commit 6e28e764d7c425f942820f0881231eb83e553e6e changed the default construction
+of m_offTheRecord from "false" to "storageName.isEmpty()". The WebEngineProfile
+constructs a ProfileAdapter with the storageName set to its
+persistentStoragePath. Prior to this change, m_offTheRecord defaulted to false
+and the WebEngineView saved its data to QStandardPathds::DataLocation via
+fall-through logic in ProfileAdapter::dataPath(). Now a persistentStoragePath
+must be provided or offTheRecord must be set to false on a WebEngineProfile to
+get that behavior.
+
+Most Ubuntu Touch apps expect the old default behavior, which can be returned by
+setting m_offTheRecord to false manually.
+
+See https://github.com/ubports/morph-browser/issues/347
+
+--- a/src/core/profile_adapter.cpp
++++ b/src/core/profile_adapter.cpp
+@@ -85,7 +85,7 @@
+ 
+ ProfileAdapter::ProfileAdapter(const QString &storageName):
+       m_name(storageName)
+-    , m_offTheRecord(storageName.isEmpty())
++    , m_offTheRecord(false)
+     , m_downloadPath(QStandardPaths::writableLocation(QStandardPaths::DownloadLocation))
+     , m_httpCacheType(DiskHttpCache)
+     , m_persistentCookiesPolicy(AllowPersistentCookies)
