@@ -1,3 +1,10 @@
+qtwebengine-opensource-src (5.14.2+dfsg-3ubports0) xenial; urgency=medium
+
+  * 0014-maintain-offTheRecord-default.patch: Maintain the default 'false' for
+    offTheRecord on a WebEngineProfile
+
+ -- Dalton Durst <dalton@ubports.com>  Tue, 01 Sep 2020 13:08:24 -0500
+
 qtwebengine-opensource-src (5.14.2+dfsg-2ubports0) xenial; urgency=medium
 
   * 0013-use-viz-viewport.patch: Use Viz' viewport, not QDeclarative's
